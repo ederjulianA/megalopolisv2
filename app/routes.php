@@ -26,3 +26,18 @@ Route::get('/get-login', array(
 		'as' => 'login',
 		'uses' => 'HomeController@getLogin'
 	));
+
+Route::post('/post-login', array(
+		'as' => 'login-post',
+		'uses' => 'UsersController@postLogin'
+
+	));
+
+
+
+Route::get('/cerrar-sesion', array(
+		'as' => 'cerrar-sesion',
+		'uses' => 'UsersController@cerrarSesion'
+
+	));
+

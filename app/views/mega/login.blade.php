@@ -4,7 +4,7 @@
 	<div class="login-wrapper">
 		<div class="text-center">
 			<h2 class="fadeInUp animation-delay8" style="font-weight:bold">
-				<span class="text-warning">Megalopolis</span> <span style="color:#ccc; text-shadow:0 1px #fff"></span>
+				<span class="text-warning">Inicia Sesion</span> <span style="color:#ccc; text-shadow:0 1px #fff"></span>
 			</h2>
 		</div>
 		<div class="login-widget animation-delay1">	
@@ -20,14 +20,14 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<form class="form-login">
+					<form class="form-login" method="post" action="{{ URL::route('login-post')}} ">
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" placeholder="ejemplo@ejemplo.com" class="form-control input-sm bounceIn animation-delay2" >
+							<input type="email" placeholder="ejemplo@ejemplo.com" class="form-control input-sm bounceIn animation-delay2" name="email">
 						</div>
 						<div class="form-group">
 							<label>Contraseña</label>
-							<input type="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay4">
+							<input type="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay4" name="password" >
 						</div>
 						<div class="form-group">
 							<label class="label-checkbox inline">
@@ -45,7 +45,8 @@
 
 						<hr/>
 							
-						<a class="btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right" href="index.html"><i class="fa fa-sign-in"></i> Iniciar Sesion</a>
+						<input type="submit" class="btn btn-success" value="Iniciar Sesion">
+						{{ Form::token()}}
 					</form>
 				</div>
 			</div><!-- /panel -->

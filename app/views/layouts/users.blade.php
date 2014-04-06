@@ -96,16 +96,16 @@
 							</li>
 							<li class="profile dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								<strong>Mercagan</strong>
+								<strong>{{ Auth::user()->username}}</strong>
 								<span><i class="fa fa-chevron-down"></i></span>
 								</a>
 								<ul class="dropdown-menu">
 								<li>
 									<a class="clearfix" href="#">
-										<img src="img/merca.jpg" alt="User Avatar">
+										<img src="{{ Auth::user()->img}}" alt="User Avatar">
 										<div class="detail">
-											<strong>Mercagan</strong>
-											<p class="grey">mercagan@email.com</p> 
+											<strong>{{ Auth::user()->username}}</strong>
+											<p class="grey">{{ Auth::user()->email}}</p> 
 										</div>
 									</a>
 								</li>
@@ -117,7 +117,7 @@
 
 								
 								<li class="divider"></li>
-								<li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i>Cerrar Sesion</a></li>
+								<li><a tabindex="-1" class="main-link logoutConfirm_open" href="{{ URL::route('cerrar-sesion')}}"><i class="fa fa-lock fa-lg"></i>Cerrar Sesion</a></li>
 							</ul>
 							</li>
 

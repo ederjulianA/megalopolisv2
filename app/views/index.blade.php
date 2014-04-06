@@ -4,7 +4,9 @@
 @section('content')
 	<div class="container-fluid" style="margin-top:7%;">
 			<div class="row">
-					
+				@if(Auth::check())
+
+				@else
 					<div class="col-sm-12 padding-md">
 						<a href="{{ URL::route('login')}}" class="btn btn-warning quick-btn" style="float:right;">
 							<i class="fa fa-sign-in"></i>
@@ -12,6 +14,10 @@
 						</a>
 						
 					</div>
+
+				@endif
+					
+					
 				
 			</div>
 
@@ -55,8 +61,11 @@
 				</div>
 				
 			</div>
-		
-			<div class="row">
+
+			@if(Auth::check())
+
+			@else
+					<div class="row">
 				<div class="col-sm-12 " >
 					<h2 class="titulo_registro">Registrate</h2>
 
@@ -123,6 +132,10 @@
 				</div>
 				
 			</div>
+
+			@endif
+		
+			
 				
 		</div>
 

@@ -35,7 +35,7 @@ class UsersController extends BaseController{
 			$user->tipo	=	Input::get('tipo');
 			$user->save();
 
-			return Redirect::to('/')
+			return Redirect::to('/get-login')
 				->with('message-alert','Gracias Por registrarte Ya puedes Iniciar Ssion :)');
 		}
 
@@ -43,5 +43,19 @@ class UsersController extends BaseController{
 			->with('message-alert','Algo salio mal Vuelve a intentarlo')
 			->withErrors($validator)
 			->withInput();
+	}
+
+
+
+	public function postLogin(){
+		if(Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+			return Redirect::intended('/')->with('message-alert','Gracias Por Inicar Sesion.');
+		}
+		return Redirect::to('/get-login')->with('message-alert','Combinacion de email o contraseña Incorrecta');
+	}
+
+	public function cerrarSesion() {
+		Auth::logout();
+		return Redirect::to('/')->with('message-alert','You have been signed out');
 	}
 }
