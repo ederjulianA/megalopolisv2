@@ -1,0 +1,19 @@
+h1.megalopolis_titulo{
+	text-align: center;
+	font-family: Georgia, Comic-sans-serif;
+	font-size: 70px;
+	font-weight: bold;
+
+}
+
+div.productos-container {
+	max-width: 100%;
+	padding: 5px;
+	width: 100%;
+
+}
+div.productos-container .producto {
+	display: inline-block;
+	margin: 4px;
+	width: 150px;
+}
