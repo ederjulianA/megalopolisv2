@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array(
+		'as' => 'index',
+		'uses' => 'HomeController@getIndex'
+	));
+
+Route::post('/crear-cuenta', array(
+		'as' => 'crear-cuenta-post',
+		'uses' => 'UsersController@postCreate'
+	));
+
+
+Route::get('/get-login', array(
+		'as' => 'login',
+		'uses' => 'HomeController@getLogin'
+	));

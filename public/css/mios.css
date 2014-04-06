@@ -17,3 +17,12 @@ div.productos-container .producto {
 	margin: 4px;
 	width: 150px;
 }
+.titulo_registro{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.form-registro{
+	margin: 10px auto;
+	width: 300px;
+}
