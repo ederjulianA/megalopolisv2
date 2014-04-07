@@ -16,14 +16,19 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
-Route::get('/nueva/empresa', array(
+Route::get('/empresa/nueva', array(
 		'as' => 'nueva-empresa',
 		'uses' => 'EmpresasController@getNuevaEmpresa'
 	));
 
 Route::get('/empresa', array(
 		'as' => 'empresaAdmin',
-		'uses' => 'UsersController@getEmpresa'
+		'uses' => 'EmpresasController@getEmpresa'
+	));
+
+Route::get('/empresa/admin', array(
+		'as' => 'empresa-admin',
+		'uses' => 'EmpresasController@empresa'
 	));
 
 

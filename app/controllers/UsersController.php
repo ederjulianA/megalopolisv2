@@ -63,21 +63,5 @@ class UsersController extends BaseController{
 		return Redirect::to('/')->with('message-alert','Has Cerrado Sesion');
 	}
 
-	public function getEmpresa(){
-		$id = Auth::User()->id;
-		$empresa = Empresa::where('user_id',"=", $id);
-		if(Auth::user()->tipo != 2){
-			return Redirect::to('/');
-		}
-		if($empresa->count()){
-			return Redirect::to('/empresa');
-				
 
-		}else{
-			return Redirect::to('/nueva/empresa');
-
-		}
-
-	
-	}
 }
