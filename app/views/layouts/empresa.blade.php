@@ -101,7 +101,7 @@
 							<ul class="dropdown-menu">
 								<li>
 									<a class="clearfix" href="#">
-										<img src="{{ Auth::user()->img}}" alt="User Avatar">
+									<img src="{{ Auth::user()->img}}" alt="User Avatar">
 										<div class="detail">
 											<strong>{{ Auth::user()->username }}</strong>
 											<p class="grey">{{ Auth::user()->email }}</p> 

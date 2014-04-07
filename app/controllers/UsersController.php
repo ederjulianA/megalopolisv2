@@ -64,9 +64,20 @@ class UsersController extends BaseController{
 	}
 
 	public function getEmpresa(){
+		$id = Auth::User()->id;
+		$empresa = Empresa::where('user_id',"=", $id);
 		if(Auth::user()->tipo != 2){
 			return Redirect::to('/');
 		}
-		return View::make('empresa.index');
+		if($empresa->count()){
+			return Redirect::to('/empresa');
+				
+
+		}else{
+			return Redirect::to('/nueva/empresa');
+
+		}
+
+	
 	}
 }
