@@ -60,6 +60,8 @@ Route::filter('guest', function()
 	if (Auth::check()) return Redirect::to('/');
 });
 
+
+
 /*
 |--------------------------------------------------------------------------
 | CSRF Protection Filter

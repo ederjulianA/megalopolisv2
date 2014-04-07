@@ -16,6 +16,13 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+Route::get('/empresa', array(
+		'as' => 'empresaAdmin',
+		'uses' => 'UsersController@getEmpresa'
+	));
+
+
+
 Route::post('/crear-cuenta', array(
 		'as' => 'crear-cuenta-post',
 		'uses' => 'UsersController@postCreate'

@@ -94,6 +94,13 @@
 										<li><a href="#">Ver todas las notificaciones</a></li>					  
 									</ul>
 							</li>
+
+							@if(Auth::user()->tipo == 2)
+							<li>
+								<a href="{{ URL::route('empresaAdmin')}}">Mi empresa</a>
+							</li>
+							@endif
+							
 							<li class="profile dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<strong>{{ Auth::user()->username}}</strong>
@@ -132,6 +139,12 @@
 						<p class="alert alert-danger" style="top:20%;"> {{Session::get('message-alert')}}</p>
 				@endif
 				</header>
+
+
+
+				
+
+				
 				
 
 			

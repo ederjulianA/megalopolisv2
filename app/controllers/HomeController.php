@@ -10,6 +10,9 @@ class HomeController extends BaseController {
 	}
 
 	public function getLogin(){
+		if(Auth::check()){
+			return Redirect::to('/');
+		}
 		return View::make('mega.login');
 	}
 

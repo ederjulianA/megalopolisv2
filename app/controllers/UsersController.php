@@ -5,6 +5,8 @@ class UsersController extends BaseController{
 	public function __construct()	{
 		//parent::__construct();
 		$this->beforeFilter('csrf', array('on'=>'post'));
+
+		
 	}
 
 
@@ -49,6 +51,8 @@ class UsersController extends BaseController{
 
 	public function postLogin(){
 		if(Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+
+			
 			return Redirect::intended('/')->with('message-alert','Gracias Por Inicar Sesion.');
 		}
 		return Redirect::to('/get-login')->with('message-alert','Combinacion de email o contraseña Incorrecta');
@@ -56,6 +60,13 @@ class UsersController extends BaseController{
 
 	public function cerrarSesion() {
 		Auth::logout();
-		return Redirect::to('/')->with('message-alert','You have been signed out');
+		return Redirect::to('/')->with('message-alert','Has Cerrado Sesion');
+	}
+
+	public function getEmpresa(){
+		if(Auth::user()->tipo != 2){
+			return Redirect::to('/');
+		}
+		return View::make('empresa.index');
 	}
 }
