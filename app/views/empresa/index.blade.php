@@ -73,7 +73,7 @@
 								<div class="seperator"></div>
 							</div><!-- /.col -->
 							<div class="col-xs-6 col-sm-12 col-md-6">
-								<strong class="font-14">Mercagan</strong>
+								<strong class="font-14">{{ $user->username}} </strong>
 								<small class="block text-muted">
 									mercagan@email.com
 								</small> 

@@ -47,6 +47,16 @@ class UsersController extends BaseController{
 			->withInput();
 	}
 
+	public function perfil(){
+		$id = Auth::user()->id;
+		$user = User::where('id',"=", $id);
+		if($user->count()){
+				$user = $user->first();
+				return View::make('mega.perfil')
+				->with('user' , $user);
+			}
+	}
+
 
 
 	public function postLogin(){

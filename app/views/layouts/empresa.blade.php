@@ -101,7 +101,8 @@
 							<ul class="dropdown-menu">
 								<li>
 									<a class="clearfix" href="#">
-									<img src="img/merca.jpg" alt="User Avatar">
+									<!--<img src="{{ Auth::user()->img}}" alt="User Avatar">-->
+									{{ HTML::image(Auth::user()->img)}}
 										<div class="detail">
 											<strong>{{ Auth::user()->username }}</strong>
 											<p class="grey">{{ Auth::user()->email }}</p> 
@@ -137,9 +138,10 @@
 					</a>
 				</div><!-- /size-toggle -->	
 				<div class="user-block clearfix">
-					<img src="img/merca.jpg" alt="User Avatar">
+					{{ HTML::image(Auth::user()->img)}}
+
 					<div class="detail">
-						<strong>Mercagan</strong><span class="badge badge-danger m-left-xs bounceIn animation-delay4"></span>
+						<strong>{{$user->empresa->razon_social}}</strong><span class="badge badge-danger m-left-xs bounceIn animation-delay4"></span>
 						<ul class="list-inline">
 							<li><a href="#">Perfil</a></li>
 							

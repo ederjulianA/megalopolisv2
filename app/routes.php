@@ -16,6 +16,11 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+Route::get('/mega/perfil', array(
+		'as' => 'mega-perfil',
+		'uses'=> 'UsersController@perfil'
+	));
+
 Route::get('/empresa/nueva', array(
 		'as' => 'nueva-empresa',
 		'uses' => 'EmpresasController@getNuevaEmpresa'
@@ -36,6 +41,11 @@ Route::get('/empresa/admin', array(
 Route::post('/crear-cuenta', array(
 		'as' => 'crear-cuenta-post',
 		'uses' => 'UsersController@postCreate'
+	));
+
+Route::post('/empresa/crear', array(
+		'as' => 'empresa-crear-post',
+		'uses' => 'EmpresasController@postCrear'
 	));
 
 

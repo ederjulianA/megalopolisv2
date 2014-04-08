@@ -7,10 +7,10 @@ class Empresa extends Eloquent {
 	protected $fillable = array('razon_social', 'email');
 
 	public static $rules = array(
-		'user_id'	=>	'required|integer',
-		'sector_id'	=>	'required|integer',
+		'user_id'	=>	'integer',
+		'sector_id'	=>	'integer',
 		'razon_social'	=>	'required',
-		'img'		 			 =>'required|image|mimes:jpeg,jpg,bmp,png,gif'
+		'logo'		 			 =>'required|image|mimes:jpeg,jpg,bmp,png,gif'
 
 		);
 
@@ -19,4 +19,8 @@ class Empresa extends Eloquent {
     {
         return $this->belongsTo('User');
     }
+
+    public function sector(){
+		return $this->belongsTo('Sector','sector_id');
+	}
 }
