@@ -10,7 +10,9 @@ class Empresa extends Eloquent {
 		'user_id'	=>	'integer',
 		'sector_id'	=>	'integer',
 		'razon_social'	=>	'required',
-		'logo'		 			 =>'required|image|mimes:jpeg,jpg,bmp,png,gif'
+		'descripcion_breve' => 'required|min:5|max:250',
+		'descripcion_larga' => 'required|min:5|max:2500',
+		'logo'		 			 =>'image|mimes:jpeg,jpg,bmp,png,gif'
 
 		);
 

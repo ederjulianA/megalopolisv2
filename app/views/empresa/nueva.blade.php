@@ -54,6 +54,21 @@
 									<input type="file" name="logo">
 									
 								</div>
+
+								<div class="form-group">
+									<label>Descripcion breve</label><br>
+									<textarea name="descripcion_breve" rows="3" style="width:100%;" class="form-control input-sm bounceIn animation-delay4">
+										
+									</textarea>
+									
+								</div>
+								<div class="form-group">
+									<label>Descripcion breve</label> <br>
+									<textarea name="descripcion_larga" rows="5" style="width:100%;" class="form-control input-sm bounceIn animation-delay6">
+										
+									</textarea>
+									
+								</div>
 								<input type="hidden" name = "user_id"value="{{ Auth::user()->id}}">
 
 								<input type="submit" value="Crear" class="btn btn-primary">

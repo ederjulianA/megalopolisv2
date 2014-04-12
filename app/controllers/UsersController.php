@@ -2,11 +2,10 @@
 
 class UsersController extends BaseController{
 
-	public function __construct()	{
+	public function __construct(){
 		//parent::__construct();
 		$this->beforeFilter('csrf', array('on'=>'post'));
-
-		
+		//$this->beforeFilter('mega');
 	}
 
 
@@ -48,6 +47,9 @@ class UsersController extends BaseController{
 	}
 
 	public function perfil(){
+		if(Auth::user()->tipo != 2){
+			return Redirect::to('/');
+		}
 		$id = Auth::user()->id;
 		$user = User::where('id',"=", $id);
 		if($user->count()){

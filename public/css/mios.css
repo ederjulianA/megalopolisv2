@@ -17,6 +17,10 @@ div.productos-container .producto {
 	margin: 4px;
 	width: 150px;
 }
+
+textarea {
+	text-align: left;
+}
 .titulo_registro{
 	margin: 0 auto;
 	text-align: center;

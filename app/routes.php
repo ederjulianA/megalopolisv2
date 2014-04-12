@@ -10,10 +10,21 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+/* RUTA HOME  */
 Route::get('/', array(
 		'as' => 'index',
 		'uses' => 'HomeController@getIndex'
+	));
+
+Route::get('/mega/cambiar/imagen', array(
+		'as' => 'cambiar-imagen',
+		'uses' => 'EmpresasController@getCambiarImagen'
+	));
+
+
+Route::post('/mega/cambiar/imagen', array(
+		'as' => 'cambiar-imagen-post',
+		'uses' => 'EmpresasController@postCambiarImagen'
 	));
 
 Route::get('/mega/perfil', array(
@@ -37,7 +48,10 @@ Route::get('/empresa/admin', array(
 	));
 
 
-
+Route::post('/empresa/actualizar/info', array(
+		'as' => 'empresa-actualizar-info-post',
+		'uses' => 'EmpresasController@postActualizarInfo'
+	));
 Route::post('/crear-cuenta', array(
 		'as' => 'crear-cuenta-post',
 		'uses' => 'UsersController@postCreate'

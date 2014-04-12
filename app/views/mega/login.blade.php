@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<form class="form-login" method="post" action="{{ URL::route('login-post')}} ">
+					<form class="form-login" method="post" action="{{ URL::route('login-post')}} " autocomplete = "off">
 						<div class="form-group">
 							<label>Email</label>
 							<input type="email" placeholder="ejemplo@ejemplo.com" class="form-control input-sm bounceIn animation-delay2" name="email">

@@ -54,7 +54,9 @@
 
 					<ul class="nav-notification clearfix">
 					
-						
+						<li>
+							<a href="{{ URL::route('index')}}">Home</a>
+						</li>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="fa fa-bell fa-lg"></i>
@@ -120,6 +122,8 @@
 							</ul>
 						</li>
 					</ul>
+
+					
 			</div><!-- FIN BARRA DE NAVEGACION FIJADA AL TOP -->
 
 			<!-- ############################################################################################################## NAVEGACION FIJA TOP######################################-->
@@ -143,7 +147,7 @@
 					<div class="detail">
 						<strong>{{$user->empresa->razon_social}}</strong><span class="badge badge-danger m-left-xs bounceIn animation-delay4"></span>
 						<ul class="list-inline">
-							<li><a href="#">Perfil</a></li>
+							<li><a href="{{ URL::route('mega-perfil')}}">Perfil</a></li>
 							
 						</ul>
 					</div>
@@ -152,15 +156,16 @@
 				<div class="main-menu">
 					<ul>
 						<li class="active">
-							<a href="#">
+							<a href="{{ URL::route('mega-perfil')}}">
 								<span class="menu-icon">
 									<i class="fa fa-briefcase fa-lg"></i> 
 								</span>
 								<span class="text">
-									Productos
+									Info Basica
 								</span>
 								<span class="menu-hover"></span>
 							</a>
+							
 						</li>
 						<li class="openable">
 							<a href="#">
@@ -168,13 +173,17 @@
 									<i class="fa fa-gift fa-lg"></i> 
 								</span>
 								<span class="text">
-									Promociones
+									Mi empresa
 								</span>
 								<span class="menu-hover"></span>
 							</a>
 							<ul class="submenu">
-								<li><a href="#"><span class="submenu-label">Otro item</span></a></li>
-								<li><a href="#"><span class="submenu-label">Otro item</span></a></li>
+								<li><a href="{{ URL::route('cambiar-imagen')}}"><span class="submenu-label">Cambiar Imagen</span></a></li>
+								<li><a href="#"><span class="submenu-label">Cambiar Contraseña</span></a></li>
+								<li><a href="#"><span class="submenu-label">Nuevo Producto</span></a></li>
+								<li><a href="#"><span class="submenu-label">Nueva Promocion</span></a></li>
+								<li><a href="#"><span class="submenu-label">Nuevo Tab</span></a></li>
+								<li><a href="#"><span class="submenu-label">#</span></a></li>
 								
 							</ul>
 						</li>
@@ -196,7 +205,9 @@
 					</ul>
 					
 					<div class="alert alert-info">
-					Bienvenido al administrador de  Megalopolis
+							@if(Session::has('message-alert'))
+						<p class="alert alert-success" style="top:20%;"> {{Session::get('message-alert')}}</p>
+				@endif
 					</div>
 				</div><!-- /main-menu -->
 			</div><!-- /sidebar-inner -->

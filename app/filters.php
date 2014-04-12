@@ -44,6 +44,12 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+
+
+Route::filter('mega', function(){
+	if(!Auth::user() || Auth::user()->tipo != 2) return Redirect::to('/');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
