@@ -179,7 +179,15 @@
 						</tr>
 						<tr align="center" style="padding-top: 10px;">
 							<td style="font:12px Arial, Helvetica, sans-serif; padding:10px 50px 10px;">
-								Gracias por registrarte en Megalopolis Colombia. Para activar tu cuenta da click en el siguiente link o copia y pegalo en tu navegador. <br><br>
+								Gracias por registrarte en Megalopolis Colombia. Para activar tu cuenta da click en el siguiente link o copia y pegalo en tu navegador.<br>
+								<h3>Credenciales de Inicio de Sesion</h3>
+								<br>
+								email : {{$email}}<br>
+								Contraseña : {{$pass}}
+
+								 <br><br>
+								
+								<h3>Link de activacion </h3>
 								{{ $link }}
 
 							</td>
