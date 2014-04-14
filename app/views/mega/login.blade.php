@@ -16,7 +16,7 @@
 
 					<div class="pull-right">
 						<span style="font-size:11px;">No eres Usuario aun?</span>
-						<a class="btn btn-default btn-xs login-link" href="{{ URL::route('index')}}" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Registrarme</a>
+						<a class="btn btn-default btn-xs login-link" href="{{ URL::route('registro')}}" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Registrarme</a>
 					</div>
 				</div>
 				<div class="panel-body">

@@ -1,7 +1,7 @@
 h1.megalopolis_titulo{
 	text-align: center;
 	font-family: Georgia, Comic-sans-serif;
-	font-size: 40px;
+	font-size: 75px;
 	font-weight: bold;
 
 }
@@ -22,9 +22,17 @@ textarea {
 	text-align: left;
 }
 .titulo_registro{
+	
 	margin: 0 auto;
+	
 	text-align: center;
-}
+	}
+.titulo_registro a {
+	box-shadow: 0px 2px 0px rgba(0,0,0, .8);
+	box-shadow: 0px 3px 0px rgba(0,0,0, .6);
+	box-shadow: 0px 4px 0px rgba(0,0,0, .4);
+	font-size: 30px;
+}	
 
 .form-registro{
 	margin: 10px auto;

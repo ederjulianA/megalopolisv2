@@ -68,6 +68,11 @@ Route::get('/get-login', array(
 		'uses' => 'HomeController@getLogin'
 	));
 
+Route::get('/get-registro', array(
+		'as' => 'registro',
+		'uses' => 'HomeController@getRegistro'
+	));
+
 Route::post('/post-login', array(
 		'as' => 'login-post',
 		'uses' => 'UsersController@postLogin'

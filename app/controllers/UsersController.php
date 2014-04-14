@@ -40,7 +40,7 @@ class UsersController extends BaseController{
 				->with('message-alert','Gracias Por registrarte Ya puedes Iniciar Ssion :)');
 		}
 
-		return Redirect::to('/')
+		return Redirect::to('/get-registro')
 			->with('message-alert','Algo salio mal Vuelve a intentarlo')
 			->withErrors($validator)
 			->withInput();

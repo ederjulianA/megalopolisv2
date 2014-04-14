@@ -16,4 +16,11 @@ class HomeController extends BaseController {
 		return View::make('mega.login');
 	}
 
+	public function getRegistro(){
+		if(Auth::check()){
+			return Redirect::to('/');
+		}
+		return View::make('mega.registro');
+	}
+
 }
