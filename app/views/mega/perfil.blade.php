@@ -75,18 +75,18 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Descripcion Breve</label>
 												<div class="col-md-10">
-													<textarea class="form-control" rows="3" name="descripcion_breve">
-														{{$user->empresa->desc_breve}}
-													</textarea>
+													<textarea class="form-control" rows="3" name="descripcion_breve">{{$user->empresa->desc_breve}}</textarea>
+														
+													
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
 											<div class="form-group">
 												<label class="control-label col-md-2">Descripcion Larga</label>
 												<div class="col-md-10">
-													<textarea class="form-control" rows="5" name="descripcion_larga">
-														{{$user->empresa->desc_larga}}
-													</textarea>
+													<textarea class="form-control" rows="5" name="descripcion_larga">{{$user->empresa->desc_larga}}</textarea>
+														
+													
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 										

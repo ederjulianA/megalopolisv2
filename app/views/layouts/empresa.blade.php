@@ -41,7 +41,7 @@
 
 <div id="wrapper" class="preload">
 	
-			<div id="top-nav" class="fixed skin-2">
+			<div id="top-nav" class="fixed skin-6">
 					<a href="{{ URL::route('index')}}" class="brand">
 						<span>Megalopolis</span>
 						<span class="text-toggle"> colombia</span>
@@ -129,7 +129,7 @@
 			<!-- ############################################################################################################## NAVEGACION FIJA TOP######################################-->
 
 
-		<aside class="fixed skin-3">
+		<aside class="fixed skin-6">
 			<div class="sidebar-inner scrollable-sidebar">
 				<div class="size-toggle">
 					<a class="btn btn-sm" id="sizeToggle">
