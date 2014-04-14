@@ -47,7 +47,7 @@ class UsersController extends BaseController{
 	}
 
 	public function perfil(){
-		if(Auth::user()->tipo != 2){
+		if(!Auth::user()  || Auth::user()->tipo != 2){
 			return Redirect::to('/');
 		}
 		$id = Auth::user()->id;

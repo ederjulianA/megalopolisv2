@@ -45,7 +45,7 @@
 
 						<hr/>
 							
-						<input type="submit" class="btn btn-success" value="Iniciar Sesion">
+						<input type="submit" class="btn btn-success btn-sombra" value="Iniciar Sesion">
 						{{ Form::token()}}
 					</form>
 				</div>

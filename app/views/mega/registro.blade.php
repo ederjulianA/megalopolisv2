@@ -74,7 +74,7 @@
 								</div><!-- /.col -->
 							</div><!-- /.row -->
 
-							<input type="submit" value="Registrar" class="btn btn-success btn-sm">
+							<input type="submit" value="Registrar" class="btn btn-success btn-sm btn-sombra">
 
 							{{ Form::token()}}
 
