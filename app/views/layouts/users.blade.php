@@ -47,7 +47,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand"><span class="text-danger">Megalopolis</span> Colombia</a>
+						<a href="{{ URL::route('index')}}" class="navbar-brand"><span class="text-danger">Megalopolis</span> Colombia</a>
 					</div>
 					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 						<ul class="nav navbar-nav navbar-right">

@@ -118,6 +118,9 @@ class EmpresasController  extends BaseController {
 			
 		
 		}
+		return Redirect::to('/mega/perfil')
+					->with('message-alert','Error al actualizar')
+					->withErrors($validator);
 		
 
 	}

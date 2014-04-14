@@ -38,3 +38,9 @@ textarea {
 	margin: 10px auto;
 	width: 300px;
 }
+
+.btn-sombra {
+	box-shadow: 0px 2px 0px rgba(0,0,0, .8);
+	box-shadow: 0px 3px 0px rgba(0,0,0, .6);
+	box-shadow: 0px 4px 0px rgba(0,0,0, .4);
+}
