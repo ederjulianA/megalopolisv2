@@ -87,3 +87,10 @@ Route::get('/cerrar-sesion', array(
 
 	));
 
+//activar cuenta via email
+
+Route::get('/activar/cuenta/{codigo_activacion}', array(
+
+			'as' => 'activar-cuenta',
+			'uses' => 'UsersController@getActivate'
+		));

@@ -8,6 +8,27 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+	public function getActivate($codigo_activacion)
+	{
+			$user = User::where('code', '=', $codigo_activacion)->where('active', '=',0);
+
+				if($user->count()){
+					$user = $user->first();
+						//actualizamos el registro a activo
+
+					$user->active = 1;
+					$user->code   = '';
+
+					if($user->save()){
+						return Redirect::route('index')
+					->with('message-alert','Cuenta Activada. :)');
+
+					}
+				}
+				return Redirect::route('index')
+					->with('message-alert','No hemos podido activar tu cuenta. :(');
+	}
+
 
 		public function postCreate(){
 		$validator	=	Validator::make(Input::all(), User::$rules);
@@ -26,18 +47,28 @@ class UsersController extends BaseController{
 			/*$imgPath = $destinationPath.$filename;*/
 			Image::make($img->getRealPath())->resize(468, 249)->save('public/img/users/'.$filename);
 			$user->img = 'img/users/'.$filename;
+			$codigo_activacion = str_random(60);
 
 			
 			
 			
-			$user->code = "";
-			$user->active = 1;
+			$user->code = $codigo_activacion;
+			$user->active = 0;
 			$user->password		=	Hash::make(Input::get('password'));
 			$user->tipo	=	Input::get('tipo');
-			$user->save();
+			
+			if($user->save())
+			{
+					Mail::send('emails.auth.activate', array('link' => URL::route('activar-cuenta',$codigo_activacion), 'username'=>$user->username), function($message) use ($user){
+						$message->to($user->email, $user->username)->subject('Activa tu cuenta');
+					});
 
-			return Redirect::to('/get-login')
-				->with('message-alert','Gracias Por registrarte Ya puedes Iniciar Ssion :)');
+
+					return Redirect::to('/get-login')
+				->with('message-alert','Gracias Por registrarte. Te hemos enviado un email con un codigo de activacion :)');
+			}
+
+			
 		}
 
 		return Redirect::to('/get-registro')
@@ -62,12 +93,43 @@ class UsersController extends BaseController{
 
 
 	public function postLogin(){
-		if(Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+		
+			$validator = Validator::make(Input::all(),array(
 
-			
-			return Redirect::intended('/')->with('message-alert','Gracias Por Inicar Sesion.');
-		}
-		return Redirect::to('/get-login')->with('message-alert','Combinacion de email o contraseña Incorrecta');
+					'email' => 'required|email',
+					'password' => 'required'
+				)
+
+			);
+
+			if($validator->fails()){
+
+				//redirigimos al usuario al log in
+				return Redirect::route('login')
+				->withErrors($validator)
+				->withInput();
+			}else{
+				$remember = (Input::has('remember')) ? true : false;
+				//creamos la sesion del usuario
+				$auth = Auth::attempt(array(
+						'email'  => Input::get('email'),
+						'password' => Input::get('password'),
+						'active' => 1
+					), $remember);
+
+				if($auth){
+
+					return Redirect::intended('/');
+				}else{
+					return Redirect::route('login')
+				->with('message-alert', 'El email o la contraseña no coinsiden, o la cuenta no esta activada');
+				}
+
+
+			}
+
+			return Redirect::route('login')
+				->with('message-alert', 'Hubo un problema en el inicio de sesion');
 	}
 
 	public function cerrarSesion() {
