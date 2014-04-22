@@ -10,7 +10,9 @@ class EmpresasController  extends BaseController {
 
 	public function getNuevaEmpresa(){
 
-		return View::make('empresa.nueva');
+		
+		return View::make('empresa.nueva')
+			->with('ciudad', Ciudad::all());
 	}
 
 
@@ -102,10 +104,12 @@ class EmpresasController  extends BaseController {
 					
 
 					$empresa->razon_social = Input::get('razon_social');
-
+					$empresa->direccion_principal = Input::get('direccion_principal');
+					$empresa->telefono = Input::get('telefono');
 					
 					$empresa->desc_breve = Input::get('descripcion_breve');
 					$empresa->desc_larga = Input::get('descripcion_larga');
+
 					$empresa->save();
 					return Redirect::to('/mega/perfil')
 					->with('message-alert','Actualizacion Correcta');
@@ -134,10 +138,14 @@ class EmpresasController  extends BaseController {
 			$empresa->user_id = Input::get('user_id');
 			$empresa->sector_id = Input::get('sector');
 			$empresa->razon_social = Input::get('razon_social');
+			$empresa->direccion_principal = Input::get('direccion_principal');
+			$empresa->telefono = Input::get('telefono');
+			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
-			$filename = date('Y-m-d-H')."-".$logo->getClientOriginalName();
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$logo->getClientOriginalName();
 			Image::make($logo->getRealPath())->resize(468, 249)->save('public/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
+			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->desc_breve = Input::get('descripcion_breve');
 			$empresa->desc_larga = Input::get('descripcion_larga');
 
@@ -179,7 +187,8 @@ class EmpresasController  extends BaseController {
 					$sectores[$sector->id] = $sector->nom_sector;
 					}*/
 				return View::make('empresa.nueva')
-				->with('sectores' ,  Sector::all());
+				->with('sectores' ,  Sector::all())
+				->with('ciudad', Ciudad::all());
 			}
 		}
 	}

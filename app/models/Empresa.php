@@ -8,10 +8,13 @@ class Empresa extends Eloquent {
 
 	public static $rules = array(
 		'user_id'	=>	'integer',
+		'ciudad' =>	'integer',
 		'sector_id'	=>	'integer',
 		'razon_social'	=>	'required',
+		'direccion_principal' => 'required|min:5|max:150',
 		'descripcion_breve' => 'required|min:5|max:250',
-		'descripcion_larga' => 'required|min:5|max:2500',
+		'descripcion_larga' => 'min:5|max:2500',
+		'telefono' =>		'required',
 		'logo'		 			 =>'image|mimes:jpeg,jpg,bmp,png,gif'
 
 		);
@@ -24,5 +27,12 @@ class Empresa extends Eloquent {
 
     public function sector(){
 		return $this->belongsTo('Sector','sector_id');
+	}
+
+	public function ciudad(){
+		return $this->belongsTo('Ciudad');
+	}
+	public function pregunta(){
+		return $this->hasMany('Pregunta');
 	}
 }

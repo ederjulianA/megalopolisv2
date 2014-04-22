@@ -35,8 +35,10 @@
 											<i class="fa fa-share"></i>
 										</span>
 									<div class="pull-right text-right">
+										<a href="{{URL::route('navegar')}}" >
 											<div class="value">Ir</div>
 											<div class="title">Navegar</div>
+										</a>	
 									</div>
 									</div>
 								</div><!-- /panel -->

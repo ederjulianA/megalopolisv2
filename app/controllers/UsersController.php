@@ -64,14 +64,14 @@ class UsersController extends BaseController{
 					});
 
 
-					return Redirect::to('/get-login')
+					return Redirect::to('/login')
 				->with('message-alert','Gracias Por registrarte. Te hemos enviado un email con un codigo de activacion :)');
 			}
 
 			
 		}
 
-		return Redirect::to('/get-registro')
+		return Redirect::to('/registro')
 			->with('message-alert','Algo salio mal Vuelve a intentarlo')
 			->withErrors($validator)
 			->withInput();
@@ -83,10 +83,13 @@ class UsersController extends BaseController{
 		}
 		$id = Auth::user()->id;
 		$user = User::where('id',"=", $id);
-		if($user->count()){
+		$empresa = Empresa::where('user_id',"=", $id);
+		if($user->count() && $empresa->count()){
 				$user = $user->first();
+				$empresa = $empresa->first();
 				return View::make('mega.perfil')
-				->with('user' , $user);
+				->with('user' , $user)
+				->with('empresa', $empresa);
 			}
 	}
 

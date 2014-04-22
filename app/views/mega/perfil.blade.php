@@ -133,12 +133,12 @@
 											
 										<div class="panel panel-default fadeInDown animation-delay3">
 											<div class="panel-heading">
-												<i class="fa fa-book"></i> <h2>Datos de Cpntacto</h2>
+												<i class="fa fa-book"></i> <h2>Datos de Contacto</h2>
 											</div>
 											<!--  LISTA DATOS DE CONTACTO DE LA EMPRESA################################-->
 											<ul class="list-group"> 
 												<li class="list-group-item"> 
-													<p>Telefonos : <a href="#" class="text-info">6345990 - 6204050</a>			</p> 
+													<p>Telefonos : <a href="#" class="text-info">{{$empresa->telefono}}</a>			</p> 
 													
 												</li> 
 												<li class="list-group-item"> 
@@ -148,13 +148,13 @@
 												</li> 
 
 												<li class="list-group-item"> 
-													<p>Direccion: <a href="#" class="text-info">Calle 20 # 12-64</a>
+													<p>Direccion: <a href="#" class="text-info">{{$empresa->direccion_principal}}</a>
 													</p> 
 													 
 												</li> 
 
 												<li class="list-group-item"> 
-													<p>Correo electronico: <a href="#" class="text-info">mercagan@email.com</a>
+													<p>Correo electronico: <a href="#" class="text-info">{{$user->email}}</a>
 													</p> 
 													 
 												</li> 
@@ -167,7 +167,7 @@
 									<div class="col-md-6">
 										<div class="panel panel-default fadeInUp animation-delay4">
 											<div class="panel-heading">
-												Ubicacion 
+												{{$empresa->ciudad->ciudad }} 
 											</div>
 											<iframe width="250" height="200" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Bucaramanga+-+Santander,+Colombia+carrera+24+%23+18-76&amp;aq=&amp;sll=7.11331,-73.120468&amp;sspn=0.369978,0.676346&amp;ie=UTF8&amp;hq=&amp;hnear=Carrera+24+%23+18-76,+Bucaramanga,+Santander,+Colombia&amp;t=m&amp;z=14&amp;ll=7.13022,-73.122221&amp;output=embed"></iframe><br /><small><a href="http://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Bucaramanga+-+Santander,+Colombia+carrera+24+%23+18-76&amp;aq=&amp;sll=7.11331,-73.120468&amp;sspn=0.369978,0.676346&amp;ie=UTF8&amp;hq=&amp;hnear=Carrera+24+%23+18-76,+Bucaramanga,+Santander,+Colombia&amp;t=m&amp;z=14&amp;ll=7.13022,-73.122221" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
 										</div><!-- /panel -->
@@ -235,6 +235,14 @@
 													<input type="text" class="form-control input-sm" name="razon_social" placeholder="empresa" value="{{$user->empresa->razon_social}}">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
+
+
+											<div class="form-group">
+												<label class="control-label col-md-2">direccion Principal</label>												
+												<div class="col-md-10">
+													<input type="text" class="form-control input-sm" name="direccion_principal" placeholder="empresa" value="{{$user->empresa->direccion_principal}}">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
 											
 										
 										
@@ -263,6 +271,8 @@
 										{{Form::token()}}
 									</form>
 								</div><!-- /panel -->
+
+							
 							
 								
 							

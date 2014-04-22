@@ -16,6 +16,23 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+/* RUTA HOME O NAVEGACION DONDE SE VISUALIZARAN LAS EMPRESAS*/
+Route::get('/navegar', array(
+		'as' => 'navegar',
+		'uses' => 'NavegarController@getNavegar'
+	));
+//VISUALIZAR LA INFORMACION DE UNA EMPRESA SEGUN EL ID 
+Route::get('/empresa/{id}', array(
+		'as' => 'empresa-info',
+		'uses' => 'NavegarController@getInfo'
+	));
+
+//SE MUESTRAN LAS EMPRESAS SEGUN EL FILTRO DE LA CATEGORIA 
+Route::get('/navegar/categoria/{id}', array(
+		'as' => 'categoria-empresa',
+		'uses' => 'NavegarController@getCategoria'
+	));
+
 Route::get('/mega/cambiar/imagen', array(
 		'as' => 'cambiar-imagen',
 		'uses' => 'EmpresasController@getCambiarImagen'
@@ -63,12 +80,12 @@ Route::post('/empresa/crear', array(
 	));
 
 
-Route::get('/get-login', array(
+Route::get('/login', array(
 		'as' => 'login',
 		'uses' => 'HomeController@getLogin'
 	));
 
-Route::get('/get-registro', array(
+Route::get('/registro', array(
 		'as' => 'registro',
 		'uses' => 'HomeController@getRegistro'
 	));

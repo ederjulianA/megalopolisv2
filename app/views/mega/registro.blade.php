@@ -31,10 +31,10 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<form method="post" action="{{ URL::route('crear-cuenta-post')}}" class="form-registro" enctype="multipart/form-data">
+					<form method="post" action="{{ URL::route('crear-cuenta-post')}}" class="form-registro" enctype="multipart/form-data" autocomplete="off">
 							<div class="form-group">
 								<label for="username">Nombre</label>
-								<input type="text" class="form-control input-sm  bounceIn animation-delay2" placeholder="Escribe tu nombre" name="username" {{ (Input::old('username')) ? 'value="'. e(Input::old('username')).'"' : '' }}>
+								<input type="text" class="form-control input-sm  bounceIn animation-delay2 " placeholder="Escribe tu nombre" name="username" {{ (Input::old('username')) ? 'value="'. e(Input::old('username')).'"' : '' }}>
 							</div><!-- /form-group -->
 
 							
