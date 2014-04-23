@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+
 
 // import the Intervention Image Class
 use Intervention\Image\Image;
