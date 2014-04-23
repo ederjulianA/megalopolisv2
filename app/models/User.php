@@ -61,9 +61,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getReminderEmail()
+	/*public function getReminderEmail()
 	{
 		return $this->email;
-	}
+	}*/
 
 }
