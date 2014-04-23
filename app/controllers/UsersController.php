@@ -50,7 +50,7 @@ class UsersController extends BaseController{
 			$img = Input::file('img');
 			$filename = date('Y-m-d-H')."-".$img->getClientOriginalName();
 			/*$imgPath = $destinationPath.$filename;*/
-			Image::make($img->getRealPath())->resize(468, 249)->save(public_path().'public/img/users/'.$filename);
+			Image::make($img->getRealPath())->resize(468, 249)->save(public_path().'/img/users/'.$filename);
 			$user->img = 'img/users/'.$filename;
 			$codigo_activacion = str_random(60);
 

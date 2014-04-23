@@ -148,7 +148,7 @@ class EmpresasController  extends BaseController {
 			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
 			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$logo->getClientOriginalName();
-			Image::make($logo->getRealPath())->resize(468, 249)->save('public/img/empresas/'.$filename);
+			Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->desc_breve = Input::get('descripcion_breve');
