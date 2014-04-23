@@ -1,5 +1,10 @@
 <?php
 
+require 'vendor/autoload.php';
+
+// import the Intervention Image Class
+use Intervention\Image\Image;
+
 class EmpresasController  extends BaseController {
 
 	public function __construct(){
