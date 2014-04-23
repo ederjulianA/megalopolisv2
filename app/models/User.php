@@ -76,9 +76,9 @@ public function getRememberTokenName()
 	 *
 	 * @return string
 	 */
-	/*public function getReminderEmail()
+	public function getReminderEmail()
 	{
 		return $this->email;
-	}*/
+	}
 
 }
