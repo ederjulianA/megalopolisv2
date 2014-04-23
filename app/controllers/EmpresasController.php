@@ -65,7 +65,7 @@ class EmpresasController  extends BaseController {
 				$logo = Input::file('nuevo_logo');
 				$codigoIMG = str_random(13);
 				$filename = date('Y-m-d-H')."-".$codigoIMG."-".$logo->getClientOriginalName();
-				Image::make($logo->getRealPath())->resize(468, 249)->save('public/img/empresas/'.$filename);
+				Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
 				return Redirect::to('/mega/cambiar/imagen')
