@@ -45,10 +45,10 @@ class UsersController extends BaseController{
 			$user->email		=	Input::get('email');
 			
 			$user->password_temp = "";
-			
+			$codigoIMG = str_random(13);
 			
 			$img = Input::file('img');
-			$filename = date('Y-m-d-H')."-".$img->getClientOriginalName();
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$img->getClientOriginalName();
 			/*$imgPath = $destinationPath.$filename;*/
 			Image::make($img->getRealPath())->resize(468, 249)->save(public_path().'/img/users/'.$filename);
 			$user->img = 'img/users/'.$filename;
