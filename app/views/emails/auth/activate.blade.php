@@ -144,7 +144,7 @@
 													<tbody>
 														<tr>
 															<td width="8%" align="left" valign="top">
-															{{HTML::image('img/email_template/logo2.png')}}
+															{{HTML::image('img/email_template/logo2.png','megalopolis', array('width'=>'150px'))}}
 																
 
 															</td>
