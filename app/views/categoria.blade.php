@@ -63,7 +63,7 @@
 														<div class="detail fadeInUp animated-element empresa">
 														<a href="/empresa/{{$empresa->id}}" class="hoverBorder">
 															<span class="hoverBorderWrapper">
-																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'170px'))}}
+																{{HTML::image($empresa->sector->img, $empresa->razon_social, array('width'=>'170px'))}}
 																<span class="hoverBorderInner"></span>
 																<span class="readMore">{{$empresa->sector->nom_sector}}</span>
 															</span>	
