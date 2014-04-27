@@ -9,8 +9,10 @@ class Empresa extends Eloquent {
 	public static $rules = array(
 		'user_id'	=>	'integer',
 		'ciudad' =>	'integer',
+		'barrio' =>	'integer',
 		'sector_id'	=>	'integer',
 		'razon_social'	=>	'required',
+		'nombre_publico'	=>	'required|min:3|max:200|unique:empresas',
 		'direccion_principal' => 'required|min:5|max:150',
 		'descripcion_breve' => 'required|min:5|max:250',
 		'descripcion_larga' => 'min:5|max:2500',

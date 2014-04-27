@@ -16,4 +16,9 @@ class Ciudad extends Eloquent {
 	{
 		return $this->hasMany('Empresa');
 	}
+
+	public function barrio()
+	{
+		return $this->hasMany('Barrio');
+	}
 }

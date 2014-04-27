@@ -16,13 +16,20 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+
+
+Route::post('/get/barrios', array(
+		'as' => 'barrios-lista',
+		'uses' => 'AjaxController@postBarrios'
+	));
+
 /* RUTA HOME O NAVEGACION DONDE SE VISUALIZARAN LAS EMPRESAS*/
 Route::get('/navegar', array(
 		'as' => 'navegar',
 		'uses' => 'NavegarController@getNavegar'
 	));
 //VISUALIZAR LA INFORMACION DE UNA EMPRESA SEGUN EL ID 
-Route::get('/empresa/{id}', array(
+Route::get('/empresa/{nombre_publico}', array(
 		'as' => 'empresa-info',
 		'uses' => 'NavegarController@getInfo'
 	));

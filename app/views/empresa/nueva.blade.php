@@ -1,5 +1,9 @@
 @extends('layouts.users')
 
+@section('titulo')
+Crear Nueva empresa
+@stop
+
 @section('content')
 	<div class="nueva-empresa-form">
 		
@@ -47,7 +51,8 @@
 
 								<div class="form-group">
 										<label>Ciudad</label>
-										<select name="ciudad" name="ciudad" class="form-control input-sm bounceIn animation-delay3">
+										<select  name="ciudad" class="form-control input-sm bounceIn animation-delay3" id="sel-ciudades">
+											<option value="0"> ESCOGE UNA CIUDAD </option>
 											@foreach($ciudad  as $ciudad)
 												<option value="{{ $ciudad->id}}">{{ $ciudad->ciudad }}</option>
 											@endforeach
@@ -55,15 +60,30 @@
 										</select>
 								</div>
 
+									<div class="form-group">
+										<label>Selecciona el Barrio</label>
+										<select  name="barrio" class="form-control input-sm bounceIn animation-delay3" id="sel-barrio">
+											
+											
+										</select>
+								</div>
+
 								<div class="form-group">
 									<label>Razon Social</label>
-									<input type="text" name="razon_social" placeholder="Nombre de Tu empresa" class="form-control input-sm bounceIn animation-delay4" >
+									<input type="text" name="razon_social" id="razon_social"  placeholder="Nombre de Tu empresa" class="form-control input-sm bounceIn animation-delay4" title=" Razon Social" data-content="Este sera el nombre que se desplegara en las vistas publicas de tu empresa "data-toggle="popover">
+								</div>
+
+								<div class="form-group">
+									<label>Nombre Publico</label>
+									<input type="text" name="nombre_publico" id="nombre_publico"  placeholder="ejemplo: /mi-empresa" class="form-control input-sm bounceIn animation-delay4" title="Nombre Publico" data-content="con este nombre los usuarios encontraran tu empresa, recuerda separa los espacios con - ejemplo: nombre-de-mi-empresa "data-toggle="popover">
 								</div>
 
 								<div class="form-group">
 									<label>Direccion Principal</label>
 									<input type="text" name="direccion_principal" placeholder="Direccion Principal" class="form-control input-sm bounceIn animation-delay4" >
 								</div>
+
+								
 
 								<div class="form-group">
 									<label>Telefono</label>
@@ -98,4 +118,11 @@
 
 		</div>
 	</div>
+
+
+	 <script type="text/javascript">
+      $('#razon_social').popover(),
+      $('#nombre_publico').popover(),
+    
+    </script>
 @stop

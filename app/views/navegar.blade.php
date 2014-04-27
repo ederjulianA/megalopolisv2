@@ -8,11 +8,17 @@
 				<div class="row">
 					
 							<div class="col-md-3" style="text-align:center;">
-								<select name="ciudad" class="select-ciudad">
+								<select name="ciudad" id="sel-ciudades" class="select-ciudad">
 									<option value="0">- CIUDAD -</option>
 									@foreach($ciudades as $ciudad)
 										<option value="{{$ciudad->id}}"> {{$ciudad->ciudad}}</option>
 									@endforeach
+									
+								</select>
+
+								<select name="barrio" id="sel-barrio" class="select-barrio">
+									<option value="0">- barrio -</option>
+									
 									
 								</select>
 
@@ -34,7 +40,7 @@
 								<div class="navegar-centro">
 										<form method="post" action="#" >
 
-											<input type="text" name="buscador" placeholder="Buscas algo en especifico ?"><input type="submit" value="Buscar" class="btn btn-danger">
+											<input type="text" name="buscador" id="buscador" placeholder="Buscas algo en especifico ?"><input type="submit" value="Buscar" class="btn btn-danger">
 											{{Form::token()}}
 										</form>
 									
@@ -61,20 +67,21 @@
 												
 													
 														<div class="detail fadeInUp animated-element empresa">
-														<a href="/empresa/{{$empresa->id}}" class="hoverBorder">
+														<a href="/empresa/{{$empresa->nombre_publico}}" class="hoverBorder">
 															<span class="hoverBorderWrapper">
-																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'170px'))}}
+																{{HTML::image($empresa->sector->img, $empresa->razon_social, array('width'=>'170px','height'=> '90px'))}}
 																<span class="hoverBorderInner"></span>
 																<span class="readMore">{{$empresa->sector->nom_sector}}</span>
 															</span>	
 														</a>
 														<div class="seperator"></div>
 														<p>
-															<h4>{{$empresa->razon_social}}</h4>
+															<h4><span class="label label-success">{{$empresa->razon_social}} </span></h4>
 															<small>{{$empresa->desc_breve}}</small> 
 														</p>
 														<p>
-															<a href="/empresa/{{$empresa->id}}" class="btn btn-info">contacto</a>
+															<a href="/empresa/{{$empresa->nombre_publico}}" class="btn btn-info">contacto</a>
+															<a href="{{$empresa->id}}" class="addFav">fav</a>
 														</p>
 											</div><!--detail-->
 												

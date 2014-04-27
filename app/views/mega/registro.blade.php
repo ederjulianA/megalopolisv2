@@ -46,7 +46,7 @@
 
 							<div class="form-group">
 								<label for="tipo">Registrarme Como:</label>
-								<select name="tipo" class="bounceIn animation-delay4"  {{ (Input::old('tipo')) ? 'value="'. e(Input::old('tipo')).'"' : '' }}>
+								<select name="tipo" class="bounceIn animation-delay4" id="tipo" title=" tipo de usuario eres" data-content="Puedes registrarte como usuaro u empresa "data-toggle="popover" {{ (Input::old('tipo')) ? 'value="'. e(Input::old('tipo')).'"' : '' }}>
 									<option value="1"> Usuario </option>
 									<option value="2"> Empresa </option>
 									
@@ -55,7 +55,7 @@
 
 							<div class="form-group">
 								<label for="img"> Imagen de Usuario :</label>
-								<input type="file" name="img" value="Escoge tu imagen">
+								<input type="file" id="img" name="img" value="Escoge tu imagen" title="Escoge tu imagen de usuario" data-toggle="tooltip">
 								
 							</div>
 
@@ -83,5 +83,11 @@
 			</div><!-- /panel -->
 		</div><!-- /login-widget -->
 	</div><!-- /login-wrapper -->
+
+	 <script type="text/javascript">
+      $('#tipo').popover(),
+      $('#tipo').tooltip()
+      $('#img').tooltip('show')
+    </script>
 
 @stop

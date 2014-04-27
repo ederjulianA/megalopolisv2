@@ -143,6 +143,7 @@ class EmpresasController  extends BaseController {
 			$empresa->user_id = Input::get('user_id');
 			$empresa->sector_id = Input::get('sector');
 			$empresa->razon_social = Input::get('razon_social');
+
 			$empresa->direccion_principal = Input::get('direccion_principal');
 			$empresa->telefono = Input::get('telefono');
 			$codigoIMG = str_random(13);
@@ -151,6 +152,8 @@ class EmpresasController  extends BaseController {
 			Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
+			$empresa->barrio = Input::get('barrio');
+			$empresa->nombre_publico = Input::get('nombre_publico');
 			$empresa->desc_breve = Input::get('descripcion_breve');
 			$empresa->desc_larga = Input::get('descripcion_larga');
 

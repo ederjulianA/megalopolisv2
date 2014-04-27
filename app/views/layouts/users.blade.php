@@ -170,6 +170,10 @@
 	
 	<!-- Jquery UI -->
 	{{ HTML::script('js/jquery-ui.min.js')}}
+
+
+	<!-- ciudades-barrios -->
+	{{ HTML::script('js/barrios.js')}}
 	
 	
 	<!-- Bootstrap -->

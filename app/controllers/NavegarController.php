@@ -29,13 +29,16 @@ class NavegarController extends BaseController {
 
 	}
 
-	public function getInfo($id)
+	public function getInfo($nombre_publico)
 	{
-		$empresa = Empresa::find($id);
-		$preguntas = Pregunta::where('empresa_id',"=", $id)->get();
+		$empresa = Empresa::where('nombre_publico',"=", $nombre_publico)->get();
+		//$empresa = Empresa::find($id);
+		
 
-		if($empresa)
+		if($empresa->count())
 		{
+			$empresa = $empresa->first();
+			$preguntas = Pregunta::where('empresa_id',"=", $empresa->id)->get();
 			return View::make('info')->with('empresa', $empresa)
 			->with('preguntas', $preguntas);
 		}
