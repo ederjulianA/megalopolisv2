@@ -301,7 +301,7 @@
 								<div class="row">
 									<div class="panel panel-info pull-right">
 										<div class="panel-body">
-											Ultima Actualizacion Abril 2, 2014
+											Ultima Actualizacion {{$user->updated_at}}
 										</div>
 									</div><!-- /panel -->
 								</div><!-- /.row -->
