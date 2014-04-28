@@ -81,7 +81,7 @@
 														</p>
 														<p>
 															<a href="/empresa/{{$empresa->nombre_publico}}" class="btn btn-info">contacto</a>
-															<a href="{{$empresa->id}}" class="addFav">fav</a>
+															<a href="{{$empresa->id}}" class="addFav  btn btn-warning">fav <i class="fa  fa-heart"></i> </a>
 														</p>
 											</div><!--detail-->
 												

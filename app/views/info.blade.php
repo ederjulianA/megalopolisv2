@@ -23,7 +23,7 @@
 								</address>
 								<hr>
 								<h2>{{$empresa->razon_social}}</h2>
-								{{ HTML::image($empresa->logo)}}
+								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
 								<hr>
 								<div class="col-md">
 									<h4>Descripcion breve de la empresa</h4>

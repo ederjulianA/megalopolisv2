@@ -51,6 +51,13 @@ Route::post('/mega/cambiar/imagen', array(
 		'uses' => 'EmpresasController@postCambiarImagen'
 	));
 
+
+Route::post('/mega/cambiar-pass', array(
+		'as' => 'post-cambiar-pass',
+		'uses' => 'UsersController@postCambiarPassword'
+
+	));
+
 Route::get('/mega/perfil', array(
 		'as' => 'mega-perfil',
 		'uses'=> 'UsersController@perfil'

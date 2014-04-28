@@ -198,6 +198,17 @@
 								<!-- ############################################## INICIO DE TABS##########################-->
 								
 							</div><!-- /tab1 -->
+										@if($errors->has())
+							<div class="alert alert-success" style="text-align:center;">
+								<p>Errores en el formulario :</p>
+								<ul>
+									@foreach($errors->all() as $error)
+										<li>{{$error }}</li>
+									@endforeach
+								</ul>
+				
+							</div> <!--  end form errors-->
+							@endif
 							<div class="tab-pane fade" id="edit">
 								
 							
@@ -217,17 +228,7 @@
 										<div class="panel-heading">
 											Informacion Basica
 										</div>
-											@if($errors->has())
-							<div class="alert alert-success" style="text-align:center;">
-								<p>Errores en el formulario :</p>
-								<ul>
-									@foreach($errors->all() as $error)
-										<li>{{$error }}</li>
-									@endforeach
-								</ul>
-				
-							</div> <!--  end form errors-->
-							@endif
+								
 										<div class="panel-body">
 											<div class="form-group">
 												<label class="control-label col-md-2">Razon Social</label>												
@@ -237,10 +238,26 @@
 											</div><!-- /form-group -->
 
 
+
+											<div class="form-group">
+												<label class="control-label col-md-2">Nombre Publico</label>												
+												<div class="col-md-10">
+													<input type="text" class="form-control input-sm" name="nombre_publico" placeholder="empresa" value="{{$user->empresa->nombre_publico}}">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+
+
 											<div class="form-group">
 												<label class="control-label col-md-2">direccion Principal</label>												
 												<div class="col-md-10">
 													<input type="text" class="form-control input-sm" name="direccion_principal" placeholder="empresa" value="{{$user->empresa->direccion_principal}}">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+
+												<div class="form-group">
+												<label class="control-label col-md-2">Telefono</label>												
+												<div class="col-md-10">
+													<input type="text" class="form-control input-sm" name="telefono" placeholder="empresa" value="{{$user->empresa->telefono}}">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											
@@ -290,7 +307,7 @@
 								</div><!-- /.row -->
 								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border">
+									<form class="form-horizontal form-border" method="post" action="{{URL::route('post-cambiar-pass')}}">
 										<div class="panel-heading">
 											Actualizar Contraseña
 										</div>
@@ -298,21 +315,21 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Contraseña Actual</label>												
 												<div class="col-md-10">
-													<input type="password" class="form-control input-sm" placeholder="******" value="">
+													<input type="password" class="form-control input-sm" name="contrasena_actual" placeholder="******" value="">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
 												<label class="control-label col-md-2">Nueva Contraseña</label>
 												<div class="col-md-10">
-													<input type="password" class="form-control input-sm" value="">
+													<input type="password" name="nueva_contrasena" class="form-control input-sm" value="">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 										
 											<div class="form-group">
 												<label class="control-label col-md-2">Confirmar Contraseña</label>
 												<div class="col-md-10">
-													<input type="password" class="form-control input-sm" value="">
+													<input type="password" class="form-control input-sm" value="" name="confirmar_contrasena">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
@@ -325,6 +342,7 @@
 												
 											</div>
 										</div>
+										{{ Form::token()}}
 									</form>
 								</div><!-- /panel -->
 							

@@ -111,6 +111,7 @@ class EmpresasController  extends BaseController {
 					$empresa->razon_social = Input::get('razon_social');
 					$empresa->direccion_principal = Input::get('direccion_principal');
 					$empresa->telefono = Input::get('telefono');
+					$empresa->nombre_publico = Input::get('nombre_publico');
 					
 					$empresa->desc_breve = Input::get('descripcion_breve');
 					$empresa->desc_larga = Input::get('descripcion_larga');
