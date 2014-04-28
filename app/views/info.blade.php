@@ -26,9 +26,14 @@
 								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
 								<hr>
 								<div class="col-md">
-									<h4>Descripcion breve de la empresa</h4>
+									<h4>Descripcion  de la empresa</h4>
 									<p>
-										{{$empresa->desc_breve}}
+										@if($empresa->desc_larga == "")
+												{{$empresa->desc_breve}}
+										@else
+											{{$empresa->desc_larga}}
+										@endif
+										
 									</p>
 								</div>
 							</div><!-- /.col -->
