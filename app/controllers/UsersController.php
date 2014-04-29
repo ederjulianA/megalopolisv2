@@ -13,6 +13,83 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+
+	public function getOlvidoPass()
+	{
+		return View::make('mega.olvidoPass');
+	}
+
+	public function postOlvidoPass()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'email' => 'required|email'
+					)
+			);
+
+		if($validator->fails()){
+			return Redirect::to('/recuperar-cuenta')
+			->withErrors($validator)
+			->withInput()
+			->with('message-alert','Algo salio mal, porfavor verifica');
+		}else{
+
+			$user = User::where('email',"=",Input::get('email'));
+
+			if($user->count())
+			{
+				$user = $user->first();
+
+				$code = str_random(60);
+				$password = str_random(10);
+
+				$user->code = $code;
+				$user->password_temp = Hash::make($password);
+
+				if($user->save()){
+					Mail::send('emails.auth.recuperar', array('link' => URL::route('recuperar-cuenta-code', $code),'username' => $user->username, 'password' => $password), function($message) use($user){
+				    		$message->to($user->email, $user->username)->subject("Tu nueva contrasena");
+				    	});
+					return Redirect::route('recuperar-cuenta')
+					->with("message-alert","Ya hemos enviado tu nueva contraseña a tu email de registro, porfavor verifica");
+				}else{
+					return Redirect::route('recuperar-cuenta')
+					->with("message-alert","Se presentaron problemas al intentar actualizar la contraseña. Porfavor vuelve a intentarlo.");
+				}
+			}
+			return Redirect::route('recuperar-cuenta')
+					->with("message-alert","No hemos encontrado ningun email que coincida con el que espesificaste, porfavor Verifica tu email.");
+		}
+
+
+	}
+
+	public function getRecuperar($code)
+	{
+
+		$user = User::where('code','=',$code)->where('password_temp','!=','');
+
+		if($user->count()){
+			$user = $user->first();
+
+			$user->password  = $user->password_temp;
+			$user->password_temp = '';
+			$user->code ='';
+
+			if($user->save()){
+				return Redirect::route('index')
+				->with('message-alert','Tu contraseña se ha actualizado correctamente');
+			}
+
+
+		}
+		return Redirect::route('recuperar-cuenta')
+		->with('message-alert','Se presentaron problemas al intentar actualizar la contraseña. Intenta de nuevo');
+
+	}
+
+	// METODO DE ACTIVACION DE LA CUENTA DE USUARIO
+
 	public function getActivate($codigo_activacion)
 	{
 			$user = User::where('code', '=', $codigo_activacion)->where('active', '=',0);
@@ -33,6 +110,8 @@ class UsersController extends BaseController{
 				return Redirect::route('index')
 					->with('message-alert','No hemos podido activar tu cuenta. :(');
 	}
+
+	//METODO CREAR NUEVO USUARIO
 
 
 		public function postCreate(){

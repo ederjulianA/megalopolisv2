@@ -40,7 +40,7 @@
 						<div class="seperator"></div>
 						<div class="form-group">
 							Olvido su Contraseña?<br/>
-							Click <a href="#">Aqui</a> Para Reiniciar su Contraseña
+							Click <a href="{{ URL::route('recuperar-cuenta')}}">Aqui</a> Para Reiniciar su Contraseña
 						</div>
 
 						<hr/>

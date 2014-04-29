@@ -17,7 +17,26 @@ Route::get('/', array(
 	));
 
 
+/* RUTA RECUPERAR CONTRASEÑA */
+Route::get('/recuperar-cuenta', array(
+		'as' => 'recuperar-cuenta',
+		'uses' => 'UsersController@getOlvidoPass'
+	));
 
+
+Route::post('/recuperar-cuenta-post', array(
+		'as' => 'recuperar-cuenta-post',
+		'uses' => 'UsersController@postOlvidoPass'
+	));
+
+
+Route::get('/recuperar-cuenta/{code}', array(
+		'as' => 'recuperar-cuenta-code',
+		'uses' => 'UsersController@getRecuperar'
+	));
+
+
+/*METODO POST QUE DEVUELVE LA LIUSTA DE BARRIOS EN FORMATO JSON */
 Route::post('/get/barrios', array(
 		'as' => 'barrios-lista',
 		'uses' => 'AjaxController@postBarrios'
