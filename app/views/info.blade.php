@@ -22,7 +22,7 @@
 									
 								</address>
 								<div class="lista-sedes-info">
-									<h2>Sedes</h2>
+									<h2>Sedes ({{$num_sedes}})</h2>
 									@if($sedes->count())
 										@foreach($sedes as $sede)
 
