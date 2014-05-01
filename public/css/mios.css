@@ -1,3 +1,6 @@
+*{
+	font-family: Georgia, Verdana, Arial;
+}
 h1.megalopolis_titulo{
 	text-align: center;
 	font-family: Georgia, Comic-sans-serif;
@@ -20,13 +23,15 @@ div.productos-container .producto {
 }
 
 img.img-info-empresa {
-	border : 2px solid #891BE9;
+	border : 4px solid #EF6D17;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	
 	border-radius: 5px;
+
+	box-shadow: 2px 2px 4px rgba(0,0,0, .5);
 }
 
 textarea {
@@ -44,10 +49,40 @@ textarea {
 	vertical-align: top; 
 	width: 170px;
 }
+.form-nueva-sede{
+	margin: 5% auto;
+}
+.lista-sedes-info {
+	border: 2px solid #33E6F2;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+	box-shadow: 2px 2px 4px rgba(0,0,0, .5);
+
+
+
+	padding: 10px;
+}
+.lista-sedes-info h2 {
+	background-color: #33E6F2;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-o-border-radius: 25px;
+	-ms-border-radius: 25px;
+	border-radius: 25px;
+	color: #fff;
+	font-weight: bold;
+	margin: 5px auto;
+	padding: 10px;
+	text-align: center;
+	width: 50%;
+}
 .menu-categorias{
 
 	border: 1px solid #ccc;
-	margin: 30px; auto;
+	margin: 30px auto;
 	width: 95%;
 }
 
@@ -113,6 +148,15 @@ textarea {
 	box-shadow: 0px 4px 0px rgba(0,0,0, .4);
 	font-size: 30px;
 }	
+
+.nueva-sede{
+	width: 100%;
+}
+.nueva-sede h2 {
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+}
 
 .form-registro{
 	margin: 10px auto;

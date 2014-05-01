@@ -24,6 +24,18 @@ Route::get('/recuperar-cuenta', array(
 	));
 
 
+/* RUTA nueva sede */
+Route::get('/nueva-sede', array(
+		'as' => 'nueva-sede',
+		'uses' => 'EmpresasController@getNuevaSede'
+	));
+
+Route::post('/nueva-sede', array(
+		'as' => 'nueva-sede-post',
+		'uses' => 'EmpresasController@postNuevaSede'
+	));
+
+
 Route::post('/recuperar-cuenta-post', array(
 		'as' => 'recuperar-cuenta-post',
 		'uses' => 'UsersController@postOlvidoPass'

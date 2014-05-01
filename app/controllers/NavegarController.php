@@ -37,9 +37,12 @@ class NavegarController extends BaseController {
 
 		if($empresa->count())
 		{
+
 			$empresa = $empresa->first();
+			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 			$preguntas = Pregunta::where('empresa_id',"=", $empresa->id)->get();
 			return View::make('info')->with('empresa', $empresa)
+			->with('sedes', $sede)
 			->with('preguntas', $preguntas);
 		}
 

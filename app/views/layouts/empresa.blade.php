@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Megalopolis</title>
+	<title>@yield('titulo')Megalopolis</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -179,7 +179,7 @@
 							</a>
 							<ul class="submenu">
 								<li><a href="{{ URL::route('cambiar-imagen')}}"><span class="submenu-label">Cambiar Imagen</span></a></li>
-								<li><a href="#"><span class="submenu-label">Cambiar Contraseña</span></a></li>
+								<li><a href="{{ URL::route('nueva-sede')}}"><span class="submenu-label">Nueva Sede</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nuevo Producto</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nueva Promocion</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nuevo Tab</span></a></li>

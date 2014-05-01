@@ -13,6 +13,60 @@ class EmpresasController  extends BaseController {
 		$this->beforeFilter('mega');
 	}
 
+	public function getNuevaSede()
+	{
+		$id = Auth::user()->id;
+
+		$user = User::where('id',"=",$id);
+		$empresa = Empresa::where("user_id","=",$id);
+		
+
+		if($user->count() && $empresa->count())
+		{
+
+
+			$user = $user->first();
+			$empresa = $empresa->first();	
+			$sede = Sede::where("empresa_id","=", $empresa->id)->get();
+			return View::make('empresa.nueva-sede')
+			->with('user', $user)
+			->with('sedes', $sede)
+			->with('empresa', $empresa);
+		}
+
+		return Redirect::to('/mega/perfil')
+			->with('message-alert','error al ingresar ');
+	}
+
+	public function postNuevaSede()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'direccion' => 'required',
+						'nombre_publico' => 'required',
+						'telefono' => 'required'
+					)
+			);
+
+		if($validator->passes()){
+			$sede = new Sede;
+			$sede->empresa_id = Input::get('empresa_id');
+			$sede->direccion = Input::get('direccion');
+			$sede->telefono = Input::get('telefono');
+			$sede->nombre_publico = Input::get('nombre_publico');
+
+			if($sede->save())
+			{
+				return Redirect::to('/nueva-sede')->with('message-alert','Sede Creada');
+			}else{
+				return Redirect::to('/nueva-sede')->with('message-alert','No se ha podido crear tu sede');
+			}
+
+		}else{
+			return Redirect::to('/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Errores en el formulario');
+		}
+	}
+
 	public function getNuevaEmpresa(){
 
 		

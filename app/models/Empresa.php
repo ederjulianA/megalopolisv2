@@ -37,4 +37,9 @@ class Empresa extends Eloquent {
 	public function pregunta(){
 		return $this->hasMany('Pregunta');
 	}
+
+	public function sede()
+	{
+		return $this->hasMany('Sede');
+	}
 }

@@ -21,6 +21,23 @@
 									<strong>Email : <span class="theme-font">{{$empresa->user->email}}</span></strong><br>
 									
 								</address>
+								<div class="lista-sedes-info">
+									<h2>Sedes</h2>
+									@if($sedes->count())
+										@foreach($sedes as $sede)
+
+										<span>{{$sede->nombre_publico}}</span>--<a href="/catalogo/{{$sede->nombre_publico}}" class="label label-warning">Ver catalogo</a><br>
+
+										@endforeach
+
+
+									@else
+									No se han definido sedes para {{$empresa->razon_social}}
+
+									@endif
+
+									
+								</div>
 								<hr>
 								<h2>{{$empresa->razon_social}}</h2>
 								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
