@@ -36,6 +36,12 @@ Route::post('/nueva-sede', array(
 	));
 
 
+Route::post('/actualizar-sede', array(
+		'as' => 'actualizar-sede-post',
+		'uses' => 'EmpresasController@postActualizarSede'
+	));
+
+
 Route::post('/recuperar-cuenta-post', array(
 		'as' => 'recuperar-cuenta-post',
 		'uses' => 'UsersController@postOlvidoPass'

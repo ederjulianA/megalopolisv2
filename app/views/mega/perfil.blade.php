@@ -112,6 +112,18 @@
 							</div>
 						</div><!-- /panel -->
 
+						<div>
+							@if($num_sedes == 0)
+								<div class="alert alert-warning fadeInDown animation-delay2">
+									Al parecer no has credo aun tu primera sede puedes hacerlo en  Mi empresa->sedes.<br> O da clic <a href="/nueva-sede" class="btn btn-warning">AQUI</a>
+									
+								</div>
+
+							@else
+
+							@endif
+						</div>
+
 						
 					
 					</div><!-- /.col -->

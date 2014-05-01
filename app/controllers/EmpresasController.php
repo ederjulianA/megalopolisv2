@@ -87,8 +87,10 @@ class EmpresasController  extends BaseController {
 		if($user->count() && $empresa->count())
 		{
 			$user = $user->first();
-			$empresa = $empresa->first();	
+			$empresa = $empresa->first();
+				
 			return View::make('empresa.cambiarImg')
+			
 			->with('user', $user)
 			->with('empresa', $empresa);
 		}
@@ -189,6 +191,39 @@ class EmpresasController  extends BaseController {
 
 	}
 
+
+
+	public function postActualizarSede()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'direccion' => 'required',
+						'nombre_publico' => 'required',
+						'telefono' => 'required'
+					)
+			);
+
+		if($validator->passes())
+		{
+			$sede = Sede::where('id','=',Input::get('sede_id'))->first();
+
+		
+
+			$sede->direccion = Input::get('direccion');
+			$sede->nombre_publico = Input::get('nombre_publico');
+			$sede->telefono = Input::get('telefono');
+
+			if($sede->save())
+			{
+				return Redirect::to('nueva-sede')->with('message-alert','Actualizacion Exitosa');
+			}
+
+		}else{
+			return Redirect::to('/nueva-sede')->withErrors($validator)->with('message-alert','Error al actualizar');
+		}
+
+	}
+
 	public function postCrear(){
 		$validator	=	Validator::make(Input::all(), Empresa::$rules);
 
@@ -237,10 +272,13 @@ class EmpresasController  extends BaseController {
 			if($empresa->count() && $user->count()){
 				$empresa = $empresa->first();
 				$user = $user->first();
+				$sede = Sede::where('empresa_id','=', $empresa->id)->get();
+				$num_sedes = $sede->count();
 
 				
 				return Redirect::to('/mega/perfil')
 					->with('empresa' , $empresa )
+					->with('num_sedes', $num_sedes)
 					->with('user' , $user );
 					
 			}else{
