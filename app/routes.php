@@ -30,23 +30,24 @@ Route::get('/nueva-sede', array(
 		'uses' => 'EmpresasController@getNuevaSede'
 	));
 
+/* PROCESAR NUEVA SEDE*/
+
 Route::post('/nueva-sede', array(
 		'as' => 'nueva-sede-post',
 		'uses' => 'EmpresasController@postNuevaSede'
 	));
-
+/* ACTUALIZAR SEDE EXISTENTE*/
 
 Route::post('/actualizar-sede', array(
 		'as' => 'actualizar-sede-post',
 		'uses' => 'EmpresasController@postActualizarSede'
 	));
 
-
+/* PROCESAR RECUPERACION DE CONTRASEÑA*/
 Route::post('/recuperar-cuenta-post', array(
 		'as' => 'recuperar-cuenta-post',
 		'uses' => 'UsersController@postOlvidoPass'
 	));
-
 
 Route::get('/recuperar-cuenta/{code}', array(
 		'as' => 'recuperar-cuenta-code',
@@ -54,10 +55,22 @@ Route::get('/recuperar-cuenta/{code}', array(
 	));
 
 
-/*METODO POST QUE DEVUELVE LA LIUSTA DE BARRIOS EN FORMATO JSON */
+Route::get('/catalogo/{nombre_publico}', array(
+		'as' => 'catalogo-sede',
+		'uses' => 'SedesController@getCatalogo'
+	));
+
+
+/*METODO POST QUE DEVUELVE LA LISTA DE BARRIOS EN FORMATO JSON */
 Route::post('/get/barrios', array(
 		'as' => 'barrios-lista',
 		'uses' => 'AjaxController@postBarrios'
+	));
+
+
+Route::post('/get/cat', array(
+		'as' => 'categorias-lista',
+		'uses' => 'AjaxController@postCategorias'
 	));
 
 /* RUTA HOME O NAVEGACION DONDE SE VISUALIZARAN LAS EMPRESAS*/

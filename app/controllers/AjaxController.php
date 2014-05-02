@@ -33,4 +33,38 @@ Class AjaxController  extends BaseController {
 
 		
 	}
+
+	public function postCategorias(){
+		header('Content-type: text/javascript');
+
+		$json = array('error' => 'Hubo un error');
+
+
+		if(isset($_POST['id_cat']))
+		{
+			$id_cat = $_POST['id_cat'];
+
+			$empresa = Empresa::where('sector_id','=', $id_cat)->with('sector')->get();
+
+
+
+		
+
+
+		}
+
+			if($empresa->count())
+			{
+				$empresa->toArray();
+
+
+				return Response::json($empresa);
+
+			}else{
+			return Response::json($json);
+
+			}
+
+
+	}
 }
