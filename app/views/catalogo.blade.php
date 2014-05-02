@@ -28,9 +28,9 @@
 								<small class="block text-muted">
 									{{$sede->direccion}}
 								</small>
-								<small class="block text-muted">
+								<strong class="block text-muted">
 									Tel: <span class="label label-danger">{{$sede->telefono}}</span>
-								</small> 
+								</strong> 
 								<div class="seperator"></div>
 								<a class="btn btn-success btn-xs m-bottom-sm">Seguir</a>
 								<div class="seperator"></div>
@@ -63,63 +63,56 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								Promociones
+
 								<span class="label label-danger pull-right">Lista de promos</span>
 							</div>
 							<div class="panel-body">
 								<div id="carousel-example-generic" class="carousel slide carousel-custom">
 									<ol class="carousel-indicators">
-										<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-										<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-										<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+										<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+										@foreach($sede->promocion as $promo)
+												<li data-target="#carousel-example-generic" data-slide-to="{{$promo->id}}" class=""></li>
+											@endforeach
 									</ol>
 									<div class="carousel-inner">
-										<div class="item">
+										<div class="item active">
 											<div class="row">
 												<div class="col-sm-5">
 													<img src="img/gallery4.jpg" alt="First slide" class="m-bottom-md" style="height:150px;">
 												</div>
 												<div class="col-sm-5">
-													<strong>Gallery1</strong>
+													<strong>Lista de Promociones</strong>
 													<p class="m-top-sm">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
+														Aqui encontraras las promociones 
 													</p>
 												</div><!-- /.col -->
 											</div><!-- /.row -->
 										</div>
-										<div class="item active">
-											<div class="row">
-												<div class="col-sm-5">
-													<img src="img/gallery5.jpg" alt="Second slide" class="m-bottom-md" style="height:150px;">
-												</div>
-												<div class="col-sm-5">
-													<strong>Gallery2</strong>
-													<p class="m-top-sm">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-													</p>
-												</div><!-- /.col -->
-											</div><!-- /.row -->	
-										</div>
+										@foreach($sede->promocion as $promo)
 										<div class="item">
 											<div class="row">
 												<div class="col-sm-5">
-													<img src="img/gallery6.jpg" alt="Third Slide" class="m-bottom-md" style="height:150px;">
+													<!--<img src="img/gallery6.jpg" alt="Third Slide" class="m-bottom-md" style="height:150px;">-->
+													{{ HTML::image($promo->img, $promo->titulo, array('height'=>'150px'))}}
 												</div>
 												<div class="col-sm-5">
-													<strong>Gallery3</strong>
+													<strong>{{$promo->titulo}}</strong>
 													<p class="m-top-sm">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
+														{{$promo->descripcion_corta}}
 													</p>
 												</div><!-- /.col -->	
 											</div><!-- /.row -->
 										</div>
+
+										@endforeach
 									</div>
 									
 									
 								</div>
 								
 								<div class="text-right">
-									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="prev">Prev</a>
-									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="next">Next</a>
+									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="prev">Anterior</a>
+									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="next">Siguiente</a>
 								</div>
 							</div>
 						</div><!-- /panel -->

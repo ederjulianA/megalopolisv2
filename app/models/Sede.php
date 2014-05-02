@@ -10,4 +10,10 @@ class Sede extends Eloquent {
 		return $this->belongsTo('Empresa');
 
 	}
+
+	public function promocion()
+	{
+		return $this->hasMany('Promociones');
+
+	}
 }
