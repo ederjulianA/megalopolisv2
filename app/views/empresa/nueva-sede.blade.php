@@ -8,7 +8,9 @@
 	<div id="main-container">
 		<div class="padding-md">
 			<div class="nueva-sede">
+      @if($sedes->count())
       <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-promo"> Nueva Promo</a>
+      @endif
 
 
 
