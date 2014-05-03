@@ -276,3 +276,66 @@ textarea {
 	padding: 5px;
 	width: 60%;
 }
+
+
+
+
+/* NUEVOS ESTILOS CATALOGO PRODUCTOS*/
+
+.img-producto-lista{
+
+	height: 100px !important;
+	width: 100%;
+}
+
+.My-Title {
+
+	font-size: 18px !important;
+	text-align: center;
+}
+
+.My-Category-Title {
+
+	font-size: 14px !important;
+	text-align: center;
+	background-color: #2acbfd;
+	padding: 5px;
+	color: #FFF;
+}
+
+.My-Textblock {
+
+	text-align: center;
+	font-size: 13px;
+}
+
+.My-Price {
+
+	font-weight: bold;
+	color: #1facda;
+}
+
+.My-Align {
+
+	text-align: center !important;
+	display: block;
+}
+
+.My-Circle {
+
+	font-size: 13px;
+	border-radius: 50%;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	color: #FFF;
+	box-sizing: border-box;
+	border: solid 1px #DDD;
+	right: -10px;
+	padding: 0;
+	margin: 0;
+	background-color: #93d9ea;
+	display: inline-block;
+	min-width: 45px;
+	padding: 15px;
+}

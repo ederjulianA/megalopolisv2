@@ -128,7 +128,7 @@
 						</div>
 						<div class="productos-container">
 
-								<div class="producto fadeInDown animation-delay2" >
+							<!--	<div class="producto fadeInDown animation-delay2" >
 										<div class="thumbnail">
 											<img src="{{asset('img/prod1.jpg') }}">
 											<div class="ribbon-wrapper">
@@ -173,7 +173,37 @@
 							
 										</div>
 									
+								</div>-->
+
+
+								@foreach($productos as $key => $producto)
+								
+								<div class="producto fadeInUp animation-delay4" style = 'vertical-align: top;'>
+									<div class="thumbnail">
+										<h1 class = 'My-Circle' title = 'Unidades disponibles'>
+											{{$producto->cantidad}}
+										</h1>
+										<img src = '{{asset($producto->imagen)}}' class="img-producto-lista" />
+										<div class="caption">
+											<h1 class = 'My-Title'>
+												{{$producto->producto_nombre}}
+											</h1>
+											<h2 class = 'My-Category-Title'>
+												{{$producto->categoria_nombre}}
+											</h2>
+											<p class = 'My-Textblock'>
+												Precio: <span class = 'My-Price'>${{$producto->precio_detal}}</span>
+											</p>
+											<p class = 'My-Textblock'>
+												{{$producto->producto_descripcion}}
+											</p>
+											<p>
+											<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a></p>
+										</div>
+									</div>
 								</div>
+
+								@endforeach	
 
 
 
