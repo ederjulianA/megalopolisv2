@@ -147,6 +147,46 @@ textarea {
 	width: 50%;
 }
 
+.pormo-lista{
+	
+	width: 100%;
+}
+ .item-promo-lista{
+	border: 1px solid #EEB020;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+
+	box-shadow: 1px 1px 2px rgba(238,176,32, .4);
+	display:  inline-block;
+	min-height: 285px;
+	margin: 5px 10px;
+	position: relative;
+	vertical-align: top;
+	width: 290px;
+}
+.item-promo-lista p {
+	font-size: 16px;
+	padding: 2px 5px;
+}
+.item-promo-lista h3 {
+	font-weight: bold;
+	padding: 4px;
+	text-align: center;
+
+}
+.item-promo-lista img {
+	border-radius: 7px 7px 0 0;
+	height: 125px;
+	width: 100%;
+}
+.item-promo-lista .sede-item {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
 
 
 .select-ciudad {
@@ -161,6 +201,7 @@ textarea {
 	text-align: center;
 	width: 70%;
 }
+
 .select-ciudad:hover {
 	cursor: pointer;
 }

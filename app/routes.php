@@ -38,6 +38,12 @@ Route::post('/nueva-sede', array(
 	));
 /* ACTUALIZAR SEDE EXISTENTE*/
 
+Route::post('/nueva-promo-post', array(
+		'as' => 'nueva-promo-post',
+		'uses' => 'PromocionesController@postNuevaPromo'
+	));
+
+
 Route::post('/actualizar-sede', array(
 		'as' => 'actualizar-sede-post',
 		'uses' => 'EmpresasController@postActualizarSede'

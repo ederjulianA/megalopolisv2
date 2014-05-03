@@ -55,7 +55,7 @@
 							<span class="block text-center">
 								<i class="fa fa-gift fa-2x"></i> 
 							</span>
-							Nueva Promosion
+							Nueva Promocion
 						</a>
 					</li>
 				

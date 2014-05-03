@@ -31,6 +31,7 @@ class EmpresasController  extends BaseController {
 			return View::make('empresa.nueva-sede')
 			->with('user', $user)
 			->with('sedes', $sede)
+			->with('categorias', Categoria::all())
 			->with('empresa', $empresa);
 		}
 

@@ -49,7 +49,7 @@
 										<small class="text-muted">Productos</small>
 									</div><!-- /.col -->
 									<div class="col-xs-4 text-center">
-										<span class="block font-14">129</span>
+										<span class="block font-14">{{$num_promos}}</span>
 										<small class="text-muted">Promosiones</small>
 									</div><!-- /.col -->
 									
