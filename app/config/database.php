@@ -53,7 +53,7 @@ return array(
 		),
 
 
-		'mysql' => array(
+		/*'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'megalopolis',
@@ -62,18 +62,18 @@ return array(
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-		),
+		),*/
 
-		/*'mysql' => array(
+		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'sql3.freemysqlhosting.net',
-			'database'  => 'sql337662',
-			'username'  => 'sql337662',
-			'password'  => 'sZ8!fB2*',
+			'host'      => 'db4free.net:3306',
+			'database'  => 'ederalvarez',
+			'username'  => 'eder',
+			'password'  => 'demetria',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-		),*/
+		),
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
