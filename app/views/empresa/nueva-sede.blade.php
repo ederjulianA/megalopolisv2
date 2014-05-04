@@ -169,9 +169,21 @@
 
                 <div class="pormo-lista">
                   <h2>Lista de Promociones</h2>
+
+                  <ul class="menu-sedes">
+                    <li><a  href="/nueva-sede">Todas</a></li>
+                    @foreach($sedes as $sede)
+                      <li><a class="lista-promos" href="{{$sede->id}}">{{$sede->nombre_publico}}</a></li>
+                    @endforeach
+                    
+                  </ul>
+                  <div class="contenedor-promos-ajax">
                   @foreach($sedes as $sede)
 
+
                     @foreach($sede->promocion as $promo)
+
+                    
                       <div class="item-promo-lista">
                         {{ HTML::image($promo->img, $promo->titulo, array('class'=> 'img-promo-lista'))}}
 
@@ -187,10 +199,13 @@
                         
                       </div>
 
+
+
                   @endforeach
 
 
                   @endforeach
+                  </div>
 
              
                     

@@ -34,6 +34,24 @@ Class AjaxController  extends BaseController {
 		
 	}
 
+
+	public function postPromos()
+
+	{
+		header('Content-type: text/javascript');
+
+		if(isset($_POST['id_sede']))
+		{
+			$id_sede = $_POST['id_sede'];
+
+			$promociones = Promociones::where('sede_id','=', $id_sede)->with('categoria')->with('sede')->get();
+		}
+		if($promociones->count())
+		{
+			return Response::json($promociones);
+		}
+	}
+
 	public function postCategorias(){
 		header('Content-type: text/javascript');
 

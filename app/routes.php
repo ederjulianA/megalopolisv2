@@ -73,6 +73,11 @@ Route::post('/get/barrios', array(
 		'uses' => 'AjaxController@postBarrios'
 	));
 
+Route::post('/get/promo', array(
+		'as' => 'promos-lista',
+		'uses' => 'AjaxController@postPromos'
+	));
+
 
 Route::post('/get/cat', array(
 		'as' => 'categorias-lista',

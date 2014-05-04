@@ -37,6 +37,19 @@ img.img-info-empresa {
 textarea {
 	text-align: left;
 }
+
+ul.menu-sedes {
+	width: 100%;
+}
+ul.menu-sedes li {
+	border-bottom: 1px solid #A19393;
+	display: inline-block;
+	font-size: 20px;
+	padding: 2px 7px;
+	margin: 2px 7px;
+	list-style: none;
+
+}
 .catalogo-header {
 	margin: 5% auto;
 	width: 100%;
@@ -78,6 +91,9 @@ textarea {
 .actualizar-sede input {
 	padding: 7px;
 	width: 70%;
+}
+.contenedor-promos-ajax{
+	width: 100%;
 }
 
 .lista-sedes-info {

@@ -309,6 +309,9 @@
 
 	<!-- Endless -->
 	{{ HTML::script('js/endless/endless.js')}}
+
+	<!-- Promos -->
+	{{ HTML::script('js/promos.js')}}
 	
 	@yield('scripts')
 
