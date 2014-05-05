@@ -117,9 +117,21 @@
 									</a>
 								</li>
 								<li class="divider"></li>
-								<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
-								<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
-								<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
+
+								@if(Auth::user()->tipo == 1)
+									<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+								@else
+									<li><a tabindex="-1" href="/mega/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+								@endif
+								
+								@if(Auth::user()->tipo == 1)
+									<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
+									<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
+
+								
+
+								@endif
+								
 								
 
 								
@@ -206,6 +218,9 @@
 
 	<!-- Endless -->
 	{{ HTML::script('js/endless/endless.js')}}
+
+	<!-- generales -->
+	{{ HTML::script('js/generales.js')}}
 
 
 	@yield('scripts')

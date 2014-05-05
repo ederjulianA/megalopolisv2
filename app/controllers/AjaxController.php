@@ -34,6 +34,53 @@ Class AjaxController  extends BaseController {
 		
 	}
 
+	public function postNombreEmpresaValido()
+	{
+		header('Content-type: text/javascript');
+
+		if(isset($_POST['nombre_empresa'])){
+			$nombre_empresa = $_POST['nombre_empresa'];
+
+			$empresa = Empresa::where('nombre_publico','=',$nombre_empresa)->get();
+
+			if($empresa->count()){
+				$json = array(
+					'estado' => 1,
+					'mensaje' => 'oops, nombre no disponible',
+					);
+				
+			}else{
+				$json = array(
+					'estado' => 0,
+					'mensaje' => 'Nombre Disponible',
+					);
+
+				
+			}
+
+			return Response::json($json);
+
+		}
+	}
+
+
+
+	public function postEmpresasCiudad()
+	{
+		header('Content-type: text/javascript');
+
+		if(isset($_POST['ciudad_id'])){
+			$ciudad_id = $_POST['ciudad_id'];
+
+			$empresa = Empresa::where('ciudad_id','=', $ciudad_id)->with('sector')->get();
+
+			if($empresa->count()){
+				return Response::json($empresa);
+			}
+
+		}
+	}
+
 
 	public function postPromos()
 

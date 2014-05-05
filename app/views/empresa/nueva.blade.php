@@ -72,10 +72,16 @@ Crear Nueva empresa
 									<label>Razon Social</label>
 									<input type="text" name="razon_social" id="razon_social"  placeholder="Nombre de Tu empresa" class="form-control input-sm bounceIn animation-delay4" title=" Razon Social" data-content="Este sera el nombre que se desplegara en las vistas publicas de tu empresa "data-toggle="popover">
 								</div>
+								
 
 								<div class="form-group">
-									<label>Nombre Publico</label>
-									<input type="text" name="nombre_publico" id="nombre_publico"  placeholder="ejemplo: /mi-empresa" class="form-control input-sm bounceIn animation-delay4" title="Nombre Publico" data-content="con este nombre los usuarios encontraran tu empresa, recuerda separa los espacios con - ejemplo: nombre-de-mi-empresa "data-toggle="popover">
+									<label> nombre publico </label>
+									<input type="text" name="nombre_publico" id="nombre_publico_seo"  placeholder="" class="form-control input-sm bounceIn animation-delay4"  title="Nombre Publico" >
+									<input type="hidden"  id="nombre_publico_seo" value="">
+								</div>
+
+								<div id="nombre-seo">
+									
 								</div>
 
 								<div class="form-group">
@@ -110,7 +116,7 @@ Crear Nueva empresa
 								</div>
 								<input type="hidden" name = "user_id"value="{{ Auth::user()->id}}">
 
-								<input type="submit" value="Crear" class="btn btn-primary">
+								<input type="submit" value="Crear" class="btn btn-primary" id="btn-crear-empresa">
 								{{ Form::token()}}
 							</form>
 						</div>

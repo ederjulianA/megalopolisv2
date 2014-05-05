@@ -100,6 +100,10 @@
 
 							<div class="col-md-2" style="text-align:center;">
 								CONTENIDO DERECHA
+								<input type="text" id="contador">
+								<div id="contador-res">
+									
+								</div>
 							</div>
 				</div>
 		</div>

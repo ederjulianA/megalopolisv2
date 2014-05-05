@@ -17,9 +17,11 @@ div.productos-container {
 
 }
 div.productos-container .producto {
+	border :.5px solid #93d9ea;
 	display: inline-block;
-	margin: 4px;
-	width: 150px;
+	margin: 4px 8px;
+	min-height: 325px;
+	width: 200px;
 }
 
 img.img-info-empresa {
@@ -354,4 +356,9 @@ ul.menu-sedes li {
 	display: inline-block;
 	min-width: 45px;
 	padding: 15px;
+}
+
+
+#nombre-seo{
+	width: 100%;
 }

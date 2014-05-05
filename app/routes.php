@@ -79,6 +79,17 @@ Route::post('/get/promo', array(
 	));
 
 
+Route::post('/get/empresas-ciudad', array(
+		'as' => 'get-empresas-ciudad',
+		'uses' => 'AjaxController@postEmpresasCiudad'
+	));
+
+Route::post('/get/nombre-empresa', array(
+		'as' => 'get/nombre-empresa',
+		'uses' => 'AjaxController@postNombreEmpresaValido'
+	));
+
+
 Route::post('/get/cat', array(
 		'as' => 'categorias-lista',
 		'uses' => 'AjaxController@postCategorias'

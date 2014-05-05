@@ -19,8 +19,10 @@ class SedesController extends BaseController{
 													'producto.descripcion AS producto_descripcion',
 													'categorias.nombre AS categoria_nombre',
 													'almacen.cantidad')->get();
+			$num_productos = $productos->count();
 
-			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos);
+
+			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
 		}else{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}

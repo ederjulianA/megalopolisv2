@@ -45,12 +45,12 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-xs-4 text-center">
-										<span class="block font-14">301</span>
+										<span class="block font-14">{{$num_productos}}</span>
 										<small class="text-muted">Productos</small>
 									</div><!-- /.col -->
 									<div class="col-xs-4 text-center">
 										<span class="block font-14">{{$num_promos}}</span>
-										<small class="text-muted">Promosiones</small>
+										<small class="text-muted">Promociones</small>
 									</div><!-- /.col -->
 									
 								</div><!-- /.row -->
