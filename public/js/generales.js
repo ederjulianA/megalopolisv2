@@ -8,6 +8,13 @@ $('#nombre_publico_seo').keyup(function(){
 	var nombre = $('#nombre_publico_seo').val();
 	var nombre_cambio = nombre.replace(/ /g,'-');
 
+	if( nombre.length <= 3)
+	{
+		var tam = "<span class='label label-warning'>El nombre debe tener al menos 4 caracteres</span>";
+	}else{
+		tam = "<span class='label label-success'>ok</span>";
+	}
+
 	
 	$('#nombre_publico_seo').val(nombre_cambio);
 
@@ -21,7 +28,7 @@ $('#nombre_publico_seo').keyup(function(){
 				if(data.estado == 0){
 				
 
-					$('#nombre-seo').html("Tu nombre publico sera: <strong>https://www.megalopolis.com/empresa/"+nombre_cambio+"</strong>");
+					$('#nombre-seo').html("Tu nombre publico sera: <strong>https://www.megalopolis.com/empresa/"+nombre_cambio+"</strong><br>"+tam);
 					$('#btn-crear-empresa').css({display:"inline"});
 
 				}else if (data.estado == 1){
