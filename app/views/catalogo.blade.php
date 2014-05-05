@@ -78,7 +78,7 @@
 										<div class="item active">
 											<div class="row">
 												<div class="col-sm-5">
-													<img src="img/gallery4.jpg" alt="First slide" class="m-bottom-md" style="height:150px;">
+													<img src="{{asset('img/promociones/default.jpg') }}">
 												</div>
 												<div class="col-sm-5">
 													<strong>Lista de Promociones</strong>

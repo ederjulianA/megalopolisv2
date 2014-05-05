@@ -14,12 +14,12 @@ $(document).ready(function(){
 
 });
 
-$('#contador').keyup(function(){
+/*$('#contador').keyup(function(){
 var cont = $('#contador').val();
 var cambio = cont.replace(/ /g,'-');
 
 $('#contador-res').html(cambio);
-});
+});*/
 
 	$(".addFav").click( function(e){
 
