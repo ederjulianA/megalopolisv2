@@ -23,10 +23,10 @@
 								</select>
 
 								<div class="menu-categorias">
-									<h2>Categorias</h2>
+									<h2>Sectores</h2>
 
 									<ul >
-										<li><a href="/navegar">Todas</a></li>
+										<li><a href="/navegar">Todos</a></li>
 										@foreach( $categorias as $categoria)
 										<!--<li><a href="/navegar/categoria/{{$categoria->id}}">{{$categoria->nom_sector}}  </a></li>-->
 										<li><a class="cat-lista " href="{{$categoria->id}}">{{$categoria->nom_sector}}  </a></li>

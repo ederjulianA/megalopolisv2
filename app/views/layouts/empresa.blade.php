@@ -173,13 +173,13 @@
 									<i class="fa fa-gift fa-lg"></i> 
 								</span>
 								<span class="text">
-									Mi empresa
+									Mi empresa <i class="fa fa-chevron-down"></i>
 								</span>
 								<span class="menu-hover"></span>
 							</a>
 							<ul class="submenu">
 								<li><a href="{{ URL::route('cambiar-imagen')}}"><span class="submenu-label">Cambiar Imagen</span></a></li>
-								<li><a href="{{ URL::route('nueva-sede')}}"><span class="submenu-label">Nueva Sede</span></a></li>
+								<li><a href="{{ URL::route('nueva-sede')}}"><span class="submenu-label">Sedes</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nuevo Producto</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nueva Promocion</span></a></li>
 								<li><a href="#"><span class="submenu-label">Nuevo Tab</span></a></li>
