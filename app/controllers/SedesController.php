@@ -21,7 +21,6 @@ class SedesController extends BaseController{
 													'almacen.cantidad')->get();
 			$num_productos = $productos->count();
 
-
 			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
 		}else{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
