@@ -490,6 +490,12 @@
 													<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
+
+											<div class="text-right">
+												<button class="btn btn-info quick-btn btn-sombra" type="submit">
+												<i class="fa fa-plus-circle"></i>	Crear</button>
+												
+											</div>
 											
 								<!--
 											<div class="form-group">
@@ -543,11 +549,7 @@
 										
 										</div>
 										<div class="panel-footer">
-											<div class="text-right">
-												<button class="btn btn-info quick-btn btn-sombra" type="submit">
-												<i class="fa fa-plus-circle"></i>	Crear</button>
-												
-											</div>
+											
 										</div>
 									</form>
 								</div><!-- /panel -->
@@ -563,56 +565,6 @@
 
 
 
-								<div class="tab-pane fade" id="Npromo">
-								
-								<div class="row">
-									<div class="panel panel-info pull-right">
-										<div class="panel-body">
-											Ultima Actualizacion Abril 2, 2014
-										</div>
-									</div><!-- /panel -->
-								</div><!-- /.row -->
-								
-								<div class="panel panel-default">
-									<form class="form-horizontal form-border">
-										<div class="panel-heading">
-											<h2>Nueva Promocion</h2>
-										</div>
-										<div class="panel-body">
-
-
-											<div class="form-group">
-												<label class="control-label col-md-2">Condiciones y restricciones</label>
-												<div class="col-md-10">
-													<input type="text" class="form-control input-sm" value="">
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
-											<div class="form-group">
-												<label class="control-label col-md-2">Descripcion Promo</label>												
-												<div class="col-md-10">
-													<textarea class="form-control" rows="3"></textarea>
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
-											
-											
-										
-										
-
-										
-										
-										</div>
-										<div class="panel-footer">
-											<div class="text-right">
-												<button class="btn btn-sm btn-success">	Actualizar</button>
-												
-											</div>
-										</div>
-									</form>
-								</div><!-- /panel -->
-							
-								
-							
-							</div><!-- /tab6 -->
 							
 						</div><!-- /tab-content -->
 					</div><!-- /.col -->
