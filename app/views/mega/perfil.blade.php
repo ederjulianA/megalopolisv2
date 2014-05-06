@@ -480,7 +480,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Imagen del producto:</label>												
 												<div class="col-md-10">
-													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  id="upload-demo">
+													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  >
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											
