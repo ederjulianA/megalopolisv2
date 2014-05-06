@@ -197,3 +197,8 @@ Route::get('/activar/cuenta/{codigo_activacion}', array(
 			'as' => 'activar-cuenta',
 			'uses' => 'UsersController@getActivate'
 		));
+		
+Route::post('nuevo-producto', array(
+		'as' => 'crear-producto',
+		'uses' => 'SedesController@postCrearproducto'
+));

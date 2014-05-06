@@ -1,5 +1,7 @@
 <?php
 
+use Intervention\Image\Image;
+
 class SedesController extends BaseController{
 
 	public function getCatalogo($nombre_publico){
@@ -24,6 +26,35 @@ class SedesController extends BaseController{
 			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
 		}else{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
+		}
+	}
+	
+	public function postCrearproducto() {
+	
+		$producto = new Producto();
+		$producto->nombre = Input::get('product_name');
+		$producto->descripcion = Input::get('product_name');
+		$producto->categoria = Input::get('category');
+		
+		$file = Input::file('imagen');
+		
+		$codigoIMG = str_random(13);
+		$filename = date('Y-m-d-H')."-".$codigoIMG."-".$file->getClientOriginalName();
+		Image::make($file->getRealPath())->resize(140, 110)->save(public_path().'/img/products/'.$filename);
+		
+		$producto->imagen = 'img/products/'.$filename;
+		
+		$producto->save();
+		
+		$almacen = new Almacen();
+		$almacen->producto = $producto->id;
+		$almacen->sede = Input::get('sede');
+		$almacen->precio_detal = Input::get('product_price');
+		$almacen->cantidad = Input::get('product_amount');
+		
+		if($almacen->save()) {
+		
+			return Redirect::to('/mega/perfil')->with('message-alert','Se ha creado el producto satisfactoriamente');
 		}
 	}
 }

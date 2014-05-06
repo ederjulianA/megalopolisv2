@@ -1,7 +1,5 @@
 <?php
 
-
-
 // import the Intervention Image Class
 use Intervention\Image\Image;
 
@@ -163,8 +161,6 @@ class EmpresasController  extends BaseController {
 			$empresa = Empresa::find(Input::get('id_empresa'));
 				if($empresa)
 				{
-					
-
 					$empresa->razon_social = Input::get('razon_social');
 					$empresa->direccion_principal = Input::get('direccion_principal');
 					$empresa->telefono = Input::get('telefono');
@@ -252,7 +248,6 @@ class EmpresasController  extends BaseController {
 				return Redirect::to('/')
 					->with('message-alert', 'Felicidades has creado exitosamente tu empresa');
 			}
-
 		}
 
 		return Redirect::to('/empresa')
@@ -276,11 +271,10 @@ class EmpresasController  extends BaseController {
 				$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 				$num_sedes = $sede->count();
 
-				
 				return Redirect::to('/mega/perfil')
 					->with('empresa' , $empresa )
 					->with('num_sedes', $num_sedes)
-					->with('user' , $user );
+					->with('user' , $user);
 					
 			}else{
 					/*$sectores = array();

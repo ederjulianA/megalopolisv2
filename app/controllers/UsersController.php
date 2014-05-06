@@ -168,16 +168,24 @@ class UsersController extends BaseController{
 		$id = Auth::user()->id;
 		$user = User::where('id',"=", $id);
 		$empresa = Empresa::where('user_id',"=", $id);
+		
+		$categoria = new Categoria();
+		
+		$categorias = $categoria->get();
+		
 		if($user->count() && $empresa->count()){
-				$user = $user->first();
-				$empresa = $empresa->first();
-				$sede = Sede::where('empresa_id','=', $empresa->id)->get();
-				$num_sedes = $sede->count();
-				return View::make('mega.perfil')
-				->with('user' , $user)
-				->with('num_sedes', $num_sedes)
-				->with('empresa', $empresa);
-			}
+			
+			$user = $user->first();
+			$empresa = $empresa->first();
+			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
+			$num_sedes = $sede->count();
+			return View::make('mega.perfil')
+			->with('user' , $user)
+			->with('num_sedes', $num_sedes)
+			->with('empresa', $empresa)
+			->with('categorias', $categorias)
+			->with('sedes', $sede);
+		}
 	}
 
 	public function postCambiarPassword()

@@ -422,58 +422,80 @@
 
 							<div class="tab-pane fade" id="Nproducto">
 								
-							
-								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border" action="#" method="post">
+									<form class="form-horizontal form-border" action="../nuevo-producto" method="post" enctype='multipart/form-data'>
 										<div class="panel-heading">
 											<h2>Crear nuevo Producto</h2>
 										</div>
 										<div class="panel-body">
 											<div class="form-group">
-												<label class="control-label col-md-2">Nombre</label>												
-												<div class="col-md-10">
-													<input type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="">
+												<label class="control-label col-md-2">Registrar producto en la siguiente sede:</label>
+													<div class="col-md-4">
+													<select name = 'sede' id = 'sede' class="form-control">
+														<option>Seleccionar sede:</option>
+														@foreach($sedes as $sede_item)
+															<option value = "{{$sede_item->id}}">{{$sede_item->nombre_publico}}</option>
+														@endforeach
+													</select>
+												</div><!-- /.col -->
+												<div class="col-md-6">													
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
-
-
+										
 											<div class="form-group">
-												<label class="control-label col-md-2">Foto</label>												
+												<label class="control-label col-md-2">Nombre:</label>												
 												<div class="col-md-10">
-													<input type="file" class="upload-demo"  id="upload-demo">
+													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
-												<label class="control-label col-md-2">Descripcion Breve</label>
-												<div class="col-md-10">
-													<textarea class="form-control" rows="3"></textarea>
+												<label class="control-label col-md-2">Categoría del producto:</label>
+													<div class="col-md-4">
+													<select name = 'category' id = 'category' class="form-control">
+														<option>Seleccionar categoría:</option>
+														@foreach($categorias as $categoria)
+															<option value = "{{$categoria->id}}">{{$categoria->nombre}}</option>
+														@endforeach
+													</select>
+												</div><!-- /.col -->
+												<div class="col-md-6">													
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
-
+											
+											<div class="form-group">
+												<label class="control-label col-md-2">Precio:</label>												
+												<div class="col-md-10">
+													<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
 
 											<div class="form-group">
-												<label class="control-label col-md-2">Categoria</label>
-													<div class="col-md-4">
-													<select class="form-control">
-														<option>- Escoger Categoria -</option>
-													</select>
-												</div><!-- /.col -->
-												<div class="col-md-6">
-
-												<select class="form-control">
-														<option>- Estado -</option>
-														<option>- Activo -</option>
-														<option>- No activo -</option>
-													</select>
-
-													
+												<label class="control-label col-md-2">Cantidad a registrar del producto en la sede seleccionada:</label>												
+												<div class="col-md-10">
+													<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto" value="">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
+											
+											<div class="form-group">
+												<label class="control-label col-md-2">Imagen del producto:</label>												
+												<div class="col-md-10">
+													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  id="upload-demo">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											
+											<div class="form-group">
+												<label class="control-label col-md-2">Descripción breve:</label>
+												<div class="col-md-10">
+													<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											
+								<!--
 											<div class="form-group">
 												<label class="control-label col-md-2"> Tabs</label>
 												<div class="panel panel-default">
+								
 								<div class="panel-heading">
 										Escoger Tabs
 								</div>
@@ -510,6 +532,7 @@
 										<option>Texas</option>
 									</select>		
 								</div>
+								-->
 								</div><!-- /panel -->
 												
 						</div>
@@ -528,6 +551,7 @@
 										</div>
 									</form>
 								</div><!-- /panel -->
+							</div><!-- /panel -->
 							
 								
 							
