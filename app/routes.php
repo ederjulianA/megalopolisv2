@@ -79,6 +79,12 @@ Route::post('/get/promo', array(
 	));
 
 
+Route::post('/cambiar-nombre-ajax', array(
+		'as' => 'cambiar-nombre-ajax',
+		'uses' => 'AjaxController@cambiarNombreAjax'
+	));
+
+
 Route::post('/get/empresas-ciudad', array(
 		'as' => 'get-empresas-ciudad',
 		'uses' => 'AjaxController@postEmpresasCiudad'
@@ -133,6 +139,12 @@ Route::post('/mega/cambiar-pass', array(
 Route::get('/mega/perfil', array(
 		'as' => 'mega-perfil',
 		'uses'=> 'UsersController@perfil'
+	));
+
+/* EDITAR PERFIL DE USUARIO TIPO 1*/
+Route::get('/perfil', array(
+		'as' => 'perfil',
+		'uses'=> 'UsersController@perfilUser1'
 	));
 
 Route::get('/empresa/nueva', array(

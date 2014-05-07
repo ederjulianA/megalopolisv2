@@ -66,6 +66,17 @@ ul.menu-sedes li {
 	text-align: center;
 	
 }
+.contenedor-perfil{
+
+	margin: 5% auto;
+	max-width: 100%;
+	width: 90%;
+}
+.contenedor-perfil h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
 .empresas-container {
 	margin: 30px auto;
 	padding: 3px;
@@ -124,6 +135,11 @@ ul.menu-sedes li {
 	padding: 10px;
 	text-align: center;
 	width: 50%;
+}
+.info-vista-perfil{
+	letter-spacing: inherit;
+	text-align: left;
+	width: 400px;
 }
 .menu-categorias{
 
@@ -239,6 +255,21 @@ ul.menu-sedes li {
 	box-shadow: 0px 4px 0px rgba(0,0,0, .4);
 	font-size: 30px;
 }	
+.username-div {
+	padding: 5px;
+	width: 30%;
+	max-width: 100%;
+}
+.username-div input[type="text"], .username-div img {
+	display: inline-block;
+	margin: 5px 7px;
+	vertical-align: middle;
+}
+.username-div input[type="text"]{
+	letter-spacing: 1px;
+	padding: 10px;
+	width: 70%;
+}
 
 .nueva-sede{
 	width: 100%;
@@ -358,7 +389,9 @@ ul.menu-sedes li {
 	padding: 15px;
 }
 
-
+#btn-cambiar-img{
+	margin: 10px auto;
+}
 #nombre-seo{
 	width: 100%;
 }

@@ -111,7 +111,7 @@
 									<a class="clearfix" href="#">
 										{{ HTML::image(Auth::user()->img)}}
 										<div class="detail">
-											<strong>{{ Auth::user()->username}}</strong>
+											<strong id="username-menu">{{ Auth::user()->username}}</strong>
 											<p class="grey">{{ Auth::user()->email}}</p> 
 										</div>
 									</a>
@@ -119,7 +119,7 @@
 								<li class="divider"></li>
 
 								@if(Auth::user()->tipo == 1)
-									<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+									<li><a tabindex="-1" href="/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@else
 									<li><a tabindex="-1" href="/mega/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@endif
@@ -221,6 +221,9 @@
 
 	<!-- generales -->
 	{{ HTML::script('js/generales.js')}}
+
+	<!-- Promos -->
+	{{ HTML::script('js/promos.js')}}
 
 
 	@yield('scripts')

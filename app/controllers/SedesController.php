@@ -33,7 +33,7 @@ class SedesController extends BaseController{
 	
 		$producto = new Producto();
 		$producto->nombre = Input::get('product_name');
-		$producto->descripcion = Input::get('product_name');
+		$producto->descripcion = Input::get('description');
 		$producto->categoria = Input::get('category');
 		
 		$file = Input::file('imagen');

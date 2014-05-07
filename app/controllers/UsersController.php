@@ -14,6 +14,21 @@ class UsersController extends BaseController{
 	}
 
 
+	public function perfilUser1()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+
+
+			return View::make('mega/editarUser');
+		}
+
+
+	}
+
+
 	public function getOlvidoPass()
 	{
 		return View::make('mega.olvidoPass');

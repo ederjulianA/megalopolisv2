@@ -32,6 +32,32 @@ Class AjaxController  extends BaseController {
 		
 
 		
+
+
+	}
+	public function cambiarNombreAjax()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['nuevo_nom'])){
+			$nuevo_nom = $_POST['nuevo_nom'];
+			$user_id = Auth::user()->id;
+			$user = User::where('id','=',$user_id)->first();
+			if($user->count())
+			{
+				if($user->username == $nuevo_nom)
+				{
+					$json = array('estado' => 1);
+					return Response::json($json);
+				}
+
+				$user->username = $nuevo_nom;
+
+				if($user->save()){
+					return Response::json($user);
+				}
+			}
+		}
+
 	}
 
 	public function postNombreEmpresaValido()
