@@ -63,6 +63,7 @@ Crear Nueva empresa
 									<div class="form-group">
 										<label>Selecciona el Barrio</label>
 										<select  name="barrio" class="form-control input-sm bounceIn animation-delay3" id="sel-barrio">
+										<option value="0">Sleccione un barrio</option>
 											
 											
 										</select>
