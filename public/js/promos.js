@@ -1,9 +1,27 @@
 $(document).ready(function(){
 	cambiar_nombre();
+	validar_pass();
 
 	
 
 });
+
+function validar_pass()
+{
+	
+	
+
+	$('#pass_nueva_repite').keyup(function(){
+			var pass_nueva = $('#pass_nueva').val();
+			var pass_repite = $('#pass_nueva_repite').val();
+
+			if( pass_repite != pass_nueva){
+				$('.mensajes-ajax-pass').html("<span class='label label-warning'>Las contraseñas No coinciden</span>");
+			}else{
+				$('.mensajes-ajax-pass').html("<span class='label label-success'>ok</span>");
+			}
+	});
+}
 
 function cambiar_nombre()
 {

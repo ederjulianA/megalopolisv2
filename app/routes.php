@@ -136,6 +136,12 @@ Route::post('/mega/cambiar-pass', array(
 
 	));
 
+Route::post('/perfil-cambiar-pass', array(
+		'as' => 'perfil-cambiar-pass',
+		'uses' => 'UsersController@postCambiarPasswordUser'
+
+	));
+
 Route::get('/mega/perfil', array(
 		'as' => 'mega-perfil',
 		'uses'=> 'UsersController@perfil'

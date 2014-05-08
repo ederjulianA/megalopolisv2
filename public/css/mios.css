@@ -77,6 +77,28 @@ ul.menu-sedes li {
 	font-weight: bold;
 	text-align: center;
 }
+.contenedor-perfil div {
+	display: inline-block;
+	vertical-align: top;
+}
+.div-password-user{
+	width: 40%;
+}
+.div-password-user div {
+	padding: 7px;
+
+	width: 90%;
+
+}
+
+.div-password-user div label {
+	width: 30%;
+}
+.div-password-user div input[type="password"]{
+	padding: 7px;
+	width: 65%;
+
+}
 .empresas-container {
 	margin: 30px auto;
 	padding: 3px;

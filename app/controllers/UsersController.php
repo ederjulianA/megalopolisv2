@@ -202,6 +202,41 @@ class UsersController extends BaseController{
 			->with('sedes', $sede);
 		}
 	}
+	public function postCambiarPasswordUser()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'contrasena_actual' => 'required',
+
+					)
+			);
+
+		if($validator->fails())
+		{
+			return Redirect::to('/perfil')->with('message-alert','Error al actualizar Contraseña')->withErrors($validator);
+		}else{
+
+			//CAMBIAMOS LA CONTRASEÑA DEL USUARIO
+
+			$user = User::find(Auth::user()->id);
+
+			$old_password = Input::get('contrasena_actual');
+			$password = Input::get('nueva_contrasena');
+
+			if(Hash::check($old_password, $user->getAuthPassword())){
+				$user->password = Hash::make($password);
+
+					if($user->save()){
+						return Redirect::to('/perfil')
+						->with('message-alert','Contreaseña actualizada');
+					}
+			}else{
+						return Redirect::to('/perfil')
+						->with('message-alert','La contraseña actual que ingresaste no coincide con la que tenemos es nuestra base de datos.');
+					}
+
+		}
+	}
 
 	public function postCambiarPassword()
 	{
