@@ -16,6 +16,19 @@ $(document).ready(function(){
 
 /*$('#contador').keyup(function(){
 var cont = $('#contador').val();
+$.ajax({
+
+			url : "add/fav",
+			dataType: "json",
+			type : "post",
+			data : { id_produc : $(this).attr('href')},
+			success : function(data){
+
+				
+			}
+
+
+		});
 var cambio = cont.replace(/ /g,'-');
 
 $('#contador-res').html(cambio);
@@ -24,6 +37,34 @@ $('#contador-res').html(cambio);
 	$(".addFav").click( function(e){
 
 		var id = $(this).attr('href');
+
+		$.ajax({
+
+			url : "favoritos-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+					$('.mensaje-favoritos-ajax').html("<div class='alert alert-success'>Producto Agregado a tus favoritos</div>");
+					$('.mensaje-favoritos-ajax').fadeIn( 2500 );
+					$('#item-'+id).removeClass("btn-info addFav");
+					$('#item-'+id).addClass("btn-danger  remFav");
+					$('.mensaje-favoritos-ajax').fadeOut( 3000 );
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+
+		
 		
 		 e.preventDefault();
 		
@@ -47,7 +88,7 @@ $('#contador-res').html(cambio);
 
 				if(data != null){
 					for(var i in data){
-						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].sector.img+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a>  </p></div>";
+						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].sector.img+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a><a href='"+data[i].id+"' class='addFav  btn btn-warning'>fav <i class='fa  fa-heart'></i> </a></p></div>";
 							
 								
 							$('.empresas-container').append(empresas);

@@ -82,7 +82,11 @@
 														</p>
 														<p>
 															<a href="/empresa/{{$empresa->nombre_publico}}" class="btn btn-info">contacto</a>
+															@if(Auth::check())
+															
+
 															<a href="{{$empresa->id}}" class="addFav  btn btn-warning">fav <i class="fa  fa-heart"></i> </a>
+															@endif
 														</p>
 											</div><!--detail-->
 												
@@ -106,6 +110,7 @@
 		</div>
 
 	</div>
+
 		
 		
 				

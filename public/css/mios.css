@@ -242,6 +242,14 @@ ul.menu-sedes li {
 	bottom: 0px;
 	right: 0px;
 }
+.mensaje-favoritos-ajax{
+	font-size: 25px;
+	left: 50%;
+	position: fixed;
+	top: 50%;
+	width: 350px;
+	z-index: 999;
+}
 
 
 

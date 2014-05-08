@@ -8,6 +8,10 @@
 
 @section('content')
 				<div id="landing-content">
+
+				<div class="mensaje-favoritos-ajax">
+					
+				</div>
 		
 		<div class="padding-md">
 				<div class="row">
@@ -198,7 +202,16 @@
 												{{$producto->producto_descripcion}}
 											</p>
 											<p>
-											<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a></p>
+											<!--<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a>-->
+											@if(Auth::check() && Auth::user()->tipo == 1)
+												{{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
+
+											@else
+
+											@endif
+
+											<!--<a href="{{$producto->id}}"   class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i></a>-->
+											</p>
 										</div>
 									</div>
 								</div>

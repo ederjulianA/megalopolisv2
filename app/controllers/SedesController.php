@@ -18,6 +18,7 @@ class SedesController extends BaseController{
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
 													'producto.imagen',
+													'producto.id',
 													'producto.descripcion AS producto_descripcion',
 													'categorias.nombre AS categoria_nombre',
 													'almacen.cantidad')->get();

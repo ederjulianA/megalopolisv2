@@ -95,6 +95,11 @@ Route::post('/get/nombre-empresa', array(
 		'uses' => 'AjaxController@postNombreEmpresaValido'
 	));
 
+Route::post('/catalogo/favoritos-ajax', array(
+		'as' => 'add-fav-ajax',
+		'uses' => 'AjaxController@addFav'
+	));
+
 
 Route::post('/get/cat', array(
 		'as' => 'categorias-lista',

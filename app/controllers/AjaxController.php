@@ -35,6 +35,34 @@ Class AjaxController  extends BaseController {
 
 
 	}
+
+
+	public function addFav()
+	{
+
+		header('Content-type: text/javascript');
+		if(isset($_POST['id_producto'])){
+
+			$user_id = Auth::user()->id;
+			if($user_id != null){
+				$fav = new Favoritos;
+				$fav->user_id = $user_id;
+				$fav->producto_id = $_POST['id_producto'];
+				if($fav->save()){
+					$json = array('estado'=>1, 'mensaje'=>'Producto agregado a Favorito');
+					return Response::json($json);
+				}else{
+					$json = array('estado'=>0, 'mensaje'=>'Inicia Sesion');
+					return Response::json($json);
+				}
+			}
+
+
+		}
+
+	}
+
+
 	public function cambiarNombreAjax()
 	{
 		header('Content-type: text/javascript');
