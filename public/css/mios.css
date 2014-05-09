@@ -404,6 +404,7 @@ ul.menu-sedes li {
 
 	font-size: 18px !important;
 	text-align: center;
+	height: 20px;
 }
 
 .My-Category-Title {
@@ -411,6 +412,7 @@ ul.menu-sedes li {
 	font-size: 14px !important;
 	text-align: center;
 	background-color: #2acbfd;
+	height: 35px;
 	padding: 5px;
 	color: #FFF;
 }
@@ -419,6 +421,7 @@ ul.menu-sedes li {
 
 	text-align: center;
 	font-size: 13px;
+	height: 55px;
 }
 
 .My-Price {
@@ -450,6 +453,9 @@ ul.menu-sedes li {
 	display: inline-block;
 	min-width: 45px;
 	padding: 15px;
+}
+.precio{
+	height: 15px !important;
 }
 
 #btn-cambiar-img{

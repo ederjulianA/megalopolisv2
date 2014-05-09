@@ -26,7 +26,7 @@
 											<h2 class = 'My-Category-Title'>
 												{{$fav->categoria_nombre}}
 											</h2>
-											<p class = 'My-Textblock'>
+											<p class = 'My-Textblock precio'>
 												Precio: <span class = 'My-Price'>${{$fav->precio_detal}}</span>
 											</p>
 											<p class = 'My-Textblock'>
