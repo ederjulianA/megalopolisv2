@@ -52,7 +52,7 @@
 					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a href="#" class="top-link">Home</a>
+								<a href="/navegar" class="top-link">Home</a>
 							</li>
 
 							@if(Auth::check())

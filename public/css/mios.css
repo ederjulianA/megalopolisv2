@@ -60,7 +60,7 @@ ul.menu-sedes li {
 }
 .active-menu a {
 	background-color: #EA4949;
-	border-bottom: 1px solid red;
+	border-bottom: 2px solid red;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
@@ -70,6 +70,11 @@ ul.menu-sedes li {
 	color: #fff;
 	padding: 5px;
 	font-size: 20px;
+}
+
+
+.active-menu a:hover {
+	color: #fff;
 }
 .catalogo-header {
 	margin: 5% auto;
