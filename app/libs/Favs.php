@@ -7,9 +7,9 @@ class Favs {
 
 		if($fav->count())
 		{
-			$boton = "<a href='#' class='btn btn-danger'>Quitar Fav</a>";
+			$boton = "<a href='".$producto_id."' class='remFav btn btn-danger'  id='item-".$producto_id."'><i class='fa fa-heart'></i> Quitar </a>";
 		}else{
-			$boton = '<a href="'.$producto_id.'" id="item-'.$producto_id.'"  class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i></a>';
+			$boton = '<a href="'.$producto_id.'" id="item-'.$producto_id.'"  class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i> Agregar</a>';
 		}
 
 		return $boton;

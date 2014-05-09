@@ -36,6 +36,28 @@ Class AjaxController  extends BaseController {
 
 	}
 
+	public function remFav()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['id_producto'])){
+			$user_id = Auth::user()->id;
+			$producto_id = $_POST['id_producto'];
+
+			$fav = Favoritos::where('user_id','=',$user_id)->where('producto_id','=',$producto_id)->first();
+
+			if($fav->count())
+			{
+				$fav->delete();
+				$json = array('estado'=>1, 'mensaje'=>'producto eliminado');
+			}else{
+				$json = array('estado'=>0, 'mensaje'=>'No se encontro Producto');
+			}
+
+			return Response::json($json);
+
+		}
+	}
+
 
 	public function addFav()
 	{
@@ -102,17 +124,19 @@ Class AjaxController  extends BaseController {
 					'estado' => 1,
 					'mensaje' => 'oops, nombre no disponible',
 					);
+				return Response::json($json);
 				
 			}else{
 				$json = array(
 					'estado' => 0,
 					'mensaje' => 'Nombre Disponible',
 					);
+				return Response::json($json);
 
 				
 			}
 
-			return Response::json($json);
+			
 
 		}
 	}

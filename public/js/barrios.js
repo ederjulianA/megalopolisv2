@@ -14,6 +14,108 @@ $(document).ready(function(){
 
 });
 
+$(document).on("click", ".remFavList", function(e){
+	var id = $(this).attr('href');
+				$.ajax({
+
+			url : "remo/lista/favs",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+					$('.mensaje-favoritos-ajax').html("<div class='alert alert-danger'>Producto eliminado de  tus favoritos</div>");
+					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
+					$('#fav-'+id).fadeOut(1200);
+					
+					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+	e.preventDefault();
+});
+
+
+
+$(document).on("click",".addFav", function(e){
+	var id = $(this).attr('href');
+
+		$.ajax({
+
+			url : "favoritos-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+					$('.mensaje-favoritos-ajax').html("<div class='alert alert-success'>Producto Agregado a tus favoritos</div>");
+					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
+					$('#item-'+id).removeClass("btn-info addFav");
+					$('#item-'+id).addClass("btn-danger  remFav");
+					$('#item-'+id).html('<i class="fa fa-heart"></i> Quitar');
+					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
+					
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+
+		
+		
+		 e.preventDefault();
+
+});
+
+
+
+
+$(document).on("click", ".remFav", function(e){
+	var id = $(this).attr('href');
+		$.ajax({
+
+			url : "quitar-favoritos-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+					$('.mensaje-favoritos-ajax').html("<div class='alert alert-danger'>Producto eliminado de  tus favoritos</div>");
+					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
+					$('#item-'+id).removeClass("btn-danger remFav");
+					$('#item-'+id).addClass("addFav btn-info My-Align");
+					$('#item-'+id).html('<i class="fa fa-heart"></i> Agregar');
+					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+		e.preventDefault();
+
+});
 /*$('#contador').keyup(function(){
 var cont = $('#contador').val();
 $.ajax({
@@ -34,7 +136,12 @@ var cambio = cont.replace(/ /g,'-');
 $('#contador-res').html(cambio);
 });*/
 
-	$(".addFav").click( function(e){
+
+	
+	
+
+
+	/*$(".addFav").on( 'click', function(e){
 
 		var id = $(this).attr('href');
 
@@ -52,6 +159,7 @@ $('#contador-res').html(cambio);
 					$('#item-'+id).removeClass("btn-info addFav");
 					$('#item-'+id).addClass("btn-danger  remFav");
 					$('.mensaje-favoritos-ajax').fadeOut( 3000 );
+					
 
 					
 					
@@ -68,7 +176,38 @@ $('#contador-res').html(cambio);
 		
 		 e.preventDefault();
 		
-	});
+	});*/
+
+	/*$(".remFav").on("click", function(e){
+		var id = $(this).attr('href');
+		$.ajax({
+
+			url : "quitar-favoritos-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+					$('.mensaje-favoritos-ajax').html("<div class='alert alert-danger'>Producto eliminado de  tus favoritos</div>");
+					$('.mensaje-favoritos-ajax').fadeIn( 2500 );
+					$('#item-'+id).removeClass("btn-danger remFav");
+					$('#item-'+id).addClass("addFav btn-info My-Align");
+					$('#item-'+id).html('<i class="fa fa-heart"></i>');
+					$('.mensaje-favoritos-ajax').fadeOut( 3000 );
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+		e.preventDefault();
+	});*/
 	//FUNCION PARA TRAER LA LISTA DE EMPRESAS DE ACUERDO AL SECTOR QUE FILTRE EL USUARIO###########################################
 
 	$("a.cat-lista").click( function(e){

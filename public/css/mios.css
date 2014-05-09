@@ -77,6 +77,16 @@ ul.menu-sedes li {
 	font-weight: bold;
 	text-align: center;
 }
+.contenedor-favoritos {
+	margin: 5% auto;
+	width: 95%;
+}
+
+.contenedor-favoritos div{
+	display: inline-block;
+	margin: 5px 7px;
+	width: 220px;
+}
 .contenedor-perfil div {
 	display: inline-block;
 	vertical-align: top;

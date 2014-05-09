@@ -95,11 +95,20 @@ Route::post('/get/nombre-empresa', array(
 		'uses' => 'AjaxController@postNombreEmpresaValido'
 	));
 
+Route::post('/catalogo/quitar-favoritos-ajax', array(
+		'as' => 'quitar-favoritos-ajax',
+		'uses' => 'AjaxController@remFav'
+	));
+
+Route::post('/remo/lista/favs', array(
+		'as' => 'remo-lista-favs',
+		'uses' => 'AjaxController@remFav'
+	));
+
 Route::post('/catalogo/favoritos-ajax', array(
 		'as' => 'add-fav-ajax',
 		'uses' => 'AjaxController@addFav'
 	));
-
 
 Route::post('/get/cat', array(
 		'as' => 'categorias-lista',
@@ -156,6 +165,11 @@ Route::get('/mega/perfil', array(
 Route::get('/perfil', array(
 		'as' => 'perfil',
 		'uses'=> 'UsersController@perfilUser1'
+	));
+
+Route::get('/favoritos', array(
+		'as' => 'favoritos',
+		'uses'=> 'UsersController@favoritosUser'
 	));
 
 Route::get('/empresa/nueva', array(

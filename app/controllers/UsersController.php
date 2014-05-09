@@ -13,6 +13,45 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+	public function favoritosUser()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+			$user_id = Auth::user()->id;
+
+			$user = User::where('id','=',$user_id)->first();
+			$favoritos = Favoritos::where('user_id','=',$user_id)
+			->join('producto', 'user_favoritos.producto_id', '=', 'producto.id')
+			->join('categorias', 'producto.categoria', '=', 'categorias.id')
+			->join('almacen', 'producto.id', '=', 'almacen.producto')
+			->join('sedes', 'almacen.sede', '=', 'sedes.id')
+
+			->select('producto.nombre AS producto_nombre',
+					'almacen.precio_detal',
+					'sedes.nombre_publico AS nombre_sede',
+					'producto.imagen',
+					'producto.id',
+					'producto.descripcion AS producto_descripcion',
+					'categorias.nombre AS categoria_nombre',
+					'almacen.cantidad'
+
+				)->get();
+			$num_favs = $favoritos->count();
+			
+
+			if($user->count()){
+				return View::make('mega/favoritos')->with('user',$user)->with('favoritos' ,$favoritos)->with('num_favs',$num_favs);
+			}else{
+				return View::make('/');
+			}
+
+
+			
+		}
+	}
+
 
 	public function perfilUser1()
 	{
