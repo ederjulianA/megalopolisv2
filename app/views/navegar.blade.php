@@ -25,7 +25,7 @@
 								<div class="menu-categorias">
 									<h2>Sectores</h2>
 
-									<ul >
+									<ul class="menu-sectores">
 										<li><a href="/navegar">Todos</a></li>
 										@foreach( $categorias as $categoria)
 										<!--<li><a href="/navegar/categoria/{{$categoria->id}}">{{$categoria->nom_sector}}  </a></li>-->

@@ -10,7 +10,7 @@
 					
 </div>
 	<div class="contenedor-favoritos">
-		<h2>mis favoritos ({{$num_favs}})</h2>
+		<h2>mis favoritos (<strong id="num_favoritos">{{$num_favs}}</strong>)</h2>
 		@if($favoritos->count())
 				@foreach($favoritos as $fav)
 			<div class="producto fadeInUp animation-delay4" style = 'vertical-align: top;' id="fav-{{$fav->id}}">

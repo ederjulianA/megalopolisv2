@@ -25,11 +25,16 @@ $(document).on("click", ".remFavList", function(e){
 			success : function(data){
 
 				if(data.estado == 1){
+					var num_favs = $('#num_favoritos').html();
+					var num_favs_int = parseInt(num_favs);
+					var total_favs = num_favs_int - 1;
+
 					$('.mensaje-favoritos-ajax').html("<div class='alert alert-danger'>Producto eliminado de  tus favoritos</div>");
 					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
 					$('#fav-'+id).fadeOut(1200);
 					
 					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
+					$('#num_favoritos').html(total_favs);
 
 					
 					
@@ -208,6 +213,11 @@ $('#contador-res').html(cambio);
 
 		e.preventDefault();
 	});*/
+
+
+	$('.menu-sectores li').on('click', function(){
+    $(this).addClass('active-menu').siblings().removeClass('active-menu');
+});
 	//FUNCION PARA TRAER LA LISTA DE EMPRESAS DE ACUERDO AL SECTOR QUE FILTRE EL USUARIO###########################################
 
 	$("a.cat-lista").click( function(e){
@@ -215,7 +225,7 @@ $('#contador-res').html(cambio);
 			$('.empresas-container').empty();
 			$('#sel-ciudades').val(0);
 			$('#sel-barrio').empty();
-			$("a.cat-lista").toggleClass("selected");
+			
 			
 
 			$.ajax({

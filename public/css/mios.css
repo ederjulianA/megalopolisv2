@@ -52,6 +52,25 @@ ul.menu-sedes li {
 	list-style: none;
 
 }
+.active-menu{
+	
+	color: red;
+	font-weight: bold;
+
+}
+.active-menu a {
+	background-color: #EA4949;
+	border-bottom: 1px solid red;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+
+	box-shadow: 2px 0 2px rgba(234,73,73, .3);
+	color: #fff;
+	padding: 5px;
+	font-size: 20px;
+}
 .catalogo-header {
 	margin: 5% auto;
 	width: 100%;
