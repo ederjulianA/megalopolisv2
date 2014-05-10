@@ -36,6 +36,27 @@ Class AjaxController  extends BaseController {
 
 	}
 
+	public function addPregunta()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['pregunta_f']) && isset($_POST['id_empresa_f']) && isset($_POST['id_user_f'])){
+			$user_id = $_POST['id_user_f'];
+			$empresa_id = $_POST['id_empresa_f'];
+			$pregunta = $_POST['pregunta_f'];
+
+			$preg = new Pregunta;
+			$preg->empresa_id = $empresa_id;
+			$preg->user_id = $user_id;
+			$preg->pregunta = $pregunta;
+
+			if($preg->save())
+			{
+				return Response::json($preg);
+			}
+
+		}
+	}
+
 	public function remFav()
 	{
 		header('Content-type: text/javascript');

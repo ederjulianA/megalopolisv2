@@ -13,7 +13,60 @@ $(document).ready(function(){
 	
 
 });
+$(document).on("click","#btn-hacer-pregunta", function(e){
+	var pregunta = $('#pregunta-user').val();
+	var id_empresa = $('#empresa_id').val();
+	var id_user = $('#user_id').val();
 
+
+		$.ajax({
+
+			url : "add/pregunta",
+			dataType: "json",
+			type : "post",
+			data : { pregunta_f : pregunta, id_empresa_f : id_empresa, id_user_f : id_user},
+			success : function(data){
+
+				if(data){
+					var nuevaPregunta = "";
+
+					nuevaPregunta += '<div class="panel panel-default">';
+						nuevaPregunta += '<div class="panel-heading">';
+							nuevaPregunta += '<h4 class="panel-title">';
+								nuevaPregunta += '<a class="btn btn-info  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" href="#'+data.id+'">'+data.pregunta+'</a>';
+							nuevaPregunta += '</h4>';
+						nuevaPregunta += '<div>';
+
+
+						nuevaPregunta += '<div id="'+data.id+'" class="panel-collapse collapse" style="height: 0px;">';
+								nuevaPregunta += '<div class="panel-body">Te notificaremos cuando tu pregunta sea respondida</div>';
+
+						nuevaPregunta += '</div>';
+					nuevaPregunta += '</div>';
+
+					$('.contenedor-preguntas').append(nuevaPregunta);
+					$('#pregunta-user').val("");
+					$('.mensaje-ajax').html('<span class="alert alert-danger">Has realizado tu pregunta con exito</span>');
+
+
+					console.log(data);
+					
+					
+				}
+				
+				
+			}
+
+
+		});
+	
+	
+
+	e.preventDefault();
+});
+
+
+//funcion para remover un favorito de la lista delusuario
 $(document).on("click", ".remFavList", function(e){
 	var id = $(this).attr('href');
 				$.ajax({
@@ -215,7 +268,7 @@ $('#contador-res').html(cambio);
 	});*/
 
 
-	$('.menu-sectores li').on('click', function(){
+	$('.menu-sectores li ').on('click', function(){
     $(this).addClass('active-menu').siblings().removeClass('active-menu');
 });
 	//FUNCION PARA TRAER LA LISTA DE EMPRESAS DE ACUERDO AL SECTOR QUE FILTRE EL USUARIO###########################################

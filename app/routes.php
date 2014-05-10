@@ -73,6 +73,12 @@ Route::post('/get/barrios', array(
 		'uses' => 'AjaxController@postBarrios'
 	));
 
+
+Route::post('/empresa/add/pregunta', array(
+		'as' => 'add-pregunta',
+		'uses' => 'AjaxController@addPregunta'
+	));
+
 Route::post('/get/promo', array(
 		'as' => 'promos-lista',
 		'uses' => 'AjaxController@postPromos'

@@ -115,6 +115,10 @@ ul.menu-sedes li {
 	display: inline-block;
 	vertical-align: top;
 }
+
+.contenedor-preguntas {
+	width: 100%;
+}
 .div-password-user{
 	width: 40%;
 }
