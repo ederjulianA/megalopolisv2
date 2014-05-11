@@ -26,6 +26,7 @@ class UsersController extends BaseController{
 			->join('producto', 'user_favoritos.producto_id', '=', 'producto.id')
 			->join('categorias', 'producto.categoria', '=', 'categorias.id')
 			->join('almacen', 'producto.id', '=', 'almacen.producto')
+			
 			->join('sedes', 'almacen.sede', '=', 'sedes.id')
 
 			->select('producto.nombre AS producto_nombre',
