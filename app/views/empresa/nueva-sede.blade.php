@@ -263,7 +263,12 @@
 
                     	<div class="actualizar-sede">
                     		<label for="direccion">Nombre publico</label>
-                    		<input type="text" name="nombre_publico" value="{{$empresa->nombre_publico}}" required>
+                    		 <input type="text" name="nombre_publico" value="" required id="nombre_publico_sede_seo" value="{{$empresa->nombre_publico}}">
+                        <input type="hidden"  id="nombre_publico_sede_seo" value="">
+
+                        <div id="nombre-seo">
+                  
+                        </div>
                     	</div>
 						<div class="actualizar-sede"> 
 							<label>
