@@ -268,15 +268,15 @@
                   
                         </div>
                       </div>
-            <div class="actualizar-sede"> 
-              <label>
-                Dirección para Google Maps:
-              </label>
-            <input id = 'gm_address' name = 'gm_address' type="text" name="address" value="" />
-            <input id = 'latitude' name = 'latitude' type = 'hidden'/>
-            <input id = 'longitude' name = 'longitude' type = 'hidden'/>
-            <input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
-            <div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
+						<div class="actualizar-sede"> 
+						  <label>
+							Dirección para Google Maps:
+						  </label>
+						<input id = 'gm_address' name = 'gm_address' type="text" name="address" value="" />
+						<input id = 'latitude' name = 'latitude' type = 'hidden'/>
+						<input id = 'longitude' name = 'longitude' type = 'hidden'/>
+						<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
+						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
             
                       </div>
                       <input type="hidden" name="empresa_id" value="{{$empresa->id}}">
