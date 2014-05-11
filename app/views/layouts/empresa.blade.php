@@ -38,6 +38,8 @@
 			var gm_address = document.getElementById('gm_address');
 			
 			gm_address.value = address.value + ', ' + city.options[city.selectedIndex].text;
+			
+			showAddress();
 		}
 		
 		function initialize() {
@@ -55,6 +57,8 @@
 		}
 
 		function showAddress() {
+		
+			map.clearOverlays();
 		
 			var address = document.getElementById('gm_address').value;
 		
@@ -86,7 +90,6 @@
 					longitude.value = params[1];
 				  });
 				  GEvent.addListener(marker, "click", function() {
-					marker.openInfoWindowHtml("Mi empresa está aquí");
 					
 					var test = marker.getLatLng().toUrlValue(6);
 					

@@ -322,7 +322,7 @@
 
                     	<div class="actualizar-sede">
                     		<label for="direccion">Direccion</label>
-                    		<input id = 'direccion' onkeyup = 'return toUpdateAddress();' type="text" name="direccion" value="{{$empresa->direccion_principal}}" required>
+                    		<input id = 'direccion' onkeyup = 'return toUpdateAddress();' type="text" name="direccion" autocomplete = 'off' value="{{$empresa->direccion_principal}}" required>
                     	</div>
 
                     	<div class="actualizar-sede">
@@ -343,7 +343,7 @@
 							<label>
 								Dirección para Google Maps:
 							</label>
-						<input id = 'gm_address' name = 'gm_address' type="text" name="address" value="" />
+						<input id = 'gm_address' name = 'gm_address' onkeyup = 'return showAddress();' autocomplete = 'off' type="text" name="address" value="" />
 						<input id = 'latitude' name = 'latitude' type = 'hidden'/>
 						<input id = 'longitude' name = 'longitude' type = 'hidden'/>
 						<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
