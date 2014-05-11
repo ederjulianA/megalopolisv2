@@ -29,22 +29,6 @@ class SedesController extends BaseController{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}
 	}
-	
-	public function postMapa() {
-	
-		$empresa = Empresa::find(Input::get('bussines_id'));
-				
-		$empresa->latitude = Input::get('latitude');
-		$empresa->longitude = Input::get('longitude');
-		
-		if($empresa->save()) {
-		
-			return Redirect::to('/mega/perfil')->with('message-alert','Se hace actualizado la posición de la empresa satisfactoriamente');
-		} else {
-		
-			return Redirect::to('/mega/perfil')->with('message-alert','Ha ocurrido un problema al momento de actualizar el perfil');
-		}
-	}
 
 	public function postCrearproducto() {
 	

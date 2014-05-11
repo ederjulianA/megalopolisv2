@@ -12,6 +12,25 @@
 		var map = null;
 		var geocoder = null;
 
+		function toLoadMyGM() {
+		
+			var city = document.getElementById('ciudad');
+			var address = document.getElementById('direccion');
+			var gm_address = document.getElementById('gm_address');
+			
+			if(city.value.length == 0) {
+			
+				city.value = "";
+			}
+			
+			if(address.value.length == 0) {
+			
+				address.value = "";
+			}
+			
+			gm_address.value = address.value + ", " + city.options[city.selectedIndex].text; 
+		}
+		
 		function toUpdateAddress() {
 		
 			var city = document.getElementById('ciudad');
@@ -22,6 +41,9 @@
 		}
 		
 		function initialize() {
+		
+			toLoadMyGM();
+		
 		  if (GBrowserIsCompatible()) {
 			map = new GMap2(document.getElementById("map_canvas"));
 			map.setCenter(new GLatLng(37.4419, -122.1419), 1);
@@ -32,7 +54,7 @@
 
 		function showAddress() {
 		
-			var address = document.getElementById('address').value;
+			var address = document.getElementById('gm_address').value;
 		
 		  if (geocoder) {
 			geocoder.getLatLng(
@@ -43,7 +65,6 @@
 				} else {
 					
 					var agree_button = document.getElementById('agree');
-					agree_button.style.display = 'inline';
 				
 				  map.setCenter(point, 15);
 				  var marker = new GMarker(point, {draggable: true});
@@ -111,7 +132,7 @@
 
 	
 </head>
-<body onload="return initialize()" onunload="return GUnload();" class="overflow-hidden">
+<body onload="return initialize();" onunload="return GUnload();" class="overflow-hidden">
 
 
 	<div id="overlay" class="transparent"></div>

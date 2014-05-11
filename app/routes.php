@@ -253,5 +253,5 @@ Route::post('nuevo-producto', array(
 
 Route::post('mapa', array(
 		'as' => 'mapa',
-		'uses' => 'SedesController@postMapa'
+		'uses' => 'EmpresasController@postMapa'
 ));

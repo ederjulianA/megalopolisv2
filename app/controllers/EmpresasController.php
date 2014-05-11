@@ -49,12 +49,15 @@ class EmpresasController  extends BaseController {
 			);
 
 		if($validator->passes()){
+		
 			$sede = new Sede;
 			$sede->empresa_id = Input::get('empresa_id');
 			$sede->ciudad_id = Input::get('ciudad');
 			$sede->direccion = Input::get('direccion');
 			$sede->telefono = Input::get('telefono');
 			$sede->nombre_publico = Input::get('nombre_publico');
+			$sede->latitude = Input::get('latitude');
+			$sede->longitude = Input::get('longitude');
 
 			if($sede->save())
 			{
