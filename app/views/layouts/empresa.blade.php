@@ -50,6 +50,8 @@
 			map.setUIToDefault();
 			geocoder = new GClientGeocoder();
 		  }
+		  
+		  showAddress();
 		}
 
 		function showAddress() {
