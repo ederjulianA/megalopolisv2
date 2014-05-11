@@ -10,12 +10,11 @@
 			<div class="nueva-sede">
       @if($sedes->count())
       <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-promo"> Nueva Promo</a>
-      <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-sede"> Nueva  sede</a>
       @endif
 
 
 
-         <!-- Modal  PARA CREAR NUEVA PROMOCION#########################################################################-->
+             <!-- Modal  PARA CREAR NUEVA PROMOCION#########################################################################-->
             <div class="modal fade" id="nueva-promo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -96,7 +95,7 @@
                 </div>
               </div>
             </div>
-        <!-- FIN DEL MODAL DE LA PRIMERA SEDE-->
+      <!-- FIN DEL MODAL DE LA PRIMERA SEDE-->
 				<h2>Mis Sedes</h2>
 
 				<div class="lista-sedes">
@@ -224,79 +223,8 @@
 		</div>
 
 
-<!--  MODAL PARA AGREGAR MAS SEDES-->
-    <div class="modal fade" id="nueva-sede" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Agregar nueva sede</h4>
-                  </div>
-                  <div class="modal-body">
-                    
-                    <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-sede-post')}}">
-                      <div class="actualizar-sede">
-                        <label for="direccion">Ciudad</label>
-                        <select name="ciudad" id = 'ciudad' onchange = 'return toUpdateAddress();'>
-                            <option value="0">Selecciona la ciudad:</option>
-                            @foreach($ciudades as $ciudad)
-                @if($ciudad->id == $empresa->ciudad->id)
-                  <option value="{{$ciudad->id}}" selected>{{$ciudad->ciudad}}</option>
-                @else
-                  <option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
-                @endif
-                            @endforeach
-                        </select>
-                      </div>
-
-                      <div class="actualizar-sede">
-                        <label for="direccion">Direccion</label>
-                        <input id = 'direccion' onkeyup = 'return toUpdateAddress();' type="text" name="direccion" value="" required>
-                      </div>
-
-                      <div class="actualizar-sede">
-                        <label for="direccion">Telefono</label>
-                        <input type="text" name="telefono" value="" required>
-                      </div>
-
-                      <div class="actualizar-sede">
-                        <label for="direccion">Nombre publico</label>
-                         <input type="text" name="nombre_publico" value="" required id="nombre_publico_sede_seo" value="{{$empresa->nombre_publico}}">
-                        <input type="hidden"  id="nombre_publico_sede_seo" value="">
-
-                        <div id="nombre-seo">
-                  
-                        </div>
-                      </div>
-						<div class="actualizar-sede"> 
-						  <label>
-							Dirección para Google Maps:
-						  </label>
-						<input id = 'gm_address' name = 'gm_address' type="text" name="address" value="" />
-						<input id = 'latitude' name = 'latitude' type = 'hidden'/>
-						<input id = 'longitude' name = 'longitude' type = 'hidden'/>
-						<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
-						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
-            
-                      </div>
-                      <input type="hidden" name="empresa_id" value="{{$empresa->id}}">
-
-                      <input type="submit" value="Agregar" class="btn btn-success btn-sombra">
-                      {{ Form::token()}}
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    
-                  </div>
-                </div>
-              </div>
-  </div>
-      <!-- FIN DEL MODAL DE LA PRIMERA SEDE-->
-
-
 		<!-- Modal  PARA CREAR LA PRIMERA SEDE DEL USUARIO#########################################################################-->
-   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
