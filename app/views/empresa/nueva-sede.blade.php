@@ -10,7 +10,7 @@
 			<div class="nueva-sede">
       @if($sedes->count())
       <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-promo"> Nueva Promo</a>
-      <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-sede"> Nueva Promo</a>
+      <a href="#" class="btn btn-info btn-lg btn-sombra"data-toggle="modal" data-target="#nueva-sede"> Nueva sede</a>
       @endif
 
 
