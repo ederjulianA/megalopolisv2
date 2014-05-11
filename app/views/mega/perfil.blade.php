@@ -51,11 +51,11 @@
 					</li>
 
 						<li>
-						<a href="#Npromo" data-toggle="tab">
+						<a href="#preguntas" data-toggle="tab">
 							<span class="block text-center">
 								<i class="fa fa-gift fa-2x"></i> 
 							</span>
-							Nueva Promocion
+							Preguntas
 						</a>
 					</li>
 				
@@ -545,6 +545,49 @@
 										
 										
 										</div>
+
+
+
+
+										<div class="tab-pane fade" id="preguntas">
+								
+								<div class="row">
+									<div class="panel panel-info pull-right">
+										<div class="panel-body">
+											Ultima Actualizacion: 
+										</div>
+									</div><!-- /panel -->
+								</div><!-- /.row -->
+								
+								<div class="panel panel-default">
+									<form class="form-horizontal form-border">
+										<div class="panel-heading">
+											<h2>Mis preguntas</h2>
+										</div>
+										<div class="panel-body">
+
+
+										
+											
+											
+										
+										
+
+										
+										
+										</div>
+										<div class="panel-footer">
+											<div class="text-right">
+												<button class="btn btn-sm btn-success">	Actualizar</button>
+												
+											</div>
+										</div>
+									</form>
+								</div><!-- /panel -->
+							
+								
+							
+					</div><!-- /tab6 -->
 										<div class="panel-footer">
 											
 										</div>
