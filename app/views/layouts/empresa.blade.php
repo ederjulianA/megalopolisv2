@@ -6,6 +6,76 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
+      type="text/javascript"></script>
+	<script type="text/javascript">
+		var map = null;
+		var geocoder = null;
+
+		function initialize() {
+		  if (GBrowserIsCompatible()) {
+			map = new GMap2(document.getElementById("map_canvas"));
+			map.setCenter(new GLatLng(37.4419, -122.1419), 1);
+			map.setUIToDefault();
+			geocoder = new GClientGeocoder();
+		  }
+		}
+
+		function showAddress() {
+		
+			var address = document.getElementById('address').value;
+		
+		  if (geocoder) {
+			geocoder.getLatLng(
+			  address,
+			  function(point) {
+				if (!point) {
+				  alert("Por favor ingresa una dirección más específica");
+				} else {
+					
+					var agree_button = document.getElementById('agree');
+					agree_button.style.display = 'inline';
+				
+				  map.setCenter(point, 15);
+				  var marker = new GMarker(point, {draggable: true});
+				  map.addOverlay(marker);
+				  GEvent.addListener(marker, "dragend", function() {
+					//marker.openInfoWindowHtml(marker.getLatLng().toUrlValue(6));
+					marker.openInfoWindowHtml("Mi empresa está aquí");
+					
+					var test = marker.getLatLng().toUrlValue(6);
+					
+					var params = test.split(",");
+					
+					var latitude = document.getElementById('latitude');
+					var longitude = document.getElementById('longitude');
+					
+					latitude.value = params[0];
+					longitude.value = params[1];
+				  });
+				  GEvent.addListener(marker, "click", function() {
+					marker.openInfoWindowHtml("Mi empresa está aquí");
+					
+					var test = marker.getLatLng().toUrlValue(6);
+					
+					var params = test.split(",");
+					
+					var latitude = document.getElementById('latitude');
+					var longitude = document.getElementById('longitude');
+					
+					latitude.value = params[0];
+					longitude.value = params[1];
+				  });
+			  GEvent.trigger(marker, "click");
+				}
+			  }
+			);
+		  }
+		  
+		  return false;
+		}
+    </script>
+	
     <!-- Bootstrap core CSS -->
     {{ HTML::style('bootstrap/css/bootstrap.min.css', array('media' => 'screen'))}}
 
@@ -32,7 +102,7 @@
 
 	
 </head>
-<body class="overflow-hidden">
+<body onload="return initialize()" onunload="return GUnload();" class="overflow-hidden">
 
 
 	<div id="overlay" class="transparent"></div>

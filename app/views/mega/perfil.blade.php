@@ -170,7 +170,19 @@
 													</p> 
 													 
 												</li> 
-											
+												<li class="list-group-item"> 
+													<h1>Ubica tu empresa en el mapa:
+													</h1> 
+													 <form action="../mapa" method = 'post'>
+														<input id = 'address' name = 'address' type="text" style="width:350px" name="address" value="{{$empresa->direccion_principal}}, {{$empresa->ciudad->ciudad }} " />
+														<input id = 'latitude' name = 'latitude' type = 'hidden'/>
+														<input id = 'longitude' name = 'longitude' type = 'hidden'/>
+														<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
+														<input type="submit" value="Ubicar" onclick="return showAddress();"/>
+														<input id = 'agree' type="submit" value="Confirmar ubicación" style = 'display: none;'/>
+														<div id="map_canvas" style="width: 370px; height: 400px"></div>
+													</form>
+												</li>
 											</ul><!-- /list-group -->
 
 											<!--  FIN LISTA DATOS DE CONTACTO DE LA EMPRESA################################-->
@@ -178,11 +190,10 @@
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="panel panel-default fadeInUp animation-delay4">
-											<div class="panel-heading">
-												{{$empresa->ciudad->ciudad }} 
+											<div class="panel-heading" title = 'Si la dirección no coincide con la de tu empresa por favor utiliza el formulario indicado en esta sección'>
+												Mi empresa en el mapa
 											</div>
-											<iframe width="250" height="200" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Bucaramanga+-+Santander,+Colombia+carrera+24+%23+18-76&amp;aq=&amp;sll=7.11331,-73.120468&amp;sspn=0.369978,0.676346&amp;ie=UTF8&amp;hq=&amp;hnear=Carrera+24+%23+18-76,+Bucaramanga,+Santander,+Colombia&amp;t=m&amp;z=14&amp;ll=7.13022,-73.122221&amp;output=embed"></iframe><br /><small><a href="http://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Bucaramanga+-+Santander,+Colombia+carrera+24+%23+18-76&amp;aq=&amp;sll=7.11331,-73.120468&amp;sspn=0.369978,0.676346&amp;ie=UTF8&amp;hq=&amp;hnear=Carrera+24+%23+18-76,+Bucaramanga,+Santander,+Colombia&amp;t=m&amp;z=14&amp;ll=7.13022,-73.122221" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
-										</div><!-- /panel -->
+											</div><!-- /panel -->
 
 										<!-- FIN DE CONTENEDOR DE UBICACION GOOGLE MAPS-->
 										<div class="panel panel-overview fadeInUp animation-delay5">

@@ -245,3 +245,8 @@ Route::post('nuevo-producto', array(
 		'as' => 'crear-producto',
 		'uses' => 'SedesController@postCrearproducto'
 ));
+
+Route::post('mapa', array(
+		'as' => 'mapa',
+		'uses' => 'SedesController@postMapa'
+));
