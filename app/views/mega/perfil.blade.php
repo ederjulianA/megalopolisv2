@@ -169,30 +169,16 @@
 													<p>Correo electronico: <a href="#" class="text-info">{{$user->email}}</a>
 													</p> 
 													 
-												</li> 
-												<li class="list-group-item"> 
-													<h1>Ubica tu empresa en el mapa:
-													</h1> 
-													 <form action="../mapa" method = 'post'>
-														<input id = 'address' name = 'address' type="text" style="width:350px" name="address" value="{{$empresa->direccion_principal}}, {{$empresa->ciudad->ciudad }} " />
-														<input id = 'latitude' name = 'latitude' type = 'hidden'/>
-														<input id = 'longitude' name = 'longitude' type = 'hidden'/>
-														<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
-														<input type="submit" value="Ubicar" onclick="return showAddress();"/>
-														<input id = 'agree' type="submit" value="Confirmar ubicación" style = 'display: none;'/>
-														<div id="map_canvas" style="width: 370px; height: 400px"></div>
-													</form>
 												</li>
-											</ul><!-- /list-group -->
+											</ul>
+											<!-- /list-group -->
 
 											<!--  FIN LISTA DATOS DE CONTACTO DE LA EMPRESA################################-->
 										</div><!-- /panel -->
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="panel panel-default fadeInUp animation-delay4">
-											<div class="panel-heading" title = 'Si la dirección no coincide con la de tu empresa por favor utiliza el formulario indicado en esta sección'>
-												Mi empresa en el mapa
-											</div>
+											
 											</div><!-- /panel -->
 
 										<!-- FIN DE CONTENEDOR DE UBICACION GOOGLE MAPS-->

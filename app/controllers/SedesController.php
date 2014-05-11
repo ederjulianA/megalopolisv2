@@ -32,7 +32,6 @@ class SedesController extends BaseController{
 	
 	public function postMapa() {
 	
-		
 		$empresa = Empresa::find(Input::get('bussines_id'));
 				
 		$empresa->latitude = Input::get('latitude');

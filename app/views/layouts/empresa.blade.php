@@ -12,6 +12,15 @@
 		var map = null;
 		var geocoder = null;
 
+		function toUpdateAddress() {
+		
+			var city = document.getElementById('ciudad');
+			var address = document.getElementById('direccion');
+			var gm_address = document.getElementById('gm_address');
+			
+			gm_address.value = address.value + ', ' + city.options[city.selectedIndex].text;
+		}
+		
 		function initialize() {
 		  if (GBrowserIsCompatible()) {
 			map = new GMap2(document.getElementById("map_canvas"));

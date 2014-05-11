@@ -239,17 +239,21 @@
                     <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-sede-post')}}">
                       <div class="actualizar-sede">
                         <label for="direccion">Ciudad</label>
-                        <select name="ciudad">
-                            <option value="0">- Escoge la ciudad -</option>
+                        <select name="ciudad" id = 'ciudad' onchange = 'return toUpdateAddress();'>
+                            <option value="0">Selecciona la ciudad:</option>
                             @foreach($ciudades as $ciudad)
-                              <option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
+								@if($ciudad->id == $empresa->ciudad->id)
+									<option value="{{$ciudad->id}}" selected>{{$ciudad->ciudad}}</option>
+								@else
+									<option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
+								@endif
                             @endforeach
                         </select>
                       </div>
 
                     	<div class="actualizar-sede">
                     		<label for="direccion">Direccion</label>
-                    		<input type="text" name="direccion" value="{{$empresa->direccion_principal}}" required>
+                    		<input id = 'direccion' onchange = 'return toUpdateAddress();' type="text" name="direccion" value="{{$empresa->direccion_principal}}" required>
                     	</div>
 
                     	<div class="actualizar-sede">
@@ -260,6 +264,20 @@
                     	<div class="actualizar-sede">
                     		<label for="direccion">Nombre publico</label>
                     		<input type="text" name="nombre_publico" value="{{$empresa->nombre_publico}}" required>
+                    	</div>
+						<div class="actualizar-sede"> 
+							<label>
+								Dirección para Google Maps:
+							</label> 
+							 <form action="../mapa" method = 'post'>
+								<input id = 'gm_address' name = 'gm_address' type="text" name="address" value="" />
+								<input id = 'latitude' name = 'latitude' type = 'hidden'/>
+								<input id = 'longitude' name = 'longitude' type = 'hidden'/>
+								<input id = 'bussines_id' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
+								<input type="submit" value="Ubicar" onclick="return showAddress();" style = 'width: 100%; margin: 10px 0 !important;'/>
+								<input id = 'agree' type="submit" value="Confirmar ubicación" style = 'display: none;'/>
+								<div id="map_canvas" style="width: 100%; height: 400px"></div>
+							</form>
                     	</div>
                     	<input type="hidden" name="empresa_id" value="{{$empresa->id}}">
 
