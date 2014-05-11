@@ -236,6 +236,16 @@
                   <div class="modal-body">
                     <span class="alert alert-success"> Por defecto hemos Cargado los datos de registro de tu empresa.</span>
                     <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-sede-post')}}">
+                      <div class="actualizar-sede">
+                        <label for="direccion">Ciudad</label>
+                        <select name="ciudad">
+                            <option value="0">- Escoge la ciudad -</option>
+                            @foreach($ciudades as $ciudad)
+                              <option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
+                            @endforeach
+                        </select>
+                      </div>
+
                     	<div class="actualizar-sede">
                     		<label for="direccion">Direccion</label>
                     		<input type="text" name="direccion" value="{{$empresa->direccion_principal}}" required>
