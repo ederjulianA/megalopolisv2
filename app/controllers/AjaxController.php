@@ -131,6 +131,37 @@ Class AjaxController  extends BaseController {
 
 	}
 
+	public function postNombreSedeValido()
+	{
+			header('Content-type: text/javascript');
+
+		if(isset($_POST['nombre_sede'])){
+			$nombre_sede = $_POST['nombre_sede'];
+
+			$sede = Sede::where('nombre_publico','=',$nombre_sede)->get();
+
+			if($sede->count()){
+				$json = array(
+					'estado' => 1,
+					'mensaje' => 'oops, nombre no disponible',
+					);
+				return Response::json($json);
+				
+			}else{
+				$json = array(
+					'estado' => 0,
+					'mensaje' => 'Nombre Disponible',
+					);
+				return Response::json($json);
+
+				
+			}
+
+			
+
+		}
+	}
+
 	public function postNombreEmpresaValido()
 	{
 		header('Content-type: text/javascript');
