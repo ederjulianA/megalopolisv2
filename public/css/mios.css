@@ -115,6 +115,20 @@ ul.menu-sedes li {
 	display: inline-block;
 	vertical-align: top;
 }
+.contenedor-preguntas-null {
+	border-bottom:  1px solid #ccc;
+	margin: 7px auto;
+	padding: 10px;
+	width: 100%;
+
+}
+
+.contenedor-preguntas-total{
+	padding: 10px;
+	margin: 7px auto;
+	width: 100%;
+
+}
 
 .contenedor-preguntas {
 	width: 100%;
@@ -153,6 +167,7 @@ ul.menu-sedes li {
 	margin: 10% auto;
 	width: 100%;
 }
+
 .actualizar-sede{
 	margin: 5px;
 	width: 95%;

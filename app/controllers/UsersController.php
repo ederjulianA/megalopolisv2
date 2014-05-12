@@ -26,7 +26,7 @@ class UsersController extends BaseController{
 			->join('producto', 'user_favoritos.producto_id', '=', 'producto.id')
 			->join('categorias', 'producto.categoria', '=', 'categorias.id')
 			->join('almacen', 'producto.id', '=', 'almacen.producto')
-			
+
 			->join('sedes', 'almacen.sede', '=', 'sedes.id')
 
 			->select('producto.nombre AS producto_nombre',
@@ -233,11 +233,15 @@ class UsersController extends BaseController{
 			$user = $user->first();
 			$empresa = $empresa->first();
 			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
+			$preguntas_todas = Pregunta::where('empresa_id','=',$empresa->id)->get();
+			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','DESC')->get();
 			$num_sedes = $sede->count();
 			return View::make('mega.perfil')
 			->with('user' , $user)
 			->with('num_sedes', $num_sedes)
 			->with('empresa', $empresa)
+			->with('preguntas', $preguntas_todas)
+			->with('preguntas_null', $preguntas_null)
 			->with('categorias', $categorias)
 			->with('sedes', $sede);
 		}

@@ -44,6 +44,12 @@ Route::post('/nueva-promo-post', array(
 	));
 
 
+Route::post('/preguntas', array(
+		'as' => 'preguntas',
+		'uses' => 'PreguntasController@postResponderPregunta'
+	));
+
+
 Route::post('/actualizar-sede', array(
 		'as' => 'actualizar-sede-post',
 		'uses' => 'EmpresasController@postActualizarSede'

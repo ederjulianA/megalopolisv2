@@ -539,6 +539,8 @@
 								</div><!-- /panel -->
 												
 						</div>
+
+						</form>
 										
 											
 
@@ -560,11 +562,38 @@
 								</div><!-- /.row -->
 								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border">
+									
 										<div class="panel-heading">
 											<h2>Mis preguntas</h2>
 										</div>
 										<div class="panel-body">
+
+										<div class="contenedor-preguntas-null">
+											<h2>Tus preguntas sin responder </h2>
+											@foreach($preguntas_null as $preg_null)
+											<div class="pregunta-responder">
+												{{$preg_null->pregunta}}<br>
+												<form method="post" action="/preguntas" rol="form">
+													<div class="form-group">
+														<input type="hidden" name="pregunta_id" value="{{$preg_null->id}}">
+														<textarea name="respuesta" class="form-control"></textarea>
+													</div>
+													
+													<input type="submit" value="Responder" class="btn btn-success">
+													{{ Form::token()}}
+												</form>
+											</div>		
+											@endforeach
+											
+										</div>
+
+										<div class="contenedor-preguntas-total"> 
+											<h3>Todas mis preguntas</h3>
+
+											@foreach($preguntas as $pregunta)
+												{{$pregunta->pregunta}}<br>
+											@endforeach
+										</div>
 
 
 										
@@ -577,12 +606,9 @@
 										
 										</div>
 										<div class="panel-footer">
-											<div class="text-right">
-												<button class="btn btn-sm btn-success">	Actualizar</button>
-												
-											</div>
+											
 										</div>
-									</form>
+									
 								</div><!-- /panel -->
 							
 								
