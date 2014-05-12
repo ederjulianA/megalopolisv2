@@ -150,7 +150,7 @@
 						  </div>
 						<div class="actualizar-sede">
                       		<label for="direccion">Dirección:</label>
-                      		<input type="text" name="direccion" onkeyup = 'return toCloneUpdateAddress({{$sede->id}});' id = 'direccion-{{$sede->id}}' value="{{$sede->direccion}}" required>
+                      		<input type="text" name="direccion" onkeyup = 'return toCloneUpdateAddress({{$sede->id}});' id = 'direccion-{{$sede->id}}' autocomplete = 'off' value="{{$sede->direccion}}" required>
                       	</div>
 
                       	<div class="actualizar-sede">
@@ -180,7 +180,7 @@
 							<div id="map_canvas-{{$sede->id}}" style="width: 100%; height: 400px;margin-top: 10px;"></div>
                     	</div>
 						
-                      	<input type="hidden" name="sede_id" value="{{$sede->id}}">
+                      	<input type="hidden" id = 'sede_id' name="sede_id" value="{{$sede->id}}">
 
                       	<input type="submit" value="Actualizar" class="btn btn-success btn-sombra">
                       	{{ Form::token()}}
