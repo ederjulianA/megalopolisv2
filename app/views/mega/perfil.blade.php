@@ -563,13 +563,13 @@
 								
 								<div class="panel panel-default">
 									
-										<div class="panel-heading">
-											<h2>Mis preguntas</h2>
+										<div class="panel-heading header-preguntas">
+											<h2>Mis preguntas</h2> {{HTML::image('img/mega-imgs/preg.jpg', 'preguntas', array('width'=>'60px', 'height'=>'50px'))}}
 										</div>
 										<div class="panel-body">
 
 										<div class="contenedor-preguntas-null">
-											<h2>Tus preguntas sin responder </h2>
+											<h2>Tus preguntas sin responder ({{$num_nulls}})</h2>
 											@foreach($preguntas_null as $preg_null)
 											<div class="pregunta-responder">
 												{{$preg_null->pregunta}}<br>
@@ -588,7 +588,7 @@
 										</div>
 
 										<div class="contenedor-preguntas-total"> 
-											<h3>Todas mis preguntas</h3>
+											<h3>Todas mis preguntas ({{$total_preguntas}})</h3>
 
 											@foreach($preguntas as $pregunta)
 												{{$pregunta->pregunta}}<br>

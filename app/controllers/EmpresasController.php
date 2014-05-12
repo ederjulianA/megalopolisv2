@@ -26,9 +26,14 @@ class EmpresasController  extends BaseController {
 			$user = $user->first();
 			$empresa = $empresa->first();	
 			$sede = Sede::where("empresa_id","=", $empresa->id)->get();
+			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+			$num_preguntas_null = $preguntas_null->count();
+
 			return View::make('empresa.nueva-sede')
 			->with('user', $user)
 			->with('sedes', $sede)
+			->with('num_nulls', $num_preguntas_null)
+			->with('preguntas_null', $preguntas_null)
 			->with('ciudades', Ciudad::all())
 			->with('categorias', Categoria::all())
 			->with('empresa', $empresa);
@@ -92,10 +97,14 @@ class EmpresasController  extends BaseController {
 		{
 			$user = $user->first();
 			$empresa = $empresa->first();
+			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+			$num_preguntas_null = $preguntas_null->count();
 				
 			return View::make('empresa.cambiarImg')
 			
 			->with('user', $user)
+			->with('num_nulls', $num_preguntas_null)
+			->with('preguntas_null', $preguntas_null)
 			->with('empresa', $empresa);
 		}
 

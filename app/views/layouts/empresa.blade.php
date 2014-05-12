@@ -310,40 +310,39 @@
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="fa fa-bell fa-lg"></i>
-								<span class="notification-label bounceIn animation-delay6">7</span>
+								@if($num_nulls > 0)
+									<span class="notification-label bounceIn animation-delay6">{{$num_nulls}}</span>
+								@endif
+								
 							</a>
-							<ul class="dropdown-menu notification dropdown-3">
-								<li><a href="#">Tienes 5 notificaciones</a></li>					  
-								<li>
-									<a href="#">
-										<span class="notification-icon bg-warning">
-											<i class="fa fa-warning"></i>
-										</span>
-										<span class="m-left-xs">Mensaje de notificacion.</span>
-										<span class="time text-muted">ahora</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<span class="notification-icon bg-success">
-											<i class="fa fa-plus"></i>
-										</span>
-										<span class="m-left-xs">Mensaje de notificacion</span>
-										<span class="time text-muted">hace 2m</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<span class="notification-icon bg-danger">
-											<i class="fa fa-bolt"></i>
-										</span>
-										<span class="m-left-xs">Mensaje de notificacion</span>
-										<span class="time text-muted">hace 5 min</span>
-									</a>
-								</li>
+
+
+							@if($num_nulls > 0)
+									<ul class="dropdown-menu notification dropdown-3">
+											<li><a href="#">Tienes ({{$num_nulls}}) pregunta(s) sin Responder</a></li>
+											@foreach($preguntas_null as $pregunta)
+												<li>
+													<a href="#">
+														<span class="notification-icon bg-warning">
+															<i class="fa fa-warning"></i>
+														</span>	
+														<span class="m-left-xs">{{$pregunta->pregunta}}.</span><br>
+													</a>
+												</li>	
+
+											@endforeach				  
+											
+										
+										
+											<li><a href="#">Ver todas las notificaciones</a></li>					  
+									</ul>
+								@else	
+								<ul class="dropdown-menu notification dropdown-3">
+									<li><a href="#"> No Tienes preguntas pendientes</a></li>	
+								</ul>
+
+								@endif
 							
-								<li><a href="#">Ver todas las notificaciones</a></li>					  
-							</ul>
 						</li>
 						<li class="profile dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">

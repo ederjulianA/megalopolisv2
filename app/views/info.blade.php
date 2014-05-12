@@ -160,7 +160,7 @@
 	{{ HTML::script('js/jquery-ui-map/ui/min/jquery.ui.map.microformat.min.js')}}
 	<script>
 		 $(function() { 
-			var yourStartLatLng = new google.maps.LatLng(37.808661, -122.409819);
+			var yourStartLatLng = new google.maps.LatLng(7.134273, -73.124725);
             $('#map_canvas').gmap({'center': yourStartLatLng});
 		});
 	</script>

@@ -234,13 +234,17 @@ class UsersController extends BaseController{
 			$empresa = $empresa->first();
 			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 			$preguntas_todas = Pregunta::where('empresa_id','=',$empresa->id)->get();
-			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','DESC')->get();
+			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+			$num_preguntas_null = $preguntas_null->count();
+			$num_pregunstas_total = $preguntas_todas->count();
 			$num_sedes = $sede->count();
 			return View::make('mega.perfil')
 			->with('user' , $user)
 			->with('num_sedes', $num_sedes)
 			->with('empresa', $empresa)
 			->with('preguntas', $preguntas_todas)
+			->with('num_nulls', $num_preguntas_null)
+			->with('total_preguntas', $num_pregunstas_total)
 			->with('preguntas_null', $preguntas_null)
 			->with('categorias', $categorias)
 			->with('sedes', $sede);

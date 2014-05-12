@@ -184,6 +184,11 @@ ul.menu-sedes li {
 	width: 100%;
 }
 
+.header-preguntas h2 , .header-preguntas img{
+	display: inline-block;
+
+}
+
 .lista-sedes-info {
 	border: 2px solid #33E6F2;
 	-webkit-border-radius: 2px;
