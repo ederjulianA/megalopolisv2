@@ -42,6 +42,115 @@
 			showAddress();
 		}
 		
+		function toCloneUpdateAddress(target) {
+		
+			var city = document.getElementById('ciudad-' + target);
+			var address = document.getElementById('direccion-' + target);
+			var gm_address = document.getElementById('gm_address-' + target);
+			
+			gm_address.value = address.value + ', ' + city.options[city.selectedIndex].text;
+			
+			map = new GMap2(document.getElementById("map_canvas-" + target));
+			
+			showCloneAddress(map, target);
+		}
+		
+		function toCloneLoadMyGM(target) {
+		
+			var city = document.getElementById('ciudad-' + target);
+			var address = document.getElementById('direccion-' + target);
+			var gm_address = document.getElementById('gm_address-' + target);
+			
+			if(city.value.length == 0) {
+			
+				city.value = "";
+			}
+			
+			if(address.value.length == 0) {
+			
+				address.value = "";
+			}
+			
+			gm_address.value = address.value + ", " + city.options[city.selectedIndex].text; 
+		}
+		
+		function toCloneInitialize(target) {
+		
+			// Clonar también.
+		
+			toCloneLoadMyGM(target);
+		
+			if (GBrowserIsCompatible()) {
+				map = new GMap2(document.getElementById("map_canvas-" + target));
+				map.setCenter(new GLatLng(37.4419, -122.1419), 1);
+				map.setUIToDefault();
+				geocoder = new GClientGeocoder();
+			}
+		  
+			showCloneAddress(map, target);
+		}
+		
+		function auxiliaryClone(target) {
+		
+			map = new GMap2(document.getElementById("map_canvas-" + target));
+			
+			showCloneAddress(map, target);
+		}
+		
+		function showCloneAddress(map, target) {
+		
+			map.clearOverlays();
+		
+			var address = document.getElementById('gm_address-' + target).value;
+		
+		  if (geocoder) {
+			geocoder.getLatLng(
+			  address,
+			  function(point) {
+				if (!point) {
+				  alert("Por favor ingresa una dirección más específica");
+				} else {
+					
+					var agree_button = document.getElementById('agree');
+				
+				  map.setCenter(point, 15);
+				  var marker = new GMarker(point, {draggable: true});
+				  map.addOverlay(marker);
+				  GEvent.addListener(marker, "dragend", function() {
+					
+					marker.openInfoWindowHtml("Mi empresa está aquí");
+					
+					var test = marker.getLatLng().toUrlValue(6);
+					
+					var params = test.split(",");
+					
+					var latitude = document.getElementById('latitude-' + target);
+					var longitude = document.getElementById('longitude-' + target);
+					
+					latitude.value = params[0];
+					longitude.value = params[1];
+				  });
+				  GEvent.addListener(marker, "click", function() {
+					
+					var test = marker.getLatLng().toUrlValue(6);
+					
+					var params = test.split(",");
+					
+					var latitude = document.getElementById('latitude-' + target);
+					var longitude = document.getElementById('longitude-' + target);
+					
+					latitude.value = params[0];
+					longitude.value = params[1];
+				  });
+			  GEvent.trigger(marker, "click");
+				}
+			  }
+			);
+		  }
+		  
+		  return false;
+		}
+		
 		function initialize() {
 		
 			toLoadMyGM();
@@ -55,7 +164,7 @@
 		  
 		  showAddress();
 		}
-
+		
 		function showAddress() {
 		
 			map.clearOverlays();
@@ -76,7 +185,7 @@
 				  var marker = new GMarker(point, {draggable: true});
 				  map.addOverlay(marker);
 				  GEvent.addListener(marker, "dragend", function() {
-					//marker.openInfoWindowHtml(marker.getLatLng().toUrlValue(6));
+					
 					marker.openInfoWindowHtml("Mi empresa está aquí");
 					
 					var test = marker.getLatLng().toUrlValue(6);

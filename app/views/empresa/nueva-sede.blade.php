@@ -118,7 +118,7 @@
 													<td>{{$sede->telefono}}</td>
 													<td>{{$sede->direccion}}</td>
 													<td>
-														<a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$sede->id}}"><i class="fa fa-edit"></i></a>
+														<a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$sede->id}}" onclick = 'return toCloneInitialize({{$sede->id}});'><i class="fa fa-edit"></i></a>
 													</td>
 												</tr>
 
@@ -135,19 +135,51 @@
                       
                       <form class="form-nueva-sede" method="post" action="{{ URL::route('actualizar-sede-post')}}">
                       	<div class="actualizar-sede">
-                      		<label for="direccion">Direccion</label>
-                      		<input type="text" name="direccion" value="{{$sede->direccion}}" required>
+							<label for="direccion">Ciudad</label>
+							<select name="ciudad" id = 'ciudad-{{$sede->id}}' onchange = 'return toCloneUpdateAddress({{$sede->id}});'>
+								<option value="0">Selecciona la ciudad:</option>
+								<?php var_dump($sede);?>
+								@foreach($ciudades as $ciudad)
+									@if($ciudad->id == $sede->ciudad_id)
+										<option value="{{$ciudad->id}}" selected>{{$ciudad->ciudad}}</option>
+									@else
+										<option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
+									@endif
+								@endforeach
+							</select>
+						  </div>
+						<div class="actualizar-sede">
+                      		<label for="direccion">Dirección:</label>
+                      		<input type="text" name="direccion" onkeyup = 'return toCloneUpdateAddress({{$sede->id}});' id = 'direccion-{{$sede->id}}' value="{{$sede->direccion}}" required>
                       	</div>
 
                       	<div class="actualizar-sede">
-                      		<label for="direccion">Telefono</label>
+                      		<label for="direccion">Teléfono:</label>
                       		<input type="text" name="telefono" value="{{$sede->telefono}}" required>
                       	</div>
 
                       	<div class="actualizar-sede">
-                      		<label for="direccion">Nombre publico</label>
-                      		<input type="text" name="nombre_publico" value="{{$sede->nombre_publico}}" required>
+                      		<label for="direccion">Nombre público:</label>
+                      		<input name = 'nombre_publico' type="text" value="{{$sede->nombre_publico}}" required disabled>
+							<p>
+								Este valor no se puede modificar.
+							</p>
                       	</div>
+						
+						<div class="actualizar-sede"> 
+							<label>
+								Dirección para Google Maps:
+							</label>
+							<input id = 'gm_address-{{$sede->id}}' name = 'gm_address' onkeyup = 'return auxiliaryClone({{$sede->id}});' autocomplete = 'off' type="text" name="address" value="" />
+							<p>
+								En el siguiente formato: dirección, ciudad.
+							</p>
+							<input id = 'latitude-{{$sede->id}}' name = 'latitude' type = 'hidden'/>
+							<input id = 'longitude-{{$sede->id}}' name = 'longitude' type = 'hidden'/>
+							<input id = 'bussines_id-{{$sede->id}}' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
+							<div id="map_canvas-{{$sede->id}}" style="width: 100%; height: 400px;margin-top: 10px;"></div>
+                    	</div>
+						
                       	<input type="hidden" name="sede_id" value="{{$sede->id}}">
 
                       	<input type="submit" value="Actualizar" class="btn btn-success btn-sombra">

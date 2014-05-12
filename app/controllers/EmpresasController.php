@@ -200,28 +200,29 @@ class EmpresasController  extends BaseController {
 		$validator = Validator::make(Input::all(),
 				array(
 						'direccion' => 'required',
-						'nombre_publico' => 'required',
 						'telefono' => 'required'
 					)
 			);
-
+			
 		if($validator->passes())
 		{
 			$sede = Sede::where('id','=',Input::get('sede_id'))->first();
-
-		
-
+			
+			$sede->ciudad_id = Input::get('ciudad');
 			$sede->direccion = Input::get('direccion');
 			$sede->nombre_publico = Input::get('nombre_publico');
 			$sede->telefono = Input::get('telefono');
+			$sede->latitude = Input::get('latitude');
+			$sede->longitude = Input::get('longitude');
 
 			if($sede->save())
 			{
-				return Redirect::to('nueva-sede')->with('message-alert','Actualizacion Exitosa');
+				return Redirect::to('nueva-sede')->with('message-alert','Actualización exitosa');
 			}
 
 		}else{
-			return Redirect::to('/nueva-sede')->withErrors($validator)->with('message-alert','Error al actualizar');
+		
+			return Redirect::to('/nueva-sede')->withErrors($validator)->with('message-alert','Error al actualizar la sede');
 		}
 
 	}
