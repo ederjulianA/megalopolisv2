@@ -138,7 +138,6 @@
 							<label for="direccion">Ciudad</label>
 							<select name="ciudad" id = 'ciudad-{{$sede->id}}' onchange = 'return toCloneUpdateAddress({{$sede->id}});'>
 								<option value="0">Selecciona la ciudad:</option>
-								<?php var_dump($sede);?>
 								@foreach($ciudades as $ciudad)
 									@if($ciudad->id == $sede->ciudad_id)
 										<option value="{{$ciudad->id}}" selected>{{$ciudad->ciudad}}</option>
@@ -179,7 +178,13 @@
 							<input id = 'bussines_id-{{$sede->id}}' name = 'bussines_id' type = 'hidden' value = '{{$empresa->id}}'/>
 							<div id="map_canvas-{{$sede->id}}" style="width: 100%; height: 400px;margin-top: 10px;"></div>
                     	</div>
-						
+						@if($sede->latitude != 0)
+							<input type="hidden" id = 'saved-latitude-{{$sede->id}}' name="saved-latitude-{{$sede->id}}" value="{{$sede->latitude}}">
+							<input type="hidden" id = 'saved-longitude-{{$sede->id}}' name="saved-longitude-{{$sede->id}}" value="{{$sede->longitude}}">
+						@else
+							<input type="hidden" id = 'saved-latitude-{{$sede->id}}' name="saved-latitude-{{$sede->id}}" value="0">
+							<input type="hidden" id = 'saved-longitude-{{$sede->id}}' name="saved-longitude-{{$sede->id}}" value="0">
+						@endif
                       	<input type="hidden" id = 'sede_id' name="sede_id" value="{{$sede->id}}">
 
                       	<input type="submit" value="Actualizar" class="btn btn-success btn-sombra">

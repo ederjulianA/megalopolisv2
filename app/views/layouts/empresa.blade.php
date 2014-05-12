@@ -76,7 +76,8 @@
 		
 		function toCloneInitialize(target) {
 		
-			// Clonar también.
+			var saved_latitude = document.getElementById('saved-latitude-' + target);
+			var saved_longitude = document.getElementById('saved-longitude-' + target);
 		
 			toCloneLoadMyGM(target);
 		
@@ -87,7 +88,42 @@
 				geocoder = new GClientGeocoder();
 			}
 		  
-			showCloneAddress(map, target);
+			if((saved_latitude.value != 0) && (saved_longitude != 0)) {
+			
+				map.setCenter(new GLatLng(saved_latitude.value, saved_longitude.value), 15);
+				var marker = new GMarker(new GLatLng(saved_latitude.value, saved_longitude.value), {draggable: true});
+				map.addOverlay(marker);
+				GEvent.addListener(marker, "dragend", function() {
+					
+				marker.openInfoWindowHtml("Mi empresa está aquí");
+				
+				var test = marker.getLatLng().toUrlValue(6);
+				
+				var params = test.split(",");
+				
+				var latitude = document.getElementById('latitude-' + target);
+				var longitude = document.getElementById('longitude-' + target);
+				
+				latitude.value = params[0];
+				longitude.value = params[1];
+			  });
+			  GEvent.addListener(marker, "click", function() {
+				
+				var test = marker.getLatLng().toUrlValue(6);
+				
+				var params = test.split(",");
+				
+				var latitude = document.getElementById('latitude-' + target);
+				var longitude = document.getElementById('longitude-' + target);
+				
+				latitude.value = params[0];
+				longitude.value = params[1];
+			  });
+			  GEvent.trigger(marker, "click");
+			} else {
+			
+				showCloneAddress(map, target);
+			}
 		}
 		
 		function auxiliaryClone(target) {
