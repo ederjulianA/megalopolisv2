@@ -112,6 +112,12 @@
 							</div>
 						</div><!-- /panel -->
 
+						<div class="link-publico">
+							<h3>Comparte el link de tu empresa en tus redes sociales:</h3>
+							<span class="label label-success">https://megalopolis.com/<br>empresa/{{$empresa->nombre_publico}}</span>
+							
+						</div>
+
 						<div>
 							@if($num_sedes == 0)
 								<div class="alert alert-warning fadeInDown animation-delay2">
@@ -579,6 +585,11 @@
 
 										<div class="contenedor-preguntas-null">
 											<h2>Tus preguntas sin responder ({{$num_nulls}})</h2>
+											@if($num_nulls == 0)
+												{{HTML::image('img/mega-imgs/no-preguntas.jpg', 'preguntas', array('width'=>'250px', 'height'=>'90px'))}}
+											@else	
+												{{HTML::image('img/mega-imgs/abajo.jpg', 'preguntas', array('width'=>'250px', 'height'=>'90px'))}}
+											@endif
 											@foreach($preguntas_null as $preg_null)
 											<div class="pregunta-responder">
 												{{$preg_null->pregunta}}<br>
