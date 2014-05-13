@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'ederalvarez2091057@gmail.com',
+	'username' => 'thewalkingdead2091057@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'oxpehwwwhwqqlgmq',
+	'password' => ' bmiybmwchoaacmmv',
 
 	/*
 	|--------------------------------------------------------------------------
