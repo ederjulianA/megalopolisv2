@@ -331,6 +331,19 @@ ul.menu-sedes li {
 .selected {
 	color: red;
 }
+
+.selects-categoria {
+	width: 100% !important;
+}
+.selects-categoria select#category, .selects-categoria select#subcat {
+	width: 30% !important;
+	display: inline-block;
+}
+
+.selects-categoria select#subcat{
+	padding: 5px;
+	width: 60%;
+}
 .titulo_registro{
 	
 	margin: 0 auto;
@@ -365,6 +378,9 @@ ul.menu-sedes li {
 	font-size: 35px;
 	font-weight: bold;
 	text-align: center;
+}
+.mensaje-ajax-categorias{
+	width: 100%;
 }
 
 .form-registro{

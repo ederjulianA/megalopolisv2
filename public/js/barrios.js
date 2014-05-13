@@ -10,6 +10,11 @@ $(document).ready(function(){
 
 	});
 
+	$('#category').change(function(){
+		$('#subcat').empty();
+		subcategorias();
+	});
+
 	
 
 });
@@ -347,6 +352,38 @@ function lista_empresas()
 
 
 		});
+}
+
+function subcategorias()
+{
+	var cat_nom = $('#category option:selected').text();
+		$.ajax({
+		url : "subcats",
+		dataType: "json",
+		type : "post",
+		data : {cat_id: $('#category').val()},
+		success : function(data){
+			if(data){
+				for( var i in data)
+				{
+					var opt = "<option value='"+data[i].id+"'>"+data[i].nombre_sub+"</option>";
+					$('#subcat').append(opt);
+
+				}
+				
+				$('.mensaje-ajax-categorias').html("<span class='label label-success'>Escoge la Subcategoria de tu producto</span> ");
+
+				
+			}
+			if(data.estado == 0){
+				$('#subcat').html("<option value='0'>No hay categorias </option>");
+				$('.mensaje-ajax-categorias').html("<span class='label label-danger'>No se han definido categorias, Disculpa las molestias</span> ");
+			}
+			
+		}
+
+
+	});
 }
 
 function barrios()

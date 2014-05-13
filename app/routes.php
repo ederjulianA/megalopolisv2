@@ -80,6 +80,12 @@ Route::post('/get/barrios', array(
 	));
 
 
+Route::post('/mega/subcats', array(
+		'as' => 'get-subcats',
+		'uses' => 'AjaxController@postSubcat'
+	));
+
+
 Route::post('/empresa/add/pregunta', array(
 		'as' => 'add-pregunta',
 		'uses' => 'AjaxController@addPregunta'

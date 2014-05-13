@@ -36,6 +36,7 @@ class SedesController extends BaseController{
 		$producto->nombre = Input::get('product_name');
 		$producto->descripcion = Input::get('description');
 		$producto->categoria = Input::get('category');
+		$producto->subcat_id = Input::get('subcat');
 		
 		$file = Input::file('imagen');
 		

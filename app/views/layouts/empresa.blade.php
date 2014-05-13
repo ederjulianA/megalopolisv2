@@ -564,6 +564,9 @@
 
 	<!-- generales -->
 	{{ HTML::script('js/generales.js')}}
+
+	<!-- barrios -->
+	{{ HTML::script('js/barrios.js')}}
 	
 	@yield('scripts')
 

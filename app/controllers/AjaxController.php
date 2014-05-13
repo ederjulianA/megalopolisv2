@@ -36,6 +36,35 @@ Class AjaxController  extends BaseController {
 
 	}
 
+	public function postSubcat(){
+
+
+		header('Content-type: text/javascript');
+		
+
+		if(isset($_POST['cat_id']))
+		{
+
+			$cat_id = $_POST['cat_id'];
+			
+			$subcat = Subcategoria::where('categoria_id','=',$cat_id)->orderBy('nombre_sub','ASC')->get();
+
+			if($subcat->count())
+			{
+				return Response::json($subcat);
+			}
+			else{
+				$json = array('estado'=>0);
+				return Response::json($json);
+			}
+			
+		
+		}
+
+		
+
+	}
+
 	public function addPregunta()
 	{
 		header('Content-type: text/javascript');
@@ -51,7 +80,8 @@ Class AjaxController  extends BaseController {
 
 			if($preg->save())
 			{
-				return Response::json($preg);
+				return Response::json($preg,1);
+				//return Response::json(data, status, headers)
 			}
 
 		}

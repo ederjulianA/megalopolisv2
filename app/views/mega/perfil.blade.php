@@ -53,7 +53,7 @@
 						<li>
 						<a href="#preguntas" data-toggle="tab">
 							<span class="block text-center">
-								<i class="fa fa-gift fa-2x"></i> 
+								<i class="fa fa-flag fa-2x"></i> 
 							</span>
 							Preguntas
 						</a>
@@ -434,6 +434,7 @@
 															<option value = "{{$sede_item->id}}">{{$sede_item->nombre_publico}}</option>
 														@endforeach
 													</select>
+													
 												</div><!-- /.col -->
 												<div class="col-md-6">													
 												</div><!-- /.col -->
@@ -448,13 +449,21 @@
 											
 											<div class="form-group">
 												<label class="control-label col-md-2">Categoría del producto:</label>
-													<div class="col-md-4">
+													<div class="col-md-4 selects-categoria">
 													<select name = 'category' id = 'category' class="form-control">
 														<option>Seleccionar categoría:</option>
 														@foreach($categorias as $categoria)
 															<option value = "{{$categoria->id}}">{{$categoria->nombre}}</option>
 														@endforeach
 													</select>
+													<select name="subcat" id="subcat">
+														<option value="0">Escoge una </option>
+														
+													</select>
+
+													<div class="mensaje-ajax-categorias">
+														
+													</div>
 												</div><!-- /.col -->
 												<div class="col-md-6">													
 												</div><!-- /.col -->
