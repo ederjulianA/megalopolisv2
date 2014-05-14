@@ -503,6 +503,15 @@
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
+												<div class="form-group">
+														
+														<label class="col-lg-2 control-label">Tags</label>
+														<div class="col-lg-10">
+															<input type="text" class="tag-demo1" name="tags" value="">
+															
+														</div><!-- /.col -->
+												</div><!-- /form-group -->
+
 											<div class="text-right">
 												<button class="btn btn-info quick-btn btn-sombra" type="submit">
 												<i class="fa fa-plus-circle"></i>	Crear</button>

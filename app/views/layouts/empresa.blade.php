@@ -280,6 +280,8 @@
 	{{ HTML::style('css/endless-skin.css', array('media' => 'screen'))}}
 	{{ HTML::style('css/endless-landing.min.css', array('media' => 'screen'))}}
 
+	{{ HTML::style('css/jquery.tagsinput.css', array('media' => 'screen'))}}
+
 	
 </head>
 <body onload="return initialize();" onunload="return GUnload();" class="overflow-hidden">
@@ -520,6 +522,34 @@
 	<!-- Jquery -->
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 
+	<!-- Bootstrap -->
+	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
+
+
+		<!-- chosen -->
+	{{ HTML::script('js/chosen.jquery.min.js')}}
+
+
+	<!-- Mask-input -->
+	{{ HTML::script('js/jquery.maskedinput.min.js')}}
+
+	<!-- Datepicker -->
+	{{ HTML::script('js/bootstrap-datepicker.min.js')}}
+
+		<!-- Timepicker -->
+	{{ HTML::script('js/bootstrap-timepicker.min.js')}}
+
+	<!-- TagsInputs -->
+	{{ HTML::script('js/jquery.tagsinput.min.js')}}
+
+	<!-- WYSIHTML5 -->
+	{{ HTML::script('js/wysihtml5-0.3.0.min.js')}}
+	{{ HTML::script('js/uncompressed/bootstrap-wysihtml5.js')}}
+
+
+	<!-- Modernizr -->
+	{{ HTML::script('js/modernizr.min.js')}}
+
 	<!-- CARRUSEL -->
 	{{ HTML::script('js/carousel.js')}}
 	
@@ -528,20 +558,26 @@
 	{{ HTML::script('js/jquery-ui.min.js')}}
 	
 	
-	<!-- Bootstrap -->
-	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
+	
+
+
+
+
+		
+
     
     
 	<!-- Full Calender -->
 	{{ HTML::script('js/fullcalendar.min.js')}}
 	
 	
-	<!-- Modernizr -->
-	{{ HTML::script('js/modernizr.min.js')}}
+	
 	
 	
 	<!-- Pace -->
 	{{ HTML::script('js/pace.min.js')}}
+
+
 	
 	
 	<!-- Popup Overlay -->
@@ -557,10 +593,17 @@
 	
 
 	<!-- Endless -->
+	{{ HTML::script('js/endless/endless_form.js')}}
 	{{ HTML::script('js/endless/endless.js')}}
 
 	<!-- Promos -->
 	{{ HTML::script('js/promos.js')}}
+
+	
+
+	
+
+
 
 	<!-- generales -->
 	{{ HTML::script('js/generales.js')}}
