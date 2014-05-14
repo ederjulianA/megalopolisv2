@@ -257,7 +257,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Nombre Publico</label>												
 												<div class="col-md-10">
-													<input type="text" class="form-control input-sm" name="nombre_publico" placeholder="empresa" value="{{$user->empresa->nombre_publico}}">
+													<input type="text" class="form-control input-sm" readonly="readonly" name="nombre_publico" placeholder="empresa" value="{{$user->empresa->nombre_publico}}">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
@@ -588,7 +588,7 @@
 											@if($num_nulls == 0)
 												{{HTML::image('img/mega-imgs/no-preguntas.jpg', 'preguntas', array('width'=>'250px', 'height'=>'90px'))}}
 											@else	
-												{{HTML::image('img/mega-imgs/abajo.jpg', 'preguntas', array('width'=>'250px', 'height'=>'90px'))}}
+												
 											@endif
 											@foreach($preguntas_null as $preg_null)
 											<div class="pregunta-responder">
