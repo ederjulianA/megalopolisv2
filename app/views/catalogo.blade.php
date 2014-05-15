@@ -45,6 +45,12 @@
 								<div class="seperator"></div>
 							</div><!-- /.col -->
 						</div><!-- /.row -->
+						<div>
+							<h1>
+								Encuéntranos en:
+							</h1>
+						</div>
+						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
 						<div class="panel m-top-md">
 							<div class="panel-body">
 								<div class="row">

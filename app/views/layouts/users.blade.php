@@ -6,6 +6,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
+      type="text/javascript"></script>
+	<script type="text/javascript">
+		function initialize(latitude, longitude) {
+		
+		  if (GBrowserIsCompatible()) {
+			map = new GMap2(document.getElementById("map_canvas"));
+			map.setCenter(new GLatLng(latitude, longitude), 15);
+			var marker = new GMarker(new GLatLng(latitude, longitude), {draggable: true});
+			map.addOverlay(marker);
+			map.setUIToDefault();
+			geocoder = new GClientGeocoder();
+		  }
+		  
+		  // showAddress();
+		  
+		  return false;
+		}
+    </script>
+	
+	
     <!-- Bootstrap core CSS -->
     {{ HTML::style('bootstrap/css/bootstrap.min.css', array('media' => 'screen'))}}
 
@@ -33,7 +54,7 @@
 
 	
 </head>
-<body class="overflow-hidden">
+<body class="overflow-hidden" onload="return initialize({{$sede->latitude}}, {{$sede->longitude}});">
 	<!-- Overlay Div -->
 	<div id="overlay" class="transparent"></div>
 
