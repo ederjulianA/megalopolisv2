@@ -20,6 +20,13 @@ class PromocionesController extends BaseController {
 				$promo->sede_id = Input::get('sede_id');
 				$promo->categoria_id = Input::get('categoria');
 				$promo->titulo = Input::get('titulo');
+				$promo->sin_descuento = Input::get('sin_descuento');
+				$promo->con_descuento = Input::get('con_descuento');
+
+				$valor_descuento =($promo->sin_descuento - $promo->con_descuento);
+				$porcentaje_descuento = round(($valor_descuento * 100)/ $promo->sin_descuento);
+				$promo->porcentaje = $porcentaje_descuento;
+
 				$promo->titulo_seo  =Input::get('titulo-seo');
 				$promo->descripcion_corta = Input::get('desc_corta');
 				$promo->descripcion_larga =Input::get('desc_larga');

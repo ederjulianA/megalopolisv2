@@ -59,12 +59,31 @@
                       </div>
 
                       <div class="actualizar-sede">
+                        <label for="titulo"> Precio Sin descuento</label>
+                        <input type="text" name="sin_descuento" required placeholder="$99999">
+                        <label>Por favor ingrese los valores sin , ni .</label>
+                          
+                      </div>
+
+
+                      <div class="actualizar-sede">
+                        <label for="titulo"> Precio con descuento</label>
+                        <input type="text" name="con_descuento" required placeholder="$99999">
+
+                        <label>Por favor ingrese los valores sin , ni .</label>
+                          
+                      </div>
+
+                      <div class="actualizar-sede">
                         <label for="titulo"> Descrip. Corta</label>
                         <textarea name="desc_corta"></textarea>
                           
                         
                           
                       </div>
+
+
+
 
                       <div class="actualizar-sede">
                         <label for="titulo"> Descrip. Larga</label>

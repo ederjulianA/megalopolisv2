@@ -110,11 +110,19 @@
 												<div class="col-sm-5">
 													<!--<img src="img/gallery6.jpg" alt="Third Slide" class="m-bottom-md" style="height:150px;">-->
 													{{ HTML::image($promo->img, $promo->titulo, array('height'=>'150px'))}}
+														<div class="ribbon-wrapper">
+																<div class="ribbon-inner shadow-pulse bg-danger">
+																	- {{$promo->porcentaje}}%
+																</div>
+														</div>
 												</div>
 												<div class="col-sm-5">
 													<strong>{{$promo->titulo}}</strong>
 													<p class="m-top-sm">
-														{{$promo->descripcion_corta}}
+														<strike class="precio-antes">${{$promo->sin_descuento}}</strike>
+														<p>
+															Ahora :<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
+														</p>
 													</p>
 												</div><!-- /.col -->	
 											</div><!-- /.row -->
