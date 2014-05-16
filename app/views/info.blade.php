@@ -101,13 +101,13 @@
 									<div class="panel panel-default">
 										<div class="panel-heading">
 											<h4 class="panel-title">
-												<a class="  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" href="#{{$pregunta->id}}">
-													{{$pregunta->pregunta}} ???
+												<a class="  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" style="font-size:20px;" href="#{{$pregunta->id}}">
+													{{$pregunta->pregunta}} ??? <i class="fa fa-chevron-down btn btn-success boton-abajo-pregunta"></i>
 												</a>
 											</h4>
 										</div>
 										<div id="{{$pregunta->id}}" class="panel-collapse collapse" style="height: 0px;">
-											<div class="panel-body">
+											<div class="panel-body" style="font-style: oblique;">
 												{{$pregunta->respuesta}}
 											</div>
 										</div>

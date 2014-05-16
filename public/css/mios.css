@@ -1,5 +1,6 @@
 *{
-	font-family: Georgia, Verdana, Arial;
+
+	font-family: 'Open Sans', sans-serif, Georgia, Verdana, Arial;
 }
 h1.megalopolis_titulo{
 	text-align: center;
@@ -76,6 +77,12 @@ ul.menu-sedes li {
 .active-menu a:hover {
 	color: #fff;
 }
+
+.boton-abajo-pregunta{
+	position: absolute;
+	right: 3px;
+	top: 7px;
+}
 .catalogo-header {
 	margin: 5% auto;
 	width: 100%;
@@ -83,7 +90,7 @@ ul.menu-sedes li {
 .catalogo-header h2 {
 	/*color: #444141;*/
 	font-size: 40px;
-	font-family: 'Oswald', sans-serif;
+	/*font-family: 'Oswald', sans-serif;*/
 	font-weight: bold;
 	letter-spacing:3px; 
 
@@ -303,6 +310,7 @@ ul.menu-sedes li {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
+
 }
 .mensaje-favoritos-ajax{
 	font-size: 25px;

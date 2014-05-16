@@ -255,6 +255,7 @@
 		  return false;
 		}
     </script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	
     <!-- Bootstrap core CSS -->
     {{ HTML::style('bootstrap/css/bootstrap.min.css', array('media' => 'screen'))}}
@@ -328,7 +329,7 @@
 														<span class="notification-icon bg-warning">
 															<i class="fa fa-warning"></i>
 														</span>	
-														<span class="m-left-xs">{{$pregunta->pregunta}}.</span><br>
+														<div><span class="m-left-xs">{{ substr($pregunta->pregunta,0,40)  }}...</span><br></div>
 													</a>
 												</li>	
 

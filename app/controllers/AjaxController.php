@@ -80,7 +80,7 @@ Class AjaxController  extends BaseController {
 
 			if($preg->save())
 			{
-				return Response::json($preg,1);
+				return Response::json($preg);
 				//return Response::json(data, status, headers)
 			}
 

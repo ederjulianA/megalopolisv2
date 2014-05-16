@@ -38,13 +38,13 @@ $(document).on("click","#btn-hacer-pregunta", function(e){
 					nuevaPregunta += '<div class="panel panel-default">';
 						nuevaPregunta += '<div class="panel-heading">';
 							nuevaPregunta += '<h4 class="panel-title">';
-								nuevaPregunta += '<a class="btn btn-info  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" href="#'+data.id+'">'+data.pregunta+'</a>';
+								nuevaPregunta += '<a class="  accordion-toggle collapsed " style="font-size:20px;" data-toggle="collapse" data-parent="#accordion" href="#'+data.id+'">'+data.pregunta+'??? <i class="fa fa-chevron-down btn btn-success"></i> </a>';
 							nuevaPregunta += '</h4>';
 						nuevaPregunta += '<div>';
 
 
 						nuevaPregunta += '<div id="'+data.id+'" class="panel-collapse collapse" style="height: 0px;">';
-								nuevaPregunta += '<div class="panel-body">Te notificaremos cuando tu pregunta sea respondida</div>';
+								nuevaPregunta += '<div class="panel-body" style="font-style: oblique;">Te notificaremos cuando tu pregunta sea respondida</div>';
 
 						nuevaPregunta += '</div>';
 					nuevaPregunta += '</div>';
@@ -52,6 +52,8 @@ $(document).on("click","#btn-hacer-pregunta", function(e){
 					$('.contenedor-preguntas').append(nuevaPregunta);
 					$('#pregunta-user').val("");
 					$('.mensaje-ajax').html('<span class="alert alert-danger">Has realizado tu pregunta con exito</span>');
+					$('.mensaje-ajax').fadeIn(2500);
+					$('.mensaje-ajax').fadeOut(2500);
 
 
 					console.log(data);
@@ -278,7 +280,8 @@ $('#contador-res').html(cambio);
 });
 	//FUNCION PARA TRAER LA LISTA DE EMPRESAS DE ACUERDO AL SECTOR QUE FILTRE EL USUARIO###########################################
 
-	$("a.cat-lista").click( function(e){
+	//$("a.cat-lista").click( function(e){
+		$(document).on("click","a.cat-lista", function(e){
 			var cat = $(this).attr('href');
 			$('.empresas-container').empty();
 			$('#sel-ciudades').val(0);
@@ -313,9 +316,9 @@ $('#contador-res').html(cambio);
 		
 
 
-		});		
-		
-		e.preventDefault();
+				});		
+				
+				e.preventDefault();
 	});
 //FUNCION QUE RETORNA LA LISTA DE EMPRESAS SEGUN LA CIUDAD QUE EL USUARIO SELECCIONES 
 
