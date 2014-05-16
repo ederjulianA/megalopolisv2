@@ -583,3 +583,13 @@ ul.menu-sedes li {
 	
 	
 }
+
+.My-Tag {
+
+	border: 1px solid #a5d24a;
+	padding: 5px;
+	margin: 0px 1px;
+	text-decoration: none;
+	background: #cde69c;
+	color: #638421;
+}

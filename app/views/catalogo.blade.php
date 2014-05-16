@@ -227,9 +227,9 @@
 											</h1>
 											<p class = 'My-Textblock'>
 												@foreach($producto->tags as $key => $tag)
-													<a href = '#' class = 'tag'>
+													<span class = 'My-Tag'>
 														{{$tag->etiqueta}}
-													</a>
+													</span>
 												@endforeach
 											</p>
 											<p>
