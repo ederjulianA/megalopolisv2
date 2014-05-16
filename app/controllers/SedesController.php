@@ -37,7 +37,6 @@ class SedesController extends BaseController{
 		$producto->descripcion = Input::get('description');
 		$producto->categoria = Input::get('category');
 		$producto->subcat_id = Input::get('subcat');
-		
 		$file = Input::file('imagen');
 		
 		$codigoIMG = str_random(13);
@@ -47,6 +46,20 @@ class SedesController extends BaseController{
 		$producto->imagen = 'img/products/'.$filename;
 		
 		$producto->save();
+		
+		$tags = Input::get('tags');
+		
+		$tags = explode(',', $tags);
+		
+		foreach($tags as $key => $value) {
+			
+			$tag = new Tag();
+			$tag->producto = $producto->id;
+			$tag->etiqueta = $value;
+			if($tag->save()) {
+			
+			}
+		}
 		
 		$almacen = new Almacen();
 		$almacen->producto = $producto->id;

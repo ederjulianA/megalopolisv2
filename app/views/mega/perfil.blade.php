@@ -502,13 +502,11 @@
 													<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
-
 												<div class="form-group">
 														
 														<label class="col-lg-2 control-label">Tags</label>
 														<div class="col-lg-10">
-															<input type="text" class="tag-demo1" name="tags" value="">
-															
+															<input id = 'tags' type="text" class="tag-demo1" name="tags" value="">
 														</div><!-- /.col -->
 												</div><!-- /form-group -->
 
