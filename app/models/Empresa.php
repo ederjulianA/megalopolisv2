@@ -27,6 +27,11 @@ class Empresa extends Eloquent {
         return $this->belongsTo('User');
     }
 
+    public function userSub()
+    {
+    	return $this->belongsToMany('User','user_subs');
+    }
+
     public function sector(){
 		return $this->belongsTo('Sector','sector_id');
 	}

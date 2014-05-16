@@ -195,6 +195,11 @@ Route::get('/favoritos', array(
 		'uses'=> 'UsersController@favoritosUser'
 	));
 
+Route::get('/suscripciones', array(
+		'as' => 'suscripciones',
+		'uses'=> 'UsersController@suscripcionesUser'
+	));
+
 Route::get('/empresa/nueva', array(
 		'as' => 'nueva-empresa',
 		'uses' => 'EmpresasController@getNuevaEmpresa'

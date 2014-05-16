@@ -13,6 +13,31 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+
+	public function suscripcionesUser()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+			$user_id = Auth::user()->id;
+
+			$subs = DB::table('user_subs')
+			->join('users','users.id','=','user_subs.user')
+			->join('empresas','empresas.id','=','user_subs.empresa')
+			->select('users.username',
+					'empresas.nombre_publico',
+					'empresas.desc_breve',
+					'empresas.desc_larga',
+					'empresas.logo'
+				)
+			->where('user','=', $user_id)->get();
+
+			return View::make('mega.suscripcion')->with('subs', $subs);
+
+		}
+	}
+
 	public function favoritosUser()
 	{
 		if(!Auth::check() || Auth::user()->tipo != 1)

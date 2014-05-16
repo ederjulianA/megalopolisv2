@@ -145,7 +145,7 @@
 								
 								@if(Auth::user()->tipo == 1)
 									<li><a tabindex="-1" href="/favoritos" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
-									<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
+									<li><a tabindex="-1" href="/suscripciones" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
 
 								
 

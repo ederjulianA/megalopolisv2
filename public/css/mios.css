@@ -103,6 +103,24 @@ ul.menu-sedes li {
 	
 	width: 90%;
 }
+.contenedor-empresas {
+	margin: 0 auto;
+	padding: 2px;
+	width: 95%;
+}
+
+.contenedor-empresas div.search-container {
+	border : 1px solid #f90;
+	display: inline-block;
+	height: 300px;
+	vertical-align: top;
+	width: 370px;
+}
+
+.contenedor-empresas div.search-container div.contenedor-subs{
+	height: 100%;
+}
+
 .contenedor-perfil h2 {
 	font-size: 30px;
 	font-weight: bold;
