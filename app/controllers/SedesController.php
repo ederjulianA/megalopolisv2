@@ -23,6 +23,12 @@ class SedesController extends BaseController{
 													'categorias.nombre AS categoria_nombre',
 													'almacen.cantidad')->get();
 			$num_productos = $productos->count();
+			
+			foreach($productos as $key => $producto) {
+			
+				$tags = Tag::where('producto','=',$producto->id)->get();
+				$producto->tags = $tags;
+			}
 
 			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
 		}else{

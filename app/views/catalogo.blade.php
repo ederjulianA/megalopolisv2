@@ -222,6 +222,16 @@
 											<p class = 'My-Textblock'>
 												{{$producto->producto_descripcion}}
 											</p>
+											<h1 class = 'My-Title'>
+												Etiquetas
+											</h1>
+											<p class = 'My-Textblock'>
+												@foreach($producto->tags as $key => $tag)
+													<a href = '#' class = 'tag'>
+														{{$tag->etiqueta}}
+													</a>
+												@endforeach
+											</p>
 											<p>
 											<!--<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a>-->
 											@if(Auth::check() && Auth::user()->tipo == 1)
