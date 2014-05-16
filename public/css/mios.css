@@ -313,10 +313,16 @@ ul.menu-sedes li {
 	z-index: 999;
 }
  .precio-antes {
+ 	color: #ccc;
  	font-size: 18px;
  }
  .precio-descuento{
  	font-size: 22px;
+ 	color: #f90;
+ }
+
+ .porcentaje-producto{
+ 	font-size: 20px;
  	font-weight: bold;
  }
 

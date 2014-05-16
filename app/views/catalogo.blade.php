@@ -112,16 +112,17 @@
 													{{ HTML::image($promo->img, $promo->titulo, array('height'=>'150px'))}}
 														<div class="ribbon-wrapper">
 																<div class="ribbon-inner shadow-pulse bg-danger">
-																	- {{$promo->porcentaje}}%
+																	<span class="porcentaje-producto">- {{$promo->porcentaje}}%</span>
 																</div>
 														</div>
 												</div>
 												<div class="col-sm-5">
 													<strong>{{$promo->titulo}}</strong>
 													<p class="m-top-sm">
+														Precio:
 														<strike class="precio-antes">${{$promo->sin_descuento}}</strike>
 														<p>
-															Ahora :<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
+															<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
 														</p>
 													</p>
 												</div><!-- /.col -->	
