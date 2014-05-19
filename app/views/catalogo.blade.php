@@ -45,19 +45,9 @@
 								<div class="seperator"></div>
 							</div><!-- /.col -->
 						</div><!-- /.row -->
-						
-							
-							
-						<div>
-							<h1>
-								Encuéntranos en:
-							</h1>
-						</div>
-						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
-						<script type = 'text/javascript'>
-							initialize({{$sede->latitude}}, {{$sede->longitude}});
-						</script>
-						<div class="panel m-top-md">
+
+
+							<div class="panel m-top-md">
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-xs-4 text-center">
@@ -73,10 +63,11 @@
 							</div>
 						</div><!-- /panel -->
 
-						
-					<!--  SLIDER DE IMAGENES UTILIZANDO JAVASCRIPT Y BOOTSTRAP-->
 
-						<div class="panel panel-default">
+
+										<!--  SLIDER DE IMAGENES UTILIZANDO JAVASCRIPT Y BOOTSTRAP-->
+
+				<div class="panel panel-default">
 							<div class="panel-heading">
 								Promociones 
 
@@ -140,7 +131,23 @@
 									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="next">Siguiente</a>
 								</div>
 							</div>
-						</div><!-- /panel -->
+				</div><!-- /panel -->
+						
+							
+							
+						<div>
+							<h1>
+								Encuéntranos en:
+							</h1>
+						</div>
+						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
+						<script type = 'text/javascript'>
+							initialize({{$sede->latitude}}, {{$sede->longitude}});
+						</script>
+					
+
+						
+				
 					</div><!-- /.col -->
 
 				<!--  FIN SECCION DATOS DE EMPRESA MAS PROMOS##################################################  -->	

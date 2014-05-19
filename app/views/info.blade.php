@@ -11,11 +11,12 @@
 					<div class="col-md-11">	
 						<div class="row">	
 							<div class="col-md-6">
-								<h2>Información de Contacto</h2>
+								<h2 style="font-weight: bold;">{{$empresa->razon_social}}</h2>
+								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
 								<address>
-								  <strong>{{$empresa->razon_social}}</strong><br>
+								  
 									{{$empresa->direccion_principal}}<br>
-									{{$empresa->ciudad->ciudad}}<br>
+									
 									<div class="seperator"></div>
 									<strong>Telefono : <span class="theme-font">{{$empresa->telefono}}</span></strong><br>
 									<strong>Email : <span class="theme-font">{{$empresa->user->email}}</span></strong><br>
@@ -26,7 +27,7 @@
 									@if($sedes->count())
 										@foreach($sedes as $sede)
 
-										<span>{{$sede->nombre_publico}}</span>--<a href="/catalogo/{{$sede->nombre_publico}}" class="label label-warning">Ver catalogo</a><br>
+										<span>{{$sede->nombre_publico}}</span>--<a href="/catalogo/{{$sede->nombre_publico}}" class="label label-warning links-catalogos">Ver catalogo</a><br><hr>
 
 										@endforeach
 
@@ -39,11 +40,11 @@
 									
 								</div>
 								<hr>
-								<h2>{{$empresa->razon_social}}</h2>
-								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
+								<h2></h2>
+								
 								<hr>
 								<div class="col-md">
-									<h4>Descripcion  de la empresa</h4>
+									
 									<p>
 										@if($empresa->desc_larga == "")
 												{{$empresa->desc_breve}}
@@ -55,9 +56,10 @@
 								</div>
 							</div><!-- /.col -->
 							<div class="col-md-6">
-									<div id="map_canvas" class="map"></div>
+									
+									
 									<hr>
-									<h2>Preguntas Frecuentes</h2> @if(Auth::check())<a href="#" class="btn btn-warning btn-sombra "data-toggle="modal" data-target="#pregunta" >Preguntar</a>
+									<h2 style="font-weight: bold; text-align:center; margin: 20px auto;">Preguntas Frecuentes</h2> @if(Auth::check())<a href="#" class="btn btn-warning btn-sombra "data-toggle="modal" data-target="#pregunta" >Preguntar</a>
 			<div class="modal fade" id="pregunta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -98,22 +100,22 @@
 
 										
 
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="panel-title">
-												<a class="  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" style="font-size:20px;" href="#{{$pregunta->id}}">
-													{{$pregunta->pregunta}} ??? <i class="fa fa-chevron-down btn btn-success boton-abajo-pregunta"></i>
-												</a>
-											</h4>
-										</div>
-										<div id="{{$pregunta->id}}" class="panel-collapse collapse" style="height: 0px;">
-											<div class="panel-body" style="font-style: oblique;">
-												{{$pregunta->respuesta}}
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" style="font-size:20px;" href="#{{$pregunta->id}}">
+															{{$pregunta->pregunta}} ??? <i class="fa fa-chevron-down btn btn-success boton-abajo-pregunta"></i>
+														</a>
+													</h4>
+												</div>
+												<div id="{{$pregunta->id}}" class="panel-collapse collapse" style="height: 0px;">
+													<div class="panel-body" style="font-style: oblique;">
+														{{$pregunta->respuesta}}
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
 
-									@endforeach
+											@endforeach
 										
 									</div>
 									

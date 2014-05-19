@@ -16,7 +16,7 @@
 
 
              <!-- Modal  PARA CREAR NUEVA PROMOCION#########################################################################-->
-            <div class="modal fade" id="nueva-promo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="nueva-promo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">

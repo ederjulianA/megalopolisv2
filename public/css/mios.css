@@ -35,6 +35,11 @@ img.img-info-empresa {
 	border-radius: 5px;
 
 	box-shadow: 2px 2px 4px rgba(0,0,0, .5);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 200px;
+	height: 110px;
 }
 
 textarea {
@@ -230,6 +235,11 @@ ul.menu-sedes li {
 .link-publico{
 	width: 100%;
 	
+}
+
+.links-catalogos {
+	font-weight: bold;
+	margin: 10px 7px !important;
 }
 .lista-sedes-info h2 {
 	background-color: #33E6F2;
