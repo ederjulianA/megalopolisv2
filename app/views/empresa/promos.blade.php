@@ -12,7 +12,7 @@ Promos
 		<div class="row">
 
 			<div class="col-md-4" style="height:100%;">
-				{{HTML::image($promo->img, $promo->titulo, array('width'=>'100%'))}}
+				{{HTML::image($promo->img, $promo->titulo, array('width'=>'100%','height'=>'250px'))}}
 				<div class="ribbon-wrapper">
 				<div class="ribbon-inner shadow-pulse bg-danger">
 						<span class="porcentaje-producto">- {{$promo->porcentaje}}%</span>

@@ -223,6 +223,7 @@
 											<h1 class = 'My-Title'>
 												{{$producto->producto_nombre}}
 											</h1>
+											<hr>
 											<h2 class = 'My-Category-Title'>
 												{{$producto->categoria_nombre}}
 											</h2>
@@ -230,7 +231,7 @@
 												Precio: <span class = 'My-Price'>${{$producto->precio_detal}}</span>
 											</p>
 											<p class = 'My-Textblock'>
-												{{$producto->producto_descripcion}}
+												{{ substr($producto->producto_descripcion,0,70) }}...<a href="#" class="label label-danger">Detalle</a>
 											</p>
 											<h1 class = 'My-Title'>
 												Etiquetas
