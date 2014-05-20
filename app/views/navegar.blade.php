@@ -103,7 +103,18 @@
 							</div>
 
 							<div class="col-md-2" style="text-align:center;">
-								CONTENIDO DERECHA
+								<div class="promos-navegar">
+									<h2>Promos</h2>
+									<a href="/promos/{{$promocion->id}}">{{HTML::image($promocion->img, $promocion->titulo, array('width'=>'100%', 'height'=>'300px'))}}</a>
+										<div class="ribbon-wrapper">
+												<div class="ribbon-inner shadow-pulse bg-danger">
+														<span class="porcentaje-producto">- {{$promocion->porcentaje}}%</span>
+												</div>
+										</div>
+												<p><a href="/promos/{{$promocion->id}}" class="link-promo"> {{$promocion->titulo}} </a></p>
+												<p class="precio-promo-navegar">$ {{$promocion->con_descuento}}</p>
+									
+								</div>
 								
 							</div>
 				</div>
