@@ -114,6 +114,9 @@
 														<strike class="precio-antes">${{$promo->sin_descuento}}</strike>
 														<p>
 															<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
+															<p>
+																<a href="/promos/{{$promo->id}}">Detalles</a>
+															</p>
 														</p>
 													</p>
 												</div><!-- /.col -->	
@@ -232,6 +235,7 @@
 											<h1 class = 'My-Title'>
 												Etiquetas
 											</h1>
+											
 											<p class = 'My-Textblock'>
 												@foreach($producto->tags as $key => $tag)
 													<a href = '#' class = 'My-Tag'>

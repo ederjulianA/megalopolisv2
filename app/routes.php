@@ -30,6 +30,14 @@ Route::get('/nueva-sede', array(
 		'uses' => 'EmpresasController@getNuevaSede'
 	));
 
+
+
+/* RUTA PROMOSIONES  */
+Route::get('/promos/{id}', array(
+		'as' => 'promos',
+		'uses' => 'PromocionesController@getPromos'
+	));
+
 /* PROCESAR NUEVA SEDE*/
 
 Route::post('/nueva-sede', array(

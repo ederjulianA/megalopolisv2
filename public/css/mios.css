@@ -172,6 +172,38 @@ ul.menu-sedes li {
 	width: 90%;
 
 }
+.img-promo {
+	background-image: url(../img/mega-imgs/promo.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 10px;
+	bottom: 0;
+	width: 150px;
+	height: 150px;
+
+}
+.des-promos p {
+	display: block;
+}
+.des-promos .des-corta{
+	font-family: 'Open Sans';
+	font-size: 20px;
+
+	padding: 10px;
+	margin: 10px auto;
+	width: 100%;
+}
+
+.des-promos .des-larga{
+	font-family: 'Open Sans';
+	font-size: 30px;
+
+	padding: 10px;
+	margin: 10px auto;
+	width: 100%;
+
+}
 
 .div-password-user div label {
 	width: 30%;
@@ -238,8 +270,13 @@ ul.menu-sedes li {
 }
 
 .links-catalogos {
+
+	font-size: 18px;
 	font-weight: bold;
-	margin: 10px 7px !important;
+	position: absolute;
+	margin: 12px 7px !important;
+	right: 10px;
+
 }
 .lista-sedes-info h2 {
 	background-color: #33E6F2;
@@ -352,14 +389,52 @@ ul.menu-sedes li {
  	color: #ccc;
  	font-size: 18px;
  }
+ .precio-antes-p{
+ 	font-size: 30px;
+ 	margin: 10px auto;
+ 	width: 200px;
+ }
+
+ .precio-despues-p{
+ 	font-size: 45px;
+ 	margin: 10px auto;
+ 	width: 150px;
+
+ }
  .precio-descuento{
  	font-size: 22px;
  	color: #f90;
+ }
+ .promo-desc-porcentaje{
+
+ 	background-color: #f90;
+ 	border: 1px solid red;
+ 	border-radius: 50%;
+ 	color: #fff;
+ 	font-size: 25px;
+ 	font-weight: bold;
+ 	padding: 10px;
+ 	position: absolute;
+ 	right: 0;
+ 	top: 2px;
  }
 
  .porcentaje-producto{
  	font-size: 20px;
  	font-weight: bold;
+ }
+ .promo-container{
+ 	box-shadow: 2px 2px 2px rgba(0,0,0, .5);
+ 	background-color: #FFF;
+ 	margin: 10% auto;
+ 	padding: 10px;
+ 	width: 70%;
+ }
+ .promo-container h2 {
+ 	font-size: 50px;
+ 	font-weight: bold;
+ 	max-width: 100%;
+ 	text-align: center;
  }
 
 

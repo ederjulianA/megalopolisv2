@@ -50,4 +50,13 @@ class PromocionesController extends BaseController {
 				return Redirect::to('/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Error al crear la nueva promo');
 			}
 	}
+
+	public function getPromos($id){
+		$promo = Promociones::find($id);
+
+		if($promo->count()){
+			return View::make('empresa.promos')->with('promo',$promo);
+		}
+
+	}
 }

@@ -7,7 +7,7 @@
 			
 				<div class="row">
 					
-							<div class="col-md-3" style="text-align:center;">
+							<div class="col-md-2" style="text-align:center;">
 								<select name="ciudad" id="sel-ciudades" class="select-ciudad">
 									<option value="0">- CIUDAD -</option>
 									@foreach($ciudades as $ciudad)
@@ -16,11 +16,11 @@
 									
 								</select>
 
-								<select name="barrio" id="sel-barrio" class="select-barrio">
+								<!--<select name="barrio" id="sel-barrio" class="select-barrio">
 									<option value="0">- barrio -</option>
 									
 									
-								</select>
+								</select>-->
 
 								<div class="menu-categorias">
 									<h2>Sectores</h2>
@@ -36,7 +36,7 @@
 								</div>
 							</div>
 
-							<div class="col-md-7" style="text-align:center;">
+							<div class="col-md-8" style="text-align:center;">
 
 								<div class="navegar-centro">
 										<form method="post" action="#" >
@@ -70,7 +70,7 @@
 														<div class="detail fadeInUp animated-element empresa">
 														<a href="/empresa/{{$empresa->nombre_publico}}" class="hoverBorder">
 															<span class="hoverBorderWrapper">
-																{{HTML::image($empresa->sector->img, $empresa->razon_social, array('width'=>'170px','height'=> '90px'))}}
+																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'170px','height'=> '90px'))}}
 																<span class="hoverBorderInner"></span>
 																<span class="readMore">{{$empresa->sector->nom_sector}}</span>
 															</span>	
