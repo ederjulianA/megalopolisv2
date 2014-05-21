@@ -85,7 +85,7 @@
 															@if(Auth::check())
 															
 
-															<a href="{{$empresa->id}}" class="addFav  btn btn-warning">fav <i class="fa  fa-heart"></i> </a>
+															<!--<a href="{{$empresa->id}}" class="addFav  btn btn-warning">fav <i class="fa  fa-heart"></i> </a>-->
 															@endif
 														</p>
 											</div><!--detail-->

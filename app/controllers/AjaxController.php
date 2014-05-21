@@ -110,6 +110,47 @@ Class AjaxController  extends BaseController {
 	}
 
 
+	public function remSus()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['id_empresa'])){
+
+			$user_id = Auth::user()->id;
+			$empresa_id = $_POST['id_empresa'];
+
+			$sus = Suscripcion::where('user','=', $user_id)->where('empresa','=', $empresa_id)->first();
+
+			if($sus->count()){
+				$sus->delete();
+				$json = array('estado'=>1, 'mensaje'=>'producto eliminado');
+			}else{
+				$json = array('estado'=>0, 'mensaje'=>'error al borrar');
+			}
+			return Response::json($json);
+		}
+	}
+
+	public function addSus()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['id_empresa'])){
+			$user_id = Auth::user()->id;
+			$suscripcion = new Suscripcion;
+			$suscripcion->user = $user_id;
+			$suscripcion->empresa = $_POST['id_empresa'];
+
+			if($suscripcion->save()){
+				$json = array('estado'=>1, 'mensaje'=>'Suscripcion Exitosa');
+				return Response::json($json);
+			}else{
+				$json = array('estado'=>0, 'mensaje'=>'Error al suscribir');
+				return Response::json($json);
+
+			}
+		}
+	}
+
+
 	public function addFav()
 	{
 

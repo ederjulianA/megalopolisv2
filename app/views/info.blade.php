@@ -5,12 +5,14 @@
 @stop
 
 @section('content')
+	<div class="mensaje-ajax-suscripcion"></div>
 	<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
 					<div class="col-md-11">	
 						<div class="row">	
 							<div class="col-md-6">
+								@if(Auth::user()) {{ Favs::mostrarSus(Auth::user()->id, $empresa->id)}}  @endif
 								<h2 style="font-weight: bold;">{{$empresa->razon_social}}</h2>
 								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
 								<address>

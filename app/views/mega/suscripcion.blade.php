@@ -35,12 +35,40 @@ Mis suscripciones
 										</div>
 
 										<div class="">
-												<a href="#" >Ir al catalogo</a> |
-												<a href="#" >Enviar Mensaje</a> |
+												<a href="/empresa/{{$sub->nombre_publico}}" >{{$sub->nombre_publico}}</a> |
+												<a href="#" data-toggle="modal" data-target="#cancelarSub-{{$sub->id}}" class="label label-danger">Cancelar Suscripcion</a> |
 												
 											</div>
 									</div><!-- /panel -->
 								</div><!-- /search-container -->
+
+
+									<!-- Modal para cancelar la subscripcion -->
+<div class="modal fade" id="cancelarSub-{{$sub->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Cancelar Suscripcion a {{$sub->nombre_publico}}</h4>
+      </div>
+      <div class="modal-body">
+        	{{HTML::image($sub->logo, $sub->nombre_publico, array('width'=>'100px', 'height'=>'100px'))}} 
+        	<form method="post" action="/cancelar-suscripcion">
+        		<input type="hidden" name="empresa_id" value="{{$sub->id}}">
+        		<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+        		<input type="submit" value="Cancelar Mi suscripcion" class="btn btn-info btn-lg btn-sombra">
+        		{{ Form::token()}}
+        	</form>
+        	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL CANCELAR SUSCRIPCION-->
 				@endforeach
 							
 					
@@ -48,6 +76,9 @@ Mis suscripciones
 
 		
 	</div>
+
+
+
 
 @stop
 

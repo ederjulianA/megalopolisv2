@@ -80,6 +80,12 @@ Route::get('/catalogo/{nombre_publico}', array(
 		'uses' => 'SedesController@getCatalogo'
 	));
 
+/*FUNCION PARA CANCELAR LA SUSCRIPCION DE UN USUARIO A UNA EMPRESA*/
+Route::post('/cancelar-suscripcion', array(
+		'as' => 'cancelar-suscripcion',
+		'uses' => 'UsersController@postCancelarSuscripcion'
+	));
+
 
 /*METODO POST QUE DEVUELVE LA LISTA DE BARRIOS EN FORMATO JSON */
 Route::post('/get/barrios', array(
@@ -92,6 +98,21 @@ Route::post('/mega/subcats', array(
 		'as' => 'get-subcats',
 		'uses' => 'AjaxController@postSubcat'
 	));
+
+
+
+Route::post('/empresa/suscripcion-ajax', array(
+		'as' => 'suscripcion-ajax',
+		'uses' => 'AjaxController@addSus'
+	));
+
+//funcion ajax para cancelar la suscripcion de un usuario a una empresa
+Route::post('/empresa/cancelar-suscripcion-ajax', array(
+		'as' => 'cancelar-suscripcion-ajax',
+		'uses' => 'AjaxController@remSus'
+	));
+
+
 
 
 Route::post('/empresa/add/pregunta', array(
@@ -130,12 +151,12 @@ Route::post('/catalogo/quitar-favoritos-ajax', array(
 		'as' => 'quitar-favoritos-ajax',
 		'uses' => 'AjaxController@remFav'
 	));
-
+/* FUNCION AJAX QUE REMUEVE LOS FAVORITOS DE LA LISTA DEL USUARIO*/
 Route::post('/remo/lista/favs', array(
 		'as' => 'remo-lista-favs',
 		'uses' => 'AjaxController@remFav'
 	));
-
+/*FUNCION AJAX QUE AGREGA UN FAVORITO A LA LISTA DEL USUARIO*/
 Route::post('/catalogo/favoritos-ajax', array(
 		'as' => 'add-fav-ajax',
 		'uses' => 'AjaxController@addFav'

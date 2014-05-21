@@ -108,6 +108,81 @@ $(document).on("click", ".remFavList", function(e){
 	e.preventDefault();
 });
 
+//funcion para suscribirse a una empresa
+$(document).on("click",".remSus", function(e){
+
+	var id = $(this).attr('href');
+			$.ajax({
+
+			url : "cancelar-suscripcion-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_empresa : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+				
+				
+				$('#empresa-'+id).removeClass("btn-info remSus"); 
+				$('#empresa-'+id).addClass("btn-default addSus");	
+				$('#empresa-'+id).html("<i class='fa fa-check'></i><span>Suscribir</span>");
+				
+						
+					
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+	e.preventDefault();
+});
+
+
+
+
+//funcion para suscribirse a una empresa
+$(document).on("click",".addSus", function(e){
+
+	var id = $(this).attr('href');
+			$.ajax({
+
+			url : "suscripcion-ajax",
+			dataType: "json",
+			type : "post",
+			data : { id_empresa : $(this).attr('href')},
+			success : function(data){
+
+				if(data.estado == 1){
+				
+				
+				$('#empresa-'+id).removeClass("btn-default addSus");
+				$('#empresa-'+id).addClass("btn-info remSus");	
+				$('#empresa-'+id).html("<i class='fa fa-check'></i><span>Suscrito</span>");
+				
+						
+					
+
+					
+					
+				}
+				
+				console.log(data);
+			}
+
+
+		});
+
+	e.preventDefault();
+});
+
+
+
 
 
 $(document).on("click",".addFav", function(e){
@@ -149,7 +224,7 @@ $(document).on("click",".addFav", function(e){
 
 
 
-
+//funcion para remover un favorito de la lista
 $(document).on("click", ".remFav", function(e){
 	var id = $(this).attr('href');
 		$.ajax({

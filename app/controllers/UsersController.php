@@ -13,6 +13,15 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+	public function postCancelarSuscripcion()
+	{
+		$sus = Suscripcion::where('user','=', Input::get('user_id'))->where('empresa','=', Input::get('empresa_id'))->first();
+		if($sus->count()){
+			$sus->delete();
+			return Redirect::to('/suscripciones')->with('message-alert','Suscripcion Cancelada');
+		}
+	}
+
 
 	public function suscripcionesUser()
 	{
@@ -26,6 +35,7 @@ class UsersController extends BaseController{
 			->join('users','users.id','=','user_subs.user')
 			->join('empresas','empresas.id','=','user_subs.empresa')
 			->select('users.username',
+					'empresas.id',
 					'empresas.nombre_publico',
 					'empresas.desc_breve',
 					'empresas.desc_larga',
