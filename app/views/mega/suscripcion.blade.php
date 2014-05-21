@@ -16,7 +16,7 @@ Mis suscripciones
 
 
 				@foreach($subs as $sub)
-							<div class="search-container">
+							<div class="search-container suscripcion">
 									<div class="panel panel-default contenedor-subs">
 										<div class="panel-body">	
 											<div class="search-header">

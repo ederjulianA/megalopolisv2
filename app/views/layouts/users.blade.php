@@ -50,6 +50,13 @@
 	{{ HTML::style('css/endless-skin.css', array('media' => 'screen'))}}
 	{{ HTML::style('css/endless-landing.min.css', array('media' => 'screen'))}}
 
+
+	
+
+
+
+
+
 	
 </head>
 <body class="overflow-hidden">
@@ -195,6 +202,7 @@
     ================================================== -->
     <!-- se cargan las respectivas libreria de JS al final de la pagina para optimizar el cargado del documento -->
 	
+
 	<!-- Jquery -->
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	
@@ -243,6 +251,10 @@
 
 	<!-- Promos -->
 	{{ HTML::script('js/promos.js')}}
+
+	
+
+
 
 
 	@yield('scripts')
