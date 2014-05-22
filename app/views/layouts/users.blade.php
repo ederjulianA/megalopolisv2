@@ -78,7 +78,7 @@
 					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a href="/navegar" class="top-link">Home</a>
+								<a href="{{URL::route('navegar')}}" class="top-link">Home</a>
 							</li>
 
 							@if(Auth::check())
@@ -87,7 +87,8 @@
 								<i class="fa fa-bell fa-lg"></i>
 								<span class="notification-label bounceIn animation-delay6">7</span>
 								</a>
-									<ul class="dropdown-menu notification dropdown-3">
+									@if(Auth::user()->tipo == 1)
+											<ul class="dropdown-menu notification dropdown-3">
 										<li><a href="#">Tienes 5 notificaciones</a></li>					  
 										<li>
 											<a href="#">
@@ -119,6 +120,9 @@
 									
 										<li><a href="#">Ver todas las notificaciones</a></li>					  
 									</ul>
+
+									@endif
+									
 							</li>
 
 							@if(Auth::user()->tipo == 2)
@@ -145,14 +149,14 @@
 								<li class="divider"></li>
 
 								@if(Auth::user()->tipo == 1)
-									<li><a tabindex="-1" href="/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+									<li><a tabindex="-1" href="{{URL::route('perfil')}}" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@else
 									<li><a tabindex="-1" href="/mega/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@endif
 								
 								@if(Auth::user()->tipo == 1)
-									<li><a tabindex="-1" href="/favoritos" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
-									<li><a tabindex="-1" href="/suscripciones" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
+									<li><a tabindex="-1" href="{{URL::route('favoritos-user')}}" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
+									<li><a tabindex="-1" href="{{URL::route('suscripciones-user')}}" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>
 
 								
 

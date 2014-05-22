@@ -82,7 +82,7 @@ Route::get('/catalogo/{nombre_publico}', array(
 
 /*FUNCION PARA CANCELAR LA SUSCRIPCION DE UN USUARIO A UNA EMPRESA*/
 Route::post('/cancelar-suscripcion', array(
-		'as' => 'cancelar-suscripcion',
+		'as' => 'cancelar-suscripcion-user',
 		'uses' => 'UsersController@postCancelarSuscripcion'
 	));
 
@@ -220,12 +220,12 @@ Route::get('/perfil', array(
 	));
 
 Route::get('/favoritos', array(
-		'as' => 'favoritos',
+		'as' => 'favoritos-user',
 		'uses'=> 'UsersController@favoritosUser'
 	));
 
 Route::get('/suscripciones', array(
-		'as' => 'suscripciones',
+		'as' => 'suscripciones-user',
 		'uses'=> 'UsersController@suscripcionesUser'
 	));
 

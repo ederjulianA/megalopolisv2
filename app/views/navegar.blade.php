@@ -1,5 +1,8 @@
 @extends('layouts.users')
 
+@section('titulo')
+Empresas en megalopolis
+@stop
 
 @section('content')
 	<div id="landing-content">
@@ -26,7 +29,7 @@
 									<h2>Sectores</h2>
 
 									<ul class="menu-sectores">
-										<li class="active-menu"><a href="/navegar" >Todos</a></li>
+										<li class="active-menu"><a href="/public/navegar" >Todos</a></li>
 										@foreach( $categorias as $categoria)
 										<!--<li><a href="/navegar/categoria/{{$categoria->id}}">{{$categoria->nom_sector}}  </a></li>-->
 										<li><a class="cat-lista " href="{{$categoria->id}}">{{$categoria->nom_sector}}  </a></li>
@@ -68,7 +71,7 @@
 												
 													
 														<div class="detail fadeInUp animated-element empresa">
-														<a href="/empresa/{{$empresa->nombre_publico}}" class="hoverBorder">
+														<a href="/public/empresa/{{$empresa->nombre_publico}}" class="hoverBorder">
 															<span class="hoverBorderWrapper">
 																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'170px','height'=> '90px'))}}
 																<span class="hoverBorderInner"></span>
@@ -81,7 +84,7 @@
 															<small>{{$empresa->desc_breve}}</small> 
 														</p>
 														<p>
-															<a href="/empresa/{{$empresa->nombre_publico}}" class="btn btn-info">contacto</a>
+															<a href="/public/empresa/{{$empresa->nombre_publico}}" class="btn btn-info">contacto</a>
 															@if(Auth::check())
 															
 
@@ -105,13 +108,13 @@
 							<div class="col-md-2" style="text-align:center;">
 								<div class="promos-navegar">
 									<h2>Promos</h2>
-									<a href="/promos/{{$promocion->id}}">{{HTML::image($promocion->img, $promocion->titulo, array('width'=>'100%', 'height'=>'300px'))}}</a>
+									<a href="/public/promos/{{$promocion->id}}">{{HTML::image($promocion->img, $promocion->titulo, array('width'=>'100%', 'height'=>'300px'))}}</a>
 										<div class="ribbon-wrapper">
 												<div class="ribbon-inner shadow-pulse bg-danger">
 														<span class="porcentaje-producto">- {{$promocion->porcentaje}}%</span>
 												</div>
 										</div>
-												<p><a href="/promos/{{$promocion->id}}" class="link-promo"> {{$promocion->titulo}} </a></p>
+												<p><a href="/public/promos/{{$promocion->id}}" class="link-promo"> {{$promocion->titulo}} </a></p>
 												<p class="precio-promo-navegar">$ {{$promocion->con_descuento}}</p>
 									
 								</div>

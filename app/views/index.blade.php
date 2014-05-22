@@ -1,5 +1,8 @@
 @extends('layouts.users')
 
+@section('titulo')
+Megalopolis Colombia
+@stop
 
 @section('content')
 	<div class="container-fluid" style="margin-top:7%;">

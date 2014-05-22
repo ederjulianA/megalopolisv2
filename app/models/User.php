@@ -29,7 +29,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			'password'				=>	'required|alpha_num|between: 8,12|confirmed',
 			'password_confirmation'	=>	'required|alpha_num|between:8,12',
 			'tipo'					=>	'required|integer',
-			'img'		 			 =>'required|image|mimes:jpeg,jpg,bmp,png,gif'
+			'img'		 			 =>'image|mimes:jpeg,jpg,bmp,png,gif'
 			);
 
 	/**

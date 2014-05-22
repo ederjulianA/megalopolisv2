@@ -8,12 +8,15 @@ class NavegarController extends BaseController {
 		$categorias = Sector::all();
 		$empresas = Empresa::all();
 		$promocion = Promociones::where('estado','=',0)->orderBy(DB::raw('RAND()'))->take(1)->first();
+
+
 		
 
 		return View::make('navegar')
 		->with('ciudades',$ciudad)
 		->with('categorias',$categorias)
 		->with('empresas', $empresas)
+		
 		->with('promocion', $promocion);
 	}
 

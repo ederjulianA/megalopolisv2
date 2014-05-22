@@ -63,7 +63,7 @@ class UsersController extends BaseController{
 			->join('almacen', 'producto.id', '=', 'almacen.producto')
 
 			->join('sedes', 'almacen.sede', '=', 'sedes.id')
-
+			
 			->select('producto.nombre AS producto_nombre',
 					'almacen.precio_detal',
 					'sedes.nombre_publico AS nombre_sede',

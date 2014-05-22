@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	<div class="mensaje-ajax-suscripcion"></div>
+	
 	<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
@@ -13,7 +13,7 @@
 						<div class="row">	
 							<div class="col-md-6">
 								@if(Auth::user()) {{ Favs::mostrarSus(Auth::user()->id, $empresa->id)}}  @endif
-								<h2 style="font-weight: bold;">{{$empresa->razon_social}}</h2>
+								<h2 style="font-weight: bold; width:60%;">{{$empresa->razon_social}}</h2>
 								{{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-info-empresa'))}}
 								<address>
 								  
@@ -29,7 +29,7 @@
 									@if($sedes->count())
 										@foreach($sedes as $sede)
 
-										<span>{{$sede->nombre_publico}}</span>--<a href="/catalogo/{{$sede->nombre_publico}}" class="label label-warning links-catalogos">Ver catalogo</a><br><hr>
+										<span>{{$sede->nombre_publico}}</span>--<a href="/public/catalogo/{{$sede->nombre_publico}}" class="label label-warning links-catalogos">Ver catalogo</a><br><hr>
 
 										@endforeach
 
@@ -105,7 +105,7 @@
 											<div class="panel panel-default">
 												<div class="panel-heading">
 													<h4 class="panel-title">
-														<a class="  accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion" style="font-size:20px;" href="#{{$pregunta->id}}">
+														<a class="  accordion-toggle collapsed "style="font-size:18px;  width:90%; " data-toggle="collapse" data-parent="#accordion" style="font-size:20px;" href="#{{$pregunta->id}}">
 															{{$pregunta->pregunta}} ??? <i class="fa fa-chevron-down btn btn-success boton-abajo-pregunta"></i>
 														</a>
 													</h4>

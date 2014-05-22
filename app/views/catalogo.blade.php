@@ -36,7 +36,7 @@
 									Tel: <span class="label label-danger">{{$sede->telefono}}</span>
 								</strong> 
 								<div class="seperator"></div>
-								<a class="btn btn-success btn-xs m-bottom-sm" href="/empresa/{{$sede->empresa->nombre_publico}}">{{$sede->empresa->nombre_publico}}</a>
+								<a class="btn btn-success btn-xs m-bottom-sm" href="/public/empresa/{{$sede->empresa->nombre_publico}}">{{$sede->empresa->nombre_publico}}</a>
 								<div class="seperator"></div>
 								<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
 								<a href="#" class="social-connect tooltip-test twitter-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
@@ -115,7 +115,7 @@
 														<p>
 															<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
 															<p>
-																<a href="/promos/{{$promo->id}}">Detalles</a>
+																<a href="/public/promos/{{$promo->id}}">Detalles</a>
 															</p>
 														</p>
 													</p>

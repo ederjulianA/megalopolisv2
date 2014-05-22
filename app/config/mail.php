@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'smtp-mail.outlook.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'thewalkingdead2091057@gmail.com',
+	'username' => 'ederalvarez2009@hotmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,11 +93,12 @@ return array(
 	|
 	*/
 
-	'password' => ' bmiybmwchoaacmmv',
+	'password' => 'hotmail4EVER',
 
 	/*
 	|--------------------------------------------------------------------------
-	| Sendmail System Path
+	| Sendmail System Path bmiybmwchoaacmmv
+	demetria4EVER
 	|--------------------------------------------------------------------------
 	|
 	| When using the "sendmail" driver to send e-mails, we will need to know

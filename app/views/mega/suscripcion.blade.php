@@ -35,7 +35,7 @@ Mis suscripciones
 										</div>
 
 										<div class="">
-												<a href="/empresa/{{$sub->nombre_publico}}" >{{$sub->nombre_publico}}</a> |
+												<a href="/public/empresa/{{$sub->nombre_publico}}" >{{$sub->nombre_publico}}</a> |
 												<a href="#" data-toggle="modal" data-target="#cancelarSub-{{$sub->id}}" class="label label-danger">Cancelar Suscripcion</a> |
 												
 											</div>
@@ -53,7 +53,7 @@ Mis suscripciones
       </div>
       <div class="modal-body">
         	{{HTML::image($sub->logo, $sub->nombre_publico, array('width'=>'100px', 'height'=>'100px'))}} 
-        	<form method="post" action="/cancelar-suscripcion">
+        	<form method="post" action="{{URL::route('cancelar-suscripcion-user')}}">
         		<input type="hidden" name="empresa_id" value="{{$sub->id}}">
         		<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
         		<input type="submit" value="Cancelar Mi suscripcion" class="btn btn-info btn-lg btn-sombra">
