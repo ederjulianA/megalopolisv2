@@ -17,6 +17,14 @@ Route::get('/', array(
 	));
 
 
+
+/* RUTA MAPA DE PRUEBA  */
+Route::get('/mapa', array(
+		'as' => 'mapa',
+		'uses' => 'MapaController@getMapa'
+	));
+
+
 /* RUTA RECUPERAR CONTRASEÑA */
 Route::get('/recuperar-cuenta', array(
 		'as' => 'recuperar-cuenta',
@@ -53,7 +61,7 @@ Route::post('/nueva-promo-post', array(
 
 
 Route::post('/preguntas', array(
-		'as' => 'preguntas',
+		'as' => 'preguntas-empresa',
 		'uses' => 'PreguntasController@postResponderPregunta'
 	));
 

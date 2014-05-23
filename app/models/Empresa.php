@@ -17,7 +17,7 @@ class Empresa extends Eloquent {
 		'descripcion_breve' => 'required|min:5|max:250',
 		'descripcion_larga' => 'min:5|max:2500',
 		'telefono' =>		'required',
-		'logo'		 			 =>'image|mimes:jpeg,jpg,bmp,png,gif'
+		
 
 		);
 

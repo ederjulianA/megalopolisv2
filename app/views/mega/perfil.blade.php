@@ -600,7 +600,7 @@
 											@foreach($preguntas_null as $preg_null)
 											<div class="pregunta-responder">
 												{{$preg_null->pregunta}}<br>
-												<form method="post" action="/preguntas" rol="form">
+												<form method="post" action="{{URL::route('preguntas-empresa')}}" rol="form">
 													<div class="form-group">
 														<input type="hidden" name="pregunta_id" value="{{$preg_null->id}}">
 														<textarea name="respuesta" class="form-control"></textarea>

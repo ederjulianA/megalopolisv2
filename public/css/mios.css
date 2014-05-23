@@ -169,6 +169,13 @@ ul.menu-sedes li {
 
 }
 
+.contenedor-mapa{
+	height: 500px;
+	width: 95%;
+	margin: 5px auto;
+	
+}
+
 .contenedor-preguntas {
 	width: 100%;
 }
