@@ -28,8 +28,7 @@
     <!-- Bootstrap core CSS -->
     {{ HTML::style('bootstrap/css/bootstrap.min.css', array('media' => 'screen'))}}
 
-    <!-- estilos del mapa -->
-    {{ HTML::style('css/estilos-mapas.css', array('media' => 'screen'))}}
+    
 
 
     <!--  My styles-->

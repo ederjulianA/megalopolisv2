@@ -26,7 +26,11 @@ Megalopolis Colombia
 
 			<div class="row">
 				<div class="col-sm-8 padding-md">
-					<h1 class="megalopolis_titulo">Megalopolis</h1>
+				
+					<h1 class="megalopolis_titulo">
+						
+							{{HTML::image('img/mega-imgs/tuMegalopolisRecor.png', 'logo',array('class'=>'logo'))}}
+					</h1>
 					
 				</div>
 

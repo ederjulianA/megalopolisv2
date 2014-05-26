@@ -28,8 +28,8 @@
 									<h2>Sedes ({{$num_sedes}})</h2>
 									@if($sedes->count())
 										@foreach($sedes as $sede)
-
-										<span>{{$sede->nombre_publico}}</span>--<a href="/public/catalogo/{{$sede->nombre_publico}}" class="label label-warning links-catalogos">Ver catalogo</a><br><hr>
+											<a class="btn btn-info quick-btn " href="/catalogo/{{$sede->nombre_publico}}" id=""><i class="fa fa-home"></i><span>{{$sede->nombre_publico}}</span></a>
+										<!--<span>{{$sede->nombre_publico}}</span><a href="/public/catalogo/{{$sede->nombre_publico}}" class="label label-warning links-catalogos">Ver catalogo</a><br><hr>-->
 
 										@endforeach
 

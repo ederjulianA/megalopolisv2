@@ -34,7 +34,7 @@
 											</p>
 											<hr>
 											<p>
-											<a href="/public/catalogo/{{{$fav->nombre_sede}}}" >{{$fav->nombre_sede}}</a><br>
+											<a href="/catalogo/{{{$fav->nombre_sede}}}" >{{$fav->nombre_sede}}</a><br>
 											
 											@if(Auth::check() && Auth::user()->tipo == 1)
 												

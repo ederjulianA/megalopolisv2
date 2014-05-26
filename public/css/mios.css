@@ -168,11 +168,18 @@ ul.menu-sedes li {
 	width: 100%;
 
 }
+.contenedormapa-principal{
+	height: 600px;
+	width: 100%;
+
+}
 
 .contenedor-mapa{
-	height: 500px;
+	
 	width: 95%;
-	margin: 5px auto;
+	margin: 0 auto;
+	height: 100%;
+   overflow: hidden;
 	
 }
 
@@ -187,6 +194,19 @@ ul.menu-sedes li {
 
 	width: 90%;
 
+}
+.descripcion-producto{
+
+	margin: 10% auto;
+	text-align: center;
+	width: 80%;
+}
+.descripcion-producto h2 {
+	font-size: 45px !important;
+	font-family: 'Open sans';
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
 }
 .img-promo {
 	background-image: url(../img/mega-imgs/promo.png);
@@ -246,6 +266,30 @@ ul.menu-sedes li {
 	width: 100%;
 }
 
+.hide-mapa{
+	display: none;
+}
+
+.img-producto-descripcion{
+	width: 250px;
+}
+
+.descripcion-producto h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+.descripcion-producto img, .descripcion-producto p{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.descripcion-producto p{
+	font-size: 35px;
+	padding: 10px;
+}
+
 .actualizar-sede{
 	margin: 5px;
 	width: 95%;
@@ -268,17 +312,20 @@ ul.menu-sedes li {
 }
 
 .lista-sedes-info {
-	border: 2px solid #33E6F2;
+	
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
 	-ms-border-radius: 2px;
 	border-radius: 2px;
-	box-shadow: 2px 2px 4px rgba(0,0,0, .5);
+	box-shadow: 2px 2px 1px rgba(0,0,0, .1);
 
 
 
 	padding: 10px;
+}
+.lista-sedes-info a {
+	margin: 4px 4px;
 }
 .link-publico{
 	width: 100%;
@@ -299,18 +346,26 @@ ul.menu-sedes li {
 
 }
 .lista-sedes-info h2 {
-	background-color: #33E6F2;
+	
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
 	-o-border-radius: 25px;
 	-ms-border-radius: 25px;
 	border-radius: 25px;
-	color: #fff;
+	
 	font-weight: bold;
 	margin: 5px auto;
 	padding: 10px;
 	text-align: center;
 	width: 50%;
+}
+
+.logo{
+	margin: 0 auto;
+	max-width: 100%;
+	position: absolute;
+	right: 15%;
+	width: 450px;
 }
 .info-vista-perfil{
 	letter-spacing: inherit;
@@ -436,6 +491,7 @@ ul.menu-sedes li {
  	font-size: 22px;
  	color: #f90;
  }
+
  .promo-desc-porcentaje{
 
  	background-color: #f90;

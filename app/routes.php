@@ -46,6 +46,13 @@ Route::get('/promos/{id}', array(
 		'uses' => 'PromocionesController@getPromos'
 	));
 
+
+/* RUTA descripcion de productos  */
+Route::get('/producto/{id}', array(
+		'as' => 'productos',
+		'uses' => 'ProductosController@getProducto'
+	));
+
 /* PROCESAR NUEVA SEDE*/
 
 Route::post('/nueva-sede', array(

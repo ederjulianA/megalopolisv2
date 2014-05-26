@@ -133,7 +133,7 @@ class EmpresasController  extends BaseController {
 				File::delete('public/'.$empresa->logo);
 				$logo = Input::file('nuevo_logo');
 				$codigoIMG = str_random(13);
-				$filename = date('Y-m-d-H')."-".$codigoIMG."-".$logo->getClientOriginalName();
+				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".$empresa->nombre_publico.".jpg";
 				Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
@@ -249,7 +249,7 @@ class EmpresasController  extends BaseController {
 			$empresa->telefono = Input::get('telefono');
 			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$logo->getClientOriginalName();
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico');
 			Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');

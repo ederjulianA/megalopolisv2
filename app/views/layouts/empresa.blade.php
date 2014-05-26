@@ -363,7 +363,7 @@
 										</div>
 									</a>
 								</li>
-								<li><a tabindex="-1" href="/mega/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+								<li><a tabindex="-1" href="{{URL::route('mega-perfil')}}" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								<!--<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-heart fa-lg"></i> Mis Favoritos</a></li>
 								<li><a tabindex="-1" href="#" class="main-link"><i class="fa fa-check fa-lg"></i> Mis Suscripciones</a></li>-->
 								

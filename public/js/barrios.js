@@ -108,6 +108,34 @@ $(document).on("click", ".remFavList", function(e){
 	e.preventDefault();
 });
 
+$(document).on("click",".con-mapa", function(e){
+
+	$('.empresas-container').addClass("hide-mapa");
+	$('#btn-mapa').removeClass("con-mapa");
+	$('#btn-mapa').addClass("sin-mapa");
+	$('.contenedor-mapa').removeClass('hide-mapa');
+	$('#btn-mapa').html("sin mapa");
+
+	
+	e.preventDefault();
+
+});
+
+$(document).on("click",".sin-mapa", function(e){
+
+	$('.empresas-container').removeClass("hide-mapa");
+	$('#btn-mapa').removeClass("sin-mapa");
+	$('#btn-mapa').addClass("con-mapa");
+	$('.contenedor-mapa').addClass('hide-mapa');
+	$('#btn-mapa').html("ver mapa");
+
+	
+	e.preventDefault();
+
+});
+
+
+
 //funcion para suscribirse a una empresa
 $(document).on("click",".remSus", function(e){
 
@@ -373,7 +401,7 @@ $('#contador-res').html(cambio);
 
 				if(data != null){
 					for(var i in data){
-						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/public/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a></p></div>";
+						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a></p></div>";
 							
 								
 							$('.empresas-container').append(empresas);
@@ -408,7 +436,7 @@ function lista_empresas()
 
 			if(data != null){
 				for(var i in data){
-					var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/public/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a>  </p></div>";
+					var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a>  </p></div>";
 						
 							
 						$('.empresas-container').append(empresas);

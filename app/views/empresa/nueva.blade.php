@@ -37,7 +37,7 @@ Crear Nueva empresa
 									</div> <!--  end form errors-->
 								@endif
 							
-							<form enctype="multipart/form-data" method="post" action="{{ URL::route('empresa-crear-post')}}">
+							<form enctype="multipart/form-data" method="post" action="{{ URL::route('empresa-crear-post')}}" autocomplete="off">
 								<div class="form-group">
 										<label>Sector</label>
 										<select name="sector" name="sector" class="form-control input-sm bounceIn animation-delay2">
@@ -71,7 +71,7 @@ Crear Nueva empresa
 
 								<div class="form-group">
 									<label>Razon Social</label>
-									<input type="text" name="razon_social" id="razon_social"  placeholder="Nombre de Tu empresa" class="form-control input-sm bounceIn animation-delay4" title=" Razon Social" data-content="Este sera el nombre que se desplegara en las vistas publicas de tu empresa "data-toggle="popover">
+									<input type="text" name="razon_social" id="razon_social"  placeholder="Nombre de Tu empresa" class="form-control input-sm bounceIn animation-delay4" title=" Razon Social" data-content="Este sera el nombre que se desplegara en las vistas publicas de tu empresa "data-toggle="popover" name="razon_social" {{ (Input::old('razon_social')) ? 'value="'. e(Input::old('razon_social')).'"' : '' }}>
 								</div>
 								
 
@@ -87,30 +87,30 @@ Crear Nueva empresa
 
 								<div class="form-group">
 									<label>Direccion Principal</label>
-									<input type="text" name="direccion_principal" placeholder="Direccion Principal" class="form-control input-sm bounceIn animation-delay4" >
+									<input type="text" name="direccion_principal" placeholder="Direccion Principal" class="form-control input-sm bounceIn animation-delay4" name="email" {{ (Input::old('direccion_principal')) ? 'value="'. e(Input::old('direccion_principal')).'"' : '' }}>
 								</div>
 
 								
 
 								<div class="form-group">
 									<label>Telefono</label>
-									<input type="text" name="telefono" placeholder="Telefono" class="form-control input-sm bounceIn animation-delay4" >
+									<input type="text" name="telefono" placeholder="Telefono" class="form-control input-sm bounceIn animation-delay4" name="telefono" {{ (Input::old('telefono')) ? 'value="'. e(Input::old('telefono')).'"' : '' }}>
 								</div>
 
 								<div class="form-group">
 									<label>Logo</label>
-									<input type="file" name="logo">
+									<input type="file" name="logo" required>
 									
 								</div>
 
 								<div class="form-group">
 									<label>Descripcion breve</label><br>
-									<textarea name="descripcion_breve" rows="3" style="width:100%;" class="form-control input-sm bounceIn animation-delay4"></textarea>
+									<input type="text" name="descripcion_breve" rows="3" style="width:100%;" class="form-control input-sm bounceIn animation-delay4" name="descripcion_breve" {{ (Input::old('descripcion_breve')) ? 'value="'. e(Input::old('descripcion_breve')).'"' : '' }}>
 									
 								</div>
 								<div class="form-group">
-									<label>Descripcion breve</label> <br>
-									<textarea name="descripcion_larga" rows="5" style="width:100%;" class="form-control input-sm bounceIn animation-delay6"></textarea>
+									<label>Descripcion Larga</label> <br>
+									<textarea name="descripcion_larga" rows="5" style="width:100%;" class="form-control input-sm bounceIn animation-delay6" name="descripcion_larga" {{ (Input::old('descripcion_larga')) ? 'value="'. e(Input::old('descripcion_larga')).'"' : '' }}></textarea>
 										
 									
 									

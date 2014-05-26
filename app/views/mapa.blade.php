@@ -60,7 +60,7 @@
 			$casa='';
 			if($this->eslocal==1){
 				$area='<a href="#"><map id="mapeo2" name="'.$this->nombremap.'" >	
-				<area id="m'.$this->id.'" class="areamap"  shape="poly" coords="0,16,32,0,63,17,63,34,32,49,0,33,0,16" href="/public/empresa/" style="z-index:'.($this->i+3).';" alt="comentario">	
+				<area id="m'.$this->id.'" class="areamap"  shape="poly" coords="0,16,32,0,63,17,63,34,32,49,0,33,0,16" href="/empresa/mercagan" style="z-index:'.($this->i+3).';" alt="comentario">	
 				</map></a>';
 		//				function redireccionar(){
 		//  window.locationf="http://www.cristalab.com";
@@ -149,6 +149,8 @@
 @section('content')
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- estilos del mapa -->
+    {{ HTML::style('css/estilos-mapas.css', array('media' => 'screen'))}}
   
 <script type="text/javascript">
    

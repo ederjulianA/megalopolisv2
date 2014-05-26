@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp-mail.outlook.com',
+	'host' => 'smtp.gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'ederalvarez2009@hotmail.com',
+	'username' => 'thewalkingdead2091057@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'hotmail4EVER',
+	'password' => 'bmiybmwchoaacmmv',
 
 	/*
 	|--------------------------------------------------------------------------
