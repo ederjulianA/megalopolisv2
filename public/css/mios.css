@@ -110,6 +110,29 @@ ul.menu-sedes li {
 	text-align: center;
 	
 }
+
+.contenedor-buscador {
+	margin: 5% auto;
+	width: 90%;
+}
+
+.contenedor-buscador form {
+	width: 100%;
+}
+
+.contenedor-buscador form input[type="text"]{
+	padding: 7px;
+	width: 80%;
+}
+
+.contenedor-productos-busqueda {
+	width: 100%;
+}
+.contenedor-productos-busqueda div.producto {
+	display: inline-block;
+	margin: 10px;
+}
+
 .contenedor-perfil{
 
 	margin: 5% auto;

@@ -7,7 +7,7 @@
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
 @section('content')
-				<div id="landing-content">
+<div id="landing-content">
 
 				<div class="mensaje-favoritos-ajax">
 					

@@ -23,6 +23,13 @@ Route::get('/landing', array(
 	));
 
 
+/* BUSCADOR */
+Route::get('/buscador', array(
+		'as' => 'buscador',
+		'uses' => 'BuscadorController@getBuscar'
+	));
+
+
 
 /* RUTA MAPA DE PRUEBA  */
 Route::get('/mapa', array(

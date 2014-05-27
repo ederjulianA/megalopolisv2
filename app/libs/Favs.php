@@ -26,4 +26,16 @@ class Favs {
 
 		return $estado;
 	}
+
+	public static function value($key)
+	{
+		if($key != null){
+			$value = $key;
+		}else{
+			$value = "";
+		}
+
+		return $value;
+	}
+
 }

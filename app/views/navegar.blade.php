@@ -48,9 +48,9 @@ Empresas en megalopolis
 						<div class="col-md-8" style="text-align:center;">
 
 								<div class="navegar-centro">
-										<form method="post" action="#" >
+										<form method="get" action="{{URL::route('buscador')}}" >
 
-											<input type="text" name="buscador" id="buscador" placeholder="Buscas algo en especifico ?"><input type="submit" value="Buscar" class="btn btn-danger">
+											<input type="text" name="buscador" id="buscador" placeholder="Buscas algo en especifico ?" required><input type="submit" value="Buscar" class="btn btn-danger">
 											{{Form::token()}}
 										</form>
 									
