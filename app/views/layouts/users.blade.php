@@ -3,8 +3,12 @@
 <head>
 	<title>@yield('titulo')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="En tuMegalopolis queremos darte la oportunidad de tener un catálogo de productos y servicios en cuestión de minutos con un par de clicks. Utilizamos las últimas tecnologías en cuanto a desarrollo web lo cual nos permite garantizar que tus catálogos se verán bien desde cualquier dispositivo que acceda a ellos. De igual forma nuestro panel de administración te permite gestionar tu empresa desde cualquier dispositivo.">
+    <meta name="author" content="Megalopolis TEAM">
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/img/mega-imgs/img-fb.jpg"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	
 	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
@@ -223,6 +227,12 @@
 	
 	<!-- Bootstrap -->
 	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
+
+	<!-- Waypoint -->
+	{{ HTML::script('js/waypoints.min.js')}}
+
+	<!-- localScroll -->
+	{{ HTML::script('js/jquery.localscroll.min.js')}}
     
     
 	<!-- Full Calender -->
@@ -257,6 +267,18 @@
 
 	<!-- Promos -->
 	{{ HTML::script('js/promos.js')}}
+
+	<script>
+		$(function()	{
+			$('.animated-element').waypoint(function() {
+				
+				$(this).removeClass('no-animation');
+				
+			}, { offset: '70%' });
+			
+			$('.nav').localScroll({duration:800});
+		});
+	</script>
 
 	
 

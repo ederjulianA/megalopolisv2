@@ -16,6 +16,12 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+/* LANDING  */
+Route::get('/landing', array(
+		'as' => 'landing',
+		'uses' => 'HomeController@getLanding'
+	));
+
 
 
 /* RUTA MAPA DE PRUEBA  */
