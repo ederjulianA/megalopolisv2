@@ -5,6 +5,7 @@ class BuscadorController  extends BaseController {
 	public function getBuscar()
 	{
 		$keyword = Input::get('buscador');
+		$query = explode(" ", $keyword);
 
 		$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')
