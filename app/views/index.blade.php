@@ -61,10 +61,13 @@ Megalopolis Colombia
 				</div>
 				<div class="col-sm-8 padding-md">
 						<div class="input-group m-bottom-md">
-							<input type="text" class="form-control" placeholder="Buscar en Megalopolis">
+						<form method="get" action="{{URL::route('buscador')}}">
+							<input type="text" name="buscador" class="form-control" placeholder="Buscar en Megalopolis">
 							<span class="input-group-btn">
-								<button class="btn btn-danger" type="button">Buscar</button>
+								
+								<input type="submit" value="BUSCR" class="btn btn-danger">
 							</span>
+						</form>
 						</div>
 					
 				</div>

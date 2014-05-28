@@ -36,7 +36,7 @@
 									Tel: <span class="label label-danger">{{$sede->telefono}}</span>
 								</strong> 
 								<div class="seperator"></div>
-								<a class="btn btn-success btn-xs m-bottom-sm" href="/empresa/{{$sede->empresa->nombre_publico}}">{{$sede->empresa->nombre_publico}}</a>
+								<a class="btn btn-success btn-xs m-bottom-sm" href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a>
 								<div class="seperator"></div>
 								<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
 								<a href="#" class="social-connect tooltip-test twitter-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
@@ -115,7 +115,7 @@
 														<p>
 															<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
 															<p>
-																<a href="/promos/{{$promo->id}}">Detalles</a>
+																<a href="{{URL::route('promos',array('id'=>$promo->id))}}">Detalles</a>
 															</p>
 														</p>
 													</p>
@@ -231,7 +231,7 @@
 												Precio: <span class = 'My-Price'>${{$producto->precio_detal}}</span>
 											</p>
 											<p class = 'My-Textblock'>
-												{{ substr($producto->producto_descripcion,0,70) }}...<a href="/producto/{{$producto->id}}" class="label label-danger">Detalle</a>
+												{{ substr($producto->producto_descripcion,0,70) }}...<a href="{{URL::route('productos',array('id'=>$producto->id))}}" class="label label-danger">Detalle</a>
 											</p>
 											<h1 class = 'My-Title'>
 												Etiquetas
@@ -250,7 +250,7 @@
 												{{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
 
 											@else
-												<a href="/login">Inicia Sesion</a>
+												<a href="{{URL::route('login')}}">Inicia Sesion</a>
 											@endif
 
 											<!--<a href="{{$producto->id}}"   class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i></a>-->

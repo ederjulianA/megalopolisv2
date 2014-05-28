@@ -10,7 +10,7 @@ class BuscadorController  extends BaseController {
 		$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')
 		->join('categorias as c','p.categoria','=','c.id')
-		->join('subcategorias as sc','sc.categoria_id','=','sc.id')
+		->join('subcategorias as sc','sc.categoria_id','=','c.id')
 		->select('a.precio_detal',
 				'a.cantidad',
 				'c.nombre AS categoria_nombre',
@@ -24,7 +24,7 @@ class BuscadorController  extends BaseController {
 				'sc.nombre_sub'
 			)
 		->where('p.nombre', 'LIKE', '%' . $keyword . '%')
-		->orWhere('.descripcion','LIKE', '%' . $keyword . '%' )
+		->orWhere('p.descripcion','LIKE', '%' . $keyword . '%' )
 		->orWhere('c.nombre','LIKE', '%' . $keyword . '%' )
 		->orWhere('sc.nombre_sub','LIKE', '%' . $keyword . '%' )
 
