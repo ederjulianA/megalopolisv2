@@ -31,11 +31,14 @@ class BuscadorController  extends BaseController {
 		->orWhere('sc.nombre_sub','LIKE', '%' . $keyword . '%' )
 
 		->get();
+		$numPro = count($producto);
+
+
 
 		//$pro2 =Producto::whereRaw('MATCH (imagen,nombre) AGAINST (?)' , array($keyword))->get();
 
 		
-			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto);
+			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('numPro',$numPro);
 
 
 		

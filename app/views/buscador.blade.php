@@ -14,7 +14,7 @@ Buscar: {{$keyword}}
 											
 			</form>
 
-			<h2>Resultados Para: <strong>{{$keyword}}</strong></h2>
+			<h2>Resultados Para: <strong>{{$keyword}}</strong> ({{$numPro}})</h2>
 			
 
 			<div class="contenedor-productos-busqueda">
@@ -39,24 +39,7 @@ Buscar: {{$keyword}}
 											<p class = 'My-Textblock'>
 												{{ substr($producto->producto_descripcion,0,70) }}...<a href="/producto/{{$producto->id}}" class="label label-danger">Detalle</a>
 											</p>
-											<h1 class = 'My-Title'>
-												Etiquetas
-											</h1>
 											
-											<p class = 'My-Textblock'>
-												
-											</p>
-											<p>
-											<!--<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a>-->
-											@if(Auth::check() && Auth::user()->tipo == 1)
-												{{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
-
-											@else
-												<a href="/login">Inicia Sesion</a>
-											@endif
-
-											<!--<a href="{{$producto->id}}"   class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i></a>-->
-											</p>
 										</div>
 									</div>
 								</div>

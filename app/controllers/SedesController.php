@@ -21,7 +21,7 @@ class SedesController extends BaseController{
 													'producto.id',
 													'producto.descripcion AS producto_descripcion',
 													'categorias.nombre AS categoria_nombre',
-													'almacen.cantidad')->get();
+													'almacen.cantidad')->where('estado','=',1)->get();
 			$num_productos = $productos->count();
 			
 			foreach($productos as $key => $producto) {
