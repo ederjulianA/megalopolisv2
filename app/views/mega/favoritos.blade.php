@@ -20,7 +20,7 @@
 										</h1>
 										<img src = '{{asset($fav->imagen)}}' class="img-producto-lista" />
 										<div class="caption">
-											<h1 class = 'My-Title'>
+											<h1 class = 'My-Title' style="height:80px;">
 												{{$fav->producto_nombre}}
 											</h1>
 											<h2 class = 'My-Category-Title'>
@@ -30,7 +30,8 @@
 												Precio: <span class = 'My-Price'>${{$fav->precio_detal}}</span>
 											</p>
 											<p class = 'My-Textblock'>
-												{{$fav->producto_descripcion}}
+												{{ substr($fav->producto_descripcion,0,90) }}<a href="{{URL::route('productos',array('id'=>$fav->id))}}" class="label label-info">Detalle</a>
+												
 											</p>
 											<hr>
 											<p>

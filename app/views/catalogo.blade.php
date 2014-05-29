@@ -220,11 +220,11 @@
 										</h1>
 										<img src = '{{asset($producto->imagen)}}' class="img-producto-lista" />
 										<div class="caption">
-											<h1 class = 'My-Title'>
+											<h1 class = 'My-Title' style="height:80px;">
 												{{$producto->producto_nombre}}
 											</h1>
 											<hr>
-											<h2 class = 'My-Category-Title'>
+											<h2 class = 'My-Category-Title' >
 												{{$producto->categoria_nombre}}
 											</h2>
 											<p class = 'My-Textblock precio'>
