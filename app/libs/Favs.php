@@ -27,6 +27,18 @@ class Favs {
 		return $estado;
 	}
 
+	public static function estadoPromo($valor)
+	{
+		if($valor == 0){
+			$estado = "<label class='label label-danger'>Promo No Activa</label>";
+		}else if($valor == 1)
+		{
+			$estado = "<label class='label label-success'>Promo  Activa</label>";
+		}
+
+		return $estado;
+	}
+
 	public static function value($key)
 	{
 		if($key != null){

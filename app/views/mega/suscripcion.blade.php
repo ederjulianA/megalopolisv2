@@ -35,7 +35,7 @@ Mis suscripciones
 										</div>
 
 										<div class="">
-												<a href="/empresa/{{$sub->nombre_publico}}" >{{$sub->nombre_publico}}</a> |
+												<a href="{{URL::route('empresa-info', array('nombre_publico'=>$sub->nombre_publico))}}" >{{$sub->nombre_publico}}</a> |
 												<a href="#" data-toggle="modal" data-target="#cancelarSub-{{$sub->id}}" class="label label-danger">Cancelar Suscripcion</a> |
 												
 											</div>

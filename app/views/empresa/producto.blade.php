@@ -13,7 +13,7 @@
 			<a class="btn btn-danger btn-lg" style="font-size:40px;">${{$producto->precio_detal}}</a>
 		</p><br>
 		<p>
-			Visita nuestro Catalogo <a class="btn btn-info" href="/catalogo/{{$producto->nombre_sede}}">{{$producto->nombre_sede}}</a><br>
+			Visita nuestro Catalogo <a class="btn btn-info" href="{{URL::route('catalogo-sede', array('nombre-sede'=>$producto->nombre_sede))}}">{{$producto->nombre_sede}}</a><br>
 			{{$producto->direccion}}, <br> Tel:{{$producto->telefono}}
 		</p>
 		

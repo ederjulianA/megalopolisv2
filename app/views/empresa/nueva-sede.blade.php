@@ -25,7 +25,7 @@
                   </div>
                   <div class="modal-body">
                     
-                    <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-promo-post')}}" enctype="multipart/form-data" autocomplete="off">
+      <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-promo-post')}}" enctype="multipart/form-data" autocomplete="off">
 
                      <div class="actualizar-sede">
                         <label for="direccion">Sede</label>
@@ -106,7 +106,7 @@
 
                       <input type="submit" value="Agregar" class="btn btn-success btn-sombra">
                       {{ Form::token()}}
-                    </form>
+      </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -226,7 +226,7 @@
                   <h2>Lista de Promociones</h2>
 
                   <ul class="menu-sedes">
-                    <li><a  href="/nueva-sede">Todas</a></li>
+                    <li><a  href="{{URL::route('nueva-sede')}}">Todas</a></li>
                     @foreach($sedes as $sede)
                       <li><a class="lista-promos" href="{{$sede->id}}">{{$sede->nombre_publico}}</a></li>
                     @endforeach
@@ -242,14 +242,14 @@
                       <div class="item-promo-lista">
                         {{ HTML::image($promo->img, $promo->titulo, array('class'=> 'img-promo-lista'))}}
 
-                        <h3>{{$promo->titulo}}</h3>
+                        <h3>{{$promo->titulo}}</h3>{{ Favs::estadoPromo($promo->estado)}}---<a href="{{URL::route('editar-promo', array('id'=>$promo->id))}}">Editar</a>
                         <p>
                           {{$promo->descripcion_corta}} 
                           
                          
                         </p>
                         <p class="sede-item">
-                          <span class="label label-warning">{{$promo->sede->nombre_publico}}</span>
+                          <a class="label label-warning" href="{{URL::route('promos', array('id'=>$promo->id))}}" target="_blank">{{$promo->sede->nombre_publico}}</a>
                         </p>
                         
                       </div>

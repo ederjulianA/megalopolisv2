@@ -52,6 +52,20 @@ Route::get('/nueva-sede', array(
 	));
 
 
+/* RUTA nueva sede */
+Route::get('/editar-promo/{idPromo}', array(
+		'as' => 'editar-promo',
+		'uses' => 'PromocionesController@getEditarPromo'
+	));
+
+
+/* RUTA nueva sede */
+Route::post('/editar-promo-post', array(
+		'as' => 'editar-promo-post',
+		'uses' => 'PromocionesController@postEditarPromo'
+	));
+
+
 
 /* RUTA PROMOSIONES  */
 Route::get('/promos/{id}', array(

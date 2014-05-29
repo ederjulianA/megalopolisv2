@@ -7,7 +7,7 @@ class NavegarController extends BaseController {
 		$ciudad = Ciudad::all();
 		$categorias = Sector::all();
 		$empresas = Empresa::all();
-		$promocion = Promociones::where('estado','=',0)->orderBy(DB::raw('RAND()'))->take(1)->first();
+		$promocion = Promociones::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(1)->first();
 
 
 		

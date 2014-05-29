@@ -121,7 +121,7 @@ Empresas en megalopolis
 												     {  
 												      if(!isset($this->conexion))
 												      {  
-												     // $this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
+												      //$this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
 												     $this->conexion = (mysql_connect("localhost","root","")) or die(mysql_error());  
 												      mysql_select_db("megalopolis",$this->conexion) or die(mysql_error());  
 												      }  
@@ -427,6 +427,7 @@ echo '</div>';
 
 							<div class="col-md-2" style="text-align:center;">
 								<div class="promos-navegar">
+								@if($promocion->count())
 									<h2>Promos</h2>
 									<a href="{{URL::route('promos', array('id'=>$promocion->id))}}">{{HTML::image($promocion->img, $promocion->titulo, array('width'=>'100%', 'height'=>'300px'))}}</a>
 										<div class="ribbon-wrapper">
@@ -436,6 +437,7 @@ echo '</div>';
 										</div>
 												<p><a href="{{URL::route('promos', array('id'=>$promocion->id))}}" class="link-promo"> {{$promocion->titulo}} </a></p>
 												<p class="precio-promo-navegar">$ {{$promocion->con_descuento}}</p>
+								@endif			
 									
 								</div>
 								
