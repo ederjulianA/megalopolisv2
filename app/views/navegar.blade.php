@@ -174,7 +174,7 @@ Empresas en megalopolis
 			$casa='';
 			if($this->eslocal==1){
 				$area='<a href="#"><map id="mapeo2" name="'.$this->nombremap.'" >	
-				<area id="m'.$this->id.'" class="areamap"  shape="poly" coords="0,16,32,0,63,17,63,34,32,49,0,33,0,16" href="/empresa/" style="z-index:'.($this->i+3).';" alt="comentario">	
+				<area id="m'.$this->id.'" class="areamap"  shape="poly" coords="0,16,32,0,63,17,63,34,32,49,0,33,0,16" href="/empresa/'.$this->nombrempr.'" style="z-index:'.($this->i+3).';" alt="comentario">	
 				</map></a>';
 		
 				$casa='<h3 class="textolocal" style="position:absolute;z-index:'.($this->i+10).';"><img src="'.$this->imgsector.'" style="z-index:'.($this->i+10).';left:0px;top:17px;height:30px;width:30px;position:absolute;">'.$this->nombrempr.'</h3>';
@@ -257,7 +257,7 @@ Empresas en megalopolis
 		echo '<div id="divciudad" style="top:10%;overflow:scroll;position:relative;width:768px;height:100%;left:0px;" >';
 
 	$db = new MySQL(); 	 
-	$consul="SELECT  * FROM cuadricula where id<50";
+	$consul="SELECT  * FROM cuadricula where estado = 1";
 	$consulta = $db->consulta($consul); 
 	$cuadritoimg=array();	
 	$cuadritoimg2=array();	
