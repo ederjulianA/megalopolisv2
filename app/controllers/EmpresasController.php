@@ -239,7 +239,7 @@ class EmpresasController  extends BaseController {
 		$validator	=	Validator::make(Input::all(), Empresa::$rules);
 
 		if($validator->passes()){
-			$empresa = new Empresa;
+			$empresa = new Empresa();
 
 			$empresa->user_id = Input::get('user_id');
 			$empresa->sector_id = Input::get('sector');
@@ -249,8 +249,8 @@ class EmpresasController  extends BaseController {
 			$empresa->telefono = Input::get('telefono');
 			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico');
-			Image::make($logo->getRealPath())->resize(468, 249)->save(public_path().'/img/empresas/'.$filename);
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
+			Image::make($logo->getRealPath())->resize(500, 500)->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->barrio = Input::get('barrio');
@@ -258,7 +258,29 @@ class EmpresasController  extends BaseController {
 			$empresa->desc_breve = Input::get('descripcion_breve');
 			$empresa->desc_larga = Input::get('descripcion_larga');
 
+		
+
+
+
+
 			if($empresa->save()){
+
+
+					$cuadricula = new Cuadricula();
+					$cuadricula->idempresa = $empresa->id;
+					$cuadricula->imagen = "local2.png";
+					$cuadricula->imagen2 = "fon1.png";
+					$cuadricula->imagen3 = "fon1.png";
+					$cuadricula->imagen4 = "fon1.png";
+					$cuadricula->imagen5 = "fon1.png";
+					$cuadricula->imagen6 = "fon1.png";
+					$cuadricula->imagen7 = "fon1.png";
+					$cuadricula->imagen8 = "fon1.png";
+					$cuadricula->imagen9 = "fon1.png";
+					$cuadricula->Nombre = Input::get('nombre_publico');
+					$cuadricula->imgsector = "botella.png";
+
+			$cuadricula->save();
 				return Redirect::to('/')
 					->with('message-alert', 'Felicidades has creado exitosamente tu empresa');
 			}
