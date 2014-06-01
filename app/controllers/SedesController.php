@@ -66,6 +66,7 @@ class SedesController extends BaseController{
 			
 			}
 		}
+		$sus = Suscripcion::where('empresa', '=', Input::get('empresa_id'))->update(array('pro_id' => $producto->id,'pro_name'=>$producto->nombre));
 		
 		$almacen = new Almacen();
 		$almacen->producto = $producto->id;

@@ -41,14 +41,7 @@
 						</a>
 					</li>
 
-					<li>
-						<a href="#Ntab" data-toggle="tab">
-							<span class="block text-center">
-								<i class="fa fa-tags fa-2x"></i> 
-							</span>
-							Nuevo tab
-						</a>
-					</li>
+				
 
 						<li>
 						<a href="#preguntas" data-toggle="tab">
@@ -366,60 +359,7 @@
 							</div><!-- /tab3 -->
 
 
-							<div class="tab-pane fade" id="Ntab">
-								
-								<div class="row">
-									<div class="panel panel-info pull-right">
-										<div class="panel-body">
-											Ultima Actualizacion Abril 2, 2014
-										</div>
-									</div><!-- /panel -->
-								</div><!-- /.row -->
-								
-								<div class="panel panel-default">
-									<form class="form-horizontal form-border">
-										<div class="panel-heading">
-											<h2>Crear Nuevo Tab</h2>
-										</div>
-										<div class="panel-body">
-											<div class="form-group">
-												<label class="control-label col-md-2">Sector</label>												
-												<div class="col-md-10">
-													<select>
-														<option>- Escoger Sector -</option>
-													</select>
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
-											
-											<div class="form-group">
-												<label class="control-label col-md-2">Nombre Tab</label>
-												<div class="col-md-10">
-													<input type="text" class="form-control input-sm" value="">
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
-										
-											<div class="form-group">
-												<label class="control-label col-md-2">Descripcion Breve</label>
-												<div class="col-md-10">
-													<textarea class="form-control" rows="3"></textarea>
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
-
-										
-										
-										</div>
-										<div class="panel-footer">
-											<div class="text-right">
-												<button class="btn btn-sm btn-success">	Crear Tab</button>
-												
-											</div>
-										</div>
-									</form>
-								</div><!-- /panel -->
-							
-								
-							
-							</div><!-- /tab4 -->
+			
 
 
 
@@ -511,6 +451,7 @@
 												</div><!-- /form-group -->
 
 											<div class="text-right">
+												<input type="hidden" name="empresa_id" value="{{$user->empresa->id}}">
 												<button class="btn btn-info quick-btn btn-sombra" type="submit">
 												<i class="fa fa-plus-circle"></i>	Crear</button>
 												

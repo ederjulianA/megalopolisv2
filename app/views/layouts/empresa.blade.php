@@ -432,10 +432,7 @@
 							<ul class="submenu">
 								<li><a href="{{ URL::route('cambiar-imagen')}}"><span class="submenu-label">Cambiar Imagen</span></a></li>
 								<li><a href="{{ URL::route('nueva-sede')}}"><span class="submenu-label">Sedes</span></a></li>
-								<li><a href="#"><span class="submenu-label">Nuevo Producto</span></a></li>
-								<li><a href="#"><span class="submenu-label">Nueva Promocion</span></a></li>
-								<li><a href="#"><span class="submenu-label">Nuevo Tab</span></a></li>
-								<li><a href="#"><span class="submenu-label">#</span></a></li>
+								
 								
 							</ul>
 						</li>

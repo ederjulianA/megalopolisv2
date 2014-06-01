@@ -88,13 +88,13 @@
 							</li>
 
 							@if(Auth::check())
-								<li> 
+							<!--<li> 
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="fa fa-bell fa-lg"></i>
 								<span class="notification-label bounceIn animation-delay6">7</span>
 								</a>
 									@if(Auth::user()->tipo == 1)
-											<ul class="dropdown-menu notification dropdown-3">
+									<ul class="dropdown-menu notification dropdown-3">
 										<li><a href="#">Tienes 5 notificaciones</a></li>					  
 										<li>
 											<a href="#">
@@ -129,7 +129,7 @@
 
 									@endif
 									
-							</li>
+							</li>-->
 
 							@if(Auth::user()->tipo == 2)
 							<li>
@@ -157,7 +157,7 @@
 								@if(Auth::user()->tipo == 1)
 									<li><a tabindex="-1" href="{{URL::route('perfil')}}" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@else
-									<li><a tabindex="-1" href="/mega/perfil" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
+									<li><a tabindex="-1" href="{{URL::route('mega-perfil')}}" class="main-link"><i class="fa fa-edit fa-lg"></i> Editar Perfil</a></li>
 								@endif
 								
 								@if(Auth::user()->tipo == 1)

@@ -21,6 +21,14 @@ Mis suscripciones
 										<div class="panel-body">	
 											<div class="search-header">
 												<a href="#" class="h4 inline-block">{{$sub->nombre_publico}}</a>
+													@if($sub->pro_id != null)
+						<a href="{{URL::route('productos',array('id'=>$sub->pro_id))}}" class="label label-warning"><i class=" fa fa-bell"></i> Nuevo: {{$sub->pro_name}}</a>	
+
+													@else
+														<span class="label label-success">No hay notificaciones</span>
+
+													@endif
+
 											</div>
 											
 											<div class="seperator"></div>

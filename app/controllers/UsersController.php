@@ -31,17 +31,19 @@ class UsersController extends BaseController{
 		}else{
 			$user_id = Auth::user()->id;
 
-			$subs = DB::table('user_subs')
-			->join('users','users.id','=','user_subs.user')
-			->join('empresas','empresas.id','=','user_subs.empresa')
-			->select('users.username',
-					'empresas.id',
-					'empresas.nombre_publico',
-					'empresas.desc_breve',
-					'empresas.desc_larga',
-					'empresas.logo'
+			$subs = DB::table('user_subs as us')
+			->join('users as u','u.id','=','us.user')
+			->join('empresas as e','e.id','=','us.empresa')
+			->select('u.username',
+					'e.id',
+					'us.pro_id',
+					'us.pro_name',
+					'e.nombre_publico',
+					'e.desc_breve',
+					'e.desc_larga',
+					'e.logo'
 				)
-			->where('user','=', $user_id)->get();
+			->where('us.user','=', $user_id)->get();
 
 			return View::make('mega.suscripcion')->with('subs', $subs);
 

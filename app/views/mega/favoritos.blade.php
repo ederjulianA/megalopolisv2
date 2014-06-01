@@ -35,7 +35,7 @@
 											</p>
 											<hr>
 											<p>
-											<a href="/catalogo/{{{$fav->nombre_sede}}}" >{{$fav->nombre_sede}}</a><br>
+											<a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$fav->nombre_sede))}}" >{{$fav->nombre_sede}}</a><br>
 											
 											@if(Auth::check() && Auth::user()->tipo == 1)
 												
