@@ -118,7 +118,9 @@ class EmpresasController  extends BaseController {
 	{
 		$validator = Validator::make(Input::all(),
 				array(
-						'nuevo_logo' => 'required'
+						'nuevo_logo' => 'required|image|mimes:jpeg,jpg,bmp,png,gif'
+
+
 					)
 
 			);

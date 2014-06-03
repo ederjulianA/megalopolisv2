@@ -5,8 +5,10 @@ class HomeController extends BaseController {
 
 
 	public function getIndex()
+
 	{
-		return View::make('index');
+		$empresas = Empresa::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(4)->get();
+		return View::make('index')->with('empresas',$empresas);
 	}
 
 	public function getLogin(){
