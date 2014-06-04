@@ -387,6 +387,7 @@ $('#contador-res').html(cambio);
 		$(document).on("click","a.cat-lista", function(e){
 			var cat = $(this).attr('href');
 			$('.empresas-container').empty();
+
 			$('#sel-ciudades').val(0);
 			$('#sel-barrio').empty();
 			
@@ -400,6 +401,7 @@ $('#contador-res').html(cambio);
 			success : function(data){
 
 				if(data != null){
+					$('.loader-container').html("<div class='loader-ajax'><img src='img/mega-imgs/723.gif' /></div>");
 					for(var i in data){
 						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a></p></div>";
 							
@@ -408,6 +410,8 @@ $('#contador-res').html(cambio);
 
 						
 					}
+
+					$('.loader-container').html("");
 
 					
 

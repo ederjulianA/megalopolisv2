@@ -55,8 +55,12 @@ Empresas en megalopolis
 										</form>
 									
 								</div>
-
+									<div class="loader-container"></div>
 								<div class="empresas-container">
+									
+
+										
+									
 
 									@foreach($empresas as $empresa)
 											<!--<div class="empresa fadeInDown animation-delay2" >

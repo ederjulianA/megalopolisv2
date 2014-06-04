@@ -1,11 +1,11 @@
 @extends('layouts.users')
 
 @section('titulo')
-	{{$producto->producto_nombre}}
+Landing Producto
 @stop
 
 @section('content')
-		<div id="main-container">
+	<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
 					<div class="col-md-11">	
@@ -23,8 +23,8 @@
 										<div class="seperator"></div>
 										
 										<div class="image-wrapper">
-											<a class="image-wrapper " href="#">
-												<img src="{{asset($producto->imagen)}}" alt="{{$producto->producto_nombre}}" width="50%;">
+											<a class="image-wrapper " href="img/productos/gafas.jpg">
+												<img src="{{$producto->imagen}}" alt="{{$producto->producto_nombre}}" width="50%;">
 												<div class="image-overlay"></div>	
 											</a>
 										</div><!-- /image-wrapper -->
@@ -34,7 +34,7 @@
 										</p>
 										<blockquote>
 											<p>{{$producto->categoria_nombre}}</p>
-											<small>{{$producto->nombre_sub}} <cite title="Source Title"></cite></small>
+											<small>{{$producto->nombre_sub}} <cite title="Source Title">Source Title</cite></small>
 										</blockquote>
 										<p class="m-top-sm m-bottom-sm">
 											<span class="precio-producto-2">${{$producto->precio_detal}}</span>
@@ -83,8 +83,8 @@
 									<div class="media popular-post">
 
 
-										<a class="pull-left" href="{{URL::route('productos',array('id'=>$mp->id))}}">
-											<img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}">
+										<a class="pull-left" href="single_post.html">
+											<img src="{{$mp->imagen}}" alt="{{$mp->nombre}}">
 										</a>
 										<div class="media-body">
 											{{$mp->nombre}} 
@@ -131,7 +131,4 @@
 			</div><!-- /.padding-md -->
 		</div><!-- /main-container -->
 	</div><!-- /wrapper -->
-	
 @stop
-
-

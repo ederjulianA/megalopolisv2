@@ -525,6 +525,13 @@ ul.menu-sedes li {
  	color: #f90;
  }
 
+ .precio-producto-2{
+ 	text-align: center;
+ 	font-size: 3em;
+ 	font-weight: bold;
+ 	letter-spacing: inherit;
+ }
+
  .promo-desc-porcentaje{
 
  	background-color: #f90;

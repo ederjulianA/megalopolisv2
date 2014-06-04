@@ -16,6 +16,13 @@ Route::get('/', array(
 		'uses' => 'HomeController@getIndex'
 	));
 
+
+/* RUTA HOME  */
+Route::get('/landingProd', array(
+		'as' => 'landingProd',
+		'uses' => 'ProductosController@landingPro2'
+	));
+
 /* LANDING  */
 Route::get('/landing', array(
 		'as' => 'landing',
