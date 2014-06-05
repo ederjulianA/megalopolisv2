@@ -107,7 +107,7 @@
 
 						<div class="link-publico">
 							<h3>Comparte el link de tu empresa en tus redes sociales:</h3>
-							<span class="label label-success">https://megalopolis.com/<br>empresa/{{$empresa->nombre_publico}}</span>
+							<span class="label label-success">http://tumegalopolis.com/public/<br>empresa/{{$empresa->nombre_publico}}</span>
 							
 						</div>
 

@@ -18,6 +18,7 @@ class SedesController extends BaseController{
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
 													'producto.imagen',
+													'producto.imgSmall',
 													'producto.id',
 													'producto.descripcion AS producto_descripcion',
 													'categorias.nombre AS categoria_nombre',
@@ -47,9 +48,11 @@ class SedesController extends BaseController{
 		
 		$codigoIMG = str_random(13);
 		$filename = date('Y-m-d-H')."-".$codigoIMG."-".$file->getClientOriginalName();
-		Image::make($file->getRealPath())->resize(500, 500)->save(public_path().'/img/products/'.$filename);
+		Image::make($file->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+		Image::make($file->getRealPath())->resize(120, 100)->save(public_path().'/img/products/img-lista/'.$filename);
 		
 		$producto->imagen = 'img/products/'.$filename;
+		$producto->imgSmall = 'img/products/img-lista/'.$filename;
 		
 		$producto->save();
 		

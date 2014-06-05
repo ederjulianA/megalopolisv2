@@ -65,6 +65,7 @@
 
 
 
+
 										<!--  SLIDER DE IMAGENES UTILIZANDO JAVASCRIPT Y BOOTSTRAP-->
 
 				<div class="panel panel-default">
@@ -218,7 +219,9 @@
 										<h1 class = 'My-Circle' title = 'Unidades disponibles'>
 											{{$producto->cantidad}}
 										</h1>
-										<img src = '{{asset($producto->imagen)}}' class="img-producto-lista" />
+										
+						
+										<img src = '{{asset($producto->imgSmall)}}' class="img-producto-lista" />
 										<div class="caption">
 											<h1 class = 'My-Title' style="height:80px;">
 												{{$producto->producto_nombre}}

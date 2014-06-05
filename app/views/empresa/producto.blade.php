@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+
 		<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
@@ -24,10 +25,10 @@
 										
 										<div class="image-wrapper">
 											<a class="image-wrapper " href="#">
-												<img src="{{asset($producto->imagen)}}" alt="{{$producto->producto_nombre}}" width="50%;">
-												<div class="image-overlay"></div>	
+												<img src="{{asset($producto->imagen)}}" alt="{{$producto->producto_nombre}}" width="">
+													
 											</a>
-										</div><!-- /image-wrapper -->
+										</div><!-- /image-wrapper  -->
 																		
 										<p class="m-top-sm m-bottom-sm">
 											{{$producto->producto_descripcion}}
