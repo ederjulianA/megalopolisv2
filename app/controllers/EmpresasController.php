@@ -1,5 +1,6 @@
 <?php
 
+//Este es un comentario de prueba ¡Hala Madrid! 
 // import the Intervention Image Class
 use Intervention\Image\Image;
 
