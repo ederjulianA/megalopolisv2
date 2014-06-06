@@ -18,13 +18,14 @@ class ProductosController  extends BaseController {
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.id',
+				 'p.estado',
 				 'p.descripcion AS producto_descripcion',
 				 's.nombre_publico AS nombre_sede',
 				 's.direccion',
 				 's.telefono',
 				 'sc.nombre_sub'
 			 )
-		 ->where('p.id','=',$id)->first();
+		 ->where('p.id','=',$id)->where('p.estado','=',1)->first();
 
 		 $tags = Tag::where('producto','=',$id)->get();
 		$img = $producto->imagen;
