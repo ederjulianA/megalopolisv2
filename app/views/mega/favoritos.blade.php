@@ -18,7 +18,7 @@
 										<h1 class = 'My-Circle' title = 'Unidades disponibles'>
 											{{$fav->cantidad}}
 										</h1>
-										<img src = '{{asset($fav->imagen)}}' class="img-producto-lista" />
+										<img src = '{{asset($fav->imgSmall)}}' class="img-producto-lista" />
 										<div class="caption">
 											<h1 class = 'My-Title' style="height:80px;">
 												{{$fav->producto_nombre}}

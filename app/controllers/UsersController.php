@@ -70,6 +70,7 @@ class UsersController extends BaseController{
 					'almacen.precio_detal',
 					'sedes.nombre_publico AS nombre_sede',
 					'producto.imagen',
+					'producto.imgSmall',
 					'producto.id',
 					'producto.descripcion AS producto_descripcion',
 					'categorias.nombre AS categoria_nombre',
