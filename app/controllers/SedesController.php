@@ -48,7 +48,7 @@ class SedesController extends BaseController{
 		
 		$codigoIMG = str_random(13);
 		$filename = date('Y-m-d-H')."-".$codigoIMG."-".$file->getClientOriginalName();
-		Image::make($file->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+		Image::make($file->getRealPath())->resize(null, 450, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 		Image::make($file->getRealPath())->resize(120, 100)->save(public_path().'/img/products/img-lista/'.$filename);
 		
 		$producto->imagen = 'img/products/'.$filename;

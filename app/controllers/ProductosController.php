@@ -8,7 +8,7 @@ class ProductosController  extends BaseController {
 	$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')
 		 ->join('categorias as c','p.categoria','=','c.id')
-		 ->join('subcategorias as sc','sc.categoria_id','=','c.id')
+		 ->join('subcategorias as sc','p.subcat_id','=','sc.id')
 		 ->join('empresas as e', 's.empresa_id','=','e.id')
 		 ->select('a.precio_detal',
 				 'a.cantidad',

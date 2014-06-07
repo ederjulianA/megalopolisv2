@@ -4,7 +4,39 @@
 	{{$producto->producto_nombre}}
 @stop
 
+
+@section('content-page')
+	<meta name="description" content="{{$producto->producto_descripcion}}">
+    <meta name="author" content="Megalopolis TEAM">
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{$producto->producto_nombre}}"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="{{$producto->desc_breve}}"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/producto/{{$producto->id}}"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/{{$producto->imagen}}"/>
+
+@stop
+
 @section('content')
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 		<div id="main-container">
 			<div class="padding-md">
@@ -49,15 +81,16 @@
 										<div class="share-blog clearfix">
 											<span class="pull-left" style="line-height: 25px;">Comparte este Producto</span>
 											<div class="pull-right">
-												<a href="#" class="social-connect tooltip-test facebook-hover" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-												<a href="#" class="social-connect tooltip-test twitter-hover" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-												<a href="#" class="social-connect tooltip-test google-plus-hover" data-toggle="tooltip" data-original-title="Google Plus"><i class="fa fa-google-plus"></i></a>
-												<a href="#" class="social-connect tooltip-test rss-hover" data-toggle="tooltip" data-original-title="Rss feed"><i class="fa fa-rss"></i></a>
+												<div class="fb-share-button" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}" data-width="50" data-type="button_count"></div>
+												
 											
 											</div>
 										</div>
 									</div>
 								</div><!-- /panel -->
+
+								<!-- FACEBOOK COMMENTS-->
+								<div class="fb-comments" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}" data-width="350" data-numposts="5" data-colorscheme="light"></div>
 							
 								
 													

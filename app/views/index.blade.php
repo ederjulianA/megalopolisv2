@@ -4,6 +4,15 @@
 Megalopolis Colombia | El sitio para encontrar lo que tus empresas locales tienen para ofrecer
 @stop
 
+@section('content-page')
+	<meta name="description" content="En tuMegalopolis queremos darte la oportunidad de tener un catálogo de productos y servicios en cuestión de minutos con un par de clicks. Utilizamos las últimas tecnologías en cuanto a desarrollo web lo cual nos permite garantizar que tus catálogos se verán bien desde cualquier dispositivo que acceda a ellos. De igual forma nuestro panel de administración te permite gestionar tu empresa desde cualquier dispositivo.">
+    <meta name="author" content="Megalopolis TEAM">
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/img/mega-imgs/img-fb.jpg"/>
+@stop
+
 @section('content')
 		<div id="landing-content">
 			<div id="main-slider" class="carousel slide bg-dark" data-ride="carousel">
