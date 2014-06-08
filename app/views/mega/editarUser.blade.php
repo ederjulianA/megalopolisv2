@@ -27,7 +27,7 @@
 
 		<div class="div-password-user">
 			<h3>Actualizar Contraseña</h3>
-			<form method="post" action="/perfil-cambiar-pass">
+			<form method="post" action="{{URL::route('perfil-cambiar-pass')}}">
 				<div class="">
 					<label for="contrasena_actual">Contraseña actual</label>
 					<input type="password" name="contrasena_actual" id="pass_actual" placeholder="******">
