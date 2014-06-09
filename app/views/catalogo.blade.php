@@ -101,7 +101,7 @@
 											<div class="row">
 												<div class="col-sm-5">
 													<!--<img src="img/gallery6.jpg" alt="Third Slide" class="m-bottom-md" style="height:150px;">-->
-													{{ HTML::image($promo->img, $promo->titulo, array('height'=>'150px'))}}
+													{{ HTML::image($promo->img, $promo->titulo, array('max-height'=>'150px', 'width'=>'auto'))}}
 														<div class="ribbon-wrapper">
 																<div class="ribbon-inner shadow-pulse bg-danger">
 																	<span class="porcentaje-producto">- {{$promo->porcentaje}}%</span>
@@ -221,7 +221,7 @@
 										</h1>
 										
 						
-										<img src = '{{asset($producto->imgSmall)}}' class="img-producto-lista" />
+										<img src = '{{asset($producto->imagen)}}' class="img-producto-lista" />
 										<div class="caption">
 											<h1 class = 'My-Title' style="height:80px;">
 												{{$producto->producto_nombre}}

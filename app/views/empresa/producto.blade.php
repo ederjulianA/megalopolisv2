@@ -51,7 +51,7 @@
 								<div class="panel blog-container">
 									<div class="panel-body">
 										<h4>{{$producto->razon_social}}</h4>
-										<small class="text-muted">Sede <a href="#"><strong> {{$producto->nombre_sede}}</strong></a> |  {{$producto->direccion}}  | {{$producto->telefono}}</small>
+										<small class="text-muted">Sede <a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$producto->nombre_sede))}}"><strong> {{$producto->nombre_sede}}</strong></a> |  {{$producto->direccion}}  | {{$producto->telefono}}</small>
 										<div class="seperator"></div>
 										<div class="seperator"></div>
 										
@@ -118,7 +118,7 @@
 
 
 										<a class="pull-left" href="{{URL::route('productos',array('id'=>$mp->id))}}">
-											<img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}">
+											<img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}" style="max-height: 100px; width: auto;">
 										</a>
 										<div class="media-body">
 											{{$mp->nombre}} 
