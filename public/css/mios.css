@@ -158,6 +158,10 @@ ul.menu-sedes li {
 	height: 100%;
 }
 
+.contenedor-gallery{
+	width: 100%;
+}
+
 .contenedor-perfil h2 {
 	font-size: 30px;
 	font-weight: bold;

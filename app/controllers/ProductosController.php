@@ -17,6 +17,9 @@ class ProductosController  extends BaseController {
 				 'e.desc_breve',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
+				 'p.img1',
+				 'p.img2',
+				 'p.img3',
 				 'p.id',
 				 'p.estado',
 				 'p.descripcion AS producto_descripcion',
@@ -29,7 +32,8 @@ class ProductosController  extends BaseController {
 
 		 $tags = Tag::where('producto','=',$id)->get();
 		$img = $producto->imagen;
-	
+
+		
 		 $masProductos =  Producto::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
 		
 

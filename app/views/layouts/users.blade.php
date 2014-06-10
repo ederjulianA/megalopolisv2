@@ -43,6 +43,11 @@
 	
 	<!-- Pace -->
 	{{ HTML::style('css/pace.css', array('media' => 'screen'))}}
+
+	<!-- color box -->
+	{{ HTML::style('css/colorbox/colorbox.css', array('media' => 'screen'))}}
+
+
 	
 	
 	<!-- Full Calendar -->
@@ -226,6 +231,10 @@
 	<!-- Bootstrap -->
 	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
 
+
+	<!-- color box -->
+	{{ HTML::script('js/jquery.colorbox.min.js')}}
+
 	<!-- Waypoint -->
 	{{ HTML::script('js/waypoints.min.js')}}
 
@@ -275,6 +284,17 @@
 			}, { offset: '70%' });
 			
 			$('.nav').localScroll({duration:800});
+		});
+	</script>
+
+	<script>
+		$(function()	{
+			//Colorbox 
+			$('.gallery-zoom').colorbox({
+				rel:'gallery',
+				maxWidth:'90%',
+				width:'800px'
+			});
 		});
 	</script>
 
