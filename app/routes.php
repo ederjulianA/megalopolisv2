@@ -350,3 +350,10 @@ Route::post('mapa', array(
 		'as' => 'mapa',
 		'uses' => 'EmpresasController@postMapa'
 ));
+
+//Ruta de prueba
+Route::get('/prueba-carlos', array(
+		'as' => 'pruCarlos',
+		'uses' => 'HomeController@getCarlos'
+	));
+
