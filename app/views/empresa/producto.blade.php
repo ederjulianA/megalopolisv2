@@ -203,13 +203,16 @@
 
 
 									<div class="col-md-4">
-										<form>
+										<form method="get" action="{{URL::route('buscador')}}">
 											<div class="form-group">
 												<div class="input-group">
-													<input type="text" class="form-control input-sm" placeholder="Buscar Producto...">
+												
+													<input type="text" name="buscador" id="buscador" class="form-control input-sm" placeholder="Buscar Producto..." required>
 													<span class="input-group-btn">
-														<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
+
+														<button class="btn btn-default btn-sm" type="submit"><i class="fa fa-search"></i></button>
 													</span>
+												
 												</div><!-- /input-group -->
 											</div><!-- /form-group -->
 										</form>

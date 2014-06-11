@@ -51,7 +51,7 @@ Empresas en megalopolis
 										<form method="get" action="{{URL::route('buscador')}}" >
 
 											<input type="text" name="buscador" id="buscador" placeholder="Buscas algo en especifico ?" required><input type="submit" value="Buscar" class="btn btn-danger">
-											{{Form::token()}}
+											
 										</form>
 									
 								</div>

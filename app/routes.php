@@ -29,6 +29,12 @@ Route::get('/landing', array(
 		'uses' => 'HomeController@getLanding'
 	));
 
+/* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
+Route::get('/categorias/{id}', array(
+		'as' => 'categorias-producto',
+		'uses' => 'CategoriasController@getCategorias'
+	));
+
 
 /* BUSCADOR */
 Route::get('/buscador', array(
