@@ -89,7 +89,12 @@
 							<li>
 								<a href="{{URL::route('navegar')}}" class="top-link">Home</a>
 							</li>
-
+							@if (Auth::check())
+							@else 
+							<li>
+								<a href="{{URL::route('login')}}" class="top-link">Login</a>
+							</li>
+							@endif
 							@if(Auth::check())
 							<!--<li> 
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">
