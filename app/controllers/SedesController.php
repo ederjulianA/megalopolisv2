@@ -11,7 +11,15 @@ class SedesController extends BaseController{
 
 		if($sede->count()){
 			$sede = $sede->first();
+			$empresaid = $sede->empresa->id;
+
+			$suscriptores = DB::table('user_subs as us')->join('empresas as e','us.empresa','=','e.id')
+			->select('e.id')
+			->where('us.empresa','=', $empresaid)->get();
+
+			$num_suscriptores = count($suscriptores);
 			$num_promos = $sede->promocion->count();
+
 
 			$productos = Producto::where('sede','=',$sede->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
 													->join('categorias', 'producto.categoria', '=', 'categorias.id')
@@ -31,7 +39,7 @@ class SedesController extends BaseController{
 				$producto->tags = $tags;
 			}
 
-			return View::make('catalogo')->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
+			return View::make('catalogo')->with('numSusc', $num_suscriptores)->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
 		}else{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}

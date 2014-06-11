@@ -58,6 +58,11 @@
 										<span class="block font-14">{{$num_promos}}</span>
 										<small class="text-muted">Promociones</small>
 									</div><!-- /.col -->
+
+									<div class="col-xs-4 text-center">
+										<span class="block font-14">{{$numSusc}}</span>
+										<small class="text-muted">Suscriptores</small>
+									</div><!-- /.col -->
 									
 								</div><!-- /.row -->
 							</div>

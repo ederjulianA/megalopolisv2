@@ -125,10 +125,10 @@ Empresas en megalopolis
 												     {  
 												      if(!isset($this->conexion))
 												      {  
-												      $this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
-												     //$this->conexion = (mysql_connect("localhost","root","")) or die(mysql_error());  
-												      //mysql_select_db("megalopolis",$this->conexion) or die(mysql_error());  
-												      mysql_select_db("tumegalo_datos",$this->conexion) or die(mysql_error());  
+												     // $this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
+												     $this->conexion = (mysql_connect("localhost","root","")) or die(mysql_error());  
+												      mysql_select_db("megalopolis",$this->conexion) or die(mysql_error());  
+												     // mysql_select_db("tumegalo_datos",$this->conexion) or die(mysql_error());  
 												      }  
 												      }  
 												     public function consulta($consulta){  
