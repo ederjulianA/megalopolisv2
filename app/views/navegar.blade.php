@@ -83,7 +83,7 @@ Empresas en megalopolis
 														<div class="detail fadeInUp animated-element empresa">
 														<a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}" class="hoverBorder">
 															<span class="hoverBorderWrapper">
-																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'170px','height'=> '90px'))}}
+																{{HTML::image($empresa->logo, $empresa->razon_social, array('width'=>'auto','height'=> '90px'))}}
 																<span class="hoverBorderInner"></span>
 																<span class="readMore">{{$empresa->sector->nom_sector}}</span>
 															</span>	
@@ -125,10 +125,10 @@ Empresas en megalopolis
 												     {  
 												      if(!isset($this->conexion))
 												      {  
-												      //$this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
-												     $this->conexion = (mysql_connect("localhost","root","")) or die(mysql_error());  
-												      mysql_select_db("megalopolis",$this->conexion) or die(mysql_error());  
-												      //mysql_select_db("tumegalo_datos",$this->conexion) or die(mysql_error());  
+												      $this->conexion = (mysql_connect("localhost","tumegalo_eder","eder4EVER")) or die(mysql_error());
+												     //$this->conexion = (mysql_connect("localhost","root","")) or die(mysql_error());  
+												      //mysql_select_db("megalopolis",$this->conexion) or die(mysql_error());  
+												      mysql_select_db("tumegalo_datos",$this->conexion) or die(mysql_error());  
 												      }  
 												      }  
 												     public function consulta($consulta){  

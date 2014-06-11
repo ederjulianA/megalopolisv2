@@ -525,6 +525,9 @@
 	<!-- Bootstrap -->
 	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
 
+	<!-- functions -->
+	{{ HTML::script('js/functions.js')}}
+
 
 		<!-- chosen -->
 	{{ HTML::script('js/chosen.jquery.min.js')}}

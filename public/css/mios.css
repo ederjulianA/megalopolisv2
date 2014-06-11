@@ -26,7 +26,7 @@ div.productos-container .producto {
 }
 
 img.img-info-empresa {
-	border : 4px solid #EF6D17;
+	border : 2px solid #EF6D17;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -39,7 +39,7 @@ img.img-info-empresa {
 	right: 5px;
 	top: 5px;
 	width: 200px;
-	height: 110px;
+	height: auto;
 }
 
 textarea {
@@ -765,6 +765,35 @@ ul.menu-sedes li {
 }
 
 
+
+/*ESTILOS PARA UPLOADER DE IMAGENES*/
+
+.thumbnail-preview{
+	margin: 5px auto;
+	
+	width: 550px;
+	border: 1px;
+	
+}
+
+#preview {
+    position: relative;
+}
+#preview a {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    display: none;
+}
+#file-info {
+    text-align: center;
+    display: block;
+}
+input[type=file] {
+    position: absolute;
+
+}
 
 
 

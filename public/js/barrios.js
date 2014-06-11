@@ -15,9 +15,70 @@ $(document).ready(function(){
 		subcategorias();
 	});
 
+	preview_1();
+	preview_2();
+	preview_3();
+
 	
 
 });
+
+function preview_1()
+{
+	$('#imagen').change(function(){
+			var file = (this.files[0].name).toString();
+        var reader = new FileReader();
+        
+        $('#file-info').text('');
+        $('#file-info').text(file);
+        
+         reader.onload = function (e) {
+             $('#preview1 img').attr('src', e.target.result);
+    	 }
+         
+         reader.readAsDataURL(this.files[0]);
+
+	});
+}
+
+
+function preview_3()
+{
+	$('#imagen3').change(function(){
+			var file = (this.files[0].name).toString();
+        var reader = new FileReader();
+        
+        $('#file-info').text('');
+        $('#file-info').text(file);
+        
+         reader.onload = function (e) {
+             $('#preview3 img').attr('src', e.target.result);
+    	 }
+         
+         reader.readAsDataURL(this.files[0]);
+
+	});
+}
+
+
+
+function preview_2()
+{
+	$('#imagen2').change(function(){
+			var file = (this.files[0].name).toString();
+        var reader = new FileReader();
+        
+        $('#file-info').text('');
+        $('#file-info').text(file);
+        
+         reader.onload = function (e) {
+             $('#preview2 img').attr('src', e.target.result);
+    	 }
+         
+         reader.readAsDataURL(this.files[0]);
+
+	});
+}
 $(document).on("click","#btn-hacer-pregunta", function(e){
 	var pregunta = $('#pregunta-user').val();
 	var id_empresa = $('#empresa_id').val();
@@ -403,7 +464,7 @@ $('#contador-res').html(cambio);
 				if(data != null){
 					$('.loader-container').html("<div class='loader-ajax'><img src='img/mega-imgs/723.gif' /></div>");
 					for(var i in data){
-						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a></p></div>";
+						var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='auto' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a></p></div>";
 							
 								
 							$('.empresas-container').append(empresas);
@@ -440,7 +501,7 @@ function lista_empresas()
 
 			if(data != null){
 				for(var i in data){
-					var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='170px' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a>  </p></div>";
+					var empresas = "<div class='detail fadeInUp animated-element empresa'><a href='/empresa/"+data[i].nombre_publico+"' class='hoverBorder'><span class='hoverBorderWrapper'><img src="+data[i].logo+" width='auto' height='90px'><span class='hoverBorderInner'><span class='readMore'>"+data[i].sector.nom_sector+"</span></span>  </span></a> <div class='seperator'></div>  <p><h4><span class='label label-success'>"+data[i].razon_social+"</span></h4><small>"+data[i].desc_breve+"</small></p><p><a href='/empresa/"+data[i].nombre_publico+"' class='btn btn-info'>contacto</a>  </p></div>";
 						
 							
 						$('.empresas-container').append(empresas);

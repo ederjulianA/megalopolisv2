@@ -6,7 +6,8 @@
 				<div class="row">
 						<div class="col-md-4">
 							<h2>Imagen Actual</h2>
-							{{ HTML::image($user->empresa->logo)}}
+							{{ HTML::image($user->empresa->logo,'logo')}}
+							
 							
 						</div>
 						<div class="col-md-8">
@@ -14,7 +15,7 @@
 							<form method="post" action="{{ URL::route('cambiar-imagen-post')}}" enctype="multipart/form-data">
 								<label>Nuevo Logo</label>
 								<input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
-								<input type="file" name="nuevo_logo">
+								<input type="file" name="nuevo_logo" required>
 
 								<input type="submit" value="Actualizar" class="btn btn-info">
 
@@ -24,7 +25,27 @@
 							
 						</div>
 
+
+
 				</div>
+
+
+				<div class="row">
+
+				<div class="contenedor-img-preview" style="width:360px; height:250px; margin:0 auto;">
+						<div id="preview" class="thumbnail-preview">
+	   
+	    <img src="" style="width:350px; height:auto; "  />
+
+	</div>
+					
+				</div>
+	
+	
+
+	
+							
+						</div>
 			
 
 		</div>

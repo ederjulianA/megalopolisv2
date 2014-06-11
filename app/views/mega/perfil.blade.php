@@ -434,6 +434,36 @@
 												<div class="col-md-10">
 													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  >
 												</div><!-- /.col -->
+												<div id="preview1" style="height:150px; width:auto; margin:0 auto;">
+
+													<img src=""/ style="width:auto; height:150px; ">
+													
+												</div>
+											</div><!-- /form-group -->
+
+											<div class="form-group">
+												<label class="control-label col-md-2">2da imagen:</label>												
+												<div class="col-md-10">
+													<input id = 'imagen2' name = 'imagen2' type="file" class="upload-demo"  >
+												</div><!-- /.col -->
+												<div id="preview2" style="height:150px; width:auto; margin:0 auto;">
+
+													<img src=""/ style="width:auto; height:150px; ">
+													
+												</div>
+											</div><!-- /form-group -->
+
+
+											<div class="form-group">
+												<label class="control-label col-md-2">3ra imagen:</label>												
+												<div class="col-md-10">
+													<input id = 'imagen3' name = 'imagen3' type="file" class="upload-demo"  >
+												</div><!-- /.col -->
+												<div id="preview3" style="height:150px; width:auto; margin:0 auto;">
+
+													<img src=""/ style="width:auto; height:150px; ">
+													
+												</div>
 											</div><!-- /form-group -->
 											
 											<div class="form-group">

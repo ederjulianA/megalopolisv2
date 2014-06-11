@@ -45,6 +45,26 @@ class SedesController extends BaseController{
 		$producto->categoria = Input::get('category');
 		$producto->subcat_id = Input::get('subcat');
 		$file = Input::file('imagen');
+		$file2 = Input::file('imagen2');
+		$file3 = Input::file('imagen3');
+
+		if(isset($file2)){
+			$codigoIMG2 = str_random(13);
+			$filename2 = date('Y-m-d-H')."-".$codigoIMG2."-".$file2->getClientOriginalName();
+		//Image::make($file2->getRealPath())->resize(450, null, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/img-lista/'.$filename2);
+		Image::make($file2->getRealPath())->resize(720, 480, true )->save(public_path().'/img/products/img-lista/'.$filename2);
+		$producto->img1 = 'img/products/img-lista/'.$filename2;
+
+		}
+
+		if(isset($file3)){
+			$codigoIMG3 = str_random(13);
+			$filename3 = date('Y-m-d-H')."-".$codigoIMG3."-".$file3->getClientOriginalName();
+		//Image::make($file2->getRealPath())->resize(450, null, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/img-lista/'.$filename2);
+		Image::make($file3->getRealPath())->resize(720, 480, true )->save(public_path().'/img/products/img-lista/'.$filename3);
+		$producto->img2 = 'img/products/img-lista/'.$filename3;
+
+		}
 	
 
 
@@ -52,13 +72,13 @@ class SedesController extends BaseController{
 		
 		$codigoIMG = str_random(13);
 		$filename = date('Y-m-d-H')."-".$codigoIMG."-".$file->getClientOriginalName();
-		Image::make($file->getRealPath())->resize(null, 450, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
-		Image::make($file->getRealPath())->resize(120, 100)->save(public_path().'/img/products/img-lista/'.$filename);
+		//Image::make($file->getRealPath())->resize(null, 450, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+		Image::make($file->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
 
 			
 		
 		$producto->imagen = 'img/products/'.$filename;
-		$producto->imgSmall = 'img/products/img-lista/'.$filename;
+		//$producto->imgSmall = 'img/products/img-lista/'.$filename;
 		
 		$producto->save();
 		

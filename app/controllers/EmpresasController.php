@@ -139,7 +139,8 @@ class EmpresasController  extends BaseController {
 				$logo = Input::file('nuevo_logo');
 				$codigoIMG = str_random(13);
 				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".$empresa->nombre_publico.".jpg";
-				Image::make($logo->getRealPath())->resize(null, 200, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
+				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
+				Image::make($logo->getRealPath())->resize(720, 480, true)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
 				return Redirect::to('/mega/cambiar/imagen')
@@ -255,7 +256,7 @@ class EmpresasController  extends BaseController {
 			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
 			$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
-			Image::make($logo->getRealPath())->resize(500, 500)->save(public_path().'/img/empresas/'.$filename);
+			Image::make($logo->getRealPath())->resize(null, 200, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->barrio = Input::get('barrio');
