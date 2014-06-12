@@ -242,7 +242,7 @@
 										</h4>
 										<ul class="category">
 											@foreach($categorias as $categoria)
-												<li><a href="#"><i class="fa fa-chevron-right"></i> {{$categoria->nombre}}</a></li>
+												<li><a href="{{URL::route('categorias-producto', array('id'=>$categoria->id))}}"><i class="fa fa-chevron-right"></i> {{$categoria->nombre}}</a></li>
 
 											@endforeach
 											
