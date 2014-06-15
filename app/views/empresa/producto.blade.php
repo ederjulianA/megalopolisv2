@@ -12,7 +12,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="{{$producto->producto_nombre}}"/>
 <meta property="og:site_name" content="tuMegalopolis"/>
-<meta property="og:description" content="{{$producto->desc_breve}}"/>
+<meta property="og:description" content="{{$producto->producto_descripcion}}"/>
 <meta property="og:url" content="http://www.tumegalopolis.com/public/producto/{{$producto->id}}"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/public/{{$producto->imagen}}"/>
 
