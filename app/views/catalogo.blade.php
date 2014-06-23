@@ -26,6 +26,7 @@
 							</div><!-- /.col -->
 							<div class="col-xs-6 col-sm-12 col-md-6">
 								<strong class="font-14">{{$sede->nombre_publico}}</strong>
+								<input type="hidden" id="nombre_sede_h" value="{{$sede->nombre_publico}}">
 								<small class="block text-muted">
 									{{$sede->empresa->user->email}}
 								</small>
@@ -165,6 +166,15 @@
 
 						<div class="catalogo-header">
 							<h2>{{$sede->nombre_publico}}</h2>
+
+							<ul class="pro-categorias">
+								<li><a href="#">Todos</a></li>
+								@foreach($categorias as $cat)
+									<li><a class="lista-products" href="{{$cat->id}}">{{$cat->nombre}}</a></li>
+
+								@endforeach
+								
+							</ul>
 							
 						</div>
 						<div class="productos-container">

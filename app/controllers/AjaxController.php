@@ -282,6 +282,50 @@ Class AjaxController  extends BaseController {
 		}
 	}
 
+	public function postProducts()
+	{
+		header('Content-type: text/javascript');
+
+		if(isset($_POST['id_cat']) && isset($_POST['nom_sede'])){
+			$id_cat = $_POST['id_cat'];
+			$nomsede = $_POST['nom_sede'];
+
+
+			$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
+		 ->join('sedes as s','a.sede','=','s.id')
+		 ->join('categorias as c','p.categoria','=','c.id')
+		 ->join('subcategorias as sc','sc.categoria_id','=','sc.id')
+		 ->select('a.precio_detal',
+				 'a.cantidad',
+				 'c.nombre AS categoria_nombre',
+				 'p.nombre AS producto_nombre',
+				 'p.categoria',
+				 'p.imagen',
+				 'p.id',
+				 'p.descripcion AS producto_descripcion',
+				 's.nombre_publico AS nombre_sede',
+				 's.direccion',
+				 's.telefono',
+				 'sc.nombre_sub'
+			 )
+		 ->where('p.categoria', '=', $id_cat)
+		 ->where('s.nombre_publico','=', $nomsede)->get();
+		 $numProd = count($producto);
+
+		 if($numProd > 0){
+		 	return Response::json($producto);
+
+		 }else {
+		 	$respuesta = array('estado'=>0, 'mensaje'=>'No hay Productos');
+
+		 	return Response::json($respuesta);
+
+		 }
+
+
+		}	
+	}
+
 
 	public function postPromos()
 

@@ -18,6 +18,13 @@ Route::get('/', array(
 
 
 /* RUTA HOME  */
+Route::get('/megaStore', array(
+		'as' => 'tienda',
+		'uses' => 'TiendaController@getIndex'
+	));
+
+
+/* RUTA HOME  */
 Route::get('/landingProd', array(
 		'as' => 'landingProd',
 		'uses' => 'ProductosController@landingPro2'
@@ -178,6 +185,12 @@ Route::post('/empresa/add/pregunta', array(
 Route::post('/get/promo', array(
 		'as' => 'promos-lista',
 		'uses' => 'AjaxController@postPromos'
+	));
+
+
+Route::post('/get-products', array(
+		'as' => 'get-products',
+		'uses' => 'AjaxController@postProducts'
 	));
 
 

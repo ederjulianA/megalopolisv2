@@ -53,6 +53,52 @@ function cambiar_nombre()
 	});
 }
 
+	$(document).on("click","a.lista-products", function(e){
+
+		$(".productos-container").empty();
+
+			$.ajax({
+		url : "/get-products",
+		dataType: "json",
+		type : "post",
+		data : { id_cat : $(this).attr('href'),  nom_sede : $('#nombre_sede_h').val()},
+		success : function(data){
+
+			if(data){
+
+					if (data.estado == 0) {
+						$(".productos-container").html("<div>"+data.mensaje+"</div>");
+
+					}else{
+							for( var i in data){
+						var produc = '<div class="producto fadeInUp animation-delay4" style = "vertical-align: top;"> <div class="thumbnail"><h1 class = "My-Circle" title = "Unidades disponibles">'+data[i].cantidad+'</h1>  <img src = ../'+data[i].imagen+' class="img-producto-lista" /><div class="caption"> <h1 class = "My-Title" style="height:80px;">'+data[i].producto_nombre+'</h1> <hr><h2 class = "My-Category-Title" >'+data[i].categoria_nombre+'</h2><p><a href="/producto/'+data[i].id+'" class="label label-danger">Detalle</a> </p>  </div> </div></div>';
+						$(".productos-container").append(produc);
+						
+
+					}
+
+					}
+
+					
+					
+				
+
+			}
+			console.log(data);
+			
+
+
+		}
+		
+
+
+	});	
+
+			
+
+		e.preventDefault();
+	});
+
 	$("a.lista-promos").click( function(e){
 		//var sede_id = $(this).attr('href');
 		$('.contenedor-promos-ajax').empty();

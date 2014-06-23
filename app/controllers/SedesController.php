@@ -39,7 +39,12 @@ class SedesController extends BaseController{
 				$producto->tags = $tags;
 			}
 
-			return View::make('catalogo')->with('numSusc', $num_suscriptores)->with('sede',$sede)->with('num_promos', $num_promos)->with('productos', $productos)->with('num_productos',$num_productos);
+			return View::make('catalogo')->with('numSusc', $num_suscriptores)
+			->with('sede',$sede)
+			->with('categorias', Categoria::all())
+			->with('num_promos', $num_promos)
+			->with('productos', $productos)
+			->with('num_productos',$num_productos);
 		}else{
 			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}
