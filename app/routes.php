@@ -188,7 +188,7 @@ Route::post('/get/promo', array(
 	));
 
 
-Route::post('/get-products', array(
+Route::post('/catalogo/get-products', array(
 		'as' => 'get-products',
 		'uses' => 'AjaxController@postProducts'
 	));

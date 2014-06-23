@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Aditii Website Template | Home :: w3layouts</title>
+<title>Megalopolis Store | Publica tus productos con megalopolis Store</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Megalopolis TEAM">
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/megaStore"/>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 <!-- Estilos de la tienda megalopolis -->
     {{ HTML::style('tienda/css/style.css', array('media' => 'screen'))}}
