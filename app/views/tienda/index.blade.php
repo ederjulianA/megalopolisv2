@@ -256,7 +256,7 @@
 		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 		<!--end scroll_top_btn -->
 		<div class="copy">
-			<p class="link">&copy;  Megalopolis Company | Template by&nbsp;&nbsp;<a href="#"> W3Layouts</a></p>
+			<p class="link">&copy;  Megalopolis Company | <a href="#"> MegalopolisTEAM</a></p>
 		</div>
 		<div class="clear"></div>
 	</div>
