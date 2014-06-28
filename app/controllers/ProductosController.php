@@ -2,7 +2,7 @@
 
 class ProductosController  extends BaseController {
 
-	public function getProducto($id)
+	public function getProducto($id,$sede)
 	{
 
 	$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
@@ -25,6 +25,7 @@ class ProductosController  extends BaseController {
 				 'p.descripcion AS producto_descripcion',
 				 's.nombre_publico AS nombre_sede',
 				 's.direccion',
+				 's.id AS sede_id',
 				 's.telefono',
 				 'sc.nombre_sub'
 			 )
@@ -33,8 +34,18 @@ class ProductosController  extends BaseController {
 		 $tags = Tag::where('producto','=',$id)->get();
 		$img = $producto->imagen;
 
+		$masProductos =  DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
+		->join('sedes as s','a.sede','=','s.id')
+		->select('p.nombre',
+				'p.imagen',
+				'p.id',
+				's.id AS sede_id'
+
+			)
+		->where('s.id','=',$sede)->orderBy(DB::raw('RAND()'))->take(4)->get();
+
 		
-		 $masProductos =  Producto::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
+		 //$masProductos =  Producto::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
 		
 
 		

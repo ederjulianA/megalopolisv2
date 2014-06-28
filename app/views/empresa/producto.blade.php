@@ -13,7 +13,7 @@
 <meta property="og:title" content="{{$producto->producto_nombre}}"/>
 <meta property="og:site_name" content="tuMegalopolis"/>
 <meta property="og:description" content="{{$producto->producto_descripcion}}"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/producto/{{$producto->id}}"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/public/{{$producto->imagen}}"/>
 
 @stop
@@ -180,9 +180,9 @@
 												<div class="share-blog clearfix">
 													<span class="pull-left" style="line-height: 25px;">Comparte este Producto</span>
 													<div class="pull-right">
-														<div class="fb-share-button" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}" data-width="50" data-type="button_count"></div>
+														<div class="fb-share-button" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-width="50" data-type="button_count"></div>
 														<div>
-														<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tumegalopolis.com/public/producto/{{$producto->id}}" data-via="ederjulianA" data-lang="es" data-size="large" data-hashtags="tuMegalopolis">Twittear</a>
+														<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-via="ederjulianA" data-lang="es" data-size="large" data-hashtags="tuMegalopolis">Twittear</a>
 														</div>
 
 														
@@ -225,7 +225,7 @@
 											<div class="media popular-post">
 
 
-												<a class="pull-left" href="{{URL::route('productos',array('id'=>$mp->id))}}">
+												<a class="pull-left" href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id))}}">
 													<img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}" style="max-height: 100px; width: auto;">
 												</a>
 												<div class="media-body">

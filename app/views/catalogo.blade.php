@@ -249,7 +249,7 @@
 												Precio: <span class = 'My-Price'>${{$producto->precio_detal}}</span>
 											</p>
 											<p class = 'My-Textblock'>
-												{{ substr($producto->producto_descripcion,0,70) }}...<a href="{{URL::route('productos',array('id'=>$producto->id))}}" class="label label-danger">Detalle</a>
+												{{ substr($producto->producto_descripcion,0,70) }}...<a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}" class="label label-danger">Detalle</a>
 											</p>
 											<h1 class = 'My-Title'>
 												Etiquetas
