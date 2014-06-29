@@ -302,6 +302,7 @@ Class AjaxController  extends BaseController {
 				 'p.categoria',
 				 'p.imagen',
 				 'p.id',
+				 's.id AS sede_id',
 				 'p.descripcion AS producto_descripcion',
 				 's.nombre_publico AS nombre_sede',
 				 's.direccion',

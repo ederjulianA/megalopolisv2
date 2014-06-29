@@ -71,7 +71,7 @@ function cambiar_nombre()
 
 					}else{
 							for( var i in data){
-						var produc = '<div class="producto fadeInUp animation-delay4" style = "vertical-align: top;"> <div class="thumbnail"><h1 class = "My-Circle" title = "Unidades disponibles">'+data[i].cantidad+'</h1>  <img src = ../'+data[i].imagen+' class="img-producto-lista" /><div class="caption"> <h1 class = "My-Title" style="height:80px;">'+data[i].producto_nombre+'</h1> <hr><h2 class = "My-Category-Title" >'+data[i].categoria_nombre+'</h2><p><a href="/public/producto/'+data[i].id+'" class="label label-danger">Detalle</a> </p>  </div> </div></div>';
+						var produc = '<div class="producto fadeInUp animation-delay4" style = "vertical-align: top;"> <div class="thumbnail"><h1 class = "My-Circle" title = "Unidades disponibles">'+data[i].cantidad+'</h1>  <img src = ../'+data[i].imagen+' class="img-producto-lista" /><div class="caption"> <h1 class = "My-Title" style="height:80px;">'+data[i].producto_nombre+'</h1> <hr><h2 class = "My-Category-Title" >'+data[i].categoria_nombre+'</h2><p><a href="/public/producto/'+data[i].id+'-'+data[i].sede_id+'" class="label label-danger">Detalle</a> </p>  </div> </div></div>';
 						$(".productos-container").append(produc);
 						
 
