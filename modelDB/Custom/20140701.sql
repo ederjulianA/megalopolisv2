@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `almacen` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
 
 --
 -- Volcado de datos para la tabla `almacen`
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `barrios` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `barrios`
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -163,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `ciudades` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `ciudades`
@@ -236,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `empresas` (
   `latitude` double DEFAULT NULL,
   `longitude` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
 -- Volcado de datos para la tabla `empresas`
@@ -263,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `img_productos` (
   `img2` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   `img3` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `img_productos`
@@ -281,7 +281,7 @@ INSERT INTO `img_productos` (`id`, `producto_id`, `img1`, `img2`, `img3`) VALUES
 CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `migrations`
@@ -306,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `preguntas` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=31 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `preguntas`
@@ -350,10 +350,8 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `estado` int(11) NOT NULL DEFAULT '1',
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
-  PRIMARY KEY (`id`),
-  FULLTEXT KEY `imagen` (`imagen`),
-  FULLTEXT KEY `imagen_2` (`imagen`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=53 ;
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=53 ;
 
 --
 -- Volcado de datos para la tabla `producto`
@@ -429,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `promociones` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `promociones`
@@ -463,7 +461,7 @@ CREATE TABLE IF NOT EXISTS `sectores` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `sectores`
@@ -493,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `sedes` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=17 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=17 ;
 
 --
 -- Volcado de datos para la tabla `sedes`
@@ -527,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `subcategorias` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_2` (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `subcategorias`
@@ -559,7 +557,7 @@ CREATE TABLE IF NOT EXISTS `tag` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=76 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=76 ;
 
 --
 -- Volcado de datos para la tabla `tag`
@@ -662,7 +660,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=33 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=33 ;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -699,7 +697,7 @@ CREATE TABLE IF NOT EXISTS `user_favoritos` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=154 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=154 ;
 
 --
 -- Volcado de datos para la tabla `user_favoritos`
@@ -734,7 +732,7 @@ CREATE TABLE IF NOT EXISTS `user_subs` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=36 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci AUTO_INCREMENT=36 ;
 
 --
 -- Volcado de datos para la tabla `user_subs`
