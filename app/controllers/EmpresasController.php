@@ -48,9 +48,32 @@ class EmpresasController  extends BaseController {
 
 	public function postEditarProductos() {
 	
-		echo(1);
+		$id = Auth::user()->id;
+		$user = User::where('id',"=",$id);
+		$empresa = Empresa::where("user_id","=",$id);
+		$user = $user->first();
+		$empresa = $empresa->first();	
+		$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
 	
-		die();
+		$num_preguntas_null = $preguntas_null->count();
+		
+		$productos = Producto::where('empresas.id', '=', $empresa->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
+													->join('sedes', 'sedes.id', '=', 'almacen.sede')
+													->join('empresas', 'empresas.id', '=', 'sedes.empresa_id')
+													->select('producto.nombre AS producto_nombre',
+													'almacen.precio_detal',
+													'producto.imagen',
+													'producto.imgSmall',
+													'producto.id',
+													'producto.descripcion AS producto_descripcion',
+													'almacen.cantidad')->get();
+		
+		return View::make('empresa.editar-productos')
+			->with('num_nulls', $num_preguntas_null)
+			->with('user', $user)
+			->with('preguntas_null', $preguntas_null)
+			->with('empresa', $empresa)
+			->with('productos', $productos);
 	}
 	
 	public function postNuevaSede()
@@ -92,9 +115,6 @@ class EmpresasController  extends BaseController {
 		return View::make('empresa.nueva')
 			->with('ciudad', Ciudad::all());
 	}
-
-
-
 
 	public function getCambiarImagen()
 	{
