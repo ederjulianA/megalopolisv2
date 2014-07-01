@@ -46,6 +46,13 @@ class EmpresasController  extends BaseController {
 			->with('message-alert','error al ingresar ');
 	}
 
+	public function postEditarProductos() {
+	
+		echo(1);
+	
+		die();
+	}
+	
 	public function postNuevaSede()
 	{
 		$validator = Validator::make(Input::all(),
@@ -55,7 +62,7 @@ class EmpresasController  extends BaseController {
 						'telefono' => 'required'
 					)
 			);
-
+			
 		if($validator->passes()){
 		
 			$sede = new Sede();

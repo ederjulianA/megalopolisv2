@@ -64,6 +64,13 @@ Route::get('/recuperar-cuenta', array(
 		'uses' => 'UsersController@getOlvidoPass'
 	));
 
+		
+/* PROCESAR EDICIÓN DE PRODUCTOS*/
+
+Route::get('/editar-productos', array(
+		'as' => 'editar-productos',
+		'uses' => 'EmpresasController@postEditarProductos'
+	));
 
 /* RUTA nueva sede */
 Route::get('/nueva-sede', array(
@@ -106,6 +113,8 @@ Route::post('/nueva-sede', array(
 		'as' => 'nueva-sede-post',
 		'uses' => 'EmpresasController@postNuevaSede'
 	));
+
+	
 /* ACTUALIZAR SEDE EXISTENTE*/
 
 Route::post('/nueva-promo-post', array(

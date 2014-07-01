@@ -187,7 +187,11 @@
 											</div>
 											<div class="overview-value">
 												<div class="h2">Productos</div>
-												<div class="text-muted">ver</div>
+												<div class="text-muted">
+													<a href = '../editar-productos'>
+														ver
+													</a>
+												</div>
 											</div>
 										</div><!--/ panel -->
 										<div class="panel panel-overview fadeInUp animation-delay6">
