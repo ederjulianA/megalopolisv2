@@ -54,6 +54,7 @@ class EmpresasController  extends BaseController {
 		$user = $user->first();
 		$empresa = $empresa->first();	
 		$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+		$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 	
 		$num_preguntas_null = $preguntas_null->count();
 		
@@ -73,7 +74,8 @@ class EmpresasController  extends BaseController {
 			->with('user', $user)
 			->with('preguntas_null', $preguntas_null)
 			->with('empresa', $empresa)
-			->with('productos', $productos);
+			->with('productos', $productos)
+			->with('sedes', $sede);
 	}
 	
 	public function postNuevaSede()

@@ -29,6 +29,9 @@
 											<div class="col-md-4">
 											<select name = 'sede' id = 'sede' class="form-control">
 												<option>Seleccionar sede:</option>
+												@foreach($sedes as $sede_item)
+													<option value = "{{$sede_item->id}}">{{$sede_item->nombre_publico}}</option>
+												@endforeach
 											</select>
 										</div><!-- /.col -->
 										<div class="col-md-6">													
@@ -38,7 +41,7 @@
 									<div class="form-group">
 										<label class="control-label col-md-2">Nombre:</label>												
 										<div class="col-md-10">
-											<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="">
+											<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="{{$producto->producto_nombre}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 									
@@ -64,7 +67,7 @@
 									<div class="form-group">
 										<label class="control-label col-md-2">Precio:</label>												
 										<div class="col-md-10">
-											<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="">
+											<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="{{$producto->precio_detal}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 
