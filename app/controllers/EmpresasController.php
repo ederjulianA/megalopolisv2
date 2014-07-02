@@ -68,11 +68,20 @@ class EmpresasController  extends BaseController {
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
 													'producto.imagen',
+													'producto.img1',
+													'producto.img2',
+													'producto.img3',
 													'producto.imgSmall',
 													'producto.id',
 													'almacen.sede AS producto_sede',
 													'producto.descripcion AS producto_descripcion',
 													'almacen.cantidad')->get();
+		
+		foreach($productos as $key => $producto) {
+			
+			$tags = Tag::where('producto','=',$producto->id)->get();
+			$producto->tags = $tags;
+		}
 		
 		return View::make('empresa.editar-productos')
 			->with('num_nulls', $num_preguntas_null)

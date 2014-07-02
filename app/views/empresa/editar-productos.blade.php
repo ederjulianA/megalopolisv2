@@ -25,7 +25,7 @@
 							 <form class="form-horizontal form-border" action="../editar-producto" method="post" enctype='multipart/form-data'>
 								<div class="panel-body">
 									<div class="form-group">
-										<label class="control-label col-md-2">Registrar producto en la siguiente sede:</label>
+										<label class="control-label col-md-2">Mover a la sede:</label>
 											<div class="col-md-4">
 											<select name = 'sede' id = 'sede' class="form-control">
 												<option>Seleccionar sede:</option>
@@ -82,7 +82,20 @@
 									</div><!-- /form-group -->
 									
 									<div class="form-group">
-										<label class="control-label col-md-2">Imagen del producto:</label>												
+										<label class="control-label col-md-2">Imagen principal del producto:</label>
+										<?php
+											if(!empty($producto->imagen)) {
+											
+												?>														
+												<div>
+													<img src = '<?php echo($producto->imagen);?>'/>
+												</div>
+												<?php
+											}
+										?>
+										<label class="control-label col-md-2">
+											Cambiar:
+										</label>
 										<div class="col-md-10">
 											<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  >
 										</div><!-- /.col -->
@@ -94,7 +107,24 @@
 									</div><!-- /form-group -->
 
 									<div class="form-group">
-										<label class="control-label col-md-2">2da imagen:</label>												
+										<label class="control-label col-md-2">Segunda imagen:</label>
+										<?php
+											if(!empty($producto->img1)) {
+											
+												?>														
+												<div>
+													<img src = '<?php echo($producto->img1);?>'/>
+												</div>
+												<?php
+											} else {
+											
+												?>
+												<label>
+													Aún no se ha definido una imagen secundaria.
+												</label>
+												<?php
+											}
+										?>
 										<div class="col-md-10">
 											<input id = 'imagen2' name = 'imagen2' type="file" class="upload-demo"  >
 										</div><!-- /.col -->
@@ -107,7 +137,24 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-2">3ra imagen:</label>												
+										<label class="control-label col-md-2">Tercera imagen:</label>
+										<?php
+											if(!empty($producto->img2)) {
+											
+												?>														
+												<div>
+													<img src = '<?php echo($producto->img2);?>'/>
+												</div>
+												<?php
+											} else {
+											
+												?>
+												<label>
+													Aún no se ha definido una imagen terciaria.
+												</label>
+												<?php
+											}
+										?>										
 										<div class="col-md-10">
 											<input id = 'imagen3' name = 'imagen3' type="file" class="upload-demo"  >
 										</div><!-- /.col -->
@@ -121,14 +168,14 @@
 									<div class="form-group">
 										<label class="control-label col-md-2">Descripción breve:</label>
 										<div class="col-md-10">
-											<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
+											<textarea id = 'description' name = 'description' class="form-control" rows="3">{{$producto->producto_descripcion}}</textarea>
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 										<div class="form-group">
 												
 												<label class="col-lg-2 control-label">Tags</label>
 												<div class="col-lg-10">
-													<input id = 'tags' type="text" class="tag-demo1" name="tags" value="">
+													<input id = 'tags' type="text" class="tag-demo1" name="tags" value="<?php if(!empty($producto->tags)) { $_tags = array(); foreach($producto->tags as $tag) { $_tags[] = $tag->etiqueta;} echo(implode(',', $_tags));}?>">
 												</div><!-- /.col -->
 										</div><!-- /form-group -->
 
