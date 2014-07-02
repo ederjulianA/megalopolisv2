@@ -56,6 +56,10 @@ class EmpresasController  extends BaseController {
 		$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
 		$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 	
+		$categoria = new Categoria();
+		
+		$categorias = $categoria->get();
+	
 		$num_preguntas_null = $preguntas_null->count();
 		
 		$productos = Producto::where('empresas.id', '=', $empresa->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
@@ -66,6 +70,7 @@ class EmpresasController  extends BaseController {
 													'producto.imagen',
 													'producto.imgSmall',
 													'producto.id',
+													'almacen.sede AS producto_sede',
 													'producto.descripcion AS producto_descripcion',
 													'almacen.cantidad')->get();
 		
@@ -75,6 +80,7 @@ class EmpresasController  extends BaseController {
 			->with('preguntas_null', $preguntas_null)
 			->with('empresa', $empresa)
 			->with('productos', $productos)
+			->with('categorias', $categorias)
 			->with('sedes', $sede);
 	}
 	

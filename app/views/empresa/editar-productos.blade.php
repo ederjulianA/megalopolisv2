@@ -30,7 +30,7 @@
 											<select name = 'sede' id = 'sede' class="form-control">
 												<option>Seleccionar sede:</option>
 												@foreach($sedes as $sede_item)
-													<option value = "{{$sede_item->id}}">{{$sede_item->nombre_publico}}</option>
+													<option value = "{{$sede_item->id}}" <?php if($sede_item->id == $producto->producto_sede) { echo('selected');}?>>{{$sede_item->nombre_publico}}</option>
 												@endforeach
 											</select>
 										</div><!-- /.col -->
@@ -50,9 +50,12 @@
 											<div class="col-md-4 selects-categoria">
 											<select name = 'category' id = 'category' class="form-control">
 												<option>Seleccionar categoría:</option>
+												@foreach($categorias as $categoria)
+													<option value = "{{$categoria->id}}">{{$categoria->nombre}}</option>
+												@endforeach
 											</select>
 											<select name="subcat" id="subcat">
-												<option value="0">Escoge una </option>
+												<option value="0">Subcategoría: </option>
 												
 											</select>
 
@@ -74,7 +77,7 @@
 									<div class="form-group">
 										<label class="control-label col-md-2">Cantidad a registrar del producto en la sede seleccionada:</label>												
 										<div class="col-md-10">
-											<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto" value="">
+											<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto" value="{{$producto->cantidad}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 									
