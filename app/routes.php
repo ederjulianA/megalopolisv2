@@ -76,6 +76,11 @@ Route::get('/editar-producto-{id}', array(
 		'as' => 'editar-productos-post',
 		'uses' => 'EmpresasController@postEditarProductoId'
 	));
+	
+Route::get('/editar-producto-action', array(
+		'as' => 'editar-productos-action-post',
+		'uses' => 'EmpresasController@postEditarProductoAction'
+	));
 
 /* RUTA nueva sede */
 Route::get('/nueva-sede', array(
@@ -169,14 +174,10 @@ Route::post('/get/barrios', array(
 		'uses' => 'AjaxController@postBarrios'
 	));
 
-	
-
 Route::post('/subcats', array(
 		'as' => 'get-subcats',
 		'uses' => 'AjaxController@postSubcat'
 	));
-
-
 
 Route::post('/empresa/suscripcion-ajax', array(
 		'as' => 'suscripcion-ajax',

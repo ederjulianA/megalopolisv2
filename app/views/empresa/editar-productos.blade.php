@@ -22,7 +22,7 @@
 						</div>
 						<div class="modal-body">
 						  
-							 <form class="form-horizontal form-border" action="../editar-producto" method="post" enctype='multipart/form-data'>
+							 <form class="form-horizontal form-border" action="/editar-producto-action" method="post" enctype='multipart/form-data'>
 								<div class="panel-body">
 									<div class="form-group">
 										<label class="control-label col-md-2">Mover a la sede:</label>
@@ -51,12 +51,14 @@
 											<select name = 'category' id = 'category' class="form-control">
 												<option>Seleccionar categoría:</option>
 												@foreach($categorias as $categoria)
-													<option value = "{{$categoria->id}}">{{$categoria->nombre}}</option>
+													<option value = "{{$categoria->id}}" <?php if($categoria->id == $producto->categoria) { echo('selected');}?>>{{$categoria->nombre}}</option>
 												@endforeach
 											</select>
 											<select name="subcat" id="subcat">
-												<option value="0">Subcategoría: </option>
-												
+												<option>Seleccionar subcategoría:</option>
+												@foreach($producto->subcategories as $subcategory)
+													<option value = "{{$subcategory->id}}" <?php if($subcategory->id == $producto->subcat_id) { echo('selected');}?>>{{$subcategory->nombre_sub}}</option>
+												@endforeach
 											</select>
 
 											<div class="mensaje-ajax-categorias">

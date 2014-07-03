@@ -68,6 +68,8 @@ class EmpresasController  extends BaseController {
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
 													'producto.imagen',
+													'producto.categoria',
+													'producto.subcat_id',
 													'producto.img1',
 													'producto.img2',
 													'producto.img3',
@@ -81,6 +83,11 @@ class EmpresasController  extends BaseController {
 			
 			$tags = Tag::where('producto','=',$producto->id)->get();
 			$producto->tags = $tags;
+			
+			// @info low performance!
+			
+			$subcategories = Subcategoria::where('categoria_id', '=', $producto->categoria)->get();
+			$producto->subcategories = $subcategories;
 		}
 		
 		return View::make('empresa.editar-productos')
@@ -91,6 +98,16 @@ class EmpresasController  extends BaseController {
 			->with('productos', $productos)
 			->with('categorias', $categorias)
 			->with('sedes', $sede);
+	}
+	
+	public function postEditarProductoAction() {
+	
+		$id = Auth::user()->id;
+		
+		if(isset($id) && !empty($id)) {
+		
+			$producto = new Producto();
+		}
 	}
 	
 	public function postNuevaSede()
