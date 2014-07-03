@@ -104,10 +104,16 @@ class EmpresasController  extends BaseController {
 	
 		$id = Auth::user()->id;
 		
-		if(isset($id) && !empty($id)) {
+		$producto = array();
+		$producto['nombre'] = Input::get('product_name');
+		$producto['id'] = Input::get('product_id');
+		$producto['categoria'] = Input::get('category');
+		$producto['subcat_id'] = Input::get('subcat');
+		$producto['descripcion'] = Input::get('description');
 		
-			$producto = new Producto();
-		}
+		Producto::where('id', Input::get('product_id'))->update($producto);
+		
+		return Redirect::to('/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente');
 	}
 	
 	public function postNuevaSede()

@@ -77,8 +77,8 @@ Route::get('/editar-producto-{id}', array(
 		'uses' => 'EmpresasController@postEditarProductoId'
 	));
 	
-Route::get('/editar-producto-action', array(
-		'as' => 'editar-productos-action-post',
+Route::post('/edit-product', array(
+		'as' => 'edit-product',
 		'uses' => 'EmpresasController@postEditarProductoAction'
 	));
 

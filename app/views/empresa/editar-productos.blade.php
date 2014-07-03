@@ -11,8 +11,7 @@
 		</h1>
 		<ul>
 			@foreach($productos as $producto)
-				<li>{{$producto->id}}. {{$producto->producto_nombre}} | <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$producto->id}}" onclick = 'return toCloneInitialize({{$producto->id}});'><i class="fa fa-edit"></i></a>
-													 | <a href = '#'>Eliminar</a></li>
+				<li>{{$producto->id}}. {{$producto->producto_nombre}} | <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$producto->id}}" onclick = 'return toCloneInitialize({{$producto->id}});'><i class="fa fa-edit"></i></a> | <a href = '#'>Eliminar</a></li>
 		<div class="modal fade" id="myModal-{{$producto->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 					  <div class="modal-content">
@@ -22,7 +21,7 @@
 						</div>
 						<div class="modal-body">
 						  
-							 <form class="form-horizontal form-border" action="/editar-producto-action" method="post" enctype='multipart/form-data'>
+							 <form class="form-horizontal form-border" action="{{ URL::route('edit-product')}}" method="post" enctype='multipart/form-data'>
 								<div class="panel-body">
 									<div class="form-group">
 										<label class="control-label col-md-2">Mover a la sede:</label>
@@ -42,6 +41,7 @@
 										<label class="control-label col-md-2">Nombre:</label>												
 										<div class="col-md-10">
 											<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="{{$producto->producto_nombre}}">
+											<input id = 'product_id' name = 'product_id' type="hidden" value="{{$producto->id}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 									
@@ -188,6 +188,7 @@
 										
 									</div>
 								</div>
+								{{ Form::token()}}
 							</form>
 						</div>
 						<div class="modal-footer">
