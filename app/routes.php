@@ -169,8 +169,9 @@ Route::post('/get/barrios', array(
 		'uses' => 'AjaxController@postBarrios'
 	));
 
+	
 
-Route::post('/mega/subcats', array(
+Route::post('/subcats', array(
 		'as' => 'get-subcats',
 		'uses' => 'AjaxController@postSubcat'
 	));

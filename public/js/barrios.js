@@ -9,9 +9,10 @@ $(document).ready(function(){
 
 
 	});
-
+	
 	$('#category').change(function(){
 		$('#subcat').empty();
+		
 		subcategorias();
 	});
 
@@ -527,9 +528,10 @@ function lista_empresas()
 
 function subcategorias()
 {
+
 	var cat_nom = $('#category option:selected').text();
 		$.ajax({
-		url : "subcats",
+		url : "/subcats",
 		dataType: "json",
 		type : "post",
 		data : {cat_id: $('#category').val()},
