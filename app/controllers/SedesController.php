@@ -78,10 +78,6 @@ class SedesController extends BaseController{
 		$producto->img2 = 'img/products/img-lista/'.$filename3;
 
 		}
-	
-
-
-
 		
 		$codigoIMG = str_random(13);
 		$filename = date('Y-m-d-H')."-".$codigoIMG."-".$file->getClientOriginalName();

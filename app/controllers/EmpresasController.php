@@ -1,8 +1,5 @@
 <?php
 
-
- 
-
 // import the Intervention Image Class
 use Intervention\Image\Image;
 
@@ -24,8 +21,6 @@ class EmpresasController  extends BaseController {
 
 		if($user->count() && $empresa->count())
 		{
-
-
 			$user = $user->first();
 			$empresa = $empresa->first();	
 			$sede = Sede::where("empresa_id","=", $empresa->id)->get();
@@ -110,6 +105,37 @@ class EmpresasController  extends BaseController {
 		$producto['categoria'] = Input::get('category');
 		$producto['subcat_id'] = Input::get('subcat');
 		$producto['descripcion'] = Input::get('description');
+		
+		$imagen = Input::file('imagen');
+		$imagen2 = Input::file('imagen2');
+		$imagen3 = Input::file('imagen3');
+		
+		if(isset($imagen)){
+			
+			$codigoIMG = str_random(13);
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen->getClientOriginalName();
+			Image::make($imagen->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
+			
+			$producto['imagen'] = 'img/products/'.$filename;
+		}
+		
+		if(isset($imagen2)){
+			
+			$codigoIMG = str_random(13);
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen2->getClientOriginalName();
+			Image::make($imagen2->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
+			
+			$producto['img1'] = 'img/products/'.$filename;
+		}
+		
+		if(isset($imagen3)){
+			
+			$codigoIMG = str_random(13);
+			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen3->getClientOriginalName();
+			Image::make($imagen3->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
+			
+			$producto['img2'] = 'img/products/'.$filename;
+		}
 		
 		$almacen = array();
 		$almacen['sede'] = Input::get('sede');
