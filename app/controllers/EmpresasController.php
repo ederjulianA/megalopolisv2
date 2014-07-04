@@ -111,6 +111,11 @@ class EmpresasController  extends BaseController {
 		$producto['subcat_id'] = Input::get('subcat');
 		$producto['descripcion'] = Input::get('description');
 		
+		$almacen = array();
+		$almacen['sede'] = Input::get('sede');
+		
+		Almacen::where('producto', Input::get('product_id'))->update($almacen);
+		
 		Producto::where('id', Input::get('product_id'))->update($producto);
 		
 		return Redirect::to('/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente');
