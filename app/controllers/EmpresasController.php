@@ -57,7 +57,7 @@ class EmpresasController  extends BaseController {
 	
 		$num_preguntas_null = $preguntas_null->count();
 		
-		$productos = Producto::where('empresas.id', '=', $empresa->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
+		$productos = Producto::where('empresas.id', '=', $empresa->id)->where('producto.estado', '=', 1)->join('almacen', 'producto.id', '=', 'almacen.producto')
 													->join('sedes', 'sedes.id', '=', 'almacen.sede')
 													->join('empresas', 'empresas.id', '=', 'sedes.empresa_id')
 													->select('producto.nombre AS producto_nombre',
@@ -93,6 +93,19 @@ class EmpresasController  extends BaseController {
 			->with('productos', $productos)
 			->with('categorias', $categorias)
 			->with('sedes', $sede);
+	}
+	
+	public function eliminarProducto() {
+	
+		$id = Auth::user()->id;
+		
+		$product_id = Input::get('id');
+		
+		$producto = array();
+		$producto['estado'] = 0;
+		Producto::where('id', $product_id)->update($producto);
+		
+		return Redirect::to('/editar-productos')->with('message-alert','Se ha eliminado el producto satisfactoriamente.');
 	}
 	
 	public function postEditarProductoAction() {
@@ -145,7 +158,7 @@ class EmpresasController  extends BaseController {
 		
 		Producto::where('id', Input::get('product_id'))->update($producto);
 		
-		return Redirect::to('/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente');
+		return Redirect::to('/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
 	}
 	
 	public function postNuevaSede()

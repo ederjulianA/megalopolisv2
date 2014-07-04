@@ -11,7 +11,7 @@
 		</h1>
 		<ul>
 			@foreach($productos as $producto)
-				<li>{{$producto->id}}. {{$producto->producto_nombre}} | <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$producto->id}}" onclick = 'return toCloneInitialize({{$producto->id}});'><i class="fa fa-edit"></i></a> | <a href = '#'>Eliminar</a></li>
+				<li>{{$producto->id}}. {{$producto->producto_nombre}} | <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$producto->id}}" onclick = 'return toCloneInitialize({{$producto->id}});'><i class="fa fa-edit"></i></a> | <a href = '{{URL::route('eliminar-producto')}}?id={{$producto->id}}' onclick = "return confirm('¿Estás seguro?');" >Eliminar</a></li>
 		<div class="modal fade" id="myModal-{{$producto->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 					  <div class="modal-content">
