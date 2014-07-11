@@ -36,6 +36,18 @@ Route::get('/landing', array(
 		'uses' => 'HomeController@getLanding'
 	));
 
+/* LANDING 2 */
+Route::get('/landing2', array(
+		'as' => 'landing2',
+		'uses' => 'HomeController@getLanding2'
+	));
+
+/* REGISTRO DE USUARIOS EN LA LISTA DE CORREOS */
+Route::post('/lista-mails-post', array(
+		'as' => 'lista-email',
+		'uses' => 'HomeController@postListaMail'
+	));
+
 /* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
 Route::get('/categorias/{id}', array(
 		'as' => 'categorias-producto',

@@ -9,6 +9,39 @@ class HomeController extends BaseController {
 		return View::make('Carlos.andres')->with('categorias',$categorias)->with('numCategorias',$numCat)->with('usutip1',$usuarios);
 	}
 
+	public function getLanding2()
+	{
+		return View::make('landing2');
+	}
+
+	public function postListaMail()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'email' => 'required|email|unique:mails'
+						
+					)
+
+			);
+
+		if($validator->passes()){
+			$mail = new Mails();
+
+			$mail->email = Input::get('email');
+
+			if($mail->save())
+			{
+				Mail::send('emails.auth.listaM', array('email' =>Input::get('email')), function($message) use ($mail){
+						$message->to($mail->email)->subject('Suscripción a Megalopolis');
+					});
+
+				return Redirect::to('/landing2')->with('message-alert','Suscripción Exitosa.');
+			}
+		}
+
+		return Redirect::to('/landing2')->with('message-alert','Error en el formulario.');
+	}
+
 	public function getIndex()
 
 	{
