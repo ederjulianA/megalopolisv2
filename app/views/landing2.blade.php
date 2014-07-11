@@ -538,8 +538,8 @@
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
-					<li><a href="#" class="fa fa-twitter solo"><span>Twitter</span></a></li>
-					<li><a href="#" class="fa fa-facebook solo"><span>Facebook</span></a></li>
+					<li><a href="https://twitter.com/tumegalopolis" class="fa fa-twitter solo"><span>Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/pages/TuMegalopolis/726858077327682" class="fa fa-facebook solo"><span>Facebook</span></a></li>
 					<li><a href="#" class="fa fa-google-plus solo"><span>Google+</span></a></li>
 					<li><a href="#" class="fa fa-dribbble solo"><span>Dribbble</span></a></li>
 					<li><a href="#" class="fa fa-github solo"><span>GitHub</span></a></li>

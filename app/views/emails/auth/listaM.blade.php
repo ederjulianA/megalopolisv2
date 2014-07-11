@@ -245,14 +245,14 @@
 																					<tbody>
 																						<tr>
 																							<td class="social_button" width="13">
-																								 <a href="#" class="nodecoration" style="text-decoration: none;">
+																								 <a href="https://www.facebook.com/pages/TuMegalopolis/726858077327682" class="nodecoration" style="text-decoration: none;">
 																									  <img src="{{asset('img/email_template/facebook.png') }}" width="18" style="display: block; max-width: 25px;" border="0" alt="facebook" />
 																								 </a>
 																							</td>
 																							<td width="10">
 																							</td>
 																							<td class="social_button"  width="13">
-																								 <a href="#" class="nodecoration" style="text-decoration: none;">
+																								 <a href="https://twitter.com/tumegalopolis" class="nodecoration" style="text-decoration: none;">
 																									  <img src="{{asset('img/email_template/twitter.png') }}" width="18" style="display: block; max-width: 25px;" border="0" alt="twitter" />
 																								 </a>
 																							</td>
