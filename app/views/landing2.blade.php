@@ -440,13 +440,10 @@
               <div class="casilla_texto" id="casilla_texto">
               	<form method="post" action="{{URL::route('lista-email')}}">
               		
-              	
                   <div class="ingreso" id="casilla_ingreso"><input type="text" name="email"  placeholder="Tu correo" required/>
-
                   </div>
-                  <input type="submit" class="boton_ingreso" id="boton_ingreso" value=" ">
-
-                  </form>
+                  <input type="submit" class="boton_ingreso" id="boton_ingreso" value=" ">	
+             
               </div>
 <footer>
 	  <a href="#first" class="button scrolly">Explora</a>
