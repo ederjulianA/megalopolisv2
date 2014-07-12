@@ -10,7 +10,7 @@
         
 	<style type="text/css">
 		#logo {
-	background-image: url(../img/logo_2x.png);
+	background-image: url(../public/img/logo_2x.png);
 	width: 100%;
 	height: 200px;
 	background-position: center;
@@ -39,7 +39,7 @@
 	border-radius: 5px;
 	margin-left: 40px;
 	margin-top: 50px;
-	background-image: url(../img/boton_header.png);
+	background-image: url(../public/img/boton_header.png);
 	background-repeat: no-repeat;
 }
     #header #casilla_texto #casilla_ingreso input {
@@ -77,18 +77,18 @@
 	width: 100px;
 	height: 100px;
 	margin-left: 40%;
-	background-image: url(../img/s1.png);
+	background-image: url(../public/img/s1.png);
 }
 #ser2 {
 	width: 100px;
 	height: 100px;
 	margin-left: 40%;
-	background-image: url(../img/s2.png);
+	background-image: url(../public/img/s2.png);
 }
 #ser3 {
 	width: 100px;
 	height: 100px;
-	background-image: url(../img/s3.png);
+	background-image: url(../public/img/s3.png);
 	margin-left: 40%;
 }
     #t1 {
@@ -176,7 +176,7 @@
 	height: 150px;
 }
     #mk {
-	background-image: url(../img/marks.png);
+	background-image: url(../public/img/marks.png);
 	height: 150px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -191,14 +191,14 @@
 	float: left;
 }
     #p1 {
-	background-image: url(../img/p1.png);
+	background-image: url(../public/img/p1.png);
 	height: 200px;
 	width: 80%;
 	margin-left: 10%;
 	border-radius: 5px;
 }
 #p2 {
-	background-image: url(../img/p2.png);
+	background-image: url(../public/img/p2.png);
 	height: 200px;
 	width: 80%;
 	margin-left: 10%;
@@ -206,7 +206,7 @@
 	margin-right: 10%;
 }
 #p3 {
-	background-image: url(../img/p3.png);
+	background-image: url(../public/img/p3.png);
 	height: 200px;
 	width: 80%;
 	border-radius: 5px;
@@ -226,7 +226,7 @@
 	width: 160px;
 	height: 160px;
 	margin-left: 45%;
-	background-image: url(../img/icon.png);
+	background-image: url(../public/img/icon.png);
 	background-position: center;
 	float: left;
 }
@@ -271,7 +271,7 @@
 }
 @media (max-width:768px) {
 	#logo {
-	background-image: url(../img/logo_3x.png);
+	background-image: url(../public/img/logo_3x.png);
 	width: 100%;
 	height: 200px;
 	background-position: center;
@@ -279,7 +279,7 @@
 }
 #header header
 		{
-	background-image: url url(../img/texto_header2.png);
+	background-image: url url(../public/img/texto_header2.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 200px;
@@ -331,7 +331,7 @@
 @media (max-width:480px) {
 	
 		#logo {
-	background-image: url(../img/logo_4x.png);
+	background-image: url(../public/img/logo_4x.png);
 	width: 100%;
 	height: 200px;
 	background-position: center;
@@ -339,7 +339,7 @@
 }
 #header header
 		{
-	background-image: url url(../img/texto_header3.png);
+	background-image: url url(../public/img/texto_header3.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 200px;
@@ -385,6 +385,20 @@
 	
 	}
     </style>
+
+        <style type="text/css">
+    		.alert-ms{
+		border-radius: 0 0 5px 5px;
+		background: #F86C6C;
+
+		position: absolute;
+		left: 0;
+		padding: 5px;
+		text-align: center;
+		width: 24%;
+		z-index: 100;
+	}
+    </style>
 	
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     
@@ -414,7 +428,7 @@
 		<!-- Header -->
 			<section id="header" class="dark">
 					@if(Session::has('message-alert'))
-						<p class="alert alert-danger" style="top:20%;"> {{Session::get('message-alert')}}</p>
+						<p class="alert-ms" style="top:20%;"> {{Session::get('message-alert')}}</p>
 				@endif
 			  <div class="logo" id="logo"></div>
             

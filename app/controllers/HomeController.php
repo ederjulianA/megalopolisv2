@@ -35,11 +35,11 @@ class HomeController extends BaseController {
 						$message->to($mail->email)->subject('Suscripción a Megalopolis');
 					});
 
-				return Redirect::to('/landing2')->with('message-alert','Suscripción Exitosa.');
+				return Redirect::to('/')->with('message-alert','Suscripción Exitosa.');
 			}
 		}
 
-		return Redirect::to('/landing2')->with('message-alert','Error en el formulario.');
+		return Redirect::to('/')->with('message-alert','oups, algo salió Mal.')->withErrors($validator);
 	}
 
 	public function getIndex()
