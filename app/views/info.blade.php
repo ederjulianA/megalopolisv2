@@ -22,7 +22,7 @@
 
     <meta property="og:type" content="website"/>
 <meta property="og:url" content="http://www.tumegalopolis.com/public/empresa/{{$empresa->nombre_publico}}"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/img/logo_2x.png"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/img/{{$empresa->logo}}"/>
 @stop
 
 @section('content')
