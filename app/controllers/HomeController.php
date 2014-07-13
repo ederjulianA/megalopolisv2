@@ -42,6 +42,11 @@ class HomeController extends BaseController {
 		return Redirect::to('/')->with('message-alert','oups, algo salió Mal.')->withErrors($validator);
 	}
 
+	public function home2()
+	{
+		return View::make('index2');
+	}
+
 	public function getIndex()
 
 	{

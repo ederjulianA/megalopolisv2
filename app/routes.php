@@ -42,6 +42,12 @@ Route::get('/landing2', array(
 		'uses' => 'HomeController@getLanding2'
 	));
 
+/* LANDING 2 */
+Route::get('/home2', array(
+		'as' => 'home2',
+		'uses' => 'HomeController@home2'
+	));
+
 /* REGISTRO DE USUARIOS EN LA LISTA DE CORREOS */
 Route::post('/lista-mails-post', array(
 		'as' => 'lista-email',
