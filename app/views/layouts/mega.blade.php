@@ -90,16 +90,7 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 	
-	<section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-			  <div class="slider_r" id="slider_r">Insertar Slider</div>
-			  <div class="pub_2" id="pub">
-			  	<iframe width="100%" height="100%" src="//www.youtube.com/embed/FG4lE5Zqkrg" frameborder="0" allowfullscreen></iframe>
-			  </div>
-			</div>
-		</div>
-	</section><!--/slider-->
+
 	
 	@yield('content')
 	

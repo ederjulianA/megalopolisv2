@@ -21,6 +21,16 @@ Empresas Megalopolis ||
 </style>
 
 @section('content')
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+			  <div class="slider_r" id="slider_r">Insertar Slider</div>
+			  <div class="pub_2" id="pub">
+			  	<iframe width="100%" height="100%" src="//www.youtube.com/embed/FG4lE5Zqkrg" frameborder="0" allowfullscreen></iframe>
+			  </div>
+			</div>
+		</div>
+	</section><!--/slider-->
 	<section>
 		<div class="container">
 			<div class="row">
@@ -155,13 +165,13 @@ Empresas Megalopolis ||
 										{{HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-empresa-2'))}}
 										<h2>{{$empresa->razon_social}}</h2>
 										<p>{{$empresa->sector->nom_sector}}</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Contacto</a>
+										<a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Contacto</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2>{{$empresa->razon_social}}</h2>
 											<p>{{$empresa->sector->nom_sector}}</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Contacto</a>
+											<a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Contacto</a>
 										</div>
 									</div>
 								</div>
