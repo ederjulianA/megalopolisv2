@@ -5,10 +5,10 @@
 
 <style type="text/css">
 	.img-empresa-2{
-		height: 150px;
+		height: auto;
 		text-align: center;
 		margin: 0 auto;
-		width: auto;
+		width: 100%;
 	}
 </style>
 

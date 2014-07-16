@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('content-page')
     <title>@yield('titulo')</title>
+    <style type="text/css">
+    	.fluid_container {
+			margin: 0 auto;
+			max-width: 1000px;
+			width: 90%;
+		}
+    </style>
     
     {{ HTML::style('MEGA/css/bootstrap.min.css', array('media' => 'screen'))}}
     {{ HTML::style('MEGA/css/font-awesome.minqa.css', array('media' => 'screen'))}}
@@ -13,6 +20,9 @@
     {{ HTML::style('MEGA/css/animate.css', array('media' => 'screen'))}}
     {{ HTML::style('MEGA/css/main.css', array('media' => 'screen'))}}
     {{ HTML::style('MEGA/css/responsive.css', array('media' => 'screen'))}}
+
+
+    {{ HTML::style('SLIDE/css/camera.css', array('media' => 'screen'))}}
     
   
     <!--[if lt IE 9]>
@@ -35,7 +45,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html">{{HTML::image('MEGA/images/home/logo.png', 'logo')}}  </a>
+							<a href="{{URL::route('index')}}">{{HTML::image('MEGA/images/home/logo.png', 'logo')}}  </a>
 						</div>
 					</div>
 					
@@ -165,6 +175,29 @@
   	{{ HTML::script('MEGA/js/price-range.js')}}
   	{{ HTML::script('MEGA/js/jquery.prettyPhoto.js')}}
   	{{ HTML::script('MEGA/js/main.js')}}
+
+
+
+  	{{ HTML::script('SLIDE/scripts/jquery.min.js')}}
+  	{{ HTML::script('SLIDE/scripts/jquery.mobile.customized.min.js')}}
+  	{{ HTML::script('SLIDE/scripts/jquery.easing.1.3.js')}}
+  	{{ HTML::script('SLIDE/scripts/camera.js')}}
+
+  	    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: true
+			});
+
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
   
 </body>
 </html>

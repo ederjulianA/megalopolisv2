@@ -1,341 +1,129 @@
-@extends('layouts.users')
+@extends('layouts.mega')
 
 @section('titulo')
-{{$sede->nombre_publico}}
+Catalogo | {{$sede->nombre_publico}}
 @stop
 
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+@section('content-page')
+	<meta name="description" content="">
+    <meta name="author" content="Megalopolis TEAM">
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/catalogo/{{$sede->nombre_publico}}"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/img/{{$sede->empresa->logo}}"/>
+@stop
 
 @section('content')
-<div id="landing-content">
 
-				<div class="mensaje-favoritos-ajax">
+    {{ HTML::style('MEGA/plugins/casilla-producto/css/style.css', array('media' => 'screen'))}}
+		<section>
+		<div class="container">
+			<div class="row"><!--/category-tab--><!--/recommended_items-->
 					
-				</div>
+		  </div>
+                
+          <div class="img_empress" id="img_w">
+	        insertar imagen Empresa</div>
+          <div class="titular_w" id="titular_w_w">Nombre de la Empresa</div>
+            
+            <div class="info_direc" id="direc">
+	          <p>Dierccion: xxxxxxxxxxxx</p>
+		        <p>Telefono: xxxxxxxx</p>
+		        <p>E-Mail: xxxxxxx</p>
+	      </div>
+                
+	  </div>
+   <div class="separator" id="separator_header_bz">
+       
+        <div class="band_1" id="green_1">Productos</div>
+     <div class="cas_prod_prod" id="casillas_w">
+
+     @foreach($productos as $key => $producto)
+     		<div class="productos_w" id="producto_1">
+
+				          	<div class="foto" id="foto"></div>
+				         		  <ul>
+					<li class="block">
+						<input type="checkbox" name="item" id="item1" />
+				        
+				          <label for="item1"><i aria-hidden="true" class=""></i> Ropas y accesorios <span>124</span></label>
+				        
+						
+					</li>
+					<li class="block">
+						<input type="checkbox" name="item" id="item2" />
+				        
+				          <label for="item2"><i aria-hidden="true" class=""></i> Detalles </label>
+				        
+						<ul class="options">
+						  <li><a href="#"><i aria-hidden="true" class=""></i>escriba aqui los detalles del producto<span></span></a></li>
+							
+						</ul>
+					</li>
+					<li class="block">
+						<input type="checkbox" name="item" id="item3" />   
+						<label for="item3"><i aria-hidden="true" class=""></i> Precio </label>
+						<ul class="options">
+							<li><a href="http:///" target="_blank"><i aria-hidden="true" class=""></i>Precio</a></li>
+							<li><a href="http:///" target="_blank"><i aria-hidden="true" class=""></i> $50.000</a></li>
+							
+							
+						</ul>
+					</li>
+					<li class="block">
+						<input type="checkbox" name="item" id="item4" />   
+						<label for="item4"><i aria-hidden="true" class=""></i> Etiquetas <span>1</span></label>
+						<ul class="options">
+							<li><a href="http:///" target="_blank"><i aria-hidden="true" class=""></i>Etiquetas</a></li>
+						</ul>
+					</li>
+					<li class="block">
+						<input type="checkbox" name="item" id="item5" />   
+						
+					</li>
+				</ul>
+
+
+</div>
+     @endforeach
+          
 		
-		<div class="padding-md">
-				<div class="row">
-					<div class="col-md-3 col-sm-3">
-						<div class="row">
-							<div class="col-xs-6 col-sm-12 col-md-6 text-center">
-								<a href="#">
-									{{HTML::image($sede->empresa->logo, $sede->empresa->razon_social)}}
-								</a>
-								<div class="seperator"></div>
-								<div class="seperator"></div>
-							</div><!-- /.col -->
-							<div class="col-xs-6 col-sm-12 col-md-6">
-								<strong class="font-14">{{$sede->nombre_publico}}</strong>
-								<input type="hidden" id="nombre_sede_h" value="{{$sede->nombre_publico}}">
-								<small class="block text-muted">
-									{{$sede->empresa->user->email}}
-								</small>
-								<small class="block text-muted">
-									{{$sede->direccion}}
-								</small>
-								<strong class="block text-muted">
-									Tel: <span class="label label-danger">{{$sede->telefono}}</span>
-								</strong> 
-								<div class="seperator"></div>
-								<a class="btn btn-success btn-xs m-bottom-sm" href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a>
-								<div class="seperator"></div>
-								<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-								<a href="#" class="social-connect tooltip-test twitter-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="social-connect tooltip-test google-plus-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Google Plus"><i class="fa fa-google-plus"></i></a>
-								<div class="seperator"></div>
-								<div class="seperator"></div>
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-
-
-							<div class="panel m-top-md">
-							<div class="panel-body">
-								<div class="row">
-									<div class="col-xs-4 text-center">
-										<span class="block font-14">{{$num_productos}}</span>
-										<small class="text-muted">Productos</small>
-									</div><!-- /.col -->
-									<div class="col-xs-4 text-center">
-										<span class="block font-14">{{$num_promos}}</span>
-										<small class="text-muted">Promociones</small>
-									</div><!-- /.col -->
-
-									<div class="col-xs-4 text-center">
-										<span class="block font-14">{{$numSusc}}</span>
-										<small class="text-muted">Suscriptores</small>
-									</div><!-- /.col -->
-									
-								</div><!-- /.row -->
-							</div>
-						</div><!-- /panel -->
-
-
-
-
-										<!--  SLIDER DE IMAGENES UTILIZANDO JAVASCRIPT Y BOOTSTRAP-->
-
-				<div class="panel panel-default">
-							<div class="panel-heading">
-								Promociones 
-
-								<span class="label label-danger pull-right">Lista de promos</span>
-							</div>
-							<div class="panel-body">
-								<div id="carousel-example-generic" class="carousel slide carousel-custom">
-									<ol class="carousel-indicators">
-										<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-										@foreach($sede->promocion as $promo)
-												<li data-target="#carousel-example-generic" data-slide-to="{{$promo->id}}" class=""></li>
-											@endforeach
-									</ol>
-									<div class="carousel-inner">
-										<div class="item active">
-											<div class="row">
-												<div class="col-sm-5">
-													<img src="{{asset('img/promociones/default.jpg') }}">
-												</div>
-												<div class="col-sm-5">
-													<strong>Lista de Promociones</strong>
-													<p class="m-top-sm">
-														Aqui encontraras las promociones 
-													</p>
-												</div><!-- /.col -->
-											</div><!-- /.row -->
-										</div>
-										@foreach($sede->promocion as $promo)
-										<div class="item">
-											<div class="row">
-												<div class="col-sm-5">
-													<!--<img src="img/gallery6.jpg" alt="Third Slide" class="m-bottom-md" style="height:150px;">-->
-													{{ HTML::image($promo->img, $promo->titulo, array('max-height'=>'250px', 'width'=>'auto'))}}
-														<div class="ribbon-wrapper">
-																<div class="ribbon-inner shadow-pulse bg-danger">
-																	<span class="porcentaje-producto">- {{$promo->porcentaje}}%</span>
-																</div>
-														</div>
-												</div>
-												<div class="col-sm-5">
-													<strong>{{$promo->titulo}}</strong>
-													<p class="m-top-sm">
-														Precio:
-														<strike class="precio-antes">${{$promo->sin_descuento}}</strike>
-														<p>
-															<span class="precio-descuento"> ${{$promo->con_descuento}}</span>
-															<p>
-																<a href="{{URL::route('promos',array('id'=>$promo->id))}}">Detalles</a>
-															</p>
-														</p>
-													</p>
-												</div><!-- /.col -->	
-											</div><!-- /.row -->
-										</div>
-
-										@endforeach
-									</div>
-									
-									
-								</div>
-								
-								<div class="text-right">
-									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="prev">Anterior</a>
-									<a class="btn btn-default btn-sm" href="#carousel-example-generic" data-slide="next">Siguiente</a>
-								</div>
-							</div>
-				</div><!-- /panel -->
-						
-							
-							
-						<div>
-							<h1>
-								Encuéntranos en:
-							</h1>
-						</div>
-						<div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
-						<script type = 'text/javascript'>
-							initialize({{$sede->latitude}}, {{$sede->longitude}});
-						</script>
-					
-
-						
-				
-					</div><!-- /.col -->
-
-				<!--  FIN SECCION DATOS DE EMPRESA MAS PROMOS##################################################  -->	
-					
-					<div class="col-md-9 col-sm-9">
-
-						<div class="catalogo-header">
-							<h2>{{$sede->nombre_publico}}</h2>
-
-							<ul class="pro-categorias">
-								<li><a href="#">Todos</a></li>
-								@foreach($categorias as $cat)
-									<li><a class="lista-products" href="{{$cat->id}}">{{$cat->nombre}}</a></li>
-
-								@endforeach
-								
-							</ul>
-							
-						</div>
-						<div class="productos-container">
-
-							<!--	<div class="producto fadeInDown animation-delay2" >
-										<div class="thumbnail">
-											<img src="{{asset('img/prod1.jpg') }}">
-											<div class="ribbon-wrapper">
-												<div class="ribbon-inner shadow-pulse bg-danger">
-													Agotado
-												</div>
-											</div>
-											<div class="caption">
-											<h4>Titulo Producto</h4>
-											<p>Precio : $20000</p>
-											<p> <a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info"><i class="fa fa-heart"></i></a></p>
-								
-											</div>
-							
-										</div>
-									
-								</div>
-
-								<div class="producto fadeInUp animation-delay4">
-										<div class="thumbnail">
-											<img src="{{asset('img/prod2.jpg') }}">
-											<div class="caption">
-											<h4>Titulo Producto</h4>
-											<p>Precio : $20000</p>
-											<p> <a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info"><i class="fa fa-heart"></i> Favoritos</a></p>
-								
-											</div>
-							
-										</div>
-									
-								</div>
-
-								<div class="producto fadeInDown animation-delay3">
-										<div class="thumbnail">
-											<img src="{{asset('img/prod3.jpg') }}">
-											<div class="caption">
-											<h4>Titulo Producto</h4>
-											<p>Precio : $20000</p>
-											<p> <a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info"><i class="fa fa-heart"></i> Favoritos</a></p>
-								
-											</div>
-							
-										</div>
-									
-								</div>-->
-
-
-								@foreach($productos as $key => $producto)
-								
-								<div class="producto fadeInUp animation-delay4" style = 'vertical-align: top;'>
-									<div class="thumbnail">
-										<h1 class = 'My-Circle' title = 'Unidades disponibles'>
-											{{$producto->cantidad}}
-										</h1>
-										
-						
-										<img src = '{{asset($producto->imagen)}}' class="img-producto-lista" />
-										<div class="caption">
-											<h1 class = 'My-Title' style="height:80px;">
-												{{$producto->producto_nombre}}
-											</h1>
-											<hr>
-											<h2 class = 'My-Category-Title' >
-												{{$producto->categoria_nombre}}
-											</h2>
-											<p class = 'My-Textblock precio'>
-												Precio: <span class = 'My-Price'>${{$producto->precio_detal}}</span>
-											</p>
-											<p class = 'My-Textblock'>
-												{{ substr($producto->producto_descripcion,0,70) }}...<a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}" class="label label-danger">Detalle</a>
-											</p>
-											<h1 class = 'My-Title'>
-												Etiquetas
-											</h1>
-											
-											<p class = 'My-Textblock'>
-												@foreach($producto->tags as $key => $tag)
-													<a href = '#' class = 'My-Tag'>
-														{{$tag->etiqueta}}
-													</a>
-												@endforeach
-											</p>
-											<p>
-											<!--<a href="#simpleModal" role="button" data-toggle="modal" class="btn btn-info My-Align"><i class="fa fa-heart"></i> Favoritos</a>-->
-											@if(Auth::check() && Auth::user()->tipo == 1)
-												{{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
-
-											@else
-												<a href="{{URL::route('login')}}">Inicia Sesion</a>
-											@endif
-
-											<!--<a href="{{$producto->id}}"   class="addFav btn btn-info My-Align"><i class="fa fa-heart"></i></a>-->
-											</p>
-										</div>
-									</div>
-								</div>
-
-								@endforeach	
-
-
-
-
-
-								
-								
-								
-							
-						</div><!--  ############################################# FIN DEL CONTENEDOR DE PRODUCTOS################## -->
-
-
-						
-						
-
-
-
-					</div>
-				</div>
+         
+        
+          
+        
+        
+        
+        
+        
+        
+        </div>
+      
+      <div class="band_1" id="green_1">Ubicación</div>
+      <div class="mapa" id="mapa_api">insertar mapa</div>
+      
+   </div>
+      
+      
+      
+      <div class="btn-group pull-right">
+							<div class="btn-group">
+							  <ul class="dropdown-menu">
+							    <li><a href="#">Medellin</a></li>
+									<li><a href="#">Bogota</a></li>
+							  </ul>
 		</div>
-	</div>
-
-	<!--Modal-->
-		<div class="modal fade" id="simpleModal">
-  			<div class="modal-dialog">
-    			<div class="modal-content">
-      				<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4>Produto</h4>
-      				</div>
-				    <div class="modal-body">
-				      <div class="search-container">
-									<div class="panel panel-default">
-										<div class="panel-body">	
-											<div class="search-header">
-												<a href="#" class="h4 inline-block">Producto 1</a>
-
-												<strong>($20.000 COP)</strong>
-											 
-											</div>
-											
-											<div class="seperator"></div>
-											
-											<p class="m-top-sm">
-												<a href="#" class="pull-left   m-right-sm"> 
-													<img src="{{asset('img/prod2.jpg') }}" alt="Author" width="100px" height="100px"> 
-												</a> Descripcion del producto seleccionado
-												</p>
-																					
-											<div class="text-right">
-												<a class="btn btn-info"><i class="fa fa-heart"></i> Favoritos</a>
-											</div>
-										</div>
-									</div><!-- /panel -->
-								</div><!-- /search-container -->
-				    </div>
-			  	</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+							
+							<div class="btn-group">
+							  <ul class="dropdown-menu">
+							    <li><a href="#">Canadian Dollar</a></li>
+									<li><a href="#">Pound</a></li>
+							  </ul>
+		</div>
+	  </div>
+        </div>
+      
+	  </div>
+	</section>
 
 @stop

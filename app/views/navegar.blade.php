@@ -1,9 +1,10 @@
 @extends('layouts.mega')
-@section('content-page')
+
 
 @section('titulo')
 Empresas Megalopolis ||
 @stop
+@section('content-page')
 
 <meta name="description" content="Empresas en Megalopolis|| .">
     <meta name="author" content="Megalopolis TEAM">
@@ -24,7 +25,32 @@ Empresas Megalopolis ||
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">
-			  <div class="slider_r" id="slider_r">Insertar Slider</div>
+			  <div class="slider_r" id="slider_r">
+			  		<div class="fluid_container">
+			  			
+			  				<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <div data-thumb="SLIDE/images/slides/thumbs/slide1.jpg" data-src="SLIDE/images/slides/slide1.png">
+                <div class="camera_caption fadeFromBottom">
+                    Perfumes Megalopolis <em>Megalopolis Company</em>
+                </div>
+            </div>
+            <div data-thumb="SLIDE/images/slides/thumbs/leaf.jpg" data-src="SLIDE/images/slides/leaf.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Perfumes Megalopolis <em>Megalopolis Company</em>
+                </div>
+            </div>
+            <div data-thumb="SLIDE/images/slides/thumbs/road.jpg" data-src="SLIDE/images/slides/road.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Perfumes Megalopolis <em>Megalopolis Company</em>
+                </div>
+            </div>
+          
+            
+           
+        </div><!-- #camera_wrap_1 -->
+			  		</div>
+
+			  </div>
 			  <div class="pub_2" id="pub">
 			  	<iframe width="100%" height="100%" src="//www.youtube.com/embed/FG4lE5Zqkrg" frameborder="0" allowfullscreen></iframe>
 			  </div>
@@ -421,3 +447,12 @@ Empresas Megalopolis ||
 		</div>
 	</section>
 @stop
+
+
+
+
+
+
+
+
+
