@@ -447,7 +447,6 @@
               </div>
 <footer>
 	  <a href="#first" class="button scrolly">Explora</a>
-	  <a href="#first" class="button scrolly">Explora</a>
 	</footer>
 			</section>
 			
