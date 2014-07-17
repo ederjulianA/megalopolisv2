@@ -414,4 +414,8 @@ Route::get('/prueba-carlos', array(
 		'as' => 'pruCarlos',
 		'uses' => 'HomeController@getCarlos'
 	));
+Route::get('/nav2', array(
 
+			'as' => 'nav',
+			'uses' => 'NavegarController@getNav'
+		));

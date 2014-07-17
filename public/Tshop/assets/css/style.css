@@ -3382,3 +3382,12 @@ h1.x2large {
 	overflow: hidden !important;
 }
 }
+.logoMega {
+	width: 50%;
+	height: 30px;
+	padding: 5px 2px;
+	margin-right: 10px;
+	overflow: hidden;
+
+}
+}

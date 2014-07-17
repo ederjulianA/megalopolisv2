@@ -20,6 +20,11 @@ class NavegarController extends BaseController {
 		->with('promocion', $promocion);
 	}
 
+	public function getNav()
+	{
+		return View::make('navegar2');
+	}
+
 	public function getCategoria($id)
 	{
 		$empresas = Empresa::where('sector_id',"=", $id)->get();
@@ -57,4 +62,5 @@ class NavegarController extends BaseController {
 		return die("PAGINA NO ENCONTRADA 404");
 		
 	}
+	
 }
