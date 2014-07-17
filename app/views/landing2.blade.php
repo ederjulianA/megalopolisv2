@@ -465,4 +465,7 @@
     </div>
   </div>
 </div>
+
+{{ HTML::script('Tshop/assets/js/home.js')}}
+
 @stop

@@ -415,7 +415,10 @@ Route::get('/prueba-carlos', array(
 		'uses' => 'HomeController@getCarlos'
 	));
 Route::get('/nav2', array(
-
-			'as' => 'nav',
-			'uses' => 'NavegarController@getNav'
-		));
+		'as' => 'nav',
+		'uses' => 'NavegarController@getNav'
+	));
+Route::get('/product-detail', array(
+		'as' => 'proDetail',
+		'uses' => 'ProductosController@getProduct'
+	));

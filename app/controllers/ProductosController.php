@@ -82,4 +82,9 @@ class ProductosController  extends BaseController {
 		 $masProductos =  Producto::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
 		return View::make('empresa.pro2')->with('producto', $producto)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
 	}
+
+	public function getProduct()
+	{
+		return View::make('empresa.product-detail');
+	}
 }
