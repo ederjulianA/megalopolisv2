@@ -22,6 +22,42 @@ Empresas Megalopolis ||
 		width: auto;
 	}
 </style>
+		<!-- start sidebar -->
+<ul class="breadcrumb">
+    <li>Categorias</span></li>
+</ul>
+<div class="span3 product_list">
+	<ul class="nav">
+		<!--<li>
+			<a class="active" href="category.html">Desktops (12)</a>
+			<ul>
+				<li><a href="listings.html"> - PC (11)</a></li>
+				<li><a class="active" href="listings.html"> - Mac (1)</a></li>
+			</ul>
+		  </li>
+		<li>
+			<a href="category.html">Laptops &amp; Notebooks (5)</a>
+			<ul>
+				<li><a href="listings.html"> - Macs (0)</a></li>
+				<li><a href="listings.html"> - Windows (0)</a></li>
+			  </ul>
+		  </li>
+		<li>
+			<a href="category.html">Components (2)</a>
+				<ul>
+				<li><a href="listings.html"> - Mice and Trackballs (0)</a></li>
+				<li><a href="listings.html"> - Monitors (2)</a></li>
+				<li><a href="listings.html"> - Printers (0)</a></li>
+				<li><a href="listings.html"> - Scanners (0)</a></li>
+				<li><a href="listings.html"> - Web Cameras (0)</a></li>
+			  </ul>
+		  </li>-->
+		@foreach( $categorias as $categoria)
+			<li><a href="#">{{$categoria->nom_sector}}</a></li>
+		@endforeach
+		
+	</ul>
+</div><!-- end sidebar -->		</div>
 				<div class="span9">
 
 			<div id="myCarousel" class="carousel slide">
@@ -29,24 +65,24 @@ Empresas Megalopolis ||
               <div class="item active">
 		<img src="BSC/css/images/carousel_1.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>First Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h4>Productos Megalopolis</h4>
+                  <p>Estos Productos son patrocinados por Megalopolis.</p>
                 </div>
 
               </div>
               <div class="item">
                 <img src="BSC/css/images/carousel_2.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>Second Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h4>Productos Megalopolis</h4>
+                  <p>Estos Productos son patrocinados por Megalopolis.</p>
                 </div>
               </div>
 
               <div class="item">
 		<img src="BSC/css/images/carousel_3.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>Third Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h4>Productos Megalopolis</h4>
+                  <p>Estos Productos son patrocinados por Megalopolis.</p>
                 </div>
               </div>
             </div>

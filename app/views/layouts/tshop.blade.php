@@ -4,24 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
+
 <title>TSHOP - Bootstrap E-Commerce Parallax Theme</title>
 <!-- Bootstrap core CSS -->
 {{ HTML::style('Tshop/assets/bootstrap/css/bootstrap.css', array('media' => 'screen'))}}
 <!-- Custom styles for this template -->
 {{ HTML::style('Tshop/assets/css/style.css', array('media' => 'screen'))}}
-<!-- css3 animation effect for this template -->
-{{ HTML::style('Tshop/assets/css/animate.min.css', array('media' => 'screen'))}}
-<!-- styles needed by carousel slider -->
-{{ HTML::style('Tshop/assets/css/owl.carousel.css', array('media' => 'screen'))}}
-{{ HTML::style('Tshop/assets/css/owl.theme.css', array('media' => 'screen'))}}
+
+<!-- css3 styles needed by minimalect --> -->
+{{ HTML::style('Tshop/assets/css/jquery.minimalect.min.css', array('media' => 'screen'))}}
+
 <!-- styles needed by checkRadio -->
 {{ HTML::style('Tshop/assets/css/ion.checkRadio.css', array('media' => 'screen'))}}
 {{ HTML::style('Tshop/assets/css/ion.checkRadio.cloudy.css', array('media' => 'screen'))}}
+
+<!-- css3 animation effect for this template -->
+{{ HTML::style('Tshop/assets/css/animate.min.css', array('media' => 'screen'))}}
+
+
+<!-- styles needed by carousel slider -->
+{{ HTML::style('Tshop/assets/css/owl.carousel.css', array('media' => 'screen'))}}
+{{ HTML::style('Tshop/assets/css/owl.theme.css', array('media' => 'screen'))}}
+
 <!-- styles needed by mCustomScrollbar -->
 {{ HTML::style('Tshop/assets/css/jquery.mCustomScrollbar.css', array('media' => 'screen'))}}
 <!-- Just for debugging purposes. -->
@@ -636,13 +640,18 @@
 {{ HTML::script('Tshop/assets/js/jquery/1.8.3/jquery.js')}}  
 {{ HTML::script('Tshop/assets/bootstrap/js/bootstrap.min.js')}}
 <!-- include jqueryCycle plugin -->  
+
+<!-- include  parallax plugin -->  
+{{ HTML::script('Tshop/assets/js/jquery.parallax-1.1.js')}}
+
+<!-- optionally include helper plugins --> 
+{{ HTML::script('Tshop/assets/js/helper-plugins/jquery.mousewheel.min.js')}}
+
 {{ HTML::script('Tshop/assets/js/jquery.cycle2.min.js')}}
 <!-- include easing plugin --> 
 {{ HTML::script('Tshop/assets/js/jquery.easing.1.3.js')}}
-<!-- include  parallax plugin -->  
-{{ HTML::script('Tshop/assets/js/jquery.parallax-1.1.js')}}
-<!-- optionally include helper plugins --> 
-{{ HTML::script('Tshop/assets/js/helper-plugins/jquery.mousewheel.min.js')}}
+
+
 <!-- include mCustomScrollbar plugin //Custom Scrollbar  --> 
 {{ HTML::script('Tshop/assets/js/jquery.mCustomScrollbar.js')}}
 <!-- include checkRadio plugin //Custom check & Radio  --> 

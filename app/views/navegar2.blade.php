@@ -649,22 +649,22 @@
       
       <div class="row subCategoryList clearfix">
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/product/3.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> T shirt </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/product/3.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> T shirt </span></a></div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/site/casual.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> Shirt </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/casual.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> Shirt </span></a></div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/site/shoe.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> shoes </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/shoe.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> shoes </span></a></div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/site/jewelry.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span>  Accessories </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/jewelry.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span>  Accessories </span></a></div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/site/winter.jpg" class="img-rounded  " alt="img"> </a> <a  class="subCategoryTitle"><span> Winter Collection </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/winter.jpg" class="img-rounded  " alt="img"> </a> <a  class="subCategoryTitle"><span> Winter Collection </span></a></div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
-          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="images/site/Male-Fragrances.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span>  Fragrances </span></a></div>
+          <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/Male-Fragrances.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span>  Fragrances </span></a></div>
         </div>
       </div><!--/.subCategoryList-->
       
@@ -689,7 +689,7 @@
       <div class="row  categoryProduct xsResponse clearfix">
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
               <div class="product">
-                <div class="image"> <a href="product-details.html"><img src="images/product/30.jpg" alt="img" class="img-responsive"></a>
+                <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/30.jpg" alt="img" class="img-responsive"></a>
                   <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
                 </div>
                 <div class="description">
@@ -709,7 +709,7 @@
             </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
               <div class="product">
-                <div class="image"> <a href="product-details.html"><img src="images/product/31.jpg" alt="img" class="img-responsive"></a>
+                <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/31.jpg" alt="img" class="img-responsive"></a>
                   <div class="promotion"> <span class="discount">15% OFF</span> </div>
                 </div>
                 <div class="description">
@@ -729,7 +729,7 @@
             </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/34.jpg" alt="img" class="img-responsive"></a>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/34.jpg" alt="img" class="img-responsive"></a>
               <div class="promotion"> <span class="new-product"> NEW</span> </div>
             </div>
             <div class="description">
@@ -749,7 +749,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/35.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/35.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">humanitatis per</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -768,7 +768,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/33.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/33.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">Eodem modo typi</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -786,7 +786,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/10.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/10.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">sequitur mutationem </a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -804,7 +804,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/37.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/37.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">consuetudium lectorum.</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -822,7 +822,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/16.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/16.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">parum claram</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -840,7 +840,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/19.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/19.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
               <h4><a href="product-details.html">duis dolore </a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -858,7 +858,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/15.jpg" alt="img" class="img-responsive"></a>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/15.jpg" alt="img" class="img-responsive"></a>
               <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
             </div>
             <div class="description">
@@ -878,7 +878,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/14.jpg" alt="img" class="img-responsive"></a>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/14.jpg" alt="img" class="img-responsive"></a>
               <div class="promotion"> <span class="discount">15% OFF</span> </div>
             </div>
             <div class="description">
@@ -898,7 +898,7 @@
         </div><!--/.item-->
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="images/product/17.jpg" alt="img" class="img-responsive"></a>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/17.jpg" alt="img" class="img-responsive"></a>
               <div class="promotion"> <span class="new-product"> NEW</span> </div>
             </div>
             <div class="description">
