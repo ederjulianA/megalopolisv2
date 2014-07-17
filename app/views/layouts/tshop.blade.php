@@ -42,7 +42,6 @@
       elements: true
     };
 </script>
-{{ HTML::script('Tshop/assets/js/pace.min.js')}}
 
 </head>
 
@@ -667,6 +666,8 @@
 <!-- include custom script for only homepage  --> 
 <!-- include custom script for site  --> 
 {{ HTML::script('Tshop/assets/js/script.js')}}
+{{ HTML::script('Tshop/assets/js/pace.min.js')}}
+
 <script>
 
 </script>
