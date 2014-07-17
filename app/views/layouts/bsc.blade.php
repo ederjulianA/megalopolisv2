@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Bootstrap Shopping Cart</title>
+    <title>Megalopolis Bucaramanga</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -27,7 +27,7 @@
 		<div class="row"><!-- start header -->
 			<div class="span4 logo">
 			<a href="index.html">
-				<h1>Bootstrap Cart</h1>
+				<h1>Megalopolis Bucaramanga</h1>
 			</a>
 			</div>
 			<div class="span8">
@@ -35,28 +35,28 @@
 				<div class="row">
 					<div class="span1">&nbsp;</div>
 					<div class="span2">
-						<h4>Currency</h4>
+						<!--<h4>Currency</h4>
 						<a href="#">USD</a> |
 						<a href="#"><strong>GBP</strong></a> |
-						<a href="#">EUR</a>
+						<a href="#">EUR</a>-->
 					</div>
 					<div class="span2">
-						<a href="cart.html"><h4>Shopping Cart (3)</h4></a>
+						<a href="cart.html"><h4>Mis favoritos (3)</h4></a>
 						<a href="cart.html">2 item(s) - $40.00</a>
 					</div>					
 					<div class="span3 customer_service">
-						<h4>FREE delivery on ALL orders</h4>
-						<h4><small>Customer service: 0800 8475 548</small></h4>
+						<h4>Entregas en toda la ciudad</h4>
+						<h4><small>Servicio al cliente: 3013119198</small></h4>
 					</div>
 				</div>
 				<br />
 				<div class="row">
 					<div class="links pull-right">
-						<a href="index.html">Home</a> |
-						<a href="my_account.html">My Account</a> |
-						<a href="cart.html">Shopping Cart</a> |
-						<a href="two-column.html">About</a> |
-						<a href="contact.html">Contact</a>
+						<a href="#">Home</a> |
+						<a href="my_account.html">Mi Cuenta</a> |
+						<!--<a href="cart.html">Shopping Cart</a> |-->
+						<a href="#">Sobre Nosotros</a> |
+						<a href="#">Contacto</a>
 					</div>
 				
 				</div>
@@ -111,8 +111,8 @@
 						  <ul class="nav pull-right">
 						   <li class="divider-vertical"></li>
 							<form class="navbar-search" action="">
-								<input type="text" class="search-query span2" placeholder="Search">
-								<button class="btn btn-primary btn-small search_btn" type="submit">Go</button>
+								<input type="text" class="search-query span2" placeholder="Buscar">
+								<button class="btn btn-primary btn-small search_btn" type="submit">Ir</button>
 							</form>
 							
 						  </ul>
@@ -125,7 +125,7 @@
 		<div class="span3">
 			<!-- start sidebar -->
 <ul class="breadcrumb">
-    <li>Categories</span></li>
+    <li>Categorias</span></li>
 </ul>
 <div class="span3 product_list">
 	<ul class="nav">
@@ -207,6 +207,24 @@
             </div>
           </div>
         </li>
+
+        <li class="span2">
+          <div class="thumbnail">
+            <a href="product.html"><img alt="" src="BSC/css/images/ps-vita-150cx123.jpg" /></a>
+            <div class="caption">
+              <a href="product.html"> <h5>PS Vita</h5></a>  Price: &#36;50.00<br /><br />
+            </div>
+          </div>
+        </li>
+
+        <li class="span2">
+          <div class="thumbnail">
+            <a href="product.html"><img alt="" src="BSC/css/images/ps-vita-150cx123.jpg" /></a>
+            <div class="caption">
+              <a href="product.html"> <h5>PS Vita</h5></a>  Price: &#36;50.00<br /><br />
+            </div>
+          </div>
+        </li>
        
 	   <li class="span2">
           <div class="thumbnail">
@@ -258,12 +276,12 @@
         <div class="span2">
 		
 		 <div class="roe">
-		<h4>Newsletter</h4><br />
-		<p>Sign up for our weekly newsletter and stay up-to-date with the latest offers, and newest products.</p>
+		<h4>Novedades</h4><br />
+		<p>Suscribete al boletin semanal de megalopolis para estar al tanto de todas las novedades.</p>
 		
 		    <form class="form-search">
-    <input type="text" class="span2" placeholder="Enter your email" /><br /><br />
-    <button type="submit" class="btn pull-right">Subscribe</button>
+    <input type="text" class="span2" placeholder="Tu Email" /><br /><br />
+    <button type="submit" class="btn pull-right">Suscribir</button>
     </form>
 		</div><br /><br />
             <a href="#"><img alt="" title="" src="BSC/css/images/paypal_mc_visa_amex_disc_150x139.gif" /></a>
@@ -276,29 +294,27 @@
 	<div class="row well no_margin_left">
 
 	<div class="span3">
-		<h4>Information</h4>
+		<h4>Información</h4>
 		<ul>
-			<li><a href="two-column.html">About Us</a></li>
-			<li><a href="typography.html">Delivery Information</a></li>
-			<li><a href="typography.html">Privacy Policy</a></li>
-			<li><a href="typography.html">Terms &amp; Conditions</a></li>
+			<li><a href="two-column.html">Sobre Nosotros</a></li>
+			<li><a href="typography.html">Entregas</a></li>
+			<li><a href="typography.html">Politica de privacidad</a></li>
+			<li><a href="typography.html">Terminos &amp; Condiciones</a></li>
 		</ul>
 	</div>
 	<div class="span3">
-		<h4>Customer Service</h4>
+		<h4>Servicio al cliente</h4>
 		<ul>
-			<li><a href="contact.html">Contact Us</a></li>
-			<li><a href="typography.html">Returns</a></li>
-			<li><a href="typography.html">Site Map</a></li>
+			<li><a href="contact.html">Contactanos</a></li>
+			<li><a href="typography.html">Devoluciones</a></li>
+			<li><a href="typography.html">Mapa del sitio</a></li>
 		</ul>
 	</div>
 	<div class="span3">
 		<h4>Extras</h4>
 		<ul>
 			<li><a href="typography.html">Brands</a></li>
-			<li><a href="typography.html">Gift Vouchers</a></li>
-			<li><a href="typography.html">Affiliates</a></li>
-			<li><a href="typography.html">Specials</a></li>
+			
 		</ul>
 	</div>
 	<div class="span2">
