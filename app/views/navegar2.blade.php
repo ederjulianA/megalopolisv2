@@ -643,8 +643,13 @@
     <div class="col-lg-9 col-md-9 col-sm-12">
     
       <div class="w100 clearfix category-top">
+<<<<<<< HEAD
         <h2> MIS PRODUCTOS </h2>
         <div class="categoryImage"> <img src="Tshop/images/site/banner-moto.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
+=======
+        <h2> MEN COLLECTION </h2>
+        <div class="categoryImage"> <img src="Tshop/images/site/category.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
+>>>>>>> e2dd2f3f0b380220eff8c1d67522f46fe6270304
       </div><!--/.category-top-->
       
       <div class="row subCategoryList clearfix">
