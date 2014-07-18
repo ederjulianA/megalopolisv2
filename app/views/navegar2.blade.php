@@ -4,7 +4,7 @@
 	<div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"> <a href="#"> Home </a> </li>
-        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> New Products <b class="caret"> </b> </a>
+        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Productos nuevos <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
             <li class="megamenu-content "> 
               
@@ -330,7 +330,7 @@
           <div class="panel-heading">
             <h4 class="panel-title"> 
             <a data-toggle="collapse"  href="#collapseCategory" class="collapseWill"> 
-            <span class="pull-left"> <i class="fa fa-caret-right"></i></span> Category 
+            <span class="pull-left"> <i class="fa fa-caret-right"></i></span> Categoria
             </a> 
             </h4>
           </div>
@@ -367,7 +367,7 @@
         
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title"> <a class="collapseWill" data-toggle="collapse"  href="#collapsePrice"> Price <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span class="pull-right clearFilter  label-danger"> Clear </span> </h4>
+            <h4 class="panel-title"> <a class="collapseWill" data-toggle="collapse"  href="#collapsePrice"> Precio <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span class="pull-right clearFilter  label-danger"> Clear </span> </h4>
           </div>
           <div id="collapsePrice" class="panel-collapse collapse in">
             <div class="panel-body priceFilterBody"> 
@@ -400,7 +400,7 @@
                 <input type="radio" name="agree" value="6" disabled checked />
                 Don't know</label>
               <hr>
-              <p>Enter a Price range </p>
+              <p>Rango de precio </p>
               <form class="form-inline " role="form">
                 <div class="form-group">
                   <input type="text" class="form-control" id="exampleInputEmail2" placeholder="2000 $">
@@ -417,7 +417,7 @@
         
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseBrand" class="collapseWill"> Brand <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
+            <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseBrand" class="collapseWill"> Marcas <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
           </div>
           <div id="collapseBrand" class="panel-collapse collapse in">
             <div class="panel-body smoothscroll maxheight300">
@@ -618,7 +618,7 @@
         </div><!--/color panel end-->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseThree" class="collapseWill"> Discount <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
+            <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseThree" class="collapseWill"> Descuentos <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
           </div>
           <div id="collapseThree" class="panel-collapse collapse in">
             <div class="panel-body">
@@ -643,16 +643,15 @@
     <div class="col-lg-9 col-md-9 col-sm-12">
     
       <div class="w100 clearfix category-top">
-<<<<<<< HEAD
-        <h2> MIS PRODUCTOS </h2>
-        <div class="categoryImage"> <img src="Tshop/images/site/banner-moto.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
-=======
-        <h2> MEN COLLECTION </h2>
-        <div class="categoryImage"> <img src="Tshop/images/site/category.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
->>>>>>> e2dd2f3f0b380220eff8c1d67522f46fe6270304
+
+        <h2> MOTOS COLOMBIA </h2>
+        <div class="categoryImage"> <img src="Tshop/images/site/moto1.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
+
+        
+
       </div><!--/.category-top-->
       
-      <div class="row subCategoryList clearfix">
+      <!--<div class="row subCategoryList clearfix">
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
           <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/product/3.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span> T shirt </span></a></div>
         </div>
@@ -671,19 +670,16 @@
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
           <div class="thumbnail equalheight"> <a class="subCategoryThumb" href="sub-category.html"><img src="Tshop/images/site/Male-Fragrances.jpg" class="img-rounded " alt="img"> </a> <a  class="subCategoryTitle"><span>  Fragrances </span></a></div>
         </div>
-      </div><!--/.subCategoryList-->
+      </div>--><!--/.subCategoryList-->
       
       <div class="w100 productFilter clearfix">
-        <p class="pull-left"> Showing <strong>12</strong> products </p>
+        <p class="pull-left"> Mostrando <strong>3</strong> productos </p>
         <div class="pull-right ">
           <div class="change-order pull-right">
             <select class="form-control" name="orderby">
-              <option selected="selected" >Default sorting</option>
-              <option value="popularity">Sort by popularity</option>
-              <option value="rating">Sort by average rating</option>
-              <option value="date">Sort by newness</option>
-              <option value="price">Sort by price: low to high</option>
-              <option value="price-desc">Sort by price: high to low</option>
+              <option selected="selected" >Ordenar por Defecto</option>
+              <option value="popularity">Ordenar por precio(+)</option>
+           
             </select>
           </div>
           <div class="change-view pull-right"> 
@@ -694,231 +690,91 @@
       <div class="row  categoryProduct xsResponse clearfix">
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
               <div class="product">
-                <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/30.jpg" alt="img" class="img-responsive"></a>
-                  <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
+                <div class="image"> <a href="{{URL::route('proDetail')}}"><img src="Tshop/images/product/m2.jpg" alt="img" class="img-responsive"></a>
+                  <div class="promotion"> <span class="new-product"> NUEVO</span> <span class="discount">15% OFF</span> </div>
                 </div>
                 <div class="description">
-                  <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                  <span class="size">XL / XXL / S </span> </div>
+                  <h4><a href="{{URL::route('proDetail')}}">Casco Integral Abatible Doble Visor Certificado 3110</a></h4>
+                  <p>Envío gratis a todo el país. </p>
+                  <span class="size">XL / L</span> </div>
                 <div class="price"> 
-                  	<span>$25</span>
+                  	<span>$ 89.999</span>
                   	
                   </div>
                   <div class="action-control">
 <a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
+                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar </span> 
                     </a>
 				</div>
               </div>
             </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-              <div class="product">
-                <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/31.jpg" alt="img" class="img-responsive"></a>
-                  <div class="promotion"> <span class="discount">15% OFF</span> </div>
-                </div>
-                <div class="description">
-                  <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                  <span class="size">XL / XXL / S </span> </div>
-                <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-              </div>
-            </div><!--/.item-->
+    
+     
+       
+     
+     
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/34.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> </div>
-            </div>
+            <div class="image"> <a href="{{URL::route('proDetail')}}"><img src="Tshop/images/product/m3.jpg" alt="img" class="img-responsive"></a> </div>
             <div class="description">
-              <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="{{URL::route('proDetail')}}">Casco Icon Alliance Torrent White S Moto.</a></h4>
+              <p>Disponible. </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> 
-                  	<span>$25</span>
-                  	<span class="old-price">$75</span>
+                  	<span>$450,000</span>
+                  	<span class="old-price">$380,000</span>
                   </div>
                   <div class="action-control">
 <a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
+                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar </span> 
                     </a>
 				</div>
           </div>
         </div><!--/.item-->
+       
+       
+      
+    
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/35.jpg" alt="img" class="img-responsive"></a> </div>
+            <div class="image"> <a href="{{URL::route('proDetail')}}"><img src="Tshop/images/product/m4.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
+            </div>
             <div class="description">
-              <h4><a href="product-details.html">humanitatis per</a></h4>
+              <h4><a href="{{URL::route('proDetail')}}">Chaquetas De Proteccion Reflectiva Para Motociclistas </a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <span class="size">XL / XXL / S </span> </div>
+            <div class="price"> 
+                  	<span>$385.000</span>
+                  	
+                  </div>
+                  <div class="action-control">
+<a class="btn btn-primary"> 
+                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar </span> 
+                    </a>
+				</div>
+          </div>
+        </div><!--/.item-->
 
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
+
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/33.jpg" alt="img" class="img-responsive"></a> </div>
-            <div class="description">
-              <h4><a href="product-details.html">Eodem modo typi</a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/10.jpg" alt="img" class="img-responsive"></a> </div>
-            <div class="description">
-              <h4><a href="product-details.html">sequitur mutationem </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/37.jpg" alt="img" class="img-responsive"></a> </div>
-            <div class="description">
-              <h4><a href="product-details.html">consuetudium lectorum.</a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	<span class="old-price">$75</span>
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/16.jpg" alt="img" class="img-responsive"></a> </div>
-            <div class="description">
-              <h4><a href="product-details.html">parum claram</a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	<span class="old-price">$75</span>
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/19.jpg" alt="img" class="img-responsive"></a> </div>
-            <div class="description">
-              <h4><a href="product-details.html">duis dolore </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/15.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
+            <div class="image"> <a href="{{URL::route('proDetail')}}"><img src="Tshop/images/product/m5.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="{{URL::route('proDetail')}}">Guantes Moto Bicicleta De Protección Livianos </a></h4>
+              <p>Preguntar Disponibilidad </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> 
-                  	<span>$25</span>
-                  	
+                    <span>$75.000</span>
+                    
                   </div>
                   <div class="action-control">
 <a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
+                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar </span> 
                     </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/14.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="discount">15% OFF</span> </div>
-            </div>
-            <div class="description">
-              <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
-          </div>
-        </div><!--/.item-->
-        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/17.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> </div>
-            </div>
-            <div class="description">
-              <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> 
-                  	<span>$25</span>
-                  	
-                  </div>
-                  <div class="action-control">
-<a class="btn btn-primary"> 
-                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> 
-                    </a>
-				</div>
+        </div>
           </div>
         </div><!--/.item-->
     </div> <!--/.categoryProduct || product content end-->
@@ -936,7 +792,7 @@
           </ul>
         </div>
         <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
-          <p>Showing 1–450 of 12 results</p>
+          <p>Resultados</p>
         </div>
       </div> <!--/.categoryFooter-->
     </div><!--/right column end-->

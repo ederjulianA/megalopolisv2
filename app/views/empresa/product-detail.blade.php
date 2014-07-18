@@ -32,12 +32,13 @@
 <!-- include pace script for automatic web page progress bar  -->
 
 
- 
+ <script>
+    paceOptions = {
+      elements: true
+    };
+</script>
 
 <script src="Tshop/assets/js/pace.min.js"></script>
-    
-  
-    
 
     
 
@@ -48,9 +49,9 @@
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="index.html">Home</a> </li>
-        <li><a href="category.html">MEN COLLECTION</a> </li>
-        <li><a href="sub-category.html">TSHIRT</a> </li>
-        <li class="active">Lorem ipsum dolor sit amet </li>
+        <li><a href="category.html">MOTOS COLOMBIA</a> </li>
+        <li><a href="sub-category.html">CASCOS</a> </li>
+        <li class="active">CASCO INTEGRAL ABATIBLE DOBLE VISOR CERTIFICADO 3110 </li>
       </ul>
     </div>
   </div>
@@ -58,11 +59,11 @@
   
    <!-- left column -->
     <div class="col-lg-6 col-md-6 col-sm-6">
-      <!-- product Image and Tshop/ -->
+      <!-- product Image and Zoom -->
       <div class="main-image sp-wrap col-lg-12 no-padding"> 
-        <a href="Tshop/images/zoom/zoom1hi.jpg"><img src="Tshop/images/zoom/zoom1.jpg" class="img-responsive" alt="img"></a> 
-        <a href="Tshop/images/zoom/zoom2hi.jpg"><img src="Tshop/images/zoom/zoom2.jpg" class="img-responsive" alt="img"></a>
-        <a href="Tshop/images/zoom/zoom3hi.jpg"><img src="Tshop/images/zoom/zoom3.jpg" class="img-responsive" alt="img"></a> 
+        <a href="Tshop/images/product/m2.jpg"><img src="Tshop/images/product/m2.jpg" class="img-responsive" alt="img"></a> 
+        <a href="Tshop/images/product/m2.1.jpg"><img src="Tshop/images/product/m2.1.jpg" class="img-responsive" alt="img"></a>
+        <a href="Tshop/images/product/m2.2.jpg"><img src="Tshop/images/product/m2.2.jpg" class="img-responsive" alt="img"></a> 
       </div>
     </div><!--/ left column end -->
     
@@ -70,15 +71,15 @@
     <!-- right column -->
     <div class="col-lg-6 col-md-6 col-sm-5">
     
-      <h1 class="product-title"> Lorem ipsum dolor sit amet</h1>
-      <h3 class="product-code">Product Code : DEN1098</h3>
+      <h1 class="product-title"> Casco Integral Abatible Doble Visor Certificado 3110</h1>
+      <h3 class="product-code">Codigo de Producto : DEN1098</h3>
       <div class="product-price"> 
-          <span class="price-sales"> $70</span> 
-          <span class="price-standard">$95</span> 
+          <span class="price-sales"> $80,000</span> 
+          <span class="price-standard">$95,000</span> 
       </div>
       
       <div class="details-description">
-        <p>In scelerisque libero ut elit porttitor commodo Suspendisse laoreet magna. </p>
+        <p>In scelerisque libero ut elit porttitor commodo Suspendisse laoreet magnaaaa. </p>
       </div>
       
       <div class="color-details"> 
@@ -94,7 +95,7 @@
       <div class="productFilter">
         <div class="filterBox">
           <select>
-            <option value="strawberries" selected>Quantity</option>
+            <option value="strawberries" selected>Cantidad</option>
             <option value="mango">1</option>
             <option value="bananas">2</option>
             <option value="watermelon">3</option>
@@ -107,7 +108,7 @@
         </div>
         <div class="filterBox">
           <select>
-            <option value="strawberries" selected>Size</option>
+            <option value="strawberries" selected>Talla</option>
             <option value="mango">XL</option>
             <option value="bananas">XXL</option>
             <option value="watermelon">M</option>
@@ -120,14 +121,14 @@
       
       <div class="cart-actions">
         <div class="addto">
-          <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Add to Cart</button>
-          <a class="link-wishlist wishlist"  >Add to Wishlist</a> </div>
+          <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Agregar</button>
+          <a class="link-wishlist wishlist"  >Agregar a Favoritos</a> </div>
           
         <div style="clear:both"></div>
         
-        <h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i> In stock</h3>
+        <h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i>Disponible</h3>
         <h3 style="display:none" class="incaps"><i class="fa fa-minus-circle color-out"></i> Out of stock</h3>
-        <h3 class="incaps"> <i class="glyphicon glyphicon-lock"></i> Secure online ordering</h3>
+        <h3 class="incaps"> <i class="glyphicon glyphicon-lock"></i> Compra Segura</h3>
       </div>
       <!--/.cart-actions-->
       
@@ -136,23 +137,26 @@
       <div class="product-tab w100 clearfix">
       
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
-          <li><a href="#size" data-toggle="tab">Size</a></li>
-          <li><a href="#shipping" data-toggle="tab">Shipping</a></li>
+          <li class="active"><a href="#details" data-toggle="tab">Detalles</a></li>
+          <li><a href="#size" data-toggle="tab">Tamaño</a></li>
+          <li><a href="#shipping" data-toggle="tab">Envios</a></li>
         </ul>
         
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane active" id="details">Sed ut eros felis. Vestibulum rutrum imperdiet nunc a interdum. In scelerisque libero ut elit porttitor commodo. Suspendisse laoreet magna nec urna fringilla viverra.<br>
-            100% Cotton<br></div>
-          <div class="tab-pane" id="size"> 16" waist<br>
-            34" inseam<br>
-            10.5" front rise<br>
-            8.5" knee<br>
-            7.5" leg opening<br>
-            <br>
-            Measurements taken from size 30<br>
-            Model wears size 31. Model is 6'2 <br>
+          <div class="tab-pane active" id="details">HORARIO DE ATENCION TELEFONICA 
+LUNES A VIRNES 9AM-5PM
+SABADOS 9AM-1PM
+VIA EMAIL TODOS LOS DIAS A CUALQUIER HORA.<br>
+            100% Original<br></div>
+          <div class="tab-pane" id="size"> 1.INTEGRAL ABATIBLE<br>
+2.CERTIFICADO CON RESOLUCION 1737 DE 2004<br>
+3.EL MEJOR EN SU CLASE<br>
+4.LA MEJOR AEROGRAFIA<br>
+5.PRODUCTO NACIONAL<br>
+6.DOBLE LENTE<br>
+7.GARANTIA DE REPUESTOS<br>
+"DE 6 PIEZAS EN ADELANTE TE DAMOS UN 30% DE DESCUENTO"<br>
             <br>
           </div>
           
@@ -165,20 +169,16 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <td>Standard</td>
-                  <td>1-5 business days</td>
-                  <td>$7.95</td>
+                  <td>Normal</td>
+                  <td>1-5 Dias habiles</td>
+                  <td>$7,000</td>
                 </tr>
                 <tr>
-                  <td>Two Day</td>
-                  <td>2 business days</td>
-                  <td>$15</td>
+                  <td>Dos dias</td>
+                  <td>2 dias habiles</td>
+                  <td>$15,000</td>
                 </tr>
-                <tr>
-                  <td>Next Day</td>
-                  <td>1 business day</td>
-                  <td>$30</td>
-                </tr>
+               
               </tbody>
               <tfoot>
                 <tr>
@@ -195,7 +195,7 @@
       <div style="clear:both"></div>
       
       <div class="product-share clearfix">
-        <p> SHARE </p>
+        <p> COMPARTE ESTE PRODUCTO </p>
         <div class="socialIcon"> 
           <a href="#"> <i  class="fa fa-facebook"></i></a> 
             <a href="#"> <i  class="fa fa-twitter"></i></a> 
@@ -211,46 +211,46 @@
     
   <div class="row recommended">
   
-    <h1> YOU MAY ALOS LIKE </h1>
+    <h1> TALVES TE INTERESE </h1>
   <div id="SimilarProductSlider">
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/a1.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/m2.jpg"  alt="img"> </a>
           <div class="description">
-            <h4><a href="san-remo-spaghetti">YOUR LIFE</a></h4>
-            <div class="price"> <span>$57</span> </div>
+            <h4><a href="san-remo-spaghetti">CASCO INTEGRAL ABATIBLE DOBLE VISOR CERTIFICADO 3110 </a></h4>
+            <div class="price"> <span>$80,000</span> </div>
           </div>
         </div>
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/a2.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/m3.jpg"  alt="img"> </a>
           <div class="description">
-            <h4><a href="san-remo-spaghetti">RED CROWN</a></h4>
-            <div class="price"> <span>$44</span> </div>
+            <h4><a href="san-remo-spaghetti">Casco Icon Alliance Torrent White S Moto</a></h4>
+            <div class="price"> <span>$450,000</span> </div>
           </div>
         </div>
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/a3.jpg" alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/m4.jpg" alt="img"> </a>
           <div class="description">
             <h4><a href="san-remo-spaghetti">WHITE GOLD</a></h4>
-            <div class="price"> <span>$35</span></div>
+            <div class="price"> <span>$385,000</span></div>
           </div>
         </div>
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/a4.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/m5.jpg"  alt="img"> </a>
           <div class="description">
-            <h4><a href="san-remo-spaghetti">DENIM 4240</a></h4>
-            <div class="price"> $<span>55</span></div>
+            <h4><a href="san-remo-spaghetti">Guantes Moto Bicicleta De Protección Livianos</a></h4>
+            <div class="price"> $<span>55,000</span></div>
           </div>
         </div>
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/30.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/30.jpg"  alt="img"> </a>
           <div class="description">
             <h4><a href="san-remo-spaghetti">CROWN ROCK</a></h4>
             <div class="price"> <span>$500</span> </div>
@@ -259,7 +259,7 @@
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/a5.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/a5.jpg"  alt="img"> </a>
           <div class="description">
             <h4><a href="san-remo-spaghetti">SLIM ROCK</a></h4>
             <div class="price"> <span>$50 </span> </div>
@@ -268,7 +268,7 @@
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/36.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/36.jpg"  alt="img"> </a>
           <div class="description">
             <h4><a href="san-remo-spaghetti">ROCK T-Shirts </a></h4>
             <div class="price"> <span>$130</span> </div>
@@ -277,7 +277,7 @@
       </div><!--/.item-->
       
       <div class="item">
-        <div class="product"> <a class="product-image" > <img src="images/product/13.jpg"  alt="img"> </a>
+        <div class="product"> <a class="product-image" > <img src="Tshop/images/product/13.jpg"  alt="img"> </a>
           <div class="description">
             <h4><a href="san-remo-spaghetti">Denim T-Shirts </a></h4>
             <div class="price"> <span>$43</span> </div>
@@ -293,8 +293,12 @@
   
   
 </div> <!-- /main-container -->
-@stop
 
+
+<div class="gap"></div>
+
+
+@stop
 
 
 <!-- Le javascript
