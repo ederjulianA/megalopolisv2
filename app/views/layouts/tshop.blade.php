@@ -53,7 +53,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > Login  to TSHOP </h3>
+        <h3 class="modal-title-site text-center" > Login  Megalopolis </h3>
       </div>
       <div class="modal-body">
         <div class="form-group login-username">
@@ -85,7 +85,7 @@
       </div>
       <div class="modal-footer">
         <p class="text-center"> Not here before? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Sign Up. </a> <br>
-          <a href="forgot-password.html" > Lost your password? </a> </p>
+          <a href="forgot-password.html" > ¿Olvidaste tu contraseña? </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 
@@ -102,11 +102,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > REGISTER </h3>
+        <h3 class="modal-title-site text-center" > REGISTRO </h3>
       </div>
       <div class="modal-body">
-        <div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP WITH FACEBOOK </a> </div>
-        <h5 style="padding:10px 0 10px 0;" class="text-center"> OR </h5>
+        <div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP CON FACEBOOK </a> </div>
+        <h5 style="padding:10px 0 10px 0;" class="text-center"> O </h5>
         <div class="form-group reg-username">
           <div >
             <input name="login"  class="form-control input"  size="20" placeholder="Enter Username" type="text">
@@ -127,7 +127,7 @@
             <div class="checkbox login-remember">
               <label>
                 <input name="rememberme" id="rememberme" value="forever" checked="checked" type="checkbox">
-                Remember Me </label>
+                Recuérdame </label>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> Already member? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Sign in </a> </p>
+        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Sign in </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 
@@ -160,7 +160,7 @@
         
         <div class="pull-left ">
             <ul class="userMenu ">
-              <li> <a href="#"> <span class="hidden-xs">HELP</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
+              <li> <a href="#"> <span class="hidden-xs">Contáctanos</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
               <li class="phone-number"> 
               <a  href="callto:+8801680531352"> 
               <span> <i class="glyphicon glyphicon-phone-alt "></i></span> 
@@ -171,8 +171,8 @@
         <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
           <div class="pull-right">
             <ul class="userMenu">
-              <li> <a href="account-1.html"><span class="hidden-xs"> My Account</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li><li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
-              <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Create Account </a> </li>
+              <li> <a href="account-1.html"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li><li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
+              <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Registrarme </a> </li>
             </ul>
           </div>
         </div>
@@ -287,7 +287,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"> <a href="#"> Home </a> </li>
-        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> New Products <b class="caret"> </b> </a>
+        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
             <li class="megamenu-content ">
               <ul class="col-lg-3  col-sm-3 col-md-3 unstyled noMarginLeft newCollectionUl">
