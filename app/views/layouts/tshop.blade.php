@@ -37,11 +37,7 @@
 
 <!-- include pace script for automatic web page progress bar  -->
 
-<script>
-    paceOptions = {
-      elements: true
-    };
-</script>
+
 
 </head>
 
