@@ -1,7 +1,7 @@
 @extends('layouts.tshop')
 
 @section('content')
-			<div class="navbar-collapse collapse">
+	<div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"> <a href="#"> Home </a> </li>
         <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> New Products <b class="caret"> </b> </a>
@@ -10,7 +10,7 @@
               
               <ul class="col-lg-3  col-sm-3 col-md-3 unstyled noMarginLeft newCollectionUl">
                 <li class="no-border">
-                  <p class="promo-1"> <strong> NEW COLLECTION </strong> </p>
+                  <p class="promo-1"> <strong> NUEVA COLLECION </strong> </p>
                 </li>
                 <li> <a href="category.html"> ALL NEW PRODUCTS </a> </li>
                 <li> <a href="category.html"> NEW TOPS </a> </li>
@@ -643,7 +643,7 @@
     <div class="col-lg-9 col-md-9 col-sm-12">
     
       <div class="w100 clearfix category-top">
-        <h2> MEN COLLECTION </h2>
+        <h2> MIS PRODUCTOS </h2>
         <div class="categoryImage"> <img src="Tshop/images/site/banner-moto.jpg" width = "850px" height="300px" class="img-responsive" alt="img"> </div>
       </div><!--/.category-top-->
       
