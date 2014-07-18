@@ -466,6 +466,6 @@
   </div>
 </div>
 
-{{ HTML::script('Tshop/assets/js/home.js')}}
 
+{{ HTML::script('Tshop/assets/js/home.js')}}
 @stop
