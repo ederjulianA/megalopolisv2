@@ -121,7 +121,7 @@
       
       <div class="cart-actions">
         <div class="addto">
-          <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Agregar</button>
+          <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Comprar</button>
           <a class="link-wishlist wishlist"  >Agregar a Favoritos</a> </div>
           
         <div style="clear:both"></div>
