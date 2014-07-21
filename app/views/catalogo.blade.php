@@ -657,7 +657,7 @@ Catalogo | {{$sede->nombre_publico}}
       <div class="w100 clearfix category-top">
 
         <h2> {{$sede->empresa->razon_social}} </h2>
-        <div class="categoryImage"> {{HTML::image('Tshop/images/site/moto1.jpg', 'BANNER', array('width'=>'850px','height'=>'300px','class'=>'img-responsive') )}} </div>
+        <div class="categoryImage"> {{HTML::image('Tshop/images/site/header1.jpg', 'BANNER', array('width'=>'850px','height'=>'300px','class'=>'img-responsive') )}} </div>
 
         
 

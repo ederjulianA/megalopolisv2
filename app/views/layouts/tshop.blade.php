@@ -186,7 +186,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
-      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company')}} </a> 
+      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo2.png', 'megalopolis Company')}} </a> 
       
       <!-- this part for mobile -->
       <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
@@ -648,6 +648,8 @@
 {{ HTML::script('Tshop/assets/js/helper-plugins/jquery.mousewheel.min.js')}}
 
 {{ HTML::script('Tshop/assets/js/jquery.cycle2.min.js')}}
+
+
 <!-- include easing plugin --> 
 {{ HTML::script('Tshop/assets/js/jquery.easing.1.3.js')}}
 
