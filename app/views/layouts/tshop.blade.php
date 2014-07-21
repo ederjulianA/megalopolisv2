@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Fav and touch icons -->
+@yield('content-page')
 
-<title>TSHOP - Bootstrap E-Commerce Parallax Theme</title>
+<title>@yield('titulo')</title>
 <!-- Bootstrap core CSS -->
 {{ HTML::style('Tshop/assets/bootstrap/css/bootstrap.css', array('media' => 'screen'))}}
 <!-- Custom styles for this template -->
@@ -185,7 +186,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
-      <a class="logoMega " href="index.html"> <img src="Tshop/images/logo.png" alt="TSHOP"> </a> 
+      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company')}} </a> 
       
       <!-- this part for mobile -->
       <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
