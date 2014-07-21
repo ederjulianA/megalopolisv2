@@ -1,16 +1,9 @@
-@extends('layouts.mega')
+@extends('layouts.tshop')
 @section('titulo')
 	{{$empresa->razon_social}}
 @stop
 
-<style type="text/css">
-	.img-empresa-2{
-		height: auto;
-		text-align: center;
-		margin: 0 auto;
-		width: 100%;
-	}
-</style>
+
 
 @section('content-page')
 	<meta name="description" content="@if($empresa->desc_larga == "")
@@ -26,67 +19,63 @@
 @stop
 
 @section('content')
-		<section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-			  <div class="img_empress" id="img_w">
-			    <div class="line_empress" id="l_empress">{{$empresa->razon_social}}</div>
-		     {{ HTML::image($empresa->logo, $empresa->razon_social, array('class'=>'img-empresa-2'))}}</div>
-		      <div class="descipcion_w" id="descripcion_w_1">
-		      		@if($empresa->desc_larga == "")
+			<div class="container main-container headerOffset">
+  
+  <div class="row innerPage">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="row userInfo">
+        <div class="col-xs-12 col-sm-12">
+          <h1 class="title-big text-center section-title-style2">
+            <span >
+              {{$empresa->razon_social}}
+            </span>
+          </h1>
+          
+          <p class="lead text-center">
+            @if($empresa->desc_larga == "")
 												{{$empresa->desc_breve}}
 										@else
 											{{$empresa->desc_larga}}
-										@endif
-		. </div>
-		      <div class="info_direc" id="direc">
-		        <p>Dierccion: {{$empresa->direccion_principal}}</p>
-		        <p>Telefono: {{$empresa->telefono}}</p>
-		        <p>E-Mail: {{$empresa->user->email}}</p>
-		      </div>
+										@endif . 
+          </p>
+          
+          
+          <hr class="hr hr30">
+          <div class="row animated">
+          		 <h3 class="title-big text-center section-title-style2">
+            <span >
+              Mis sedes
+            </span>
+          </h3>
+
+          		@foreach($sedes as $sede)
+          				<div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
+          				<a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$sede->nombre_publico))}}">{{HTML::image('Tshop/images/site/sede.jpg', 'SEDE', array('class'=>'img-responsive'))}}</a>
+            
+              <h3 class="block-title-3">
+                <a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$sede->nombre_publico))}}">{{$sede->nombre_publico}} </a>
+              </h3>
+              <p>
+                Algo sobre esta sede.
+              </p>
               
               
               
-	      </div>
-		</div>
-	</section><!--/slider-->
-	
-	<section>
-		<div class="container">
-			<div class="row"><!--/category-tab--><!--/recommended_items-->
-					
-				</div>
-			</div>
-		</div>
-      <div class="sedes_tag" id="sedes"><div class="img_empressedes" id="img_wa">
-			    <div class="line_empress" id="l_empress">Sedes ({{$num_sedes}})</div>
-			    @if($sedes->count())
-										@foreach($sedes as $sede)
-										<div class="sedes_col" id="sedes_col"><a class="" style="color:#fff; font-weight:bold; text-decoration:none;" href="{{URL::route('catalogo-sede', array('nombre_publico'=>$sede->nombre_publico))}}" id="">{{$sede->nombre_publico}}</a></div>
-											
-									
-
-										@endforeach
-
-
-									@else
-									No se han definido sedes para {{$empresa->razon_social}}
-
-									@endif
-      
-      
-      </div>
+            </div>
+          		@endforeach
+            
+            
         
-        <div class="preguntas_frecuentes_bann" id="p_f_b">Preguntas Frecuentes</div>
-        @foreach($preguntas as $pregunta)
-        	<div class="preguntas" id="p_f_casillas">{{$pregunta->pregunta}} ???</div>
-        @endforeach
-        
-       
-        
-        
-      
-        
-      </div>
-	</section>
+            
+            
+            
+          </div><!--/.row-->
+          
+          <hr>
+        </div>
+      </div>  <!--/row end-->
+    </div>
+  </div> <!--/.innerPage-->
+  <div style="clear:both">  </div>
+</div><!-- /.main-container -->
 @stop
