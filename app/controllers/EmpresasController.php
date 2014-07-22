@@ -59,6 +59,7 @@ class EmpresasController  extends BaseController {
 		
 		$productos = Producto::where('empresas.id', '=', $empresa->id)->where('producto.estado', '=', 1)->join('almacen', 'producto.id', '=', 'almacen.producto')
 													->join('sedes', 'sedes.id', '=', 'almacen.sede')
+
 													->join('empresas', 'empresas.id', '=', 'sedes.empresa_id')
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
@@ -70,6 +71,8 @@ class EmpresasController  extends BaseController {
 													'producto.img3',
 													'producto.imgSmall',
 													'producto.id',
+													'empresas.razon_social AS empresa_name',
+													'empresas.nombre_publico AS empresa_publico',
 													'almacen.sede AS producto_sede',
 													'producto.descripcion AS producto_descripcion',
 													'almacen.cantidad')->get();

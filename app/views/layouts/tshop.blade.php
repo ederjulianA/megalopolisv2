@@ -503,7 +503,7 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Compras </h3>
           <ul>
-            <li> <a href="index.html"> Home </a> </li>
+            <li> <a href="index.html"> Home. </a> </li>
             <li> <a href="category.html"> Categorias </a> </li>
             <li> <a href="sub-category.html"> Sub Categorias </a> </li>
             <li> <a href="product-details.html"> Detalles de producto </a> </li>

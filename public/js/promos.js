@@ -55,9 +55,10 @@ function cambiar_nombre()
 
 	$(document).on("click","a.lista-products", function(e){
 
+		alert("Buscando Productos");
 		$(".productos-container").empty();
 
-			$.ajax({
+/*$.ajax({
 		url : "get-products",
 		dataType: "json",
 		type : "post",
@@ -92,7 +93,7 @@ function cambiar_nombre()
 		
 
 
-	});	
+	});	*/
 
 			
 

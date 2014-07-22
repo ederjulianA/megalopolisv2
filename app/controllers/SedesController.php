@@ -22,6 +22,7 @@ class SedesController extends BaseController{
 
 
 			$productos = Producto::where('sede','=',$sede->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
+								
 													->join('categorias', 'producto.categoria', '=', 'categorias.id')
 													->select('producto.nombre AS producto_nombre',
 													'almacen.precio_detal',
