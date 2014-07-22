@@ -186,7 +186,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
-      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo2.png', 'megalopolis Company')}} </a> 
+      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company')}} </a> 
       
       <!-- this part for mobile -->
       <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
@@ -301,13 +301,13 @@
               </ul>
               
               <ul class="col-lg-3  col-sm-3 col-md-3  col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/depor.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/sport-wear.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/fraselibro.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/libros1.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/promo3.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> Y MUCHO MÁS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/interiores.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> INTERIORES </span> </a> </li>
               </ul>
             </li>
           </ul>
