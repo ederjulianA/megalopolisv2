@@ -25,10 +25,10 @@
               <div class="col-lg-12 col-md-12 col-sm-12 sliderTextFull ">
                 <div class="inner text-center">
                   <div class="topAnima animated">
-                    <h1 class="uppercase xlarge">FREE SHIPPING</h1>
-                    <h3 class="hidden-xs"> Free Standard Shipping on Orders Over $100 </h3>
+                    <h1 class="uppercase xlarge">Haz parte del mercado online</h1>
+                    <h3 class="hidden-xs"> Vende y compra desde tecnología hasta ropa y accesorios </h3>
                   </div>
-                  <a class="btn btn-danger btn-lg bottomAnima animated opacity0">SHOP NOW ON TSHOP <span class="arrowUnicode">►</span></a> </div>
+                  <a class="btn btn-danger btn-lg bottomAnima animated opacity0"> Sube tus catálogos <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>

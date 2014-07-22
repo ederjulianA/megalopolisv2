@@ -85,7 +85,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> Not here before? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Sign Up. </a> <br>
+        <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Sign Up. </a> <br>
           <a href="forgot-password.html" > ¿Olvidaste tu contraseña? </a> </p>
       </div>
     </div>
@@ -165,7 +165,7 @@
               <li class="phone-number"> 
               <a  href="callto:+8801680531352"> 
               <span> <i class="glyphicon glyphicon-phone-alt "></i></span> 
-              <span class="hidden-xs" style="margin-left:5px"> 88 01680 53 1352 </span> </a> </li>
+              <span class="hidden-xs" style="margin-left:5px"> 6481166 - 6483698 </span> </a> </li>
             </ul>
           </div>
         </div>
@@ -293,30 +293,28 @@
             <li class="megamenu-content ">
               <ul class="col-lg-3  col-sm-3 col-md-3 unstyled noMarginLeft newCollectionUl">
                 <li class="no-border">
-                  <p class="promo-1"> <strong> NEW COLLECTION </strong> </p>
+                  <p class="promo-1"> <strong> LAS EMPRESAS </strong> </p>
                 </li>
-                <li> <a href="category.html"> ALL NEW PRODUCTS </a> </li>
-                <li> <a href="category.html"> NEW TOPS </a> </li>
-                <li> <a href="category.html"> NEW SHOES </a> </li>
-                <li> <a href="category.html"> NEW TSHIRT </a> </li>
-                <li> <a href="category.html"> NEW TSHOP </a> </li>
+                <li> <a href="category.html"> JIM SPORTS </a> </li>
+                <li> <a href="category.html"> DULCESITOS </a> </li>
+                <li> <a href="category.html"> MOTOS </a> </li>
               </ul>
               
               <ul class="col-lg-3  col-sm-3 col-md-3  col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/promo1.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> JEANS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/depor.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/promo2.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> PARTY DRESS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/fraselibro.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/promo3.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> SHOES </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/promo3.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> Y MUCHO MÁS </span> </a> </li>
               </ul>
             </li>
           </ul>
         </li>
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
-        <li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> SHOP <b class="caret"> </b> </a>
+        <li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> TIENDA <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
             <li class="megamenu-content"> 
               
@@ -368,73 +366,7 @@
               </ul>
             </li>
           </ul>
-        </li>
-        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> PAGES <b class="caret"> </b> </a>
-          <ul class="dropdown-menu">
-            <li class="megamenu-content"> 
-              
-              <!-- megamenu-content -->
-              
-              <h3 class="promo-1 no-margin hidden-xs"> 24+ HTML PAGES ONLY $8 || AVAILABLE ONLY AT WRAP BOOTSTRAP </h3>
-              <h3 class="promo-1sub hidden-xs"> Complete Parallax E-Commerce Boostrap Template, Responsive on any Device, 10+ color Theme + Parallax Effect </h3>
-              <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                <li class="no-border">
-                  <p> <strong> Features Pages </strong> </p>
-                </li>
-                <li > <a href="index.html"> Home Version 1 </a> </li>
-                <li > <a href="index2.html"> Home Version 2 </a> </li>
-                <li > <a href="index-header2.html"> Header Version 2 </a> </li>
-                <li > <a href="index-header3.html"> Header Version 3 </a> </li>
-                <li> <a href="category.html"> Category </a> </li>
-                <li> <a href="sub-category.html"> Sub Category </a> </li>
-                <li> <a href="product-details.html"> Product Details </a> </li>
-                <li> <a href="product-details-style2.html"> Product Details Version 2 </a> </li>
-              </ul>
-              <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                <li class="no-border">
-                  <p> <strong> &nbsp; </strong> </p>
-                </li>
-                <li> <a href="cart.html"> Cart </a> </li>
-                <li> <a href="about-us.html"> About us </a> </li>
-                <li> <a href="about-us-2.html"> About us 2 (no parallax) </a> </li>
-                <li> <a href="contact-us.html"> Contact us </a> </li>
-                <li> <a href="contact-us-2.html"> Contact us 2 (No Fixed Map) </a> </li>
-                <li> <a href="terms-conditions.html"> Terms &amp; Conditions </a> </li>
-              </ul>
-              <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                <li class="no-border">
-                  <p> <strong> Checkout </strong> </p>
-                </li>
-                <li> <a href="checkout-0.html"> Checkout Before </a> </li>
-                <li> <a href="checkout-1.html"> checkout step 1 </a> </li>
-                <li> <a href="checkout-2.html"> checkout step 2 </a> </li>
-                <li> <a href="checkout-3.html"> checkout step 3 </a> </li>
-                <li> <a href="checkout-4.html"> checkout step 4 </a> </li>
-                <li> <a href="checkout-5.html"> checkout step 5 </a> </li>
-              </ul>
-              <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                <li class="no-border">
-                  <p> <strong> User Account </strong> </p>
-                </li>
-                <li> <a href="account-1.html"> Account Login </a> </li>
-                <li> <a href="account.html"> My Account </a> </li>
-                <li> <a href="my-address.html"> My Address </a> </li>
-                <li> <a href="user-information.html"> User information </a> </li>
-                <li> <a href="wishlist.html"> Wisth list </a> </li>
-                <li> <a href="order-list.html"> Order list </a> </li>
-                <li> <a href="forgot-password.html"> Forgot Password </a> </li>
-              </ul>
-              <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                <li class="no-border">
-                  <p> <strong> &nbsp; </strong> </p>
-                </li>
-                <li> <a href="error-page.html"> Error Page </a> </li>
-                 <li> <a href="blank-page.html"> Blank Page </a> </li>
-                 <li> <a href="form.html"> Basic Form Element  </a> </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        </li>  
       </ul>
       
       <!--- this part will be hidden for mobile version -->
