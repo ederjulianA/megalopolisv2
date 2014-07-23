@@ -1,6 +1,9 @@
 @extends('layouts.tshop')
 
 @section('content')
+<style type="text/css">
+
+</style>
 <div class="banner">
   <div class="full-container">
     <div class="slider-content">
@@ -35,7 +38,7 @@
                 <div class="inner">
                   <h1>Publica tus productos</h1>
                   <p class="hidden-xs">Registra tus nuevos productos y actualiza tu catálogo</p>
-                  <a href="category.html"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
+                  <a href="#"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
@@ -217,7 +220,7 @@
             <div class="description">
               <h4><a href="product-details.html">BÁSICO</a></h4>
               <p>Hasta 30 productos. </p></div>
-            <div class="discount" > <span>$35.000</span> </div>
+            <div class="discount plan"  > <span >$35.000</span> </div>
           </div>
         </div>
         <!--/.item-->

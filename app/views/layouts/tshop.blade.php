@@ -188,7 +188,7 @@
             <ul class="userMenu ">
               <li> <a href="#"> <span class="hidden-xs">Contáctanos</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
               <li class="phone-number"> 
-              <a  href="callto:+8801680531352"> 
+              <a  href="callto:+6481166"> 
               <span> <i class="glyphicon glyphicon-phone-alt "></i></span> 
               <span class="hidden-xs" style="margin-left:5px"> 6481166 - 6483698 </span> </a> </li>
             </ul>
@@ -224,7 +224,7 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
+     <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>-->
       <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company')}} </a> 
       
       <!-- this part for mobile -->
@@ -238,13 +238,13 @@
     </div>
     
     <!-- this part is duplicate from cartMenu  keep it for mobile -->
-    <div class="navbar-cart  collapse">
+    <!--<div class="navbar-cart  collapse">
       <div class="cartMenu  col-lg-4 col-xs-12 col-md-4 ">
         <div class="w100 miniCartTable scroll-pane">
           <table  >
             <tbody>
               <tr class="miniCartProduct">
-                <td style="20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/3.jpg" alt="img"> </a> </div></td>
+                <td style="20%" class="miniCartProductThumb"><div> <a href="#"> {{HTML::image('Tshop/images/product/3.jpg', 'img')}} </a> </div></td>
                 <td style="40%"><div class="miniCartDescription">
                     <h4> <a href="product-details.html"> TSHOP T shirt Black </a> </h4>
                     <span class="size"> 12 x 1.5 L </span>
@@ -265,63 +265,20 @@
                 <td  style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
                 <td  style="5%" class="delete"><a > x </a></td>
               </tr>
-              <tr class="miniCartProduct">
-                <td style="20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/5.jpg" alt="img"> </a> </div></td>
-                <td  style="40%"><div class="miniCartDescription">
-                    <h4> <a href="product-details.html"> TSHOP T shirt Black </a> </h4>
-                    <span class="size"> 12 x 1.5 L </span>
-                    <div class="price"> <span> $8.80 </span> </div>
-                  </div></td>
-                <td   style="10%" class="miniCartQuantity"><a > X 1 </a></td>
-                <td  style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                <td  style="5%" class="delete"><a > x </a></td>
-              </tr>
-              <tr class="miniCartProduct">
-                <td style="20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/3.jpg" alt="img"> </a> </div></td>
-                <td  style="40%"><div class="miniCartDescription">
-                    <h4> <a href="product-details.html"> TSHOP T shirt Black </a> </h4>
-                    <span class="size"> 12 x 1.5 L </span>
-                    <div class="price"> <span> $8.80 </span> </div>
-                  </div></td>
-                <td   style="10%" class="miniCartQuantity"><a > X 1 </a></td>
-                <td  style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                <td  style="5%" class="delete"><a > x </a></td>
-              </tr>
-              <tr class="miniCartProduct">
-                <td style="20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/3.jpg" alt="img"> </a> </div></td>
-                <td  style="40%"><div class="miniCartDescription">
-                    <h4> <a href="product-details.html"> TSHOP T shirt Black </a> </h4>
-                    <span class="size"> 12 x 1.5 L </span>
-                    <div class="price"> <span> $8.80 </span> </div>
-                  </div></td>
-                <td   style="10%" class="miniCartQuantity"><a > X 1 </a></td>
-                <td  style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                <td  style="5%" class="delete"><a > x </a></td>
-              </tr>
-              <tr class="miniCartProduct">
-                <td style="20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/4.jpg" alt="img"> </a> </div></td>
-                <td  style="40%"><div class="miniCartDescription">
-                    <h4> <a href="product-details.html"> TSHOP T shirt Black </a> </h4>
-                    <span class="size"> 12 x 1.5 L </span>
-                    <div class="price"> <span> $8.80 </span> </div>
-                  </div></td>
-                <td   style="10%" class="miniCartQuantity"><a > X 1 </a></td>
-                <td  style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                <td  style="5%" class="delete"><a > x </a></td>
-              </tr>
+            
             </tbody>
           </table>
-        </div>
+        </div>-->
         <!--/.miniCartTable-->
         
-        <div class="miniCartFooter  miniCartFooterInMobile text-right">
+        <!--<div class="miniCartFooter  miniCartFooterInMobile text-right">
           <h3 class="text-right subtotal"> Subtotal: $210 </h3>
-          <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a class="btn btn-sm btn-primary"> CHECKOUT </a> </div>
+          <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a class="btn btn-sm btn-primary"> CHECKOUT </a> </div>-->
         <!--/.miniCartFooter--> 
         
-      </div>
+     <!-- </div>-->
       <!--/.cartMenu--> 
-    </div>
+   <!-- </div>-->
     <!--/.navbar-cart-->
     
     <div class="navbar-collapse collapse">
@@ -340,26 +297,26 @@
               </ul>
               
               <ul class="col-lg-3  col-sm-3 col-md-3  col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/sport-wear.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/sport-wear.jpg', 'Producto', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/libros1.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="#"> {{HTML::image('Tshop/images/site/libros1.jpg', 'LIBROS', array('class'=>'img-responsive'))}}<span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/interiores.jpg" alt="product"> <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> INTERIORES </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/interiores.jpg', 'Interiores', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> INTERIORES </span> </a> </li>
               </ul>
             </li>
           </ul>
         </li>
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
-        <li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> TIENDA <b class="caret"> </b> </a>
+        <!--<li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> TIENDA <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
-            <li class="megamenu-content"> 
+            <li class="megamenu-content"> -->
               
               <!-- megamenu-content -->
               
-              <ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
+             <!-- <ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
                 <li>
                   <p> <strong> Women Collection </strong> </p>
                 </li>
@@ -396,104 +353,21 @@
                 <li> <a href="#"> TANJIM </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
-                <li class="no-margin productPopItem "> <a href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/g4.jpg" alt="img"> </a> <a class="text-center productInfo alpha90" href="product-details.html"> Eodem modo typi <br>
+                <li class="no-margin productPopItem "> <a href="#">{{HTML::image('Tshop/images/site/g4.jpg', 'img', array('class'=>'img-responsive'))}}  </a> <a class="text-center productInfo alpha90" href="#"> Eodem modo typi <br>
                   <span> $60 </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
-                <li class="no-margin productPopItem relative"> <a href="product-details.html"> <img class="img-responsive" src="Tshop/images/site/g5.jpg" alt="img"> </a> <a class="text-center productInfo alpha90" href="product-details.html"> Eodem modo typi <br>
+                <li class="no-margin productPopItem relative"> <a href="product-details.html">{{HTML::image('Tshop/images/site/g5.jpg','img', array('class'=>'img-responsive'))}}  </a> <a class="text-center productInfo alpha90" href="#"> Eodem modo typi <br>
                   <span> $60 </span> </a> </li>
               </ul>
             </li>
           </ul>
-        </li>  
-      </ul>
+        </li> 
+      </ul>--> 
       
       <!--- this part will be hidden for mobile version -->
       <div class="nav navbar-nav navbar-right hidden-xs">
-        <div class="dropdown  cartMenu "> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-shopping-cart"> </i> <span class="cartRespons"> Cart ($210.00) </span> <b class="caret"> </b> </a>
-          <div class="dropdown-menu col-lg-4 col-xs-12 col-md-4 ">
-            <div class="w100 miniCartTable scroll-pane">
-              <table>
-                <tbody>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/3.jpg" alt="img"> </a> </div></td>
-                    <td style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> TSHOP Tshirt DO9 </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $22 </span> </div>
-                      </div></td>
-                    <td  style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $33 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/2.jpg" alt="img"> </a> </div></td>
-                    <td  style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> TShir TSHOP 09 </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $15 </span> </div>
-                      </div></td>
-                    <td   style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $120 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/5.jpg" alt="img"> </a> </div></td>
-                    <td  style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> Tshir 2014 </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $30 </span> </div>
-                      </div></td>
-                    <td   style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $80 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/3.jpg" alt="img"> </a> </div></td>
-                    <td  style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> TSHOP T shirt DO20 </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $15 </span> </div>
-                      </div></td>
-                    <td   style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $55 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/product/4.jpg" alt="img"> </a> </div></td>
-                    <td  style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> T shirt Black </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $44 </span> </div>
-                      </div></td>
-                    <td   style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $40 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                  <tr class="miniCartProduct">
-                    <td style="width:20%" class="miniCartProductThumb"><div> <a href="product-details.html"> <img src="Tshop/images/site/winter.jpg" alt="img"> </a> </div></td>
-                    <td  style="width:40%"><div class="miniCartDescription">
-                        <h4> <a href="product-details.html"> G Star T shirt </a> </h4>
-                        <span class="size"> 12 x 1.5 L </span>
-                        <div class="price"> <span> $80 </span> </div>
-                      </div></td>
-                    <td   style="width:10%" class="miniCartQuantity"><a > X 1 </a></td>
-                    <td  style="width:15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td  style="width:5%" class="delete"><a > x </a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!--/.miniCartTable-->
-            
-            <div class="miniCartFooter text-right">
-              <h3 class="text-right subtotal"> Subtotal: $210 </h3>
-              <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a class="btn btn-sm btn-primary"> CHECKOUT </a> </div>
-            <!--/.miniCartFooter--> 
-            
-          </div>
-          <!--/.dropdown-menu--> 
-        </div>
+       
         <!--/.cartMenu-->
         
         <div class="search-box">
@@ -514,7 +388,7 @@
   
   <div class="search-full text-right"> <a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
     <div class="searchInputBox pull-right">
-      <input type="search"  data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search" class="search-input">
+      <input type="search"  data-searchurl="search?=" name="q" placeholder="Qué buscas..." class="search-input">
       <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
     </div>
   </div>
