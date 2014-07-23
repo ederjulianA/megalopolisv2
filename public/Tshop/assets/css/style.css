@@ -1899,7 +1899,7 @@ legend {
 /*  ------- parallax section 2 -------  */
 
 .parallax-image-2 {
-	background: url(../../images/parallax/pic07.jpg) fixed;
+	background: url(../../images/parallax/header.jpg) fixed;
 	background-attachment: fixed;/* IE FIX */
 }
 .parallax-section-overley {

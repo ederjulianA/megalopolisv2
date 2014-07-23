@@ -207,68 +207,53 @@
   <!-- Main component call to action -->
   
   <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
-    <h3 class="section-title style2 text-center"><span>Productos destacados</span></h3>
+    <h3 class="section-title style2 text-center"><span>NUESTROS PLANES</span></h3>
     <div class="container">
       <div class="row xsResponse">
         <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/30.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/product4.jpg" alt="img" class="img-responsive"></a>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">Sobrero para dama</a></h4>
-              <p>¡Promoción sólo por hoy!. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
+              <h4><a href="product-details.html">BÁSICO</a></h4>
+              <p>Hasta 30 productos. </p></div>
+            <div class="discount" > <span>$35.000</span> </div>
           </div>
         </div>
         <!--/.item-->
-        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+       <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/31.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="discount">15% OFF</span> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/girl3.jpg" alt="img" class="img-responsive"></a>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">Combo ropa deportiva Tennis </a></h4>
-              <p>Promoción de ropa deportiva </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
+              <h4><a href="product-details.html">INTERMEDIO</a></h4>
+              <p>A partir de 30 productos hasta 50. </p></div>
+            <div class="discount"> <span>$50.000</span> </div>
           </div>
         </div>
         <!--/.item-->
-        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+       <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/34.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/girl2.jpg" alt="img" class="img-responsive"></a>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">Vestido para dama </a></h4>
-              <p>Vestido para dama juvenil y con estilo. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
+              <h4><a href="product-details.html">PROFESIONAL</a></h4>
+              <p>Desde 50 productos hasta 80 </p></div>
+            <div class="discount" > <span>$85.000</span> </div>
           </div>
         </div>
 
+        <!--/.item-->  
         <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/34.jpg" alt="img" class="img-responsive"></a>
-              <div class="promotion"> <span class="new-product"> NEW</span> </div>
+            <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/girl1.jpg" alt="img" class="img-responsive"></a>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">Vestido para dama </a></h4>
-              <p>Vestido para dama juvenil y con estilo. </p>
-              <span class="size">XL / XXL / S </span> </div>
-            <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
+              <h4><a href="product-details.html">MEGA</a></h4>
+              <p>Más de 80 productos. </p></div>
+            <div class="discount"> <span>$120.000</span> </div>
           </div>
         </div>
-        <!--/.item-->
-        
-      
-      
     </div>
     <!--/.container--> 
   </div>
@@ -305,6 +290,7 @@
           <div class="parallax-content clearfix">
             <h1 class="xlarge">  </h1>
             <h5 class="parallaxSubtitle"> Megalópolis Company </h5>
+            <img src="Tshop/images/product/simbolo.png" alt= "img">
           </div>
         </div>
       </div>
