@@ -58,7 +58,7 @@ function cambiar_nombre()
 		alert("Buscando Productos");
 		$(".productos-container").empty();
 
-/*$.ajax({
+$.ajax({
 		url : "get-products",
 		dataType: "json",
 		type : "post",
@@ -72,7 +72,28 @@ function cambiar_nombre()
 
 					}else{
 							for( var i in data){
-						var produc = '<div class="producto fadeInUp animation-delay4" style = "vertical-align: top;"> <div class="thumbnail"><h1 class = "My-Circle" title = "Unidades disponibles">'+data[i].cantidad+'</h1>  <img src = ../'+data[i].imagen+' class="img-producto-lista" /><div class="caption"> <h1 class = "My-Title" style="height:80px;">'+data[i].producto_nombre+'</h1> <hr><h2 class = "My-Category-Title" >'+data[i].categoria_nombre+'</h2><p><a href="/public/producto/'+data[i].id+'-'+data[i].sede_id+'" class="label label-danger">Detalle</a> </p>  </div> </div></div>';
+						//var produc = '<div class="producto fadeInUp animation-delay4" style = "vertical-align: top;"> <div class="thumbnail"><h1 class = "My-Circle" title = "Unidades disponibles">'+data[i].cantidad+'</h1>  <img src = ../'+data[i].imagen+' class="img-producto-lista" /><div class="caption"> <h1 class = "My-Title" style="height:80px;">'+data[i].producto_nombre+'</h1> <hr><h2 class = "My-Category-Title" >'+data[i].categoria_nombre+'</h2><p><a href="/public/producto/'+data[i].id+'-'+data[i].sede_id+'" class="label label-danger">Detalle</a> </p>  </div> </div></div>';
+							var produc = '';
+								       produc += '<div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">';
+           produc += '<div class="product">';
+             produc += '<div class="image"> <a href="/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
+             produc +=  '<div class="promotion"> <span class="new-product"> NUEVO</span> </div>';
+            produc += '</div>';
+            produc += '<div class="description">';
+              produc += '<h4><a href="">'+data[i].producto_nombre+' </a></h4>';
+              produc += '<p>Preguntar Disponibilidad </p>';
+              produc += '<span class="size">XL / XXL / S </span> </div>';
+           produc +=  '<div class="price"> ';
+                   produc +=  '<span>$'+data[i].precio_detal+'</span>';
+                    
+                  produc += '</div>';
+                  produc += '<div class="action-control">';
+produc += '<a class="btn btn-primary"> ';
+                     produc += '<span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> ';
+                    produc +=  '</a>';
+        produc += '</div>';
+          produc += '</div>';
+        produc += '</div>';
 						$(".productos-container").append(produc);
 						
 
@@ -93,7 +114,7 @@ function cambiar_nombre()
 		
 
 
-	});	*/
+	});	
 
 			
 

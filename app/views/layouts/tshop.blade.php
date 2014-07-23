@@ -606,6 +606,8 @@
 {{ HTML::script('Tshop/assets/js/script.js')}}
 {{ HTML::script('Tshop/assets/js/pace.min.js')}}
 
+{{ HTML::script('js/promos.js')}}
+
 <script>
 
 </script>

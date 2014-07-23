@@ -18,6 +18,7 @@ Catalogo | {{$sede->nombre_publico}}
 
 
 <div class="container main-container headerOffset"> 
+<input type="hidden" id="nombre_sede_h" value="{{$sede->nombre_publico}}">
   
   <!-- Main component call to action -->
   
@@ -38,6 +39,12 @@ Catalogo | {{$sede->nombre_publico}}
   
     <div class="col-lg-3 col-md-3 col-sm-12">
       <div class="panel-group" id="accordionNo">
+
+
+
+
+
+
        <!--Category--> 
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -81,14 +88,42 @@ Catalogo | {{$sede->nombre_publico}}
             </div>
           </div>
         </div> <!--/Category menu end--> 
-        
+
+
         <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a class="collapseWill" data-toggle="collapse"  href="#collapsePrice"> Informacion de la empresa <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span class="pull-right clearFilter  label-danger"> Importante </span> </h4>
+          </div>
+          <div id="collapsePrice" class="panel-collapse collapse in">
+            <div class="panel-body priceFilterBody"> 
+              
+              <label>
+                
+                Direccion : {{$sede->direccion}}</label>
+              <br>
+
+                 <label>
+                
+                email : {{$sede->empresa->user->email}} </a></li>
+</label>
+              <br>
+
+                 <label>
+                
+                Telefono : {{$sede->telefono}}</label>
+              <br>
+         
+            </div>
+          </div>
+        </div> <!--/price info end--> 
+        
+        <!--<div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title"> <a class="collapseWill" data-toggle="collapse"  href="#collapsePrice"> Precio <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span class="pull-right clearFilter  label-danger"> Clear </span> </h4>
           </div>
           <div id="collapsePrice" class="panel-collapse collapse in">
             <div class="panel-body priceFilterBody"> 
-              <!-- -->
+              
               <label>
                 <input type="radio" name="agree" value="0"  />
                 100$ - 500$</label>
@@ -130,9 +165,9 @@ Catalogo | {{$sede->nombre_publico}}
               </form>
             </div>
           </div>
-        </div> <!--/price panel end--> 
+        </div>--> <!--/price panel end--> 
         
-        <div class="panel panel-default">
+        <!--<div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseBrand" class="collapseWill"> Marcas <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
           </div>
@@ -234,14 +269,14 @@ Catalogo | {{$sede->nombre_publico}}
                   Mulberry </label>
               </div>
               <div class="block-element">
-                <label> &nbsp; </label> <!-- keep it blank // -->
+                <label> &nbsp; </label> 
               </div>
               
             </div>
           </div>
-        </div> <!--/brand panel end-->
+        </div>--> <!--/brand panel end-->
         
-        <div class="panel panel-default">
+        <!--<div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseColor" class="collapseWill"> Color <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
           </div>
@@ -332,8 +367,8 @@ Catalogo | {{$sede->nombre_publico}}
               </div>
             </div>
           </div>
-        </div><!--/color panel end-->
-        <div class="panel panel-default">
+        </div>--><!--/color panel end-->
+        <!--<div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title"> <a data-toggle="collapse"  href="#collapseThree" class="collapseWill"> Descuentos <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> </h4>
           </div>
@@ -351,7 +386,7 @@ Catalogo | {{$sede->nombre_publico}}
               </div>
             </div>
           </div>
-        </div><!--/discount  panel end-->
+        </div>--><!--/discount  panel end-->
       </div>
     </div>
     
@@ -404,7 +439,7 @@ Catalogo | {{$sede->nombre_publico}}
           <a href="#" title="List" class="list-view "><i class="fa fa-th-list"></i></a> </div>
         </div>
       </div> <!--/.productFilter-->
-      <div class="row  categoryProduct xsResponse clearfix">
+   <div class="row  categoryProduct xsResponse clearfix productos-container">
 
       @foreach($productos as $key => $producto)
                <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
@@ -450,11 +485,7 @@ Catalogo | {{$sede->nombre_publico}}
           <ul class="pagination no-margin-top">
             <li><a href="#">«</a></li>
             <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">»</a></li>
+            
           </ul>
         </div>
         <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
