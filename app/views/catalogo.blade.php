@@ -1,6 +1,6 @@
 @extends('layouts.tshop')
 @section('titulo')
-Catalogo | {{$sede->nombre_publico}}
+Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
 @stop
 
 @section('content-page')
@@ -13,6 +13,20 @@ Catalogo | {{$sede->nombre_publico}}
 @stop
 
 @section('content')
+
+<style type="text/css">
+    .resultado-ajaz-cat{
+      background-color: #45E976 ;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+      width: 300px;
+    }
+
+</style>
 
     
 
@@ -116,6 +130,12 @@ Catalogo | {{$sede->nombre_publico}}
             </div>
           </div>
         </div> <!--/price info end--> 
+
+
+        <div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
+            <script type = 'text/javascript'>
+              initialize({{$sede->latitude}}, {{$sede->longitude}});
+            </script>
         
         <!--<div class="panel panel-default">
           <div class="panel-heading">

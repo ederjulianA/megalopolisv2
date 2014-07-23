@@ -19,6 +19,41 @@
 @stop
 
 @section('content')
+<style type="text/css">
+  
+  .Suscribir{
+    background-color: #45E976 !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 2px 1px 2px rgba(0,0,0, .7);
+    color: #fff;
+    
+    font-weight: bold;
+
+    padding: 10px;
+  
+  }
+  .Suscrito{
+        background-color: #457EE9 !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 2px 1px 2px rgba(0,0,0, .7);
+    color: #fff;
+    
+    font-weight: bold;
+
+    padding: 10px;
+
+  }
+</style>
 			<div class="container main-container headerOffset">
   
   <div class="row innerPage">
@@ -28,6 +63,7 @@
           <h1 class="title-big text-center section-title-style2">
             <span >
               {{$empresa->razon_social}}
+              
             </span>
           </h1>
           
@@ -37,6 +73,8 @@
 										@else
 											{{$empresa->desc_larga}}
 										@endif . 
+                    <br><br><br>
+                    @if(Auth::user()) {{ Favs::mostrarSus(Auth::user()->id, $empresa->id)}}  @endif
           </p>
           
           

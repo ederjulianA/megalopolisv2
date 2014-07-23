@@ -68,7 +68,7 @@ $.ajax({
 			if(data){
 
 					if (data.estado == 0) {
-						$(".productos-container").html("<div>"+data.mensaje+"</div>");
+						$(".productos-container").html("<div class='resultado-ajaz-cat'>"+data.mensaje+"</div>");
 
 					}else{
 							for( var i in data){

@@ -41,7 +41,24 @@
 <![endif]-->
 
 <!-- include pace script for automatic web page progress bar  -->
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
+    type="text/javascript"></script>
 
+<script type="text/javascript">
+    function initialize(latitude, longitude) {
+    
+      if (GBrowserIsCompatible()) {
+      map = new GMap2(document.getElementById("map_canvas"));
+      map.setCenter(new GLatLng(latitude, longitude), 15);
+      var marker = new GMarker(new GLatLng(latitude, longitude), {draggable: true});
+      map.addOverlay(marker);
+      map.setUIToDefault();
+      geocoder = new GClientGeocoder();
+      }
+      
+      return false;
+    }
+  </script>
 
 
 </head>
@@ -49,7 +66,9 @@
 <body>
 
 <!-- Modal Login start -->
-<div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
+@if (Auth::check())
+@else
+  <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -57,14 +76,15 @@
         <h3 class="modal-title-site text-center" > Login  Megalopolis </h3>
       </div>
       <div class="modal-body">
+        <form  method="post" action="{{ URL::route('login-post')}} ">
         <div class="form-group login-username">
           <div >
-            <input name="log" id="login-user" class="form-control input"  size="20" placeholder="Enter Username" type="text">
+            <input name="email" id="login-user" class="form-control input"  size="20" placeholder="Tu email" type="email">
           </div>
         </div>
         <div class="form-group login-password">
           <div >
-            <input name="Password" id="login-password" class="form-control input"  size="20" placeholder="Password" type="password">
+            <input name="password" id="login-password" class="form-control input"  size="20" placeholder="Tu contraseña" type="password">
           </div>
         </div>
         <div class="form-group">
@@ -72,20 +92,22 @@
             <div class="checkbox login-remember">
               <label>
                 <input name="rememberme"  value="forever" checked="checked" type="checkbox">
-                Remember Me </label>
+                Recordarme Me </label>
             </div>
           </div>
         </div>
         <div >
           <div >
-            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="LOGIN" type="submit">
+            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="Iniciar Sesion" type="submit">
           </div>
         </div>
         <!--userForm--> 
+          {{ Form::token()}}
+        </form>
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Sign Up. </a> <br>
+        <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Registarte. </a> <br>
           <a href="forgot-password.html" > ¿Olvidaste tu contraseña? </a> </p>
       </div>
     </div>
@@ -96,6 +118,9 @@
   
 </div>
 <!-- /.Modal Login --> 
+
+@endif 
+
 
 <!-- Modal Signup start -->
 <div class="modal signUpContent fade" id="ModalSignup" tabindex="-1" role="dialog" >
@@ -172,8 +197,22 @@
         <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
           <div class="pull-right">
             <ul class="userMenu">
-              <li> <a href="account-1.html"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li><li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
-              <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Registrarme </a> </li>
+              
+                @if (Auth::check())
+                      @if(Auth::user()->tipo == 2)
+                        <li> <a href="{{ URL::route('empresaAdmin')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                      @else
+                        <li> <a href="account-1.html"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+
+                      @endif
+                  
+                  <li> <a href="{{URL::route('cerrar-sesion')}}"><span class="hidden-xs"> Cerrar Sesion</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                @else 
+                    <li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Iniciar Sesion</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
+                    <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Registrarme </a> </li>
+                @endif
+              
+              
             </ul>
           </div>
         </div>
@@ -559,7 +598,8 @@
   <div class="footer-bottom">
     <div class="container">
       <p class="pull-left"> &copy; Megalopolis 2014. Todos los derechos reservados. </p>
-      <div class="pull-right paymentMethodImg"> <img height="30" class="pull-right" src="Tshop/images/site/payment/master_card.png" alt="img" > <img height="30" class="pull-right" src="images/site/payment/paypal.png" alt="img" > <img height="30" class="pull-right" src="Tshop/images/site/payment/american_express_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/discover_network_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/google_wallet.png" alt="img" > </div>
+      <div class="pull-right paymentMethodImg"> {{HTML::image('Tshop/images/site/payment/master_card.png', 'master_card', array('class'=>'pull-right','height'=>'30'))}}
+      {{HTML::image('Tshop/images/site/payment/paypal.png', 'paypal', array('class'=>'pull-right','height'=>'30'))}} <!-- <img height="30" class="pull-right" src="Tshop/images/site/payment/american_express_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/discover_network_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/google_wallet.png" alt="img" >--> </div>
     </div>
   </div>
   <!--/.footer-bottom--> 
@@ -607,6 +647,8 @@
 {{ HTML::script('Tshop/assets/js/pace.min.js')}}
 
 {{ HTML::script('js/promos.js')}}
+
+{{ HTML::script('js/barrios.js')}}
 
 <script>
 

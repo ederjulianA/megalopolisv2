@@ -213,9 +213,9 @@ $(document).on("click",".remSus", function(e){
 				if(data.estado == 1){
 				
 				
-				$('#empresa-'+id).removeClass("btn-info remSus"); 
-				$('#empresa-'+id).addClass("btn-default addSus");	
-				$('#empresa-'+id).html("<i class='fa fa-check'></i><span>Suscribir</span>");
+				$('#empresa-'+id).removeClass("Suscrito remSus"); 
+				$('#empresa-'+id).addClass("Suscribir addSus");	
+				$('#empresa-'+id).html("<span>Suscribir</span>");
 				
 						
 					
@@ -251,9 +251,9 @@ $(document).on("click",".addSus", function(e){
 				if(data.estado == 1){
 				
 				
-				$('#empresa-'+id).removeClass("btn-default addSus");
-				$('#empresa-'+id).addClass("btn-info remSus");	
-				$('#empresa-'+id).html("<i class='fa fa-check'></i><span>Suscrito</span>");
+				$('#empresa-'+id).removeClass("Suscribir addSus");
+				$('#empresa-'+id).addClass("Suscrito remSus");	
+				$('#empresa-'+id).html("<span>Suscrito</span>");
 				
 						
 					

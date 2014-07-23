@@ -19,9 +19,9 @@ class Favs {
 	{
 		$sus = Suscripcion::where('user','=',$user_id)->where('empresa','=',$empresa_id)->get();
 		if($sus->count()){
-			$estado ='<a class="btn btn-info quick-btn remSus" href="'.$empresa_id.'" id="empresa-'.$empresa_id.'"><i class="fa fa-check"></i><span>Suscrito</span></a>';
+			$estado ='<a class=" Suscrito remSus" href="'.$empresa_id.'" id="empresa-'.$empresa_id.'"><span>Suscrito</span></a>';
 		}else{
-			$estado ='<a class="btn btn-default quick-btn addSus" href="'.$empresa_id.'" id="empresa-'.$empresa_id.'"><i class="fa fa-check"></i><span>Suscribir</span></a>';
+			$estado ='<a class=" Suscribir addSus" href="'.$empresa_id.'" id="empresa-'.$empresa_id.'"><span>Suscribir</span></a>';
 		}
 
 		return $estado;
