@@ -616,6 +616,9 @@
 <!-- include  parallax plugin -->  
 {{ HTML::script('Tshop/assets/js/jquery.parallax-1.1.js')}}
 
+{{ HTML::script('Tshop/assets/js/home.js')}}
+
+
 <!-- optionally include helper plugins --> 
 {{ HTML::script('Tshop/assets/js/helper-plugins/jquery.mousewheel.min.js')}}
 
