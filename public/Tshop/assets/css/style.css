@@ -1802,7 +1802,7 @@ legend {
 	height: auto;
 }
 .parallax-image-1 {
-	background: url(../../images/parallax/parallax.jpg);
+	background: url(../../images/parallax/pic07.jpg);
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1899,7 +1899,7 @@ legend {
 /*  ------- parallax section 2 -------  */
 
 .parallax-image-2 {
-	background: url(../../images/parallax/people-collage.jpg) fixed;
+	background: url(../../images/parallax/pic07.jpg) fixed;
 	background-attachment: fixed;/* IE FIX */
 }
 .parallax-section-overley {

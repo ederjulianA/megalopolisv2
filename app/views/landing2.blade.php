@@ -75,56 +75,56 @@
   <!-- Main component call to action -->
   
   <div class="row featuredPostContainer globalPadding style2">
-    <h3 class="section-title style2 text-center"><span>NEW ARRIVALS</span></h3>
+    <h3 class="section-title style2 text-center"><span>PROMOCIONES</span></h3>
     <div id="productslider" class="owl-carousel owl-theme">
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/34.jpg" alt="img" class="img-responsive"></a>
+          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/m2.2.jpg" alt="img" class="img-responsive"></a>
             <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
           </div>
           <div class="description">
-            <h4><a href="product-details.html">consectetuer adipiscing </a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-            <span class="size">XL / XXL / S </span> </div>
-          <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+            <h4><a href="product-details.html">Casco para moto </a></h4>
+            <p>Casco con estilo para motociclista </p>
+            <span class="size"></span> </div>
+          <div class="price"> <span>$25.000</span> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/30.jpg" alt="img" class="img-responsive"></a>
+          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/m4.jpg" alt="img" class="img-responsive"></a>
             <div class="promotion"> <span class="discount">15% OFF</span> </div>
           </div>
           <div class="description">
-            <h4><a href="product-details.html">luptatum zzril delenit</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Chaqueta motociclista</a></h4>
+            <p>Chaqueta marca x disponible en Jhon Motos. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/36.jpg" alt="img" class="img-responsive"></a>
+          <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/13.jpg" alt="img" class="img-responsive"></a>
             <div class="promotion"> <span class="new-product"> NEW</span> </div>
           </div>
           <div class="description">
-            <h4><a href="product-details.html">eleifend option </a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Camiseta unicolor </a></h4>
+            <p>Camiseta ver unicolor marca x. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/9.jpg" alt="img" class="img-responsive"></a> </div>
           <div class="description">
-            <h4><a href="product-details.html">mutationem consuetudium </a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Vestido Dama </a></h4>
+            <p>Vestido para dama marca x. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
@@ -135,7 +135,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
@@ -146,7 +146,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> <span class="old-price">$75</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
@@ -157,7 +157,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
@@ -168,7 +168,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
       <div class="item">
@@ -179,7 +179,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> <span class="old-price">$75</span> </div>
-          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
         </div>
       </div>
     </div>
@@ -289,22 +289,10 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="no-margin brand-carousel owl-carousel owl-theme">
-          <li><a ><img src="Tshop/images/brand/1.gif" alt="img" ></a></li>
-          <li><img src="Tshop/images/brand/2.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/3.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/4.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/5.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/6.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/7.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/8.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/1.gif" alt="img" ></li>
-          <li><img src="Tshop/images/brand/2.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/3.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/4.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/5.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/6.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/7.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/8.png" alt="img" ></li>
+          <li><img src="Tshop/images/brand/s1.png" alt="img" ></li>
+          <li><img src="Tshop/images/brand/s2.png" alt="img" ></li>
+          <li><img src="Tshop/images/brand/s3.png" alt="img" ></li>
+     
         </ul>
       </div>
     </div>
@@ -322,7 +310,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="parallax-content clearfix">
             <h1 class="xlarge">  </h1>
-            <h5 class="parallaxSubtitle"> Lorem ipsum dolor sit amet consectetuer </h5>
+            <h5 class="parallaxSubtitle"> Megalópolis Company </h5>
           </div>
         </div>
       </div>
