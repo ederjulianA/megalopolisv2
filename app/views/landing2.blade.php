@@ -7,7 +7,7 @@
       <ul id="pager" class="container">
       </ul>
       <div class="slider slider-v2">
-        <div class="slider-item slider-item-img1 " data-cycle-pager-template="<a href=#> LATEST COLLECTION </a>">
+        <div class="slider-item slider-item-img1 " data-cycle-pager-template="<a href=#> CREA TU TIENDA </a>">
           <div class="sliderInfo">
             <div class="container">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -19,47 +19,41 @@
               </div>
               <div class="col-lg-5 col-md-5 col-sm-5 pull-right sliderText dark alpha80 hidden-xs">
                 <div class="inner">
-                  <h1>LATEST COLLECTION</h1>
-                  <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                    sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpa </p>
-                  <a  href="category.html" class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                  <h1>Crea tu tienda</h1>
+                  <p class="hidden-xs">Regísrate y crea tu tienda virtual en minutos </p>
+                  <a  href="category.html" class="slide-link"> <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
           <img  alt="img" src="Tshop/images/slider/ciudad.jpg" class="img-responsive parallaximg sliderImg"> </div>
         <!--/.slider-item-->
         
-        <div class="slider-item slider-item-img2  parallax" data-cycle-pager-template="<a href=#> WOMEN COLLECTION </a>">
+        <div class="slider-item slider-item-img2  parallax" data-cycle-pager-template="<a href=#> PUBLICA TUS PRODUCTOS </a>">
           <div class="sliderInfo">
             <div class="container">
               <div class="col-lg-5 col-md-5 col-sm-5 pull-left sliderText dark alpha80 hidden-xs">
                 <div class="inner">
-                  <h1>WOMEN COLLECTION</h1>
-                  <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                    sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpa </p>
-                  <a href="category.html"  class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                  <h1>Publica tus productos</h1>
+                  <p class="hidden-xs">Registra tus nuevos productos y actualiza tu catálogo</p>
+                  <a href="category.html"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
-          <img alt="img" src="Tshop/images/slider/slider4.jpg" class="img-responsive parallaximg sliderImg"> </div>
+          <img alt="img" src="Tshop/images/slider/teletrabajo.jpg" class="img-responsive parallaximg sliderImg"> </div>
         <!--/.slider-item-->
         
-        <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> NEW COLLECTION </a>">
+        <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> AUMENTA TUS GANANCIAS </a>">
           <div class="sliderInfo">
             <div class="container">
               <div class="col-lg-4 col-md-4 col-sm-5 pull-right sliderText dark alpha80 transformRight hidden-xs">
                 <div class="inner">
-                  <h1>NEW COLLECTION</h1>
-                  <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                    sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpa </p>
-                  <a href="category.html"  class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                  <h1>Aumenta tus ganancias</h1>
+                  <p class="hidden-xs"> Aumenta tus clientes potenciales y disfruta de las ganancias de tu negocio online </p>
+                  <a href="category.html"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
-          <img alt="img" src="Tshop/images/slider/slider2.jpg" class="img-responsive parallaximg sliderImg"> </div>
+          <img alt="img" src="Tshop/images/slider/exito.jpg" class="img-responsive parallaximg sliderImg"> </div>
         <!--/.slider-item--> 
       </div>
       <!--/.slider-v2--> 
@@ -131,8 +125,8 @@
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/12.jpg" alt="img" class="img-responsive"></a> </div>
           <div class="description">
-            <h4><a href="product-details.html">sequitur mutationem </a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Blusa unicolor </a></h4>
+            <p>Blusa marca x para dama. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
           <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
@@ -142,8 +136,8 @@
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/13.jpg" alt="img" class="img-responsive"></a> </div>
           <div class="description">
-            <h4><a href="product-details.html">consuetudium lectorum.</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Camiseta unicolor Varones.</a></h4>
+            <p>Camiseta de verde marca x joven. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> <span class="old-price">$75</span> </div>
           <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
@@ -153,8 +147,8 @@
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/21.jpg" alt="img" class="img-responsive"></a> </div>
           <div class="description">
-            <h4><a href="product-details.html">parum claram</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Blusa unicolor</a></h4>
+            <p>Blusa gris marca x joven. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
           <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
@@ -164,8 +158,8 @@
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/24.jpg" alt="img" class="img-responsive"></a> </div>
           <div class="description">
-            <h4><a href="product-details.html">duis dolore </a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Camiseta varon unicolor </a></h4>
+            <p>Camiseta color gris x joven. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> </div>
           <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
@@ -175,8 +169,8 @@
         <div class="product">
           <div class="image"> <a href="product-details.html"><img src="Tshop/images/product/15.jpg" alt="img" class="img-responsive"></a></div>
           <div class="description">
-            <h4><a href="product-details.html">feugait nulla facilisi</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h4><a href="product-details.html">Vestido elegante</a></h4>
+            <p>Vestido blanco elegante para Dama. </p>
             <span class="size">XL / XXL / S </span> </div>
           <div class="price"> <span>$25</span> <span class="old-price">$75</span> </div>
           <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
@@ -222,11 +216,11 @@
               <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="product-details.html">Sobrero para dama</a></h4>
+              <p>¡Promoción sólo por hoy!. </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
           </div>
         </div>
         <!--/.item-->
@@ -236,11 +230,11 @@
               <div class="promotion"> <span class="discount">15% OFF</span> </div>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="product-details.html">Combo ropa deportiva Tennis </a></h4>
+              <p>Promoción de ropa deportiva </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
           </div>
         </div>
         <!--/.item-->
@@ -250,11 +244,11 @@
               <div class="promotion"> <span class="new-product"> NEW</span> </div>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="product-details.html">Vestido para dama </a></h4>
+              <p>Vestido para dama juvenil y con estilo. </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
           </div>
         </div>
 
@@ -264,11 +258,11 @@
               <div class="promotion"> <span class="new-product"> NEW</span> </div>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <h4><a href="product-details.html">Vestido para dama </a></h4>
+              <p>Vestido para dama juvenil y con estilo. </p>
               <span class="size">XL / XXL / S </span> </div>
             <div class="price"> <span>$25</span> </div>
-            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Agregar al carrito </span> </a> </div>
           </div>
         </div>
         <!--/.item-->
