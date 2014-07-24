@@ -62,6 +62,18 @@
     }
   </script>
 
+  <style type="text/css">
+      .ajax-validation{
+        background-color: #F04F4F;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+
+
+      }
+  </style>
+
 
 </head>
 
@@ -135,21 +147,40 @@
       <div class="modal-body">
         <!--<div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP CON FACEBOOK </a> </div>-->
         <h5 style="padding:10px 0 10px 0;" class="text-center"> O </h5>
+        <form method="post" action="{{ URL::route('crear-cuenta-post')}}" id="form_registro">
         <div class="form-group reg-username">
           <div >
-            <input name="login"  class="form-control input"  size="20" placeholder="Tu nombre de usuario" type="text">
+            <input name="username"  class="form-control input"  size="20" placeholder="Tu nombre de usuario" type="text" required>
           </div>
         </div>
         <div class="form-group reg-email">
           <div >
-            <input name="reg"  class="form-control input"  size="20" placeholder="Tu Email" type="text">
+            <input name="email"  class="form-control input"  size="20" placeholder="Tu Email" type="email" required>
+          </div>
+        </div>
+        <div class=" ">
+          <div >
+            <select name="tipo" class="" id="tipo" title=" tipo de usuario eres"  {{ (Input::old('tipo')) ? 'value="'. e(Input::old('tipo')).'"' : '' }}>
+                  <option value="1"> Usuario </option>
+                  <option value="2"> Empresa </option>
+                  
+                </select>
           </div>
         </div>
         <div class="form-group reg-password">
           <div >
-            <input name="password"  class="form-control input"  size="20" placeholder="Password" type="password">
+            <input name="password"  class="form-control input"  size="20" placeholder="Contraseña" type="password">
           </div>
         </div>
+        <div class="form-group reg-password">
+          <div >
+            <input name="password_confirmation"  class="form-control input"  size="20" placeholder="Repite ontraseña" type="password">
+          </div>
+          <div class="ajax-validation" id="ajax-validation">
+            
+          </div>
+        </div>
+        
         <div class="form-group">
           <div >
             <div class="checkbox login-remember">
@@ -159,12 +190,15 @@
             </div>
           </div>
         </div>
+
         <div >
           <div >
-            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="REGISTER" type="submit">
+            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="REGISTRAME" id="btn-registro" type="submit">
           </div>
         </div>
         <!--userForm--> 
+        {{ Form::token()}}
+        </form>
         
       </div>
       <div class="modal-footer">

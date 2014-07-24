@@ -89,7 +89,7 @@
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
-        <li><a href="#">{{$producto->razon_social}}</a> </li>
+        <li><a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$producto->nombre_sede))}}">{{$producto->razon_social}}</a> </li>
         <li><a href="#">{{$producto->categoria_nombre}}</a> </li>
         <li class="#">{{$producto->producto_nombre}} </li>
       </ul>

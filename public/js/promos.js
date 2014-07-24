@@ -53,12 +53,34 @@ function cambiar_nombre()
 	});
 }
 
-	$(document).on("click","a.lista-products", function(e){
+$(document).on("click","#btn-registro", function(e){
+	var estado = false;
+	var tipo = $('#tipo').val();
+
+
+	if (tipo >= 1) {
+		estado == true;
+		document.getElementById("form_registro").submit();
+
+	}else{
+		$('#ajax-validation').html('<span>ESCOGE EL TIPO DE USUARIO</span>');
+		estado == false;
+	}
+	
+	if(estado == false){
+		alert(tipo);
+	}else{
+		
+	}
+	e.preventDefault();
+});
+
+$(document).on("click","a.lista-products", function(e){
 
 		
 		$(".productos-container").empty();
 
-$.ajax({
+		$.ajax({
 		url : "get-products",
 		dataType: "json",
 		type : "post",
@@ -88,7 +110,7 @@ $.ajax({
                     
                   produc += '</div>';
                   produc += '<div class="action-control">';
-produc += '<a class="btn btn-primary"> ';
+			produc += '<a class="btn btn-primary"> ';
                      produc += '<span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> ';
                     produc +=  '</a>';
         produc += '</div>';

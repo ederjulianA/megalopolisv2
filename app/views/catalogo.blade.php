@@ -417,7 +417,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       <div class="w100 clearfix category-top">
 
         <h2> {{$sede->empresa->razon_social}} </h2>
-        <div class="categoryImage"> {{HTML::image('Tshop/images/site/header1.jpg', 'BANNER', array('width'=>'850px','height'=>'300px','class'=>'img-responsive') )}} </div>
+        <div class="categoryImage"> {{HTML::image($sede->empresa->banner, 'BANNER', array('width'=>'850px','height'=>'300px','class'=>'img-responsive') )}} </div>
 
         
 
@@ -470,7 +470,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
             <div class="description">
               <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}">{{$producto->producto_nombre}} </a></h4>
               <p>Preguntar Disponibilidad </p>
-              <span class="size">XL / XXL / S </span> </div>
+             <!-- <span class="size">XL / XXL / S </span> --></div>
             <div class="price"> 
                     <span>${{$producto->precio_detal}}</span>
                     
