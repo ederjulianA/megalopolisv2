@@ -23,6 +23,28 @@
 <link href="Tshop/assets/css/style.css" rel="stylesheet">
 
 
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <!-- styles needed by smoothproducts.js for product zoom  -->
 {{HTML::style('Tshop/assets/css/smoothproducts.css')}}
 
@@ -66,10 +88,10 @@
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
-        <li><a href="index.html">Home</a> </li>
-        <li><a href="category.html">{{$producto->razon_social}}</a> </li>
-        <li><a href="sub-category.html">{{$producto->categoria_nombre}}</a> </li>
-        <li class="active">{{$producto->producto_nombre}} </li>
+        <li><a href="{{URL::route('index')}}">Home</a> </li>
+        <li><a href="#">{{$producto->razon_social}}</a> </li>
+        <li><a href="#">{{$producto->categoria_nombre}}</a> </li>
+        <li class="#">{{$producto->producto_nombre}} </li>
       </ul>
     </div>
   </div>
@@ -219,10 +241,9 @@
       <div class="product-share clearfix">
         <p> COMPARTE ESTE PRODUCTO </p>
         <div class="socialIcon"> 
-          <a href="#"> <i  class="fa fa-facebook"></i></a> 
-            <a href="#"> <i  class="fa fa-twitter"></i></a> 
-            <a href="#"> <i  class="fa fa-google-plus"></i></a> 
-            <a href="#"> <i  class="fa fa-pinterest"></i></a> </div>
+            <div class="fb-share-button" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-width="50" data-type="button_count"></div>
+            <a href="https://twitter.com/share" data-url="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-via="tumegalopolis" class="twitter-share-button" data-lang="es" data-size="large" data-hashtags="tuMegalopolis"> <i  class="fa fa-twitter"></i></a> 
+           
       </div>
       <!--/.product-share--> 
       
@@ -233,7 +254,7 @@
     
   <div class="row recommended">
   
-    <h1> TALVES TE INTERESE </h1>
+    <h1> TAL VEZ TE INTERESE </h1>
   <div id="SimilarProductSlider">
 
   	@foreach($masProductos as $mp)

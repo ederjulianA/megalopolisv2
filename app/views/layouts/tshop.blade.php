@@ -6,6 +6,8 @@
 <!-- Fav and touch icons -->
 @yield('content-page')
 
+<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
 <title>@yield('titulo')</title>
 <!-- Bootstrap core CSS -->
 {{ HTML::style('Tshop/assets/bootstrap/css/bootstrap.css', array('media' => 'screen'))}}
@@ -92,7 +94,7 @@
             <div class="checkbox login-remember">
               <label>
                 <input name="rememberme"  value="forever" checked="checked" type="checkbox">
-                Recordarme Me </label>
+                Recordarme  </label>
             </div>
           </div>
         </div>
@@ -131,16 +133,16 @@
         <h3 class="modal-title-site text-center" > REGISTRO </h3>
       </div>
       <div class="modal-body">
-        <div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP CON FACEBOOK </a> </div>
+        <!--<div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP CON FACEBOOK </a> </div>-->
         <h5 style="padding:10px 0 10px 0;" class="text-center"> O </h5>
         <div class="form-group reg-username">
           <div >
-            <input name="login"  class="form-control input"  size="20" placeholder="Enter Username" type="text">
+            <input name="login"  class="form-control input"  size="20" placeholder="Tu nombre de usuario" type="text">
           </div>
         </div>
         <div class="form-group reg-email">
           <div >
-            <input name="reg"  class="form-control input"  size="20" placeholder="Enter Email" type="text">
+            <input name="reg"  class="form-control input"  size="20" placeholder="Tu Email" type="text">
           </div>
         </div>
         <div class="form-group reg-password">
@@ -166,7 +168,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Sign in </a> </p>
+        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Inicia Sesion </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 

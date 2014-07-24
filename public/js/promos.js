@@ -55,7 +55,7 @@ function cambiar_nombre()
 
 	$(document).on("click","a.lista-products", function(e){
 
-		alert("Buscando Productos");
+		
 		$(".productos-container").empty();
 
 $.ajax({
@@ -76,7 +76,7 @@ $.ajax({
 							var produc = '';
 								       produc += '<div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">';
            produc += '<div class="product">';
-             produc += '<div class="image"> <a href="/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
+             produc += '<div class="image"> <a href="public/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
              produc +=  '<div class="promotion"> <span class="new-product"> NUEVO</span> </div>';
             produc += '</div>';
             produc += '<div class="description">';
@@ -106,7 +106,7 @@ produc += '<a class="btn btn-primary"> ';
 				
 
 			}
-			console.log(data);
+			//console.log(data);
 			
 
 

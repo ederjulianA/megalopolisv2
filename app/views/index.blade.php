@@ -35,7 +35,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
               <h1 class="parallaxPrce"> Crea tu tienda virtual en minutos </h1>
               <h3 > Publica y compra los productos de tu interés. </h3>
               <div style="clear:both"></div>
-              <a class="btn btn-discover "> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a></div>
+              <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a></div>
               </div>
               <div class="col-lg-5 col-md-5 col-sm-5 pull-right sliderText dark alpha80 hidden-xs">
                 <div class="inner">
@@ -55,7 +55,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
                 <div class="inner">
                   <h1>Publica tus productos</h1>
                   <p class="hidden-xs">Registra tus nuevos productos y actualiza tu catálogo</p>
-                  <a href="#"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
+                  <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
                 <div class="inner">
                   <h1>Aumenta tus ganancias</h1>
                   <p class="hidden-xs"> Aumenta tus clientes potenciales y disfruta de las ganancias de tu negocio online </p>
-                  <a href="category.html"  class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
+                  <a  data-toggle="modal"  data-dismiss="modal" href="#ModalSignup" class="slide-link">Quiero mi tienda! <span class="arrowUnicode">►</span></a> </div>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
           <h2 class="uppercase">Haz parte de las tiendas virtuales</h2>
           <h3 > Carrito de compras y tu catálogo de productos en línea </h3>
           <div style="clear:both"></div>
-          <a class="btn btn-discover "> <i class="fa fa-shopping-cart"></i> REGISTRARME </a> </div>
+          <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> REGISTRARME </a> </div>
       </div>
     </div>
     <!--/.row--> 
