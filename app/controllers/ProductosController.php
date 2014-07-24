@@ -32,7 +32,7 @@ class ProductosController  extends BaseController {
 		 ->where('p.id','=',$id)->where('p.estado','=',1)->first();
 
 		 $tags = Tag::where('producto','=',$id)->get();
-		$img = $producto->imagen;
+		
 
 		$masProductos =  DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')

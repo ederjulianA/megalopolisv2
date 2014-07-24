@@ -1,56 +1,71 @@
-@extends('layouts.users')
+@extends('layouts.tshop')
+
+@section('titulo')
+Megalopolis | Login
+@stop
+@section('content-page')
+
+@stop
 
 @section('content')
-	<div class="login-wrapper">
-		<div class="text-center">
-			<h2 class="fadeInUp animation-delay8" style="font-weight:bold">
-				<span class="text-warning">Inicia Sesion</span> <span style="color:#ccc; text-shadow:0 1px #fff"></span>
-			</h2>
-		</div>
-		<div class="login-widget animation-delay1">	
-			<div class="panel panel-default">
-				<div class="panel-heading clearfix">
-					<div class="pull-left">
-						<i class="fa fa-lock fa-lg"></i> Login
-					</div>
+		<div class="container main-container headerOffset">
 
-					<div class="pull-right">
-						<span style="font-size:11px;">No eres Usuario aun?</span>
-						<a class="btn btn-default btn-xs login-link" href="{{ URL::route('registro')}}" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Registrarme</a>
-					</div>
-				</div>
-				<div class="panel-body">
-					<form class="form-login" method="post" action="{{ URL::route('login-post')}} " autocomplete = "off">
-						<div class="form-group">
-							<label>Email</label>
-							<input type="email" placeholder="ejemplo@ejemplo.com" class="form-control input-sm bounceIn animation-delay2" name="email">
-						</div>
-						<div class="form-group">
-							<label>Contraseña</label>
-							<input type="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay4" name="password" >
-						</div>
-						<div class="form-group">
-							<label class="label-checkbox inline">
-								<input type="checkbox" class="regular-checkbox chk-delete" />
-								<span class="custom-checkbox info bounceIn animation-delay4"></span>
-							</label>
-							Recordarme		
-						</div>
-		
-						<div class="seperator"></div>
-						<div class="form-group">
-							Olvido su Contraseña?<br/>
-							Click <a href="{{ URL::route('recuperar-cuenta')}}">Aqui</a> Para Reiniciar su Contraseña
-						</div>
+  <div class="row">
+    <div class="breadcrumbDiv col-lg-12">
+      <ul class="breadcrumb">
+        <li><a href="{{URL::route('index')}}">Home</a> </li>
+        <li class="active"> Inicio de Sesion </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-lg-9 col-md-9 col-sm-7">
+      <h1 class="section-title-inner"><span><i class="fa fa-lock"></i> Identificate</span></h1>
+      
+      <div class="row userInfo" >
 
-						<hr/>
-							
-						<input type="submit" class="btn btn-success btn-sombra" value="Iniciar Sesion">
-						{{ Form::token()}}
-					</form>
-				</div>
-			</div><!-- /panel -->
-		</div><!-- /login-widget -->
-	</div><!-- /login-wrapper -->
+      		 <div class="col-xs-12 col-sm-6" style="text-align:center;">
+          <h2 class="block-title-2"><span>Ya estas en Megalopolis?</span></h2>
+          <form role="form" method="post" action="{{ URL::route('login-post')}} ">
+            <div class="form-group">
+              <label>Correo Electronico</label>
+              <input type="email" class="form-control" name="email"  placeholder="Tu email" required>
+            </div>
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input type="password" class="form-control"  placeholder="******" required name="password">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkbox">
+                Recordarme  </label>
+            </div>
+            <div class="form-group">
+              <p><a title="Recover your forgotten password" href="{{URL::route('recuperar-cuenta')}}">Olvidaste tu contraseña? </a></p>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Iniciar Sesion">
+            {{Form::token()}}
+          </form>
+        </div>
 
+        <div class="col-xs-12 col-sm-6" style="text-align:center;">
+        	<h2>Validacion</h2>
+        	
+        </div>
+      
+       
+      
+      </div>
+      <!--/row end--> 
+      
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-5"> </div>
+  </div> <!--/row-->
+  
+  <div style="clear:both"></div>
+</div>
+<!-- /wrapper -->
 @stop

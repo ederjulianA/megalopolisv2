@@ -72,12 +72,26 @@
 
 
       }
+      .mensajes-flash{
+        background-color: #F04F4F;
+        border-radius: 0 0 10px 10px;
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        left: 40%;
+        padding: 10px;
+        top: 20%;
+        width: 380px;
+      }
   </style>
 
 
 </head>
 
 <body>
+@if(Session::has('message-alert'))
+            <p class="mensajes-flash" style=""> {{Session::get('message-alert')}}</p>
+        @endif
 
 <!-- Modal Login start -->
 @if (Auth::check())

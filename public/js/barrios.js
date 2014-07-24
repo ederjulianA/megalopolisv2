@@ -530,8 +530,9 @@ function subcategorias()
 {
 
 	var cat_nom = $('#category option:selected').text();
+	
 		$.ajax({
-		url : "/subcats",
+		url : "/public/subcats",
 		dataType: "json",
 		type : "post",
 		data : {cat_id: $('#category').val()},

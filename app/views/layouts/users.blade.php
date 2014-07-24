@@ -87,7 +87,7 @@
 					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a href="{{URL::route('navegar')}}" class="top-link">Home</a>
+								<a href="{{URL::route('index')}}" class="top-link">Home</a>
 							</li>
 							@if (Auth::check())
 							@else 
