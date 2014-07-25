@@ -291,7 +291,7 @@ $(document).on("click",".addFav", function(e){
 					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
 					$('#item-'+id).removeClass("btn-info addFav");
 					$('#item-'+id).addClass("btn-danger  remFav");
-					$('#item-'+id).html('<i class="fa fa-heart"></i> Quitar');
+					$('#item-'+id).html('<i class="fa fa-heart"></i> Quitar Favorito');
 					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
 					
 
@@ -330,7 +330,7 @@ $(document).on("click", ".remFav", function(e){
 					$('.mensaje-favoritos-ajax').fadeIn( 1500 );
 					$('#item-'+id).removeClass("btn-danger remFav");
 					$('#item-'+id).addClass("addFav btn-info My-Align");
-					$('#item-'+id).html('<i class="fa fa-heart"></i> Agregar');
+					$('#item-'+id).html('<i class="fa fa-heart"></i> Agregar Favorito');
 					$('.mensaje-favoritos-ajax').fadeOut( 2200 );
 
 					

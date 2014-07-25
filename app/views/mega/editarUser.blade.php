@@ -1,56 +1,60 @@
-@extends('layouts.users')
+@extends('layouts.tshop')
+
 @section('titulo')
-	Perfil: {{Auth::user()->username}}
+Perfil | {{Auth::user()->username}}
+@stop
+
+@section('content-page')
+
 @stop
 
 @section('content')
-	<div class="contenedor-perfil">
-		<h2 id="titulo-user">Hola  {{Auth::user()->username}}</h2>
-		<p class="info-vista-perfil">
-		Aquí podras editar la informacion de tu perfil como tu nombre de usuario, contraseña, imagen de perfil
-			
-		</p>
-		<hr>
+		<div class="container main-container headerOffset">
+  <div class="row">
+    <div class="breadcrumbDiv col-lg-12">
+      <ul class="breadcrumb">
+        <li><a href="{{URL::route('index')}}">Home</a> </li>
+      
+        <li class="active"> Mi Cuenta </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-9 col-md-9 col-sm-7">
+      <h1 class="section-title-inner"><span><i class="fa fa-unlock-alt"></i> Mi cuenta </span></h1>
+      <div class="row userInfo">
+        <div class="col-xs-12 col-sm-12">
+          <p> Hola  {{Auth::user()->username}} Bienvenido </p>
+          <h2 class="block-title-2"><span>Aquí podran administrar la informacion de tu ceunta.</span></h2>
+          <ul class="myAccountList row">
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="Orders" href="#"><i class="fa fa-calendar"></i> Historial de compras </a> </div>
+            </li>
+            <!--<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="My addresses" href="my-address.html"><i  class="fa fa-map-marker"></i> Mi dir</a> </div>
+            </li>-->
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="Add  address" href="#"> <i  class="fa fa-edit"> </i> Add  address</a> </div>
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="Personal information" href="{{URL::route('personal-info')}}"><i class="fa fa-cog"></i> Información personal</a> </div>
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="My wishlists" href="{{URL::route('favoritos-user')}}"><i class="fa fa-heart"></i> Mis Favoritos </a> </div>
+            </li>
+          </ul>
+          <div class="clear clearfix"> </div>
+        </div>
+      </div>
+      <!--/row end--> 
+      
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-5"> </div>
+  </div>
+  <!--/row-->
+  
+  <div style="clear:both"></div>
+</div>
+<!-- /wrapper -->
 
-		<div class="username-div">
-			<h3>Nombre de Usuario</h3>
-			<input type="text" name="username" id="username" value="{{Auth::user()->username}}">
-			{{HTML::image('img/mega-imgs/user.jpg','usuario', array('width'=>'40px', 'height'=>'40px'))}}
-
-			<div class="mensajes-ajax">
-				
-			</div>
-
-			<a href="" class="btn btn-info btn-lg btn-sombra" id="btn-cambiar-img"> Cambia Mi nombre</a>
-			
-		</div>
-
-		<div class="div-password-user">
-			<h3>Actualizar Contraseña</h3>
-			<form method="post" action="{{URL::route('perfil-cambiar-pass')}}">
-				<div class="">
-					<label for="contrasena_actual">Contraseña actual</label>
-					<input type="password" name="contrasena_actual" id="pass_actual" placeholder="******">
-				</div>
-
-				<div class="">
-					<label for="nueva_contrasena">Nueva Contraseña</label>
-					<input type="password" name="nueva_contrasena" id="pass_nueva" placeholder="******">
-				</div>
-
-				<div class="">
-					<label for="confirmar_nueva_contrasena">Confirmar Contraseña nueva</label>
-					<input type="password" name="confirmar_nueva_contrasena" id="pass_nueva_repite" placeholder="******">
-					<div class="mensajes-ajax-pass">
-						
-					</div>
-				</div>
-
-				<input type="submit" value="Cambiar Contraseña" class="btn btn-info btn-lg btn-sombra">
-				{{ Form::token()}}
-			</form>
-			
-		</div>
-		
-	</div>
 @stop

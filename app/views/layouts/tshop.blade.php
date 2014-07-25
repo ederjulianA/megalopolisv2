@@ -252,7 +252,7 @@
                       @if(Auth::user()->tipo == 2)
                         <li> <a href="{{ URL::route('empresaAdmin')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
                       @else
-                        <li> <a href="account-1.html"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                        <li> <a href="{{URL::route('perfil')}}"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
 
                       @endif
                   

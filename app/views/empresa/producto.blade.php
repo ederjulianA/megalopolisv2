@@ -175,7 +175,16 @@
       <div class="cart-actions">
         <div class="addto">
           <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Comprar</button>
-          <a class="link-wishlist wishlist"  >Agregar a Favoritos</a> </div>
+          @if(Auth::check() && Auth::user()->tipo == 1)
+                        {{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
+                        
+
+                      @else
+                       
+                        <a class="link-wishlist wishlist"  href="{{URL::route('login')}}">Agregar a Favoritos</a> 
+                      @endif
+                      </div>
+          
           
         <div style="clear:both"></div>
         

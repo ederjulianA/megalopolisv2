@@ -50,6 +50,25 @@ class UsersController extends BaseController{
 		}
 	}
 
+	public function getPersonalInfo()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+			$user_id = Auth::user()->id;
+
+			$user = User::where('id','=',$user_id)->first();
+
+			if($user)
+			{
+				return View::make('mega.personalInfo')->with('user',$user);
+			}
+
+
+		}
+	}
+
 	public function favoritosUser()
 	{
 		if(!Auth::check() || Auth::user()->tipo != 1)

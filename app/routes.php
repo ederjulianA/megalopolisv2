@@ -254,7 +254,7 @@ Route::post('/get/nombre-sede', array(
 		'uses' => 'AjaxController@postNombreSedeValido'
 	));
 
-Route::post('/catalogo/quitar-favoritos-ajax', array(
+Route::post('/producto/quitar-favoritos-ajax', array(
 		'as' => 'quitar-favoritos-ajax',
 		'uses' => 'AjaxController@remFav'
 	));
@@ -264,7 +264,7 @@ Route::post('/remo/lista/favs', array(
 		'uses' => 'AjaxController@remFav'
 	));
 /*FUNCION AJAX QUE AGREGA UN FAVORITO A LA LISTA DEL USUARIO*/
-Route::post('/catalogo/favoritos-ajax', array(
+Route::post('/producto/favoritos-ajax', array(
 		'as' => 'add-fav-ajax',
 		'uses' => 'AjaxController@addFav'
 	));
@@ -333,6 +333,11 @@ Route::get('/perfil', array(
 Route::get('/favoritos', array(
 		'as' => 'favoritos-user',
 		'uses'=> 'UsersController@favoritosUser'
+	));
+//RUTA PARA EDITAR LA INFORMACION DEL USUARIO: NOMBRE DE USUARIO, CONTRASEÑA
+Route::get('/personalInfo', array(
+		'as' => 'personal-info',
+		'uses'=> 'UsersController@getPersonalInfo'
 	));
 
 Route::get('/suscripciones', array(
