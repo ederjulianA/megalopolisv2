@@ -132,17 +132,17 @@
       </div>
       
       <div class="details-description">
-        <p>In scelerisque libero ut elit porttitor commodo Suspendisse laoreet magnaaaa. </p>
+        <p>{{$producto->desc_breve}}. </p>
       </div>
       
-      <div class="color-details"> 
+      <!--<div class="color-details"> 
         <span class="selected-color"><strong>COLOR</strong></span>
         <ul class="swatches Color">
           <li class="selected"> <a style="background-color:#f1f40e" > </a> </li>
           <li> <a style="background-color:#adadad" > </a> </li>
           <li> <a style="background-color:#4EC67F" > </a> </li>
         </ul>
-      </div>
+      </div>-->
       <!--/.color-details-->
       
       <div class="productFilter">
@@ -159,7 +159,7 @@
             <option value="cherries">8</option>
           </select>
         </div>
-        <div class="filterBox">
+        <!--<div class="filterBox">
           <select>
             <option value="strawberries" selected>Talla</option>
             <option value="mango">XL</option>
@@ -168,7 +168,7 @@
             <option value="apples">L</option>
             <option value="apples">S</option>
           </select>
-        </div>
+        </div>-->
       </div>
       <!-- productFilter -->
       

@@ -231,6 +231,51 @@ class EmpresasController  extends BaseController {
 		
 	}
 
+	public function postCambiarBanner()
+	{
+		$validator = Validator::make(Input::all(),
+				array(
+						'nuevo_banner' => 'required|image|mimes:jpeg,jpg,bmp,png,gif'
+
+
+					)
+
+			);
+		if($validator->passes())
+		{
+			$id = Auth::user()->id;
+			$empresa = Empresa::find(Input::get('id_empresa'));
+
+			if($empresa)
+			{
+				File::delete('public/'.$empresa->banner);
+				$banner = Input::file('nuevo_banner');
+				$codigoIMG = str_random(13);
+				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."banner-".$empresa->nombre_publico.".jpg";
+				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
+				Image::make($banner->getRealPath())->resize(850, 300, true)->save(public_path().'/img/empresas/banners'.$filename);
+				$empresa->banner = 'img/empresas/banners'.$filename;
+				$empresa->save();
+				return Redirect::to('/mega/cambiar/imagen')
+					->with('message-alert','Imagen Actualizada exitosamente');
+
+			}
+			else
+			{
+				return Redirect::to('/mega/cambiar/imagen')
+					->with('message-alert','Error al actualizar imagen');
+			}
+			
+
+		}
+		else
+		{
+			return Redirect::to('/mega/cambiar/imagen')
+				->with('message-alert','Se presentaron Problemas al actualizar la imagen')
+				->withErrors($validator);
+		}
+	}
+
 
 	public function postCambiarImagen()
 	{

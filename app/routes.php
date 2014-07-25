@@ -301,6 +301,10 @@ Route::post('/mega/cambiar/imagen', array(
 		'as' => 'cambiar-imagen-post',
 		'uses' => 'EmpresasController@postCambiarImagen'
 	));
+Route::post('/mega/cambiar/banner', array(
+		'as' => 'cambiar-banner',
+		'uses' => 'EmpresasController@postCambiarBanner'
+	));
 
 
 Route::post('/mega/cambiar-pass', array(
