@@ -51,7 +51,7 @@ Megalopolis | Login
         </div>
 
         <div class="col-xs-12 col-sm-6" style="text-align:center;">
-        	<h2>Validacion</h2>
+        	
         	
         </div>
       
