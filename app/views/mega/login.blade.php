@@ -4,6 +4,15 @@
 Megalopolis | Login
 @stop
 @section('content-page')
+ <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
+    <meta name="author" content="Megalopolis TEAM">
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Megalopolis | Login"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/login"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
 
 @stop
 

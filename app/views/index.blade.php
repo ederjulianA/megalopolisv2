@@ -11,7 +11,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
 <meta property="og:site_name" content="tuMegalopolis"/>
-<meta property="og:description" content=""/>
+<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
 <meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
 
