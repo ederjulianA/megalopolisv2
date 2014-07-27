@@ -127,7 +127,7 @@
       <h1 class="product-title"> {{$producto->producto_nombre}}</h1>
       <h3 class="product-code">Codigo de Producto : DEN1098</h3>
       <div class="product-price"> 
-          <span class="price-sales"> ${{$producto->precio_detal}}</span> 
+          <span class="price-sales"> ${{number_format($producto->precio_detal, 0, '', '.')}}</span> 
           <!--<span class="price-standard">$95,000</span> -->
       </div>
       
@@ -271,7 +271,7 @@
         <div class="product"> <a class="product-image" href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id))}}"> <img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}"> </a>
           <div class="description">
             <h4><a href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id))}}">{{$mp->nombre}} </a></h4>
-            <div class="price"> <span>${{$mp->precioP}}</span> </div>
+            <div class="price"> <span>${{number_format($mp->precioP, 0, '', '.')}}</span> </div>
           </div>
         </div>
       </div><!--/.item-->

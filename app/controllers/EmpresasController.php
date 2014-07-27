@@ -130,8 +130,8 @@ class EmpresasController  extends BaseController {
 			
 			$codigoIMG = str_random(13);
 			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen->getClientOriginalName();
-			Image::make($imagen->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
-			
+			Image::make($imagen->getRealPath())->heighten(650)->save(public_path().'/img/products/'.$filename);
+			//grab(1014, 1200)
 			$producto['imagen'] = 'img/products/'.$filename;
 		}
 		
@@ -253,7 +253,7 @@ class EmpresasController  extends BaseController {
 				$codigoIMG = str_random(13);
 				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."banner-".$empresa->nombre_publico.".jpg";
 				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
-				Image::make($banner->getRealPath())->resize(850, 300, true)->save(public_path().'/img/empresas/banners'.$filename);
+				Image::make($banner->getRealPath())->grab(850, 300)->save(public_path().'/img/empresas/banners'.$filename);
 				$empresa->banner = 'img/empresas/banners'.$filename;
 				$empresa->save();
 				return Redirect::to('/mega/cambiar/imagen')
@@ -300,7 +300,7 @@ class EmpresasController  extends BaseController {
 				$codigoIMG = str_random(13);
 				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".$empresa->nombre_publico.".jpg";
 				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
-				Image::make($logo->getRealPath())->resize(720, 480, true)->save(public_path().'/img/empresas/'.$filename);
+				Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
 				return Redirect::to('/mega/cambiar/imagen')

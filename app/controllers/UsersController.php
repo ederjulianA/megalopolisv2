@@ -88,6 +88,7 @@ class UsersController extends BaseController{
 			->select('producto.nombre AS producto_nombre',
 					'almacen.precio_detal',
 					'sedes.nombre_publico AS nombre_sede',
+					'sedes.id AS sede_id',
 					'producto.imagen',
 					'producto.imgSmall',
 					'producto.id',

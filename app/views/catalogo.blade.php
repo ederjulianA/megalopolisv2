@@ -472,7 +472,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
               <p>Preguntar Disponibilidad </p>
              <!-- <span class="size">XL / XXL / S </span> --></div>
             <div class="price"> 
-                    <span>${{$producto->precio_detal}}</span>
+                    <span>${{number_format($producto->precio_detal, 0, '', '.')}}</span>
                     
                   </div>
                   <div class="action-control">
