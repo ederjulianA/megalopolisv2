@@ -1,7 +1,7 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-Mis Favoritos
+Mis Favoritos.
 @stop
 
 @section('content-page')
