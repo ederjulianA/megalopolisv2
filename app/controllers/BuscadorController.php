@@ -42,6 +42,7 @@ class BuscadorController  extends BaseController {
   p.descripcion AS producto_descripcion,
   s.nombre_publico AS nombre_sede,
   s.direccion,
+  s.id AS sede_id,
   s.telefono,
   sc.nombre_sub 
 FROM
@@ -66,7 +67,7 @@ WHERE p.nombre REGEXP '[[:<:]]{$keyword}*'
 		//$pro2 =Producto::whereRaw('MATCH (imagen,nombre) AGAINST (?)' , array($keyword))->get();
 
 		
-			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('numPro',$numPro);
+			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);
 
 
 		

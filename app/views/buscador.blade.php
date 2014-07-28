@@ -40,9 +40,9 @@ Buscar: {{$keyword}}
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
-        <li><a href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a> </li>
+        <li class="active"><a href="#"></a> {{$keyword}} </li>
         
-        <li class="active">{{$sede->nombre_publico}} </li>
+       
       </ul>
     </div>
   </div>  <!-- /.row  --> 
@@ -387,7 +387,7 @@ Buscar: {{$keyword}}
     
       <div class="w100 clearfix category-top">
 
-        <h2> Buscar : </h2>
+        <h2> Buscar :  {{$keyword}}</h2>
       
 
         
@@ -435,11 +435,11 @@ Buscar: {{$keyword}}
       @foreach($productos as  $producto)
                <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
+            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
               <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
             </div>
             <div class="description">
-              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}">{{$producto->producto_nombre}} </a></h4>
+              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id))}}">{{$producto->producto_nombre}} </a></h4>
               <p>Preguntar Disponibilidad </p>
              <!-- <span class="size">XL / XXL / S </span> --></div>
             <div class="price"> 
