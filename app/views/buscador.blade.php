@@ -4,12 +4,15 @@ Buscar: {{$keyword}}
 @stop
 
 @section('content-page')
-  <meta name="description" content="">
+ <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
     <meta name="author" content="Megalopolis TEAM">
 
-    <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/catalogo/"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/img/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
 @stop
 
 @section('content')
@@ -74,7 +77,7 @@ Buscar: {{$keyword}}
               <ul class="nav nav-pills nav-stacked tree">
 
                 @foreach($categorias as $cat)
-                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a lista-products" href="{{$cat->id}}"> <span class="badge pull-right">N</span> {{$cat->nombre}} </a>
+                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('categorias-producto', array('id'=>$cat->id))}}"> <span class="badge pull-right">N</span> {{$cat->nombre}} </a>
                 @endforeach
                
                   <!--<ul class="category-level-2 dropdown-menu-tree">

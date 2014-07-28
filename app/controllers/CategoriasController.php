@@ -18,6 +18,7 @@ class CategoriasController  extends BaseController {
 				 'p.imagen',
 				 'p.id',
 				 'p.descripcion AS producto_descripcion',
+				 's.id AS sede_id',
 				 's.nombre_publico AS nombre_sede',
 				 's.direccion',
 				 's.telefono',
