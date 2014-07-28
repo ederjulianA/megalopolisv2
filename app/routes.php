@@ -48,6 +48,12 @@ Route::get('/home2', array(
 		'uses' => 'HomeController@home2'
 	));
 
+/* VISTA VISUALIZAR ARTICULO A COMPRAR */
+Route::get('/contacto-vendedor', array(
+		'as' => 'form-carrito-previo',
+		'uses' => 'ProductosController@carritoPrevio'
+	));
+
 /* REGISTRO DE USUARIOS EN LA LISTA DE CORREOS */
 Route::post('/lista-mails-post', array(
 		'as' => 'lista-email',
@@ -154,6 +160,9 @@ Route::post('/nueva-promo-post', array(
 		'as' => 'nueva-promo-post',
 		'uses' => 'PromocionesController@postNuevaPromo'
 	));
+
+
+
 
 
 Route::post('/preguntas', array(

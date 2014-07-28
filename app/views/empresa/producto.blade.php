@@ -174,7 +174,18 @@
       
       <div class="cart-actions">
         <div class="addto">
-          <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Comprar</button>
+         @if(Auth::check() && Auth::user()->tipo == 1)
+              <form id="form-cart-before" method="get" action="{{URL::route('form-carrito-previo')}}">
+              <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
+              <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
+              <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
+
+          <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">Contacto</button>
+         </form>
+         @else
+          <a class="link-wishlist wishlist"  href="{{URL::route('login')}}">Login</a> 
+         @endif
+         
           @if(Auth::check() && Auth::user()->tipo == 1)
                         {{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
                         
