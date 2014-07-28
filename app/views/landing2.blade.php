@@ -193,8 +193,8 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="parallax-content clearfix">
           <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
-          <h2 class="uppercase">Haz parte de las tiendas virtuales</h2>
-          <h3 > Carrito de compras y tu catálogo de productos en línea </h3>
+          <h2 class="uppercase">Haz parte de nuestro programa de pioneros Megalópolis</h2>
+          <h3 > Obtén los benificios de tu catálogo en línea TOTALMENTE GRATIS </h3>
           <div style="clear:both"></div>
           <a class="btn btn-discover "> <i class="fa fa-shopping-cart"></i> REGISTRARME </a> </div>
       </div>

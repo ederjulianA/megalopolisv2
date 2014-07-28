@@ -32,10 +32,10 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             <div class="container">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="parallax-content clearfix">
-              <h1 class="parallaxPrce"> Crea tu tienda virtual en minutos </h1>
-              <h3 > Publica y compra los productos de tu interés. </h3>
+              <h1 class="parallaxPrce"> Haz parte de los pioneros Megalópolis </h1>
+              <h3 > Disfruta de los beneficios de tu tienda en línea <b>COMPLETAMENTE GRATIS. </h3>
               <div style="clear:both"></div>
-              <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a></div>
+              <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> QUIERO SER PIONERO </a></div>
               </div>
               <div class="col-lg-5 col-md-5 col-sm-5 pull-right sliderText dark alpha80 hidden-xs">
                 <div class="inner">
@@ -125,7 +125,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
         <div class="parallax-content clearfix">
           <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
           <h2 class="uppercase">Haz parte de las tiendas virtuales</h2>
-          <h3 > Carrito de compras y tu catálogo de productos en línea </h3>
+          <h3 > Completamente <b>GRATIS</b> por tiempo limitado </h3>
           <div style="clear:both"></div>
           <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> REGISTRARME </a> </div>
       </div>
