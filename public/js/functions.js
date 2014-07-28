@@ -3,6 +3,7 @@ $(document).on('ready', function() {
     preview_1();
     preview_2();
     preview_3();
+    subcatEdit();
     $('#preview').hover(
         function() {
             $(this).find('a').fadeIn();
@@ -32,6 +33,12 @@ $(document).on('ready', function() {
 
  
 });
+
+function subcatEdit()
+{
+    var id_cat = $('#category').val();
+        
+}
 
 
    function preview_1()

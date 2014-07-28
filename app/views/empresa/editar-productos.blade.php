@@ -56,8 +56,8 @@
 											</select>
 											<select name="subcat" id="subcat">
 												<option>Seleccionar subcategoría:</option>
-												@foreach($producto->subcategories as $subcategory)
-													<option value = "{{$subcategory->id}}" <?php if($subcategory->id == $producto->subcat_id) { echo('selected');}?>>{{$subcategory->nombre_sub}}</option>
+													@foreach($producto->subcategories as $subcategory)
+												<option value = "{{$subcategory->id}}" <?php if($subcategory->id == $producto->subcat_id) { echo('selected');}?>>{{$subcategory->nombre_sub}}</option>
 												@endforeach
 											</select>
 

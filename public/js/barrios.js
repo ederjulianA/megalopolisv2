@@ -9,8 +9,11 @@ $(document).ready(function(){
 
 
 	});
+	$(document).on('change','#category',function(){
+
+
 	
-	$('#category').change(function(){
+	//$('#category').change(function(){
 		$('#subcat').empty();
 		
 		subcategorias();

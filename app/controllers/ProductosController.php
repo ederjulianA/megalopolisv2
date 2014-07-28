@@ -43,7 +43,7 @@ class ProductosController  extends BaseController {
 				's.id AS sede_id'
 
 			)
-		->where('s.id','=',$sede)->orderBy(DB::raw('RAND()'))->take(8)->get();
+		->where('s.id','=',$sede)->where('p.estado','=',1)->orderBy(DB::raw('RAND()'))->take(8)->get();
 
 		
 		 //$masProductos =  Producto::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
