@@ -432,6 +432,7 @@
 								<span class="menu-hover"></span>
 							</a>
 							<ul class="submenu">
+								<li><a href="{{ URL::route('editar-productos')}}"><span class="submenu-label">Admin Productos</span></a></li>
 								<li><a href="{{ URL::route('cambiar-imagen')}}"><span class="submenu-label">Cambiar Imagen</span></a></li>
 								<li><a href="{{ URL::route('nueva-sede')}}"><span class="submenu-label">Sedes</span></a></li>
 								

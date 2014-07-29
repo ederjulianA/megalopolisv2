@@ -82,6 +82,18 @@
         padding: 10px;
         top: 20%;
         width: 380px;
+        z-index: 9999;
+
+      }
+      .btnCerrar{
+
+        font-weight: bold;
+        position: absolute;
+        text-decoration: none;
+        text-shadow: .5px .5px 1px rgba(0,0,0, .3);
+        color: #5A5A5A;
+        right: 7px;
+        bottom: 0;
       }
   </style>
 
@@ -90,7 +102,10 @@
 
 <body>
 @if(Session::has('message-alert'))
-            <p class="mensajes-flash" style=""> {{Session::get('message-alert')}}</p>
+
+            <p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
+                <!--<a class="btnCerrar" href="#" id="btn-cerrar-msg">Cerrar</a>-->
+            </p>
         @endif
 
 <!-- Modal Login start -->

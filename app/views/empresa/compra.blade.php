@@ -17,8 +17,8 @@
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
-        <li><a href="index.html">Home</a> </li>
-        <li><a href="cart.html">Cart</a> </li>
+        <li><a href="{{URL::route('index')}}">Home</a> </li>
+        
         <li class="active"> Checkout </li>
       </ul>
     </div>
@@ -79,14 +79,15 @@
                             <tr class="CartProduct">
                               <td  class="CartProductThumb"><div> <a href="#">{{HTML::image($producto->imagen, $producto->producto_nombre)}}</a> </div></td>
                               <td ><div class="CartDescription">
-                                  <h4> <a href="product-details.html">{{$producto->producto_nombre}} </a> </h4>
+                                  <h4> <a href="#">{{$producto->producto_nombre}} </a> </h4>
                                   <!--<span class="size">12 x 1.5 L</span>-->
                                  
                                 </div></td>
                               <td class="delete"><div class="price ">${{number_format($producto->precio_detal, 0, '', '.')}} </div></td>
                               <td class="hidden-xs"><input type="number" id="cantidad" value="1"></td>
                               <td class="hidden-xs">0</td>
-                              <td class="price">$116.51</td>
+                              <td class="price"><span id="subtotal">${{number_format($producto->precio_detal, 0, '', '.')}}</span></td>
+                              <input type="hidden" id="precio_unitario" value="{{$producto->precio_detal}}">
                             </tr>
                            
                           </tbody>
@@ -103,7 +104,7 @@
                            
                             <tr >
                               <td > Total </td>
-                              <td id="total-price" class="price">{{number_format($producto->precio_detal, 0, '', '.')}} </td>
+                              <td id="total-price" class="price" ><span id="precio_total">{{number_format($producto->precio_detal, 0, '', '.')}} </span></td>
                             </tr>
                             <tbody>
                             </tbody>

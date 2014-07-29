@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	/*$('#mensaje-flash').fadeIn(2500);
+	$('#mensaje-flash').fadeOut(3500);*/
 	$('#sel-ciudades').change(function(){
 		$('#sel-barrio').empty();
 		barrios();
@@ -24,6 +26,16 @@ $(document).ready(function(){
 	preview_3();
 
 	
+
+});
+
+$(document).on('click','#cantidad', function(){
+	var cant_actual = $('#cantidad').val();
+	var precio_unitario = $('#precio_unitario').val();
+	var subtotal = (cant_actual * precio_unitario);
+	var np = subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	$('#subtotal').text("$"+np);
+	$('#precio_total').text("$"+np);
 
 });
 

@@ -5,11 +5,24 @@
 @stop
 
 @section('content')
+	<style type="text/css">
+			.lista-productos-editar{
+
+				width: 90%;
+
+			}
+			ul.lista-productos-editar li {
+				display: block;
+				padding: 10px;
+				width: 80%;
+			}
+
+	</style>
 	<div id="main-container">
 		<h1>
 			Lista de productos de todas las sedes disponibles
 		</h1>
-		<ul>
+		<ul class="lista-productos-editar">
 			@foreach($productos as $producto)
 				<li>{{$producto->id}}. {{$producto->producto_nombre}} | <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal-{{$producto->id}}" onclick = 'return toCloneInitialize({{$producto->id}});'><i class="fa fa-edit"></i></a> | <a href = '{{URL::route('eliminar-producto')}}?id={{$producto->id}}' onclick = "return confirm('¿Estás seguro?');" >Eliminar</a></li>
 		<div class="modal fade" id="myModal-{{$producto->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
