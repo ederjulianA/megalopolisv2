@@ -33,6 +33,7 @@ $(document).on('click','#cantidad', function(){
 	var cant_actual = $('#cantidad').val();
 	var precio_unitario = $('#precio_unitario').val();
 	var subtotal = (cant_actual * precio_unitario);
+	$('#valor_total').val(subtotal);
 	var np = subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	$('#subtotal').text("$"+np);
 	$('#precio_total').text("$"+np);

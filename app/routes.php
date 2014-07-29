@@ -161,8 +161,11 @@ Route::post('/nueva-promo-post', array(
 		'uses' => 'PromocionesController@postNuevaPromo'
 	));
 
-
-
+//RUTA PARA  CONFIRMAR COMPRA
+Route::post('/confirmar-compra', array(
+		'as' => 'confirmar-compra',
+		'uses' => 'ProductosController@CompraPost'
+	));
 
 
 Route::post('/preguntas', array(

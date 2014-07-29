@@ -31,7 +31,7 @@
 
     <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar"> 
 
-      <h4 class="caps"><a href="category.html"><i class="fa fa-chevron-left"></i> Volver al catalogo </a></h4>
+      <h4 class="caps"><a href="#"><i class="fa fa-chevron-left"></i> Volver al catalogo </a></h4>
       </div>
 </div>
   
@@ -61,13 +61,14 @@
                 <div class="col-lg-12">
                     <h2 class="block-title-2"> Ver orden </h2>
                 </div>
-                
+                              
             
             
             	<div class="col-xs-12 col-sm-12">
                       <div class="cartContent w100 checkoutReview ">
                         <table class="cartTable table-responsive"   style="width:100%">
                           <tbody>
+                          <form method="post" action="{{URL::route('confirmar-compra')}}">
                             <tr class="CartProduct cartTableHeader">
                               <th style="width:15%"> Producto </th>
                               <th class="checkoutReviewTdDetails"  >Detalle</th>
@@ -84,10 +85,15 @@
                                  
                                 </div></td>
                               <td class="delete"><div class="price ">${{number_format($producto->precio_detal, 0, '', '.')}} </div></td>
-                              <td class="hidden-xs"><input type="number" id="cantidad" value="1"></td>
+                              <td class="hidden-xs"><input type="number" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" ></td>
                               <td class="hidden-xs">0</td>
                               <td class="price"><span id="subtotal">${{number_format($producto->precio_detal, 0, '', '.')}}</span></td>
-                              <input type="hidden" id="precio_unitario" value="{{$producto->precio_detal}}">
+                              <input type="hidden" id="precio_unitario" name="precio_unico" value="{{$producto->precio_detal}}">
+                              <input type="hidden" id="id_producto" name="id_producto" value="{{$producto->id}}">
+                              <input type="hidden" id="valor_unitario" name="valor_unitario" value="{{$producto->precio_detal}}">
+                              <input type="hidden" id="valor_total" name="valor_total" value="{{$producto->precio_detal}}">
+                              <input type="hidden" id="id_comprador" name="id_comprador" value="{{auth::user()->id}}">
+                              <input type="hidden" id="id_empresa" name="id_empresa" value="{{$producto->id_empresa}}">
                             </tr>
                            
                           </tbody>
@@ -112,6 +118,8 @@
                         </div>
                       </div>
                       <!--/costDetails-->
+
+
                       
 
           
@@ -138,10 +146,11 @@
                
                
                <div class="pull-right">
-                <a href="#" class="btn btn-primary btn-small " > 
-					Confirmar &nbsp; <i class="fa fa-check"></i>
-                 </a>
+                <button type="submit"  class="btn btn-primary btn-small " > 
+					Confirmar &nbsp; <i class="fa fa-check"></i></button>
+                 
               </div>
+              </form>
                
                
               
@@ -185,8 +194,8 @@
                                    
                                    
                                     <tr >
-                                      <td > Total </td>
-                                      <td class=" site-color" id="total-price">$216.51</td>
+                                      <td > Dudas ? </td>
+                                      <td class=" site-color" id="total-price"><a>Has una pregunta</a></td>
                                     </tr>
                                     
                                                                          

@@ -2,6 +2,58 @@
 
 class ProductosController  extends BaseController {
 
+
+	public function CompraPost()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else
+		{
+			$compra = new Compra;
+			$compra->id_empresa = Input::get('id_empresa');
+			$compra->id_comprador = Input::get('id_comprador');
+			$compra->id_producto = Input::get('id_producto');
+			$compra->cantidad = Input::get('cantidad');
+			$compra->valor_unitario = Input::get('valor_unitario');
+			$compra->descuento = 0;
+			$compra->valor_total = Input::get('valor_total');
+
+
+			$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
+		->join('sedes as s','a.sede','=','s.id')
+		 ->join('categorias as c','p.categoria','=','c.id')
+		 ->join('subcategorias as sc','p.subcat_id','=','sc.id')
+		 ->join('empresas as e', 's.empresa_id','=','e.id')
+		 ->select('a.precio_detal',
+				 'a.cantidad',
+				 'e.id AS id_empresa',
+				 'c.nombre AS categoria_nombre',
+				 'e.razon_social',
+				 'e.desc_breve',
+				 'p.nombre AS producto_nombre',
+				 'p.imagen',
+				 'p.img1',
+				 'p.img2',
+				 'p.img3',
+				 'p.id',
+				 'p.estado',
+				 'p.descripcion AS producto_descripcion',
+				 's.nombre_publico AS nombre_sede',
+				 's.direccion',
+				 's.id AS sede_id',
+				 's.telefono',
+				 'sc.nombre_sub'
+			 )
+		 ->where('p.id','=',Input::get('id_producto'))->where('p.estado','=',1)->first();
+
+			if($compra->save()){
+				return View::make('empresa.exitoCompra')->with('message-alert','Compra exitosa')->with('producto',$producto);
+			}
+
+		}
+	}
+
 	public function getProducto($id,$sede)
 	{
 
@@ -72,6 +124,7 @@ class ProductosController  extends BaseController {
 				 'a.cantidad',
 				 'c.nombre AS categoria_nombre',
 				 'e.razon_social',
+				 'e.id AS id_empresa',
 				 'e.desc_breve',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
