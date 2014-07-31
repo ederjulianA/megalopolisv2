@@ -24,6 +24,7 @@ class UsersController extends BaseController{
 			$compras = DB::table('compra as co')->join('producto as p','p.id','=','co.id_producto')
 			->join('almacen as a','a.producto','=','p.id')
 			->join('sedes as s','a.sede','=','s.id')
+			->join('empresas as e', 's.empresa_id','=','e.id')
 			->select(
 					'co.cantidad',
 					'co.id',
@@ -31,9 +32,14 @@ class UsersController extends BaseController{
 					'p.nombre AS nombre_producto',
 					'co.valor_unitario',
 					'co.valor_total',
+					'e.razon_social',
+					's.nombre_publico AS nombre_sede',
+					's.direccion',
+				 	's.id AS sede_id',
+				 	's.telefono',
 					'co.estado'
 				)
-			->where('co.id_comprador','=',$id_comprador)->get();
+			->where('co.id_comprador','=',$id_comprador)->orderBy('co.id', 'desc')->get();
 
 			return View::make('mega.listOrders')->with('compras',$compras);
 		}

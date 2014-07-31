@@ -42,7 +42,7 @@
                 <th data-hide="phone,tablet" data-sort-ignore="true">Cantidad</th>
                 <th data-hide="phone,tablet"><strong>Precio Unitario</strong></th>
                 <th data-hide="default"> Total </th>
-                <th data-hide="default" data-type="numeric"> Fecha pedido </th>
+                <th data-hide="default" data-type="numeric"> Vendedor </th>
                 <th data-hide="phone" data-type="numeric"> Estado </th>
               </tr>
             </thead>
@@ -55,9 +55,36 @@
                 <td><a target="_blank" > ${{number_format($com->valor_unitario, 0, '', '.')}}</a></td>
                 <td>${{number_format($com->valor_total, 0, '', '.')}}</td>
                 
-                <td data-value="78025368997">{{$com->fechaC}}</td>
+                <td data-value="78025368997">
+                	<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal-{{$com->id}}">
+  {{$com->razon_social}}
+</button>
+                </td>
                 <td data-value="3">{{ Favs::estadoPedido($com->estado)}}</td>
               </tr>
+              		<!-- Modal -->
+<div class="modal fade" id="myModal-{{$com->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{$com->razon_social}}</h4>
+      </div>
+      <div class="modal-body">
+        Sede en la que comnpraste -> {{$com->nombre_sede}} <br>
+        Direccion -> {{$com->direccion}} <br>
+        Telefono -> {{$com->telefono}} <br><br>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
 
             	@endforeach
               
