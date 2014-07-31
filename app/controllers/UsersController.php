@@ -13,6 +13,32 @@ class UsersController extends BaseController{
 		//$this->beforeFilter('mega');
 	}
 
+
+	public function getListaOrders()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+			$id_comprador = Auth::user()->id;
+			$compras = DB::table('compra as co')->join('producto as p','p.id','=','co.id_producto')
+			->join('almacen as a','a.producto','=','p.id')
+			->join('sedes as s','a.sede','=','s.id')
+			->select(
+					'co.cantidad',
+					'co.id',
+					'co.created_at AS fechaC',
+					'p.nombre AS nombre_producto',
+					'co.valor_unitario',
+					'co.valor_total',
+					'co.estado'
+				)
+			->where('co.id_comprador','=',$id_comprador)->get();
+
+			return View::make('mega.listOrders')->with('compras',$compras);
+		}
+	}
+
 	public function postCancelarSuscripcion()
 	{
 		$sus = Suscripcion::where('user','=', Input::get('user_id'))->where('empresa','=', Input::get('empresa_id'))->first();

@@ -28,6 +28,12 @@
 <!-- css3 animation effect for this template -->
 {{ HTML::style('Tshop/assets/css/animate.min.css', array('media' => 'screen'))}}
 
+<!-- styles needed by footable  -->
+
+{{ HTML::style('Tshop/assets/css/footable-0.1.css', array('media' => 'screen'))}}
+{{ HTML::style('Tshop/assets/css/footable.sortable-0.1.css', array('media' => 'screen'))}}
+
+
 
 <!-- styles needed by carousel slider -->
 {{ HTML::style('Tshop/assets/css/owl.carousel.css', array('media' => 'screen'))}}

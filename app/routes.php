@@ -162,7 +162,7 @@ Route::post('/nueva-promo-post', array(
 	));
 
 //RUTA PARA  CONFIRMAR COMPRA
-Route::post('/confirmar-compra', array(
+Route::get('/confirmar-compra', array(
 		'as' => 'confirmar-compra',
 		'uses' => 'ProductosController@CompraPost'
 	));
@@ -340,6 +340,12 @@ Route::get('/mega/perfil', array(
 Route::get('/perfil', array(
 		'as' => 'perfil',
 		'uses'=> 'UsersController@perfilUser1'
+	));
+
+/* EDITAR PERFIL DE USUARIO TIPO 1*/
+Route::get('/lista-ordenes', array(
+		'as' => 'listOrders',
+		'uses'=> 'UsersController@getListaOrders'
 	));
 
 Route::get('/favoritos', array(

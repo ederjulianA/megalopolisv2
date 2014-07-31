@@ -19,7 +19,7 @@
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
         
-        <li class="active"> Checkout </li>
+        <li class="active"> Confirmar compra </li>
       </ul>
     </div>
   </div>
@@ -68,7 +68,7 @@
                       <div class="cartContent w100 checkoutReview ">
                         <table class="cartTable table-responsive"   style="width:100%">
                           <tbody>
-                          <form method="post" action="{{URL::route('confirmar-compra')}}">
+                          <form method="get" action="{{URL::route('confirmar-compra')}}">
                             <tr class="CartProduct cartTableHeader">
                               <th style="width:15%"> Producto </th>
                               <th class="checkoutReviewTdDetails"  >Detalle</th>

@@ -15,6 +15,28 @@ class Favs {
 		return $boton;
 	}
 
+	public static function estadoPedido($estado)
+	{
+		if($estado == 0)
+		{
+			$btnState = '<span class="label label-warning">En espera</span>';
+		}
+
+		if($estado == 1)
+		{
+			$btnState = '<span class="label label-info">En entrega</span>';
+		}
+
+		if($estado == 2)
+		{
+			$btnState = '<span class="label label-success">Entregado</span>';
+		}
+
+		return $btnState;
+
+
+	}
+
 	public static function mostrarSus($user_id, $empresa_id)
 	{
 		$sus = Suscripcion::where('user','=',$user_id)->where('empresa','=',$empresa_id)->get();
