@@ -72,9 +72,9 @@
         <h4 class="modal-title" id="myModalLabel">{{$com->razon_social}}</h4>
       </div>
       <div class="modal-body">
-        Sede en la que comnpraste -> {{$com->nombre_sede}} <br>
-        Direccion -> {{$com->direccion}} <br>
-        Telefono -> {{$com->telefono}} <br><br>
+        Sede en la que compraste -> {{$com->nombre_sede}} <br>
+        Dirección -> {{$com->direccion}} <br>
+        Teléfono -> {{$com->telefono}} <br><br>
 
 
       </div>

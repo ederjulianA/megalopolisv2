@@ -510,11 +510,8 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Mi cuenta </h3>
           <ul>
-            <li> <a href="account-1.html"> Account Login </a> </li>
-            <li> <a href="account.html"> My Account </a> </li>
-            <li> <a href="my-address.html"> My Address </a> </li>
-            <li> <a href="wishlist.html"> Wisth list </a> </li>
-            <li> <a href="order-list.html"> Order list </a> </li>
+            <li> <a href="{{URL::route('login')}}">  Login </a> </li>
+            
           </ul>
         </div>
         <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
@@ -528,11 +525,11 @@
             </li>
           </ul>
           <ul class="social">
-            <li> <a href="http://facebook.com"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
-            <li> <a href="http://twitter.com"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
-            <li> <a href="https://plus.google.com"> <i class="fa fa-google-plus"> &nbsp; </i> </a> </li>
+            <li> <a href="https://www.facebook.com/pages/TuMegalopolis/726858077327682" target="_blank"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
+            <li> <a href="https://twitter.com/tumegalopolis"target="_blank"> <i class="fa fa-twitter" > &nbsp; </i> </a> </li>
+           <!-- <li> <a href="https://plus.google.com"> <i class="fa fa-google-plus"> &nbsp; </i> </a> </li>
             <li> <a href="http://youtube.com"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li>
-            <li> <a href="http://youtube.com"> <i class="fa fa-youtube"> &nbsp; </i> </a> </li>
+            <li> <a href="http://youtube.com"> <i class="fa fa-youtube"> &nbsp; </i> </a> </li>-->
           </ul>
         </div>
       </div>

@@ -476,7 +476,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
                     
                   </div>
                   <div class="action-control">
-<a class="btn btn-primary"> 
+<a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id))}}"> 
                     <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> 
                     </a>
         </div>

@@ -98,13 +98,13 @@ $(document).on("click","a.lista-products", function(e){
 							var produc = '';
 								       produc += '<div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">';
            produc += '<div class="product">';
-             produc += '<div class="image"> <a href="public/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
+             produc += '<div class="image"> <a href="/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
              produc +=  '<div class="promotion"> <span class="new-product"> NUEVO</span> </div>';
             produc += '</div>';
             produc += '<div class="description">';
               produc += '<h4><a href="">'+data[i].producto_nombre+' </a></h4>';
               produc += '<p>Preguntar Disponibilidad </p>';
-              produc += '<span class="size">XL / XXL / S </span> </div>';
+              produc += ' </div>';
            produc +=  '<div class="price"> ';
                    produc +=  '<span>$'+data[i].precio_detal+'</span>';
                     

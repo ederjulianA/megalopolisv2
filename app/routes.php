@@ -91,7 +91,7 @@ Route::get('/recuperar-cuenta', array(
 		
 /* PROCESAR EDICIÓN DE PRODUCTOS*/
 
-Route::get('/editar-productos', array(
+Route::get('/mega/editar-productos', array(
 		'as' => 'editar-productos',
 		'uses' => 'EmpresasController@postEditarProductos'
 	));
@@ -209,7 +209,7 @@ Route::post('/get/barrios', array(
 		'uses' => 'AjaxController@postBarrios'
 	));
 
-Route::post('/subcats', array(
+Route::post('/mega/subcats', array(
 		'as' => 'get-subcats',
 		'uses' => 'AjaxController@postSubcat'
 	));

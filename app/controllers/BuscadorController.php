@@ -38,6 +38,7 @@ class BuscadorController  extends BaseController {
   c.nombre AS categoria_nombre,
   p.nombre AS producto_nombre,
   p.imagen,
+  p.estado,
   p.id,
   p.descripcion AS producto_descripcion,
   s.nombre_publico AS nombre_sede,
@@ -55,10 +56,13 @@ FROM
     ON c.id = p.categoria 
   INNER JOIN subcategorias sc 
     ON sc.categoria_id = sc.id 
+
 WHERE p.nombre REGEXP '[[:<:]]{$keyword}*'
+
   OR p.descripcion REGEXP '[[:<:]]{$keyword}*' 
   OR c.nombre REGEXP '[[:<:]]{$keyword}*' 
-  OR sc.nombre_sub REGEXP '[[:<:]]{$keyword}*'"));
+  OR sc.nombre_sub REGEXP '[[:<:]]{$keyword}*'
+  AND p.estado = 1"));
 		
 		$numPro = count($producto);
 

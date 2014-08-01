@@ -12,8 +12,8 @@
 <meta property="og:title" content="{{$producto->producto_nombre}}"/>
 <meta property="og:site_name" content="tuMegalopolis"/>
 <meta property="og:description" content="{{$producto->producto_descripcion}}"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/{{$producto->imagen}}"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/{{$producto->imagen}}"/>
 
 @stop
 <!-- Bootstrap core CSS -->
@@ -261,8 +261,8 @@
       <div class="product-share clearfix">
         <p> COMPARTE ESTE PRODUCTO </p>
         <div class="socialIcon"> 
-            <div class="fb-share-button" data-href="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-width="50" data-type="button_count"></div>
-            <a href="https://twitter.com/share" data-url="http://www.tumegalopolis.com/public/producto/{{$producto->id}}-{{$producto->sede_id}}" data-via="tumegalopolis" class="twitter-share-button" data-lang="es" data-size="large" data-hashtags="tuMegalopolis"> <i  class="fa fa-twitter"></i></a> 
+            <div class="fb-share-button" data-href="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}" data-width="50" data-type="button_count"></div>
+            <a href="https://twitter.com/share" data-url="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}" data-via="tumegalopolis" class="twitter-share-button" data-lang="es" data-size="large" data-hashtags="tuMegalopolis"> <i  class="fa fa-twitter"></i></a> 
            
       </div>
       <!--/.product-share--> 

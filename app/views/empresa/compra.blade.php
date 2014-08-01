@@ -13,6 +13,19 @@
 @stop
 
 @section('content')
+
+<script type="text/javascript">
+  $(document).on('click','#cantidad', function(){
+  var cant_actual = $('#cantidad').val();
+  var precio_unitario = $('#precio_unitario').val();
+  var subtotal = (cant_actual * precio_unitario);
+  $('#valor_total').val(subtotal);
+  var np = subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  $('#subtotal').text("$"+np);
+  $('#precio_total').text("$"+np);
+
+});
+</script>
 				<div class="container main-container headerOffset">
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">

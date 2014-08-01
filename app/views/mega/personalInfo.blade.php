@@ -15,13 +15,13 @@ Informacion Personal
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
         <li><a href="{{URL::route('perfil')}}">Mi cuenta</a> </li>
-        <li class="active"> Mi informacion personal </li>
+        <li class="active"> Mi información personal </li>
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-9 col-md-9 col-sm-7">
-      <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-user"></i> Mi informaion personal </span></h1>
+      <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-user"></i> Mi información personal </span></h1>
       <div class="row userInfo">
         <div class="col-lg-12">
           <h2 class="block-title-2" id="titulo-user"> {{Auth::user()->username}} . </h2>

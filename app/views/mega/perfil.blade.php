@@ -80,11 +80,11 @@
 									{{$user->email}}
 								</small> 
 								<div class="seperator"></div>
-								<a class="btn btn-success btn-xs m-bottom-sm">Seguir</a>
+								<!--<a class="btn btn-success btn-xs m-bottom-sm">Seguir</a>-->
 								<div class="seperator"></div>
-								<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+								<!--<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
 								<a href="#" class="social-connect tooltip-test twitter-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="social-connect tooltip-test google-plus-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Google Plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="social-connect tooltip-test google-plus-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Google Plus"><i class="fa fa-google-plus"></i></a>-->
 								<div class="seperator"></div>
 								<div class="seperator"></div>
 							</div><!-- /.col -->
@@ -93,12 +93,12 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-xs-4 text-center">
-										<span class="block font-14">301</span>
-										<small class="text-muted">Productos</small>
+										<!--<span class="block font-14">301</span>
+										<small class="text-muted">Productos</small>-->
 									</div><!-- /.col -->
 									<div class="col-xs-4 text-center">
-										<span class="block font-14">129</span>
-										<small class="text-muted">Promosiones</small>
+										<!--<span class="block font-14">129</span>
+										<small class="text-muted">Promosiones</small>-->
 									</div><!-- /.col -->
 									
 								</div><!-- /.row -->
@@ -107,7 +107,7 @@
 
 						<div class="link-publico">
 							<h3>Comparte el link de tu empresa en tus redes sociales:</h3>
-							<span class="label label-success">http://tumegalopolis.com/public/<br>empresa/{{$empresa->nombre_publico}}</span>
+							<span class="label label-success">http://tumegalopolis.com/empresa/{{$empresa->nombre_publico}}</span>
 							
 						</div>
 
@@ -188,7 +188,7 @@
 											<div class="overview-value">
 												<div class="h2">Productos</div>
 												<div class="text-muted">
-													<a href = '../editar-productos'>
+													<a href = '{{URL::route("editar-productos")}}'>
 														ver
 													</a>
 												</div>

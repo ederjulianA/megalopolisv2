@@ -15,7 +15,7 @@
 							<form method="post" action="{{ URL::route('cambiar-imagen-post')}}" enctype="multipart/form-data">
 								<label>Nuevo Logo</label>
 								<input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
-								<input type="file" name="nuevo_logo" required>
+								<input type="file" name="nuevo_logo" required><br>
 
 								<input type="submit" value="Actualizar" class="btn btn-info">
 
@@ -43,7 +43,7 @@
 							<form method="post" action="{{ URL::route('cambiar-banner')}}" enctype="multipart/form-data">
 								<label>Nuevo Banner</label>
 								<input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
-								<input type="file" name="nuevo_banner" required>
+								<input type="file" name="nuevo_banner" required><br>
 
 								<input type="submit" value="Actualizar" class="btn btn-info">
 

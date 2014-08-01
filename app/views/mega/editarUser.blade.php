@@ -25,7 +25,7 @@ Perfil | {{Auth::user()->username}}
       <div class="row userInfo">
         <div class="col-xs-12 col-sm-12">
           <p> Hola  {{Auth::user()->username}} Bienvenido </p>
-          <h2 class="block-title-2"><span>Aquí podran administrar la informacion de tu ceunta.</span></h2>
+          <h2 class="block-title-2"><span>Aquí podras administrar la información de tu ceunta.</span></h2>
           <ul class="myAccountList row">
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
               <div class="thumbnail equalheight"> <a title="Orders" href="{{URL::route('listOrders')}}"><i class="fa fa-calendar"></i> Historial de compras </a> </div>

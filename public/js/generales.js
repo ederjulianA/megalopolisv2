@@ -28,7 +28,7 @@ $('#nombre_publico_seo').keyup(function(){
 				if(data.estado == 0){
 				
 
-					$('#nombre-seo').html("Tu nombre publico sera: <strong>https://www.megalopolis.com/public/empresa/"+nombre_cambio+"</strong><br>"+tam);
+					$('#nombre-seo').html("Tu nombre publico sera: <strong>https://www.megalopolis.com/empresa/"+nombre_cambio+"</strong><br>"+tam);
 					$('#btn-crear-empresa').css({display:"inline"});
 
 				}else if (data.estado == 1){
