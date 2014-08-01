@@ -219,7 +219,7 @@
                                       <td>
                                         <input type="hidden" id="id_empresa" value="{{$producto->id_empresa}}">
                                         <input type="hidden" id="id_user" value="{{Auth::user()->id}}">
-                                        <a id="btn-pregunta-user">Has una pregunta</a>
+                                        <a id="btn-pregunta-user">Preguntar</a>
                                       </td>
                                     </tr>
                                     </tbody>

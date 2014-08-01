@@ -33,6 +33,7 @@ $(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();
 	var id_empresa = $('#id_empresa').val();
 	var id_user = $('#id_user').val();
+	$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntando...</a><img src="../Tshop/assets/css/AjaxLoader.gif">');
 	$.ajax({
 
 			url : "add/pregunta",
@@ -51,6 +52,7 @@ $(document).on('click','#btn-pregunta-user', function(e){
 
 					$('#lista-preguntas-tb').append(nuevaPregunta);
 					$('#pregunta-usuario').val("");
+					$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntar</a>');
 
 					
 

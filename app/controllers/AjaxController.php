@@ -80,6 +80,14 @@ Class AjaxController  extends BaseController {
 
 			if($preg->save())
 			{
+				$empresa = Empresa::where('id','=',$empresa_id)->first();
+				$empresa_nombre = $empresa->razon_social;
+				$email_empresa = $empresa->user->email;
+				$user = User::where('id','=',$user_id)->first();
+				$usuario = $user->username;
+				Mail::send('emails.auth.pregunta', array('link' => URL::route('mega-perfil'), 'username'=>$empresa_nombre,'usuario'=>$usuario,'pregunta'=>$pregunta), function($message) use ($empresa){
+						$message->to($empresa->user->email, $empresa->nombre_publico)->subject('Nueva Pregunta');
+					});
 				return Response::json($preg);
 				//return Response::json(data, status, headers)
 			}
