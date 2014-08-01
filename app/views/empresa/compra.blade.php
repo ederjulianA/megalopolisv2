@@ -193,7 +193,7 @@
       
   <div class="w100 cartMiniTable">
                             <table id="cart-summary" class="std table">
-                                    <tbody><tr >
+                                    <tbody id="lista-preguntas-tb"><tr >
                                       <td>Preguntar al vendedor</td>
                                       <td class="price" >?</td>
                                     </tr>
@@ -206,13 +206,22 @@
                                     @endforeach
                                    
                                    
-                                    <tr >
-                                      <td > Dudas ? </td>
-                                      <td class=" site-color" id="total-price"><a>Has una pregunta</a></td>
-                                    </tr>
+
                                     
                                                                          
-                                    </tbody><tbody>
+                                    </tbody>
+                                    <tbody>
+                                          <tr >
+                                      <td > Dudas ? </td>
+                                      <td class=" site-color" id="total-price"><textarea  id="pregunta-usuario"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="hidden" id="id_empresa" value="{{$producto->id_empresa}}">
+                                        <input type="hidden" id="id_user" value="{{Auth::user()->id}}">
+                                        <a id="btn-pregunta-user">Has una pregunta</a>
+                                      </td>
+                                    </tr>
                                     </tbody>
                                   </table> 
                                   </div>

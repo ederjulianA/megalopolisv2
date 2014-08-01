@@ -175,7 +175,7 @@
       <div class="cart-actions">
         <div class="addto">
          @if(Auth::check() && Auth::user()->tipo == 1)
-              <form id="form-cart-before" method="get" action="{{URL::route('form-carrito-previo')}}">
+              <form id="form-cart-before" method="post" action="{{URL::route('form-carrito-previo')}}">
               <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
               <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
               <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">

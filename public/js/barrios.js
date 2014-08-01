@@ -29,6 +29,43 @@ $(document).ready(function(){
 
 });
 
+$(document).on('click','#btn-pregunta-user', function(e){
+	var pregunta_usu = $('#pregunta-usuario').val();
+	var id_empresa = $('#id_empresa').val();
+	var id_user = $('#id_user').val();
+	$.ajax({
+
+			url : "add/pregunta",
+			dataType: "json",
+			type : "post",
+			data : { pregunta_f : pregunta_usu, id_empresa_f : id_empresa, id_user_f : id_user},
+			success : function(data){
+
+				if(data){
+					var nuevaPregunta = "";
+					nuevaPregunta += '<tr>';
+						nuevaPregunta += '<td>'+data.pregunta+'</td>';
+						nuevaPregunta += '<td>Esperando respuesta</td>';
+
+					nuevaPregunta += '</tr>';
+
+					$('#lista-preguntas-tb').append(nuevaPregunta);
+					$('#pregunta-usuario').val("");
+
+					
+
+					
+					
+				}
+				
+				
+			}
+
+
+		});
+	e.preventDefault();
+});
+
 $(document).on('click','#cantidad', function(){
 	var cant_actual = $('#cantidad').val();
 	var precio_unitario = $('#precio_unitario').val();

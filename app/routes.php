@@ -49,7 +49,7 @@ Route::get('/home2', array(
 	));
 
 /* VISTA VISUALIZAR ARTICULO A COMPRAR */
-Route::get('/contacto-vendedor', array(
+Route::post('/contacto-vendedor', array(
 		'as' => 'form-carrito-previo',
 		'uses' => 'ProductosController@carritoPrevio'
 	));
@@ -228,7 +228,7 @@ Route::post('/empresa/cancelar-suscripcion-ajax', array(
 
 
 
-Route::post('/empresa/add/pregunta', array(
+Route::post('/add/pregunta', array(
 		'as' => 'add-pregunta',
 		'uses' => 'AjaxController@addPregunta'
 	));
