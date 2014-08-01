@@ -578,6 +578,7 @@
 												<form method="post" action="{{URL::route('preguntas-empresa')}}" rol="form">
 													<div class="form-group">
 														<input type="hidden" name="pregunta_id" value="{{$preg_null->id}}">
+														<input type="hidden" name="user_id" value="{{$preg_null->user_id}}">
 														<textarea name="respuesta" class="form-control"></textarea>
 													</div>
 													
