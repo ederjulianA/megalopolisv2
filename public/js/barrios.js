@@ -24,10 +24,18 @@ $(document).ready(function(){
 	preview_1();
 	preview_2();
 	preview_3();
+	subcatfunction();
+
+
 
 	
 
 });
+function subcatfunction()
+{
+	var cat_id = $('#category').val();
+	
+}
 
 $(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();

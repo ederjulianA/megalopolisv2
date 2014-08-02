@@ -110,7 +110,7 @@ $(document).on("click","a.lista-products", function(e){
                     
                   produc += '</div>';
                   produc += '<div class="action-control">';
-			produc += '<a class="btn btn-primary"> ';
+			produc += '<a class="btn btn-primary" href="/producto/'+data[i].id+'-'+data[i].sede_id+'"> ';
                      produc += '<span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> ';
                     produc +=  '</a>';
         produc += '</div>';

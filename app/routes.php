@@ -96,7 +96,7 @@ Route::get('/mega/editar-productos', array(
 		'uses' => 'EmpresasController@postEditarProductos'
 	));
 
-Route::get('/editar-producto-{id}', array(
+Route::get('/mega/editar-producto-{id}', array(
 		'as' => 'editar-productos-post',
 		'uses' => 'EmpresasController@postEditarProductoId'
 	));

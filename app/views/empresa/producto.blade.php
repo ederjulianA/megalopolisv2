@@ -246,7 +246,7 @@
               </tbody>
               <tfoot>
                 <tr>
-                  <td colspan="3">* Free on orders of $50 or more</td>
+                  <td colspan="3"></td>
                 </tr>
               </tfoot>
             </table>

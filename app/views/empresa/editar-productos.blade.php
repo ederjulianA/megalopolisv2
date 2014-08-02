@@ -103,7 +103,7 @@
 											
 												?>														
 												<div>
-													<img src = '<?php echo($producto->imagen);?>'/>
+													{{HTML::image($producto->imagen)}}
 												</div>
 												<?php
 											}

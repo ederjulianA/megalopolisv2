@@ -11,6 +11,62 @@ class EmpresasController  extends BaseController {
 		$this->beforeFilter('mega');
 	}
 
+	public function postEditarProductoId($producto_id)
+	{
+		$id = Auth::user()->id;
+		$user = User::where('id',"=",$id);
+		$empresa = Empresa::where("user_id","=",$id);
+		$user = $user->first();
+		$empresa = $empresa->first();
+		$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
+		->join('sedes as s','a.sede','=','s.id')
+		 ->join('categorias as c','p.categoria','=','c.id')
+		 ->join('subcategorias as sc','p.subcat_id','=','sc.id')
+		 ->join('empresas as e', 's.empresa_id','=','e.id')
+		 ->select('a.precio_detal',
+				 'a.cantidad',
+				 'a.sede AS producto_sede',
+				 'e.id AS id_empresa',
+				 'c.nombre AS categoria_nombre',
+				 'e.razon_social',
+				 'e.desc_breve',
+				 'p.nombre AS producto_nombre',
+				 'p.imagen',
+				 'p.categoria',
+				 'p.subcat_id',
+				 'p.img1',
+				 'p.img2',
+				 'p.img3',
+				 'p.id',
+				 'p.estado',
+				 'p.descripcion AS producto_descripcion',
+				 's.nombre_publico AS nombre_sede',
+				 's.direccion',
+				 's.id AS sede_id',
+				 's.telefono',
+				 'sc.nombre_sub'
+			 )
+		 ->where('p.id','=',$producto_id)->where('p.estado','=',1)->first();
+		 $preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+		 $num_preguntas_null = $preguntas_null->count();
+		$sede = Sede::where('empresa_id','=', $empresa->id)->get();
+		$subcategories = Subcategoria::where('categoria_id', '=', $producto->categoria)->get();
+			
+
+
+		return View::make('empresa.editar-item')
+			->with('num_nulls', $num_preguntas_null)
+			->with('user', $user)
+			->with('sedes', $sede)
+			->with('categorias',Categoria::all())
+			->with('subcategorias',$subcategories)
+			->with('preguntas_null', $preguntas_null)
+			->with('empresa', $empresa)
+			->with('subcategories', $subcategories)
+			->with('productos', $producto);
+
+	}
+
 	public function getNuevaSede()
 	{
 		$id = Auth::user()->id;
@@ -161,7 +217,7 @@ class EmpresasController  extends BaseController {
 		
 		Producto::where('id', Input::get('product_id'))->update($producto);
 		
-		return Redirect::to('/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
+		return Redirect::to('/mega/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
 	}
 	
 	public function postNuevaSede()
