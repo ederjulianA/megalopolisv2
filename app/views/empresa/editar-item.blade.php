@@ -53,7 +53,7 @@
 
 
 					<div class="form-group">
-										<label class="control-label col-md-2">Precio:</label>												
+										<label class="control-label col-md-2">Precio, sin comas ni puntos:</label>												
 										<div class="col-md-10">
 											<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="{{$productos->precio_detal}}">
 										</div><!-- /.col -->
