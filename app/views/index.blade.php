@@ -89,25 +89,71 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
   <!-- Main component call to action -->
   
   <div class="row featuredPostContainer globalPadding style2">
-    <h3 class="section-title style2 text-center"><span>EMPRESAS</span></h3>
+    <h3 class="section-title style2 text-center"><span>PLANES</span></h3>
     <div id="productslider" class="owl-carousel owl-theme">
-
-        @foreach($empresas as $empresa)
-              <div class="item">
-        <div class="product">
-          <div class="image"> <a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{HTML::image($empresa->logo, 'img', array('class'=>'img-responsive'))}}</a>
-            <div class="promotion"> <span class="new-product"> NUEVA</span> <!--<span class="discount">15% OFF</span>--> </div>
+      <div class="item">
+       <div class="product">
+          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/product4.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+            <div class="promotion"> <span class="new-product"> $35,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
-            <h4><a href="#">{{$empresa->razon_social}} </a></h4>
-            <p>{{$empresa->desc_breve}}</p>
+            <h4><a href="#">PLAN BASICO </a></h4>
+            <p>Hasta 30 productos.</p>
             <span class="size"></span> </div>
           <!--<div class="price"> <span>$25.000</span> </div>-->
-          <div class="action-control"> <a class="btn btn-primary" href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver empresa</span> </a> </div>
+          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
         </div>
-      </div>
+       </div> <!-- PLANES 1#############################################################################################################-->
 
-        @endforeach
+
+      <div class="item">
+        <div class="product">
+          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl3.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+            <div class="promotion"> <span class="new-product"> $50,000</span> <!--<span class="discount">15% OFF</span>--> </div>
+          </div>
+          <div class="description">
+            <h4><a href="#">PLAN INTERMEDIO </a></h4>
+            <p>A partir de 30 productos hasta 50.</p>
+            <span class="size"></span> </div>
+          <!--<div class="price"> <span>$25.000</span> </div>-->
+          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+        </div>
+       </div> <!-- PLANES 2#############################################################################################################-->
+
+
+
+      <div class="item">
+        <div class="product">
+          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+            <div class="promotion"> <span class="new-product"> $50,000</span> <!--<span class="discount">15% OFF</span>--> </div>
+          </div>
+          <div class="description">
+            <h4><a href="#">PLAN PROFESIONAL </a></h4>
+            <p>A partir de 50 productos hasta 80.</p>
+            <span class="size"></span> </div>
+          <!--<div class="price"> <span>$25.000</span> </div>-->
+          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+        </div>
+
+      </div><!-- PLANES 4#############################################################################################################-->
+
+
+      <div class="item">
+        <div class="product">
+          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+            <div class="promotion"> <span class="new-product"> $85,000</span> <!--<span class="discount">15% OFF</span>--> </div>
+          </div>
+          <div class="description">
+            <h4><a href="#">PLAN MEGA </a></h4>
+            <p>MÁS DE 80 PRODUCTOS</p>
+            <span class="size"></span> </div>
+          <!--<div class="price"> <span>$25.000</span> </div>-->
+          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+        </div>
+
+      </div><!-- PLANES 3#############################################################################################################-->
+
+      
       
      
     </div>
@@ -141,53 +187,25 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
   <!-- Main component call to action -->
   
   <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
-    <h3 class="section-title style2 text-center"><span>NUESTROS PLANES</span></h3>
+    <h3 class="section-title style2 text-center"><span>NUESTRAS EMPRESAS</span></h3>
     <div class="container">
       <div class="row xsResponse">
-        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+      @foreach($empresas as $empresa)
+          <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/product4.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+            <div class="image"> <a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{HTML::image($empresa->logo, 'img', array('class'=>'img-responsive'))}}</a>
             </div>
             <div class="description">
-              <h4><a href="product-details.html">BÁSICO</a></h4>
-              <p>Hasta 30 productos. </p></div>
-            <div class="discount plan"  > <span >$35.000</span> </div>
+              <h4><a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{$empresa->razon_social}}</a></h4>
+              <p>{{$empresa->desc_breve}} </p></div>
+            <!--<div class="discount plan"  > <span ></span> </div>-->
           </div>
         </div>
         <!--/.item-->
-       <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl3.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
-            </div>
-            <div class="description">
-              <h4><a href="product-details.html">INTERMEDIO</a></h4>
-              <p>A partir de 30 productos hasta 50. </p></div>
-            <div class="discount"> <span>$50.000</span> </div>
-          </div>
-        </div>
-        <!--/.item-->
-       <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
-            </div>
-            <div class="description">
-              <h4><a href="product-details.html">PROFESIONAL</a></h4>
-              <p>Desde 50 productos hasta 80 </p></div>
-            <div class="discount" > <span>$85.000</span> </div>
-          </div>
-        </div>
+      @endforeach
+        
+       
 
-        <!--/.item-->  
-        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
-            </div>
-            <div class="description">
-              <h4><a href="#">MEGA</a></h4>
-              <p>Más de 80 productos. </p></div>
-            <div class="discount"> <span>$120.000</span> </div>
-          </div>
-        </div>
     </div>
     <!--/.container--> 
   </div>

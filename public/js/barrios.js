@@ -108,13 +108,13 @@ function enviar()
 		return false;
 
 	}
-	else  if (isNaN(cantidad)){
+	/*else  if ( isNaN(cantidad)){
 		$('#product_amount').addClass('validacionAJAX');
-		$('#prod-amount-ajax').html('<span class="alert-validacion">Ingrese un precio valido, solo números sin comas ni puntos.</span>');
+		$('#prod-amount-ajax').html('<span class="alert-validacion">Ingrese una cantidad valida, solo números sin comas ni puntos.</span>');
 		ver = false;
 		return false;
 
-	}
+	}*/
 
 
 	if(ver == true)
@@ -146,7 +146,7 @@ $(document).on('click','#otrobtn', function(){
 
 //FIN VALIDACION DE FORMULARIO NUEVO PRODUCTO############################################################################################
 
-/*$(document).on('click','#btn-pregunta-user', function(e){
+$(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();
 	var id_empresa = $('#id_empresa').val();
 	var id_user = $('#id_user').val();
@@ -183,7 +183,7 @@ $(document).on('click','#otrobtn', function(){
 
 		});
 	e.preventDefault();
-});*/
+});
 
 $(document).on('click','#cantidad', function(){
 	var cant_actual = $('#cantidad').val();

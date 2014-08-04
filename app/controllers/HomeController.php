@@ -51,7 +51,7 @@ class HomeController extends BaseController {
 
 	{
 		//$empresas = Empresa::where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(4)->get();
-		$empresas = Empresa::all();
+		$empresas = Empresa::where('estado','=',1)->get();
 		return View::make('index')->with('empresas',$empresas);
 	}
 
