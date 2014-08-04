@@ -27,6 +27,43 @@ $(document).ready(function(){
 	subcatfunction();
 
 
+	//VALIDACION DEL FORMULARIO DE NUEVO PRODUCTO#########################################################################################
+$(document).on('click','#btn-nuevo-producto', function(){
+	var sede = $('#sede').val();
+	var categoria = $('#category').val();
+	var prod_nombre = $('#product_name').val();
+	var verificar = true;
+
+
+	if(sede == 0){
+		$('#sede').addClass('validacionAJAX');
+		$('#sede-ajax').html('<span class="alert-validacion">Por favor escoja una sede para el producto</span>')
+		verificar = false;
+	}
+
+	
+
+	 if (!prod_nombre){
+		$('#product_name').addClass('validacionAJAX');
+		$('#prod-nom-ajax').html('<span class="alert-validacion">Ingrese un nombre para este artículo</span>')
+		verificar = false;
+
+	}
+
+	 if (categoria == 0){
+		$('#category').addClass('validacionAJAX');
+		//$('#sede-ajax').html('<span class="alert-validacion">Por favor escoja una sede para el producto</span>')
+		verificar = false;
+	}
+
+	if(verificar == true){
+		$('#form-nuevo-item').submit();
+	}
+
+	
+	
+});
+
 
 	
 
@@ -36,8 +73,23 @@ function subcatfunction()
 	var cat_id = $('#category').val();
 	
 }
+$(document).on('click','#otrobtn', function(){
+	$('#form-nuevo-item').submit();
+});
 
-$(document).on('click','#btn-pregunta-user', function(e){
+
+
+
+
+
+
+
+
+
+
+//FIN VALIDACION DE FORMULARIO NUEVO PRODUCTO############################################################################################
+
+/*$(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();
 	var id_empresa = $('#id_empresa').val();
 	var id_user = $('#id_user').val();
@@ -74,7 +126,7 @@ $(document).on('click','#btn-pregunta-user', function(e){
 
 		});
 	e.preventDefault();
-});
+});*/
 
 $(document).on('click','#cantidad', function(){
 	var cant_actual = $('#cantidad').val();

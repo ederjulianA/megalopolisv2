@@ -170,6 +170,7 @@ class EmpresasController  extends BaseController {
 	public function postEditarProductoAction() {
 	
 		$id = Auth::user()->id;
+		$oldPro = Producto::where('id','=',Input::get('product_id'))->first();
 		
 		$producto = array();
 		$producto['nombre'] = Input::get('product_name');
@@ -183,28 +184,28 @@ class EmpresasController  extends BaseController {
 		$imagen3 = Input::file('imagen3');
 		
 		if(isset($imagen)){
-			
+			File::delete($oldPro->imagen);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen->getClientOriginalName();
-			Image::make($imagen->getRealPath())->heighten(650)->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
+			Image::make($imagen->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			//grab(1014, 1200)
 			$producto['imagen'] = 'img/products/'.$filename;
 		}
 		
 		if(isset($imagen2)){
-			
+			File::delete($oldPro->img1);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen2->getClientOriginalName();
-			Image::make($imagen2->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
+			Image::make($imagen2->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			
 			$producto['img1'] = 'img/products/'.$filename;
 		}
 		
 		if(isset($imagen3)){
-			
+			File::delete($oldPro->img2);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-".$imagen3->getClientOriginalName();
-			Image::make($imagen3->getRealPath())->resize(720, 480, true)->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
+			Image::make($imagen3->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			
 			$producto['img2'] = 'img/products/'.$filename;
 		}
@@ -304,10 +305,10 @@ class EmpresasController  extends BaseController {
 
 			if($empresa)
 			{
-				File::delete('public/'.$empresa->banner);
+				File::delete($empresa->banner);
 				$banner = Input::file('nuevo_banner');
 				$codigoIMG = str_random(13);
-				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."banner-".$empresa->nombre_publico.".jpg";
+				$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."banner-".$empresa->nombre_publico.".jpg";
 				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
 				Image::make($banner->getRealPath())->grab(850, 300)->save(public_path().'/img/empresas/banners'.$filename);
 				$empresa->banner = 'img/empresas/banners'.$filename;
@@ -354,7 +355,7 @@ class EmpresasController  extends BaseController {
 				File::delete('public/'.$empresa->logo);
 				$logo = Input::file('nuevo_logo');
 				$codigoIMG = str_random(13);
-				$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".$empresa->nombre_publico.".jpg";
+				$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."logo-".$empresa->nombre_publico.".jpg";
 				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
 				Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
@@ -464,20 +465,20 @@ class EmpresasController  extends BaseController {
 			$empresa = new Empresa();
 
 			$empresa->user_id = Input::get('user_id');
-			$empresa->sector_id = Input::get('sector');
+			$empresa->sector_id = 0;
 			$empresa->razon_social = Input::get('razon_social');
 
 			$empresa->direccion_principal = Input::get('direccion_principal');
 			$empresa->telefono = Input::get('telefono');
 			$codigoIMG = str_random(13);
 			$logo = Input::file('logo');
-			$filename = date('Y-m-d-H')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
-			Image::make($logo->getRealPath())->resize(null, 200, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
+			Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
-			$empresa->barrio = Input::get('barrio');
+			$empresa->barrio = 0;
 			$empresa->nombre_publico = Input::get('nombre_publico');
-			$empresa->desc_breve = Input::get('descripcion_breve');
+			$empresa->desc_breve = "";
 			$empresa->desc_larga = Input::get('descripcion_larga');
 
 		
@@ -488,7 +489,7 @@ class EmpresasController  extends BaseController {
 			if($empresa->save()){
 
 
-					$cuadricula = new Cuadricula();
+					/*$cuadricula = new Cuadricula();
 					$cuadricula->idempresa = $empresa->id;
 					$cuadricula->imagen = "local2.png";
 					$cuadricula->imagen2 = "fon1.png";
@@ -502,14 +503,14 @@ class EmpresasController  extends BaseController {
 					$cuadricula->Nombre = Input::get('nombre_publico');
 					$cuadricula->imgsector = "botella.png";
 
-			$cuadricula->save();
+			$cuadricula->save();*/
 				return Redirect::to('/')
 					->with('message-alert', 'Felicidades has creado exitosamente tu empresa');
 			}
 		}
 
 		return Redirect::to('/empresa')
-				->with('message-alert','Hubieron Problemas al crear la empresa. Intentalo de nuevo ')
+				->with('message-alert','Hubo Problemas al crear la empresa. Inténtalo de nuevo ')
 				->withErrors($validator)
 				->withInput();
 	}

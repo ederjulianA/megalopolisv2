@@ -520,7 +520,7 @@
             <li>
               <div class="input-append newsLatterBox text-center">
                 <input type="text" class="full text-center"  placeholder="Email ">
-                <button class="btn  bg-gray" type="button"> Subscribete/<i class="fa fa-long-arrow-right"> </i> </button>
+                <button class="btn  bg-gray" type="button"> Suscribete/<i class="fa fa-long-arrow-right"> </i> </button>
               </div>
             </li>
           </ul>

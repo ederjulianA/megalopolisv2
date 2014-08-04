@@ -1,6 +1,25 @@
 @extends('layouts.empresa')
 
 @section('content')
+	<style type="text/css">
+			.alert-validacion{
+				font-style: oblique;
+				font-weight: bold;
+				color: red;
+			}
+			.ajax-validation-form{
+				
+				bottom: 0;
+				width: 100%;
+			}
+			.validacionAJAX{
+				border: 1.5px solid red;
+			}
+
+	</style>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
 	
 	<div id="main-container">
 
@@ -370,38 +389,45 @@
 							<div class="tab-pane fade" id="Nproducto">
 								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border" action="../nuevo-producto" method="post" enctype='multipart/form-data'>
+									<form class="form-horizontal form-border" action="{{URL::route('crear-producto')}}" method="post" enctype='multipart/form-data' id="form-producto" id="form-nuevo-item">
 										<div class="panel-heading">
 											<h2>Crear nuevo Producto</h2>
 										</div>
 										<div class="panel-body">
 											<div class="form-group">
-												<label class="control-label col-md-2">Registrar producto en la siguiente sede:</label>
+												<label class="control-label col-md-2">Registrar producto en la siguiente sede: (*)</label>
 													<div class="col-md-4">
 													<select name = 'sede' id = 'sede' class="form-control">
-														<option>Seleccionar sede:</option>
+														<option value="0">Seleccionar sede:</option>
 														@foreach($sedes as $sede_item)
 															<option value = "{{$sede_item->id}}">{{$sede_item->nombre_publico}}</option>
 														@endforeach
 													</select>
 													
+													
 												</div><!-- /.col -->
-												<div class="col-md-6">													
+												<div class="col-md-6">	
+														<div class="ajax-validation-form" id="sede-ajax">
+														
+														</div>												
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 										
 											<div class="form-group">
-												<label class="control-label col-md-2">Nombre:</label>												
+												<label class="control-label col-md-2">Nombre: (*)</label>												
 												<div class="col-md-10">
-													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="">
+													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="" required>
 												</div><!-- /.col -->
+												<div class="ajax-validation-form" id="prod-nom-ajax">
+														
+														</div>
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
-												<label class="control-label col-md-2">Categoría del producto:</label>
+												<label class="control-label col-md-2">Categoría del producto: (*)</label>
 													<div class="col-md-4 selects-categoria">
-													<select name = 'category' id = 'category' class="form-control">
-														<option>Seleccionar categoría:</option>
+													<select name = 'category' id = 'category' class="form-control" required>
+														<option value="0">Seleccionar categoría:</option>
 														@foreach($categorias as $categoria)
 															<option value = "{{$categoria->id}}">{{$categoria->nombre}}</option>
 														@endforeach
@@ -420,21 +446,21 @@
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
-												<label class="control-label col-md-2">Precio:</label>												
+												<label class="control-label col-md-2">Precio: (*)</label>												
 												<div class="col-md-10">
-													<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="">
+													<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Ingrese el precio sin comas ni puntos. Ej: 89900" value="" required>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
 											<div class="form-group">
-												<label class="control-label col-md-2">Cantidad a registrar del producto en la sede seleccionada:</label>												
+												<label class="control-label col-md-2">Cantidad a registrar del producto en la sede seleccionada: (*)</label>												
 												<div class="col-md-10">
-													<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto" value="">
+													<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto. Ej: 17" value="" required>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
-												<label class="control-label col-md-2">Imagen del producto:</label>												
+												<label class="control-label col-md-2">Imagen del producto: (*)</label>												
 												<div class="col-md-10">
 													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  >
 												</div><!-- /.col -->
@@ -471,14 +497,14 @@
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
-												<label class="control-label col-md-2">Descripción breve:</label>
+												<label class="control-label col-md-2">Descripción breve: (*)</label>
 												<div class="col-md-10">
 													<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 												<div class="form-group">
 														
-														<label class="col-lg-2 control-label">Tags</label>
+														<label class="col-lg-2 control-label">Tags (Separados por comas Ej: mis,tags)</label>
 														<div class="col-lg-10">
 															<input id = 'tags' type="text" class="tag-demo1" name="tags" value="">
 														</div><!-- /.col -->
@@ -486,53 +512,13 @@
 
 											<div class="text-right">
 												<input type="hidden" name="empresa_id" value="{{$user->empresa->id}}">
-												<button class="btn btn-info quick-btn btn-sombra" type="submit">
-												<i class="fa fa-plus-circle"></i>	Crear</button>
+												<input type="submit" class="btn btn-info quick-btn btn-sombra" id="btn-nuevo-producto">
+
+												
 												
 											</div>
 											
-								<!--
-											<div class="form-group">
-												<label class="control-label col-md-2"> Tabs</label>
-												<div class="panel panel-default">
-								
-								<div class="panel-heading">
-										Escoger Tabs
-								</div>
-								<div class="panel-body relative">
-									<select multiple="multiple" id="selectedBox1" class="select-box pull-left form-control">
-										<option value="1">Apple</option>
-										<option value="2">Banana</option>
-										<option value="3">Cola</option>
-										<option value="4">Dog</option>
-										<option value="5">Elephant</option>
-									</select>		
-
-									<div class="select-box-option">
-										<a class="btn btn-sm btn-default" id="btnRemove">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a class="btn btn-sm btn-default" id="btnSelect">
-											<i class="fa fa-angle-right"></i>
-										</a>
-										<div class="seperator"></div>
-										<a class="btn btn-sm btn-default" id="btnRemoveAll">
-											<i class="fa fa-angle-double-left"></i>
-										</a>
-										<a class="btn btn-sm btn-default" id="btnSelectAll">
-											<i class="fa fa-angle-double-right"></i>
-										</a>
-									</div>
-
-									<select multiple="multiple" id="selectedBox2" class="select-box pull-right form-control">
-										<option>Alabama</option>
-										<option>Montana</option>
-										<option>New Jersey</option>
-										<option>New York</option>
-										<option>Texas</option>
-									</select>		
-								</div>
-								-->
+							
 								</div><!-- /panel -->
 												
 						</div>

@@ -268,7 +268,7 @@
 											
 								
 							@else
-								<span class="alert alert-danger">Aun no tienes Ninguna Sede. Para crear Productos es necesario que crees tu primera sede :)</span>
+								<span class="alert alert-danger">Aun no tienes Ninguna Sede. Para crear Productos es necesario que crees tú primera sede :)</span>
 								<a href="#" class="btn btn-warning btn-lg btn-sombra" data-toggle="modal" data-target="#myModal"> Crear Mi primera Sede</a>
 							@endif
 					
