@@ -12,6 +12,11 @@ class SedesController extends BaseController{
 		if($sede->count()){
 			$sede = $sede->first();
 			$empresaid = $sede->empresa->id;
+			$empresa = Empresa::where('id','=',$empresaid)->first();
+
+			if($empresa->estado==0){
+				return Redirect::to('/empresa/'.$empresa->nombre_publico);
+			}
 
 			$suscriptores = DB::table('user_subs as us')->join('empresas as e','us.empresa','=','e.id')
 			->select('e.id')

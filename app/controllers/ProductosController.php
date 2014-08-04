@@ -64,9 +64,11 @@ class ProductosController  extends BaseController {
 		 ->join('empresas as e', 's.empresa_id','=','e.id')
 		 ->select('a.precio_detal',
 				 'a.cantidad',
+				 'e.estado AS estado_empresa',
 				 'e.id AS id_empresa',
 				 'c.nombre AS categoria_nombre',
 				 'e.razon_social',
+				 'e.nombre_publico AS nombre_publico_empresa',
 				 'e.desc_breve',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
@@ -83,6 +85,10 @@ class ProductosController  extends BaseController {
 				 'sc.nombre_sub'
 			 )
 		 ->where('p.id','=',$id)->where('p.estado','=',1)->first();
+
+		 if($producto->estado_empresa == 0){
+		 	return Redirect::to('/empresa/'.$producto->nombre_publico_empresa);
+		 }
 
 		 $tags = Tag::where('producto','=',$id)->get();
 		
@@ -124,6 +130,8 @@ class ProductosController  extends BaseController {
 				 'a.cantidad',
 				 'c.nombre AS categoria_nombre',
 				 'e.razon_social',
+				 'e.estado AS estado_empresa',
+				 'e.nombre_publico AS nombre_publico_empresa',
 				 'e.id AS id_empresa',
 				 'e.desc_breve',
 				 'p.nombre AS producto_nombre',
@@ -136,6 +144,10 @@ class ProductosController  extends BaseController {
 				 'sc.nombre_sub'
 			 )
 		 ->where('p.id','=',Input::get('id_producto'))->first();
+
+		 if($producto->estado_empresa == 0){
+		 	return Redirect::to('/empresa/'.$producto->nombre_publico_empresa);
+		 }
 		 $preguntas = Pregunta::where('empresa_id',"=", Input::get('id_empresa'))->get();
 		 return View::make('empresa.compra')->with('producto',$producto)->with('preguntas',$preguntas);
 		}
