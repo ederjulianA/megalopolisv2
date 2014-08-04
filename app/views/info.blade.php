@@ -19,6 +19,9 @@
 @stop
 
 @section('content')
+
+<div id="bloqueo"></div>
+
 <style type="text/css">
   
   .Suscribir{
@@ -53,10 +56,22 @@
     padding: 10px;
 
   }
+  .bloqueo-pg{
+    
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+  .bloqueo-pg h2 {
+    font-size: 3em;
+    max-height: 100%;
+  }
+ 
 </style>
-			<div class="container main-container headerOffset">
+  <input type="hidden" id="eede" value="{{$empresa->estado}}">
+			<div class="container main-container headerOffset" id="contenido">
   
-  <div class="row innerPage">
+  <div class="row innerPage" >
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="row userInfo">
         <div class="col-xs-12 col-sm-12">
@@ -82,7 +97,7 @@
           <div class="row animated">
           		 <h3 class="title-big text-center section-title-style2">
             <span >
-              Mis sedes
+              Mis sedes 
             </span>
           </h3>
 
@@ -116,4 +131,5 @@
   </div> <!--/.innerPage-->
   <div style="clear:both">  </div>
 </div><!-- /.main-container -->
+
 @stop

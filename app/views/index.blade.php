@@ -125,7 +125,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       <div class="item">
         <div class="product">
           <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
-            <div class="promotion"> <span class="new-product"> $50,000</span> <!--<span class="discount">15% OFF</span>--> </div>
+            <div class="promotion"> <span class="new-product"> $85,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
             <h4><a href="#">PLAN PROFESIONAL </a></h4>
@@ -141,7 +141,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       <div class="item">
         <div class="product">
           <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
-            <div class="promotion"> <span class="new-product"> $85,000</span> <!--<span class="discount">15% OFF</span>--> </div>
+            <div class="promotion"> <span class="new-product"> $120,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
             <h4><a href="#">PLAN MEGA </a></h4>

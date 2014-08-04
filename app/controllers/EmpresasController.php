@@ -164,7 +164,7 @@ class EmpresasController  extends BaseController {
 		$producto['estado'] = 0;
 		Producto::where('id', $product_id)->update($producto);
 		
-		return Redirect::to('/editar-productos')->with('message-alert','Se ha eliminado el producto satisfactoriamente.');
+		return Redirect::to('/mega/editar-productos')->with('message-alert','Se ha eliminado el producto satisfactoriamente.');
 	}
 	
 	public function postEditarProductoAction() {
