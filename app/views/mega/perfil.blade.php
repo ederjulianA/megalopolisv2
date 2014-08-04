@@ -389,7 +389,7 @@
 							<div class="tab-pane fade" id="Nproducto">
 								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border" action="{{URL::route('crear-producto')}}" method="post" enctype='multipart/form-data' id="form-producto" id="form-nuevo-item">
+									<form class="form-horizontal form-border" action="{{URL::route('crear-producto')}}" method="post" enctype='multipart/form-data' id="form-producto" id="form-nuevo-item" onsubmit="return enviar();">
 										<div class="panel-heading">
 											<h2>Crear nuevo Producto</h2>
 										</div>
@@ -416,7 +416,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Nombre: (*)</label>												
 												<div class="col-md-10">
-													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="" required>
+													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="" >
 												</div><!-- /.col -->
 												<div class="ajax-validation-form" id="prod-nom-ajax">
 														
@@ -450,6 +450,9 @@
 												<div class="col-md-10">
 													<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Ingrese el precio sin comas ni puntos. Ej: 89900" value="" required>
 												</div><!-- /.col -->
+												<div class="ajax-validation-form" id="prod-prec-ajax">
+														
+														</div>
 											</div><!-- /form-group -->
 
 											<div class="form-group">
@@ -457,12 +460,16 @@
 												<div class="col-md-10">
 													<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto. Ej: 17" value="" required>
 												</div><!-- /.col -->
+												<div class="ajax-validation-form" id="prod-amount-ajax">
+														
+														</div>
+
 											</div><!-- /form-group -->
 											
 											<div class="form-group">
 												<label class="control-label col-md-2">Imagen del producto: (*)</label>												
 												<div class="col-md-10">
-													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo"  >
+													<input id = 'imagen' name = 'imagen' type="file" class="upload-demo" required  >
 												</div><!-- /.col -->
 												<div id="preview1" style="height:150px; width:auto; margin:0 auto;">
 
@@ -499,8 +506,12 @@
 											<div class="form-group">
 												<label class="control-label col-md-2">Descripción breve: (*)</label>
 												<div class="col-md-10">
-													<textarea id = 'description' name = 'description' class="form-control" rows="3"></textarea>
+													<textarea id = 'description' name = 'description' class="form-control" rows="3" required></textarea>
 												</div><!-- /.col -->
+												<div class="ajax-validation-form" id="prod-descripcion-ajax">
+														
+														</div>
+
 											</div><!-- /form-group -->
 												<div class="form-group">
 														
@@ -512,7 +523,8 @@
 
 											<div class="text-right">
 												<input type="hidden" name="empresa_id" value="{{$user->empresa->id}}">
-												<input type="submit" class="btn btn-info quick-btn btn-sombra" id="btn-nuevo-producto">
+												<button class="btn btn-info quick-btn btn-sombra" > Crear</button>
+												<!--<input type="submit" class="btn btn-info quick-btn btn-sombra" id="btn-nuevo-producto">-->
 
 												
 												

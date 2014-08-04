@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 
 	//VALIDACION DEL FORMULARIO DE NUEVO PRODUCTO#########################################################################################
-$(document).on('click','#btn-nuevo-producto', function(){
+/*$(document).on('click','#btn-nuevo-producto', function(){
 	var sede = $('#sede').val();
 	var categoria = $('#category').val();
 	var prod_nombre = $('#product_name').val();
@@ -62,12 +62,69 @@ $(document).on('click','#btn-nuevo-producto', function(){
 
 	
 	
-});
+});*/
 
 
 	
 
 });
+
+function enviar()
+{
+
+	var form = $("#form-nuevo-item");
+
+	var sede = $('#sede').val();
+	var categoria = $("#category").val();
+	var prod_nombre = $('#product_name').val(); 
+	var precio = $("#product_price").val();
+	var cantidad = $("product_amount").val();
+	var descripcion = $("#description").val();
+	var ver = true;
+
+	if(sede == 0){
+		$('#sede').addClass('validacionAJAX');
+		$('#sede-ajax').html('<span class="alert-validacion">Por favor escoja una sede para el producto</span>');
+		ver = false;
+		return false;
+	}else  if (!prod_nombre){
+		$('#product_name').addClass('validacionAJAX');
+		$('#prod-nom-ajax').html('<span class="alert-validacion">Ingrese un nombre para este artículo</span>');
+		ver = false;
+		return false;
+
+	}
+	else  if (categoria == 0){
+		$('#category').addClass('validacionAJAX');
+		//$('#prod-nom-ajax').html('<span class="alert-validacion">Ingrese un nombre para este artículo</span>');
+		ver = false;
+		return false;
+
+	}
+	else  if ( isNaN(precio)){
+		$('#product_price').addClass('validacionAJAX');
+		$('#prod-prec-ajax').html('<span class="alert-validacion">Ingrese un precio valido, solo números sin comas ni puntos.</span>');
+		ver = false;
+		return false;
+
+	}
+	else  if (isNaN(cantidad)){
+		$('#product_amount').addClass('validacionAJAX');
+		$('#prod-amount-ajax').html('<span class="alert-validacion">Ingrese un precio valido, solo números sin comas ni puntos.</span>');
+		ver = false;
+		return false;
+
+	}
+
+
+	if(ver == true)
+	{
+		form.submit();
+		return true;
+	}
+
+	
+}
 function subcatfunction()
 {
 	var cat_id = $('#category').val();
