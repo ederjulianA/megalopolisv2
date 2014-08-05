@@ -41,13 +41,13 @@ class PromocionesController extends BaseController {
 				$promo->img = 'img/promociones/'.$filename;
 
 				if($promo->save()){
-					return Redirect::to('/nueva-sede')->with('message-alert','Promo creada');
+					return Redirect::to('/mega/nueva-sede')->with('message-alert','Promo creada');
 				}else{
-					return Redirect::to('/nueva-sede')->with('message-alert','Error al crear promo');
+					return Redirect::to('/mega/nueva-sede')->with('message-alert','Error al crear promo');
 				}
 
 			}else{
-				return Redirect::to('/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Error al crear la nueva promo');
+				return Redirect::to('/mega/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Error al crear la nueva promo');
 			}
 	}
 
@@ -127,9 +127,9 @@ class PromocionesController extends BaseController {
 					$promocion->descripcion_larga = Input::get('desc_larga');
 
 						if($promocion->save()){
-							return Redirect::to('/nueva-sede')->with('message-alert','Actualizacion de promo exitosa');
+							return Redirect::to('/mega/nueva-sede')->with('message-alert','Actualizacion de promo exitosa');
 						}else{
-							return Redirect::to('/nueva-sede')->with('message-alert','Error al actualizar la sede');
+							return Redirect::to('/mega/nueva-sede')->with('message-alert','Error al actualizar la sede');
 						}
 				}else if(isset($nuevaIMG)){
 						File::delete('public/'.$promocion->img);
@@ -155,9 +155,9 @@ class PromocionesController extends BaseController {
 						$promocion->descripcion_larga = Input::get('desc_larga');
 
 						if($promocion->save()){
-							return Redirect::to('/nueva-sede')->with('message-alert','Actualizacion de promo exitosa');
+							return Redirect::to('/mega/nueva-sede')->with('message-alert','Actualizacion de promo exitosa');
 						}else{
-							return Redirect::to('/nueva-sede')->with('message-alert','Error al actualizar la sede');
+							return Redirect::to('/mega/nueva-sede')->with('message-alert','Error al actualizar la sede');
 						}
 
 

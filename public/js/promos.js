@@ -161,7 +161,7 @@ $(document).on("click","a.lista-products", function(e){
 			if(data){
 					for( var i in data){
 
-						var promociones = '<div class="item-promo-lista"><img src="'+data[i].img+'" class="img-promo-lista"><h3>'+data[i].titulo+'</h3><p>'+data[i].descripcion_corta+'</p><p class="sede-item"><span class="label label-warning">'+data[i].sede.nombre_publico+'</span></p></div>'
+						var promociones = '<div class="item-promo-lista"><img src="../../'+data[i].img+'" class="img-promo-lista"><h3>'+data[i].titulo+'</h3><p>'+data[i].descripcion_corta+'</p><p class="sede-item"><span class="label label-warning">'+data[i].sede.nombre_publico+'</span></p></div>'
 						$('.contenedor-promos-ajax').append(promociones);
 
 					}

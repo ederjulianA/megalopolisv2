@@ -244,13 +244,13 @@ class EmpresasController  extends BaseController {
 
 			if($sede->save())
 			{
-				return Redirect::to('/nueva-sede')->with('message-alert','Sede Creada');
+				return Redirect::to('/mega/nueva-sede')->with('message-alert','Sede Creada');
 			}else{
-				return Redirect::to('/nueva-sede')->with('message-alert','No se ha podido crear tu sede');
+				return Redirect::to('/mega/nueva-sede')->with('message-alert','No se ha podido crear tu sede');
 			}
 
 		}else{
-			return Redirect::to('/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Errores en el formulario');
+			return Redirect::to('/mega/nueva-sede')->withErrors($validator)->withInput()->with('message-alert','Errores en el formulario');
 		}
 	}
 
@@ -313,13 +313,13 @@ class EmpresasController  extends BaseController {
 				Image::make($banner->getRealPath())->grab(850, 300)->save(public_path().'/img/empresas/banners'.$filename);
 				$empresa->banner = 'img/empresas/banners'.$filename;
 				$empresa->save();
-				return Redirect::to('/mega/cambiar/imagen')
+				return Redirect::to('/mega/cambiar-imagen')
 					->with('message-alert','Imagen Actualizada exitosamente');
 
 			}
 			else
 			{
-				return Redirect::to('/mega/cambiar/imagen')
+				return Redirect::to('/mega/cambiar-imagen')
 					->with('message-alert','Error al actualizar imagen');
 			}
 			
@@ -327,7 +327,7 @@ class EmpresasController  extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('/mega/cambiar/imagen')
+			return Redirect::to('/mega/cambiar-imagen')
 				->with('message-alert','Se presentaron Problemas al actualizar la imagen')
 				->withErrors($validator);
 		}
@@ -360,7 +360,7 @@ class EmpresasController  extends BaseController {
 				Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
-				return Redirect::to('/mega/cambiar/imagen')
+				return Redirect::to('/mega/cambiar-imagen')
 					->with('message-alert','Imagen Actualizada exitosamente');
 
 			}
@@ -373,7 +373,7 @@ class EmpresasController  extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('/mega/cambiar/imagen')
+			return Redirect::to('/mega/cambiar-imagen')
 				->with('message-alert','Se presentaron Problemas al actualizar la imagen')
 				->withErrors($validator);
 		}
@@ -453,7 +453,7 @@ class EmpresasController  extends BaseController {
 
 		}else{
 		
-			return Redirect::to('/nueva-sede')->withErrors($validator)->with('message-alert','Error al actualizar la sede');
+			return Redirect::to('/mega/nueva-sede')->withErrors($validator)->with('message-alert','Error al actualizar la sede');
 		}
 
 	}

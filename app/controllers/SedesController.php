@@ -52,7 +52,7 @@ class SedesController extends BaseController{
 			->with('productos', $productos)
 			->with('num_productos',$num_productos);
 		}else{
-			return Redirect::to('/navegar')->with('message-alert','No hemos encontrado el catalogo solicitado');
+			return Redirect::to('/')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}
 	}
 

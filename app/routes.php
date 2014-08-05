@@ -112,7 +112,7 @@ Route::post('/edit-product', array(
 	));
 
 /* RUTA nueva sede */
-Route::get('/nueva-sede', array(
+Route::get('/mega/nueva-sede', array(
 		'as' => 'nueva-sede',
 		'uses' => 'EmpresasController@getNuevaSede'
 	));
@@ -238,7 +238,7 @@ Route::post('/add/pregunta', array(
 		'uses' => 'AjaxController@addPregunta'
 	));
 
-Route::post('/get/promo', array(
+Route::post('/mega/get/promo', array(
 		'as' => 'promos-lista',
 		'uses' => 'AjaxController@postPromos'
 	));
@@ -308,7 +308,7 @@ Route::get('/navegar/categoria/{id}', array(
 		'uses' => 'NavegarController@getCategoria'
 	));
 
-Route::get('/mega/cambiar/imagen', array(
+Route::get('/mega/cambiar-imagen', array(
 		'as' => 'cambiar-imagen',
 		'uses' => 'EmpresasController@getCambiarImagen'
 	));
