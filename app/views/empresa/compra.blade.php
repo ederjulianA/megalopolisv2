@@ -217,6 +217,7 @@
                                     </tr>
                                     <tr>
                                       <td>
+                                        <input type="hidden" id="id_producto" value="{{$producto->id}}">
                                         <input type="hidden" id="id_empresa" value="{{$producto->id_empresa}}">
                                         <input type="hidden" id="id_user" value="{{Auth::user()->id}}">
                                         <a id="btn-pregunta-user">Preguntar</a>

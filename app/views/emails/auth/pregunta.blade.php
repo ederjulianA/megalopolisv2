@@ -186,6 +186,10 @@
 								<p class="pregunta-user-p">
 									"{{$pregunta}}"
 								</p>
+								<p>
+									Producto : {{$pro_nombre}} <br>
+									{{HTML::image($img, $pro_nombre)}}
+								</p>
 								<h3>Para responder has click <a href="{{$link}}">Aquí</a></h3>
 								
 							

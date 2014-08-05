@@ -29,12 +29,23 @@ Class AjaxController  extends BaseController {
 		return Response::json($barrios);
 
 	
-		
-
-		
+		}
 
 
-	}
+		public function postGetPreguntas()
+		{
+				header('Content-type: text/javascript');
+				if(isset($_POST['id_empresa_f'])){
+					$id_empresa = $_POST['id_empresa_f'];
+					$preguntas = Pregunta::where('empresa_id','=',$id_empresa)->where('respuesta','=',NULL)->get();
+					if($preguntas->count())
+					{
+						$estado = "Preguntas encontradas";
+						return Response::json($preguntas);
+					}
+
+				} 
+		}
 
 	public function postSubcat(){
 
@@ -68,10 +79,11 @@ Class AjaxController  extends BaseController {
 	public function addPregunta()
 	{
 		header('Content-type: text/javascript');
-		if(isset($_POST['pregunta_f']) && isset($_POST['id_empresa_f']) && isset($_POST['id_user_f'])){
+		if(isset($_POST['pregunta_f']) && isset($_POST['id_empresa_f']) && isset($_POST['id_user_f']) && isset($_POST['id_producto_f'])){
 			$user_id = $_POST['id_user_f'];
 			$empresa_id = $_POST['id_empresa_f'];
 			$pregunta = $_POST['pregunta_f'];
+			$id_producto = $_POST['id_producto_f'];
 
 			$preg = new Pregunta;
 			$preg->empresa_id = $empresa_id;
@@ -84,8 +96,11 @@ Class AjaxController  extends BaseController {
 				$empresa_nombre = $empresa->razon_social;
 				$email_empresa = $empresa->user->email;
 				$user = User::where('id','=',$user_id)->first();
+				$producto = Producto::where('id','=',$id_producto)->first();
+				$producto_nombre = $producto->nombre;
+				$img = $producto->imagen;
 				$usuario = $user->username;
-				Mail::send('emails.auth.pregunta', array('link' => URL::route('mega-perfil'), 'username'=>$empresa_nombre,'usuario'=>$usuario,'pregunta'=>$pregunta), function($message) use ($empresa){
+				Mail::send('emails.auth.pregunta', array('link' => URL::route('mega-perfil'), 'username'=>$empresa_nombre,'usuario'=>$usuario,'pregunta'=>$pregunta,'pro_nombre' => $producto_nombre,'img'=>$img), function($message) use ($empresa){
 						$message->to($empresa->user->email, $empresa->nombre_publico)->subject('Nueva Pregunta');
 					});
 				return Response::json($preg);

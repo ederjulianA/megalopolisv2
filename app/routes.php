@@ -214,6 +214,11 @@ Route::post('/mega/subcats', array(
 		'uses' => 'AjaxController@postSubcat'
 	));
 
+Route::post('/mega/loadPreguntas', array(
+		'as' => 'get-preguntas-empresa',
+		'uses' => 'AjaxController@postGetPreguntas'
+	));
+
 Route::post('/empresa/suscripcion-ajax', array(
 		'as' => 'suscripcion-ajax',
 		'uses' => 'AjaxController@addSus'

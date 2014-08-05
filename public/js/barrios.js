@@ -143,6 +143,60 @@ $(document).on('click','#otrobtn', function(){
 	$('#form-nuevo-item').submit();
 });
 
+$(document).on('click','#noti_preguntas', function(){
+	$('#cuerpo-noti').empty();
+	getpre();
+});
+//funcion para obtener las preguntas sin responder de una empresa
+function getpre()
+{
+
+	var id_empresa = $('#empresa_id').val();
+
+ 	
+
+ $.ajax({
+
+			url : "loadPreguntas",
+			dataType: "json",
+			type : "post",
+			cache : false,
+			data : {  id_empresa_f : id_empresa},
+			success : function(data){
+
+				if(data){
+
+					for(var i in data){
+						var preguntas = '<div class="contenedor-pregunta"><article>'+data[i].pregunta+'</article><form method="post" action="../../preguntas"><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'"><textarea name="respuesta" class="form-control" required></textarea> <input type="submit" value="Responder"></form> <article></article></div>';
+						$('#cuerpo-noti').append(preguntas);
+					}
+					
+
+					
+
+					
+					
+
+
+					console.log(data);
+					
+					
+				}
+				
+				
+			}
+
+
+		});
+}
+
+
+
+
+$(document).on('click','#reload', function(){
+	getpre();
+});
+
 
 
 
@@ -159,13 +213,14 @@ $(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();
 	var id_empresa = $('#id_empresa').val();
 	var id_user = $('#id_user').val();
+	var id_producto = $('#id_producto').val();
 	$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntando...</a><img src="../Tshop/assets/css/AjaxLoader.gif">');
 	$.ajax({
 
 			url : "add/pregunta",
 			dataType: "json",
 			type : "post",
-			data : { pregunta_f : pregunta_usu, id_empresa_f : id_empresa, id_user_f : id_user},
+			data : { pregunta_f : pregunta_usu, id_empresa_f : id_empresa, id_user_f : id_user, id_producto_f : id_producto},
 			success : function(data){
 
 				if(data){
@@ -265,6 +320,7 @@ $(document).on("click","#btn-hacer-pregunta", function(e){
 	var pregunta = $('#pregunta-user').val();
 	var id_empresa = $('#empresa_id').val();
 	var id_user = $('#user_id').val();
+	var id_producto = $('#id_producto').val();
 
 
 		$.ajax({
@@ -272,7 +328,7 @@ $(document).on("click","#btn-hacer-pregunta", function(e){
 			url : "add/pregunta",
 			dataType: "json",
 			type : "post",
-			data : { pregunta_f : pregunta, id_empresa_f : id_empresa, id_user_f : id_user},
+			data : { pregunta_f : pregunta, id_empresa_f : id_empresa, id_user_f : id_user, id_producto_f : id_producto},
 			success : function(data){
 
 				if(data){

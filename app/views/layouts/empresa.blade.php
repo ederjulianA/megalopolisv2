@@ -6,7 +6,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-
+        <style type="text/css">
+        		.contenedor-pregunta{
+        			width: 90%;
+        		}
+        		.contenedor-pregunta article {
+        			display: inline-block;
+        			width: 45%;
+        		}
+        </style>
 
 	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
       type="text/javascript"></script>
@@ -313,7 +321,7 @@
 							<a href="{{ URL::route('index')}}">Home</a>
 						</li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<a class="dropdown-toggle" id="noti_preguntas"  href="#" data-toggle="modal" data-target="#modalPreguntas">
 								<i class="fa fa-bell fa-lg"></i>
 								@if($num_nulls > 0)
 									<span class="notification-label bounceIn animation-delay6">{{$num_nulls}}</span>
@@ -324,7 +332,7 @@
 
 							@if($num_nulls > 0)
 									<ul class="dropdown-menu notification dropdown-3">
-											<li><a href="#">Tienes ({{$num_nulls}}) pregunta(s) sin Responder</a></li>
+											<li><a href="#" >Tienes ({{$num_nulls}}) pregunta(s) sin Responder</a></li>
 											@foreach($preguntas_null as $pregunta)
 												<li>
 													<a href="#">
@@ -511,6 +519,27 @@
 </div>
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="modalPreguntas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title" id="myModalLabel">Mis preguntas sin responder</h4>
+      </div>
+      <div class="modal-body" id="cuerpo-noti">
+
+        	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" id="empresa_id" value="{{$user->empresa->id}}">
+</div>
 
 
 

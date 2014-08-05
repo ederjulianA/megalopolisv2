@@ -262,7 +262,7 @@
 								
 										<div class="panel-body">
 											<div class="form-group">
-												<label class="control-label col-md-2">Razon Social</label>												
+												<label class="control-label col-md-2">Razón Social</label>												
 												<div class="col-md-10">
 													<input type="text" class="form-control input-sm" name="razon_social" placeholder="empresa" value="{{$user->empresa->razon_social}}">
 												</div><!-- /.col -->
@@ -279,14 +279,14 @@
 
 
 											<div class="form-group">
-												<label class="control-label col-md-2">direccion Principal</label>												
+												<label class="control-label col-md-2">dirección Principal</label>												
 												<div class="col-md-10">
 													<input type="text" class="form-control input-sm" name="direccion_principal" placeholder="empresa" value="{{$user->empresa->direccion_principal}}">
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 
 												<div class="form-group">
-												<label class="control-label col-md-2">Telefono</label>												
+												<label class="control-label col-md-2">Teléfono</label>												
 												<div class="col-md-10">
 													<input type="text" class="form-control input-sm" name="telefono" placeholder="empresa" value="{{$user->empresa->telefono}}">
 												</div><!-- /.col -->
@@ -294,15 +294,15 @@
 											
 										
 										
-											<div class="form-group">
+											<!--<div class="form-group">
 												<label class="control-label col-md-2">Descripcion Breve</label>
 												<div class="col-md-10">
 													<textarea class="form-control" name="descripcion_breve" rows="3">{{$user->empresa->desc_breve}}</textarea>
-												</div><!-- /.col -->
-											</div><!-- /form-group -->
+												</div>
+											</div>--><!-- /form-group -->
 
 											<div class="form-group">
-												<label class="control-label col-md-2">Descripcion Larga</label>
+												<label class="control-label col-md-2">Información Básica </label>
 												<div class="col-md-10">
 													<textarea class="form-control" rows="5" name="descripcion_larga">{{$user->empresa->desc_larga}}</textarea>
 												</div><!-- /.col -->
