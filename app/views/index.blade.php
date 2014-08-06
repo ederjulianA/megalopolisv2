@@ -197,7 +197,14 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             </div>
             <div class="description">
               <h4><a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{$empresa->razon_social}}</a></h4>
-              <p>{{$empresa->desc_breve}} </p></div>
+              <p>
+                  @if($empresa->desc_larga == "")
+                        {{$empresa->desc_breve}}
+                    @else
+                      {{$empresa->desc_larga}}
+                    @endif
+
+               </p></div>
             <!--<div class="discount plan"  > <span ></span> </div>-->
           </div>
         </div>

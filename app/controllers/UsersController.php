@@ -50,7 +50,7 @@ class UsersController extends BaseController{
 		$sus = Suscripcion::where('user','=', Input::get('user_id'))->where('empresa','=', Input::get('empresa_id'))->first();
 		if($sus->count()){
 			$sus->delete();
-			return Redirect::to('/suscripciones')->with('message-alert','Suscripcion Cancelada');
+			return Redirect::to('/suscripciones')->with('message-alert','Suscripción Cancelada');
 		}
 	}
 
@@ -196,14 +196,14 @@ class UsersController extends BaseController{
 				    		$message->to($user->email, $user->username)->subject("Tu nueva contrasena");
 				    	});
 					return Redirect::route('recuperar-cuenta')
-					->with("message-alert","Ya hemos enviado tu nueva contraseña a tu email de registro, porfavor verifica");
+					->with("message-alert","Ya hemos enviado tu nueva contraseña a tu email de registro, por favor verifica");
 				}else{
 					return Redirect::route('recuperar-cuenta')
 					->with("message-alert","Se presentaron problemas al intentar actualizar la contraseña. Porfavor vuelve a intentarlo.");
 				}
 			}
 			return Redirect::route('recuperar-cuenta')
-					->with("message-alert","No hemos encontrado ningun email que coincida con el que espesificaste, porfavor Verifica tu email.");
+					->with("message-alert","No hemos encontrado ningun email que coincida con el que espesificaste, por favor Verifica tu email.");
 		}
 
 
@@ -294,14 +294,14 @@ class UsersController extends BaseController{
 
 
 					return Redirect::to('/login')
-				->with('message-alert','Gracias Por registrarte. Te hemos enviado un email con un codigo de activacion :)');
+				->with('message-alert','Gracias Por registrarte. Te hemos enviado un email con un código de activación :)');
 			}
 
 			
 		}
 
 		return Redirect::to('/registro')
-			->with('message-alert','Algo salio mal Vuelve a intentarlo')
+			->with('message-alert','Algo salio mal, Vuelve a intentarlo')
 			->withErrors($validator)
 			->withInput();
 	}
@@ -448,19 +448,19 @@ class UsersController extends BaseController{
 					return Redirect::intended('/');
 				}else{
 					return Redirect::route('login')
-				->with('message-alert', 'El email o la contraseña no coinsiden, o la cuenta no esta activada');
+				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');
 				}
 
 
 			}
 
 			return Redirect::route('login')
-				->with('message-alert', 'Hubo un problema en el inicio de sesion');
+				->with('message-alert', 'Hubo un problema en el inicio de sesión ');
 	}
 
 	public function cerrarSesion() {
 		Auth::logout();
-		return Redirect::to('/')->with('message-alert','Has Cerrado Sesion');
+		return Redirect::to('/')->with('message-alert','Has Cerrado Sesión');
 	}
 
 
