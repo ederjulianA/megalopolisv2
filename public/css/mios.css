@@ -189,6 +189,38 @@ ul.menu-sedes li {
 
 }
 
+.contenedor-pregunta{
+	border: 1px solid #5BBBE7;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(38,38,253,.6);
+	box-shadow: -1px -1px 1px rgba(38,38,253,.6);
+	font-size: 24px;
+	margin: 20px auto;
+	max-height: 100%;
+	padding: 10px;
+	width: 100%;
+
+}
+.contenedor-pregunta article {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+.contenedor-pregunta article span {
+	font-style: oblique;
+	color: #000;
+}
+.contenedor-pregunta article textarea {
+	width: 306px;
+	height: 100px;
+	margin: 5px auto;
+}
+
+.respuesta-pregunta{
+	box-shadow: 1px 1px 1px rgba(222,152,103,.5);
+
+}
+
 .contenedor-preguntas-total{
 	padding: 10px;
 	margin: 7px auto;

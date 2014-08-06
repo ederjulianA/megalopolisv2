@@ -38,10 +38,21 @@ Class AjaxController  extends BaseController {
 				if(isset($_POST['id_empresa_f'])){
 					$id_empresa = $_POST['id_empresa_f'];
 					$preguntas = Pregunta::where('empresa_id','=',$id_empresa)->where('respuesta','=',NULL)->get();
-					if($preguntas->count())
+					$preg = DB::table('preguntas as pr')->join('users as u','u.id','=','pr.user_id')
+					->select('pr.id',
+							'pr.pregunta',
+							'u.username',
+							'pr.respuesta',
+							'pr.user_id'
+
+						)->where('pr.empresa_id','=',$id_empresa)->where('pr.respuesta','=', NULL)->get();
+
+					$numPreguntas = count($preg);
+
+					if($preg > 0)
 					{
 						$estado = "Preguntas encontradas";
-						return Response::json($preguntas);
+						return Response::json($preg);
 					}
 
 				} 

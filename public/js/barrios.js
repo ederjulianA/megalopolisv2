@@ -147,6 +147,8 @@ $(document).on('click','#noti_preguntas', function(){
 	$('#cuerpo-noti').empty();
 	getpre();
 });
+
+
 //funcion para obtener las preguntas sin responder de una empresa
 function getpre()
 {
@@ -167,7 +169,7 @@ function getpre()
 				if(data){
 
 					for(var i in data){
-						var preguntas = '<div class="contenedor-pregunta"><article>'+data[i].pregunta+'</article><form method="post" action="../../preguntas"><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'"><textarea name="respuesta" class="form-control" required></textarea> <input type="submit" value="Responder"></form> <article></article></div>';
+						var preguntas = '<div class="contenedor-pregunta"><article> <span>@'+data[i].username+'</span><br><p>"'+data[i].pregunta+'"</p></article><article><form method="post" action="../../preguntas"><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'"><textarea name="respuesta" id="respuesta-pregunta" class="form-control" required></textarea> <input type="submit" class="btn btn-success " value="Responder"></form></article></div>';
 						$('#cuerpo-noti').append(preguntas);
 					}
 					
