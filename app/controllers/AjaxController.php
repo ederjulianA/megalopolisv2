@@ -103,6 +103,7 @@ Class AjaxController  extends BaseController {
 			$preg->empresa_id = $empresa_id;
 			$preg->user_id = $user_id;
 			$preg->pregunta = $pregunta;
+			$preg->id_producto = $id_producto;
 
 			if($preg->save())
 			{

@@ -155,7 +155,7 @@ function getpre()
 
 	var id_empresa = $('#empresa_id').val();
 
- 	
+ 	$('#loaderimg').html("<img src='../Tshop/assets/css/AjaxLoader.gif'>");
 
  $.ajax({
 
@@ -204,7 +204,8 @@ function getpre()
 	pregunta2 +='</div>';
 						$('#cuerpo-noti').append(pregunta2);
 					}
-					
+
+					$('#loaderimg').html("");
 
 					
 
@@ -212,7 +213,7 @@ function getpre()
 					
 
 
-					console.log(data);
+					//console.log(data);
 					
 					
 				}
