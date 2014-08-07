@@ -189,37 +189,105 @@ ul.menu-sedes li {
 
 }
 
-.contenedor-pregunta{
-	border: 1px solid #5BBBE7;
-	border-radius: 5px;
-	box-shadow: 1px 1px 1px rgba(38,38,253,.6);
-	box-shadow: -1px -1px 1px rgba(38,38,253,.6);
-	font-size: 24px;
-	margin: 20px auto;
-	max-height: 100%;
-	padding: 10px;
-	width: 100%;
+/*ESTILOS PARA LAS PREGUNTAS SIN RESPONDER################################################*/
+		.contenedor-pregunta-ajax{
+				
+				
+				margin: 20px auto;
+				border: 3px solid #196B9A;
+				box-shadow: 2px 2px 2px rgba(42,126,182,.7);
+				box-shadow: 4px 4px 2px rgba(42,126,182,.8);
+				max-width: 100%;
+				width: 100%;
+			}
 
-}
-.contenedor-pregunta article {
-	display: inline-block;
-	width: 40%;
-	vertical-align: top;
-}
-.contenedor-pregunta article span {
-	font-style: oblique;
-	color: #000;
-}
-.contenedor-pregunta article textarea {
-	width: 306px;
-	height: 100px;
-	margin: 5px auto;
-}
+			.header-pregunta-ajax{
+				background-color: #1E9FE9;
+				border-top: 2px solid #196B9A;
+				border-bottom: 2px solid #196B9A;
+				font-size: 30px;
+				font-weight: bold;
+				color: #fff;
 
-.respuesta-pregunta{
-	box-shadow: 1px 1px 1px rgba(222,152,103,.5);
+				text-align: center;
+				padding: 10px;
+				width: 100%;
 
-}
+			}
+			.body-pregunta-ajax{
+				border-bottom:  solid #196B9A;
+				width: 100%;
+			}
+			.btn-enviar-pregunta{
+				border:0;
+				background-color: #E0C61B;
+				color: #B6722A;
+				font-weight: bold;
+				padding: 7px;
+				border-bottom: 2px solid #B6722A;
+
+			}
+			.producto-ajax-pregunta{
+				
+				margin: 10px auto;
+				color: #000;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: left;
+				width: 95%;
+			}
+			.img-pregunta-ajax{
+				max-width: 100%;
+				margin: 0 auto;
+				width: auto;
+				text-align: center !important;
+				height: 150px;
+			}
+			.footer-pregunta-ajax{
+				width: 100%;
+				background-color: #1E9FE9;
+				color: #fff;
+				margin:0 auto;
+				min-height: 85px;
+			}
+			.footer-pregunta-ajax h2 {
+				text-align: center;
+				padding: 7px;
+			}
+			.footer-pregunta-ajax form {
+				margin: 0 auto;
+				width: 100%;
+			}
+			.footer-pregunta-ajax form textarea, #btn-enviar-pregunta{
+				display: inline-block;
+				text-align: center;
+				margin:2px;
+				vertical-align: middle;
+				width: 70%;
+			}
+			.footer-pregunta-ajax form textarea{
+				border: 1px solid #196B9A;
+				min-height: 90px;
+				text-align: left;
+				color: #B6722A;
+				font-weight: bold;
+				resize:none;
+			}
+			 #btn-enviar-pregunta{
+			 	width: 25%;
+			 }
+
+			 .pregunta-ajax-usuario{
+			 	width: 100%;
+			 	font-style: oblique;
+			 	font-size: 20px;
+			 	color: #1E9FE9;
+			 	margin:0 auto;
+			 	padding: 7px;
+			 }
+
+/*FIN DE LOS ESTILOS PARA LAS PREGUNTAS SIN RESPONDER*/
+
 
 .contenedor-preguntas-total{
 	padding: 10px;

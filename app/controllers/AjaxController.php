@@ -39,9 +39,12 @@ Class AjaxController  extends BaseController {
 					$id_empresa = $_POST['id_empresa_f'];
 					$preguntas = Pregunta::where('empresa_id','=',$id_empresa)->where('respuesta','=',NULL)->get();
 					$preg = DB::table('preguntas as pr')->join('users as u','u.id','=','pr.user_id')
+					->join('producto as p','p.id','=','pr.id_producto')
 					->select('pr.id',
 							'pr.pregunta',
 							'u.username',
+							'p.nombre AS nombre_producto',
+							'p.imagen',
 							'pr.respuesta',
 							'pr.user_id'
 

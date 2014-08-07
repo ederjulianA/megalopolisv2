@@ -169,8 +169,40 @@ function getpre()
 				if(data){
 
 					for(var i in data){
-						var preguntas = '<div class="contenedor-pregunta"><article> <span>@'+data[i].username+'</span><br><p>"'+data[i].pregunta+'"</p></article><article><form method="post" action="../../preguntas"><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'"><textarea name="respuesta" id="respuesta-pregunta" class="form-control" required></textarea> <input type="submit" class="btn btn-success " value="Responder"></form></article></div>';
-						$('#cuerpo-noti').append(preguntas);
+						//var preguntas = '<div class="contenedor-pregunta"><article> Pregunta de <span>@'+data[i].username+'</span> Por :<br>'+data[i].nombre_producto+'<br><p class="pregunta-usuario">"'+data[i].pregunta+'"</p></article><article><form method="post" action="../../preguntas"><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'"><img src="../../'+data[i].imagen+'"><textarea name="respuesta" id="respuesta-pregunta" class="form-control" required></textarea><br> <input type="submit" class="btn btn-success " value="Responder"></form></article></div>';
+						var pregunta2 = '';
+							pregunta2 +=' <div class="contenedor-pregunta-ajax">';
+		pregunta2 +='<div class="header-pregunta-ajax">';
+			pregunta2 +='@'+data[i].username+' te ha preguntado por:';
+			
+		pregunta2 +='</div>';
+		pregunta2 +='<div class="body-pregunta-ajax">';
+			pregunta2 +='<article class="producto-ajax-pregunta">';
+					pregunta2 +=' '+data[i].nombre_producto+'<br>';
+					
+					pregunta2 +='<img src="../../'+data[i].imagen+'" class="img-pregunta-ajax">';
+					pregunta2 +='<br>';
+					pregunta2 +='<div class="pregunta-ajax-usuario">';
+						pregunta2 +='¿"'+data[i].pregunta+'"?';
+						
+					pregunta2 +='</div>';
+				
+			pregunta2 +='</article>';
+
+			
+		pregunta2 +='</div>';
+		pregunta2 +='<div class="footer-pregunta-ajax">';
+			pregunta2 +='<h2>Escribe tu respuesta :</h2>';
+
+			pregunta2 +='<form method="post" action="../../preguntas">';
+				pregunta2 +='<textarea name="respuesta" required></textarea><input type="hidden" name="pregunta_id" value="'+data[i].id+'"><input type="hidden" name="user_id" value="'+data[i].user_id+'">';
+				pregunta2 +='<input type="submit" id="btn-enviar-pregunta" class="btn-enviar-pregunta">';
+			pregunta2 +='</form>';
+			
+		pregunta2 +='</div>';
+		
+	pregunta2 +='</div>';
+						$('#cuerpo-noti').append(pregunta2);
 					}
 					
 
