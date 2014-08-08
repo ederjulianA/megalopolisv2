@@ -313,6 +313,12 @@ Route::get('/mega/cambiar-imagen', array(
 		'uses' => 'EmpresasController@getCambiarImagen'
 	));
 
+//RUTA PARA ADMINISTRAR LAS VENTAS HECHAS
+Route::get('/mega/ventas', array(
+		'as' => 'mega-ventas',
+		'uses' => 'EmpresasController@getVentasEmpresa'
+	));
+
 
 Route::post('/mega/cambiar/imagen', array(
 		'as' => 'cambiar-imagen-post',

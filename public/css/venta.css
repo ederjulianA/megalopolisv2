@@ -1,0 +1,111 @@
+/* ESTILOS PARA LISTA DE VENTAS DE LA EMPRESA*/
+
+			.contenedor-ventas-empresa{
+		max-width: 100%;
+		padding: 10px;
+		width: 100%;
+	}
+	.header-contenedor-ventas{
+		background-color: #1E9FE9;
+		border-bottom: 3px solid #196B9A;
+		color: #fff;
+		padding: 10px;
+		max-width: 100%;
+		text-align: center;
+		width: 100%;
+
+	}
+	.header-contenedor-ventas h2{
+		font-size: 2.5em;
+	}
+	.header-contenedor-ventas p {
+		font-style: oblique;
+		letter-spacing: 1px;
+	}
+
+	.body-contenedor-ventas{
+		max-width: 100%;
+		width: 100%;
+	}
+
+	
+	.body-contenedor-left{
+		text-align: center;
+		padding: 5px;
+		max-width: 100%;
+		margin: 0 auto;
+		width: 90%;
+	}
+	.body-contenedor-left h3 {
+		font-size: 2em;
+		color: #000;
+	}
+	.item-venta{
+		border: 1px solid #196B9A;
+		
+		box-shadow: 2px 2px 2px rgba(0,0,0, .5);
+		margin: 10px auto;
+		max-width: 100%;
+		padding: 10px;
+		width: 95%;
+	}
+	.item-venta div {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 100%;
+	}
+
+	.img-item-venta {
+		padding: 5px;
+		width: 25%;
+	}
+	.img-item-venta img {
+		border: 2px solid #196B9A;
+		border-radius: 50%;
+		padding: 5px;
+		width: 100%;
+		height: auto;
+	}
+	.info-item {
+		width: 70%;
+	}
+	.info-comprador-item{
+		max-width: 100%;
+		width: 100%;
+	}
+	.info-estado-pedido{
+		margin: 10px auto;
+		max-width: 100%;
+		width: 100%;
+	}
+	.info-estado-pedido p
+	{
+		padding: 7px;
+		margin: 10px auto;
+
+	}
+
+	.valor-total{
+		max-width: 100%;
+
+		width: 100%;
+		padding: 10px;
+	}
+	.valor-total p span {
+		font-weight: bold;
+		color: #196B9A;
+		font-size: 2em;
+	}
+
+	.notificar-envio{
+		background-color: #E0C61B;
+				color: #B6722A;
+				font-weight: bold;
+				padding: 7px;
+				margin-bottom: 10px ;
+				border-bottom: 3px solid #B6722A;
+				text-decoration: none;
+	}
+	
+
+/*FIN DE LOS ESTILOS DE LAS VENTAS DE LAS EMPRESAS*/

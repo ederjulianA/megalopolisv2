@@ -272,6 +272,8 @@
 
      <!-- My styles -->
     {{ HTML::style('css/mios.css', array('media' => 'screen'))}}
+
+    {{ HTML::style('css/venta.css', array('media' => 'screen'))}}
     
 	
 	<!-- Font Awesome -->
@@ -423,7 +425,7 @@
 									<i class="fa fa-briefcase fa-lg"></i> 
 								</span>
 								<span class="text">
-									Info Basica
+									Menu Principal
 								</span>
 								<span class="menu-hover"></span>
 							</a>

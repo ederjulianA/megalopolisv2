@@ -97,6 +97,77 @@ class EmpresasController  extends BaseController {
 			->with('message-alert','error al ingresar ');
 	}
 
+
+	public function getVentasEmpresa()
+	{
+		if( !Auth::check() || Auth::user()->tipo != 2)
+		{
+			return Redirect::to('/');
+		}
+		$id = Auth::user()->id;
+
+		$user = User::where('id',"=",$id);
+		$empresa = Empresa::where("user_id","=",$id);
+
+
+
+		
+
+		if($user->count() && $empresa->count())
+		{
+			$user = $user->first();
+			$empresa = $empresa->first();	
+			$sede = Sede::where("empresa_id","=", $empresa->id)->get();
+			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
+			$num_preguntas_null = $preguntas_null->count();
+
+					$ventas = DB::table('compra as co')->join('producto as p','p.id','=','co.id_producto')
+							->join('almacen as a','a.producto','=','p.id')
+							->join('sedes as s','a.sede','=','s.id')
+							->join('empresas as e', 's.empresa_id','=','e.id')
+							->join('users as u','u.id','=','co.id_comprador')
+							->join('info_shipping as is','is.id_user','=','u.id')
+							->join('ciudades as ci','ci.id','=','is.ciudad')
+							->select('co.id AS id_compra',
+									'co.cantidad AS cantidad_orden',
+									'co.valor_unitario',
+									'co.valor_total',
+									'co.estado',
+									'a.precio_detal',
+				 					'a.cantidad',
+				 					'p.nombre AS producto_nombre',
+									'p.imagen',
+									'p.img1',
+									'p.img2',
+									'p.img3',
+									'p.id',
+									'p.estado',
+									'u.username AS nombre_comprador',
+									'u.email AS email_comprador',
+									'is.direccion AS direccion_comprador',
+									'is.barrio AS barrio_comprador',
+									'is.telefono AS telefono_comprador',
+									'ci.ciudad AS nombre_ciudad'
+
+
+								)->where('co.id_empresa','=',$empresa->id)->where('co.estado','=',0)->get();
+
+			return View::make('empresa.ventas')
+			->with('ventas', $ventas)
+			->with('user', $user)
+			->with('sedes', $sede)
+			->with('num_nulls', $num_preguntas_null)
+			->with('preguntas_null', $preguntas_null)
+			->with('ciudades', Ciudad::all())
+			->with('categorias', Categoria::all())
+			->with('empresa', $empresa);
+		}
+
+		return Redirect::to('/mega/perfil')
+			->with('message-alert','error al ingresar ');
+
+	}
+
 	public function postEditarProductos() {
 	
 		$id = Auth::user()->id;
