@@ -33,6 +33,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
 
 <div class="container main-container headerOffset"> 
 <input type="hidden" id="nombre_sede_h" value="{{$sede->nombre_publico}}">
+ <input type="hidden" id="id_empresa_ajax" value="{{$sede->empresa->id}}">
   
   <!-- Main component call to action -->
   
@@ -71,6 +72,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
           
           <div id="collapseCategory" class="panel-collapse collapse in">
             <div class="panel-body">
+
               <ul class="nav nav-pills nav-stacked tree">
 
                 @foreach($categorias as $cat)

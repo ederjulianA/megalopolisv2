@@ -103,7 +103,7 @@
 
           		@foreach($sedes as $sede)
           				<div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
-          				<a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$sede->nombre_publico))}}">{{HTML::image('Tshop/images/site/sede.jpg', 'SEDE', array('class'=>'img-responsive'))}}</a>
+          				<a href="{{URL::route('catalogo-sede', array('empresa'=>$empresa->id,'nombre_publico'=>$sede->nombre_publico))}}">{{HTML::image('Tshop/images/site/sede.jpg', 'SEDE', array('class'=>'img-responsive'))}}</a>
             
               <h3 class="block-title-3">
                 <a href="{{URL::route('catalogo-sede', array('nombre_publico'=>$sede->nombre_publico))}}">{{$sede->nombre_publico}} </a>

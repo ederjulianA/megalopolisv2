@@ -84,7 +84,8 @@ $(document).on("click","a.lista-products", function(e){
 		url : "get-products",
 		dataType: "json",
 		type : "post",
-		data : { id_cat : $(this).attr('href'),  nom_sede : $('#nombre_sede_h').val()},
+		cache: false,
+		data : { id_cat : $(this).attr('href'),  nom_sede : $('#nombre_sede_h').val(), id_empresa_f : $('#id_empresa_ajax').val()},
 		success : function(data){
 
 			if(data){

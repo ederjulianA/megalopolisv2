@@ -342,17 +342,20 @@ Class AjaxController  extends BaseController {
 	{
 		header('Content-type: text/javascript');
 
-		if(isset($_POST['id_cat']) && isset($_POST['nom_sede'])){
+		if(isset($_POST['id_cat']) && isset($_POST['nom_sede']) && isset($_POST['id_empresa_f'])){
 			$id_cat = $_POST['id_cat'];
 			$nomsede = $_POST['nom_sede'];
+			$id_empresa = $_POST['id_empresa_f'];
 
 
 			$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		 ->join('sedes as s','a.sede','=','s.id')
+		 ->join('empresas as e', 'e.id','=','s.empresa_id')
 		 ->join('categorias as c','p.categoria','=','c.id')
 		 ->join('subcategorias as sc','sc.categoria_id','=','sc.id')
 		 ->select('a.precio_detal',
 				 'a.cantidad',
+				 'e.id',
 				 'c.nombre AS categoria_nombre',
 				 'p.nombre AS producto_nombre',
 				 'p.categoria',
@@ -366,7 +369,8 @@ Class AjaxController  extends BaseController {
 				 'sc.nombre_sub'
 			 )
 		 ->where('p.categoria', '=', $id_cat)
-		 ->where('s.nombre_publico','=', $nomsede)->get();
+		 
+		 ->where('s.nombre_publico','=', $nomsede)->where('e.id','=',$id_empresa)->get();
 		 $numProd = count($producto);
 
 		 if($numProd > 0){

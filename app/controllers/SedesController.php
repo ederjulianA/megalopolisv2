@@ -4,9 +4,9 @@ use Intervention\Image\Image;
 
 class SedesController extends BaseController{
 
-	public function getCatalogo($nombre_publico){
+	public function getCatalogo($empresa, $nombre_publico){
 
-		$sede = Sede::where('nombre_publico',"=", $nombre_publico)->get();
+		$sede = Sede::where('nombre_publico',"=", $nombre_publico)->where('empresa_id','=',$empresa)->get();
 
 
 		if($sede->count()){

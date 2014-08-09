@@ -191,7 +191,7 @@ Route::get('/recuperar-cuenta/{code}', array(
 	));
 
 
-Route::get('/catalogo/{nombre_publico}', array(
+Route::get('/catalogo/{empresa}-{nombre_publico}', array(
 		'as' => 'catalogo-sede',
 		'uses' => 'SedesController@getCatalogo'
 	));
