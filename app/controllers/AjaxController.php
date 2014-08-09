@@ -90,6 +90,24 @@ Class AjaxController  extends BaseController {
 
 	}
 
+
+	public function NotiEnvioAjax()
+	{
+		header('Content-type: text/javascript');
+		if(isset($_POST['compra_id'])){
+			$compra = Compra::where('id','=',$_POST['compra_id'])->first();
+			$compra->estado = 1;
+			if($compra->save())
+			{
+				$info = array('estado'=>1, 'mensaje'=>'producto enviado Satisfactoriamente');
+				return Response::json(array('compra'=>$compra,'estado'=>$info));
+			}
+
+		}else{
+			return Response::json(array('estado'=>0,'mensaje'=>'Error al enviar notificación.'));
+		}
+	}
+
 	public function addPregunta()
 	{
 		header('Content-type: text/javascript');

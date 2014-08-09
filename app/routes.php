@@ -219,6 +219,12 @@ Route::post('/mega/loadPreguntas', array(
 		'uses' => 'AjaxController@postGetPreguntas'
 	));
 
+/*FUNCION AJAX PARA NOTIFICAR AL USUARIO QUE SU ARTICULO HA SIDO ENVIADO*/
+Route::post('/mega/noti-envio-ajax', array(
+		'as' => 'noti-envio-ajax',
+		'uses' => 'AjaxController@NotiEnvioAjax'
+	));
+
 Route::post('/empresa/suscripcion-ajax', array(
 		'as' => 'suscripcion-ajax',
 		'uses' => 'AjaxController@addSus'

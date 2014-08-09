@@ -560,6 +560,9 @@
 	<!-- functions -->
 	{{ HTML::script('js/functions.js')}}
 
+	<!-- envios -->
+	{{ HTML::script('js/envios.js')}}
+
 
 		<!-- chosen -->
 	{{ HTML::script('js/chosen.jquery.min.js')}}

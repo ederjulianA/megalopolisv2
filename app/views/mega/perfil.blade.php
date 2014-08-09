@@ -218,8 +218,8 @@
 												<i class="fa fa-usd"></i>
 											</div>
 											<div class="overview-value">
-												<div class="h2">Promos</div>
-												<div class="text-muted">ver</div>
+												<div class="h2">Mis ventas</div>
+												<div class="text-muted"><a href="{{URL::route('mega-ventas')}}">ver</a></div>
 											</div>
 										</div><!--/ panel -->
 									</div><!-- /.col -->

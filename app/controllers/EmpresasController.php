@@ -150,7 +150,7 @@ class EmpresasController  extends BaseController {
 									'ci.ciudad AS nombre_ciudad'
 
 
-								)->where('co.id_empresa','=',$empresa->id)->where('co.estado','=',0)->get();
+								)->where('co.id_empresa','=',$empresa->id)->where('co.estado','=',0)->orderBy('co.id','desc')->get();
 
 			return View::make('empresa.ventas')
 			->with('ventas', $ventas)

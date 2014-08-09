@@ -106,6 +106,62 @@
 				border-bottom: 3px solid #B6722A;
 				text-decoration: none;
 	}
+	.notificar-envio:hover {
+		color: #B6722A;
+	}
+
+
+
+
+	/*ESTILOS MODAL CONFIRMACIÓN DEL ENVIÓ*/
+	.titulo-envio{
+		font-size: 1.7em;
+		text-align: center;
+		font-weight: bold;
+		color: #196B9A;
+	}
+
+	.confirar-envio-noti{
+		background-color: #1E9FE9;
+		border-bottom: 4px solid #196B9A; 
+		border:0;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+		font-weight: bold;
+	}
+	.cancelar-envio-noti{
+				background-color: #DF2A42;
+		border-bottom: 4px solid #FB0A2A; 
+		border:0;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+		font-weight: bold;
+	}
+	.mensaje-ajax{
+		background-color: #FB0A2A;
+		border-bottom: 3px solid #AB061C;
+		color: #EFD0D4;
+		max-width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px;
+		
+		
+	}
+
+	.btn-cerrar-ajax{
+		background-color: #1E9FE9;
+		border-bottom: 3px solid #196B9A;
+		color: #fff;
+		letter-spacing: 2px;
+		text-decoration: none;
+		margin: 5px auto;
+		max-height: 100%;
+		padding: 10px;
+		width: 90%;
+	}
 	
 
 /*FIN DE LOS ESTILOS DE LAS VENTAS DE LAS EMPRESAS*/
