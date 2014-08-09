@@ -466,3 +466,7 @@ Route::get('/product-detail', array(
 		'as' => 'proDetail',
 		'uses' => 'ProductosController@getProduct'
 	));
+
+
+
+

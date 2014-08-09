@@ -85,6 +85,7 @@ class ProductosController  extends BaseController {
 				 'sc.nombre_sub'
 			 )
 		 ->where('p.id','=',$id)->where('p.estado','=',1)->first();
+		
 
 		 if($producto->estado_empresa == 0){
 		 	return Redirect::to('/empresa/'.$producto->nombre_publico_empresa);
