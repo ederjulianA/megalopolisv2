@@ -272,8 +272,8 @@ Route::post('/get/nombre-empresa', array(
 		'uses' => 'AjaxController@postNombreEmpresaValido'
 	));
 
-Route::post('/get/nombre-sede', array(
-		'as' => 'get/nombre-sede',
+Route::post('mega/get-nombre-sede', array(
+		'as' => 'get-nombre-sede',
 		'uses' => 'AjaxController@postNombreSedeValido'
 	));
 

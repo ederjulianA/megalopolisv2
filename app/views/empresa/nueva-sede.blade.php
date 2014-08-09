@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+<input type="hidden" id="id_empresa_ajax" value="{{$empresa->id}}">
 	<div id="main-container">
 		<div class="padding-md">
 			<div class="nueva-sede">

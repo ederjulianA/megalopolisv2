@@ -62,9 +62,10 @@ $('#nombre_publico_sede_seo').keyup(function(){
 
 	
 	$('#nombre_publico_sede_seo').val(nombre_cambio);
+	var id_empresa = $('#id_empresa_ajax').val();
 
 	$.ajax({
-			url : "get/nombre-sede",
+			url : "get-nombre-sede",
 			dataType: "json",
 			type : "post",
 			data : { nombre_sede : nombre_cambio},
@@ -73,7 +74,7 @@ $('#nombre_publico_sede_seo').keyup(function(){
 				if(data.estado == 0){
 				
 
-					$('#nombre-seo').html("Tu nombre publico sera: <strong>https://www.megalopolis.com/public/catalogo/"+nombre_cambio+"</strong><br>"+tam);
+					$('#nombre-seo').html("Tu nombre publico sera: <strong>www.megalopolis.com/public/catalogo/"+id_empresa+'-'+nombre_cambio+"</strong><br>"+tam);
 					$('#btn-crear-empresa').css({display:"inline"});
 
 				}else if (data.estado == 1){
