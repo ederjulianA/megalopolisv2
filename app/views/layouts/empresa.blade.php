@@ -282,6 +282,8 @@
 	
 	<!-- Pace -->
 	{{ HTML::style('css/pace.css', array('media' => 'screen'))}}
+
+	{{ HTML::style('css/form-edit-item.css', array('media' => 'screen'))}}
 	
 	
 	<!-- Full Calendar -->

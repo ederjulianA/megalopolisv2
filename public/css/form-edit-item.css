@@ -1,0 +1,66 @@
+
+
+.img-pro-edit img
+{
+	width: 150px;
+	height: auto;
+}
+
+#form-edit-item{
+	max-height: 100%;
+	width: 95%;
+}
+
+#form-edit-item div {
+	display: block;
+	margin: 7px auto;
+	width: 90%;
+}
+
+#form-edit-item div label, #form-edit-item div input, #form-edit-item div select {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#form-edit-item div label {
+	width: 25%;
+}
+
+#form-edit-item div input {
+	padding: 7px;
+	width: 70%;
+}
+
+#form-edit-item div select {
+	padding: 7px;
+	width: 70%;
+}
+
+.header-editar-item{
+	margin: 7px auto;
+	text-align: center;
+	max-width: 100%;
+	width: 90%;
+
+}
+.header-editar-item a, .header-editar-item h2{
+	font-weight: bold;
+	font-size: 30px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.header-editar-item a{
+	width: 10%;
+	background-color: #1E9FE9;
+	border-bottom: 5px solid #196B9A;
+	color: #fff;
+	padding: 7px;
+	text-decoration: none;
+}
+.header-editar-item a:hover {
+	color: #fff;
+	text-shadow: 2px 0 2px rgba(0,0,0, .5);
+}
+.header-editar-item h2{
+	width: 80%;
+}

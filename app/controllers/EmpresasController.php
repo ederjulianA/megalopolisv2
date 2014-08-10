@@ -284,6 +284,7 @@ class EmpresasController  extends BaseController {
 		$almacen = array();
 		$almacen['sede'] = Input::get('sede');
 		$almacen['cantidad'] = Input::get('product_amount');
+		$almacen['precio_detal'] =Input::get('product_price');
 		
 		Almacen::where('producto', Input::get('product_id'))->update($almacen);
 		

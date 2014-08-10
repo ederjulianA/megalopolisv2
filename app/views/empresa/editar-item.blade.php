@@ -8,10 +8,14 @@
 <script type="text/javascript">
 
 </script>
+<!-- ESTILOS FORM -->
+	
 		<div id="main-container">
-				<h2>Editando {{$productos->producto_nombre}}</h2>
+				<div class="header-editar-item">
+				<a href="{{URL::route('editar-productos')}}">Volver</a><h2>Editando {{$productos->producto_nombre}}</h2>
+				</div>
 
-				<form action="{{ URL::route('edit-product')}}" method="post" enctype='multipart/form-data'>
+				<form action="{{ URL::route('edit-product')}}" id="form-edit-item" method="post" enctype='multipart/form-data'>
 					<div>
 						<label>Sede Actual del Producto</label>
 						<select name = 'sede' id = 'sede' class="">
@@ -29,7 +33,7 @@
 
 					<div>
 						<label>Categoria :</label>
-						<select name = 'category' id = 'category' class="form-control">
+						<select name = 'category' id = 'category' class="">
 												<option>Seleccionar categoría:</option>
 												@foreach($categorias as $categoria)
 													<option value = "{{$categoria->id}}" <?php if($categoria->id == $productos->categoria) { echo('selected');}?>>{{$categoria->nombre}}</option>
@@ -55,24 +59,24 @@
 					<div class="form-group">
 										<label class="control-label col-md-2">Precio, sin comas ni puntos:</label>												
 										<div class="col-md-10">
-											<input id = 'product_price' name = 'product_price' type="text" class="form-control input-sm" placeholder="Precio del artículo para la sede" value="{{$productos->precio_detal}}">
+											<input id = 'product_price' name = 'product_price' type="text" class="" placeholder="Precio del artículo para la sede" value="{{$productos->precio_detal}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 
 									<div class="form-group">
 										<label class="control-label col-md-2">Cantidad a registrar del producto en la sede seleccionada:</label>												
 										<div class="col-md-10">
-											<input id = 'product_amount' name = 'product_amount' type="text" class="form-control input-sm" placeholder="Cantidad entera del producto" value="{{$productos->cantidad}}">
+											<input id = 'product_amount' name = 'product_amount' type="text" class="" placeholder="Cantidad entera del producto" value="{{$productos->cantidad}}">
 										</div><!-- /.col -->
 									</div><!-- /form-group -->
 									
 									<div class="form-group">
-										<label class="control-label col-md-2">Imagen principal del producto:</label>
+										<label class="control-label col-md-2">Imagen principal del producto:</label><br>
 										<?php
 											if(!empty($productos->imagen)) {
 											
 												?>														
-												<div>
+												<div style="width:200px; height:auto;">
 													{{HTML::image($productos->imagen)}}
 												</div>
 												<?php
@@ -97,7 +101,7 @@
 											if(!empty($productos->img1)) {
 											
 												?>														
-												<div>
+												<div style="width:200px; height:auto;">
 													{{HTML::image($productos->img1)}}
 												</div>
 												<?php
@@ -127,7 +131,7 @@
 											if(!empty($productos->img2)) {
 											
 												?>														
-												<div>
+												<div style="width:200px; height:auto;">
 													{{HTML::image($productos->img2)}}
 												</div>
 												<?php
