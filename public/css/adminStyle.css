@@ -1,0 +1,103 @@
+
+
+header {
+	max-width: 100%;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+
+header .logo, header .tituloh1 {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 7px;
+	max-width: 100%;
+}
+
+.logo{
+	width: 20%;
+}
+.tituloh1{
+	text-align: center;
+
+	width: 75%;
+}
+.tituloh1 h1 {
+	font-size: 2em;
+}
+.tituloh1 span {
+	font-size: 1em;
+	background-color: #1E9FE9;
+		border-bottom: 3px solid #196B9A;
+		color: #fff;
+		padding: 10px;
+}
+.body-admin{
+	max-width: 100%;
+	width: 100%;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.admin-menu{
+	max-width: 100%;
+	width: 90%;
+}
+.admin-menu a {
+	display: inline-block;
+	padding: 15px;
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	min-height: 50px;
+	color: #fff;
+}
+
+.admin-cat-items {
+	background-color: #FAA423;
+	border-bottom: 5px solid #C27501;
+}
+
+
+.contenedor-cats{
+	margin: 0 auto;
+	max-width: 100%;
+	width: 90%;
+}
+
+.cat-item{
+	display: inline-block;
+	width: 47%;
+	vertical-align: top;
+	margin: 10px auto;
+}
+
+
+.subcat-item{
+	background-color: #1E9FE9;
+		border-bottom: 3px solid #196B9A;
+		color: #fff;
+		display: block;
+		padding: 10px;
+		margin: 10px auto;
+		max-width: 100%;
+		text-align: center;
+		width: 60%;
+
+}
+
+.main-cat {
+	background-color: #F72222;
+	border-bottom: 5px solid #B01515;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.acciones-categoria{
+	max-width: 100%;
+	width: 100%;
+}

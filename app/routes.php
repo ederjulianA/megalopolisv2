@@ -468,5 +468,24 @@ Route::get('/product-detail', array(
 	));
 
 
+/*############################### ROUTES FOR ADMIN######################################3*/
 
+Route::get('/admin', array(
+		'as' => 'admin',
+		'uses' => 'AdminController@getAdminIndex'
+	));
+
+Route::get('/admin/categorias', array(
+		'as' => 'admin-categorias',
+		'uses' => 'AdminController@getAdminCategorias'
+	));
+Route::post('/admin/nueva-subcat', array(
+		'as' => 'nueva-subcat',
+		'uses' => 'AdminController@postNuevaSubCat'
+));
+
+Route::post('/admin/nueva-categoria', array(
+		'as' => 'nueva-categoria-admin',
+		'uses' => 'AdminController@postNuevaCat'
+));
 
