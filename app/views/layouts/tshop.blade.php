@@ -484,12 +484,11 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Compras </h3>
           <ul>
-            <li> <a href="{{URL::route('index')}}"> Home. </a> </li>
-            <li> <a href="category.html"> Categorias </a> </li>
-            <li> <a href="sub-category.html"> Sub Categorias </a> </li>
-            <li> <a href="product-details.html"> Detalles de producto </a> </li>
+            <li> <a href="{{URL::route('index')}}"> Home </a> </li>
+            <li> <a href="{{URL::route('mega-perfil')}}"> Perfil </a> </li>
+            <li> <a href="{{URL::route('favoritos-user')}}"> Favoritos </a> </li>
             
-          </ul>
+          </ul> 
         </div>
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Informacion </h3>
@@ -505,11 +504,8 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Mi cuenta </h3>
           <ul>
-            <li> <a href="account-1.html"> Account Login </a> </li>
-            <li> <a href="account.html"> My Account </a> </li>
-            <li> <a href="my-address.html"> My Address </a> </li>
-            <li> <a href="wishlist.html"> Wisth list </a> </li>
-            <li> <a href="order-list.html"> Order list </a> </li>
+            <li> <a href="{{URL::route('login')}}"> Login </a> </li>
+            <li> <a href="{{URL::route('perfil')}}"> Perfil </a> </li>
           </ul>
         </div>
         <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
@@ -523,11 +519,9 @@
             </li>
           </ul>
           <ul class="social">
-            <li> <a href="http://facebook.com"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
-            <li> <a href="http://twitter.com"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
-            <li> <a href="https://plus.google.com"> <i class="fa fa-google-plus"> &nbsp; </i> </a> </li>
-            <li> <a href="http://youtube.com"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li>
-            <li> <a href="http://youtube.com"> <i class="fa fa-youtube"> &nbsp; </i> </a> </li>
+            <li> <a href="https://www.facebook.com/pages/TuMegalopolis/726858077327682?ref_type=bookmark"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
+            <li> <a href="https://twitter.com/tumegalopolis"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
+            <li> <a href="http://www.pinterest.com/tumegalopolis/"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li>
           </ul>
         </div>
       </div>
