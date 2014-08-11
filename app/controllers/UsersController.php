@@ -14,6 +14,38 @@ class UsersController extends BaseController{
 	}
 
 
+
+	public function getListaOrdersentrega()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 1)
+		{
+			return Redirect::to('/');
+		}else{
+			$id_comprador = Auth::user()->id;
+			$compras = DB::table('compra as co')->join('producto as p','p.id','=','co.id_producto')
+			->join('almacen as a','a.producto','=','p.id')
+			->join('sedes as s','a.sede','=','s.id')
+			->join('empresas as e', 's.empresa_id','=','e.id')
+			->select(
+					'co.cantidad',
+					'co.id',
+					'co.created_at AS fechaC',
+					'p.nombre AS nombre_producto',
+					'co.valor_unitario',
+					'co.valor_total',
+					'e.razon_social',
+					's.nombre_publico AS nombre_sede',
+					's.direccion',
+				 	's.id AS sede_id',
+				 	's.telefono',
+					'co.estado'
+				)
+			->where('co.id_comprador','=',$id_comprador)->where('co.estado','=',1)->orderBy('co.id', 'desc')->get();
+
+			return View::make('mega.listOrdersShiped')->with('compras',$compras);
+		}
+	}
+
 	public function getListaOrders()
 	{
 		if(!Auth::check() || Auth::user()->tipo != 1)

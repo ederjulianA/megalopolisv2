@@ -48,6 +48,15 @@ class ProductosController  extends BaseController {
 		 ->where('p.id','=',Input::get('id_producto'))->where('p.estado','=',1)->first();
 
 			if($compra->save()){
+				$comprador = User::where('id','=',Input::get('id_comprador'))->first();
+				$email_comprador = $comprador->email;
+				$comprador_name= $comprador->username;
+				$producto_nombre = $producto->producto_nombre;
+				$empresa = $producto->razon_social;
+				$valor_unitario = $compra->valor_unitario;
+				Mail::send('emails.auth.comprador', array('link' => URL::route('listOrders'), 'comprador'=>$comprador_name,'cantidad'=>$compra->cantidad,'valor_total'=>$compra->valor_total,'valor_unitario'=>$valor_unitario,'empresa'=>$empresa,'producto'=>$producto_nombre), function($message) use ($comprador){
+						$message->to($comprador->email, $comprador->username)->subject('Compra en Megalópolis');
+					});
 				return View::make('empresa.exitoCompra')->with('message-alert','Compra exitosa')->with('producto',$producto);
 			}
 

@@ -1,7 +1,7 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-	Lista de Ordenes {{Auth::user()->username}}
+	Lista de Ordenes en entrega {{Auth::user()->username}}
 @stop
 
 @section('content-page')
@@ -18,8 +18,9 @@
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
-        <li><a href="{{URL::route('perfil')}}">Mi Cuentat</a> </li>
-        <li class="active"> Mis ordenes </li>
+        <li><a href="{{URL::route('perfil')}}">Mi Cuenta</a> </li>
+        <li><a href="{{URL::route('listOrders')}}">Mis Ordenes</a> </li>
+        <li class="active"> Mis ordenes en entrega </li>
       </ul>
     </div>
   </div>
@@ -27,8 +28,10 @@
   
   <div class="row">
     <div class="col-lg-11 col-md-9 col-sm-9">
-      <h1 class="section-title-inner"><span><i class="fa fa-list-alt"></i> Lista de ordenes </span></h1>
-      <a href="{{URL::route('listOrdersShiped')}}" class="btn btn-info">Ordenes En entrega</a>
+      <h1 class="section-title-inner"><span><i class="fa fa-list-alt"></i> Lista de ordenes en entrega</span></h1>
+      <div>
+          Tus órdenes en entrega significan que tu vendedor ha recibido el pago por el artículo comprado y este se encuentra en el proceso de entrega según lo que acordaste con él. Una vez recibas el artículo y estés conforme, háznoslo saber  en las acciones de la compra.   
+      </div>
       <div class="row userInfo">
         <div class="col-lg-12">
           <h2 class="block-title-2"> Tu lista de ordenes  </h2>
@@ -43,7 +46,7 @@
                 <th data-hide="phone,tablet" data-sort-ignore="true">Cantidad</th>
                 <th data-hide="phone,tablet"><strong>Precio Unitario</strong></th>
                 <th data-hide="default"> Total </th>
-                <th data-hide="default" data-type="numeric"> Vendedor </th>
+                <th data-hide="default" data-type="numeric"> Acciones </th>
                 <th data-hide="phone" data-type="numeric"> Estado </th>
               </tr>
             </thead>
@@ -73,10 +76,20 @@
         <h4 class="modal-title" id="myModalLabel">{{$com->razon_social}}</h4>
       </div>
       <div class="modal-body">
-        Sede en la que compraste -> {{$com->nombre_sede}} <br>
-        Dirección -> {{$com->direccion}} <br>
-        Teléfono -> {{$com->telefono}} <br><br>
-
+        <div class="info-empresa">
+          <h2>Información de la empresa</h2>
+          Sede en la que compraste -> {{$com->nombre_sede}} <br>
+          Dirección -> {{$com->direccion}} <br>
+          Teléfono -> {{$com->telefono}} <br><br>
+        </div>
+        <div>
+          <h2>Acciones</h2>
+            Notificar que has recibido el articulo "{{$com->nombre_producto}}"
+          <form>
+            <input type="hidden" name="id_compra" value="{{$com->id}}">
+            <button type="submit" class="btn btn-success">NOTIFICAR</button>
+          </form>
+        </div>
 
       </div>
       <div class="modal-footer">

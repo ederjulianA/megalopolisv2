@@ -359,10 +359,16 @@ Route::get('/perfil', array(
 		'uses'=> 'UsersController@perfilUser1'
 	));
 
-/* EDITAR PERFIL DE USUARIO TIPO 1*/
+/* LISTA DE ORDENES*/
 Route::get('/lista-ordenes', array(
 		'as' => 'listOrders',
 		'uses'=> 'UsersController@getListaOrders'
+	));
+
+/* LISTA DE ORDENESn EN ENTREGA*/
+Route::get('/lista-ordenes/en-entrega', array(
+		'as' => 'listOrdersShiped',
+		'uses'=> 'UsersController@getListaOrdersentrega'
 	));
 
 Route::get('/favoritos', array(
