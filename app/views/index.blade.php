@@ -93,30 +93,30 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
     <div id="productslider" class="owl-carousel owl-theme">
       <div class="item">
        <div class="product">
-          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/product4.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+          <div class="image"> {{HTML::image('Tshop/images/product/product4.jpg', 'PLAN', array('class'=>'img-responsive'))}}
             <div class="promotion"> <span class="new-product"> $35,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
-            <h4><a href="#">PLAN BASICO </a></h4>
+            <h4>PLAN BASICO</h4>
             <p>Hasta 30 productos.</p>
             <span class="size"></span> </div>
           <!--<div class="price"> <span>$25.000</span> </div>-->
-          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+        <!--  <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div> -->
         </div>
        </div> <!-- PLANES 1#############################################################################################################-->
 
 
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl3.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+          <div class="image">{{HTML::image('Tshop/images/product/girl3.jpg', 'PLAN', array('class'=>'img-responsive'))}}
             <div class="promotion"> <span class="new-product"> $50,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
-            <h4><a href="#">PLAN INTERMEDIO </a></h4>
-            <p>A partir de 30 productos hasta 50.</p>
+            <h4>PLAN INTERMEDIO</h4>
+            <p>A partir de 30 productos hasta 50.</p> 
             <span class="size"></span> </div>
           <!--<div class="price"> <span>$25.000</span> </div>-->
-          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+         <!-- <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
         </div>
        </div> <!-- PLANES 2#############################################################################################################-->
 
@@ -124,15 +124,15 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+          <div class="image">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}
             <div class="promotion"> <span class="new-product"> $85,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
-            <h4><a href="#">PLAN PROFESIONAL </a></h4>
+            <h4>PLAN PROFESIONAL</h4>
             <p>A partir de 50 productos hasta 80.</p>
             <span class="size"></span> </div>
           <!--<div class="price"> <span>$25.000</span> </div>-->
-          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+          <!--<div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
         </div>
 
       </div><!-- PLANES 4#############################################################################################################-->
@@ -140,7 +140,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 
       <div class="item">
         <div class="product">
-          <div class="image"> <a href="#">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}</a>
+          <div class="image">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}
             <div class="promotion"> <span class="new-product"> $120,000</span> <!--<span class="discount">15% OFF</span>--> </div>
           </div>
           <div class="description">
@@ -148,7 +148,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             <p>MÁS DE 80 PRODUCTOS</p>
             <span class="size"></span> </div>
           <!--<div class="price"> <span>$25.000</span> </div>-->
-          <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>
+          <!--<div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
         </div>
 
       </div><!-- PLANES 3#############################################################################################################-->
