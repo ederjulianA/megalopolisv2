@@ -484,8 +484,6 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Compras </h3>
           <ul>
-            <li> <a href="{{URL::route('index')}}"> Home </a> </li>
-            <li> <a href="{{URL::route('mega-perfil')}}"> Perfil </a> </li>
             <li> <a href="{{URL::route('favoritos-user')}}"> Favoritos </a> </li>
             
           </ul> 
@@ -494,30 +492,23 @@
           <h3> Informacion </h3>
           <ul>
             
-            <li> <a href="about-us.html"> Sobre Nosotros </a> </li>
+            <li> <a href="#"> Sobre Nosotros </a> </li>
             
-            <li> <a href="contact-us.html"> Contacto </a> </li>
+            <li> <a href="#"> Contacto </a> </li>
             
-            <li> <a href="terms-conditions.html"> Terminos &amp; Condiciones</a> </li>
+            <li> <a href="#"> Terminos &amp; Condiciones</a> </li>
           </ul>
         </div>
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Mi cuenta </h3>
           <ul>
+          <li> <a href="{{URL::route('index')}}"> Home </a> </li>
             <li> <a href="{{URL::route('login')}}"> Login </a> </li>
             <li> <a href="{{URL::route('perfil')}}"> Perfil </a> </li>
           </ul>
         </div>
         <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-          <h3> Mantente en contacto </h3>
-          <ul>
-            <li>
-              <div class="input-append newsLatterBox text-center">
-                <input type="text" class="full text-center"  placeholder="Email ">
-                <button class="btn  bg-gray" type="button"> Subscribete/<i class="fa fa-long-arrow-right"> </i> </button>
-              </div>
-            </li>
-          </ul>
+          <h3> Síguenos </h3>
           <ul class="social">
             <li> <a href="https://www.facebook.com/pages/TuMegalopolis/726858077327682?ref_type=bookmark"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
             <li> <a href="https://twitter.com/tumegalopolis"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
@@ -534,7 +525,7 @@
   <div class="footer-bottom">
     <div class="container">
       <p class="pull-left"> &copy; Megalopolis 2014. Todos los derechos reservados. </p>
-      <div class="pull-right paymentMethodImg"> {{HTML::image('Tshop/images/site/payment/master_card.png', 'master_card', array('class'=>'pull-right','height'=>'30'))}}
+      <!--<div class="pull-right paymentMethodImg"> {{HTML::image('Tshop/images/site/payment/master_card.png', 'master_card', array('class'=>'pull-right','height'=>'30'))}}
       {{HTML::image('Tshop/images/site/payment/paypal.png', 'paypal', array('class'=>'pull-right','height'=>'30'))}} <!-- <img height="30" class="pull-right" src="Tshop/images/site/payment/american_express_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/discover_network_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/google_wallet.png" alt="img" >--> </div>
     </div>
   </div>
