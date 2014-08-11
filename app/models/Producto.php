@@ -12,5 +12,10 @@ class Producto extends Eloquent {
 	{
 		return $this->belongsTo('Almacen');
 	}
+
+	public function categoria()
+	{
+		return $this->belongsTo('Categoria');
+	}
 }
 ?>

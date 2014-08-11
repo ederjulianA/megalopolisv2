@@ -76,7 +76,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
               <ul class="nav nav-pills nav-stacked tree">
 
                 @foreach($categorias as $cat)
-                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a lista-products" href="{{$cat->id}}"> <span class="badge pull-right">N</span> {{$cat->nombre}} </a>
+                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a lista-products" href="{{$cat->id_categoria_cat}}"> <span class="badge pull-right">N</span> {{$cat->nombre_categoria_cat}} </a>
                 @endforeach
                
                   <!--<ul class="category-level-2 dropdown-menu-tree">

@@ -9,4 +9,8 @@ class Categoria extends Eloquent {
 	{
 		return $this->hasMany('Subcategoria');
 	}
+	public function productos()
+	{
+		return $this->hasMany('Producto');
+	}
 }

@@ -33,8 +33,10 @@ class SedesController extends BaseController{
 													'almacen.precio_detal',
 													'producto.imagen',
 													'producto.imgSmall',
+													'producto.categoria',
 													'producto.id',
 													'producto.descripcion AS producto_descripcion',
+													'categorias.id AS id_categoria',
 													'categorias.nombre AS categoria_nombre',
 													'almacen.cantidad')->where('estado','=',1)->get();
 			$num_productos = $productos->count();
@@ -43,11 +45,23 @@ class SedesController extends BaseController{
 			
 				$tags = Tag::where('producto','=',$producto->id)->get();
 				$producto->tags = $tags;
+				
+				
 			}
+			$cat2 = DB::table('categorias as c')->join('producto as p','p.categoria','=','c.id')
+				->join('almacen as a','a.producto','=','p.id')
+				->join('sedes as s','a.sede','=','s.id')
+				->select('c.id AS id_categoria_cat',
+						'c.nombre AS nombre_categoria_cat',
+						's.id'
+					)->where('s.id','=',$sede->id)->distinct()->get();
+				
+			
 
 			return View::make('catalogo')->with('numSusc', $num_suscriptores)
 			->with('sede',$sede)
-			->with('categorias', Categoria::all())
+			->with('categorias',$cat2)
+			//->with('categorias', Categoria::all())
 			->with('num_promos', $num_promos)
 			->with('productos', $productos)
 			->with('num_productos',$num_productos);
