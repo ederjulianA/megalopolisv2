@@ -360,7 +360,7 @@
             <li class="megamenu-content ">
               
               <ul class="col-lg-3  col-sm-3 col-md-3  col-xs-4">
-                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/sport-wear.jpg', 'Producto', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/sport-wear.jpg', 'Ropa y Accesorios', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> ROPA Y ACCESORIOS </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
                 <li> <a class="newProductMenuBlock" href="#"> {{HTML::image('Tshop/images/site/libros1.jpg', 'LIBROS', array('class'=>'img-responsive'))}}<span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> LIBROS </span> </a> </li>
@@ -369,7 +369,7 @@
                 <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/interiores.jpg', 'Interiores', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> INTERIORES </span> </a> </li>
               </ul>
               <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/tech2.jpg', 'Interiores', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> TECNOLOGÍA </span> </a> </li>
+                <li> <a class="newProductMenuBlock" href="#">{{HTML::image('Tshop/images/site/tech2.jpg', 'Tecnología', array('class'=>'img-responsive'))}}  <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> TECNOLOGÍA </span> </a> </li>
               </ul>
             </li>
           </ul>
