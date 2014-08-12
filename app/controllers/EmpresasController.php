@@ -151,6 +151,7 @@ class EmpresasController  extends BaseController {
 
 
 								)->where('co.id_empresa','=',$empresa->id)->where('co.estado','=',0)->orderBy('co.id','desc')->get();
+							$numVentas = count($ventas);
 
 			return View::make('empresa.ventas')
 			->with('ventas', $ventas)
@@ -377,12 +378,13 @@ class EmpresasController  extends BaseController {
 
 			if($empresa)
 			{
-				File::delete($empresa->banner);
+				//File::delete($empresa->banner);
 				$banner = Input::file('nuevo_banner');
 				$codigoIMG = str_random(13);
 				$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."banner-".$empresa->nombre_publico.".jpg";
 				//Image::make($logo->getRealPath())->resize(null, 250, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/'.$filename);
-				Image::make($banner->getRealPath())->grab(850, 300)->save(public_path().'/img/empresas/banners'.$filename);
+				//Image::make($banner->getRealPath())->resizeCanvas(850, 300, 'center', true, 'rgba(255, 255, 255, 0)')->save(public_path().'/img/empresas/banners'.$filename);
+				Image::make($banner->getRealPath())->resize(850, null, function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/empresas/banners'.$filename);
 				$empresa->banner = 'img/empresas/banners'.$filename;
 				$empresa->save();
 				return Redirect::to('/mega/cambiar-imagen')

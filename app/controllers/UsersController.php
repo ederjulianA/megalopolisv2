@@ -354,6 +354,8 @@ class UsersController extends BaseController{
 			
 			$user = $user->first();
 			$empresa = $empresa->first();
+			$ventas = Compra::where('id_empresa','=',$empresa->id)->where('estado','=',0)->get();
+			$num_ventas = $ventas->count();
 			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 			$preguntas_todas = Pregunta::where('empresa_id','=',$empresa->id)->get();
 			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
@@ -364,6 +366,7 @@ class UsersController extends BaseController{
 			->with('user' , $user)
 			->with('num_sedes', $num_sedes)
 			->with('empresa', $empresa)
+			->with('num_ventas',$num_ventas)
 			->with('preguntas', $preguntas_todas)
 			->with('num_nulls', $num_preguntas_null)
 			->with('total_preguntas', $num_pregunstas_total)

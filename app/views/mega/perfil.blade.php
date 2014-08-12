@@ -214,11 +214,21 @@
 											</div>
 										</div><!--/ panel -->
 										<div class="panel panel-overview fadeInUp animation-delay6">
-											<div class="overview-icon bg-danger">
-												<i class="fa fa-usd"></i>
-											</div>
+											@if($num_ventas == 0)
+												<div class="overview-icon bg-info">
+													<i class="fa fa-usd"></i>{{$num_ventas}}
+												</div>
+
+											@else
+												<div class="overview-icon bg-danger">
+													<i class="fa fa-usd"></i>{{$num_ventas}}
+												</div>
+
+											@endif
+											
 											<div class="overview-value">
 												<div class="h2">Mis ventas</div>
+												<div class="h2">({{$num_ventas}}) Pendientes</div>
 												<div class="text-muted"><a href="{{URL::route('mega-ventas')}}">ver</a></div>
 											</div>
 										</div><!--/ panel -->
