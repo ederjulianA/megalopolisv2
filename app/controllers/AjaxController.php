@@ -90,7 +90,7 @@ Class AjaxController  extends BaseController {
 
 	}
 
-
+	/*FUNCION QUE CAMBIA EL ESTADO DE UNA COMPRA A ENVIADO (LADO ADMINISTRRADOR)*/
 	public function NotiEnvioAjax()
 	{
 		header('Content-type: text/javascript');
@@ -108,6 +108,7 @@ Class AjaxController  extends BaseController {
 		}
 	}
 
+	/* FUNCION QUE AGREGA UNA PREGUNTA SOBRE EL ARTICULO QUE SE ESTA VISUALIZANDO (NOTIFICACIONES VIA EMAIL)*/
 	public function addPregunta()
 	{
 		header('Content-type: text/javascript');
@@ -143,29 +144,30 @@ Class AjaxController  extends BaseController {
 		}
 	}
 
+	/*FUNCION PARA REMOVER UN PRODUCTO DE LA LISTA DE FAVORITOS*/
 	public function remFav()
 	{
 		header('Content-type: text/javascript');
-		if(isset($_POST['id_producto'])){
-			$user_id = Auth::user()->id;
-			$producto_id = $_POST['id_producto'];
+			if(isset($_POST['id_producto'])){
+				$user_id = Auth::user()->id;
+				$producto_id = $_POST['id_producto'];
 
-			$fav = Favoritos::where('user_id','=',$user_id)->where('producto_id','=',$producto_id)->first();
+				$fav = Favoritos::where('user_id','=',$user_id)->where('producto_id','=',$producto_id)->first();
 
-			if($fav->count())
-			{
-				$fav->delete();
-				$json = array('estado'=>1, 'mensaje'=>'producto eliminado');
-			}else{
-				$json = array('estado'=>0, 'mensaje'=>'No se encontro Producto');
-			}
+				if($fav->count())
+				{
+					$fav->delete();
+					$json = array('estado'=>1, 'mensaje'=>'producto eliminado');
+				}else{
+					$json = array('estado'=>0, 'mensaje'=>'No se encontro Producto');
+				}
 
-			return Response::json($json);
+				return Response::json($json);
 
 		}
 	}
 
-
+	//FUNCION QUE REMUEVE UN USUARIO DE LA LISTA DE SUSCRIPTORES DE UNA EMPRESA
 	public function remSus()
 	{
 		header('Content-type: text/javascript');
@@ -262,29 +264,29 @@ Class AjaxController  extends BaseController {
 	{
 			header('Content-type: text/javascript');
 
-		if(isset($_POST['nombre_sede'])){
-			$nombre_sede = $_POST['nombre_sede'];
+				if(isset($_POST['nombre_sede'])){
+					$nombre_sede = $_POST['nombre_sede'];
 
-			$sede = Sede::where('nombre_publico','=',$nombre_sede)->get();
+					$sede = Sede::where('nombre_publico','=',$nombre_sede)->get();
 
-			if($sede->count()){
-				$json = array(
-					'estado' => 1,
-					'mensaje' => 'oops, nombre no disponible',
-					);
-				return Response::json($json);
-				
-			}else{
-				$json = array(
-					'estado' => 0,
-					'mensaje' => 'Nombre Disponible',
-					);
-				return Response::json($json);
+					if($sede->count()){
+						$json = array(
+							'estado' => 1,
+							'mensaje' => 'oops, nombre no disponible',
+							);
+						return Response::json($json);
+						
+					}else{
+						$json = array(
+							'estado' => 0,
+							'mensaje' => 'Nombre Disponible',
+							);
+						return Response::json($json);
 
-				
-			}
+						
+					}
 
-			
+					
 
 		}
 	}
@@ -293,31 +295,31 @@ Class AjaxController  extends BaseController {
 	{
 		header('Content-type: text/javascript');
 
-		if(isset($_POST['nombre_empresa'])){
-			$nombre_empresa = $_POST['nombre_empresa'];
+			if(isset($_POST['nombre_empresa'])){
+				$nombre_empresa = $_POST['nombre_empresa'];
 
-			$empresa = Empresa::where('nombre_publico','=',$nombre_empresa)->get();
+				$empresa = Empresa::where('nombre_publico','=',$nombre_empresa)->get();
 
-			if($empresa->count()){
-				$json = array(
-					'estado' => 1,
-					'mensaje' => 'oops, nombre no disponible',
-					);
-				return Response::json($json);
+				if($empresa->count()){
+					$json = array(
+						'estado' => 1,
+						'mensaje' => 'oops, nombre no disponible',
+						);
+					return Response::json($json);
+					
+				}else{
+					$json = array(
+						'estado' => 0,
+						'mensaje' => 'Nombre Disponible',
+						);
+					return Response::json($json);
+
+					
+				}
+
 				
-			}else{
-				$json = array(
-					'estado' => 0,
-					'mensaje' => 'Nombre Disponible',
-					);
-				return Response::json($json);
 
-				
 			}
-
-			
-
-		}
 	}
 
 
@@ -326,65 +328,65 @@ Class AjaxController  extends BaseController {
 	{
 		header('Content-type: text/javascript');
 
-		if(isset($_POST['ciudad_id'])){
-			$ciudad_id = $_POST['ciudad_id'];
+			if(isset($_POST['ciudad_id'])){
+				$ciudad_id = $_POST['ciudad_id'];
 
-			$empresa = Empresa::where('ciudad_id','=', $ciudad_id)->with('sector')->get();
+				$empresa = Empresa::where('ciudad_id','=', $ciudad_id)->with('sector')->get();
 
-			if($empresa->count()){
-				return Response::json($empresa);
+				if($empresa->count()){
+					return Response::json($empresa);
+				}
+
 			}
-
-		}
 	}
 
 	public function postProducts()
 	{
 		header('Content-type: text/javascript');
 
-		if(isset($_POST['id_cat']) && isset($_POST['nom_sede']) && isset($_POST['id_empresa_f'])){
-			$id_cat = $_POST['id_cat'];
-			$nomsede = $_POST['nom_sede'];
-			$id_empresa = $_POST['id_empresa_f'];
+				if(isset($_POST['id_cat']) && isset($_POST['nom_sede']) && isset($_POST['id_empresa_f'])){
+					$id_cat = $_POST['id_cat'];
+					$nomsede = $_POST['nom_sede'];
+					$id_empresa = $_POST['id_empresa_f'];
 
 
-			$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
-		 ->join('sedes as s','a.sede','=','s.id')
-		 ->join('empresas as e', 'e.id','=','s.empresa_id')
-		 ->join('categorias as c','p.categoria','=','c.id')
-		 ->join('subcategorias as sc','sc.categoria_id','=','sc.id')
-		 ->select('a.precio_detal',
-				 'a.cantidad',
-				 'e.id',
-				 'c.nombre AS categoria_nombre',
-				 'p.nombre AS producto_nombre',
-				 'p.categoria',
-				 'p.imagen',
-				 'p.id',
-				 's.id AS sede_id',
-				 'p.descripcion AS producto_descripcion',
-				 's.nombre_publico AS nombre_sede',
-				 's.direccion',
-				 's.telefono',
-				 'sc.nombre_sub'
-			 )
-		 ->where('p.categoria', '=', $id_cat)
-		 
-		 ->where('s.nombre_publico','=', $nomsede)->where('e.id','=',$id_empresa)->get();
-		 $numProd = count($producto);
+					$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
+				 ->join('sedes as s','a.sede','=','s.id')
+				 ->join('empresas as e', 'e.id','=','s.empresa_id')
+				 ->join('categorias as c','p.categoria','=','c.id')
+				 ->join('subcategorias as sc','sc.categoria_id','=','sc.id')
+				 ->select('a.precio_detal',
+						 'a.cantidad',
+						 'e.id',
+						 'c.nombre AS categoria_nombre',
+						 'p.nombre AS producto_nombre',
+						 'p.categoria',
+						 'p.imagen',
+						 'p.id',
+						 's.id AS sede_id',
+						 'p.descripcion AS producto_descripcion',
+						 's.nombre_publico AS nombre_sede',
+						 's.direccion',
+						 's.telefono',
+						 'sc.nombre_sub'
+					 )
+				 ->where('p.categoria', '=', $id_cat)
+				 
+				 ->where('s.nombre_publico','=', $nomsede)->where('e.id','=',$id_empresa)->get();
+				 $numProd = count($producto);
 
-		 if($numProd > 0){
-		 	return Response::json($producto);
+				 if($numProd > 0){
+				 	return Response::json($producto);
 
-		 }else {
-		 	$respuesta = array('estado'=>0, 'mensaje'=>'No hay Productos');
+				 }else {
+				 	$respuesta = array('estado'=>0, 'mensaje'=>'No hay Productos');
 
-		 	return Response::json($respuesta);
+				 	return Response::json($respuesta);
 
-		 }
+				 }
 
 
-		}	
+				}	
 	}
 
 
@@ -393,49 +395,49 @@ Class AjaxController  extends BaseController {
 	{
 		header('Content-type: text/javascript');
 
-		if(isset($_POST['id_sede']))
-		{
-			$id_sede = $_POST['id_sede'];
+			if(isset($_POST['id_sede']))
+			{
+				$id_sede = $_POST['id_sede'];
 
-			$promociones = Promociones::where('sede_id','=', $id_sede)->with('categoria')->with('sede')->get();
-		}
-		if($promociones->count())
-		{
-			return Response::json($promociones);
-		}
+				$promociones = Promociones::where('sede_id','=', $id_sede)->with('categoria')->with('sede')->get();
+			}
+			if($promociones->count())
+			{
+				return Response::json($promociones);
+			}
 	}
 
 	public function postCategorias(){
 		header('Content-type: text/javascript');
 
-		$json = array('error' => 'Hubo un error');
+				$json = array('error' => 'Hubo un error');
 
 
-		if(isset($_POST['id_cat']))
-		{
-			$id_cat = $_POST['id_cat'];
+				if(isset($_POST['id_cat']))
+				{
+					$id_cat = $_POST['id_cat'];
 
-			$empresa = Empresa::where('sector_id','=', $id_cat)->with('sector')->get();
-
-
-
-		
+					$empresa = Empresa::where('sector_id','=', $id_cat)->with('sector')->get();
 
 
-		}
 
-			if($empresa->count())
-			{
-				$empresa->toArray();
+				
 
 
-				return Response::json($empresa);
+				}
 
-			}else{
-			return Response::json($json);
+					if($empresa->count())
+					{
+						$empresa->toArray();
+
+
+						return Response::json($empresa);
+
+					}else{
+					return Response::json($json);
+
+					}
+
 
 			}
-
-
-	}
 }
