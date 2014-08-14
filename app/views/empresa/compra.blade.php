@@ -4,6 +4,7 @@
 	{{$producto->producto_nombre}}
 @stop
 
+
 @section('content-page')
 	<meta name="description" content="{{$producto->producto_descripcion}}">
     <meta name="author" content="Megalopolis TEAM">
@@ -13,6 +14,13 @@
 @stop
 
 @section('content')
+<style type="text/css">
+  #cantidad{
+    border: 2px solid #47D677;
+    padding: 3px;
+    width: 100%;
+  }
+</style>
 
 <script type="text/javascript">
   $(document).on('click','#cantidad', function(){
@@ -23,6 +31,8 @@
   var np = subtotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   $('#subtotal').text("$"+np);
   $('#precio_total').text("$"+np);
+
+
 
 });
 </script>
@@ -98,7 +108,7 @@
                                  
                                 </div></td>
                               <td class="delete"><div class="price ">${{number_format($producto->precio_detal, 0, '', '.')}} </div></td>
-                              <td class="hidden-xs"><input type="number" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" ></td>
+                              <td class="hidden-xs"><input type="number" class="integer" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" ></td>
                               <td class="hidden-xs">0</td>
                               <td class="price"><span id="subtotal">${{number_format($producto->precio_detal, 0, '', '.')}}</span></td>
                               <input type="hidden" id="precio_unitario" name="precio_unico" value="{{$producto->precio_detal}}">
@@ -220,7 +230,7 @@
                                         <input type="hidden" id="id_producto" value="{{$producto->id}}">
                                         <input type="hidden" id="id_empresa" value="{{$producto->id_empresa}}">
                                         <input type="hidden" id="id_user" value="{{Auth::user()->id}}">
-                                        <a id="btn-pregunta-user">Preguntar</a>
+                                        <a id="btn-pregunta-user" class="btn btn-success btn-lg">Preguntar</a>
                                       </td>
                                     </tr>
                                     </tbody>
@@ -232,6 +242,21 @@
     
   </div>
   <!--/row-->
+  <script type="text/javascript">
+    $(".positive-integer").numeric({ decimal: false, negative: false }, function() { alert("Positive integers only"); this.value = ""; this.focus(); });
+  </script><script type="text/javascript">
+  $(".numeric").numeric();
+  $(".integer").numeric(false, function() { alert("Integers only"); this.value = ""; this.focus(); });
+  $(".positive").numeric({ negative: false }, function() { alert("No negative values"); this.value = ""; this.focus(); });
+  $(".positive-integer").numeric({ decimal: false, negative: false }, function() { alert("Positive integers only"); this.value = ""; this.focus(); });
+  $("#remove").click(
+    function(e)
+    {
+      e.preventDefault();
+      $(".numeric,.integer,.positive").removeNumeric();
+    }
+  );
+  </script>
   
   <div style="clear:both"></div>
 </div>

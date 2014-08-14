@@ -249,6 +249,11 @@ $(document).on('click','#btn-pregunta-user', function(e){
 	var id_empresa = $('#id_empresa').val();
 	var id_user = $('#id_user').val();
 	var id_producto = $('#id_producto').val();
+	if(!pregunta_usu){
+		alert("Ingresa Una pregunta");
+		$('#pregunta-usuario').focus();
+		return false;
+	}
 	$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntando...</a><img src="../Tshop/assets/css/AjaxLoader.gif">');
 	$.ajax({
 
@@ -257,6 +262,10 @@ $(document).on('click','#btn-pregunta-user', function(e){
 			type : "post",
 			data : { pregunta_f : pregunta_usu, id_empresa_f : id_empresa, id_user_f : id_user, id_producto_f : id_producto},
 			success : function(data){
+				if(data.estado == 1){
+					alert("Por favor ingrese una pregunta");
+
+				}
 
 				if(data){
 					var nuevaPregunta = "";

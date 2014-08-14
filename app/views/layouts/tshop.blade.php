@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Fav and touch icons -->
+
 @yield('content-page')
 
 <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -538,6 +539,8 @@
 <!-- Placed at the end of the document so the pages load faster --> 
 {{ HTML::script('Tshop/assets/js/jquery/1.8.3/jquery.js')}}  
 {{ HTML::script('Tshop/assets/bootstrap/js/bootstrap.min.js')}}
+
+
 <!-- include jqueryCycle plugin -->  
 
 <!-- include  parallax plugin -->  

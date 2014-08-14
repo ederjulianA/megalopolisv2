@@ -79,6 +79,19 @@
 </script>
 
 <script src="Tshop/assets/js/pace.min.js"></script>
+<style type="text/css">
+  .cantidad{
+    width: 90%;
+    font-weight: bold;
+    font-size: 25px;
+    max-width: 100%;
+    padding: 5px;
+  }
+  .cantidad-item{
+    color: #EF2143;
+  }
+  
+</style>
 
     
 
@@ -147,7 +160,11 @@
       
       <div class="productFilter">
         <div class="filterBox">
-          <select>
+          <div class="cantidad">
+
+            Disponibles  <span class="cantidad-item">{{$producto->cantidad}}</span>Unidad(es).
+          </div>
+          <!--<select>
             <option value="strawberries" selected>Cantidad</option>
             <option value="mango">1</option>
             <option value="bananas">2</option>
@@ -157,7 +174,7 @@
             <option value="pineapple">6</option>
             <option value="peaches">7</option>
             <option value="cherries">8</option>
-          </select>
+          </select>-->
         </div>
         <!--<div class="filterBox">
           <select>
