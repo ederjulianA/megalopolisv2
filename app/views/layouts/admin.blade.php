@@ -25,7 +25,21 @@
 			<h1>Bienvenido al administrador de <span>Megalópolis</span></h1>
 			
 		</div>
+		<div class="message-alert">
+			@if(Session::has('message-alert'))
+						<p class="alert alert-danger" style="top:20%;"> {{Session::get('message-alert')}}
+							<a href="#" id="cerrar-msg-alert">Cerrar</a>
+						</p>
+				@endif
+
+			
+		</div>
 	</header>
+	<nav>
+		<ul>
+			<li><a href="{{URL::route('admin')}}">Home</a></li>
+		</ul>
+	</nav>
 	<div class="body-admin">
 		@yield('content')
 		
@@ -41,6 +55,8 @@
 
 	<!-- Bootstrap -->
 	{{ HTML::script('bootstrap/js/bootstrap.min.js')}}
+
+	{{HTML::script('js/adminMega.js')}}
 
 
 	

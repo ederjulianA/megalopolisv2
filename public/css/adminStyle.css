@@ -14,6 +14,11 @@ header .logo, header .tituloh1 {
 	padding: 7px;
 	max-width: 100%;
 }
+nav {
+	max-width: 100%;
+	width: 90%;
+	padding: 10px;
+}
 
 .logo{
 	width: 20%;
@@ -100,4 +105,35 @@ header .logo, header .tituloh1 {
 .acciones-categoria{
 	max-width: 100%;
 	width: 100%;
+}
+
+
+
+/*ESTILOS DEL FORMULARIO AJAX PARA EDITAR CATEGORIAS*/
+
+#form-ajax{
+	max-width: 100%;
+	width: 90%;
+}
+
+.form-ajax-js{
+	max-width: 100%;
+	width: 80%;
+	margin: 10px auto;
+	padding: 5px;
+
+}
+.form-ajax-js form input, .form-ajax-js form button {
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+	vertical-align: middle;
+
+}
+.form-ajax-js form input{
+	width: 50%;
+}
+
+.form-ajax-js form button {
+	width: 15%;
 }

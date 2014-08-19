@@ -19,10 +19,47 @@ class AdminController  extends BaseController {
 		{
 			return Redirect::to('/');
 		}
-		$categorias = Categoria::all();
+		$categorias = Categoria::where('id','>',0)->orderBy('nombre','asc')->get();
 
 		return View::make('admin.categorias')->with('categorias',$categorias);
 	}
+
+	public function editarCategorias()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+			return Redirect::to('/');
+		}
+
+		$categoria = Categoria::where('id','=', Input::get('id_cat'))->first();
+		$categoria->nombre = Input::get('cat_nombre');
+
+		if($categoria->save()){
+			return Redirect::to('/admin/categorias')->with('message-alert','Categoria Actualizada correctamente.');
+		}else{
+			return Redirect::to('/admin/categorias')->with('message-alert','Error al actualizar categoria.');
+		}
+	}
+
+
+	public function editarSubCategorias()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+			return Redirect::to('/');
+		}
+
+		$subcategoria = Subcategoria::where('id','=', Input::get('id_subcat'))->first();
+		$subcategoria->nombre_sub = Input::get('subcat_nombre');
+
+		if($subcategoria->save()){
+			return Redirect::to('/admin/categorias')->with('message-alert','Subcategoria Actualizada correctamente.');
+		}else{
+			return Redirect::to('/admin/categorias')->with('message-alert','Error al actualizar subcategoria.');
+		}
+	}
+
+
 
 	public function postNuevaSubCat()
 	{

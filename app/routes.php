@@ -485,6 +485,16 @@ Route::get('/admin/categorias', array(
 		'as' => 'admin-categorias',
 		'uses' => 'AdminController@getAdminCategorias'
 	));
+
+
+Route::post('/editar-cat-post', array(
+		'as' => 'editar-categorias',
+		'uses' => 'AdminController@editarCategorias'
+	));
+Route::post('/editar-subcat-post', array(
+		'as' => 'editar-subcategorias',
+		'uses' => 'AdminController@editarSubCategorias'
+	));
 Route::post('/admin/nueva-subcat', array(
 		'as' => 'nueva-subcat',
 		'uses' => 'AdminController@postNuevaSubCat'

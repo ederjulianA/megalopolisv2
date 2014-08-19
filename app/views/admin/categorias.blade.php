@@ -9,7 +9,7 @@
 <h2>CATEGORIAS</h2>
 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#nuevaCategoria">NUEVA CATEGORIA</a>
 <!-- Modal -->
-				<div class="modal fade" id="nuevaCategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade" id="nuevaCategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 				    <div class="modal-content">
 				      <div class="modal-header">
@@ -40,11 +40,21 @@
 		@foreach($categorias as $cat)
 
 			<div class="cat-item">
-				<h2 class="main-cat">{{$cat->nombre}}</h2>
+				<h2 class="main-cat">{{$cat->nombre}} <a class="btn btn-info btn-categoria" href="{{$cat->id}}">Editar</a></h2>
+				<input type="hidden" id="cat_nombre-{{$cat->id}}" value="{{$cat->nombre}}">
+				<p id="form-ajax-{{$cat->id}}" class="form-ajax">
+					
+					
+				</p>
 				<p>
 					<h2>Subcategorias</h2>
 					@foreach($cat->subcategoria as $subcat)
-						<a href="#" class="subcat-item">{{$subcat->nombre_sub}}</a>
+						<a href="#" class="subcat-item">{{$subcat->nombre_sub}} <a class="btn btn-danger btn-subcategoria" href="{{$subcat->id}}">Editar</a></a>
+								<input type="hidden" id="sub_nombre-{{$subcat->id}}" value="{{$subcat->nombre_sub}}">
+								<p id="form-ajax-sub-{{$subcat->id}}" class="form-ajax">
+					
+					
+								</p>
 					@endforeach
 				</p>
 				<div class="acciones-categoria">
