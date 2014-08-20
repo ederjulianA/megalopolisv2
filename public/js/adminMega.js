@@ -59,3 +59,50 @@ $(document).on('click','#cerrar-form-editar-sub', function(e){
 
 e.preventDefault();
 });
+
+
+
+/*FUNCION PARA BUSCAR UN USUARIO POR EMAIL*/
+
+$(document).on('click','#btn-email-filtro', function(e){
+	var expRegEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+	var email = $('#email-filtro').val();
+
+	$.ajax({
+
+			url : "emailFiltro",
+			dataType: "json",
+			type : "post",
+			cache : false,
+			data : { email : email},
+			success : function(data){
+
+				if(data.estado == 0){
+					$('.respuesta-ajax-email').html('<p class="alert alert-danger">No se encontraron Registros</p>');
+				}else{
+					$('.respuesta-ajax-email').html('<p>Usuario : <strong>'+data.email+'<strong> <a href="/admin/usuarios/editar_'+data.id+'" class="btn btn-info">Editar</a></p>');
+				}
+				
+				
+				
+				
+						
+					
+
+					
+					
+				
+				
+				console.log(data);
+			}
+
+
+		});
+	
+
+	
+
+
+	e.preventDefault();
+});

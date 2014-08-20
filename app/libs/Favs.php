@@ -72,4 +72,36 @@ class Favs {
 		return $value;
 	}
 
+
+	public static function tipoUser($tipo)
+	{
+		if($tipo == 1)
+		{
+			$btn = '<a class="btn btn-success">Usuario</a>';
+		}
+
+		else if($tipo == 2)
+		{
+			$btn = '<a class="btn btn-primary">Empresa</a>';
+		}
+
+		return $btn;
+	}
+
+	public static function ActiveUser($active)
+	{
+		if($active == 1)
+		{
+			$btn = '<a class="btn btn-success">Activo</a>';
+		}
+
+		else if($active == 0)
+		{
+			$btn = '<a class="btn btn-danger">No activo</a>';
+		}
+
+		return $btn;
+
+	}
+
 }

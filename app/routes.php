@@ -486,10 +486,30 @@ Route::get('/admin/categorias', array(
 		'uses' => 'AdminController@getAdminCategorias'
 	));
 
+Route::get('/admin/usuarios', array(
+		'as' => 'admin-usuarios',
+		'uses' => 'AdminController@getUsers'
+	));
+
+Route::get('/admin/usuarios/editar_{id}', array(
+		'as' => 'editar-user',
+		'uses' => 'AdminController@getEditarUser'
+	));
+
 
 Route::post('/editar-cat-post', array(
 		'as' => 'editar-categorias',
 		'uses' => 'AdminController@editarCategorias'
+	));
+
+Route::post('/editar-user-post', array(
+		'as' => 'editar-user-post',
+		'uses' => 'AdminController@editarUserPost'
+	));
+
+Route::post('/admin/emailFiltro', array(
+		'as' => 'emailFiltroAjax',
+		'uses' => 'AdminController@emailFiltroAjaxCall'
 	));
 Route::post('/editar-subcat-post', array(
 		'as' => 'editar-subcategorias',

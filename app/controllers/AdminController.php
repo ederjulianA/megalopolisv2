@@ -13,6 +13,92 @@ class AdminController  extends BaseController {
 		return View::make('admin.index')->with('categorias',$categorias);
 	}
 
+
+
+	public function getUsers()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$users = User::where('id','>',0)->orderBy('id','desc')->get();
+		$numUsers = $users->count();
+
+		return View::make('admin.users')->with('users',$users)->with('numUsers',$numUsers);
+	}
+
+
+	public function emailFiltroAjaxCall()
+	{
+		header('Content-type: text/javascript');
+		$email = $_POST['email'];
+		
+
+		$user = User::where('email','=',$email)->first();
+		
+		$numero = count($user);
+
+		if($numero > 0)
+		{
+			return Response::json($user);
+		}else{
+			$error = array('estado'=>0,'mensaje'=>'Error');
+			return Response::json($error);
+		}
+
+			
+
+		
+	}
+
+
+	public function editarUserPost()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$user = User::where('id','=',Input::get('id_user'))->first();
+		if($user->count())
+		{
+			$user->email = Input::get('email');
+			$user->tipo = Input::get('tipoUser');
+			$user->active = Input::get('ActiveUser');
+			$user->code = "";
+
+			if($user->save())
+			{
+				return Redirect::to('/admin/usuarios/editar_'.$user->id)->with('message-alert','Usuario Actualizado');
+			}else{
+				return Redirect::to('/admin/usuarios/editar_'.$user->id)->with('message-alert','Error al actualizar Usuario :(');
+			}
+		}
+
+	}
+
+	public function getEditarUser($id_user)
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$user = User::where('id','=',$id_user)->first();
+
+		if($user->count()){
+			return View::make('admin.editarUser')->with('user',$user);
+		}
+
+	}
+
+
+
+
 	public function getAdminCategorias()
 	{
 		if(!Auth::check() || Auth::user()->isadmin != 1)

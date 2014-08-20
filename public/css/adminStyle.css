@@ -65,6 +65,12 @@ nav {
 	border-bottom: 5px solid #C27501;
 }
 
+.admin-cat-items-blue{
+	background-color: #1E9FE9;
+		border-bottom: 3px solid #196B9A;
+		color: #fff;
+}
+
 
 .contenedor-cats{
 	margin: 0 auto;
@@ -137,3 +143,14 @@ nav {
 .form-ajax-js form button {
 	width: 15%;
 }
+/*############################################################*/
+
+/*ESTILOS VISTA USUARIOS*/
+
+.contenedor-usuarios-mega{
+	max-width: 100%;
+	width: 95%;
+	
+}
+
+
