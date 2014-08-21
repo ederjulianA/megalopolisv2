@@ -365,6 +365,19 @@ Route::get('/lista-ordenes', array(
 		'uses'=> 'UsersController@getListaOrders'
 	));
 
+
+/* DIRECCION DE ENVIO*/
+Route::get('/perfil/direccion', array(
+		'as' => 'direccion-envio',
+		'uses'=> 'UsersController@getDireccionUser'
+	));
+
+/* POST DIRECCIÓN DE ENVIÓ*/
+Route::post('/perfil/direccion-post', array(
+		'as' => 'direccion-envio-post',
+		'uses'=> 'UsersController@PostDireccionUser'
+	));
+
 /* LISTA DE ORDENESn EN ENTREGA*/
 Route::get('/lista-ordenes/en-entrega', array(
 		'as' => 'listOrdersShiped',

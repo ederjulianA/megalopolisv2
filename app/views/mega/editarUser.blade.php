@@ -34,7 +34,7 @@ Perfil | {{Auth::user()->username}}
               <div class="thumbnail equalheight"> <a title="My addresses" href="my-address.html"><i  class="fa fa-map-marker"></i> Mi dir</a> </div>
             </li>-->
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
-              <div class="thumbnail equalheight"> <a title="Add  address" href="#"> <i  class="fa fa-edit"> </i> Add  address</a> </div>
+              <div class="thumbnail equalheight"> <a title="Add  address" href="{{URL::route('direccion-envio')}}"> <i  class="fa fa-edit"> </i> Dirección de Envio</a> </div>
             </li>
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
               <div class="thumbnail equalheight"> <a title="Personal information" href="{{URL::route('personal-info')}}"><i class="fa fa-cog"></i> Información personal</a> </div>

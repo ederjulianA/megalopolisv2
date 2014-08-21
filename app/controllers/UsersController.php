@@ -14,6 +14,42 @@ class UsersController extends BaseController{
 	}
 
 
+	public function getDireccionUser()
+	{
+		if(!Auth::check())
+		{
+			return Redirect::to('/');
+		}
+
+		$id_user = Auth::user()->id;
+
+		$ciudades = Ciudad::where('id','>',0)->orderBy('ciudad','asc')->get();
+		$ship = Shipping::where('id_user','=',$id_user)->first();
+
+		return View::make('mega.address')->with('ciudades',$ciudades)->with('ship',$ship);
+	}
+
+	public function PostDireccionUser()
+	{
+		$id_user = Auth::user()->id;
+		$ship = Shipping::where('id_user','=',$id_user)->first();
+		$ship->ciudad = Input::get('ciudad');
+		$ship->nombre = Input::get('nombre');
+		$ship->apellido = Input::get('apellido');
+		$ship->notas = Input::get('notas');
+		$ship->direccion = Input::get('direccion');
+		$ship->barrio = Input::get('barrio');
+		$ship->telefono = Input::get('telefono');
+
+		if($ship->save())
+		{
+			return Redirect::to('/perfil/direccion')->with('message-alert','Has actualizado tu información de envio :)');
+		}else{
+			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
+		}
+	}
+
+
 
 	public function getListaOrdersentrega()
 	{
