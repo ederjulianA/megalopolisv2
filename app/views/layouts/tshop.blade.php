@@ -552,6 +552,8 @@
 <!-- include  parallax plugin -->  
 {{ HTML::script('Tshop/assets/js/jquery.parallax-1.1.js')}}
 
+{{ HTML::script('/js/info-shipping.js')}}
+
 
 @yield('scriptHome')
 

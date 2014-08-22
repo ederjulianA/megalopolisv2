@@ -192,13 +192,22 @@
       <div class="cart-actions">
         <div class="addto">
          @if(Auth::check() && Auth::user()->tipo == 1)
-              <form id="form-cart-before" method="post" action="{{URL::route('form-carrito-previo')}}">
-              <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
-              <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
-              <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
 
-          <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">Contacto</button>
-         </form>
+            @if($ship)
+              <form id="form-cart-before" method="post" action="{{URL::route('form-carrito-previo')}}">
+                  <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
+                  <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
+                  <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
+
+                  <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">Contacto</button>
+             </form>
+
+
+            @else
+            <a class="btn btn-danger btn-lg" data-toggle="modal" data-target="#infoshipping"> Registra tu información de envió</a>
+
+            @endif
+              
          @else
           <a class="link-wishlist wishlist"  href="{{URL::route('login')}}">Login</a> 
          @endif
@@ -319,6 +328,67 @@
 
 
 <div class="gap"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="infoshipping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title" id="myModalLabel">Información de Envió</h4>
+        <p>Esta información es indispensable en el momento que hagas una compra. Puedes cambiar esta información las veces que quieras en la administración de tu <a href="{{URL::route('perfil')}}" target="_blank">Perfil</a></p>
+      </div>
+      <div class="modal-body">
+          <div class="form-group required">
+                            <label for="nombre">Nombre(s) <sup>*</sup> </label>
+                            <input required type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" value="">
+                          </div>
+                          
+                          <div class="form-group required">
+                            <label for="apellido">Apellido(s) <sup>*</sup> </label>
+                            <input required type="text" name="apellido" class="form-control" id="apellido" placeholder="Apellido" value="">
+                          </div>
+
+                          <div class="form-group required">
+                            <label for="ciudad">Ciudad <sup>*</sup> </label>
+                            <select name="ciudad" id="ciudad">
+                              @foreach($ciudades as $ciudad)
+                                <option value="{{$ciudad->id}}">{{$ciudad->ciudad}}</option>
+                              @endforeach
+
+                              
+                            </select>
+                          </div>
+                          
+                        <div class="form-group required">
+                            <label for="Barrio">Barrio <sup>*</sup>   </label>
+                            <input required type="text" name="barrio" class="form-control" id="Barrio" placeholder="barrio" value="">
+                          </div>
+                 
+                          
+                          <div class="form-group required">
+                            <label for="InputAddress">Dirección <sup>*</sup>   </label>
+                            <input required type="text" name="direccion" class="form-control" id="direccion" placeholder="Dirección" value="">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="InputAdditionalInformation">Notas a tener encuenta para el envio</label>
+                            <textarea rows="3" cols="26" name="notas" class="form-control" id="InputAdditionalInformation" ></textarea>
+                          </div>
+                          
+                          <div class="form-group required">
+                            <label for="celular">Telefono <sup>*</sup></label>
+                             <input  required type="tel"  name="telefono" class="form-control" id="celular" value="">
+
+                          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btn-nuevo-shipping">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 @stop

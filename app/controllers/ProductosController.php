@@ -65,6 +65,7 @@ class ProductosController  extends BaseController {
 
 	public function getProducto($id,$sede)
 	{
+		$idUser = Auth::user()->id;
 
 	$producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')
@@ -101,7 +102,8 @@ class ProductosController  extends BaseController {
 		 }
 
 		 $tags = Tag::where('producto','=',$id)->get();
-		
+		$ship = Shipping::where('id_user','=',$idUser)->first();
+		$ciudades = Ciudad::where('id','>',0)->orderBy('ciudad','asc')->get();
 
 		$masProductos =  DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
 		->join('sedes as s','a.sede','=','s.id')
@@ -120,7 +122,7 @@ class ProductosController  extends BaseController {
 
 		
 
-			return View::make('empresa.producto')->with('producto',$producto)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
+			return View::make('empresa.producto')->with('producto',$producto)->with('ciudades',$ciudades)->with('ship',$ship)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
 		
 
 	}
