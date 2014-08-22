@@ -16,11 +16,7 @@
 <meta property="og:image" content="http://www.tumegalopolis.com/{{$producto->imagen}}"/>
 
 @stop
-<!-- Bootstrap core CSS -->
-<link href="Tshop/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-<!-- Custom styles for this template -->
-<link href="Tshop/assets/css/style.css" rel="stylesheet">
 
 
 <script>(function(d, s, id) {
@@ -45,21 +41,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<!-- styles needed by smoothproducts.js for product zoom  -->
-{{HTML::style('Tshop/assets/css/smoothproducts.css')}}
 
-
-<!-- styles needed by carousel slider -->
-<link href="Tshop/assets/css/owl.carousel.css" rel="stylesheet">
-<link href="Tshop/assets/css/owl.theme.css" rel="stylesheet">
-
-<!-- styles needed by minimalect -->
-<link href="Tshop/assets/css/jquery.minimalect.min.css" rel="stylesheet">
-<!-- styles needed by checkRadio -->
-<link href="Tshop/assets/css/ion.checkRadio.css" rel="stylesheet">
-<link href="Tshop/assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
-<!-- styles needed by mCustomScrollbar -->
-<link href="Tshop/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
 
 
 <!-- Just for debugging purposes. -->
@@ -205,7 +187,7 @@
 
             @else
 
-            <a class="btn btn-danger btn-lg" data-toggle="modal" data-target="#infoshipping"> Registra tu información de envió</a>
+            <button class="button btn-cart cart first" data-toggle="modal" data-target="#infoshipping"> CONTACTO</button>
 
             @endif
               
@@ -329,7 +311,7 @@
 
 
 <div class="gap"></div>
-
+@if(Auth::check())
 <!-- Modal -->
 <div class="modal fade" id="infoshipping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -337,7 +319,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
         <h4 class="modal-title" id="myModalLabel">Información de Envió</h4>
-        <p>Esta información es indispensable en el momento que hagas una compra. Puedes cambiar esta información las veces que quieras en la administración de tu <a href="{{URL::route('perfil')}}" target="_blank">Perfil</a></p>
+        <p>Esta información es indispensable en el momento que hagas una compra. Puedes cambiar esta información las veces que quieras en la administración de tu <a href="{{URL::route('perfil')}}" target="_blank" class="btn btn-info">Perfil</a>. <strong>Completa la información y sigue con tu compra.</strong> </p>
       </div>
       <div class="modal-body">
           <div class="form-group required">
@@ -385,62 +367,21 @@
                           </div>
       </div>
       <div class="modal-footer">
+        <div id="ajax-info-shipping-form">
+          
+        </div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary" id="btn-nuevo-shipping">Guardar Cambios</button>
       </div>
     </div>
   </div>
 </div>
-
+@endif
 
 @stop
 
 
-<!-- Le javascript
-================================================== --> 
 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script type="text/javascript" src="Tshop/assets/js/jquery/1.8.3/jquery.js"></script> 
-<script src="Tshop/assets/bootstrap/js/bootstrap.min.js"></script> 
-
-<!-- include jqueryCycle plugin --> 
-<script src="Tshop/assets/js/jquery.cycle2.min.js"></script> 
-<!-- include easing plugin --> 
-<script src="Tshop/assets/js/jquery.easing.1.3.js"></script> 
-
-<!-- include  parallax plugin --> 
-<script type="text/javascript"  src="Tshop/assets/js/jquery.parallax-1.1.js"></script> 
-
-<!-- optionally include helper plugins --> 
-<script type="text/javascript"  src="Tshop/assets/js/helper-plugins/jquery.mousewheel.min.js"></script> 
-
-<!-- include mCustomScrollbar plugin //Custom Scrollbar  --> 
-
-<script type="text/javascript" src="Tshop/assets/js/jquery.mCustomScrollbar.js"></script> 
-
-<!-- include checkRadio plugin //Custom check & Radio  --> 
-<script type="text/javascript" src="Tshop/assets/js/ion-checkRadio/ion.checkRadio.min.js"></script> 
-
-<!-- include grid.js // for equal Div height  --> 
-<script src="Tshop/assets/js/grids.js"></script> 
-
-<!-- include carousel slider plugin  --> 
-<script src="Tshop/assets/js/owl.carousel.min.js"></script> 
-
-<!-- include smoothproducts // product zoom plugin  --> 
-
-{{HTML::script('Tshop/assets/js/smoothproducts.min.js')}}
-
-<!-- jQuery minimalect // custom select   --> 
-<script src=""></script> 
-{{HTML::script('Tshop/assets/js/jquery.minimalect.min.js')}}
-
-<!-- include touchspin.js // touch friendly input spinner component   --> 
-
-{{HTML::script('Tshop/assets/js/bootstrap.touchspin.js')}}
-
-<!-- include custom script for site  --> 
-{{HTML::script('Tshop/assets/js/script.js')}}
 
 
 

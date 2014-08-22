@@ -8,9 +8,10 @@ $(document).on('click','#btn-nuevo-shipping', function(e){
 	var notas = $('#notas').val();
 	var id_user = $('#id_comprador').val();
 
-	if(!nombre || !apellido || !barrio || !ciudad || !direccion || !telefono || !notas)
+	if(!nombre || !apellido || !barrio || !ciudad || !direccion || !telefono )
 	{
-		alert("POR FAVOR INGRESE LOS DATOS SOLICITADOS. :)"+nombre+apellido+barrio+ciudad+direccion+telefono+notas+"el id de usuario es"+id_user);
+		$('#ajax-info-shipping-form').html('<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Mensaje</strong>Por favor ingrese los datos marcados con un (*) </div>');
+		alert("POR FAVOR INGRESE LOS DATOS SOLICITADOS. :)");
 	}else{
 
 
