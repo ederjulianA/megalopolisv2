@@ -49,6 +49,26 @@ class UsersController extends BaseController{
 		}
 	}
 
+	public function PostNuevaDireccionUser()
+	{
+		$ship = new Shipping;
+		$ship->id_user = Input::get('id_user');
+		$ship->ciudad = Input::get('ciudad');
+		$ship->nombre = Input::get('nombre');
+		$ship->apellido = Input::get('apellido');
+		$ship->notas = Input::get('notas');
+		$ship->direccion = Input::get('direccion');
+		$ship->barrio = Input::get('barrio');
+		$ship->telefono = Input::get('telefono');
+
+		if($ship->save())
+		{
+			return Redirect::to('/perfil/direccion')->with('message-alert','Has actualizado tu información de envio :)');
+		}else{
+			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
+		}
+	}
+
 
 
 	public function getListaOrdersentrega()

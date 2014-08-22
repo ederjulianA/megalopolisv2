@@ -63,7 +63,7 @@
 								<th>Teléfono</th>
 							</tr>
 							<tr>
-								<td>{{$venta->nombre_comprador}}</td>
+								<td>{{$venta->nombre_envio}} {{$venta->apellido_envio}}</td>
 								<td>{{$venta->email_comprador}}</td>
 								<td>{{$venta->nombre_ciudad}}</td>
 								<td>{{$venta->direccion_comprador}}</td>
@@ -72,6 +72,10 @@
 
 						</table>
 							
+						</div>
+						<div>
+							<h2>Notas y/o especificaciones del comprador para el envió</h2>
+							<p>{{$venta->notas_comprador}}</p>
 						</div>
 						<div class="info-estado-pedido">
 							<p>

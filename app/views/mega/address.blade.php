@@ -130,7 +130,7 @@ Dirección de envio
        	</form>
 
                 @else
-                		<form method="post" action="{{URL::route('direccion-envio-post')}}">
+                		<form method="post" action="{{URL::route('nueva-direccion-envio-post')}}">
             
             	<div class="col-xs-12 col-sm-6">
                 
@@ -187,6 +187,7 @@ Dirección de envio
                              <input  required type="tel"  name="telefono" class="form-control" id="celular" value="">
 
                           </div>
+                          <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
                           
                           
                           

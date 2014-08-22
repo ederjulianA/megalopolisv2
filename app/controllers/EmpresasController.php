@@ -145,8 +145,11 @@ class EmpresasController  extends BaseController {
 									'u.username AS nombre_comprador',
 									'u.email AS email_comprador',
 									'is.direccion AS direccion_comprador',
+									'is.nombre AS nombre_envio',
+									'is.apellido AS apellido_envio',
 									'is.barrio AS barrio_comprador',
 									'is.telefono AS telefono_comprador',
+									'is.notas AS notas_comprador',
 									'ci.ciudad AS nombre_ciudad'
 
 

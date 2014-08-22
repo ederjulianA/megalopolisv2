@@ -204,6 +204,7 @@
 
 
             @else
+
             <a class="btn btn-danger btn-lg" data-toggle="modal" data-target="#infoshipping"> Registra tu información de envió</a>
 
             @endif
@@ -361,6 +362,7 @@
                           </div>
                           
                         <div class="form-group required">
+                            <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
                             <label for="Barrio">Barrio <sup>*</sup>   </label>
                             <input required type="text" name="barrio" class="form-control" id="Barrio" placeholder="barrio" value="">
                           </div>
@@ -372,8 +374,8 @@
                           </div>
 
                           <div class="form-group">
-                            <label for="InputAdditionalInformation">Notas a tener encuenta para el envio</label>
-                            <textarea rows="3" cols="26" name="notas" class="form-control" id="InputAdditionalInformation" ></textarea>
+                            <label for="notas">Notas a tener encuenta para el envio</label>
+                            <textarea rows="3" cols="26" name="notas" class="form-control" id="notas" ></textarea>
                           </div>
                           
                           <div class="form-group required">

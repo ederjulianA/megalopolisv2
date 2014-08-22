@@ -18,7 +18,7 @@
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
-        <li><a href="{{URL::route('perfil')}}">Mi Cuentat</a> </li>
+        <li><a href="{{URL::route('perfil')}}">Mi Cuenta</a> </li>
         <li class="active"> Mis ordenes </li>
       </ul>
     </div>

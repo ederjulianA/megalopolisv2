@@ -296,6 +296,11 @@ Route::post('/get/cat', array(
 		'as' => 'categorias-lista',
 		'uses' => 'AjaxController@postCategorias'
 	));
+/*REGISTRAR DATOS DE ENVIO DE USUARIO DESDE LA VISTA PRODUCTO*/
+Route::post('/producto/info-shipping-ajax', array(
+		'as' => 'info-shipping-ajax',
+		'uses' => 'AjaxController@postInfoShipping'
+	));
 
 /* RUTA HOME O NAVEGACION DONDE SE VISUALIZARAN LAS EMPRESAS*/
 Route::get('/navegar', array(
@@ -370,6 +375,12 @@ Route::get('/lista-ordenes', array(
 Route::get('/perfil/direccion', array(
 		'as' => 'direccion-envio',
 		'uses'=> 'UsersController@getDireccionUser'
+	));
+
+/* POST NUEVA DIRECCIÓN DE ENVIÓ*/
+Route::post('/perfil/nueva-direccion-post', array(
+		'as' => 'nueva-direccion-envio-post',
+		'uses'=> 'UsersController@PostNuevaDireccionUser'
 	));
 
 /* POST DIRECCIÓN DE ENVIÓ*/

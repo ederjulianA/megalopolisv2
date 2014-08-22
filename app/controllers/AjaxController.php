@@ -31,6 +31,36 @@ Class AjaxController  extends BaseController {
 	
 		}
 
+		//FUNCIÓN PARA REGISTRAR LOS DATOS DE ENVIO DE UN NUEVO USUARIO
+
+		public function postInfoShipping()
+
+		{
+			header('Content-type: text/javascript');
+			if(isset($_POST['id_user']) && isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['barrio']) && isset($_POST['ciudad']) && isset($_POST['direccion']) && isset($_POST['telefono']))
+			{
+				$ship = new Shipping;
+				$ship->id_user = $_POST['id_user'];
+				$ship->ciudad = $_POST['ciudad'];
+				$ship->nombre = $_POST['nombre'];
+				$ship->apellido = $_POST['apellido'];
+				$ship->barrio = $_POST['barrio'];
+				$ship->direccion = $_POST['direccion'];
+				$ship->telefono = $_POST['telefono'];
+				$ship->notas = $_POST['notas'];
+
+				if($ship->save())
+				{
+					$estado = array('estado'=>1);
+					return Response::json($estado);
+				}
+
+			}else{
+				$error = array('error'=>1,'mensaje'=>'Ingrese todos los campos requeridos');
+				return Response::json($error);
+			}
+		}
+
 
 		public function postGetPreguntas()
 		{
