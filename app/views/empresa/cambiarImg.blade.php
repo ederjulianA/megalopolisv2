@@ -1,6 +1,23 @@
 @extends('layouts.empresa')
 
 @section('content')
+<style type="text/css">
+	.form-img-cambio{
+		max-width: 100%;
+		width: 90%;
+		border: 2px solid red;
+
+	}
+	.form-img-cambio div{
+		display: block;
+		margin: 10px;
+
+	}
+	.btn-cambio-img{
+		margin: 5px;
+	}
+	
+</style>
 	<div id="main-container">
 		<div class="padding-md">
 				<div class="row">
@@ -12,12 +29,12 @@
 						</div>
 						<div class="col-md-8">
 							<h2>Escoger Nueva Imagen</h2>
-							<form method="post" action="{{ URL::route('cambiar-imagen-post')}}" enctype="multipart/form-data">
+							<form method="post" action="{{ URL::route('cambiar-imagen-post')}}" enctype="multipart/form-data" class="form-img-cambio">
 								<label>Nuevo Logo</label>
-								<input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
-								<input type="file" name="nuevo_logo" required><br>
+								<div><input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
+								<input type="file" name="nuevo_logo" required class="file-img"><br></div>
 
-								<input type="submit" value="Actualizar" class="btn btn-info">
+								<div><input type="submit" value="Actualizar" class="btn btn-info btn-cambio-img"></div>
 
 								{{ Form::token()}}
 								
@@ -40,12 +57,12 @@
 						</div>
 						<div class="col-md-8">
 							<h2>Escoger Nuevo Banner</h2>
-							<form method="post" action="{{ URL::route('cambiar-banner')}}" enctype="multipart/form-data">
+							<form method="post" action="{{ URL::route('cambiar-banner')}}" enctype="multipart/form-data" class="form-img-cambio">
 								<label>Nuevo Banner</label>
-								<input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
-								<input type="file" name="nuevo_banner" required><br>
+								<div><input type="hidden" name="id_empresa" value="{{$user->empresa->id }}">
+								<input type="file" name="nuevo_banner" required><br></div>
 
-								<input type="submit" value="Actualizar" class="btn btn-info">
+								<input type="submit" value="Actualizar" class="btn btn-info btn-cambio-img">
 
 								{{ Form::token()}}
 								
