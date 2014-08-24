@@ -535,8 +535,9 @@ class UsersController extends BaseController{
 					), $remember);
 
 				if($auth){
+					$url_actual = Input::get('url');
 
-					return Redirect::intended('/');
+					return Redirect::intended($url_actual);
 				}else{
 					return Redirect::route('login')
 				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');

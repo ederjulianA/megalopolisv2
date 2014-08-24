@@ -83,7 +83,7 @@
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
-        <li><a href="{{URL::route('index')}}">Home</a> </li>
+        <li><a href="{{URL::route('index')}}">Home-</a> </li>
         <li><a href="{{URL::route('catalogo-sede', array('empresa'=>$producto->id_empresa, 'nombre_publico'=>$producto->nombre_sede))}}">{{$producto->razon_social}}</a> </li>
         <li><a href="#">{{$producto->categoria_nombre}}</a> </li>
         <li class="#">{{$producto->producto_nombre}} </li>
@@ -192,7 +192,7 @@
             @endif
               
          @else
-          <a class="link-wishlist wishlist"  href="{{URL::route('login')}}">Login</a> 
+          <a class="link-wishlist wishlist"  href="#"data-toggle="modal" data-target="#ModalLogin">Login</a> 
          @endif
          
           @if(Auth::check() && Auth::user()->tipo == 1)

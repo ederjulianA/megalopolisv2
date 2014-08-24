@@ -124,6 +124,7 @@
         <form  method="post" action="{{ URL::route('login-post')}} ">
         <div class="form-group login-username">
           <div >
+            <input type="hidden" name="url" id="url" value="{{URL::current()}}">
             <input name="email" id="login-user" class="form-control input"  size="20" placeholder="Tu email" type="email">
           </div>
         </div>
