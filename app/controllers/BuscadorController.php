@@ -32,7 +32,7 @@ class BuscadorController  extends BaseController {
 
 		// ->get();
 		
-		$producto = DB::select(DB::raw("SELECT a.precio_detal, a.cantidad, c.nombre AS categoria_nombre, p.nombre AS producto_nombre, p.imagen, p.estado, p.id, p.descripcion AS producto_descripcion, s.nombre_publico AS nombre_sede, s.direccion, s.id AS sede_id, s.telefono, sc.nombre_sub
+		$producto = DB::select(DB::raw("SELECT a.precio_detal, a.cantidad, c.nombre AS categoria_nombre, p.nombre AS producto_nombre, p.imagen, p.estado, p.id,p.slug, p.descripcion AS producto_descripcion, s.nombre_publico AS nombre_sede, s.direccion, s.id AS sede_id, s.telefono, sc.nombre_sub
 FROM producto p
 INNER JOIN almacen a ON a.producto = p.id
 INNER JOIN sedes s ON a.sede = s.id

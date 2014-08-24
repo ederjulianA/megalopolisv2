@@ -42,14 +42,14 @@ Mis Favoritos.
             @if($favoritos->count())
             		@foreach($favoritos as $fav)
              <tr class="CartProduct" id="fav-{{$fav->id}}">
-			                <td style="width:10%" class="CartProductThumb"><div> <a href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id))}}">
+			                <td style="width:10%" class="CartProductThumb"><div> <a href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id,'slug'=>$fav->slug))}}">
 			                {{HTML::image($fav->imagen, $fav->producto_nombre)}}</a> </div></td>
 			                <td style="width:40%"><div class="CartDescription">
-			                    <h4> <a href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id))}}">{{$fav->producto_nombre}} </a> </h4>
+			                    <h4> <a href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id,'slug'=>$fav->slug))}}">{{$fav->producto_nombre}} </a> </h4>
 			                    <span class="size">{{$fav->categoria_nombre}}</span>
 			                    <div class="price"> <span>${{number_format($fav->precio_detal, 0, '', '.')}}</span> </div>
 			                  </div></td>
-			                <td style="width:15%"><a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id))}}"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver producto </span> </a></td>
+			                <td style="width:15%"><a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$fav->id, 'sede'=>$fav->sede_id,'slug'=>$fav->slug))}}"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver producto </span> </a></td>
 			                <td style="width:40%" class="delete"><a title="Delete" href="{{$fav->id}}" class="remFavList"> <i class="glyphicon glyphicon-trash fa-2x"></i> </a></td>
               </tr>
 

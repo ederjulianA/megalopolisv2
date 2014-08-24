@@ -31,6 +31,18 @@
 											<input id = 'product_id' name = 'product_id' type="hidden" value="{{$productos->id}}">
 					</div>
 
+					<div >
+												<label class="">SEO SLUG: (*)</label>												
+												
+													<input id = 'seo' name = 'seo' type="text" class="" placeholder="URL amigable de tu producto" value="{{$productos->slug}}" >
+												
+												<div class="ajax-validation-form" id="prod-seo-ajax">
+														
+														</div>
+											</div><!-- /form-group -->
+
+					
+
 					<div>
 						<label>Categoria :</label>
 						<select name = 'category' id = 'category' class="">

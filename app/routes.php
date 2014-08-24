@@ -141,7 +141,7 @@ Route::get('/promos/{id}', array(
 
 
 /* RUTA descripcion de productos  */
-Route::get('/producto/{id}-{sede}', array(
+Route::get('/producto/{id}-{sede}-{slug}', array(
 		'as' => 'productos',
 		'uses' => 'ProductosController@getProducto'
 	));

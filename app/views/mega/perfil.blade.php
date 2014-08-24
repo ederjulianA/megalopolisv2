@@ -399,7 +399,7 @@
 							<div class="tab-pane fade" id="Nproducto">
 								
 								<div class="panel panel-default">
-									<form class="form-horizontal form-border" action="{{URL::route('crear-producto')}}" method="post" enctype='multipart/form-data' id="form-producto" id="form-nuevo-item" onsubmit="return enviar();">
+									<form class="form-horizontal form-border"autocomplete="off" action="{{URL::route('crear-producto')}}" method="post" enctype='multipart/form-data' id="form-producto" id="form-nuevo-item" onsubmit="return enviar();">
 										<div class="panel-heading">
 											<h2>Crear nuevo Producto</h2>
 										</div>
@@ -429,6 +429,16 @@
 													<input id = 'product_name' name = 'product_name' type="text" class="form-control input-sm" placeholder="Nombre del Producto" value="" >
 												</div><!-- /.col -->
 												<div class="ajax-validation-form" id="prod-nom-ajax">
+														
+														</div>
+											</div><!-- /form-group -->
+
+											<div class="form-group">
+												<label class="control-label col-md-2">SEO SLUG: (*)</label>												
+												<div class="col-md-10">
+													<input id = 'seo' name = 'seo' type="text" class="form-control input-sm" placeholder="URL amigable de tu producto" value="" >
+												</div><!-- /.col -->
+												<div class="ajax-validation-form" id="prod-seo-ajax">
 														
 														</div>
 											</div><!-- /form-group -->

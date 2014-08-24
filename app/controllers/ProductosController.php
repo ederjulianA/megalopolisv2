@@ -83,6 +83,7 @@ class ProductosController  extends BaseController {
 				 'e.desc_breve',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
+				 'p.slug',
 				 'p.img1',
 				 'p.img2',
 				 'p.img3',
@@ -111,6 +112,7 @@ class ProductosController  extends BaseController {
 		->select('p.nombre',
 				'p.imagen',
 				'p.id',
+				'p.slug',
 				'a.precio_detal AS precioP',
 				's.id AS sede_id'
 

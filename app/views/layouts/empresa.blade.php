@@ -324,6 +324,9 @@
 						<li>
 							<a href="{{ URL::route('index')}}">Home</a>
 						</li>
+						<li>
+							<a href="{{ URL::route('empresa-info',array('nombre_publico'=>$user->empresa->nombre_publico))}}" target="_blank">Ver empresa</a>
+						</li>
 						<li class="dropdown">
 							<a class="dropdown-toggle" id="noti_preguntas"  href="#" data-toggle="modal" data-target="#modalPreguntas">
 								<i class="fa fa-bell fa-lg"></i>

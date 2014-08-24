@@ -34,6 +34,7 @@ class SedesController extends BaseController{
 													'producto.imagen',
 													'producto.imgSmall',
 													'producto.categoria',
+													'producto.slug',
 													'producto.id',
 													'producto.descripcion AS producto_descripcion',
 													'categorias.id AS id_categoria',
@@ -77,6 +78,7 @@ class SedesController extends BaseController{
 		$producto->descripcion = Input::get('description');
 		$producto->categoria = Input::get('category');
 		$producto->subcat_id = Input::get('subcat');
+		$producto->slug = Input::get('seo');
 		$file = Input::file('imagen');
 		$file2 = Input::file('imagen2');
 		$file3 = Input::file('imagen3');

@@ -191,7 +191,7 @@ class UsersController extends BaseController{
 
 	public function favoritosUser()
 	{
-		if(!Auth::check() || Auth::user()->tipo != 1)
+		if(!Auth::check() )
 		{
 			return Redirect::to('/');
 		}else{
@@ -210,6 +210,7 @@ class UsersController extends BaseController{
 					'sedes.nombre_publico AS nombre_sede',
 					'sedes.id AS sede_id',
 					'producto.imagen',
+					'producto.slug',
 					'producto.imgSmall',
 					'producto.id',
 					'producto.descripcion AS producto_descripcion',

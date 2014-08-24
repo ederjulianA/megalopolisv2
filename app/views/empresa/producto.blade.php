@@ -12,7 +12,7 @@
 <meta property="og:title" content="{{$producto->producto_nombre}}"/>
 <meta property="og:site_name" content="tuMegalopolis"/>
 <meta property="og:description" content="{{$producto->producto_descripcion}}"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}-{{$producto->slug}}"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/{{$producto->imagen}}"/>
 
 @stop
@@ -173,7 +173,7 @@
       
       <div class="cart-actions">
         <div class="addto">
-         @if(Auth::check() && Auth::user()->tipo == 1)
+         @if(Auth::check() )
 
             @if($ship)
               <form id="form-cart-before" method="post" action="{{URL::route('form-carrito-previo')}}">
@@ -195,13 +195,13 @@
           <a class="link-wishlist wishlist"  href="#"data-toggle="modal" data-target="#ModalLogin">Login</a> 
          @endif
          
-          @if(Auth::check() && Auth::user()->tipo == 1)
+          @if(Auth::check() )
                         {{ Favs::mostrarFav(Auth::user()->id, $producto->id)}}
                         
 
                       @else
                        
-                        <a class="link-wishlist wishlist"  href="{{URL::route('login')}}">Agregar a Favoritos</a> 
+                        <a class="link-wishlist wishlist"  href="#"data-toggle="modal" data-target="#ModalLogin">Agregar a Favoritos</a> 
                       @endif
                       </div>
           
@@ -270,8 +270,8 @@
       <div class="product-share clearfix">
         <p> COMPARTE ESTE PRODUCTO </p>
         <div class="socialIcon"> 
-            <div class="fb-share-button" data-href="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}" data-width="50" data-type="button_count"></div>
-            <a href="https://twitter.com/share" data-url="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}" data-via="tumegalopolis" class="twitter-share-button" data-lang="es" data-size="large" data-hashtags="tuMegalopolis"> <i  class="fa fa-twitter"></i></a> 
+            <div class="fb-share-button" data-href="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}-{{$producto->slug}}" data-width="50" data-type="button_count"></div>
+            <a href="https://twitter.com/share" data-url="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}-{{$producto->slug}}" data-via="tumegalopolis" class="twitter-share-button" data-lang="es" data-size="large" data-hashtags="tuMegalopolis"> <i  class="fa fa-twitter"></i></a> 
            
       </div>
       <!--/.product-share--> 
@@ -288,9 +288,9 @@
 
   	@foreach($masProductos as $mp)
   			 <div class="item">
-        <div class="product"> <a class="product-image" href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id))}}"> <img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}"> </a>
+        <div class="product"> <a class="product-image" href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id,'slug'=>$mp->slug))}}"> <img src="{{asset($mp->imagen)}}" alt="{{$mp->nombre}}"> </a>
           <div class="description">
-            <h4><a href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id))}}">{{$mp->nombre}} </a></h4>
+            <h4><a href="{{URL::route('productos',array('id'=>$mp->id,'sede'=>$mp->sede_id,'slug'=>$mp->slug))}}">{{$mp->nombre}} </a></h4>
             <div class="price"> <span>${{number_format($mp->precioP, 0, '', '.')}}</span> </div>
           </div>
         </div>

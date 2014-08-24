@@ -33,6 +33,7 @@ class EmpresasController  extends BaseController {
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.categoria',
+				 'p.slug',
 				 'p.subcat_id',
 				 'p.img1',
 				 'p.img2',
@@ -251,6 +252,7 @@ class EmpresasController  extends BaseController {
 		$producto['nombre'] = Input::get('product_name');
 		$producto['id'] = Input::get('product_id');
 		$producto['categoria'] = Input::get('category');
+		$producto['slug']= Input::get('seo');
 		$producto['subcat_id'] = Input::get('subcat');
 		$producto['descripcion'] = Input::get('description');
 		

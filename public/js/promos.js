@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	cambiar_nombre();
 	validar_pass();
 
@@ -99,11 +100,11 @@ $(document).on("click","a.lista-products", function(e){
 							var produc = '';
 								       produc += '<div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">';
            produc += '<div class="product">';
-             produc += '<div class="image"> <a href="/producto/'+data[i].id+'-'+data[i].sede_id+'"><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
+             produc += '<div class="image"> <a href="/producto/'+data[i].id+'-'+data[i].sede_id+'-'+data[i].slug+' "><img src = ../'+data[i].imagen+' class="img-responsive" /></a>';
              produc +=  '<div class="promotion"> <span class="new-product"> NUEVO</span> </div>';
             produc += '</div>';
             produc += '<div class="description">';
-              produc += '<h4><a href="">'+data[i].producto_nombre+' </a></h4>';
+              produc += '<h4><a href="/producto/'+data[i].id+'-'+data[i].sede_id+'-'+data[i].slug+'">'+data[i].producto_nombre+' </a></h4>';
               produc += '<p>Preguntar Disponibilidad </p>';
               produc += ' </div>';
            produc +=  '<div class="price"> ';
@@ -111,7 +112,7 @@ $(document).on("click","a.lista-products", function(e){
                     
                   produc += '</div>';
                   produc += '<div class="action-control">';
-			produc += '<a class="btn btn-primary" href="/producto/'+data[i].id+'-'+data[i].sede_id+'"> ';
+			produc += '<a class="btn btn-primary" href="/producto/'+data[i].id+'-'+data[i].sede_id+'-'+data[i].slug+'"> ';
                      produc += '<span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> ';
                     produc +=  '</a>';
         produc += '</div>';
@@ -183,5 +184,47 @@ $(document).on("click","a.lista-products", function(e){
 		e.preventDefault();
 	});
 
+
+//FUNCION SEO SLUG PARA NUEVO PRODUCTO"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+$(document).on('keyup','#product_name', function(){
+		var product_name = ""; // create your variables
+
+
+		if($("#product_name").val()!=""){
+		product_name = $("#product_name").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();
+		}
+		$('#seo').val(product_name); 
+
+});
+
+$(document).on('change','#product_name', function(){
+		var product_name = ""; // create your variables
+		var seo ="";
+
+
+		if($("#product_name").val()!=""){
+		product_name = $("#product_name").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();
+		}
+
+		if($("#seo").val()!=""){
+		seo = $("#product_name").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();
+		}
+		$('#seo').val(product_name); 
+
+});
+
+
+
+$(document).on('keyup','#seo', function(){
+		var seo = ""; // create your variables
+
+
+		if($("#seo").val()!=""){
+		seo = $("#seo").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();
+		}
+		$('#seo').val(seo); 
+
+});
 
 	

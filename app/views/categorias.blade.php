@@ -438,11 +438,11 @@ Categoria
       @foreach($producto as  $producto)
                <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
+            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
               <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
             </div>
             <div class="description">
-              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id))}}">{{$producto->producto_nombre}} </a></h4>
+              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{$producto->producto_nombre}} </a></h4>
               <p>Preguntar Disponibilidad </p>
              <!-- <span class="size">XL / XXL / S </span> --></div>
             <div class="price"> 
@@ -450,7 +450,7 @@ Categoria
                     
                   </div>
                   <div class="action-control">
-<a class="btn btn-primary"> 
+<a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}"> 
                     <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> 
                     </a>
         </div>
