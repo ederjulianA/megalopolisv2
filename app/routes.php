@@ -505,6 +505,20 @@ Route::get('/admin', array(
 		'uses' => 'AdminController@getAdminIndex'
 	));
 
+Route::get('/admin/productos', array(
+		'as' => 'admin-productos',
+		'uses' => 'AdminController@getAdminProductos'
+	));
+
+Route::get('/admin/producto/{id}', array(
+		'as' => 'admin-productos-editar',
+		'uses' => 'AdminController@getAdminProductosEditar'
+	));
+Route::post('/admin/producto/post', array(
+		'as' => 'add-seo-slug',
+		'uses' => 'AdminController@postAdminProductosEditar'
+	));
+
 Route::get('/admin/categorias', array(
 		'as' => 'admin-categorias',
 		'uses' => 'AdminController@getAdminCategorias'

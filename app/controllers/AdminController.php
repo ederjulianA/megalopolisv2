@@ -13,6 +13,48 @@ class AdminController  extends BaseController {
 		return View::make('admin.index')->with('categorias',$categorias);
 	}
 
+	public function PostAdminProductosEditar()
+	{
+		$producto = Producto::where('id','=', Input::get('id'))->first();
+		if($producto->count())
+		{
+			$producto->slug = Input::get('seo');
+			if($producto->save())
+			{
+				return Redirect::to('/admin/productos')->with('message-alert','Se agrego seo slug correctamente');
+			}else{
+				return Redirect::to('/admin/productos')->with('message-alert','Error al agregar  seo slug :(');
+			}
+		}
+	}
+
+	public function getAdminProductos()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$productos = Producto::where('slug','=',NULL)->get();
+		return View::make('admin.productos')->with('productos',$productos);
+	}
+
+	public function getAdminProductosEditar($id)
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$producto = Producto::where('id','=',$id)->first();
+		if($producto->count())
+		{
+			return View::make('admin.editar-producto')->with('producto',$producto);
+		}
+	}
+
 
 
 	public function getUsers()

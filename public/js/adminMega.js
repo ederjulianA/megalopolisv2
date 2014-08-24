@@ -1,3 +1,6 @@
+$(document).on('ready',function(){
+	seoUrl();
+});
 $(document).on('click','.btn-categoria', function(e){
 	var id_cat = $(this).attr('href');
 	var nombre_cat = $("#cat_nombre-"+id_cat).val();
@@ -106,3 +109,30 @@ $(document).on('click','#btn-email-filtro', function(e){
 
 	e.preventDefault();
 });
+
+
+/*FUNCIONES SEO SLUG####################################*/
+
+$("#titulo").change( function(){
+// $.change() detects user input
+
+var titulo = ""; // create your variables
+
+
+if($("#titulo").val()!=""){
+titulo = $("#titulo").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();
+}
+//if the fname field is not empty
+
+
+//if the lname field is not empty
+
+$('#seo').val(titulo); 
+}); 
+
+function seoUrl()
+{
+	titulo = $("#titulo").val().toLowerCase().replace(/ +/g,'_').replace(/[ñ]/g,'n').replace(/['àáâãäåÁ']/g,'a').replace(/['èéêëÉ']/g,'e').replace(/['ìíîïÍ']/g,'i').replace(/['òóôõöÓ']/g,'o').replace(/['ùúûüÚ']/g,'u').replace(/[^a-z0-9-_]/g,'').trim();	
+	$('#seo').val(titulo); 
+
+}
