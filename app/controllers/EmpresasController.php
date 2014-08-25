@@ -352,7 +352,7 @@ class EmpresasController  extends BaseController {
 			$user = $user->first();
 			$empresa = $empresa->first();
 			$creada = strtotime($empresa->created_at);
-			$nextSummerOlympics = Carbon::createFromTimeStamp($creada)->addWeeks(3);
+			$nextSummerOlympics = Carbon::createFromTimeStamp($creada)->addMonths(3);
 			$hoy = Carbon::now();
 			$dif = $hoy->diffInDays($nextSummerOlympics,false);
 			
