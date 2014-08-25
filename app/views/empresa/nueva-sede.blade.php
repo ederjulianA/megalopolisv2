@@ -291,7 +291,7 @@
                   </div>
                   <div class="modal-body">
                     <span class="alert alert-success"> Por defecto hemos Cargado los datos de registro de tu empresa.</span>
-                    <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-sede-post')}}">
+                    <form class="form-nueva-sede" method="post" action="{{ URL::route('nueva-sede-post')}}" autocomplete="off">
                       <div class="actualizar-sede">
                         <label for="direccion">Ciudad</label>
                         <select name="ciudad" id = 'ciudad' onchange = 'return toUpdateAddress();'>

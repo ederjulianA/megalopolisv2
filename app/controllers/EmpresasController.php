@@ -2,6 +2,7 @@
 
 // import the Intervention Image Class
 use Intervention\Image\Image;
+use Carbon\Carbon;
 
 class EmpresasController  extends BaseController {
 
@@ -350,6 +351,11 @@ class EmpresasController  extends BaseController {
 		{
 			$user = $user->first();
 			$empresa = $empresa->first();
+			$creada = strtotime($empresa->created_at);
+			$nextSummerOlympics = Carbon::createFromTimeStamp($creada)->addWeeks(3);
+			$hoy = Carbon::now();
+			$dif = $hoy->diffInDays($nextSummerOlympics,false);
+			
 			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
 			$num_preguntas_null = $preguntas_null->count();
 				
@@ -358,6 +364,8 @@ class EmpresasController  extends BaseController {
 			->with('user', $user)
 			->with('num_nulls', $num_preguntas_null)
 			->with('preguntas_null', $preguntas_null)
+			->with('nextSummerOlympics',$nextSummerOlympics)
+			->with('dif',$dif)
 			->with('empresa', $empresa);
 		}
 
