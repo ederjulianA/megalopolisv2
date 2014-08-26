@@ -1,0 +1,172 @@
+header{
+	background-color: #4ec67f;
+	border-bottom: 7px solid #4bb777;
+	max-width: 100%;
+	width: 100%;
+
+
+}
+header div {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+
+}
+footer {
+	background: #eee;
+	border-top: 1px solid #E5E5E5;
+	max-width: 100%;
+	padding: 10px;
+	width: 100%;
+}
+h1{
+font-family: Garamond, serif;
+line-height: 1em;
+color: #57b587;
+font-weight:bold;
+font-size: 45px;
+text-align: center;
+
+}
+#buscador{
+	padding: 6px;
+	max-width: 100%;
+	width: 60%;
+
+}
+.btn-buscar-b{
+	background-color: #4ec67f; 
+	border-bottom: 3px solid #4bb777; 
+	color: #fff !important;
+	margin: 0 auto ;
+	padding: 6px;
+	width: 30% ;
+
+}
+.btn-crear-tienda{
+	background-color: #4bb777;
+	text-align: center;
+	width: 250px;
+	height: 200px;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.btn-crear-tienda:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+.buscador-cont{
+	margin: 15px auto;
+	max-width: 100%;
+	width: 100%;
+}
+.contenedor{
+	
+	margin: 5px auto;
+	padding: 10px;
+	width: 80%;
+}
+.contenedor h1, .contenedor img {
+	display: inline-block;
+	margin-top: 100px;
+	vertical-align: middle;
+}
+.contenedor h1{
+	width: 70%;
+
+
+}
+.contenedor img {
+	
+}
+
+.contenido{
+	max-width: 100%;
+	widows: 100%;
+}
+.paso1 .img-paso1 {
+	background-image: url(../img/bolsa.jpg);
+	background-repeat: no-repeat;
+	background-size: 90% auto;
+	
+	max-width: 100%;
+	min-height: 200px;
+	width: 100%;
+
+}
+
+.paso2 .img-paso2 {
+	background-image: url(../img/bolsa1.1.jpg);
+	background-repeat: no-repeat;
+	background-size: 90% auto;
+	
+	max-width: 100%;
+	min-height: 200px;
+	width: 100%;
+
+}
+
+.paso3 .img-paso3 {
+	background-image: url(../img/bolsa2.jpg);
+	background-repeat: no-repeat;
+	background-size: 90% auto;
+	
+	max-width: 100%;
+	min-height: 200px;
+	width: 100%;
+
+}
+
+.logo-cont{
+	width: 70%;
+	text-align: center;
+}
+
+.menu-right{
+	text-align: center;
+	width: 25%;
+	padding: 5px;
+
+}
+
+.pasos-cont{
+	max-width: 100%;
+	margin-top: 50px;
+	width: 100%;
+}
+.pasos-cont h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 33px;
+}
+
+.pasos-cont div {
+	border-right: 2px solid #ccc;
+	display: inline-block;
+	margin: 10px auto;
+	text-align: center;
+	width: 32%;
+
+}
+
+.pasos-cont div h2 {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.span-numero{
+	height: 120px;
+	background-color: #2876E4;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 25px;
+	padding: 10px;
+	margin-right: 10px;
+
+	min-width: 150px;
+	text-shadow: 1px 2px 2px rgba(0,0,0, .7);
+}

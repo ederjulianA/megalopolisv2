@@ -8,6 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>@yield('titulo')</title>
         @yield('content-header')
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <!-- Bootstrap core CSS -->
+    {{ HTML::style('bootstrap/css/bootstrap.min.css', array('media' => 'screen'))}}
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,13 +19,12 @@
        
         {{HTML::style('shop/css/normalize.css')}}
         
+        
         {{HTML::style('shop/css/main.css')}}
         {{HTML::style('shop/css/shop.css')}}
-        {{HTML::style('shop/themes/shop.min.css')}}
-
-        {{HTML::style('shop/themes/jquery.mobile.icons.min.css')}}
         
-        {{HTML::script('shop/js/vendor/modernizr-2.6.2.min.js')}}
+
+        
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -30,29 +32,48 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <header>
+            <div class="logo-cont">
+                {{HTML::image('Tshop/images/logo.png')}}
+                
+            </div>
+            <div class="menu-right">
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#nuevaCategoria">Crear Mi tienda</a>
 
-                @yield('content')
+
+                
+            </div>
+        </header>
+        <div class="contenido">
+            @yield('content')
+        </div>
+
+        <footer>
+            FOOTER
+        </footer>
+
+                
         
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- Bootstrap -->
+    {{ HTML::script('bootstrap/js/bootstrap.min.js')}}
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+   
         
         {{HTML::script('shop/js/plugins.js')}}
       
         {{HTML::script('shop/js/main.js')}}
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+        <!--<script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        </script>-->
     </body>
 </html>
