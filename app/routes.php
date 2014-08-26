@@ -563,3 +563,8 @@ Route::post('/admin/nueva-categoria', array(
 		'uses' => 'AdminController@postNuevaCat'
 ));
 
+Route::get('/about', array(
+		'as' => 'aboutUs',
+		'uses' => 'HomeController@about'
+	));
+
