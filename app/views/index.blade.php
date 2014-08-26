@@ -130,7 +130,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="parallax-content clearfix">
           <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
-          <h2 class="uppercase">Por solo un <b>ÚNICO</b> pago de $120.000</h2>
+          <h2 class="uppercase">Con un pago <b>ÚNICO</b> pago de $120.000</h2>
           <h3 > Crea tu tienda en cuestión de minutos, nosotros nos ajustamos a tus requerimientos.</h3>
           <div style="clear:both"></div>
           <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a> </div>
