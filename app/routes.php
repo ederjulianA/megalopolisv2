@@ -303,8 +303,8 @@ Route::post('/producto/info-shipping-ajax', array(
 	));
 
 /* RUTA HOME O NAVEGACION DONDE SE VISUALIZARAN LAS EMPRESAS*/
-Route::get('/navegar', array(
-		'as' => 'navegar',
+Route::get('/tiendas', array(
+		'as' => 'tiendas',
 		'uses' => 'NavegarController@getNavegar'
 	));
 //VISUALIZAR LA INFORMACION DE UNA EMPRESA SEGUN EL ID 
