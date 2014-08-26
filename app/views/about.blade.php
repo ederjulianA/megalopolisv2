@@ -97,7 +97,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
                 ¿Cuándo?
               </h3>
               <p>
-              Llevamos cerca de dos meses del lanzamiento del sitio con el programa de pioneros con el que hemos conseguido el apoyo de importantes empresas de la ciudad de Bucaramanga. Este es un proceso de aprendizaje en el que crecemos en función de los requerimientos de nuestros clientes y la satisfacción de sus necesidades. Comprar y vender online de forma sencilla e intuitiva es lo que nos mueve y nuestra motivación para seguir adelante con este proyecto.
+              Llevamos cerca de dos meses del lanzamiento del sitio con el programa de pioneros; con el que hemos conseguido el apoyo de importantes empresas de la ciudad de Bucaramanga. Este es un proceso de aprendizaje en el que crecemos en función de los requerimientos de nuestros clientes y la satisfacción de sus necesidades. Comprar y vender online de forma sencilla e intuitiva es lo que nos mueve y nuestra motivación para seguir adelante con este proyecto.
               
             </div>
             

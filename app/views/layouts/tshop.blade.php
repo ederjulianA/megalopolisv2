@@ -499,12 +499,9 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Informacion </h3>
           <ul>
+
+            <li> <a href="{{URL::route('aboutUs')}}"> Sobre Nosotros </a> </li>
             
-            <li> <a href="#"> Sobre Nosotros </a> </li>
-            
-            <li> <a href="#"> Contacto </a> </li>
-            
-            <li> <a href="#"> Terminos &amp; Condiciones</a> </li>
           </ul>
         </div>
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">

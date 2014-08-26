@@ -2592,9 +2592,12 @@ button.first {
 }
 .product-image {
 	max-width: 100%;
+	position: absolute;
+
 }
 .product-image img {
 	max-width: 100%;
+	position: absolute;
 }
 #SimilarProductSlider .product-image img {
 	max-height: 200px;

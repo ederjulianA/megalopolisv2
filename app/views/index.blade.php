@@ -33,7 +33,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="parallax-content clearfix">
               <h1 class="parallaxPrce"> Haz parte de los pioneros Megalópolis </h1>
-              <h3 > Disfruta de los beneficios de tu tienda en línea <b>COMPLETAMENTE GRATIS. </h3>
+              <h3 > Disfruta de los beneficios de tu tienda en línea </h3>
               <div style="clear:both"></div>
               <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> QUIERO SER PIONERO </a></div>
               </div>
@@ -84,109 +84,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 </div>
 <!--/.banner style2-->
 
-<div class="container main-container"> 
-  
-  <!-- Main component call to action -->
-  
-  <div class="row featuredPostContainer globalPadding style2">
-    <h3 class="section-title style2 text-center"><span>PLANES</span></h3>
-    <div id="productslider" class="owl-carousel owl-theme">
-      <div class="item">
-       <div class="product">
-          <div class="image"> {{HTML::image('Tshop/images/product/product4.jpg', 'PLAN', array('class'=>'img-responsive'))}}
-            <div class="promotion"> <span class="new-product"> $35,000</span> <!--<span class="discount">15% OFF</span>--> </div>
-          </div>
-          <div class="description">
-            <h4>PLAN BASICO</h4>
-            <p>Hasta 30 productos.</p>
-            <span class="size"></span> </div>
-          <!--<div class="price"> <span>$25.000</span> </div>-->
-        <!--  <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div> -->
-        </div>
-       </div> <!-- PLANES 1#############################################################################################################-->
-
-
-      <div class="item">
-        <div class="product">
-          <div class="image">{{HTML::image('Tshop/images/product/girl3.jpg', 'PLAN', array('class'=>'img-responsive'))}}
-            <div class="promotion"> <span class="new-product"> $50,000</span> <!--<span class="discount">15% OFF</span>--> </div>
-          </div>
-          <div class="description">
-            <h4>PLAN INTERMEDIO</h4>
-            <p>A partir de 30 productos hasta 50.</p> 
-            <span class="size"></span> </div>
-          <!--<div class="price"> <span>$25.000</span> </div>-->
-         <!-- <div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
-        </div>
-       </div> <!-- PLANES 2#############################################################################################################-->
-
-
-
-      <div class="item">
-        <div class="product">
-          <div class="image">{{HTML::image('Tshop/images/product/girl2.jpg', 'PLAN', array('class'=>'img-responsive'))}}
-            <div class="promotion"> <span class="new-product"> $85,000</span> <!--<span class="discount">15% OFF</span>--> </div>
-          </div>
-          <div class="description">
-            <h4>PLAN PROFESIONAL</h4>
-            <p>A partir de 50 productos hasta 80.</p>
-            <span class="size"></span> </div>
-          <!--<div class="price"> <span>$25.000</span> </div>-->
-          <!--<div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
-        </div>
-
-      </div><!-- PLANES 4#############################################################################################################-->
-
-
-      <div class="item">
-        <div class="product">
-          <div class="image">{{HTML::image('Tshop/images/product/girl1.jpg', 'PLAN', array('class'=>'img-responsive'))}}
-            <div class="promotion"> <span class="new-product"> $120,000</span> <!--<span class="discount">15% OFF</span>--> </div>
-          </div>
-          <div class="description">
-            <h4><a href="#">PLAN MEGA </a></h4>
-            <p>MÁS DE 80 PRODUCTOS</p>
-            <span class="size"></span> </div>
-          <!--<div class="price"> <span>$25.000</span> </div>-->
-          <!--<div class="action-control"> <a class="btn btn-primary" href="#"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Ver plan</span> </a> </div>-->
-        </div>
-
-      </div><!-- PLANES 3#############################################################################################################-->
-
-      
-      
-     
-    </div>
-    <!--/.productslider--> 
-    
-  </div>
-  <!--/.featuredPostContainer--> 
-</div>
-<!-- /main container -->
-
-<div class="parallax-section parallax-image-1">
-  <div class="container">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="parallax-content clearfix">
-          <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
-          <h2 class="uppercase">Haz parte de las tiendas virtuales</h2>
-          <h3 > Completamente <b>GRATIS</b> por tiempo limitado </h3>
-          <div style="clear:both"></div>
-          <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> REGISTRARME </a> </div>
-      </div>
-    </div>
-    <!--/.row--> 
-  </div>
-  <!--/.container--> 
-</div>
-<!--/.parallax-image-1-->
-
-<div class="container main-container"> 
-  
-  <!-- Main component call to action -->
-  
-  <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
+ <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
     <h3 class="section-title style2 text-center"><span>NUESTRAS EMPRESAS</span></h3>
     <div class="container">
       <div class="row xsResponse">
@@ -222,38 +120,30 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
   </div>
   <!--/.section-block-->
   
-  <div class="width100 section-block">
-    <h3 class="section-title"><span> BRAND</span> <a id="nextBrand" class="link pull-right carousel-nav"> <i class="fa fa-angle-right"></i></a> <a id="prevBrand" class="link pull-right carousel-nav"> <i class="fa fa-angle-left"></i> </a> </h3>
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="no-margin brand-carousel owl-carousel owl-theme">
-          <li><img src="Tshop/images/brand/s1.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/s2.png" alt="img" ></li>
-          <li><img src="Tshop/images/brand/s3.png" alt="img" ></li>
-     
-        </ul>
+  
+  <!--/.section-block--> 
+  
+
+<div class="parallax-section parallax-image-1">
+  <div class="container">
+    <div class="row ">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="parallax-content clearfix">
+          <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
+          <h2 class="uppercase">Por solo un <b>ÚNICO</b> pago de $120.000</h2>
+          <h3 > Crea tu tienda en cuestión de minutos, nosotros nos ajustamos a tus requerimientos.</h3>
+          <div style="clear:both"></div>
+          <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a> </div>
       </div>
     </div>
     <!--/.row--> 
   </div>
-  <!--/.section-block--> 
-  
+  <!--/.container--> 
 </div>
-<!--main-container-->
+<!--/.parallax-image-1--> 
 
 <div class="parallax-section parallax-image-2">
   <div class="w100 parallax-section-overley">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="parallax-content clearfix">
-            <h1 class="xlarge">  </h1>
-            <h5 class="parallaxSubtitle"> Megalópolis Company </h5>
-            <img src="Tshop/images/product/simbolo.png" alt= "img">
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
