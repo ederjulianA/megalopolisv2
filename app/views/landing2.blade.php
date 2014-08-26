@@ -20,12 +20,18 @@
             
             <div class="img-paso1"></div>
             <h2><span class="span-numero">1</span>Contacta al vendedor</h2>
+            <p class="descripcion-paso">
+              Busca tu producto y contacta al vendedor del articulo mediante sus datos de contacto o a través del sistema de preguntas
+            </p>
           </div>
 
           <div class="paso2">
             
              <div class="img-paso2"></div>
              <h2><span class="span-numero">2</span>Realiza tu pedido</h2>
+             <p class="descripcion-paso">
+               Agrega el producto a tus compras y procede a acordar el pago con el vendedor
+             </p>
               
             
             
@@ -35,6 +41,10 @@
             
             <div class="img-paso3"></div>
             <h2><span class="span-numero">3</span> Disfruta tu pedido</h2>
+            <p class="descripcion-paso">
+               Recibe tu pedido según lo acordado con el vendedor y disfruta tu compra.
+              
+            </p>
 
               
                         
