@@ -64,18 +64,18 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
           </h1>
           
           <p class="lead text-center">
-			Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online.          </p>
+		      	Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online.          </p>
           
           
           <hr class="hr hr30">
           <div class="row animated">
             <div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
-              <img class="img-responsive" src="images/site/girl1.jpg" alt="img">
+  
               <h3 class="block-title-3">
-                Consectetur adipiscing  
+                ¿Por qué Megalópolis?  
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              Nos dimos cuenta que, para una empresa particular o micro-empresas, montar sus negocios online y ofrecer sus productos era una tarea tediosa respecto a tiempos de desarrollo del sitio y costos del mismo. Por eso nace Megalópolis, que ofrece un espacio online donde se pueden crear catálogos de empresas de distintos gremios de forma fácil y sobre todo económica para sus usuarios.
               </p>
               
               
@@ -83,24 +83,21 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             </div>
             
             <div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
-              <img class="img-responsive" src="images/site/girl2.jpg" alt="img">
               <h3 class="block-title-3">
-                Lorem ipsum dolor  
+                ¿Cómo?  
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              Desarrollamos un sitio web donde ofrecemos un espacio online en el que puedes registrar tu empresa y subir tu catálogo de productos, mostrar tu catálogo en tu fan page y escalar tu negocio online. Todo esto en cuestión de minutos.
               </p>
               
             </div>
             
             <div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
-              <img class="img-responsive" src="images/site/girl3.jpg" alt="img">
               <h3 class="block-title-3">
-                Consectetur adipiscing 
+                ¿Cuándo?
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-              </p>
+              Llevamos cerca de dos meses del lanzamiento del sitio con el programa de pioneros con el que hemos conseguido el apoyo de importantes empresas de la ciudad de Bucaramanga. Este es un proceso de aprendizaje en el que crecemos en función de los requerimientos de nuestros clientes y la satisfacción de sus necesidades. Comprar y vender online de forma sencilla e intuitiva es lo que nos mueve y nuestra motivación para seguir adelante con este proyecto.
               
             </div>
             
