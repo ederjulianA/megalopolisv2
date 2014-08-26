@@ -38,10 +38,10 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="parallax-content clearfix animated ">
             <h1 class="x2large">
-              ABOUT TSHOP 
+              Megalópolis Company 
             </h1>
             <h5 class="parallaxSubtitle">
-              Lorem ipsum dolor sit amet consectetuer 
+              Tus tiendas y tus productos en línea. 
             </h5>
           </div>
         </div>
@@ -59,13 +59,12 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
         <div class="col-xs-12 col-sm-12">
           <h1 class="title-big text-center section-title-style2">
             <span >
-              About us
+              Nosotros
             </span>
           </h1>
           
           <p class="lead text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-          </p>
+			Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online.          </p>
           
           
           <hr class="hr hr30">
