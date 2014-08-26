@@ -86,4 +86,11 @@ class HomeController extends BaseController {
 		return View::make('about');
 	}
 
+
+	public function terminos()
+	{
+		return View::make('terminos');
+	}
+
+
 }

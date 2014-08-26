@@ -568,3 +568,8 @@ Route::get('/about', array(
 		'uses' => 'HomeController@aboutUs'
 	));
 
+Route::get('/terminos-condiciones', array(
+		'as' => 'terminos',
+		'uses' => 'HomeController@terminos'
+	));
+
