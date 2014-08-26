@@ -2592,9 +2592,12 @@ button.first {
 }
 .product-image {
 	max-width: 100%;
+	position: absolute;
+
 }
 .product-image img {
 	max-width: 100%;
+	position: absolute;
 }
 #SimilarProductSlider .product-image img {
 	max-height: 200px;
@@ -2861,7 +2864,7 @@ tr.CartProduct td {
 	margin-top: 28px;
 }
 .parallax-image-aboutus {
-	background: url(../../images/site/about-bg.jpg) no-repeat 50% -80px fixed;
+	background: url(../../images/site/header-about.jpg) no-repeat 50% -80px fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
