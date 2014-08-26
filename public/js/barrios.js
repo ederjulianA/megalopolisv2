@@ -247,6 +247,7 @@ $(document).on('click','#reload', function(){
 $(document).on('click','#btn-pregunta-user', function(e){
 	var pregunta_usu = $('#pregunta-usuario').val();
 	var id_empresa = $('#id_empresa').val();
+	
 	var id_user = $('#id_user').val();
 	var id_producto = $('#id_producto').val();
 	if(!pregunta_usu){

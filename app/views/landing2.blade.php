@@ -1,14 +1,14 @@
-@extends('layouts.shop')
+@extends('layouts.tshop')
 
 @section('content')
   <div class="contenedor">
-    <h1>Encuentra lo que necesitas</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
+    <h1 class="uppercase xlarge">Encuentra lo que necesitas</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
 
-      <div class="buscador-cont">
+    <div class="buscador-cont">
       <form method="get" action="{{URL::route('buscador')}}">
         
         <input type="search" name="buscador" id="buscador" value="" placeholder="Qué buscas"required>
-        <input  class="btn-buscar-b" type="submit" value="Buscar">
+        <button  class="btn btn-primary btn-small" type="submit" value=""><i class="glyphicon glyphicon-search"></i> Buscar</button>
        </form> 
         
       </div>
