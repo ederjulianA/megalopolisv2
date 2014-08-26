@@ -502,11 +502,12 @@
 
             <li> <a href="{{URL::route('aboutUs')}}"> Sobre Nosotros </a> </li>
             
+            <li> <a href="{{URL::route('terminos')}}"> Términos &amp; Condiciones</a> </li>
           </ul>
         </div>
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Mi cuenta </h3>
-          <ul>
+          <ul>  
           <li> <a href="{{URL::route('index')}}"> Home </a> </li>
             <li> <a href="{{URL::route('login')}}"> Login </a> </li>
             <li> <a href="{{URL::route('perfil')}}"> Perfil </a> </li>
