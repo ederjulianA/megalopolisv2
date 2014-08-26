@@ -78,8 +78,12 @@ class HomeController extends BaseController {
 			return View::make('landing')->with('empresas',$empresas);
 		}
 
-	
 
+	}
+
+	public function aboutUs()
+	{
+		return View::make('about');
 	}
 
 }
