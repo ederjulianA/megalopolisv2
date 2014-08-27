@@ -564,6 +564,7 @@ class EmpresasController  extends BaseController {
 			$empresa->logo = 'img/empresas/'.$filename;
 			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->barrio = 0;
+			$empresa->estado = 0;
 			$empresa->nombre_publico = Input::get('nombre_publico');
 			$empresa->desc_breve = "";
 			$empresa->desc_larga = Input::get('descripcion_larga');

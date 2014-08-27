@@ -4,6 +4,7 @@ $(document).on('ready', function() {
     preview_2();
     preview_3();
     subcatEdit();
+    estadoEmpresa();
     $('#preview').hover(
         function() {
             $(this).find('a').fadeIn();
@@ -33,6 +34,20 @@ $(document).on('ready', function() {
 
  
 });
+
+function estadoEmpresa()
+{
+    var est = $('#empresa_est').val();
+    //alert(est);
+    if(est == 0)
+    {
+        $('#wrapper').block({ 
+                message: '<div class="message-block"><h1>Tu tienda está desactivada</h1> <p>Ponte en contacto con nosotros para solucionar este problema.</p><divclass="contacto-page-block">Telefonos:  <strong>6481166</strong> --- <strong>648369866</strong> <br>emails:  <strong>soporte@tumegalopolis.com</strong> --- <strong>megalopolis.web@gmail.com</strong> <br><br><a class="btn btn-primary" href="https://www.facebook.com/pages/TuMegalopolis/726858077327682" target="_blank">FB/TuMegalopolis</a> <a class="btn btn-info" href="https://twitter.com/tumegalopolis" target="_blank">@Tumegalopolis</a></div></div>' 
+            }); 
+
+       // $("#blockPage").addClass("overlayPage");
+    }
+}
 
 function subcatEdit()
 {

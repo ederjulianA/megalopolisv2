@@ -95,6 +95,24 @@ ul.menu-sedes li {
 	position: absolute;
 	right: 3px;
 	top: 7px;
+
+}
+.contacto-page-block{
+	width: 100%;
+	padding: 10px;
+}
+
+
+
+.message-block h1{
+	font-weight: bold;
+	font-size: 30px;
+	color: red;
+	
+
+}
+.message-block p {
+	font-size: 25px;
 }
 .catalogo-header {
 	margin: 5% auto;

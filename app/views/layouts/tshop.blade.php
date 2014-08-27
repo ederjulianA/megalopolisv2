@@ -115,7 +115,7 @@
 <!-- Modal Login start -->
 @if (Auth::check())
 @else
-  <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
+ <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -354,7 +354,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
-        <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
+      <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
             <li class="megamenu-content ">
               
@@ -373,6 +373,8 @@
             </li>
           </ul>
         </li>
+
+        <li class=""> <a href="{{URL::route('tiendas')}}"> Tiendas </a> </li>
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
         <!--<li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> TIENDA <b class="caret"> </b> </a>

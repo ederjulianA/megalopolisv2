@@ -24,10 +24,11 @@ h1{
 
 }
 #buscador{
+	
 	padding: 6px;
 	margin: 0 auto;
 	max-width: 100%;
-	width: 70%;
+	width: 50%;
 
 }
 .btn-buscar-b{
@@ -65,7 +66,9 @@ h1{
 
 .buscador-cont form{
 	margin: 10% auto;
-	width: 50%;
+	text-align: center;
+	
+	width: 100%;
 }
 .contenedor{
 	background-image: url(../../Tshop/images/slider/ciudad.jpg);
@@ -219,7 +222,21 @@ h1{
 		font-style: normal;
 		margin: 10px auto;
 		width: 95%;
+		
 	}
+	.buscador-cont{
+		height: 200px;
+		
+	}
+
+	#buscador{
+	box-shadow: 1px 2px 1px rgba(0,0,0,.7);
+	padding: 4px;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 70%;
+
+}
 
 
 	

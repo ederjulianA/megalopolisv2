@@ -302,12 +302,14 @@
 <body onload="return initialize();" onunload="return GUnload();" class="overflow-hidden">
 
 
+
 	<div id="overlay" class="transparent"></div>
 
 
 
+
 <div id="wrapper" class="preload">
-	
+
 			<div id="top-nav" class="fixed skin-6">
 					<a href="{{ URL::route('index')}}" class="brand">
 						<span>Megalopolis</span>
@@ -467,9 +469,15 @@
 								<span class="menu-hover"></span>
 							</a>
 						</li>
+						
 					
 				
 					</ul>
+					<div>
+						
+						<input type="hidden" id="empresa_est" value="{{$user->empresa->estado}}">
+						
+					</div>
 					
 					<div class="alert alert-info">
 							@if(Session::has('message-alert'))
@@ -641,6 +649,8 @@
 
 	<!-- Promos -->
 	{{ HTML::script('js/promos.js')}}
+
+	{{ HTML::script('js/blockUI.js')}}
 
 	
 

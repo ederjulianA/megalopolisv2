@@ -51,7 +51,7 @@
 						<div class="col-md-4">
 							<h2>Banner</h2>
 							<p>Este banner será desplegado en todas las sedes de tu empresa,  es la forma de llamar la atención de los usuarios, se creativo. Te recomendamos una imagen en formato (jpg) con las siguientes dimensiones: 850x300.
-							<strong>fecha de registro{{$empresa->created_at}} Temina el  {{$nextSummerOlympics}}---Numero de dias restantes :{{$dif}}</strong>
+							<!--<strong>fecha de registro{{$empresa->created_at}} Temina el  {{$nextSummerOlympics}}---Numero de dias restantes :{{$dif}}</strong>-->
 							</p>
 							{{ HTML::image($user->empresa->banner,'banner')}}
 							
