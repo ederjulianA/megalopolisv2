@@ -65,7 +65,7 @@ class AdminController  extends BaseController {
 			return Redirect::to('/');
 		}
 
-		$users = User::where('id','>',0)->orderBy('id','desc')->get();
+		$users = User::where('id','>',0)->orderBy('id','desc')->paginate(3);
 		$numUsers = $users->count();
 
 		return View::make('admin.users')->with('users',$users)->with('numUsers',$numUsers);

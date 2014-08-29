@@ -25,11 +25,11 @@ class CategoriasController  extends BaseController {
 				 's.direccion',
 				 's.telefono',
 				 'sc.nombre_sub'
-			 )->where('p.categoria','=',$id)->where('e.estado','=','1')->get();
+			 )->where('p.categoria','=',$id)->where('e.estado','=','1')->paginate(9);
 
 		$numProductos = count($producto);
 
-		return View::make('categorias')->with('categorias',$categorias)->with('cat',$cat)->with('numPro',$numProductos)->with('producto',$producto);
+		return View::make('categorias')->with('categorias',$categorias)->with('cat',$cat)->with('numPro',$numProductos)->with('productos',$producto);
 
 	}
 

@@ -434,9 +434,10 @@ Categoria
         </div>
       </div> <!--/.productFilter-->
    <div class="row  categoryProduct xsResponse clearfix productos-container">
-
-      @foreach($producto as  $producto)
-               <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
+   
+   @foreach(array_chunk($productos->getCollection()->all(),3) as $row)
+      @foreach($row as  $producto)
+        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
             <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
               <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
@@ -457,6 +458,10 @@ Categoria
           </div>
         </div><!--/.item-->
       @endforeach
+
+     @endforeach 
+
+ 
     
       
      
@@ -475,13 +480,11 @@ Categoria
     </div> <!--/.categoryProduct || product content end-->
       
       <div class="w100 categoryFooter">
-        <div class="pagination pull-left no-margin-top">
-          <ul class="pagination no-margin-top">
-            <li><a href="#">«</a></li>
-            <li class="active"><a href="#">1</a></li>
+        
+            {{$productos->links()}}
             
-          </ul>
-        </div>
+          
+        
         <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
           <p>Resultados</p>
         </div>
