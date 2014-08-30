@@ -59,6 +59,7 @@ AND e.estado = 1
  "));*/
 		
 		$numPro = count($producto);
+		$pagination = $producto->appends(array('buscador'=>$keyword));
 
 
 
@@ -66,7 +67,7 @@ AND e.estado = 1
 		//$pro2 =Producto::whereRaw('MATCH (imagen,nombre) AGAINST (?)' , array($keyword))->get();
 
 		
-			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);
+			return View::make('buscador')->with('keyword',$keyword)->with('pagination',$pagination)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);
 
 
 		

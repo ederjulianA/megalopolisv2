@@ -46,14 +46,28 @@ class ProductosController  extends BaseController {
 				 'sc.nombre_sub'
 			 )
 		 ->where('p.id','=',Input::get('id_producto'))->where('p.estado','=',1)->first();
+		  $almacen = Almacen::where('producto','=',Input::get('id_producto'))->first();
+		  $cantidadActual = $almacen->cantidad;
+		  $nuevaCantidad = ($cantidadActual - Input::get('cantidad'));
+		  $almacen->cantidad = $nuevaCantidad;
 
-			if($compra->save()){
+		  $empresaVenta = Empresa::where('id','=',Input::get('id_empresa'))->first();
+
+
+			if($compra->save() && $almacen->save()){
 				$comprador = User::where('id','=',Input::get('id_comprador'))->first();
 				$email_comprador = $comprador->email;
 				$comprador_name= $comprador->username;
 				$producto_nombre = $producto->producto_nombre;
 				$empresa = $producto->razon_social;
 				$valor_unitario = $compra->valor_unitario;
+				$empresaNombre = $empresaVenta->razon_social;
+
+				Mail::send('emails.auth.vendedor', array('link' => URL::route('mega-ventas'), 'comprador'=>$comprador_name,'cantidad'=>$compra->cantidad,'valor_total'=>$compra->valor_total,'valor_unitario'=>$valor_unitario,'empresa'=>$empresa,'producto'=>$producto_nombre), function($message) use ($empresaVenta){
+						$message->to($empresaVenta->user->email, $empresaVenta->razon_social)->subject('Venta  en Megalópolis');
+					});
+
+
 				Mail::send('emails.auth.comprador', array('link' => URL::route('listOrders'), 'comprador'=>$comprador_name,'cantidad'=>$compra->cantidad,'valor_total'=>$compra->valor_total,'valor_unitario'=>$valor_unitario,'empresa'=>$empresa,'producto'=>$producto_nombre), function($message) use ($comprador){
 						$message->to($comprador->email, $comprador->username)->subject('Compra en Megalópolis');
 					});

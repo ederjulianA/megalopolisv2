@@ -478,7 +478,7 @@ Buscar: {{$keyword}}
       
       <div class="w100 categoryFooter">
         <div class="pagination pull-left no-margin-top">
-          {{$productos->appends(['buscador'=>$keyword])->links()}}
+          {{$productos->appends(Request::only('buscador'))->links()}}
         </div>
         <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
           <p>Resultados</p>
