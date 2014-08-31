@@ -87,32 +87,37 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
  <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
     <h3 class="section-title style2 text-center"><span>NUESTRAS EMPRESAS</span></h3>
     <div class="container">
-      <div class="row xsResponse">
-      @foreach($empresas as $empresa)
-          <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-          <div class="product">
-            <div class="image"> <a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{HTML::image($empresa->logo, 'img', array('class'=>'img-responsive'))}}</a>
-            </div>
-            <div class="description">
-              <h4><a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{$empresa->razon_social}}</a></h4>
-              <p>
-                  @if($empresa->desc_larga == "")
-                        {{$empresa->desc_breve}}
-                    @else
-                      {{$empresa->desc_larga}}
-                    @endif
 
-               </p></div>
-            <!--<div class="discount plan"  > <span ></span> </div>-->
+    @foreach(array_chunk($empresas->all(), 4) as $row)
+      <div class="row xsResponse">
+      @foreach($row as $empresa)
+          <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+              <div class="product">
+                <div class="image"> <a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{HTML::image($empresa->logo, 'img', array('class'=>'img-responsive'))}}</a>
+                </div>
+                <div class="description">
+                  <h4><a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{$empresa->razon_social}}</a></h4>
+                  <p>
+                      @if($empresa->desc_larga == "")
+                            {{$empresa->desc_breve}}
+                        @else
+                          {{$empresa->desc_larga}}
+                        @endif
+
+                   </p></div>
+                <!--<div class="discount plan"  > <span ></span> </div>-->
+              </div>
           </div>
-        </div>
-        <!--/.item-->
+            <!--/.item-->
       @endforeach
+      </div>
+    <!--/.container--> 
+
+     @endforeach 
         
        
 
-    </div>
-    <!--/.container--> 
+    
   </div>
   <!--/.featuredPostContainer-->
     
