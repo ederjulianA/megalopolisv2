@@ -8,7 +8,10 @@ class PasswordController extends BaseController {
 
   public function request()
 	{
-	  $credentials = array('email' => Input::get('email'), 'password' => Input::get('password'));
+	  //$credentials = array('email' => Input::get('email'), 'password' => Input::get('password'));
+		 $credentials = Input::only(
+      'email', 'password', 'password_confirmation', 'token'
+    );
 	 
 	  return Password::remind($credentials);
 	}
@@ -20,21 +23,27 @@ class PasswordController extends BaseController {
 }
 
 
-public function update()
-{
-  $credentials = array('email' => Input::get('email'),'password'=> Input::get('password'), 'password_confirmation'=> Input::get('password_confirmation'),'token'=> Input::get('token'));
- 
-  return Password::reset($credentials, function($user, $password)
-  {
-    $user->password = Hash::make($password);
- 
-    if($user->save())
- {
-    return Redirect::to('login')->with('message-alert', 'Your password has been reset');
+	public function update()
+	{
+	  $credentials = array('email' => Input::get('email'),'password'=> Input::get('password'), 'password_confirmation'=> Input::get('password_confirmation'),'token'=> Input::get('token'));
+	 
+	  return Password::reset($credentials, function($user, $password)
+	  {
+	    $user->password = Hash::make($password);
+	 
+	    $user->save();
+	 
+	    
 
-   }
-  });
-}
+	   
+	  });
+
+	    return Redirect::to('/login')->with('message-alert', 'Your password has been reset');
+
+
+	
+  
+	}
 
 
 

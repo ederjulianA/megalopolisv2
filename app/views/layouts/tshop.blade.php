@@ -156,7 +156,7 @@
       </div>
       <div class="modal-footer">
         <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Registarte. </a> <br>
-          <a href="forgot-password.html" > ¿Olvidaste tu contraseña? </a> </p>
+          <a href="{{URL::route('recuperar-cuenta')}}" > ¿Olvidaste tu contraseña? </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 

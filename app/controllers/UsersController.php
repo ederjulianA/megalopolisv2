@@ -250,6 +250,10 @@ class UsersController extends BaseController{
 
 	public function getOlvidoPass()
 	{
+		if(Auth::check())
+		{
+			return Redirect::to('/')->with('message-alert','Ya estas logueado :)');
+		}
 		return View::make('mega.olvidoPass');
 	}
 
@@ -281,7 +285,7 @@ class UsersController extends BaseController{
 				$user->password_temp = Hash::make($password);
 
 				if($user->save()){
-					Mail::send('emails.auth.recuperar', array('link' => URL::route('recuperar-cuenta-code', $code),'username' => $user->username, 'password' => $password), function($message) use($user){
+					Mail::send('emails.auth.recuperarMega', array('link' => URL::route('recuperar-cuenta-code', $code),'username' => $user->username, 'password' => $password), function($message) use($user){
 				    		$message->to($user->email, $user->username)->subject("Tu nueva contrasena");
 				    	});
 					return Redirect::route('recuperar-cuenta')

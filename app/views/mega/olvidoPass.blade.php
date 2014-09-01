@@ -11,6 +11,17 @@ Megalopolis | Recuperar Cuenta
 
 @section('content')
 		<div class="container main-container headerOffset">
+    @if(Session::has('message-alert'))
+
+            <div class="alert alert-warning alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Mensaje</strong> {{Session::get('message-alert')}}
+            </div>
+
+            <!--<p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
+                
+            </p>-->
+        @endif
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
