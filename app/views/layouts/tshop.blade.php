@@ -534,7 +534,7 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p class="pull-left"> &copy; Megalopolis 2014. Todos los derechos reservados. </p>
+      <p class="pull-left"> &copy; Megalópolis 2014. Todos los derechos reservados. </p>
       <!--<div class="pull-right paymentMethodImg"> {{HTML::image('Tshop/images/site/payment/master_card.png', 'master_card', array('class'=>'pull-right','height'=>'30'))}}
       {{HTML::image('Tshop/images/site/payment/paypal.png', 'paypal', array('class'=>'pull-right','height'=>'30'))}} <!-- <img height="30" class="pull-right" src="Tshop/images/site/payment/american_express_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/discover_network_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/google_wallet.png" alt="img" >--> </div>
     </div>

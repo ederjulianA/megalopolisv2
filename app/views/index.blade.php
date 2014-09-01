@@ -18,6 +18,17 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 
 @section('content')
   <div class="contenedor">
+     @if(Session::has('message-alert'))
+
+            <div class="alert alert-warning alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Mensaje</strong> {{Session::get('message-alert')}}
+            </div>
+
+            <!--<p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
+                
+            </p>-->
+        @endif
     <h1 class="uppercase xlarge">Encuentra lo que necesitas</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
 
     <div class="buscador-cont">

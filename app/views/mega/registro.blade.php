@@ -86,7 +86,7 @@ Registro Megalopolis ||
             <div class="form-group">
               <p><a title="Recover your forgotten password" href="{{URL::route('recuperar-cuenta')}}">Olvidaste tu contraseña? </a></p>
             </div>
-            <input type="submit" class="btn btn-primary" value="Iniciar Sesion">
+            <input type="submit" class="btn btn-primary" value="REGISTRAME">
             {{Form::token()}}
           </form>
         </div>
