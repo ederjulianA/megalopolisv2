@@ -84,13 +84,15 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
 </div>
 <!--/.banner style2-->
 
+<div class="container main-container"> 
+
  <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
     <h3 class="section-title style2 text-center"><span>NUESTRAS EMPRESAS</span></h3>
     <div class="container">
 
-    @foreach(array_chunk($empresas->all(), 4) as $row)
+    
       <div class="row xsResponse">
-      @foreach($row as $empresa)
+      @foreach($empresas as $empresa)
           <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
               <div class="product">
                 <div class="image"> <a href="{{URL::route('empresa-info', array('nombre_publico'=>$empresa->nombre_publico))}}">{{HTML::image($empresa->logo, 'img', array('class'=>'img-responsive'))}}</a>
@@ -113,20 +115,22 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       </div>
     <!--/.container--> 
 
-     @endforeach 
+    
         
        
 
-    
-  </div>
-  <!--/.featuredPostContainer-->
-    
-    <!--/.row--> 
-  </div>
-  <!--/.section-block-->
+        
+        </div>
+      <!--/.featuredPostContainer-->
+        
+        <!--/.row--> 
+      </div>
+      <!--/.section-block-->
   
   
-  <!--/.section-block--> 
+      <!--/.section-block--> 
+
+</div>
   
 
 <div class="parallax-section parallax-image-1">

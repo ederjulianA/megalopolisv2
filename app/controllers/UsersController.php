@@ -377,7 +377,7 @@ class UsersController extends BaseController{
 			
 			if($user->save())
 			{
-					Mail::send('emails.auth.activate', array('link' => URL::route('activar-cuenta',$codigo_activacion), 'username'=>$user->username, 'pass' => Input::get('password'), 'email' =>Input::get('email')), function($message) use ($user){
+					Mail::send('emails.auth.activateMega', array('link' => URL::route('activar-cuenta',$codigo_activacion), 'username'=>$user->username, 'pass' => Input::get('password'), 'email' =>Input::get('email')), function($message) use ($user){
 						$message->to($user->email, $user->username)->subject('Activa tu cuenta');
 					});
 
