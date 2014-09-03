@@ -196,6 +196,11 @@ Route::get('/catalogo/{empresa}-{nombre_publico}', array(
 		'uses' => 'SedesController@getCatalogo'
 	));
 
+Route::get('/catalogo/{empresa}-{nombre_publico}/{slug}', array(
+		'as' => 'catalogo-sede-cat',
+		'uses' => 'SedesController@getCatalogoCat'
+	));
+
 /*FUNCION PARA CANCELAR LA SUSCRIPCION DE UN USUARIO A UNA EMPRESA*/
 Route::post('/cancelar-suscripcion', array(
 		'as' => 'cancelar-suscripcion-user',
@@ -536,13 +541,28 @@ Route::get('/admin/productos', array(
 		'uses' => 'AdminController@getAdminProductos'
 	));
 
+Route::get('/admin/categoriaSlug', array(
+		'as' => 'admin-cate',
+		'uses' => 'AdminController@getCategoriaSlug'
+	));
+
 Route::get('/admin/producto/{id}', array(
 		'as' => 'admin-productos-editar',
 		'uses' => 'AdminController@getAdminProductosEditar'
 	));
+
+Route::get('/admin/cate/{id}', array(
+		'as' => 'admin-cate-editar',
+		'uses' => 'AdminController@getAdminCatesEditar'
+	));
 Route::post('/admin/producto/post', array(
 		'as' => 'add-seo-slug',
 		'uses' => 'AdminController@postAdminProductosEditar'
+	));
+
+Route::post('/admin/cate/post', array(
+		'as' => 'add-seo-slug-cat',
+		'uses' => 'AdminController@postAdminCateEditar'
 	));
 
 Route::get('/admin/categorias', array(

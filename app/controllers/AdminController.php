@@ -28,6 +28,25 @@ class AdminController  extends BaseController {
 		}
 	}
 
+
+	public function postAdminCateEditar()
+	{
+		$producto = Categoria::where('id','=', Input::get('id'))->first();
+		if($producto->count())
+		{
+			$producto->slug = Input::get('seo');
+			if($producto->save())
+			{
+				return Redirect::to('/admin/categoriaSlug')->with('message-alert','Se agrego seo slug correctamente');
+			}else{
+				return Redirect::to('/admin/categoriaSlug')->with('message-alert','Error al agregar  seo slug :(');
+			}
+		}
+
+	}
+
+
+
 	public function getAdminProductos()
 	{
 		if(!Auth::check() || Auth::user()->isadmin != 1)
@@ -38,6 +57,34 @@ class AdminController  extends BaseController {
 
 		$productos = Producto::where('slug','=',NULL)->get();
 		return View::make('admin.productos')->with('productos',$productos);
+	}
+
+
+	public function getCategoriaSlug()
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$categorias = Categoria::where('slug','=',NULL)->get();
+		return View::make('admin.cateSlug')->with('categorias',$categorias);
+	}
+
+	public function getAdminCatesEditar($id)
+	{
+		if(!Auth::check() || Auth::user()->isadmin != 1)
+		{
+
+			return Redirect::to('/');
+		}
+
+		$producto = Categoria::where('id','=',$id)->first();
+		if($producto->count())
+		{
+			return View::make('admin.editar-cate')->with('producto',$producto);
+		}
 	}
 
 	public function getAdminProductosEditar($id)

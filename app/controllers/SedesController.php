@@ -39,7 +39,7 @@ class SedesController extends BaseController{
 													'producto.descripcion AS producto_descripcion',
 													'categorias.id AS id_categoria',
 													'categorias.nombre AS categoria_nombre',
-													'almacen.cantidad')->where('estado','=',1)->get();
+													'almacen.cantidad')->where('estado','=',1)->paginate(9);
 			$num_productos = $productos->count();
 			
 			foreach($productos as $key => $producto) {
@@ -54,6 +54,7 @@ class SedesController extends BaseController{
 				->join('sedes as s','a.sede','=','s.id')
 				->select('c.id AS id_categoria_cat',
 						'c.nombre AS nombre_categoria_cat',
+						'c.slug AS slug_cat',
 						's.id'
 					)->where('s.id','=',$sede->id)->distinct()->get();
 				
@@ -69,6 +70,78 @@ class SedesController extends BaseController{
 		}else{
 			return Redirect::to('/')->with('message-alert','No hemos encontrado el catalogo solicitado');
 		}
+	}
+
+	public function getCatalogoCat($empresa,$nombre_publico,$slug)
+	{
+			$sede = Sede::where('nombre_publico',"=", $nombre_publico)->where('empresa_id','=',$empresa)->get();
+			$cateActual = Categoria::where('slug','=',$slug)->first();
+
+
+		if($sede->count()){
+			$sede = $sede->first();
+			$empresaid = $sede->empresa->id;
+			$empresa = Empresa::where('id','=',$empresaid)->first();
+
+			if($empresa->estado==0){
+				return Redirect::to('/empresa/'.$empresa->nombre_publico);
+			}
+
+			$suscriptores = DB::table('user_subs as us')->join('empresas as e','us.empresa','=','e.id')
+			->select('e.id')
+			->where('us.empresa','=', $empresaid)->get();
+
+			$num_suscriptores = count($suscriptores);
+			$num_promos = $sede->promocion->count();
+
+
+			$productos = Producto::where('sede','=',$sede->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
+								
+													->join('categorias', 'producto.categoria', '=', 'categorias.id')
+													->select('producto.nombre AS producto_nombre',
+													'almacen.precio_detal',
+													'producto.imagen',
+													'producto.imgSmall',
+													'producto.categoria',
+													'producto.slug',
+													'producto.id',
+													'producto.descripcion AS producto_descripcion',
+													'categorias.id AS id_categoria',
+													
+													
+													'almacen.cantidad')->where('categorias.slug','=',$slug)->where('estado','=',1)->paginate(9);
+			$num_productos = $productos->count();
+			
+			foreach($productos as $key => $producto) {
+			
+				$tags = Tag::where('producto','=',$producto->id)->get();
+				$producto->tags = $tags;
+				
+				
+			}
+			$cat2 = DB::table('categorias as c')->join('producto as p','p.categoria','=','c.id')
+				->join('almacen as a','a.producto','=','p.id')
+				->join('sedes as s','a.sede','=','s.id')
+				->select('c.id AS id_categoria_cat',
+						'c.nombre AS nombre_categoria_cat',
+						'c.slug AS slug_cat',
+						's.id'
+					)->where('s.id','=',$sede->id)->distinct()->get();
+				
+			
+
+			return View::make('catalogoCategoria')->with('numSusc', $num_suscriptores)
+			->with('sede',$sede)
+			->with('categorias',$cat2)
+			->with('cateActual',$cateActual)
+			//->with('categorias', Categoria::all())
+			->with('num_promos', $num_promos)
+			->with('productos', $productos)
+			->with('num_productos',$num_productos);
+		}else{
+			return Redirect::to('/')->with('message-alert','No hemos encontrado el catalogo solicitado');
+		}
+
 	}
 
 	public function postCrearproducto() {

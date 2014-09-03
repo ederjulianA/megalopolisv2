@@ -43,7 +43,9 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
         <li><a href="{{URL::route('index')}}">Home</a> </li>
         <li><a href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a> </li>
         
-        <li class="active">{{$sede->nombre_publico}} </li>
+        
+
+        <li class="active">{{$cateActual->nombre}} </li>
       </ul>
     </div>
   </div>  <!-- /.row  --> 

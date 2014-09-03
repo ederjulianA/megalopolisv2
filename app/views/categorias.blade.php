@@ -78,6 +78,14 @@ Categoria
 
                @foreach($categorias as $categoria)
                      <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('categorias-producto', array('id'=>$categoria->id))}}"> <span class="badge pull-right">N</span> {{$categoria->nombre}} </a>
+                        <ul class="category-level-2 dropdown-menu-tree">
+                        @foreach($categoria->subcategoria as $subcat)
+                            <li class="dropdown-tree"> <a class="dropdown-tree-a"  href="#"> {{$subcat->nombre_sub}}</a>
+                        @endforeach    
+                        </li>
+                          
+                        </ul>
+                     </li>
                 @endforeach
                
                   <!--<ul class="category-level-2 dropdown-menu-tree">
