@@ -44,6 +44,8 @@
 {{ HTML::style('Tshop/assets/css/jquery.mCustomScrollbar.css', array('media' => 'screen'))}}
 
 {{HTML::style('shop/css/shop.css')}}
+
+{{HTML::style('css/preguntas.css')}}
 <!-- Just for debugging purposes. -->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

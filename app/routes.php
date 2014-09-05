@@ -369,6 +369,14 @@ Route::get('/perfil', array(
 		'uses'=> 'UsersController@perfilUser1'
 	));
 
+
+
+/* Vista de las preguntas de usuario*/
+Route::get('/perfil/preguntas', array(
+		'as' => 'perfil-preguntas',
+		'uses'=> 'UsersController@getPreguntas'
+	));
+
 /* LISTA DE ORDENES*/
 Route::get('/lista-ordenes', array(
 		'as' => 'listOrders',

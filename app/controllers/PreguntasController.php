@@ -12,7 +12,7 @@ class PreguntasController extends BaseController {
 			$user = User::where('id','=',Input::get('user_id'))->first();
 			$usuario = $user->username;
 
-			Mail::send('emails.auth.respuesta', array('link' => URL::route('perfil'),'usuario'=>$usuario,'pregunta'=>$pre, 'respuesta'=>$res), function($message) use ($user){
+			Mail::send('emails.auth.respuestaMega', array('link' => URL::route('perfil-preguntas'),'usuario'=>$usuario,'pregunta'=>$pre, 'respuesta'=>$res), function($message) use ($user){
 						$message->to($user->email, $user->username)->subject('Respuesta a tu pregunta en Megalopolis');
 					});
 

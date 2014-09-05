@@ -29,6 +29,32 @@ class UsersController extends BaseController{
 		return View::make('mega.address')->with('ciudades',$ciudades)->with('ship',$ship);
 	}
 
+
+	public function getPreguntas()
+	{
+		if(!Auth::check())
+		{
+			return Redirect::to('/')->with('message-alert','Debes iniciar sesión para acceder a este contenido');
+		}
+		$idUser = Auth::user()->id;
+
+		$preguntas = DB::table('preguntas as p')->join('empresas as e','p.empresa_id','=','e.id')
+				->join('users as u','p.user_id','=','u.id')
+				->join('producto as pro','p.id_producto','=','pro.id')
+				->select('p.pregunta',
+						'p.respuesta',
+						'pro.nombre',
+						'pro.imagen',
+						'p.created_at',
+						'e.razon_social AS nombre_publico_empresa'
+
+					)->where('p.user_id','=',$idUser)->where('p.id_producto','>',0)->orderBy('p.created_at','desc')->get();
+
+				$num_preguntas = count($preguntas);
+
+				return View::make('mega.preguntas')->with('preguntas',$preguntas)->with('num_preguntas',$num_preguntas);
+	}
+
 	public function PostDireccionUser()
 	{
 		$id_user = Auth::user()->id;

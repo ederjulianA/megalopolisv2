@@ -127,7 +127,7 @@
       </div>
       
       <div class="details-description">
-        <p>{{$producto->desc_breve}}. </p>
+        <p>{{$producto->producto_descripcion}}. </p>
       </div>
       
       <!--<div class="color-details"> 
@@ -230,7 +230,14 @@
           		{{$producto->producto_descripcion}}
           </div>
           <div class="tab-pane" id="size"> 
-          	{{$producto->desc_breve}}
+            dirección : {{$producto->direccion_empresa}}<br>
+            Telefono : <strong>{{$producto->telefono}}</strong><br>
+            email: <strong>{{$producto->email_empresa}}</strong><br>
+            @if($producto->desc_breve_empresa == "")
+              {{$producto->desc_larga}}
+            @else
+          	{{$producto->desc_breve_empresa}}
+            @endif
           </div>
           
           <div class="tab-pane" id="shipping">
@@ -241,16 +248,7 @@
               <col style="width:33%">
               </colgroup>
               <tbody>
-                <tr>
-                  <td>Normal</td>
-                  <td>1-5 Dias habiles</td>
-                  <td>$7,000</td>
-                </tr>
-                <tr>
-                  <td>Dos dias</td>
-                  <td>2 dias habiles</td>
-                  <td>$15,000</td>
-                </tr>
+              
                
               </tbody>
               <tfoot>

@@ -87,6 +87,7 @@ class ProductosController  extends BaseController {
 		 ->join('categorias as c','p.categoria','=','c.id')
 		 ->join('subcategorias as sc','p.subcat_id','=','sc.id')
 		 ->join('empresas as e', 's.empresa_id','=','e.id')
+		 ->join('users as u', 'e.user_id','=','u.id')
 		 ->select('a.precio_detal',
 				 'a.cantidad',
 				 'e.estado AS estado_empresa',
@@ -94,7 +95,10 @@ class ProductosController  extends BaseController {
 				 'c.nombre AS categoria_nombre',
 				 'e.razon_social',
 				 'e.nombre_publico AS nombre_publico_empresa',
-				 'e.desc_breve',
+				 'e.desc_breve AS desc_breve_empresa',
+				 'e.desc_larga',
+				 'e.direccion_principal AS direccion_empresa',
+				 'e.telefono',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.slug',
@@ -108,7 +112,8 @@ class ProductosController  extends BaseController {
 				 's.direccion',
 				 's.id AS sede_id',
 				 's.telefono',
-				 'sc.nombre_sub'
+				 'sc.nombre_sub',
+				 'u.email AS email_empresa'
 			 )
 		 ->where('p.id','=',$id)->where('p.estado','=',1)->first();
 		
