@@ -108,7 +108,7 @@
                                  
                                 </div></td>
                               <td class="delete"><div class="price ">${{number_format($producto->precio_detal, 0, '', '.')}} </div></td>
-                              <td class="hidden-xs"><input type="number" class="integer" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" ></td>
+                              <td class="hidden-xs"><input type="number" class="integer" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" min="1" ></td>
                               <td class="hidden-xs">0</td>
                               <td class="price"><span id="subtotal">${{number_format($producto->precio_detal, 0, '', '.')}}</span></td>
                               <input type="hidden" id="precio_unitario" name="precio_unico" value="{{$producto->precio_detal}}">

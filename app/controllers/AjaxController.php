@@ -164,7 +164,7 @@ Class AjaxController  extends BaseController {
 				$producto_nombre = $producto->nombre;
 				$img = $producto->imagen;
 				$usuario = $user->username;
-				Mail::send('emails.auth.pregunta', array('link' => URL::route('mega-perfil'), 'username'=>$empresa_nombre,'usuario'=>$usuario,'pregunta'=>$pregunta,'pro_nombre' => $producto_nombre,'img'=>$img), function($message) use ($empresa){
+				Mail::send('emails.auth.preguntaMega', array('link' => URL::route('mega-perfil'), 'username'=>$empresa_nombre,'usuario'=>$usuario,'pregunta'=>$pregunta,'pro_nombre' => $producto_nombre,'img'=>$img), function($message) use ($empresa){
 						$message->to($empresa->user->email, $empresa->nombre_publico)->subject('Nueva Pregunta');
 					});
 				return Response::json($preg);

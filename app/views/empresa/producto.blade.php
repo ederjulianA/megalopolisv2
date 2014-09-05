@@ -181,18 +181,18 @@
                   <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
                   <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
 
-                  <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">Contacto</button>
+                  <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">COMPRAR</button>
              </form>
 
 
             @else
 
-            <button class="button btn-cart cart first" data-toggle="modal" data-target="#infoshipping"> CONTACTO</button>
+            <button class="button btn-cart cart first" data-toggle="modal" data-target="#infoshipping"> COMPRAR</button>
 
             @endif
               
          @else
-          <a class="link-wishlist wishlist"  href="#"data-toggle="modal" data-target="#ModalLogin">Login</a> 
+          <button class="button btn-cart cart first"  href="#"data-toggle="modal" data-target="#ModalLogin">COMPRAR</button> 
          @endif
          
           @if(Auth::check() )
