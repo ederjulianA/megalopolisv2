@@ -264,8 +264,9 @@ class EmpresasController  extends BaseController {
 		if(isset($imagen)){
 			File::delete($oldPro->imagen);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
-			Image::make($imagen->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG.".jpg";
+			Image::make($imagen->getRealPath())->resizeCanvas(320, 300, null, true, '#fff')->save(public_path().'/img/products/'.$filename);
+			//Image::make($imagen->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			//grab(1014, 1200)
 			$producto['imagen'] = 'img/products/'.$filename;
 		}
@@ -273,8 +274,9 @@ class EmpresasController  extends BaseController {
 		if(isset($imagen2)){
 			File::delete($oldPro->img1);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
-			Image::make($imagen2->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG.".jpg";
+			Image::make($imagen2->getRealPath())->resizeCanvas(400, 400, null, true, '#fff')->save(public_path().'/img/products/'.$filename);
+			//Image::make($imagen2->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			
 			$producto['img1'] = 'img/products/'.$filename;
 		}
@@ -282,8 +284,9 @@ class EmpresasController  extends BaseController {
 		if(isset($imagen3)){
 			File::delete($oldPro->img2);
 			$codigoIMG = str_random(13);
-			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-";
-			Image::make($imagen3->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
+			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG.".jpg";
+			Image::make($imagen3->getRealPath())->resizeCanvas(400, 400, null, true, '#fff')->save(public_path().'/img/products/'.$filename);
+			//Image::make($imagen3->getRealPath())->resize(null,850 , function($constraint){ $constraint->aspectRatio();})->save(public_path().'/img/products/'.$filename);
 			
 			$producto['img2'] = 'img/products/'.$filename;
 		}

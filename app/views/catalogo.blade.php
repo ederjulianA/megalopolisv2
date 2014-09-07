@@ -468,8 +468,8 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       @foreach($row as $key => $producto)
                <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
-              <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
+            <div class="imagene"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
+              <div class="promotion">  </div>
             </div>
             <div class="description">
               <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{$producto->producto_nombre}} </a></h4>
@@ -491,7 +491,22 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
      @endforeach 
     
       
-     
+     <style type="text/css">
+        .imagene{
+          
+          
+          height: 220px;
+          width: 100%;
+        }
+        .imagene img {
+          height: 100%;
+          text-align: center;
+          
+          margin: 0 auto;
+          width: auto;
+          max-width: 100%;
+        }
+     </style>
        
      
      

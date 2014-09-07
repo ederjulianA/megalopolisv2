@@ -18,6 +18,7 @@ class CategoriasController  extends BaseController {
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.id',
+				 'p.estado',
 				 'p.slug',
 				 'p.descripcion AS producto_descripcion',
 				 's.id AS sede_id',
@@ -25,7 +26,7 @@ class CategoriasController  extends BaseController {
 				 's.direccion',
 				 's.telefono',
 				 'sc.nombre_sub'
-			 )->where('p.categoria','=',$id)->where('e.estado','=','1')->paginate(9);
+			 )->where('p.categoria','=',$id)->where('p.estado','=',1)->where('e.estado','=','1')->paginate(9);
 
 		$numProductos = count($producto);
 
