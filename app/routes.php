@@ -418,7 +418,7 @@ Route::get('/personalInfo', array(
 		'uses'=> 'UsersController@getPersonalInfo'
 	));
 
-Route::get('/suscripciones', array(
+Route::get('/perfil/suscripciones', array(
 		'as' => 'suscripciones-user',
 		'uses'=> 'UsersController@suscripcionesUser'
 	));

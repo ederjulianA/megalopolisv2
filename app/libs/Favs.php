@@ -15,6 +15,14 @@ class Favs {
 		return $boton;
 	}
 
+
+	public static function imgMake($img)
+	{
+		$nimg = public_path() .'/'.$img;
+		$image = Image::make($nimg)->resize(300, 200);
+            return Response::make($image, 200, array('content-type' => 'image/jpg'));
+	}
+
 	public static function estadoPedido($estado)
 	{
 		if($estado == 0)

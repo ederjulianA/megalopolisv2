@@ -164,7 +164,7 @@ class UsersController extends BaseController{
 		$sus = Suscripcion::where('user','=', Input::get('user_id'))->where('empresa','=', Input::get('empresa_id'))->first();
 		if($sus->count()){
 			$sus->delete();
-			return Redirect::to('/suscripciones')->with('message-alert','Suscripción Cancelada');
+			return Redirect::to('/perfil/suscripciones')->with('message-alert','Suscripción Cancelada :)');
 		}
 	}
 
@@ -184,14 +184,18 @@ class UsersController extends BaseController{
 					'e.id',
 					'us.pro_id',
 					'us.pro_name',
+					'e.razon_social',
 					'e.nombre_publico',
 					'e.desc_breve',
+					'us.created_at',
 					'e.desc_larga',
 					'e.logo'
 				)
 			->where('us.user','=', $user_id)->get();
 
-			return View::make('mega.suscripcion')->with('subs', $subs);
+			$num_subs = count($subs);
+
+			return View::make('mega.suscripcion')->with('subs', $subs)->with('num_subs',$num_subs);
 
 		}
 	}

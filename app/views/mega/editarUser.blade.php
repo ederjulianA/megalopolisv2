@@ -20,6 +20,17 @@ Perfil | {{Auth::user()->username}}
     </div>
   </div>
   <div class="row">
+  @if(Session::has('message-alert'))
+
+            <div class="alert alert-warning alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Mensaje</strong> {{Session::get('message-alert')}}
+            </div>
+
+            <!--<p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
+                
+            </p>-->
+        @endif
     <div class="col-lg-9 col-md-9 col-sm-7">
       <h1 class="section-title-inner"><span><i class="fa fa-unlock-alt"></i> Mi cuenta </span></h1>
       <div class="row userInfo">
@@ -45,6 +56,10 @@ Perfil | {{Auth::user()->username}}
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
               <div class="thumbnail equalheight"> <a title="My wishlists" href="{{URL::route('favoritos-user')}}"><i class="fa fa-heart"></i> Mis Favoritos </a> </div>
             </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+              <div class="thumbnail equalheight"> <a title="My wishlists" href="{{URL::route('suscripciones-user')}}"><i class="fa fa-check-square"></i> Mis Suscripciones </a> </div>
+            </li>
+            
           </ul>
           <div class="clear clearfix"> </div>
         </div>
