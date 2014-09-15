@@ -15,6 +15,20 @@ class Favs {
 		return $boton;
 	}
 
+	public static function pagos($pago,$empresa)
+	{
+		$pagos = Pagosempresa::where('id_empresa','=',$empresa)->where('id_pago','=',$pago)->first();
+		if($pagos)
+		{
+			$btnPago = '<a href="'.$pago.'" class="btn-pago agregado" id="pago-'.$pago.'">Remover pago</a>';
+		}else{
+			$btnPago = '<a href="'.$pago.'" class="btn-pago noagregado" id="pago-'.$pago.'">Agregar pago</a>';
+		}
+
+		return $btnPago;
+		//63369423 sandra pico
+	}
+
 
 	public static function imgMake($img)
 	{

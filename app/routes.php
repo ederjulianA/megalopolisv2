@@ -96,6 +96,12 @@ Route::get('/mega/editar-productos', array(
 		'uses' => 'EmpresasController@postEditarProductos'
 	));
 
+
+Route::get('/mega/pagos', array(
+		'as' => 'mega-pagos',
+		'uses' => 'PagosController@getPagos'
+	));
+
 Route::get('/mega/editar-producto-{id}', array(
 		'as' => 'editar-productos-post',
 		'uses' => 'EmpresasController@postEditarProductoId'
@@ -233,6 +239,11 @@ Route::post('/mega/noti-envio-ajax', array(
 Route::post('/empresa/suscripcion-ajax', array(
 		'as' => 'suscripcion-ajax',
 		'uses' => 'AjaxController@addSus'
+	));
+
+Route::post('/mega/pagos-ajax', array(
+		'as' => 'pagos-ajax',
+		'uses' => 'PagosController@addPago'
 	));
 
 //funcion ajax para cancelar la suscripcion de un usuario a una empresa

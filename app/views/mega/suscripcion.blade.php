@@ -38,10 +38,10 @@
 .posts .post .descripcion .detalles .tag{background:#22bce0;border-radius:.5em;color:#fff;padding:.2em .5em;text-decoration:none}
 .posts .post .descripcion .detalles .titulo{color:#444;font-size:1.1em;font-style:italic;margin:0;padding:.5em .5em 0 0}
 .posts .post .descripcion .imagen{float:left;}
-.posts .post .descripcion .imagen img{height:160px;vertical-align:top;width:120px}
+.posts .post .descripcion .imagen img{min-height:160px;vertical-align:top;width:120px}
 @media screen and (min-width: 768px){header .titular .publicar{font-size:1.1em;padding-left:3em;position:relative;}
 header .titular .publicar:before{left:0;font-size:2.5em;position:absolute;top:-10px}
-.posts .post{display:inline-block !important;width:48%;vertical-align:top;}
+.posts .post{display:inline-block !important;width:48%;vertical-align:top; height: auto;}
 .posts .post:nth-child(odd){margin-right:2%}}
 </style>
 		<div class="container main-container headerOffset">
@@ -85,7 +85,10 @@ header .titular .publicar:before{left:0;font-size:2.5em;position:absolute;top:-1
 								</h2>
 								<p class="autor">
 									
-									@if($sub->desc_larga == null) {{$sub->desc_corta}}  @else {{$sub->desc_larga}} @endif
+									@if($sub->desc_larga == null) {{substr($sub->desc_corta,0,120)}}... 
+									 @else 
+									 {{substr($sub->desc_larga,0,120)}}... 
+									 @endif
 									
 								</p>
 								<!--<a class="tag" href="#">CSS3</a>-->

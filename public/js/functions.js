@@ -112,3 +112,40 @@ function preview_2()
 
     });
 }
+
+$(document).on('click','.noagregado', function(e){
+    var id = $(this).attr('href');
+    var idempresa = $('#emid').val();
+    $('#pago-'+id).html('<strong>Agregando...</strong>');
+   
+    $.ajax({
+        url : "pagos-ajax",
+        dataType: "json",
+        type : "post",
+        data : { id_pago : id,id_empresa : idempresa},
+        success : function(data){
+
+            if(data.estado == 1)
+            {
+                $('#pago-'+id).removeClass("noagregado");
+                $('#pago-'+id).addClass("agregado");
+                $('#pago-'+id).html('<strong>Remover pago</strong>');
+                $('#mesgAjax').addClass("mensaje-ajax-pagos");
+                
+                $('#mensaje').html('<p>Medio de pago agregado :)</p>');
+                $('#mensaje').fadeOut(2500);
+                $('#mesgAjax').removeClass('mensaje-ajax-pagos');
+
+                console.log(data);
+            }
+            
+            
+
+
+        }
+        
+
+
+    }); 
+    e.preventDefault();
+});

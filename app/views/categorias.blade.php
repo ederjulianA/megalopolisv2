@@ -447,7 +447,7 @@ Categoria
       @foreach($row as  $producto)
         <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="imagene"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
+            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
               <div class="promotion">  </div>
             </div>
             <div class="description">
