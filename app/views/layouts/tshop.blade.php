@@ -106,6 +106,17 @@
         right: 7px;
         bottom: 0;
       }
+
+      #buscador{
+        padding: 5px;
+        max-width: 40%;
+        width: 40%;
+        border: 2px solid red;
+        margin-top: 2px;
+      }
+      .form-search{
+        
+      }
   </style>
 
 
@@ -297,16 +308,10 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>-->
-      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company')}} </a> 
+      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company', array('height'=>'50px'))}} </a> 
       
       <!-- this part for mobile -->
-      <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
-        <div class="input-group">
-          <button class="btn btn-nobg" type="button"> <i class="fa fa-search"> </i> </button>
-        </div>
-        <!-- /input-group --> 
-        
-      </div>
+      
     </div>
     
     <!-- this part is duplicate from cartMenu  keep it for mobile -->
@@ -355,6 +360,7 @@
     
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+      
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
       <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
@@ -376,7 +382,17 @@
           </ul>
         </li>
 
-        <li class=""> <a href="{{URL::route('tiendas')}}"> Tiendas </a> </li>
+        <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
+        <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="busc">
+          <form method="get" action="{{URL::route('buscador')}}" class="form-search">
+      <input type="text"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Qué buscas..." class="">
+      <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
+    </form>
+          
+        </div>
+
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
         <!--<li class="dropdown megamenu-80width "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> TIENDA <b class="caret"> </b> </a>
@@ -438,15 +454,8 @@
       <div class="nav navbar-nav navbar-right hidden-xs">
        
         <!--/.cartMenu-->
+     
         
-        <div class="search-box">
-          <div class="input-group">
-            <button class="btn btn-nobg" type="button"> <i class="fa fa-search"> </i> </button>
-          </div>
-          <!-- /input-group --> 
-          
-        </div>
-        <!--/.search-box --> 
       </div>
       <!--/.navbar-nav hidden-xs--> 
     </div>
@@ -455,14 +464,14 @@
   </div>
   <!--/.container -->
   
-  <div class="search-full text-right"> <a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
-    <div class="searchInputBox pull-right">
+  <!--<div class="search-full text-left"> <a class="pull-left search-close"> <i class=" fa fa-times-circle"> </i> </a>
+    <div class="searchInputBox pull-left">
     <form method="get" action="{{URL::route('buscador')}}">
       <input type="search"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Qué buscas..." class="search-input">
       <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
      </form> 
     </div>
-  </div>
+  </div>-->
   <!--/.search-full--> 
   
 </div>
@@ -492,6 +501,7 @@
               <p> Contáctanos </p>
               <h4> <a class="inline" href="callto:+6481166"> <strong> <i class="fa fa-phone"> </i> 6481166 </strong> </a> </h4>
               <h4> <a class="inline" href="mailto:help@tshopweb.com"> <i class="fa fa-envelope-o"> </i> megalopolis.web@gmail.com </a> </h4>
+
             </li>
           </ul>
         </div>

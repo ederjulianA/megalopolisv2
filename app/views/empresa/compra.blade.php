@@ -49,7 +49,8 @@
   
   <div class="row">
       <div class="col-lg-9 col-md-9 col-sm-7">
-            <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> {{$producto->producto_nombre}}</span></h1>
+            <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> Esto es lo que hay en tu carrito actualmente </span></h1>
+            <p>Al pulsar solicitar producto, le enviaremos una notificación al vendedor para que se ponga en contacto con Tigo</p>
   </div>
 
     <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar"> 
@@ -59,7 +60,7 @@
 </div>
   
   <div class="row">
-    <div class="col-lg-7 col-md-7 col-sm-10">
+    <div class="col-lg-12 col-md-12 col-sm-24">
       <div class="row userInfo">
         
         <div class="col-xs-12 col-sm-12">
@@ -95,9 +96,9 @@
                             <tr class="CartProduct cartTableHeader">
                               <th style="width:15%"> Producto </th>
                               <th class="checkoutReviewTdDetails"  >Detalle</th>
-                              <th style="width:10%" >Precio Unitario</th>
-                              <th class="hidden-xs" style="width:5%">CANT</th>
-                              <th class="hidden-xs" style="width:10%" >Descuento</th>
+                              <th style="width:20%" >Precio Unitario</th>
+                              <th class="hidden-xs" style="width:15%">CANT</th>
+                             
                               <th style="width:15%">Total</th>
                             </tr>
                             <tr class="CartProduct">
@@ -109,7 +110,7 @@
                                 </div></td>
                               <td class="delete"><div class="price ">${{number_format($producto->precio_detal, 0, '', '.')}} </div></td>
                               <td class="hidden-xs"><input type="number" class="integer" name="cantidad" id="cantidad" value="1" role="spinbutton" autocomplete="off" aria-valuenow="1" aria-invalid="false" tabindex="0" aria-valuemin="1" aria-valuemax="9000000000000000" min="1" ></td>
-                              <td class="hidden-xs">0</td>
+                             
                               <td class="price"><span id="subtotal">${{number_format($producto->precio_detal, 0, '', '.')}}</span></td>
                               <input type="hidden" id="precio_unitario" name="precio_unico" value="{{$producto->precio_detal}}">
                               <input type="hidden" id="id_producto" name="id_producto" value="{{$producto->id}}">
@@ -170,7 +171,7 @@
                
                <div class="pull-right">
                 <button type="submit"  class="btn btn-primary btn-small " > 
-					Confirmar &nbsp; <i class="fa fa-check"></i></button>
+					Solicitar Producto &nbsp; <i class="fa fa-check"></i></button>
                  
               </div>
               </form>
@@ -199,9 +200,9 @@
       <!--/row end--> 
       
   
-    <div class="col-lg-5 col-md-5 col-sm-14 rightSidebar"> 
+    <!--<div class="col-lg-5 col-md-5 col-sm-14 rightSidebar"> 
       
-  <div class="w100 cartMiniTable">
+        <div class="w100 cartMiniTable">
                             <table id="cart-summary" class="std table">
                                     <tbody id="lista-preguntas-tb"><tr >
                                       <td>Preguntar al vendedor</td>
@@ -237,7 +238,7 @@
                                   </table> 
                                   </div>
       
-    </div>
+    </div>-->
     <!--/rightSidebar--> 
     
   </div>

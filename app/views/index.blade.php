@@ -29,7 +29,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
                 
             </p>-->
         @endif
-    <h1 class="uppercase xlarge">Encuentra lo que necesitas</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
+    <h1 class="uppercase xlarge">Busca los productos de tu interes</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
 
     <div class="buscador-cont">
       <form method="get" action="{{URL::route('buscador')}}">

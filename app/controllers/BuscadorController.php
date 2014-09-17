@@ -66,6 +66,17 @@ AND e.estado = 1
 
 
 		//$pro2 =Producto::whereRaw('MATCH (imagen,nombre) AGAINST (?)' , array($keyword))->get();
+		$cat =  DB::table('categorias as c')->join('subcategorias as sc','c.id','=','sc.categoria_id')
+				->join('producto as p','c.id','=','p.categoria')
+				->select('c.id',
+							'c.nombre',
+							'c.slug',
+							'sc.nombre_sub AS subcat',
+							'p.nombre AS nombre_pro_cat'
+					)->where('c.nombre', 'LIKE', '%'.$keyword.'%')
+					->distinct()->get();
+			
+
 
 		
 			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);

@@ -15,6 +15,10 @@ class Favs {
 		return $boton;
 	}
 
+	public static function url($url)
+	{
+			}
+
 	public static function pagos($pago,$empresa)
 	{
 		$pagos = Pagosempresa::where('id_empresa','=',$empresa)->where('id_pago','=',$pago)->first();

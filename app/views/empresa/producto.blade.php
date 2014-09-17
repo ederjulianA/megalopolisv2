@@ -72,6 +72,35 @@
   .cantidad-item{
     color: #EF2143;
   }
+  }
+  .contenedor-preguntas{
+    max-width: 100%;
+    width: 100%;
+  }
+  .header-preg{
+    text-align: center;
+    margin: 0 auto;
+    width: 95%;
+    padding: 10px;
+  }
+  .header-preg textarea {
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #f90;
+    padding: 10px;
+  }
+  .btn-pregunta-user{
+    max-width: 100%;
+    width: 20%;
+    border:dashed 0;
+    padding: 10px;
+    background-color: #4B2DDF;
+    border-bottom: 3px solid #2E1E7C;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+  </style>
   
 </style>
 
@@ -79,6 +108,7 @@
 
 
 @section('content')
+
 <div class="container main-container headerOffset">
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
@@ -120,7 +150,7 @@
     <div class="col-lg-6 col-md-6 col-sm-5">
     
       <h1 class="product-title"> {{$producto->producto_nombre}}</h1>
-      <h3 class="product-code">Codigo de Producto : DEN1098</h3>
+      <h3 class="product-code">Disponible en <strong> <a href="{{URL::route('catalogo-sede', array('empresa'=>$producto->id_empresa, 'nombre_publico'=>$producto->nombre_sede))}}" class="btn btn-success">{{$producto->razon_social}}</a></strong></h3>
       <div class="product-price"> 
           <span class="price-sales"> ${{number_format($producto->precio_detal, 0, '', '.')}}</span> 
           <!--<span class="price-standard">$95,000</span> -->
@@ -278,6 +308,18 @@
     
   </div>
   <!--/.row-->
+
+    <div class="row">
+      <h2>PREGUNTAS</h2>
+        <div class="contenedor-preguntas">
+    <div class="header-preg">
+      <textarea class="preguntaUserH" id="txtareaPregunta" placeholder="Has una pregunta"></textarea><br>
+     <button class="btn btn-primary btn-small">Preguntar <i class="fa fa-arrow-circle-right"></i> </button>
+    </div>
+    
+  </div>
+      
+    </div>
     
   <div class="row recommended">
   
