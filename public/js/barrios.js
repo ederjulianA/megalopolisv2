@@ -255,10 +255,10 @@ $(document).on('click','#btn-pregunta-user', function(e){
 		$('#pregunta-usuario').focus();
 		return false;
 	}
-	$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntando...</a><img src="../Tshop/assets/css/AjaxLoader.gif">');
+	$('#btn-pregunta-user').html('<button id="btn-pregunta-user">Preguntando...</a><img src="../../Tshop/assets/css/AjaxLoader.gif"></button>');
 	$.ajax({
 
-			url : "add/pregunta",
+			url : "pregunta",
 			dataType: "json",
 			type : "post",
 			data : { pregunta_f : pregunta_usu, id_empresa_f : id_empresa, id_user_f : id_user, id_producto_f : id_producto},
@@ -270,18 +270,20 @@ $(document).on('click','#btn-pregunta-user', function(e){
 
 				if(data){
 					var nuevaPregunta = "";
-					nuevaPregunta += '<tr>';
-						nuevaPregunta += '<td>'+data.pregunta+'</td>';
-						nuevaPregunta += '<td>Esperando respuesta</td>';
+					nuevaPregunta += '<div class="preguntaUser">';
+						nuevaPregunta += '<p class="p-pregunta"><i class="fa fa-comment"> </i>'+data.pregunta+'</p>';
+						nuevaPregunta += '<p class="p-respuesta">Esperando respuesta</p>';
 
-					nuevaPregunta += '</tr>';
+					nuevaPregunta += '</div>';
 
-					$('#lista-preguntas-tb').append(nuevaPregunta);
+					$('#contenedor-preguntas-ajax').append(nuevaPregunta);
 					$('#pregunta-usuario').val("");
-					$('#btn-pregunta-user').html('<a id="btn-pregunta-user">Preguntar</a>');
+					$('#btn-pregunta-user').html('<strong>Preguntar</strong>');
+					$('#respuesta-ajax-pre').html('<p class="alert alert-success" id="ajax-pregunta">Pregunta Realizada Exitosamente.</p>');
+					$('#ajax-pregunta').fadeOut(4500);
 
 					
-
+					console.log(data);
 					
 					
 				}
@@ -292,6 +294,40 @@ $(document).on('click','#btn-pregunta-user', function(e){
 
 		});
 	e.preventDefault();
+});
+
+$(document).on('mouseenter','.pregunta-user', function(e){
+	var id_pregunta = $(this).attr('id');
+	$.ajax({
+
+			url : "notiEstado",
+			dataType: "json",
+			type : "post",
+			data : { id_pre : id_pregunta},
+			success : function(data){
+
+				if(data.estado == 0 ){
+					console.log(data);
+				
+				}
+				if(data.estado == 1)
+					var num_noti = $('#numNoti').html();
+					var num_noti_int = parseInt(num_noti);
+					var total_noti = num_noti_int - 1;
+					if(total_noti == 0)
+					{
+						console.log("SIN CAMBIOS");
+					}else{
+						$('#numNoti').html(total_noti);
+					console.log("ACTUALIZADO");
+					}
+					
+				
+				
+			}
+
+
+		});
 });
 
 $(document).on('click','#cantidad', function(){

@@ -29,7 +29,7 @@ Class AjaxController  extends BaseController {
 				return Response::json($barrios);
 
 	
-		}
+	}
 
 		//FUNCIÓN PARA REGISTRAR LOS DATOS DE ENVIO DE UN NUEVO USUARIO
 
@@ -91,7 +91,8 @@ Class AjaxController  extends BaseController {
 				} 
 		}
 
-	public function postSubcat(){
+	public function postSubcat()
+	{
 
 
 		header('Content-type: text/javascript');
@@ -136,6 +137,25 @@ Class AjaxController  extends BaseController {
 		}else{
 			return Response::json(array('estado'=>0,'mensaje'=>'Error al enviar notificación.'));
 		}
+	}
+
+
+	public function cambiarEstadoAjax()
+	{
+		header('Content-type: text/javascript');
+
+		$pre = Pregunta::where('id','=',$_POST['id_pre'])->first();
+		if($pre->estado == 0)
+		{
+			$res = array('estado'=>0);
+		}else{
+			$pre->estado = 0;
+			if($pre->save())
+			{
+				$res = array('estado'=>1);
+			}
+		}
+		return Response::json($res);
 	}
 
 	/* FUNCION QUE AGREGA UNA PREGUNTA SOBRE EL ARTICULO QUE SE ESTA VISUALIZANDO (NOTIFICACIONES VIA EMAIL)*/

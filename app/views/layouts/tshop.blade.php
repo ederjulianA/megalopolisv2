@@ -111,7 +111,7 @@
         padding: 5px;
         max-width: 40%;
         width: 40%;
-        border: 2px solid red;
+        
         margin-top: 2px;
       }
       .form-search{
@@ -285,11 +285,14 @@
                       @if(Auth::user()->tipo == 2)
                         <li> <a href="{{ URL::route('empresaAdmin')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
                       @else
-                        <li> <a href="{{URL::route('perfil')}}"><span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                        <li> <a href="{{URL::route('perfil')}}">{{Favs::totalNoti(Auth::user()->id)}}  <span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
 
                       @endif
                   
                   <li> <a href="{{URL::route('cerrar-sesion')}}"><span class="hidden-xs"> Cerrar Sesion</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+
+               
+                  
                 @else 
                     <li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Iniciar Sesion</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
                     <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Registrarme </a> </li>
@@ -360,7 +363,7 @@
     
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-      
+
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
       <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
           <ul class="dropdown-menu">

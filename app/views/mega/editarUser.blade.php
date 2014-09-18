@@ -51,7 +51,7 @@ Perfil | {{Auth::user()->username}}
               <div class="thumbnail equalheight"> <a title="Personal information" href="{{URL::route('personal-info')}}"><i class="fa fa-cog"></i> Información personal</a> </div>
             </li>
              <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
-              <div class="thumbnail equalheight"> <a title="Personal information" href="{{URL::route('perfil-preguntas')}}"><i class="fa fa-envelope"></i> Preguntas</a> </div>
+              <div class="thumbnail equalheight"> <a title="Personal information" href="{{URL::route('perfil-preguntas')}}"><i class="fa fa-envelope"></i> Preguntas</a>{{Favs::notiPreguntas(Auth::user()->id)}} </div>
             </li>
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
               <div class="thumbnail equalheight"> <a title="My wishlists" href="{{URL::route('favoritos-user')}}"><i class="fa fa-heart"></i> Mis Favoritos </a> </div>

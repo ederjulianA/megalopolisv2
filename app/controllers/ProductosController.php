@@ -71,7 +71,7 @@ class ProductosController  extends BaseController {
 				Mail::send('emails.auth.comprador', array('link' => URL::route('listOrders'), 'comprador'=>$comprador_name,'cantidad'=>$compra->cantidad,'valor_total'=>$compra->valor_total,'valor_unitario'=>$valor_unitario,'empresa'=>$empresa,'producto'=>$producto_nombre), function($message) use ($comprador){
 						$message->to($comprador->email, $comprador->username)->subject('Compra en Megalópolis');
 					});
-				return View::make('empresa.exitoCompra')->with('message-alert','Compra exitosa')->with('producto',$producto);
+				return 	Redirect::to('/lista-ordenes/')->with('message-alert','SOLICITUD DE PRODUCTO EXITOSA. ');
 			}
 
 		}
@@ -123,6 +123,8 @@ class ProductosController  extends BaseController {
 		 }
 
 		 $tags = Tag::where('producto','=',$id)->get();
+		 $preguntas = Pregunta::where('id_producto','=',$producto->id)->orderBy('id','desc')->get();
+
 		
 		$ciudades = Ciudad::where('id','>',0)->orderBy('ciudad','asc')->get();
 
@@ -146,10 +148,10 @@ class ProductosController  extends BaseController {
 		{
 			$idUser = Auth::user()->id;
 			$ship = Shipping::where('id_user','=',$idUser)->first();
-			return View::make('empresa.producto')->with('producto',$producto)->with('ciudades',$ciudades)->with('ship',$ship)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
+			return View::make('empresa.producto')->with('preguntas',$preguntas)->with('producto',$producto)->with('ciudades',$ciudades)->with('ship',$ship)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
 		}
 
-			return View::make('empresa.producto')->with('producto',$producto)->with('ciudades',$ciudades)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
+			return View::make('empresa.producto')->with('preguntas',$preguntas)->with('producto',$producto)->with('ciudades',$ciudades)->with('tags',$tags)->with('categorias', Categoria::all())->with('masProductos',$masProductos);
 		
 
 	}

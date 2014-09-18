@@ -43,12 +43,14 @@ class UsersController extends BaseController{
 				->join('producto as pro','p.id_producto','=','pro.id')
 				->select('p.pregunta',
 						'p.respuesta',
+						'p.id',
+						'p.estado',
 						'pro.nombre',
 						'pro.imagen',
 						'p.created_at',
 						'e.razon_social AS nombre_publico_empresa'
 
-					)->where('p.user_id','=',$idUser)->where('p.id_producto','>',0)->orderBy('p.created_at','desc')->get();
+					)->where('p.user_id','=',$idUser)->where('p.id_producto','>',0)->orderBy('p.estado','desc')->orderBy('p.created_at','desc')->orderBy('p.id','desc')->get();
 
 				$num_preguntas = count($preguntas);
 

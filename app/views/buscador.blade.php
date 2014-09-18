@@ -28,6 +28,18 @@ Buscar: {{$keyword}}
       padding: 10px;
       width: 300px;
     }
+    .contenedor-empresas{
+      max-width: 100%;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .empresa-item{
+      width: 100%;
+      margin: 10px auto;
+    }
+    .parrafo-empresa{
+      padding: 10px;
+    }
 
 </style>
 
@@ -105,6 +117,24 @@ Buscar: {{$keyword}}
             </div>
           </div>
         </div> <!--/Category menu end--> 
+        <div class="contenedor-empresas">
+          <h2 class="block-title-4">EMPRESAS MEGALÓPOLIS</h2>
+          @foreach($empresas as $emp)
+
+            <div class="empresa-item">
+            <h3 class="block-title-1">{{$emp->nombre_publico}}</h3>
+            {{HTML::image($emp->logo,$emp->nombre_publico,array('width'=>'90%','height'=>'auto'))}}
+            <p class="parrafo-empresa">
+              @if(!$emp->desc_larga)
+              {{$emp->desc_breve}}
+              @else
+                {{$emp->desc_larga}}
+              @endif
+            </p>
+            </div>
+
+          @endforeach
+        </div>
 
 
 

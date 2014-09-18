@@ -7,6 +7,7 @@ class PreguntasController extends BaseController {
 
 		if($pregunta->count()){
 			$pregunta->respuesta = Input::get('respuesta');
+			$pregunta->estado = 1;
 			$pre = $pregunta->pregunta;
 			$res = Input::get('respuesta');
 			$user = User::where('id','=',Input::get('user_id'))->first();

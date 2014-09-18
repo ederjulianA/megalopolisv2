@@ -75,7 +75,13 @@
   }
   .contenedor-preguntas{
     max-width: 100%;
-    width: 100%;
+    width: 95%;
+    
+  }
+
+  #contenedor-preguntas-ajax{
+    max-width: 100%;
+    width: 95%;
   }
   .header-preg{
     text-align: center;
@@ -88,6 +94,44 @@
     border-radius: 10px;
     border: 2px solid #f90;
     padding: 10px;
+  }
+  .btn-pregunta-user{
+    max-width: 100%;
+    width: 20%;
+    border:dashed 0;
+    padding: 10px;
+    background-color: #4B2DDF;
+    border-bottom: 3px solid #2E1E7C;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .preguntaUser{
+    width: 90%;
+    padding: 15px;
+    margin: 15px auto;
+
+ 
+    box-shadow: 1px 0 1px rgba(0,0,0,.5);
+    
+  }
+  .preguntaUser p.p-pregunta {
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+  }
+  .preguntaUser p.p-respuesta{
+    width: 90%;
+    margin-left: 5%;
+    font-style: oblique;
+    letter-spacing: .8px;
+    font-size: 18px;
+    margin-top: 20px;
+    border:1px solid #333;
+    padding: 20px;
+    border-radius: 20px;
   }
   .btn-pregunta-user{
     max-width: 100%;
@@ -174,7 +218,7 @@
         <div class="filterBox">
           <div class="cantidad">
 
-            Disponibles  <span class="cantidad-item">{{$producto->cantidad}}</span>Unidad(es).
+            Estado : {{Favs::disponibles($producto->cantidad)}} 
           </div>
           <!--<select>
             <option value="strawberries" selected>Cantidad</option>
@@ -206,12 +250,13 @@
          @if(Auth::check() )
 
             @if($ship)
-              <form id="form-cart-before" method="post" action="{{URL::route('form-carrito-previo')}}">
+              <form id="form-cart-before" method="get" action="{{URL::route('form-carrito-previo')}}">
                   <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
                   <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
                   <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
 
-                  <button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">COMPRAR</button>
+                  @if($producto->cantidad > 0)<button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">COMPRAR</button>
+                  @endif
              </form>
 
 
@@ -222,7 +267,8 @@
             @endif
               
          @else
-          <button class="button btn-cart cart first"  href="#"data-toggle="modal" data-target="#ModalLogin">COMPRAR</button> 
+
+            @if($producto->cantidad > 0)<button class="button btn-cart cart first"  href="#"data-toggle="modal" data-target="#ModalLogin">COMPRAR</button> @endif
          @endif
          
           @if(Auth::check() )
@@ -238,7 +284,7 @@
           
         <div style="clear:both"></div>
         
-        <h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i>Disponible</h3>
+        
         <h3 style="display:none" class="incaps"><i class="fa fa-minus-circle color-out"></i> Out of stock</h3>
         <h3 class="incaps"> <i class="glyphicon glyphicon-lock"></i> Compra Segura</h3>
       </div>
@@ -312,12 +358,55 @@
     <div class="row">
       <h2>PREGUNTAS</h2>
         <div class="contenedor-preguntas">
-    <div class="header-preg">
-      <textarea class="preguntaUserH" id="txtareaPregunta" placeholder="Has una pregunta"></textarea><br>
-     <button class="btn btn-primary btn-small">Preguntar <i class="fa fa-arrow-circle-right"></i> </button>
-    </div>
+            <div class="header-preg">
+              <div id="respuesta-ajax-pre">
+                
+              </div>
+                <textarea class="preguntaUserH" id="pregunta-usuario" placeholder="Has una pregunta"></textarea><br>
+                @if(Auth::check())
+                  <input type="hidden" id="id_producto" value="{{$producto->id}}">
+                  <input type="hidden" id="id_empresa" value="{{$producto->id_empresa}}">
+                  <input type="hidden" id="id_user" value="{{Auth::user()->id}}">
+                  <button class="btn btn-primary btn-small" id="btn-pregunta-user">Preguntar <i class="fa fa-arrow-circle-right"></i> </button>
+
+                @else
+                
+                 <button class="btn btn-primary btn-small" id="#"data-toggle="modal" data-target="#ModalLogin">Preguntar <i class="fa fa-arrow-circle-right"></i> </button>
+
+                @endif
+                
+            </div>
+            <div id="contenedor-preguntas-ajax">
+              
+            </div>
+            @if($preguntas)
+              @foreach($preguntas as $pregunta)
+                <div class="preguntaUser">
+                    <p class="p-pregunta"><i class="fa fa-comment"> </i> 
+                      {{$pregunta->pregunta}}.
+                    </p>
+                    <p class="p-respuesta"><i class="fa fa-comments"> </i>
+                      {{$pregunta->respuesta}}. 
+                      
+                    </p>
+      
+              </div>
+
+              @endforeach
+
+            @else
+            
+              <div class="preguntaUser">
+                    <p class="p-pregunta"><i class="fa fa-comment"> </i> 
+                      No se han hecho preguntas para este articulo.
+                    </p>
+                    
+      
+            </div>
+            @endif
+            
     
-  </div>
+        </div>
       
     </div>
     

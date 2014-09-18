@@ -15,9 +15,45 @@ class Favs {
 		return $boton;
 	}
 
-	public static function url($url)
+	public static function disponibles($cantidad)
 	{
-			}
+		if($cantidad > 0)
+		{
+			$btn = '<h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i>Disponible</h3>';
+		}
+		else{
+			$btn = '<h3  class="incaps"><i class="fa fa-minus-circle color-out"></i> No hay unidades Disponibles</h3>';
+		}
+		return $btn;
+		
+        
+	}
+
+	public static function notiPreguntas($id_user)
+	{
+		$pre = Pregunta::where('user_id','=',$id_user)->where('estado','=',1)->get();
+		$numPre = count($pre);
+		if($numPre > 0)
+		{
+			$btn = '<a href="#"> <span class="badge">'.$numPre.'</span></a>';
+		}else{
+			$btn = '';
+		}
+		return $btn;
+	}
+
+	public static function totalNoti($id_user)
+	{
+		$pre = Pregunta::where('user_id','=',$id_user)->where('estado','=',1)->get();
+		$numPre = count($pre);
+		if($numPre > 0)
+		{
+			$btn = '<span class="badge pull-right" id="numNoti">'.$numPre.'</span>';
+		}else{
+			$btn = '<span class="badge pull-right">0</span>';
+		}
+		return $btn;
+	}
 
 	public static function pagos($pago,$empresa)
 	{

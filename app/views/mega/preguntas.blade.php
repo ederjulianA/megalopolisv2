@@ -29,7 +29,7 @@ Tus preguntas
         <div class="contenedor-preguntas-user">
 
         @foreach($preguntas as $pre)
-        	<div class="pregunta-user">
+        	<div class="pregunta-user" id="{{$pre->id}}">
         		<div class="pregunta-header">
         			<h2> <strong>{{$pre->nombre}}</strong></h2>
         			

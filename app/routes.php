@@ -49,7 +49,7 @@ Route::get('/home2', array(
 	));
 
 /* VISTA VISUALIZAR ARTICULO A COMPRAR */
-Route::post('/contacto-vendedor', array(
+Route::get('/contacto-vendedor', array(
 		'as' => 'form-carrito-previo',
 		'uses' => 'ProductosController@carritoPrevio'
 	));
@@ -255,7 +255,7 @@ Route::post('/empresa/cancelar-suscripcion-ajax', array(
 
 
 
-Route::post('/add/pregunta', array(
+Route::post('/producto/pregunta', array(
 		'as' => 'add-pregunta',
 		'uses' => 'AjaxController@addPregunta'
 	));
@@ -275,6 +275,11 @@ Route::post('/catalogo/get-products', array(
 Route::post('/cambiar-nombre-ajax', array(
 		'as' => 'cambiar-nombre-ajax',
 		'uses' => 'AjaxController@cambiarNombreAjax'
+	));
+
+Route::post('/perfil/notiEstado', array(
+		'as' => 'notiEstado',
+		'uses' => 'AjaxController@cambiarEstadoAjax'
 	));
 
 

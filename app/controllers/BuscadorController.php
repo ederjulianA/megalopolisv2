@@ -17,6 +17,7 @@ class BuscadorController  extends BaseController {
 		 ->select('a.precio_detal',
 				 'a.cantidad',
 				 'c.nombre AS categoria_nombre',
+				 'e.nombre_publico AS nombre_empresa',
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.slug',
@@ -41,6 +42,19 @@ class BuscadorController  extends BaseController {
 		 
 
 		 ->paginate(9);
+
+
+		 $empresas = DB::table('empresas as e')->join('sedes as s', 'e.id','=','s.empresa_id')
+		 	->select('e.id',
+		 			'e.nombre_publico',
+		 			'e.logo',
+		 			'e.estado',
+		 			'e.desc_breve',
+		 			'e.desc_larga',
+		 			's.nombre_publico AS nombre_sede'
+		 		)->where('e.estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
+
+
 		
 	/*$productos = DB::select(DB::raw("SELECT a.precio_detal, a.cantidad, c.nombre AS categoria_nombre, p.nombre AS producto_nombre, p.imagen, p.estado, p.id,p.slug, p.descripcion AS producto_descripcion, s.nombre_publico AS nombre_sede, s.direccion, s.id AS sede_id, s.telefono, sc.nombre_sub, e.estado 
 FROM producto p
@@ -79,7 +93,7 @@ AND e.estado = 1
 
 
 		
-			return View::make('buscador')->with('keyword',$keyword)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);
+			return View::make('buscador')->with('empresas',$empresas)->with('keyword',$keyword)->with('productos',$producto)->with('categorias', Categoria::all())->with('numPro',$numPro);
 
 
 		

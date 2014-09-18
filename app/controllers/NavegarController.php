@@ -52,6 +52,11 @@ class NavegarController extends BaseController {
 			$empresa = $empresa->first();
 			$sede = Sede::where('empresa_id','=', $empresa->id)->get();
 			$num_sedes = $sede->count();
+			if($num_sedes == 1)
+			{
+				$sede = $sede->first();
+				return Redirect::to('/catalogo/'.$empresa->id.'-'.$sede->nombre_publico);
+			}
 			$preguntas = Pregunta::where('empresa_id',"=", $empresa->id)->get();
 			return View::make('info')->with('empresa', $empresa)
 			->with('sedes', $sede)
