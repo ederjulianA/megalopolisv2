@@ -173,6 +173,12 @@ Route::get('/confirmar-compra', array(
 		'uses' => 'ProductosController@CompraPost'
 	));
 
+//RUTA PARA  AGREGAR LAS CATEGORIAS A LA VISTA QUE SE INCLUIRA EN EL TEMPLATE MASTER
+Route::get('/vista/template/cate', array(
+		'as' => 'vistaTemplateCate',
+		'uses' => 'HomeController@VistaCategorias'
+	));
+
 
 Route::post('/preguntas', array(
 		'as' => 'preguntas-empresa',

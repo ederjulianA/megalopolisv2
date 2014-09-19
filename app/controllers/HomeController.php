@@ -14,6 +14,11 @@ class HomeController extends BaseController {
 		return View::make('landing2');
 	}
 
+	public function VistaCategorias()
+	{
+		return View::make('menucat')->with('categorias',Categoria::all());
+	}
+
 	public function postListaMail()
 	{
 		$validator = Validator::make(Input::all(),

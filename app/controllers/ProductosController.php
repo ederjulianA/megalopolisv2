@@ -119,7 +119,7 @@ class ProductosController  extends BaseController {
 		
 
 		 if($producto->estado_empresa == 0){
-		 	return Redirect::to('/empresa/'.$producto->nombre_publico_empresa);
+		 	return Redirect::to('/')->with('message-alert','Esta empresa no se encuentra disponible. Disculpa las molestias');
 		 }
 
 		 $tags = Tag::where('producto','=',$id)->get();

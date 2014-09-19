@@ -29,6 +29,8 @@ class Favs {
         
 	}
 
+	
+
 	public static function notiPreguntas($id_user)
 	{
 		$pre = Pregunta::where('user_id','=',$id_user)->where('estado','=',1)->get();

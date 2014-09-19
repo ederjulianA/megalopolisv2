@@ -89,7 +89,7 @@ Buscar: {{$keyword}}
               <ul class="nav nav-pills nav-stacked tree">
 
                 @foreach($categorias as $cat)
-                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('categorias-producto', array('id'=>$cat->id))}}"> <span class="badge pull-right">N</span> {{$cat->nombre}} </a>
+                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('categorias-producto', array('id'=>$cat->id))}}">  {{$cat->nombre}} </a>
                 @endforeach
                
                   <!--<ul class="category-level-2 dropdown-menu-tree">

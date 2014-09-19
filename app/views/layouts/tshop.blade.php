@@ -128,7 +128,7 @@
 <!-- Modal Login start -->
 @if (Auth::check())
 @else
- <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
+<div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -365,7 +365,15 @@
       <ul class="nav navbar-nav">
 
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
-      <li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
+        <?php $categorias = Categoria::all(); ?>
+
+        @include('menucat', array('categorias'=>$categorias))
+
+
+
+
+        <!--##################################################################MENU DESPLEGABLE INICIAL-->
+        <!--<li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
             <li class="megamenu-content ">
               
@@ -383,7 +391,7 @@
               </ul>
             </li>
           </ul>
-        </li>
+        </li>-->
 
         <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
         <li><a href="#">Blog</a></li>
