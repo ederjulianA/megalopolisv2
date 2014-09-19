@@ -450,12 +450,15 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       <div class="w100 productFilter clearfix">
         <p class="pull-left"> Mostrando <strong>{{$num_productos}}</strong> productos </p>
         <div class="pull-right ">
+         
           <div class="change-order pull-right">
-            <select class="form-control" name="orderby">
+
+            <a class="btn btn-sm btn-danger" href="{{URL::route('catalogoPrecioMas', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-plus"> </i> </a>
+            <!--<select class="" name="" id="precio_select">
               <option selected="selected" >Ordenar por Defecto</option>
-              <option value="popularity">Ordenar por precio(+)</option>
+              <option  value="{{URL::route('catalogoPrecioMas',array('empresa'=>$sede->empresa->id))}}">Ordenar por precio (+)</option>
            
-            </select>
+            </select>-->
           </div>
           <div class="change-view pull-right"> 
           <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a> 

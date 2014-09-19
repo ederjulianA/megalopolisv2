@@ -43,9 +43,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
         <li><a href="{{URL::route('index')}}">Home</a> </li>
         <li><a href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a> </li>
         
-        
-
-        <li class="active">{{$cateActual->nombre}} </li>
+        <li class="active">{{$sede->nombre_publico}} </li>
       </ul>
     </div>
   </div>  <!-- /.row  --> 
@@ -452,10 +450,15 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       <div class="w100 productFilter clearfix">
         <p class="pull-left"> Mostrando <strong>{{$num_productos}}</strong> productos </p>
         <div class="pull-right ">
+         
           <div class="change-order pull-right">
-            <a class="btn btn-sm btn-danger" href="{{URL::route('catalogoPrecioMas', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-plus"> $ </i> </a>
 
-              <a class="btn btn-sm btn-info" href="{{URL::route('catalogoPrecioMenos', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-minus"> $ </i> </a>
+            <a class="btn btn-sm btn-danger" href="{{URL::route('catalogoPrecioMas', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-plus"> $ </i> </a>
+            <!--<select class="" name="" id="precio_select">
+              <option selected="selected" >Ordenar por Defecto</option>
+              <option  value="{{URL::route('catalogoPrecioMas',array('empresa'=>$sede->empresa->id))}}">Ordenar por precio (+)</option>
+           
+            </select>-->
           </div>
           <div class="change-view pull-right"> 
           <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a> 
@@ -469,7 +472,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
                <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
             <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
-              <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
+              <div class="promotion">  </div>
             </div>
             <div class="description">
               <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{$producto->producto_nombre}} </a></h4>
@@ -491,7 +494,22 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
      @endforeach 
     
       
-     
+     <style type="text/css">
+        .imagene{
+          
+          
+          height: 220px;
+          width: 100%;
+        }
+        .imagene img {
+          height: 100%;
+          text-align: center;
+          
+          margin: 0 auto;
+          width: auto;
+          max-width: 100%;
+        }
+     </style>
        
      
      

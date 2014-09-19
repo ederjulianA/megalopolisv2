@@ -365,9 +365,9 @@
       <ul class="nav navbar-nav">
 
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
-        <?php $categorias = Categoria::all(); ?>
+        <?php $categorias = Categoria::all(); $nivel =2;?>
 
-        @include('menucat', array('categorias'=>$categorias))
+        @include('menucat', array('categorias'=>$categorias,'nivel'=>$nivel))
 
 
 

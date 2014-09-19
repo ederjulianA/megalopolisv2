@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	/*$('#mensaje-flash').fadeIn(2500);
 	$('#mensaje-flash').fadeOut(3500);*/
+
 	$('#sel-ciudades').change(function(){
 		$('#sel-barrio').empty();
 		barrios();
@@ -295,6 +296,7 @@ $(document).on('click','#btn-pregunta-user', function(e){
 		});
 	e.preventDefault();
 });
+
 
 $(document).on('mouseenter','.pregunta-user', function(e){
 	var id_pregunta = $(this).attr('id');

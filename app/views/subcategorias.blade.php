@@ -1,15 +1,18 @@
 @extends('layouts.tshop')
 @section('titulo')
-Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
+Categoria
 @stop
 
 @section('content-page')
-  <meta name="description" content="">
+ <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
     <meta name="author" content="Megalopolis TEAM">
 
-    <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/catalogo/{{$sede->nombre_publico}}"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/img/{{$sede->empresa->logo}}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
 @stop
 
 @section('content')
@@ -32,8 +35,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
 
 
 <div class="container main-container headerOffset"> 
-<input type="hidden" id="nombre_sede_h" value="{{$sede->nombre_publico}}">
- <input type="hidden" id="id_empresa_ajax" value="{{$sede->empresa->id}}">
+
   
   <!-- Main component call to action -->
   
@@ -41,11 +43,9 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
-        <li><a href="{{URL::route('empresa-info', array('nombre_publico'=>$sede->empresa->nombre_publico))}}">{{$sede->empresa->nombre_publico}}</a> </li>
+        <li class="active"><a href="#"></a>  </li>
         
-        
-
-        <li class="active">{{$cateActual->nombre}} </li>
+       
       </ul>
     </div>
   </div>  <!-- /.row  --> 
@@ -74,17 +74,23 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
           
           <div id="collapseCategory" class="panel-collapse collapse in">
             <div class="panel-body">
-
               <ul class="nav nav-pills nav-stacked tree">
 
-                @foreach($categorias as $cat)
-                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('catalogo-sede-cat', array('empresa'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico,'slug'=>$cat->slug_cat))}}"> <span class="badge pull-right">N</span> {{$cat->nombre_categoria_cat}} </a>
+               @foreach($categorias as $categoria)
+                     <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a " href="{{URL::route('categorias-producto', array('id'=>$categoria->id))}}"> <span class="badge pull-right">N</span> {{$categoria->nombre}} </a>
+                        <ul class="category-level-2 dropdown-menu-tree">
+                        @foreach($categoria->subcategoria as $subcat)
+                            <li class="dropdown-tree"> <a class="dropdown-tree-a"  href="{{URL::route('subcategorias-producto', array('id'=>$cat->id,'id_sub'=>$subcat->id))}}"> {{$subcat->nombre_sub}}</a>
+                        @endforeach    
+                        </li>
+                          
+                        </ul>
+                     </li>
                 @endforeach
                
                   <!--<ul class="category-level-2 dropdown-menu-tree">
                     <li class="dropdown-tree"> <a class="dropdown-tree-a"  href="sub-category.html"> Tshirt</a>
                     </li>
-                    lista-products
                     <li><a > Shoes</a> </li>
                     <li><a > Shirt</a> </li>
                     <li><a >T shirt</a> </li>
@@ -109,38 +115,9 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
         </div> <!--/Category menu end--> 
 
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"> <a class="collapseWill" data-toggle="collapse"  href="#collapsePrice"> Informacion de la empresa <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span class="pull-right clearFilter  label-danger"> Importante </span> </h4>
-          </div>
-          <div id="collapsePrice" class="panel-collapse collapse in">
-            <div class="panel-body priceFilterBody"> 
-              
-              <label>
-                
-                Direccion : {{$sede->direccion}}</label>
-              <br>
-
-                 <label>
-                
-                email : {{$sede->empresa->user->email}} </a></li>
-</label>
-              <br>
-
-                 <label>
-                
-                Telefono : {{$sede->telefono}}</label>
-              <br>
-         
-            </div>
-          </div>
-        </div> <!--/price info end--> 
 
 
-        <div id="map_canvas" style="width: 100%; height: 400px;margin-top: 10px;"></div>
-            <script type = 'text/javascript'>
-              initialize({{$sede->latitude}}, {{$sede->longitude}});
-            </script>
+      
         
         <!--<div class="panel panel-default">
           <div class="panel-heading">
@@ -421,8 +398,8 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
     
       <div class="w100 clearfix category-top">
 
-        <h2> {{$sede->empresa->razon_social}} </h2>
-        <div class="categoryImage"> {{HTML::image($sede->empresa->banner, 'BANNER', array('width'=>'850px','height'=>'300px','class'=>'img-responsive') )}} </div>
+        <h2> Buscar :  </h2>
+      
 
         
 
@@ -450,29 +427,31 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       </div>--><!--/.subCategoryList-->
       
       <div class="w100 productFilter clearfix">
-        <p class="pull-left"> Mostrando <strong>{{$num_productos}}</strong> productos </p>
+        <p class="pull-left"> Mostrando <strong>{{$numPro}}</strong> productos </p>
         <div class="pull-right ">
           <div class="change-order pull-right">
-            <a class="btn btn-sm btn-danger" href="{{URL::route('catalogoPrecioMas', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-plus"> $ </i> </a>
-
-              <a class="btn btn-sm btn-info" href="{{URL::route('catalogoPrecioMenos', array('sede'=>$sede->empresa->id,'nombre_publico'=>$sede->nombre_publico))}}"><i class="fa fa-minus"> $ </i> </a>
+            <select class="form-control" name="orderby">
+              <option selected="selected" >Ordenar por Defecto</option>
+              <option value="popularity">Ordenar por precio(+)</option>
+           
+            </select>
           </div>
           <div class="change-view pull-right"> 
           <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a> 
           <a href="#" title="List" class="list-view "><i class="fa fa-th-list"></i></a> </div>
         </div>
       </div> <!--/.productFilter-->
+   <div class="row  categoryProduct xsResponse clearfix productos-container">
    
    @foreach(array_chunk($productos->getCollection()->all(),3) as $row)
-    <div class="row  categoryProduct xsResponse clearfix productos-container">
-      @foreach($row as $key => $producto)
-               <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
+      @foreach($row as  $producto)
+        <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">
           <div class="product">
-            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
-              <div class="promotion"> <span class="new-product"> NUEVO</span> </div>
+            <div class="image"> <a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{HTML::image($producto->imagen, $producto->producto_nombre, array('class'=>'img-responsive'))}} </a>
+              <div class="promotion">  </div>
             </div>
             <div class="description">
-              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}">{{$producto->producto_nombre}} </a></h4>
+              <h4><a href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}">{{$producto->producto_nombre}} </a></h4>
               <p>Preguntar Disponibilidad </p>
              <!-- <span class="size">XL / XXL / S </span> --></div>
             <div class="price"> 
@@ -480,7 +459,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
                     
                   </div>
                   <div class="action-control">
-<a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$sede->id,'slug'=>$producto->slug))}}"> 
+<a class="btn btn-primary" href="{{URL::route('productos',array('id'=>$producto->id, 'sede'=>$producto->sede_id,'slug'=>$producto->slug))}}"> 
                     <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar </span> 
                     </a>
         </div>
@@ -489,6 +468,25 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
       @endforeach
 
      @endforeach 
+
+      <style type="text/css">
+        .imagene{
+          
+          
+          height: 220px;
+          width: 100%;
+        }
+        .imagene img {
+          height: 100%;
+          text-align: center;
+          
+          margin: 0 auto;
+          width: auto;
+          max-width: 100%;
+        }
+     </style>
+
+ 
     
       
      
@@ -507,9 +505,11 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
     </div> <!--/.categoryProduct || product content end-->
       
       <div class="w100 categoryFooter">
-        <div class="pagination pull-left no-margin-top">
-          {{$productos->links()}}
-        </div>
+        
+            {{$productos->links()}}
+            
+          
+        
         <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
           <p>Resultados</p>
         </div>

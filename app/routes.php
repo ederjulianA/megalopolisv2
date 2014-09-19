@@ -67,6 +67,13 @@ Route::get('/categorias/{id}', array(
 	));
 
 
+/* RUTA PARA HACER FILTROS DE PRODUCTOS POR SUBCATEGORIA*/
+Route::get('/categorias/{id}/subcategoria/{id_sub}', array(
+		'as' => 'subcategorias-producto',
+		'uses' => 'CategoriasController@getSubCategorias'
+	));
+
+
 /* BUSCADOR */
 Route::get('/buscador', array(
 		'as' => 'buscador',
@@ -173,6 +180,9 @@ Route::get('/confirmar-compra', array(
 		'uses' => 'ProductosController@CompraPost'
 	));
 
+
+
+
 //RUTA PARA  AGREGAR LAS CATEGORIAS A LA VISTA QUE SE INCLUIRA EN EL TEMPLATE MASTER
 Route::get('/vista/template/cate', array(
 		'as' => 'vistaTemplateCate',
@@ -206,6 +216,18 @@ Route::get('/recuperar-cuenta/{code}', array(
 Route::get('/catalogo/{empresa}-{nombre_publico}', array(
 		'as' => 'catalogo-sede',
 		'uses' => 'SedesController@getCatalogo'
+	));
+//RUTA PARA MOSTRAR LOS PRODUCTOS DE UN CATALOGO ORDENADOS POR PRECIO MAYOR
+Route::get('/catalogo/{empresa}-{nombre_publico}/mayor_precio', array(
+		'as' => 'catalogoPrecioMas',
+		'uses' => 'SedesController@getCatalogoMayor'
+	));
+
+
+//RUTA PARA MOSTRAR LOS PRODUCTOS DE UN CATALOGO ORDENADOS POR PRECIO MENOR
+Route::get('/catalogo/{empresa}-{nombre_publico}/menor_precio', array(
+		'as' => 'catalogoPrecioMenos',
+		'uses' => 'SedesController@getCatalogoMenor'
 	));
 
 Route::get('/catalogo/{empresa}-{nombre_publico}/{slug}', array(

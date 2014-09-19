@@ -1,3 +1,4 @@
+
 <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
         <li class="dropdown megamenu-fullwidth "> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> CATEGORIAS <b class="caret"> </b> </a>
           <ul class="dropdown-menu">
@@ -10,7 +11,7 @@
                     <p> <strong> {{$cat->nombre}} </strong> </p></a>
                   </li>
                   @foreach($cat->subcategoria as $subcat)
-                  <li> <a href="#"> {{$subcat->nombre_sub}} </a> </li>
+                  <li> <a href="{{URL::route('subcategorias-producto', array('id'=>$cat->id,'id_sub'=>$subcat->id))}}"> {{$subcat->nombre_sub}} </a> </li>
                   @endforeach
                   
                 </ul>
