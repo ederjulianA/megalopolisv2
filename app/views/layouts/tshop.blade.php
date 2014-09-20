@@ -284,6 +284,15 @@
                 @if (Auth::check())
                       @if(Auth::user()->tipo == 2)
                         <li> <a href="{{ URL::route('empresaAdmin')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                        @if(Auth::user()->empresa->estado == 0)
+                          <li>
+                            <a href="{{URL::route('pagarSuscripcion')}}">Pagar suscripción</a>
+                           
+
+                          </li>
+                        @else
+
+                        @endif
                       @else
                         <li> <a href="{{URL::route('perfil')}}">{{Favs::totalNoti(Auth::user()->id)}}  <span class="hidden-xs"> Mi cuenta</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
 

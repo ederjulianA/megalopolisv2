@@ -67,6 +67,26 @@ Route::get('/categorias/{id}', array(
 	));
 
 
+/* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
+Route::get('/pago-suscripcion', array(
+		'as' => 'pagarSuscripcion',
+		'uses' => 'PagosController@getPagosMegalopolis'
+	));
+
+/* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
+Route::get('/suscripcion/cancel', array(
+		'as' => 'suscripcionCancel',
+		'uses' => 'PagosController@getSuscripcionCancel'
+	));
+
+
+/* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
+Route::get('/suscripcion/success', array(
+		'as' => 'suscripcionSuccess',
+		'uses' => 'PagosController@getSuscripcionSuccess'
+	));
+
+
 /* RUTA PARA HACER FILTROS DE PRODUCTOS POR SUBCATEGORIA*/
 Route::get('/categorias/{id}/subcategoria/{id_sub}', array(
 		'as' => 'subcategorias-producto',

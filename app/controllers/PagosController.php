@@ -2,9 +2,47 @@
 
 
 Class PagosController  extends BaseController {
+	public function getSuscripcionCancel()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 2 || Auth::user()->empresa->estado == 1)
+				{
+					return Redirect::to('/');
+				}
+
+				return View::make('cancel');
+	}
+
+
+	public function getSuscripcionSuccess()
+	{
+		if(!Auth::check() || Auth::user()->tipo != 2 || Auth::user()->empresa->estado == 1)
+				{
+					return Redirect::to('/');
+				}
+
+				return View::make('success');
+	}
+
+
+
+
+
+	public function getPagosMegalopolis()
+		{
+
+			if(!Auth::check() || Auth::user()->tipo != 2 )
+				{
+					return Redirect::to('/');
+				}
+
+				return View::make('suscripcion');
+
+		}
+
 
 	public function getPagos()
 	{
+		
 		if(!Auth::check() || Auth::user()->tipo != 2 )
 		{
 			return Redirect::to('/');

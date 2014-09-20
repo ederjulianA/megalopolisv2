@@ -75,7 +75,7 @@ function estado()
 {
 	var estado = $("#eede").val();
 	if(estado == 0){
-		$('#contenido').html("<div class='bloqueo-pg'><h2>ESTA EMPRESA NO ESTA DISPONIBLE</h2><p>Si eres el administrador de esta empresa por favor ponte en contacto con nosotros. <a target='_blank' href='https://twitter.com/tumegalopolis' class='btn btn-info btn-lg'>Megalópolis</a></p></div>")
+		$('#contenido').html("<div class='bloqueo-pg'><h2>ESTA EMPRESA NO ESTA DISPONIBLEE</h2><p>Si eres el administrador de esta empresa por favor ponte en contacto con nosotros.<br> <a href='../../pago-suscripcion'>PAGAR SUSCRIPCIÓN</a> <a target='_blank' href='https://twitter.com/tumegalopolis' class='btn btn-info btn-lg'>Megalópolis</a></p></div>")
 	}
 }
 
