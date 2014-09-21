@@ -71,6 +71,48 @@ $(document).ready(function(){
 
 });
 
+$(document).on('change','.cantidad', function(){
+	var identifier = $(this).attr('data');
+	var id_producto =$(this).attr('data-toggle');
+	var nueva_cantidad = $('#cantidad-'+identifier).val();
+	//alert("data"+identifier+"cantidad"+nueva_cantidad+"toggle"+id_producto);
+	if(nueva_cantidad < 1)
+	{
+		$('#cantidad-'+identifier).val(1);
+
+		return false;
+	}
+	$('#btn-update-car').html('<strong>Actualizando...</strong>')
+
+		$.ajax({
+
+			url : "cantidadAjax",
+			dataType: "json",
+			type : "post",
+			data : { identifier : identifier, cantidad : nueva_cantidad, id_producto : id_producto},
+			success : function(data){
+
+				if(data.estado == 0){
+					$('#mensaje-ajax').html('<div class="nocantidad">La cantidad solicitada no esta disponible. Unidades Disponibles: <strong>'+data.disponible+'</div> </div>');
+					$('#cantidad-'+identifier).val(data.disponible);
+					return false;
+				}
+
+				else if(data.estado == 1 ){
+					console.log(data);
+					window.location.reload();
+				
+				}
+				
+					
+				
+				
+			}
+
+
+		});
+});
+
 function estado()
 {
 	var estado = $("#eede").val();

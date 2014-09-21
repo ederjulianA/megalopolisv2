@@ -65,7 +65,35 @@ Route::get('/categorias/{id}', array(
 		'as' => 'categorias-producto',
 		'uses' => 'CategoriasController@getCategorias'
 	));
+//RUTAS PARA PROBAR EL NUEVO CARRITO DE COMPRAS#####################################################
 
+Route::post('/addtocart', array(
+		'as' => 'addTocart',
+		'uses' => 'CartController@postaddTocart'
+	));
+
+Route::post('/store/cantidadAjax', array(
+		'as' => 'cantidadAjax',
+		'uses' => 'CartController@postCantidadAjax'
+	));
+
+
+Route::get('/store/cart', array(
+		'as' => 'storeCart',
+		'uses' => 'CartController@getCart'
+	));
+
+Route::get('/remove/cart/{identifier}', array(
+		'as' => 'removeItem',
+		'uses' => 'CartController@getRemoveitem'
+	));
+
+Route::get('/checkout/cart/address', array(
+		'as' => 'checkout1',
+		'uses' => 'CartController@getCheckout1'
+	));
+
+//RUTAS NUEVO CARRITO DE COMPRA########################################
 
 /* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
 Route::get('/pago-suscripcion', array(

@@ -261,14 +261,30 @@
 
 
             @else
+            <form method="post" action="{{URL::route('addTocart')}}">
+              <input type="hidden" name="product_id" value="{{$producto->id}}">
+              {{Form::hidden('quantity', 1)}}
+              <button type="submit" class="button btn-cart cart first"> COMPRAR</button>
+              {{Form::token()}}
+              
+            </form>
 
-            <button class="button btn-cart cart first" data-toggle="modal" data-target="#infoshipping"> COMPRAR</button>
+            <!--<button class="button btn-cart cart first" data-toggle="modal" data-target="#infoshipping"> COMPRAR</button>-->
 
             @endif
               
          @else
 
-            @if($producto->cantidad > 0)<button class="button btn-cart cart first"  href="#"data-toggle="modal" data-target="#ModalLogin">COMPRAR</button> @endif
+            @if($producto->cantidad > 0)
+            <!--<button class="button btn-cart cart first"  href="#"data-toggle="modal" data-target="#ModalLogin">COMPRAR</button> -->
+            <form method="post" action="{{URL::route('addTocart')}}">
+              <input type="hidden" name="product_id" value="{{$producto->id}}">
+              {{Form::hidden('quantity', 1)}}
+              <button type="submit" class="button btn-cart cart first"> COMPRAR</button>
+              {{Form::token()}}
+              
+            </form>
+            @endif
          @endif
          
           @if(Auth::check() )

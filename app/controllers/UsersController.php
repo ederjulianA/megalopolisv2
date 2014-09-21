@@ -68,10 +68,11 @@ class UsersController extends BaseController{
 		$ship->direccion = Input::get('direccion');
 		$ship->barrio = Input::get('barrio');
 		$ship->telefono = Input::get('telefono');
+		$url_actual = Input::get('url');
 
 		if($ship->save())
 		{
-			return Redirect::to('/perfil/direccion')->with('message-alert','Has actualizado tu información de envio :)');
+			return Redirect::intended($url_actual)->with('message-alert','Has actualizado tu información de envio :)');
 		}else{
 			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
 		}
@@ -88,10 +89,11 @@ class UsersController extends BaseController{
 		$ship->direccion = Input::get('direccion');
 		$ship->barrio = Input::get('barrio');
 		$ship->telefono = Input::get('telefono');
+		$url_actual = Input::get('url');
 
 		if($ship->save())
 		{
-			return Redirect::to('/perfil/direccion')->with('message-alert','Has actualizado tu información de envio :)');
+			return Redirect::intended($url_actual)->with('message-alert','Has actualizado tu información de envio :)');
 		}else{
 			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
 		}

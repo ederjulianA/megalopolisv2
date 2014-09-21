@@ -1,17 +1,19 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-Dirección de envio
-@stop
-
-@section('content-page')
-
+Dirección de envio de tu pedido
 @stop
 
 @section('content')
-
-<div class="container main-container headerOffset"> 
-@if(Session::has('message-alert'))
+	<style type="text/css">
+	.p-info-envio{
+		margin: 30px;
+		font-size: 20px;
+		letter-spacing: 1.5px;
+	}
+	</style>
+	<div class="container main-container headerOffset">
+	@if(Session::has('message-alert'))
 
             <div class="alert alert-warning alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -22,40 +24,14 @@ Dirección de envio
                 
             </p>-->
         @endif
-
 		<div class="row">
-  
-			   	<div class="breadcrumbDiv col-lg-12">
-			        <ul class="breadcrumb">
-			          <li> <a href="{{URL::route('index')}}">Home</a> </li>
-			          <li> <a href="{{URL::route('perfil')}}">Mi cuenta</a> </li>
-			          <li class="active"> Dirección de envió </li>
-			        </ul>
-			     </div>
-  		</div>
-
-
-  		<!--INFORMACION DE ENVIO-->
-
-
-  <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-7">
-        
-        	<h1 class="section-title-inner"><span><i class="fa fa-map-marker"></i> Tu información de envió </span></h1>
-        
-        	<div class="row userInfo">
+		 <div class="col-lg-9 col-md-9 col-sm-12">
+		    		<h3 class="section-title style2 text-center"> <span>Dirección de envio </span></h3>
+		    		<p class="p-info-envio">Para seguir con el proceso de compra por favor actualiza tu información de envio.</p>
+		    			     @if($ship)
+          			<form method="post" action="{{URL::route('direccion-envio-post')}}">
             
-      
-                
-                <div class="col-lg-12 col-xs-12">
-                    <h2 class="block-title-2"> Por favor Ingresa los datos solicitados. </h2>
-                    <p class="required"><sup>*</sup> Campos Requeridos</p>
-                </div>
-
-                @if($ship)
-          <form method="post" action="{{URL::route('direccion-envio-post')}}">
-            
-            	<div class="col-xs-12 col-sm-6">
+           <div class="col-xs-12 col-sm-6">
                 
                     
                     	<div class="form-group required">
@@ -124,14 +100,14 @@ Dirección de envio
                 </div>
                 
                 <div class="col-lg-12 col-xs-12 clearfix">
-                    <button type="submit" class="btn   btn-primary"><i class="fa fa-map-marker"></i> Guardar Dirección </button>
+                    <button type="submit" class="btn   btn-primary"><i class="fa fa-map-marker"></i> Actualizar Dirección </button>
                 </div>
                 {{Form::token()}}
                 
        	  </form>
 
                 @else
- <form method="post" action="{{URL::route('nueva-direccion-envio-post')}}">
+ 						<form method="post" action="{{URL::route('nueva-direccion-envio-post')}}">
             
             	         <div class="col-xs-12 col-sm-6">
                 
@@ -174,7 +150,7 @@ Dirección de envio
                 </div>
                 
                 
-                <div class="col-xs-12 col-sm-6">
+             <div class="col-xs-12 col-sm-6">
                 
                 
                 	
@@ -203,39 +179,49 @@ Dirección de envio
                 </div>
                 
                 <div class="col-lg-12 col-xs-12 clearfix">
-                    <button type="submit" class="btn   btn-primary"><i class="fa fa-map-marker"></i> Guardar Dirección </button>
+                    <button type="submit" class="btn   btn-primary"><i class="fa fa-map-marker"></i> Actualizar Dirección </button>
                 </div>
                 {{Form::token()}}
                 
-</form>
+				</form>
 
 
                 @endif
-                
-     
-                
-                
-                <div class="col-lg-12 col-xs-12  clearfix ">
-    
-                            <ul class="pager">
-                          <li class="previous pull-right"><a href="{{URL::route('index')}}"> <i class="fa fa-home"></i> Inicio </a></li>
-                          <li class="next pull-left"><a href="{{URL::route('perfil')}}">&larr; Perfil</a></li>
-                          </ul>
-               </div>
-            
-            
-            
-            </div><!--/row end-->
-        	
-       
-        </div>
-         <div class="col-lg-3 col-md-3 col-sm-5">
-         </div>
-         
-         
-      </div><!--/row-->
+		    	
+		  </div>
+		    <div class="col-lg-3 col-md-3 col-sm-12 rightSidebar">
+		    	 <div class="w100 cartMiniTable">
+		    	 <h3 class="section-title style2 text-center"> <span>Tu compra </span></h3>
 
-
-   </div>   
+              <table id="cart-summary" class="std table">
+				@if($products)              
+	                <tbody>
+	                  <tr >
+	                    <td>Total productos</td>
+	                    <td class="price" >${{number_format(Cart::total(), 0, '', '.')}}</td>
+	                  </tr>
+	                  
+	                  
+	                 
+	                  <tr >
+	                    <td > Total </td>
+	                    <td class=" site-color" id="total-price">${{number_format(Cart::total(), 0, '', '.')}}</td>
+	                  </tr>
+	                  <tr >
+	                    <td colspan="2"  ><div class="input-append couponForm">
+	                        <input class="col-lg-8" id="appendedInputButton" type="text"  placeholder="Coupon code" >
+	                        <button class="col-lg-4 btn btn-success" type="button">Aplicar!</button>
+	                      </div></td>
+	                  </tr>
+	                </tbody>
+	               @endif 
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+		    	
+		    </div>
+		</div>    
+	</div>
 
 @stop
