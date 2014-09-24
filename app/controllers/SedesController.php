@@ -153,7 +153,7 @@ class SedesController extends BaseController{
 			$empresa = Empresa::where('id','=',$empresaid)->first();
 
 			if($empresa->estado==0){
-				return Redirect::to('/empresa/'.$empresa->nombre_publico);
+				return Redirect::to('/')->with('message-alert','Esta empresa no esta disponible. Disculpa las molestias.');
 			}
 
 			$suscriptores = DB::table('user_subs as us')->join('empresas as e','us.empresa','=','e.id')
@@ -222,7 +222,7 @@ class SedesController extends BaseController{
 			$empresa = Empresa::where('id','=',$empresaid)->first();
 
 			if($empresa->estado==0){
-				return Redirect::to('/empresa/'.$empresa->nombre_publico);
+				return Redirect::to('/')->with('message-alert','Esta empresa no esta disponible. Disculpa las molestias.');
 			}
 
 			$suscriptores = DB::table('user_subs as us')->join('empresas as e','us.empresa','=','e.id')

@@ -719,3 +719,20 @@ Route::get('/terminos-condiciones', array(
 		'uses' => 'HomeController@terminos'
 	));
 
+
+
+
+
+Route::group(array('domain' => '{empresa}.tumegalopolis.com'), function()
+{
+    Route::get('/', function($empresa)
+    {
+    	$newEmpresa = Empresa::where('nombre_publico','=',$empresa)->first();
+    	if($newEmpresa->count())
+    	{
+    		return View::make('tiendas.index')->with('empresa',$newEmpresa);
+    	}
+        die($empresa);
+    });
+});
+

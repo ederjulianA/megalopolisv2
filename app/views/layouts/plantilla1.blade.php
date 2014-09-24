@@ -1,4 +1,4 @@
-﻿ <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -269,13 +269,13 @@
         <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
         
         <div class="pull-left ">
-            <ul class="userMenu ">
-              <li> <a href="#"> <span class="hidden-xs">Contáctanos</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
-              <li class="phone-number"> 
-              <a  href="callto:+6481166"> 
-              <span> <i class="glyphicon glyphicon-phone-alt "></i></span> 
-              <span class="hidden-xs" style="margin-left:5px"> 6481166 - 6483698 </span> </a> </li>
-            </ul>
+                <!--<ul class="userMenu ">
+                  <li> <a href="#"> <span class="hidden-xs">Contáctanos</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
+                  <li class="phone-number"> 
+                  <a  href="callto:+6481166"> 
+                  <span> <i class="glyphicon glyphicon-phone-alt "></i></span> 
+                  <span class="hidden-xs" style="margin-left:5px"> 6481166 - 6483698 </span> </a> </li>
+                </ul>-->
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
@@ -321,7 +321,8 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>-->
-      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company', array('height'=>'50px'))}} </a> 
+      @yield('logo-empresa')
+      
       
       <!-- this part for mobile -->
       
@@ -374,10 +375,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 
-        <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
-        <?php $categorias = Categoria::all(); $nivel =2;?>
-
-        @include('menucat', array('categorias'=>$categorias,'nivel'=>$nivel))
+    
 
 
 
@@ -403,14 +401,11 @@
           </ul>
         </li>-->
 
-        <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
-        <li><a href="#">Blog</a></li>
+        
         </ul>
         <div class="busc">
-          <form method="get" action="{{URL::route('buscador')}}" class="form-search">
-      <input type="text"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Qué buscas..." class="">
-      <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
-    </form>
+        @yield('buscadorTienda')
+    
           
         </div>
 

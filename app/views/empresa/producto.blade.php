@@ -1,4 +1,4 @@
-@extends('layouts.tshop')
+@extends('layouts.plantilla1')
 
 @section('titulo')
 	{{$producto->producto_nombre}}
@@ -15,6 +15,17 @@
 <meta property="og:url" content="http://www.tumegalopolis.com/producto/{{$producto->id}}-{{$producto->sede_id}}-{{$producto->slug}}"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/{{$producto->imagen}}"/>
 
+@stop
+
+@section('logo-empresa')
+<a class="logoMega " href="#"> {{HTML::image($producto->logo, $producto->nombre_publico_empresa, array('height'=>'100px'))}} </a> 
+@stop
+
+@section('buscadorTienda')
+  <form method="get" action="{{URL::route('buscador')}}" class="form-search">
+      <input type="text"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Buscar en la tienda..." class="">
+      <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
+    </form>
 @stop
 
 

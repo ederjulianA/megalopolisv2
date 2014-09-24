@@ -1,4 +1,4 @@
-@extends('layouts.tshop')
+@extends('layouts.plantilla1')
 @section('titulo')
 Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
 @stop
@@ -10,6 +10,17 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
     <meta property="og:type" content="website"/>
 <meta property="og:url" content="http://www.tumegalopolis.com/public/catalogo/{{$sede->nombre_publico}}"/>
 <meta property="og:image" content="http://www.tumegalopolis.com/public/img/{{$sede->empresa->logo}}"/>
+@stop
+
+@section('logo-empresa')
+<a class="logoMega " href="#"> {{HTML::image($sede->empresa->logo, $sede->empresa->nombre_publico, array('height'=>'100px'))}} </a> 
+@stop
+
+@section('buscadorTienda')
+  <form method="get" action="{{URL::route('buscador')}}" class="form-search">
+      <input type="text"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Buscar en la tienda..." class="">
+      <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
+    </form>
 @stop
 
 @section('content')
@@ -71,7 +82,7 @@ Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
           </div>
           
           <div id="collapseCategory" class="panel-collapse collapse in">
-            <div class="panel-body">
+            <div class="panel-body" background="fonm.png">
 
               <ul class="nav nav-pills nav-stacked tree">
 

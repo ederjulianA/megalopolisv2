@@ -99,6 +99,8 @@ class ProductosController  extends BaseController {
 				 'e.desc_larga',
 				 'e.direccion_principal AS direccion_empresa',
 				 'e.telefono',
+				 'e.logo',
+				 	
 				 'p.nombre AS producto_nombre',
 				 'p.imagen',
 				 'p.slug',

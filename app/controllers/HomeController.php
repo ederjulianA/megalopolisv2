@@ -9,6 +9,11 @@ class HomeController extends BaseController {
 		return View::make('Carlos.andres')->with('categorias',$categorias)->with('numCategorias',$numCat)->with('usutip1',$usuarios);
 	}
 
+	public function getDomine($empresa)
+	{
+		
+	}
+
 	public function getLanding2()
 	{
 		return View::make('landing2');

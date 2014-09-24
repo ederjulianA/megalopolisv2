@@ -1,0 +1,1 @@
+<h1>VISTA INDEX DE TIENDAS </h1>
