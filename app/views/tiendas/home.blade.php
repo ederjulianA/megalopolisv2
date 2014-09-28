@@ -1,12 +1,30 @@
 @extends('layouts.stores')
 
-@section('content')
+@section('titulo')
+	TIENDA
+@stop
 
-<div class="row">
+@section('logo-empresa')
+<img src="{{asset($empresa->logo)}}" class="logoEmpresa">
+@stop
+
+@section('titulo-mobile')
+{{$empresa->razon_social}}
+@stop
+
+@section('content')
+	<style type="text/css">
+	.banner-empresa{
+		max-width: 100%;
+		width: 800px;
+		height: auto;
+	}
+	</style>
+				<div class="row">
 
           <!-- Slider -->
           <div class="col-lg-9 col-md-12">
-                IMAGEN DE LA EMPRESA
+                {{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}
                   <!--<div class="slider">
                       <ul class="bxslider">
                           <li>
@@ -32,7 +50,7 @@
       <!-- Product Selection, visible only on large desktop -->
             <div class="col-lg-3 visible-lg">
                 <div class="row text-center">
-                    <h2>NOMBRE DE LA EMPRESA</h2>
+                    <h2>{{$empresa->razon_social}}</h2>
                     <p>INFO DE LA EMPRESA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -286,57 +304,4 @@
       <!-- End Adidas Category -->
 
         </div>
-  <!--<div class="contenedor">
-    <h1 class="uppercase xlarge">Encuentra lo que necesitas</h1> {{HTML::image('Tshop/images/product/simbolo.png')}}
-
-    <div class="buscador-cont">
-      <form method="get" action="{{URL::route('buscador')}}">
-        
-        <input type="search" name="buscador" id="buscador" value="" placeholder="Qué buscas"required>
-        <button  class="btn btn-primary btn-small" type="submit" value=""><i class="glyphicon glyphicon-search"></i> Buscar</button>
-       </form> 
-        
-      </div>
-
-
-      <div class="pasos-cont">
-        <h2>Siguiendo estos 3 simples pasos!</h2>
-          <div class="paso1">
-            
-            <div class="img-paso1"></div>
-            <h2><span class="span-numero">1</span>Contacta al vendedor</h2>
-            <p class="descripcion-paso">
-              Busca tu producto y contacta al vendedor del articulo mediante sus datos de contacto o a través del sistema de preguntas
-            </p>
-          </div>
-
-          <div class="paso2">
-            
-             <div class="img-paso2"></div>
-             <h2><span class="span-numero">2</span>Realiza tu pedido</h2>
-             <p class="descripcion-paso">
-               Agrega el producto a tus compras y procede a acordar el pago con el vendedor
-             </p>
-              
-            
-            
-          </div>
-
-          <div class="paso3">
-            
-            <div class="img-paso3"></div>
-            <h2><span class="span-numero">3</span> Disfruta tu pedido</h2>
-            <p class="descripcion-paso">
-               Recibe tu pedido según lo acordado con el vendedor y disfruta tu compra.
-              
-            </p>
-
-              
-                        
-          </div>
-
-        
-      </div>
-    
-  </div>-->
 @stop

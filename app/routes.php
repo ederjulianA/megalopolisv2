@@ -722,6 +722,14 @@ Route::get('/terminos-condiciones', array(
 
 
 
+Route::get('/{empresa}/', array(
+		'as' => 'nuevaEmpresaView',
+		'uses' => 'PruebaController@getHome'
+	));
+
+
+
+
 
 Route::group(array('domain' => '{empresa}.tumegalopolis.com'), function()
 {

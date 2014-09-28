@@ -26,7 +26,8 @@
 
             <!-- Logo -->
               <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
-                <img src="{{asset('Stores/img/logoDef.jpg')}}" class="logoEmpresa">
+                @yield('logo-empresa')
+                <!--<img src="{{asset('Stores/img/logoDef.jpg')}}" class="logoEmpresa">-->
                 <!--<div class="well logo">
                   <a href="index.html">
                     Mimity <span>Online Shop</span>
@@ -56,7 +57,7 @@
                   <div class="well">
                       <div class="btn-group btn-group-cart">
                           @if(Cart::total(false))
-                            <a href="">TERMINAR COMPRA</a>
+                            <a href="{{URL::route('storeCart')}}">TERMINAR COMPRA <strong>({{Cart::totalItems()}})</strong></a>
 
                           @else
                             <a href="#">No hay compras</a>
