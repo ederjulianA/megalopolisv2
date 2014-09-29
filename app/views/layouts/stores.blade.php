@@ -17,6 +17,17 @@
       max-width: 100%;
       margin: 0 auto;
     }
+
+    .titulo-empresa{
+      max-width: 100%;
+      width: 95%;
+      text-align: center;
+
+    }
+    .titulo-empresa h2 {
+      font-size: 25px;
+      font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -48,6 +59,8 @@
                               </span>
                           </div>
                       </form>
+
+                      <div class="titulo-empresa"><h2>@yield('titulo-mobile')</h2></div>
                   </div>
               </div>
               <!-- End Search Form -->
@@ -168,7 +181,7 @@
           </div>
         </div>
         <div class="navbar-inverse text-center copyright">
-          Copyright &copy; 2014 Empresa || powered by tuMegalopolis
+          Copyright &copy; 2014 @yield('titulo-mobile') || powered by tuMegalopolis
         </div>
     </footer>
 

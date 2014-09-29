@@ -404,7 +404,12 @@
         </li>-->
 
         <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
-        <li><a href="#">Blog</a></li>
+         @if(Cart::total(false))
+         <li><a href="#">TERMINAR COMPRAS</a></li>
+         @else
+         <li><a href="#">NO HAY COMPRAS</a></li>
+         @endif
+        
         </ul>
         <div class="busc">
           <form method="get" action="{{URL::route('buscador')}}" class="form-search">
