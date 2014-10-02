@@ -3,16 +3,73 @@
 @section('titulo')
 	TIENDA
 @stop
+<?php  $color = "#f60";?>
+@section('estilos')
+
+
+	 
+
+
+@stop
+
+
 
 @section('logo-empresa')
 <img src="{{asset($empresa->logo)}}" class="logoEmpresa">
+@stop
+
+@section('menu')
+	<li><a href="{{URL::route('nuevaEmpresaView',array('empresa'=>$empresa->nombre_publico))}}" class="active">HOME</a></li>
+	<li><a href="{{URL::route('nuevaProductos',array('empresa'=>$empresa->nombre_publico))}}" class="">PRODUCTOS</a></li>
+	<li><a></a></li>
+
 @stop
 
 @section('titulo-mobile')
 {{$empresa->razon_social}}
 @stop
 
+@section('info-footer1')
+	<h4>{{$empresa->razon_social}}</h4>
+	<ul>
+		<li>
+			@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+                    	@endif
+		</li>
+		<li>Direccion Principal : {{$empresa->direccion_principal}}</li>
+	</ul>
+@stop
+
+@section('info-footer2')
+	<h4>Sedes ({{$num_sedes}})</h4>
+	<ul>
+		@foreach($sedes as $s)
+			<li>{{$s->nombre_publico}}---{{$s->direccion}}</li>
+		@endforeach
+	</ul>
+@stop
+
 @section('content')
+	<style type="text/css">
+	.info-empresa{
+		font-weight: bold;
+		font-size: 20px;
+		letter-spacing: .5px;
+		color: #666;
+
+	}
+	header {background-image:  url({{ URL::asset($empresa->logo); }})}
+	header{
+		-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+
+	</style>
 
 	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw"
     type="text/javascript"></script>
@@ -70,8 +127,8 @@
       <!-- Product Selection, visible only on large desktop -->
             <div class="col-lg-3 visible-lg">
                 <div class="row text-center">
-                    <h2>{{$empresa->razon_social}}</h2>
-                    <p>
+                    
+                    <p class="info-empresa">
                     	@if(!$empresa->desc_corta)
                     		{{$empresa->desc_larga}}
                     	@else
@@ -82,6 +139,7 @@
                 </div>
                 <div class="row text-center">
                 	 <div id="map_canvas" style="width: 100%; height: 250px;margin-top: 10px;"></div>
+                	 <div class="alert alert-info" role="alert"><strong>{{$sede->direccion}}</strong></div>
             <script type = 'text/javascript'>
               initialize({{$sede->latitude}}, {{$sede->longitude}});
             </script>
@@ -97,7 +155,7 @@
             <!-- Categories -->
             <div class="col-lg-12 col-md-12 col-sm-6">
               <div class="no-padding">
-                  <span class="title">CATEGORIES</span>
+                  <span class="title">CATEGORIAS</span>
                 </div>
           <div class="list-group list-categ">
           @foreach($categorias as $cat)
@@ -111,7 +169,7 @@
         <!-- Best Seller -->
         <div class="col-lg-12 col-md-12 col-sm-6">
           <div class="no-padding">
-                  <span class="title">BEST SELLER</span>
+                  <span class="title">PROMOCIONES</span>
                 </div>
           <div class="hero-feature">
                     <div class="thumbnail text-center">
@@ -151,11 +209,11 @@
 		                    </a>
 		                      <div class="caption prod-caption">
 		                          <h4><a href="#">{{$pro->producto_nombre}}</a></h4>
-		                          <p>{{$pro->categoria_nombre}}</p>
+		                          <p>${{number_format($pro->precio_detal, 0, '', '.')}}</p>
 		                          <p>
 		                            <div class="btn-group">
-		                              <a href="#" class="btn btn-default">$ {{number_format($pro->precio_detal, 0, '', '.')}}</a>
-		                              <a href="#" class="btn btn-primary"><i class="glyphicon  glyphicon-shopping-cart"></i> Comprar</a>
+		                              <a href="#" class="btn btn-default"> ver mas </a>
+		                              <a href="#" class="btn btn-primary addCart" id="{{$pro->id}}"><i class="glyphicon  glyphicon-shopping-cart"></i> Comprar</a>
 		                            </div>
 		                          </p>
 		                      </div>

@@ -1,5 +1,6 @@
 <?php
 
+
 class Empresa extends Eloquent {
 
 	protected $table = 'empresas';
@@ -27,6 +28,8 @@ class Empresa extends Eloquent {
     {
         return $this->belongsTo('User');
     }
+
+    
 
     public function userSub()
     {

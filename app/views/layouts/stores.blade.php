@@ -5,6 +5,7 @@
     @yield('content-page')
     
     <title>@yield('titulo')</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     {{ HTML::style('Stores/css/bootstrap.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/font-awesome.min.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/jquery.bxslider.css', array('media' => 'screen'))}}
@@ -31,7 +32,7 @@
     </style>
 </head>
 <body>
-  <header>
+  <header @yield('estilos')>
       <div class="container">
           <div class="row">
 
@@ -55,7 +56,7 @@
                           <div class="input-group">
                               <input type="text" class="form-control input-search" placeholder="buscar en esta tienda"/>
                               <span class="input-group-btn">
-                                  <button class="btn btn-default no-border-left" type="submit"><i class="fa fa-search"></i></button>
+                                  <button class="btn btn-default no-border-left" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                               </span>
                           </div>
                       </form>
@@ -70,12 +71,41 @@
                   <div class="well">
                       <div class="btn-group btn-group-cart">
                           @if(Cart::total(false))
-                            <a href="{{URL::route('storeCart')}}">TERMINAR COMPRA <strong>({{Cart::totalItems()}})</strong></a>
+                            
+
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                              <span class="pull-left"><i class="glyphicon glyphicon-shopping-cart icon-cart"></i></span>
+                              <span class="pull-left">Compras pendientes: <span id="total-items-cart"> {{Cart::totalItems()}}</span></span>
+                              <span class="pull-right"><i class="fa fa-caret-down"></i></span>
+                              <input type="hidden" id="v_cart_t_i" value="{{Cart::totalItems()}}">
+                          </button>
+                          <ul class="dropdown-menu cart-content" role="menu">
+                               <!-- <li>
+                                    <a href="detail.html">
+                                        <b>Penn State College T-Shirt</b>
+                                        <span>x1 $528.96</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="detail.html">
+                                        <b>Live Nation ACDC Gray T-Shirt</b>
+                                        <span>x1 $428.96</span>
+                                    </a>
+                                </li>-->
+                                <li class="divider"></li>
+                                <li><a href="{{URL::route('storeCart')}}">Total: $<span id="valor-total-carro">{{number_format(Cart::total(), 0, '', '.')}}</span></a></li>
+                                <input type="hidden" id="valor-total-carro-frm" value="{{Cart::total()}}">
+                          </ul>
 
                           @else
-                            <a href="#">No hay compras</a>
+                            <a>NO HAY COMPRAS</a>
 
                           @endif
+
+                          @yield('carro')
+
+                          
+
                           <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                               <span class="pull-left"><i class="fa fa-shopping-cart icon-cart"></i></span>
                               <span class="pull-left">Shopping Cart: 2 item(s)</span>
@@ -120,7 +150,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="active">Home</a></li>
+                    @yield('menu')
+                    
                     
                 </ul>
             </div>
@@ -128,7 +159,7 @@
     </nav>
     <!-- End Navigation -->
 
-  <div class="container main-container">
+  <div class="container main-container" background="img/bg1.jpg">
       @yield('content')
         
   </div>
@@ -137,46 +168,24 @@
       <div class="container">
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="column">
-              <h4>Information</h4>
-              <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="typography.html">Policy Privacy</a></li>
-                <li><a href="typography.html">Terms and Conditions</a></li>
-                <li><a href="typography.html">Shipping Methods</a></li>
-              </ul>
+              @yield('info-footer1')
+              
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="column">
-              <h4>Categories</h4>
-              <ul>
-                <li><a href="catalogue.html">Cras justo odio</a></li>
-                <li><a href="catalogue.html">Dapibus ac facilisis in</a></li>
-                <li><a href="catalogue.html">Morbi leo risus</a></li>
-                <li><a href="catalogue.html">Porta ac consectetur ac</a></li>
-              </ul>
+            @yield('info-footer2')
+              
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="column">
-              <h4>Customer Service</h4>
-              <ul>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#">YM: erwin_heldy</a></li>
-                <li><a href="#">Telp: 087825376xxx</a></li>
-                <li><a href="#">Email: erwin.heldy@gmail.com</a></li>
-              </ul>
+              
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="column">
-              <h4>Follow Us</h4>
-              <ul class="social">
-                <li><a href="#">Google Plus</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">RSS Feed</a></li>
-              </ul>
+              
             </div>
           </div>
         </div>
@@ -186,7 +195,7 @@
     </footer>
 
     <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
-      <i class="fa fa-angle-double-up"></i>
+      <i class="glyphicon glyphicon-arrow-up"></i>
     </a>
 
     {{ HTML::script('Stores/js/jquery.js')}}
@@ -194,6 +203,7 @@
     {{ HTML::script('Stores/js/jquery.bxslider.min.js')}}
     {{ HTML::script('Stores/js/jquery.blImageCenter.js')}}
     {{ HTML::script('Stores/js/mimity.js')}}
+    {{ HTML::script('js/cart.js')}}
    
 </body>
 </html>

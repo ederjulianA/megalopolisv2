@@ -405,7 +405,7 @@
 
         <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
          @if(Cart::total(false))
-         <li><a href="#">TERMINAR COMPRAS</a></li>
+         <li><a href="{{URL::route('storeCart')}}">TERMINAR COMPRAS</a></li>
          @else
          <li><a href="#">NO HAY COMPRAS</a></li>
          @endif
@@ -501,17 +501,7 @@
   <!--/.search-full--> 
   
 </div>
-@if(Session::has('message-alert'))
 
-            <div class="alert alert-warning alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <strong>Mensaje</strong> {{Session::get('message-alert')}}
-            </div>
-
-            <!--<p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
-                
-            </p>-->
-        @endif
 <!-- /.Fixed navbar  -->
 @yield('content')
 <!--/.parallax-section-->

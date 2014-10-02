@@ -17,5 +17,10 @@ class Producto extends Eloquent {
 	{
 		return $this->belongsTo('Categoria');
 	}
+
+	public function scopeLimit($query)
+	{
+		return $query->orderBy(DB::raw('RAND()'))->take(4);
+	}
 }
 ?>

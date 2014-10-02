@@ -194,23 +194,42 @@ Dirección de envio de tu pedido
 		    	 <h3 class="section-title style2 text-center"> <span>Tu compra </span></h3>
 
               <table id="cart-summary" class="std table">
-				@if($products)              
+				@if($item)              
 	                <tbody>
 	                  <tr >
 	                    <td>Total productos</td>
-	                    <td class="price" >${{number_format(Cart::total(), 0, '', '.')}}</td>
+	                    <td class="price" >${{number_format($item->total(), 0, '', '.')}}</td>
 	                  </tr>
 	                  
 	                  
 	                 
 	                  <tr >
 	                    <td > Total </td>
-	                    <td class=" site-color" id="total-price">${{number_format(Cart::total(), 0, '', '.')}}</td>
+	                    <td class=" site-color" id="total-price">${{number_format($item->total(), 0, '', '.')}}</td>
 	                  </tr>
 	                  <tr >
 	                    <td colspan="2"  ><div class="input-append couponForm">
-	                        <input class="col-lg-8" id="appendedInputButton" type="text"  placeholder="Coupon code" >
-	                        <button class="col-lg-4 btn btn-success" type="button">Aplicar!</button>
+	                        
+                            @if($ship)
+                               
+                                    <form method="POST" action="{{URL::route('pagarItem')}}">
+                                      <input type="hidden" name="identifier" value="{{$item->identifier}}">
+                                      <input type="hidden" name="id_empresa" value="{{$item->company}}">
+                                      <input type="hidden" name="id_producto" value="{{$item->id}}">
+                                      <input type="hidden" name="id_comprador" value="{{Auth::user()->id}}">
+
+                                      <input type="hidden" name="valor_unitario" value="{{$item->price}}">
+                                      <input type="hidden" name="cant" value="{{$item->quantity}}">
+                                      <input type="hidden" name="totalItem" value="{{$item->total()}}">
+                                      <button type="submit">PAGAR</button>
+                                      {{Form::token()}}
+                                    </form>
+
+                            @else
+
+                            @endif
+                         
+	                        
 	                      </div></td>
 	                  </tr>
 	                </tbody>

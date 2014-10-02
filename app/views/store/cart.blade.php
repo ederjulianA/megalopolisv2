@@ -22,7 +22,7 @@
       <ul class="breadcrumb">
         <li><a href="{{URL::route('index')}}">Home</a> </li>
         
-        <li class="active">Carro de compras </li>
+        <li class="active">Tu compra </li>
       </ul>
     </div>
   </div><!--/.row-->
@@ -30,6 +30,18 @@
   <div class="row">
     <div class="col-lg-9 col-md-9 col-sm-7">
       <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> Mi compra </span></h1>
+      <p>Por favor termina tu compra</p>
+      @if(Session::has('message-alert'))
+
+            <div class="alert alert-warning alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Mensaje</strong> {{Session::get('message-alert')}}
+            </div>
+
+            <!--<p class="mensajes-flash" style="" data-dismiss="alert"id="mensaje-flash"> {{Session::get('message-alert')}}
+                
+            </p>-->
+        @endif
     </div>
     <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar">
       <!--<h4 class="caps"><a href="category.html"><i class="fa fa-chevron-left"></i> Back to shopping </a></h4>-->
@@ -46,11 +58,14 @@
               
                 <tr class="CartProduct cartTableHeader">
                   <td style="width:15%"  > Producto </td>
-                  <td style="width:40%"  >Detalles</td>
+                  <td style="width:30%"  >Detalles</td>
                   <td style="width:10%"  class="delete">&nbsp;</td>
                   <td style="width:10%" >CANT</td>
                   <td style="width:10%" >Descuento</td>
                   <td style="width:15%" >Total</td>
+                  <td style="width:10%" >Acciones
+                     
+                  </td>
                 </tr>
                 
                 
@@ -67,6 +82,16 @@
                   <td ><input class="quanitySniper cantidad" type="text" data-toggle="{{$product->id}}" value="{{$product->quantity}}" name="quanitySniper"  id="cantidad-{{$product->identifier}}" data="{{$product->identifier}}"></td>
                   <td >0</td>
                   <td class="price">${{number_format($product->total(), 0, '', '.')}}</td>
+                  <td>
+                    @if(Auth::check())
+                        
+                        <a href="{{URL::route('checkout2',array('identifier'=>$product->identifier))}}">PAGAR</a>
+                       
+
+                    @else
+                      <a data-toggle="modal" data-target="#ModalLogin">PAGAR</a>
+                    @endif
+                     </td>
 
                 </tr>
 
@@ -95,7 +120,7 @@
         <div class="w100 costDetails">
           <div class="table-block" id="order-detail-content">
           @if(Auth::check())
-           <a class="btn btn-primary btn-lg btn-block " title="checkout" href="{{URL::route('checkout1')}}" style="margin-bottom:20px"> Pagar &nbsp; <i class="fa fa-arrow-right"></i> 
+           <a class="btn btn-primary btn-lg btn-block " title="checkout" href="#" style="margin-bottom:20px"> Pagar &nbsp; <i class="fa fa-arrow-right"></i> 
            </a>
            @else
            <a class="btn btn-primary btn-lg btn-block " title="checkout" href="#"data-toggle="modal" data-target="#ModalLogin" style="margin-bottom:20px"> Pagar &nbsp; <i class="fa fa-arrow-right"></i> 
@@ -139,4 +164,8 @@
   </div><!--/row-->
 
   </div>
+
+
+
+  
 @stop

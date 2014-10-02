@@ -93,6 +93,17 @@ Route::get('/checkout/cart/address', array(
 		'uses' => 'CartController@getCheckout1'
 	));
 
+
+Route::post('/checkout/cart/pagarItem', array(
+		'as' => 'pagarItem',
+		'uses' => 'CartController@postpagarItem'
+	));
+
+Route::get('/checkout/cart/{identifier}', array(
+		'as' => 'checkout2',
+		'uses' => 'CartController@getCheckout2'
+	));
+
 //RUTAS NUEVO CARRITO DE COMPRA########################################
 
 /* RUTA PARA HACER FILTROS DE PRODUCTOS POR CATEGORIA*/
@@ -339,6 +350,12 @@ Route::post('/producto/pregunta', array(
 Route::post('/mega/get/promo', array(
 		'as' => 'promos-lista',
 		'uses' => 'AjaxController@postPromos'
+	));
+
+
+Route::post('/addcartAjax', array(
+		'as' => 'addcartAjax',
+		'uses' => 'PruebaController@addcartAjax'
 	));
 
 
@@ -722,25 +739,28 @@ Route::get('/terminos-condiciones', array(
 
 
 
-Route::get('/{empresa}/', array(
+Route::get('/{empresa}', array(
 		'as' => 'nuevaEmpresaView',
 		'uses' => 'PruebaController@getHome'
+	));
+
+Route::get('/{empresa}/productos/', array(
+		'as' => 'nuevaProductos',
+		'uses' => 'PruebaController@getProductos'
+	));
+
+Route::get('/{empresa}/productos/{opc}', array(
+		'as' => 'nuevaProductos',
+		'uses' => 'PruebaController@getProductosOrden'
 	));
 
 
 
 
 
-Route::group(array('domain' => '{empresa}.tumegalopolis.com'), function()
-{
-    Route::get('/', function($empresa)
-    {
-    	$newEmpresa = Empresa::where('nombre_publico','=',$empresa)->first();
-    	if($newEmpresa->count())
-    	{
-    		return View::make('tiendas.index')->with('empresa',$newEmpresa);
-    	}
-        die($empresa);
-    });
+Route::group(array('domain' => '{account}.tumegalopolis.com'), function(){
+
+    Route::get("/" , array("uses" => 'MapaController@getIndex'));
+
 });
 
