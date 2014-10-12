@@ -9,6 +9,7 @@
     {{ HTML::style('Stores/css/bootstrap.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/font-awesome.min.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/jquery.bxslider.css', array('media' => 'screen'))}}
+    {{ HTML::style('Stores/css/smoothproducts.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/style.css', array('media' => 'screen'))}}
 
     <style type="text/css">
@@ -93,7 +94,7 @@
                                     </a>
                                 </li>-->
                                 <li class="divider"></li>
-                                <li><a href="{{URL::route('storeCart')}}">Total: $<span id="valor-total-carro">{{number_format(Cart::total(), 0, '', '.')}}</span></a></li>
+                                <li><a href="{{URL::route('storeCart')}}" class="btn btn-info"> PAGAR Total: $<span id="valor-total-carro">{{number_format(Cart::total(), 0, '', '.')}}</span></a></li>
                                 <input type="hidden" id="valor-total-carro-frm" value="{{Cart::total()}}">
                           </ul>
 
@@ -203,6 +204,8 @@
     {{ HTML::script('Stores/js/jquery.bxslider.min.js')}}
     {{ HTML::script('Stores/js/jquery.blImageCenter.js')}}
     {{ HTML::script('Stores/js/mimity.js')}}
+    {{ HTML::script('Stores/js/smoothproducts.min.js')}}
+    {{ HTML::script('Stores/js/bootstrap.touchspin.js')}}
     {{ HTML::script('js/cart.js')}}
    
 </body>

@@ -758,9 +758,28 @@ Route::get('/{empresa}/productos/{opc}', array(
 
 
 
-Route::group(array('domain' => '{account}.tumegalopolis.com'), function(){
+//CARGAR DATOS DESDE CSV$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-    Route::get("/" , array("uses" => 'MapaController@getIndex'));
+Route::get('/mega/sync', array(
+		'as' => 'sync',
+		'uses' => 'CsvController@getSync'
+	));
 
-});
+Route::get('/distribuidor/{empresa}', array(
+		'as' => 'distribuidor',
+		'uses' => 'CsvController@getDistribuidor'
+	));
+
+
+Route::get('/distribuidor/{empresa}/{id}', array(
+		'as' => 'distribuidorProducto',
+		'uses' => 'CsvController@getDistribuidorProducto'
+	));
+
+Route::post('/svc-post', array(
+		'as' => 'svcPost',
+		'uses' => 'CsvController@postUpload'
+	));
+
+
 

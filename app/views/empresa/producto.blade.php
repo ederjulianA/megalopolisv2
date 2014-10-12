@@ -1,4 +1,4 @@
-@extends('layouts.plantilla1')
+@extends('layouts.tshop')
 
 @section('titulo')
 	{{$producto->producto_nombre}}
@@ -261,14 +261,21 @@
          @if(Auth::check() )
 
             @if($ship)
-              <form id="form-cart-before" method="get" action="{{URL::route('form-carrito-previo')}}">
+              <!--<form id="form-cart-before" method="get" action="{{URL::route('form-carrito-previo')}}">
                   <input type="hidden" name="id_producto" id="id_producto" value="{{$producto->id}}">
                   <input type="hidden" name="id_empresa" id="id_empresa" value="{{$producto->id_empresa}}">
                   <input type="hidden" name="id_comprador" id="id_comprador" value="{{auth::user()->id}}">
 
                   @if($producto->cantidad > 0)<button  class="button btn-cart cart first" title="contactar a {{$producto->producto_nombre}}" type="submit">COMPRAR</button>
                   @endif
-             </form>
+              </form>-->
+               <form method="post" action="{{URL::route('addTocart')}}">
+              <input type="hidden" name="product_id" value="{{$producto->id}}">
+              {{Form::hidden('quantity', 1)}}
+              <button type="submit" class="button btn-cart cart first"> COMPRAR</button>
+              {{Form::token()}}
+              
+            </form>
 
 
             @else

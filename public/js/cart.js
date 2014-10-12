@@ -29,3 +29,33 @@ $(document).on('click','.addCart', function(e){
 	
 	e.preventDefault();
 });
+$(document).on('click','#btn-carrito',function(e){
+	var id = $('#product_id').val();
+	$.ajax({
+
+			url : "../../addcartAjax",
+			dataType: "json",
+			type : "post",
+			data : { id_producto : id},
+			success : function(data){
+				if(data.estado.estado == 1)
+				{
+					alert('hola');
+				}
+				console.log(data);
+			}
+
+				
+
+
+		});
+	e.preventDefault();
+});
+
+$(document).on('change','#qty-id', function(e){
+	var cantidad = $('#qty-id').val();
+
+	$('#qty-id').val(cantidad);
+
+	alert(cantidad);
+});

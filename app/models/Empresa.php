@@ -47,6 +47,10 @@ class Empresa extends Eloquent {
 		return $this->hasMany('Pregunta');
 	}
 
+	public function mantis(){
+		return $this->hasMany('Mantis');
+	}
+
 	public function sede()
 	{
 		return $this->hasMany('Sede');

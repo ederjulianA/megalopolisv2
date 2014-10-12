@@ -459,12 +459,12 @@
 					
 						
 						<li>
-							<a href="#">
+							<a href="{{URL::route('sync')}}">
 								<span class="menu-icon">
 									<i class="fa fa-clock-o fa-lg"></i> 
 								</span>
 								<span class="text">
-									ITEM MENU
+									SINCRONIZAR
 								</span>
 								<span class="menu-hover"></span>
 							</a>

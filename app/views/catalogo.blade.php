@@ -1,4 +1,4 @@
-@extends('layouts.plantilla1')
+@extends('layouts.tshop')
 @section('titulo')
 Catalogo | {{$sede->nombre_publico}} - {{$sede->direccion}}
 @stop

@@ -591,6 +591,7 @@ class UsersController extends BaseController{
 
 	public function cerrarSesion() {
 		Auth::logout();
+		Cart::destroy();
 		return Redirect::to('/')->with('message-alert','Has Cerrado Sesión');
 	}
 

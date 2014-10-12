@@ -6,7 +6,7 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"intervention/image": "1.*",
-		
+		"goodby/csv": "*",
 		"moltin/laravel-cart": "dev-master"
 
 	},
