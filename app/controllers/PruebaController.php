@@ -131,6 +131,56 @@
  			}
  		}
 
+ 		public function addcartAjax2()
+ 		{
+ 			header('Content-type: text/javascript');
+
+ 			if(isset($_POST['id_producto']) && isset($_POST['cantidad']))
+ 			{
+ 				$id_producto = $_POST['id_producto'];
+ 				$cantidad = $_POST['cantidad'];
+
+ 				$producto = Mantis::where('cod','=',$id_producto)->first();
+ 				
+ 				Cart::insert(array(
+				'id'=>$producto->cod,
+				'name' => $producto->nombre,
+				'price' => $producto->precio,
+				'quantity' => $cantidad,
+				'company' =>$producto->id_empresa,
+				'image' => $producto->imagen
+			));
+ 				$compras_pendientes = Cart::totalItems();
+ 				$total = Cart::total();
+ 				$estado = array('estado'=>1,'mensaje'=>'producto agregado a las compras','total'=>$total,'pendientes'=>$compras_pendientes);
+ 				return Response::json(array('estado'=>$estado,'producto'=>$producto));
+
+ 			}
+ 		}
+
+ 		public function addcartAjax3()
+ 		{
+ 			header('Content-type: text/javascript');
+ 			if(isset($_POST['id_producto']))
+ 			{
+ 				$id_producto = $_POST['id_producto'];
+ 				$producto = Mantis::where('cod','=',$id_producto)->first();
+ 				Cart::insert(array(
+				'id'=>$producto->cod,
+				'name' => $producto->nombre,
+				'price' => $producto->precio,
+				'quantity' => 1,
+				'company' =>$producto->id_empresa,
+				'image' => $producto->imagen
+			));
+ 				
+ 				$compras_pendientes = Cart::totalItems();
+ 				$total = Cart::total();
+ 				$estado = array('estado'=>1,'mensaje'=>'producto agregado a las compras','total'=>$total,'pendientes'=>$compras_pendientes,'nombre'=>$producto->nombre);
+ 				return Response::json(array('estado'=>$estado, 'producto'=>$producto->toArray()));
+ 			}
+ 		}
+
 
  		public function addcartAjax()
  		{

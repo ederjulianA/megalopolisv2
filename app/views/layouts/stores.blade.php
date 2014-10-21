@@ -7,7 +7,7 @@
     <title>@yield('titulo')</title>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     {{ HTML::style('Stores/css/bootstrap.css', array('media' => 'screen'))}}
-    {{ HTML::style('Stores/css/font-awesome.min.css', array('media' => 'screen'))}}
+   <!-- {{ HTML::style('Stores/css/font-awesome.min.css', array('media' => 'screen'))}}-->
     {{ HTML::style('Stores/css/jquery.bxslider.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/smoothproducts.css', array('media' => 'screen'))}}
     {{ HTML::style('Stores/css/style.css', array('media' => 'screen'))}}
@@ -29,6 +29,22 @@
     .titulo-empresa h2 {
       font-size: 25px;
       font-weight: bold;
+    }
+    .msg-ajax-cart{
+      position: fixed;
+      width: 40%;
+      top: 0;
+      left: 30%;
+      z-index: 9999;
+      text-align: center;
+    }
+    .contenedor-msg-ajax{
+      width: 100%;
+      background-color: #EA7D00;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
     }
     </style>
 </head>
@@ -70,7 +86,7 @@
               <!-- Shopping Cart List -->
               <div class="col-lg-3 col-md-4 col-sm-5">
                   <div class="well">
-                      <div class="btn-group btn-group-cart">
+                      <div class="btn-group btn-group-cart" id="contenedor_compras">
                           @if(Cart::total(false))
                             
 
@@ -99,7 +115,11 @@
                           </ul>
 
                           @else
-                            <a>NO HAY COMPRAS</a>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
+                              <span class="pull-left"><i class="glyphicon glyphicon-shopping-cart icon-cart"></i></span>
+                              <span class="pull-left">No hay compras pendientes </span>
+                            </button>
 
                           @endif
 
@@ -133,6 +153,9 @@
               </div>
               <!-- End Shopping Cart List -->
           </div>
+      </div>
+      <div class="msg-ajax-cart">
+        
       </div>
     </header>
 

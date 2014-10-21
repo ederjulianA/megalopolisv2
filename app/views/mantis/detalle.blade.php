@@ -18,7 +18,7 @@
 @stop
 
 @section('menu')
-	<li><a href="{{URL::route('nuevaEmpresaView',array('empresa'=>$empresa->nombre_publico))}}" class="active">HOME</a></li>
+	<li><a href="{{URL::route('distribuidor',array('empresa'=>$empresa->nombre_publico))}}" class="active">HOME</a></li>
 	
 	<li><a></a></li>
 
@@ -99,10 +99,11 @@
 					<hr/>
 					Descripción.
 					<hr/>
-					<h3>${{number_format($producto->precio, 0, '', '.')}}</h3>
+					<h3>$ <span id="precio_publico">{{number_format($producto->precio, 0, '', '.')}}</span></h3>
 					<div class="input-qty-detail">
 						<form method="post" action="{{URL::route('addTocart')}}">
 							<input type="hidden" name="product_id" id="product_id" value="{{$producto->cod}}">
+							<input type="hidden" id="precio_unitario" value="{{$producto->precio}}">
 							<input type="text" class="form-control input-qty text-center" value="1" id="qty-id">
 							<button class="btn btn-primary pull-left" type="submit" id="btn-carrito">Agregar Al carrito</button>
 							{{Form::token()}}
@@ -120,7 +121,7 @@
 					<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4f0c254f1302adf8"></script>
 	            </div>
 	            <div class="clearfix"></div>
-	            <div class="col-lg-12 col-sm-12">
+	            <!--<div class="col-lg-12 col-sm-12">
             		<span class="title">MAS PRODUCTOS</span>
             	</div>
             	
@@ -140,7 +141,7 @@
 	                        </p>
 	                    </div>
 	                </div>
-	            </div>
+	            </div>-->
         	</div>
         	<!-- End Product Detail -->
 

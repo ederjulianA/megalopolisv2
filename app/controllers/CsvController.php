@@ -44,7 +44,7 @@ class CsvController  extends BaseController {
  			$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
 										$totalSedes = $todasSedes->count();	
  			
- 			return View::make('mantis.mantisCatalogo')->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('productos',$productos);	
+ 			return View::make('mantis.mantisCatalogo')->with('products', Cart::contents())->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('productos',$productos);	
 	}
 
 	public function getSync()

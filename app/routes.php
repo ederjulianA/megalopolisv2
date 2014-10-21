@@ -358,6 +358,16 @@ Route::post('/addcartAjax', array(
 		'uses' => 'PruebaController@addcartAjax'
 	));
 
+Route::post('/addcartAjax3', array(
+		'as' => 'addcartAjax3',
+		'uses' => 'PruebaController@addcartAjax3'
+	));
+
+Route::post('/addcartAjax2', array(
+		'as' => 'addcartAjax2',
+		'uses' => 'PruebaController@addcartAjax2'
+	));
+
 
 Route::post('/catalogo/get-products', array(
 		'as' => 'get-products',
