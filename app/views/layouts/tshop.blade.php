@@ -409,7 +409,7 @@
          @if(Cart::total(false))
          <li><a href="{{URL::route('storeCart')}}">TERMINAR COMPRAS</a></li>
          @else
-         <li><a href="#">NO HAY COMPRAS</a></li>
+         <li><a href="#"> CARRITO ({{Cart::totalItems()}})</a></li>
          @endif
         
         </ul>

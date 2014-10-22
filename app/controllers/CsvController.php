@@ -22,7 +22,7 @@ class CsvController  extends BaseController {
  			$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
 										$totalSedes = $todasSedes->count();	
  			
- 			return View::make('mantis.detalle')->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('producto',$producto);	
+ 			return View::make('mantis.detalle')->with('products', Cart::contents())->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('producto',$producto);	
 	}
 
 

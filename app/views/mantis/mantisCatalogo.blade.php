@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
-<title>TSHOP - Bootstrap E-Commerce Parallax Theme </title>
+<title>Distribuidor Megalopolis </title>
 <!-- Bootstrap core CSS -->
 {{HTML::style('Tshop/assets/bootstrap/css/bootstrap.css')}}
 
@@ -90,7 +90,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > Login  to TSHOP </h3>
+        <h3 class="modal-title-site text-center" > Login  to Distribuidor </h3>
       </div>
       <div class="modal-body">
         <div class="form-group login-username">
@@ -218,7 +218,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($<span class="subtotal">{{number_format(Cart::total(), 0, '', '.')}}</span>) </span> </button>
-      <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="TSHOP"> </a> 
+      <a class="navbar-brand " href="#"> <img src="{{asset('img/mantis/aje/logo.jpg')}}" alt="TSHOP" height="80px" width="auto"> </a> 
       
       <!-- this part for mobile -->
       <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
@@ -272,7 +272,7 @@
     
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"> <a href="#"> Home </a> </li>
+        <li class="active"> <a href="{{URL::route('distribuidor',array('empresa'=>$empresa->nombre_publico))}}"> Home </a> </li>
         
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
@@ -317,7 +317,7 @@
             
             <div class="miniCartFooter text-right">
               <h3 class="text-right "> Subtotal: $<span class="subtotal">{{number_format(Cart::total(), 0, '', '.')}}</span> </h3>
-              <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VER CARRO </a> <a class="btn btn-sm btn-primary"> CHECKOUT </a> </div>
+              <a class="btn btn-sm btn-danger" href="{{URL::route('storeCart')}}"> <i class="fa fa-shopping-cart"> </i> VER CARRO </a> <a class="btn btn-sm btn-primary"> CHECKOUT </a> </div>
             <!--/.miniCartFooter--> 
             
           </div>
@@ -440,7 +440,7 @@
         <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
           <h3> Shop </h3>
           <ul>
-            <li> <a href="index.html"> Home </a> </li>
+            <li> <a href="{{URL::route('distribuidor',array('empresa'=>$empresa->nombre_publico))}}"> Home </a> </li>
             <li> <a href="category.html"> Category </a> </li>
             <li> <a href="sub-category.html"> Sub Category </a> </li>
             
@@ -577,11 +577,7 @@
       </p>
       <div class="pull-right paymentMethodImg">
         
-        <img height="30" class="pull-right" src="images/site/payment/master_card.png" alt="img" >
-        <img height="30" class="pull-right" src="images/site/payment/paypal.png" alt="img" >
-        <img height="30" class="pull-right" src="images/site/payment/american_express_card.png" alt="img" >
-        <img  height="30" class="pull-right" src="images/site/payment/discover_network_card.png" alt="img" >
-        <img  height="30" class="pull-right" src="images/site/payment/google_wallet.png" alt="img" >
+      
       </div>
       
       

@@ -97,7 +97,7 @@ $(document).on('click','#btn-carrito',function(e){
                                 cart  += '<li><a href="../../store/cart" class="btn btn-info"> PAGAR Total: $<span id="valor-total-carro">'+totalCart+'</span></a></li>';
                                 cart  += '<input type="hidden" id="valor-total-carro-frm" value="'+data.estado.total+'">';
                           cart  += '</ul>';
-
+                           $('.subtotal').text(totalCart);
                           $('#contenedor_compras').html(cart);
                           $('.msg-ajax-cart').html('<div class="contenedor-msg-ajax">Producto agregado al carrito</div>');
                           $('.contenedor-msg-ajax').fadeOut(4000);
@@ -116,6 +116,7 @@ $(document).on('click','#btn-carrito',function(e){
 
 $(document).on('change','#qty-id', function(e){
 	var cantidad = $('#qty-id').val();
+	alert(cantidad);
 
 	
 		var precio = $('#precio_unitario').val();
