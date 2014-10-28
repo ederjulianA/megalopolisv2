@@ -363,6 +363,12 @@ Route::post('/addcartAjax3', array(
 		'uses' => 'PruebaController@addcartAjax3'
 	));
 
+
+Route::post('/changeColorAjax', array(
+		'as' => 'changeColorAjax',
+		'uses' => 'AjaxController@changeColorAjax'
+	));
+
 Route::post('/addcartAjax2', array(
 		'as' => 'addcartAjax2',
 		'uses' => 'PruebaController@addcartAjax2'

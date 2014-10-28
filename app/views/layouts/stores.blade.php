@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-  <header @yield('estilos')>
+  <header  @yield('estilos')>
       <div class="container">
           <div class="row">
 
@@ -188,7 +188,7 @@
         
   </div>
 
-  <footer>
+  <footer @yield('estilos')>
       <div class="container">
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="column">

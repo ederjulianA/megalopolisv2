@@ -7,7 +7,7 @@
 @section('estilos')
 
 
-	 
+	style= " background-color:{{$empresa->color_header}};color:#fff";
 
 
 @stop
@@ -61,13 +61,13 @@
 		color: #666;
 
 	}
-	header {background-image:  url({{ URL::asset($empresa->logo); }})}
+	/*header {background-image:  url({{ URL::asset($empresa->logo); }})}
 	header{
 		-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	}
+	}*/
 
 	</style>
 
@@ -101,26 +101,17 @@
 
           <!-- Slider -->
           <div class="col-lg-9 col-md-12">
-                {{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}
-                  <!--<div class="slider">
+                <!--{{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}-->
+                  <div class="slider">
                       <ul class="bxslider">
                           <li>
                               <a href="index.html">
-                                  <img src="img/slide1.jpg" alt=""/>
+                                  {{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}
                               </a>
                           </li>
-                          <li>
-                              <a href="index.html">
-                                  <img src="images/banner_slider-2.jpg" alt=""/>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="index.html">
-                                  <img src="images/banner_slider-1.jpg" alt=""/>
-                              </a>
-                          </li>
+                          
                       </ul>
-                  </div>-->
+                  </div>
             </div>
             <!-- End Slider -->
 

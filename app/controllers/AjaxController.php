@@ -45,6 +45,27 @@ Class AjaxController  extends BaseController {
  			}
  		}
 
+ 	public function changeColorAjax()
+ 	{
+ 		header('Content-type: text/javascript');
+
+ 		if(isset($_POST['id_empresa']) && isset($_POST['color']))
+ 		{
+ 			$empresa = Empresa::where('id','=',$_POST['id_empresa'])->first();
+ 			$empresa->color_header = $_POST['color'];
+
+ 			if($empresa->save())
+ 			{
+ 				$estado = array('estado'=>1,'mensaje'=>'Color del header actualizado correctamente.');
+ 			}else{
+ 				$estado = array('estado'=>0,'mensaje'=>'Error al actualizar.');
+ 			}
+ 			
+
+ 			return Response::json($estado);
+ 		}
+ 	}	
+
 	public function postBarrios()
 	{
 				header('Content-type: text/javascript');

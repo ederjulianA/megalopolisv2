@@ -651,6 +651,7 @@
 	{{ HTML::script('js/promos.js')}}
 
 	{{ HTML::script('js/blockUI.js')}}
+	{{ HTML::script('js/color_tienda.js')}}
 
 	
 

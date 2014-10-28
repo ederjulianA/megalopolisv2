@@ -16,6 +16,13 @@
 	<li><a href="{{URL::route('nuevaEmpresaView',array('empresa'=>$empresa->nombre_publico))}}" class="">HOME</a></li>
 	<li><a href="{{URL::route('nuevaProductos',array('empresa'=>$empresa->nombre_publico))}}" class="active">PRODUCTOS</a></li>
 @stop
+@section('estilos')
+
+
+	style= " background-color:{{$empresa->color_header}};color:#fff";
+
+
+@stop
 
 @section('info-footer1')
 	<h4>{{$empresa->razon_social}}</h4>
@@ -50,13 +57,13 @@
 		color: #666;
 
 	}
-	header {background-image:  url({{ URL::asset($empresa->logo); }})}
+	/*header {background-image:  url({{ URL::asset($empresa->logo); }})}
 	header{
 		-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	}
+	}*/
 
 	</style>
  <div class="container main-container">
