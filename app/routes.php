@@ -793,3 +793,17 @@ Route::post('/svc-post', array(
 
 
 
+
+
+
+Route::group(array('domain' => '{account}.tumegalopolis.com'), function()
+{
+
+    Route::get('/', function($account)
+    {
+        return "HOLA DESDE EL SUBDOMINIO";
+    });
+
+});
+
+

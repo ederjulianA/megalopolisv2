@@ -116,7 +116,7 @@ $(document).on('click','#btn-carrito',function(e){
 
 $(document).on('change','#qty-id', function(e){
 	var cantidad = $('#qty-id').val();
-	alert(cantidad);
+	//alert(cantidad);
 
 	
 		var precio = $('#precio_unitario').val();

@@ -45,6 +45,9 @@
       font-size: 25px;
       font-weight: bold;
     }
+    .titulo-contenedor{
+    	text-align: center;
+    }
     .msg-ajax-cart{
       position: fixed;
       width: 40%;
@@ -52,6 +55,12 @@
       left: 30%;
       z-index: 9999;
       text-align: center;
+    }
+    .title{
+    	text-align: center;
+    	font-size: 30px;
+    	font-weight: bold;
+    	padding: 10px;
     }
     .contenedor-msg-ajax{
       width: 100%;
@@ -364,7 +373,7 @@
         
           <div class="row">
         		<div class="col-lg-12 col-md-12 col-sm-24">
-        						<div class="col-lg-12 col-sm-12">
+        						<div class="col-lg-12 col-sm-12 titulo-contenedor">
             		<span class="title">CATALOGO DE PRODUCTOS</span>
             	</div>
 
