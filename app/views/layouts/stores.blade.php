@@ -27,7 +27,7 @@
 
     }
     .titulo-empresa h2 {
-      font-size: 25px;
+      font-size: 35px;
       font-weight: bold;
     }
     .msg-ajax-cart{

@@ -345,6 +345,8 @@ class EmpresasController  extends BaseController {
 
 	public function getCambiarImagen()
 	{
+		//3155077394
+		//3134755187
 		$id = Auth::user()->id;
 
 		$user = User::where('id',"=",$id);
@@ -361,10 +363,14 @@ class EmpresasController  extends BaseController {
 			
 			$preguntas_null = Pregunta::where('empresa_id','=',$empresa->id)->where('respuesta','=', NULL)->orderBy('created_at','desc')->get();
 			$num_preguntas_null = $preguntas_null->count();
+			$slides = Archivo::where('empresa_id','=',$empresa->id)->get();
+			$numero_slides = count($slides);
 				
 			return View::make('empresa.cambiarImg')
 			
 			->with('user', $user)
+			->with('slides',$slides)
+			->with('numero_slides',$numero_slides)
 			->with('num_nulls', $num_preguntas_null)
 			->with('preguntas_null', $preguntas_null)
 			->with('nextSummerOlympics',$nextSummerOlympics)
@@ -538,7 +544,7 @@ class EmpresasController  extends BaseController {
 
 			if($sede->save())
 			{
-				return Redirect::to('nueva-sede')->with('message-alert','Actualización exitosa');
+				return Redirect::to('/mega/nueva-sede')->with('message-alert','Actualización exitosa');
 			}
 
 		}else{

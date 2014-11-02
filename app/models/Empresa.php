@@ -36,6 +36,11 @@ class Empresa extends Eloquent {
     	return $this->belongsToMany('User','user_subs');
     }
 
+    public function archivo()
+{
+	return $this->hasMany('Archivo','empresa_id');
+}
+
     public function sector(){
 		return $this->belongsTo('Sector','sector_id');
 	}

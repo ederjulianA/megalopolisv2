@@ -1,7 +1,27 @@
 @extends('layouts.stores')
 
+@section('content-page')
+	<meta name="description" content="@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+						@endif">
+    <meta name="author" content="Megalopolis TEAM">
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{$empresa->razon_social}}"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+                    	@endif"/>
+<meta property="og:url" content="{{$account}}.tumegalopolis.com/"/>
+<meta property="og:image" content="{{$account}}.tumegalopolis.com/{{$empresa->logo}}"/>
+@stop
+
 @section('titulo')
-	TIENDA
+	TIENDA {{$empresa->razon_social}}
 @stop
 <?php  $color = "#f60";?>
 @section('estilos')
@@ -19,7 +39,7 @@
 @stop
 
 @section('menu')
-	<li><a href="{{URL::route('nuevaEmpresaView',array('empresa'=>$empresa->nombre_publico))}}" class="active">HOME</a></li>
+	<li><a href="/" class="active">HOME </a></li>
 	<li><a href="{{URL::route('nuevaProductos',array('empresa'=>$empresa->nombre_publico))}}" class="">PRODUCTOS</a></li>
 	<li><a></a></li>
 
@@ -101,17 +121,26 @@
 
           <!-- Slider -->
           <div class="col-lg-9 col-md-12">
-                <!--{{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}-->
-                  <div class="slider">
+          		@if($numero_slides == 0)
+          			{{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}
+          		@else
+          		<div class="slider">
                       <ul class="bxslider">
-                          <li>
-                              <a href="index.html">
-                                  {{HTML::image($empresa->banner,$empresa->razon_social,array('class'=>'banner-empresa'))}}
-                              </a>
-                          </li>
+                          
+                          		@foreach($slides as $slide)
+                          			<li>
+		                              <a href="#">
+		                                  {{HTML::image($slide->ruta.$slide->nombre,'',array('class'=>'banner-empresa','height'=>'200px','width'=>'auto'))}}
+		                              </a>
+		                            </li> 
+                              	@endforeach
+                          
                           
                       </ul>
                   </div>
+          		@endif
+                <!---->
+                  
             </div>
             <!-- End Slider -->
 
@@ -204,7 +233,14 @@
 		                          <p>
 		                            <div class="btn-group">
 		                              <a href="#" class="btn btn-default"> ver mas </a>
-		                              <a href="#" class="btn btn-primary addCart" id="{{$pro->id}}"><i class="glyphicon  glyphicon-shopping-cart"></i> Comprar</a>
+		                              <form method="post" action="/addCartT">
+						              <input type="hidden" name="product_id" value="{{$pro->id}}">
+						              {{Form::hidden('quantity', 1)}}
+						              <button type="submit" class="btn btn-primary"><i class="glyphicon  glyphicon-shopping-cart"></i> COMPRAR</button>
+						              {{Form::token()}}
+						              
+						            </form>
+		                              
 		                            </div>
 		                          </p>
 		                      </div>

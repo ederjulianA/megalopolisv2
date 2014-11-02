@@ -221,7 +221,7 @@ Dirección de envio de tu pedido
                                       <input type="hidden" name="valor_unitario" value="{{$item->price}}">
                                       <input type="hidden" name="cant" value="{{$item->quantity}}">
                                       <input type="hidden" name="totalItem" value="{{$item->total()}}">
-                                      <button type="submit">PAGAR</button>
+                                      <button type="submit" class="btn btn-info">HACER PEDIDO</button>
                                       {{Form::token()}}
                                     </form>
 

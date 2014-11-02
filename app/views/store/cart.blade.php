@@ -85,11 +85,11 @@
                   <td>
                     @if(Auth::check())
                         
-                        <a href="{{URL::route('checkout2',array('identifier'=>$product->identifier))}}">PAGAR</a>
+                        <a href="{{URL::route('checkout2',array('identifier'=>$product->identifier))}}" class="btn btn-success">PAGAR</a>
                        
 
                     @else
-                      <a data-toggle="modal" data-target="#ModalLogin">PAGAR</a>
+                      <a data-toggle="modal" data-target="#ModalLogin" class="btn btn-success">PAGAR</a>
                     @endif
                      </td>
 
@@ -120,11 +120,9 @@
         <div class="w100 costDetails">
           <div class="table-block" id="order-detail-content">
           @if(Auth::check())
-           <a class="btn btn-primary btn-lg btn-block " title="checkout" href="#" style="margin-bottom:20px"> Pagar &nbsp; <i class="fa fa-arrow-right"></i> 
-           </a>
+         
            @else
-           <a class="btn btn-primary btn-lg btn-block " title="checkout" href="#"data-toggle="modal" data-target="#ModalLogin" style="margin-bottom:20px"> Pagar &nbsp; <i class="fa fa-arrow-right"></i> 
-           </a>
+          
            @endif
             <div class="w100 cartMiniTable">
               <table id="cart-summary" class="std table">

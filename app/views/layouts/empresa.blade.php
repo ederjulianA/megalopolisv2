@@ -296,6 +296,7 @@
 	{{ HTML::style('css/endless-landing.min.css', array('media' => 'screen'))}}
 
 	{{ HTML::style('css/jquery.tagsinput.css', array('media' => 'screen'))}}
+	{{ HTML::style('dropzone/css/dropzone.css')}}
 
 	
 </head>
@@ -563,6 +564,7 @@
 <!--  javascript
     ================================================== -->
     <!-- se cargan las respectivas libreria de JS al final de la pagina para optimizar el cargado del documento -->
+    	{{ HTML::script('dropzone/dropzone.js')}}
 	
 	<!-- Jquery -->
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
@@ -610,6 +612,8 @@
 	
 	
 	
+
+
 
 
 
@@ -666,6 +670,8 @@
 	{{ HTML::script('js/barrios.js')}}
 	
 	@yield('scripts')
+	}
+	}
 
 </body>
 </html>

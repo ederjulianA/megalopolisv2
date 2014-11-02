@@ -80,6 +80,8 @@ public function setRememberToken($value)
     $this->remember_token = $value;
 }
 
+
+
 public function getRememberTokenName()
 {
     return 'remember_token';

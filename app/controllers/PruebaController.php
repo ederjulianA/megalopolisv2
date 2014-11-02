@@ -51,11 +51,14 @@
 
 
 										$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
-										$totalSedes = $todasSedes->count();				
+										$totalSedes = $todasSedes->count();	
+
+										$slides = Archivo::where('empresa_id','=',$N_empresa->id)->first();
+										$numero_slides = count($slides);			
 
 									if($plantilla == 2)
 									{
-										return View::make('tiendas.catalogo')->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+										return View::make('tiendas.catalogo')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
 									}
  					}
  			}
@@ -280,11 +283,14 @@
 
 
 										$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
-										$totalSedes = $todasSedes->count();				
+										$totalSedes = $todasSedes->count();		
+
+										$slides = Archivo::where('empresa_id','=',$N_empresa->id)->get();
+										$numero_slides = count($slides);			
 
 									if($plantilla == 2)
 									{
-										return View::make('tiendas.home')->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+										return View::make('tiendas.home')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
 									}
  					}
  			}
