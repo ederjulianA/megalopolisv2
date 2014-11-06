@@ -4,6 +4,26 @@
 	CATALOGO {{$empresa->razon_social}}
 @stop
 
+@section('content-page')
+	<meta name="description" content="@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+						@endif">
+    <meta name="author" content="Megalopolis TEAM">
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{$empresa->razon_social}}"/>
+<meta property="og:site_name" content="tuMegalopolis"/>
+<meta property="og:description" content="@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+                    	@endif"/>
+<meta property="og:url" content="{{$account}}.tumegalopolis.com/productos"/>
+<meta property="og:image" content="{{$account}}.tumegalopolis.com/{{$empresa->logo}}"/>
+@stop
+
 @section('logo-empresa')
 <img src="{{asset($empresa->logo)}}" class="logoEmpresa">
 @stop
@@ -13,8 +33,8 @@
 @stop
 
 @section('menu')
-	<li><a href="{{URL::route('nuevaEmpresaView',array('empresa'=>$empresa->nombre_publico))}}" class="">HOME</a></li>
-	<li><a href="{{URL::route('nuevaProductos',array('empresa'=>$empresa->nombre_publico))}}" class="active">PRODUCTOS</a></li>
+	<li><a href="/" class="">HOME</a></li>
+	<li><a href="/productos/" class="active">PRODUCTOS</a></li>
 @stop
 @section('estilos')
 
@@ -108,7 +128,14 @@
 		                          <p>
 		                            <div class="btn-group">
 		                              <a href="#" class="btn btn-default"> ver mas </a>
-		                              <a href="#" class="btn btn-primary addCart" id="{{$pro->id}}"><i class="glyphicon  glyphicon-shopping-cart"></i> Comprar</a>
+		                              <form method="post" action="/addCartT">
+						              <input type="hidden" name="product_id" value="{{$pro->id}}">
+						              <input type="hidden" name="url" id="url" value="{{URL::current()}}">
+						              {{Form::hidden('quantity', 1)}}
+						              <button type="submit" class="btn btn-primary"><i class="glyphicon  glyphicon-shopping-cart"></i> COMPRAR</button>
+						              {{Form::token()}}
+						              
+						            </form>
 		                            </div>
 		                          </p>
 		                      </div>

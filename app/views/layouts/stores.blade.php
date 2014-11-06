@@ -95,6 +95,7 @@
                               <span class="pull-left">Compras pendientes: <span id="total-items-cart"> {{Cart::totalItems()}}</span></span>
                               <span class="pull-right"><i class="fa fa-caret-down"></i></span>
                               <input type="hidden" id="v_cart_t_i" value="{{Cart::totalItems()}}">
+
                           </button>
                           <ul class="dropdown-menu cart-content" role="menu">
                                <!-- <li>
@@ -110,7 +111,7 @@
                                     </a>
                                 </li>-->
                                 <li class="divider"></li>
-                                <li><a href="{{URL::route('storeCart')}}" class="btn btn-info"> PAGAR Total: $<span id="valor-total-carro">{{number_format(Cart::total(), 0, '', '.')}}</span></a></li>
+                                <li><a href="/cart/" class="btn btn-info"> PAGAR Total: $<span id="valor-total-carro">{{number_format(Cart::total(), 0, '', '.')}}</span></a></li>
                                 <input type="hidden" id="valor-total-carro-frm" value="{{Cart::total()}}">
                           </ul>
 
@@ -227,6 +228,7 @@
     {{ HTML::script('Stores/js/jquery.bxslider.min.js')}}
     {{ HTML::script('Stores/js/jquery.blImageCenter.js')}}
     {{ HTML::script('Stores/js/mimity.js')}}
+    {{ HTML::script('Stores/js/touchspin.js')}}
     {{ HTML::script('Stores/js/smoothproducts.min.js')}}
     {{ HTML::script('Stores/js/bootstrap.touchspin.js')}}
     {{ HTML::script('js/cart.js')}}

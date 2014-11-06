@@ -1,6 +1,21 @@
 <?php 
 class Favs {
 
+	public static function clase()
+	{
+		$num = rand(1,10);
+		if($num < 5)
+		{
+			$clase = "medium";
+		}
+		else
+		{
+			$clase = "large";
+		}
+
+		return $clase;
+	}
+
 	public static function mostrarFav($user_id, $producto_id )
 	{
 		$fav = Favoritos::where('user_id','=', $user_id)->where('producto_id','=',$producto_id)->get();

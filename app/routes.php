@@ -23,8 +23,19 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 
 	Route::group(array('domain' => '{account}.tumegalopolis.com'), function()
 {
-
-    Route::get('/', function($account)
+	Route::get(	'/', array(
+		'as'=>'getIndexTienda', 
+		'uses'=> 'SubdominesController@getIndex'
+		));
+	Route::get(	'/cart/', array(
+		'as'=>'getCartTienda', 
+		'uses'=> 'SubdominesController@getCart'
+		));
+	Route::get(	'/productos/', array(
+		'as'=>'getProductosEmpresa', 
+		'uses'=> 'SubdominesController@getProductos'
+		));
+   /* Route::get('/', function($account)
     {
     	$plantilla = 2;
  			$N_empresa = Empresa::where('nombre_publico','=',$account)->first();
@@ -84,7 +95,7 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 		 					}
 		 			}
         
-    });
+    });*/
 
 	Route::post('/addCartT', array(
 		'as' => 'addCartT',

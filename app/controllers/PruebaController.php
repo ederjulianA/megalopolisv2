@@ -9,7 +9,7 @@
  		
  		public function getProductos($empresa)
  		{
- 			$plantilla = 2;
+ 			$plantilla = 1;
  		
  			
 
@@ -60,6 +60,11 @@
 									{
 										return View::make('tiendas.catalogo')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
 									}
+									if($plantilla == 1)
+									{
+										return View::make('pinteres.index')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+									}
+
  					}
  			}
  		}
@@ -241,8 +246,9 @@
  		{
 
  			
- 			$plantilla = 2;
+ 			
  			$N_empresa = Empresa::where('nombre_publico','=',$empresa)->first();
+ 			$plantilla = $N_empresa->tema;
 
 
 
@@ -270,7 +276,7 @@
 													'producto.descripcion AS producto_descripcion',
 													'categorias.id AS id_categoria',
 													'categorias.nombre AS categoria_nombre',
-													'almacen.cantidad')->where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(4)->get();
+													'almacen.cantidad')->where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(12)->get();
 
 									$cat2 = DB::table('categorias as c')->join('producto as p','p.categoria','=','c.id')
 									->join('almacen as a','a.producto','=','p.id')
@@ -291,6 +297,11 @@
 									if($plantilla == 2)
 									{
 										return View::make('tiendas.home')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+									}
+									if($plantilla == 1)
+									{
+							
+										return View::make('pint.index')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
 									}
  					}
  			}

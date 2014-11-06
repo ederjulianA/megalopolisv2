@@ -40,7 +40,7 @@
 
 @section('menu')
 	<li><a href="/" class="active">HOME </a></li>
-	<li><a href="{{URL::route('nuevaProductos',array('empresa'=>$empresa->nombre_publico))}}" class="">PRODUCTOS</a></li>
+	<li><a href="/productos/" class="">PRODUCTOS</a></li>
 	<li><a></a></li>
 
 @stop
@@ -74,9 +74,9 @@
 
 @section('content')
 	<style type="text/css">
-	.info-empresa{
-		font-weight: bold;
-		font-size: 20px;
+	.info-empresa-index{
+		padding: 15px;
+		font-size: 18px;
 		letter-spacing: .5px;
 		color: #666;
 
@@ -148,13 +148,13 @@
             <div class="col-lg-3 visible-lg">
                 <div class="row text-center">
                     
-                    <p class="info-empresa">
+                    <!--<p class="info-empresa">
                     	@if(!$empresa->desc_corta)
                     		{{$empresa->desc_larga}}
                     	@else
                     		{{$empresa->desc_corta}}	
                     	@endif
-                    .</p>
+                    .</p>-->
 
                 </div>
                 <div class="row text-center">
@@ -219,7 +219,7 @@
       <!-- Featured -->
           <div class="col-lg-9 col-md-9 col-sm-12">
             <div class="col-lg-12 col-sm-12">
-                <span class="title">PRODUCTOS</span>
+                <span class="title">ALGUNOS DE NUESTROS PRODUCTOS </span>
               </div>
               	@foreach($productos as $pro)
 		              <div class="col-lg-4 col-sm-4 hero-feature text-center">
@@ -235,6 +235,7 @@
 		                              <a href="#" class="btn btn-default"> ver mas </a>
 		                              <form method="post" action="/addCartT">
 						              <input type="hidden" name="product_id" value="{{$pro->id}}">
+						              <input type="hidden" name="url" id="url" value="{{URL::current()}}">
 						              {{Form::hidden('quantity', 1)}}
 						              <button type="submit" class="btn btn-primary"><i class="glyphicon  glyphicon-shopping-cart"></i> COMPRAR</button>
 						              {{Form::token()}}
@@ -254,62 +255,23 @@
           <div class="clearfix visible-sm"></div>
 
       <!-- Adidas Category -->
-      <!--<div class="col-lg-9 col-md-9 col-sm-12">
+     <div class="col-lg-9 col-md-9 col-sm-12">
         <div class="col-lg-12 col-sm-12">
-                <span class="title">ADIDAS</span>
+                <span class="title">SOBRE LA EMPRESA</span>
               </div>
-              <div class="col-lg-4 col-sm-4 hero-feature text-center">
-                  <div class="thumbnail">
-                    <a href="detail.html" class="link-p">
-                        <img src="images/product-10.jpg" alt="">
-                    </a>
-                      <div class="caption prod-caption">
-                          <h4><a href="detail.html">Adidas Men Blue &amp; Red Striped Polo T-shirt </a></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
-                          <p>
-                            <div class="btn-group">
-                              <a href="#" class="btn btn-default">$ 22.22</a>
-                              <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>
-                            </div>
-                          </p>
-                      </div>
-                  </div>
+
+              <div class="info-empresa-index">
+              		@if(!$empresa->desc_corta)
+                    		{{$empresa->desc_larga}}
+                    	@else
+                    		{{$empresa->desc_corta}}	
+                    	@endif
+              	
               </div>
-              <div class="col-lg-4 col-sm-4 hero-feature text-center">
-                  <div class="thumbnail">
-                    <a href="detail.html" class="link-p">
-                        <img src="images/product-11.jpg" alt="">
-                    </a>
-                      <div class="caption prod-caption">
-                          <h4><a href="detail.html">Adidas Men Flame Black T-shirt</a></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
-                          <p>
-                            <div class="btn-group">
-                              <a href="#" class="btn btn-default">$ 15.47</a>
-                              <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>
-                            </div>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 hero-feature text-center">
-                  <div class="thumbnail">
-                    <a href="detail.html" class="link-p">
-                        <img src="images/product-12.jpg" alt="">
-                    </a>
-                      <div class="caption prod-caption">
-                          <h4><a href="detail.html">Adidas Men Red Printed T-shirt</a></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
-                          <p>
-                            <div class="btn-group">
-                              <a href="#" class="btn btn-default">$ 20.63</a>
-                              <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>
-                            </div>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-      </div>-->
+             
+            
+           
+      </div>
       <!-- End Adidas Category -->
 
         </div>
