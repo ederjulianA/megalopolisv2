@@ -5,6 +5,26 @@
 	{{$empresa->nombre_publico}}
 @stop
 
+@section('titulo')
+	Tienda {{$empresa->razon_social}}
+@stop
+
+@section('class-body')
+	product-board
+@stop
+
+@section('color-tema')
+	<?php $col_tem = 3;?>
+	@if($col_tem == 1)
+	{{HTML::style('Pinteres/css/shopfrog-pink.css')}}
+	@elseif( $col_tem == 2)
+
+	{{HTML::style('Pinteres/css/shopfrog-green.css')}}
+	@elseif($col_tem == 3)
+	{{HTML::style('Pinteres/css/shopfrog-orange.css')}}
+	@endif
+@stop
+
 @section('content-page')
 	<meta name="description" content="@if(!$empresa->desc_corta)
                     		{{$empresa->desc_larga}}
@@ -22,7 +42,7 @@
                     		{{$empresa->desc_corta}}	
                     	@endif"/>
 <meta property="og:url" content="{{$account}}.tumegalopolis.com/"/>
-<meta property="og:image" content="{{$account}}.tumegalopolis.com/{{$empresa->logo}}"/>
+<meta property="og:image" content="http://www.tumegalopolis.com/{{$empresa->logo}}"/>
 @stop
 
 
@@ -31,7 +51,7 @@
 					@if($products)
 						@foreach($products as $product)
 							<li>
-								<a href="#" class="basket-item">
+								<a href="" class="basket-item">
 									<img src="{{asset($product->image)}}" alt="" height="100px" width="auto" />
 									<p>{{$product->name}}</p>						
 									<p class="price">{{$product->quantity}} x <span class="cur">$</span><span class="total">{{number_format($product->price, 0, '', '.')}}</span></p>											
@@ -74,18 +94,38 @@
                     		{{$empresa->desc_corta}}	
                     	@endif</p>
 					</div>
-					<a href="collection.html" class="btn btn-bottom">Ver todos los Productos &rarr;</a>	
+					<a href="#" class="btn btn-bottom">Ver todos los Productos &rarr;</a>	
+				</div>
+				<div class="product medium cta alt">
+					<a href="#">
+						<div class="content">
+							<p class="poff">10% <br /> off!</p>
+							<p>All bikini's &rarr;</p>
+						</div>
+					</a>
+				</div>		
+				
+				
+				
+				
+				<div class="product medium cta alt">
+					<a href="#">
+						<div class="content">
+							<p class="poff">20% <br /> off!</p>
+							<p>All accessories &rarr;</p>
+						</div>
+					</a>
 				</div>
 					@foreach($productos as $pro)
 						<div class="product {{Favs::clase()}}">
 					<div class="media">
-						<a href="product.html" title="product title">
+						<a href="/_/producto/{{$pro->slug}}" title="product title">
 							<img src="{{asset($pro->imagen)}}" alt="product title" data-img="{{asset($pro->imagen)}}" class="img-responsive" />
 						</a>
 						<span class="plabel">Producto</span>				
 					</div>
 					<div class="details">
-						<p class="name"><a href="#">{{$pro->producto_nombre}}</a></p>
+						<p class="name"><a href="/_/producto/{{$pro->slug}}">{{$pro->producto_nombre}}</a></p>
 						<p class="price"><span class="cur">$</span><span class="total">{{number_format($pro->precio_detal, 0, '', '.')}}</span></p>
 						<a href="" class="details-expand" data-target="details-000{{$pro->id}}">+</a>
 					</div>
@@ -118,26 +158,7 @@
 				
 				
 				
-				<div class="product medium cta alt">
-					<a href="collection.html">
-						<div class="content">
-							<p class="poff">10% <br /> off!</p>
-							<p>All bikini's &rarr;</p>
-						</div>
-					</a>
-				</div>		
 				
-				
-				
-				
-				<div class="product medium cta alt">
-					<a href="collection.html">
-						<div class="content">
-							<p class="poff">20% <br /> off!</p>
-							<p>All accessories &rarr;</p>
-						</div>
-					</a>
-				</div>
 				
 				
 				

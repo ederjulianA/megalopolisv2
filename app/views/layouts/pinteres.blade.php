@@ -9,7 +9,8 @@
 
 {{HTML::style('Pinteres/css/bootstrap.css')}}
 {{HTML::style('Pinteres/css/shopfrog.css')}}
-{{HTML::style('Pinteres/css/shopfrog-pink.css')}}
+@yield('color-tema')
+
 
 
 
@@ -41,7 +42,7 @@
 
 
 </head>
-<body class="product-board">
+<body class="@yield('class-body')">
 	
 <header class="navbar navbar-fixed-top clearfix">
 		

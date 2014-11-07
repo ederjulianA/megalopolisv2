@@ -27,6 +27,12 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 		'as'=>'getIndexTienda', 
 		'uses'=> 'SubdominesController@getIndex'
 		));
+
+	Route::get(	'/_/producto/{url}', array(
+		'as'=>'getProductoDetalle', 
+		'uses'=> 'SubdominesController@getProducto'
+		));
+
 	Route::get(	'/cart/', array(
 		'as'=>'getCartTienda', 
 		'uses'=> 'SubdominesController@getCart'

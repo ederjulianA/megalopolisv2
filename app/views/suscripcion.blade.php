@@ -23,28 +23,46 @@
 
 	    <div class="contenedor-pagos-mega">
 	    	<h1 class="title-big text-center section-title-style2">
-    <span> Pagar suscripción  </span>
+    <span> Pagar suscripción <strong>$50.000</strong> </span>
  </h1>
 	    	<p>Estas a un paso de activar tu empresa en Tumegalopolis, por favor completa tu pedido haciendo el pago mediante una de las opciones que disponemos actualmente.</p>
 
 	    	<div class="panel panel-default">
-			  <div class="panel-heading">Pagar Con paypal</div>
+			  <div class="panel-heading">Pagar Con PayU</div>
 			  <div class="panel-body">
-			  <p>Paypal es la plataforma de pagos online  más grande y segura de toda internet, en megalopolis te damos la facilidad que hagas tu pago a través de la plataforma de paypal</p>
-			   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="4MHFU6RS7LBLQ">
-<table>
-<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
-	<option value="Mes">Mes : $20.00 USD - monthly</option>
-	<option value="7 dias">7 dias : $5.00 USD - weekly</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			  <p>Payu es la pasarela de pago mas grande en latino américa, en Colombia cerca del 80% de las transacciones online se hacen a través de <strong>payU</strong> </p>
+		<form method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
+  <input type="image" border="0" alt="" src="http://www.payulatam.com/img_botones_herramientas/boton_pagar_mediano.png" onClick="this.form.urlOrigen.value = window.location.href;"/>
+  <input name="merchantId" type="hidden" value="518436"/>
+  <input name="accountId" type="hidden" value="519941"/>
+  <input name="description" type="hidden" value="Suscripción a Tumegalopolis"/>
+  <input name="referenceCode" type="hidden" value="001"/>
+  <input name="amount" type="hidden" value="50000"/>
+  <input name="tax" type="hidden" value="0"/>
+  <input name="taxReturnBase" type="hidden" value="0"/>
+<input name="shipmentValue" value="0" type="hidden"/>
+  <input name="currency" type="hidden" value="COP"/>
+  <input name="lng" type="hidden" value="es"/>
+  <input name="sourceUrl" id="urlOrigen" value="" type="hidden"/>
+  <input name="buttonType" value="SIMPLE" type="hidden"/>
+  <input name="signature" value="6a710c126c010b648349b5ab94212ccfc3a02d644d7ce333073159473f289a28" type="hidden"/>
 </form>
+				<!--<form method="post" action="https://stg.gateway.payulatam.com/ppp-web-gateway" accept-charset="UTF-8">
+					<input name="merchantId" type="hidden" value="500238"/>
+					<input name="ApiKey" type="hidden" value="6u39nqhq8ftd0hlvnjfs66eh8c"/>
+					<input name="referenceCode" type="hidden" value="0001"/>
+					<input name="accountId" type="hidden" value="500538"/>
+					<input name="description" type="hidden" value="Test PAYU"/>
+					<input name="amount" type="hidden" value="10000"/>
+					<input name="tax" type="hidden" value="TestPayU"/>
+					<input name="taxReturnBase" type="hidden" value="0"/>
+					<input name="currency" type="hidden" value="COP"/>
+					<input name="signature" type="hidden" value="be2f083cb3391c84fdf5fd6176801278"/>
+					<input name="test" type="hidden" value="1"/>
+					<input name="buyerEmail" type="hidden" value="test@test.com"/>
+					<input type="submit" value="pagar">
 
+				</form>-->
 
 			  </div>
 			</div>
