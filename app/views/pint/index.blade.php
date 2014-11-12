@@ -117,12 +117,13 @@
 					</a>
 				</div>
 					@foreach($productos as $pro)
-						<div class="product {{Favs::clase()}}">
+						<!-- {{Favs::clase()}}-->
+						<div class="product large">
 					<div class="media">
 						<a href="/_/producto/{{$pro->slug}}" title="product title">
 							<img src="{{asset($pro->imagen)}}" alt="product title" data-img="{{asset($pro->imagen)}}" class="img-responsive" />
 						</a>
-						<span class="plabel">Producto</span>				
+						<!--<span class="plabel">Producto</span>				-->
 					</div>
 					<div class="details">
 						<p class="name"><a href="/_/producto/{{$pro->slug}}">{{$pro->producto_nombre}}</a></p>

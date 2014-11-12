@@ -58,9 +58,9 @@ Megalopolis | Login
               <input type="password" class="form-control"  placeholder="******" required name="password">
             </div>
             <div class="checkbox">
-              <label>
-                <input type="checkbox" name="checkbox">
-                Recordarme  </label>
+              <label>Recordarme  </label>
+                <input type="checkbox" name="remember">
+                
             </div>
             <div class="form-group">
               <p><a title="Recover your forgotten password" href="{{URL::route('recuperar-cuenta')}}">Olvidaste tu contraseña? </a></p>

@@ -324,7 +324,50 @@ $(document).ready(function(){
 	});
 	
 	// Quantity update
-	$('.quantity').click(function(e){
+	$(document).on('change','.cantidad', function(){
+		
+	var identifier = $(this).attr('data');
+	var id_producto =$(this).attr('data-toggle');
+	var nueva_cantidad = $('#cantidad-'+identifier).val();
+	//alert("data"+identifier+"cantidad"+nueva_cantidad+"toggle"+id_producto);
+	if(nueva_cantidad < 1)
+	{
+		$('#cantidad-'+identifier).val(1);
+
+		return false;
+	}
+	$('#btn-update-car').html('<strong>Actualizando...</strong>')
+
+		$.ajax({
+
+			url : "cantidadAjax",
+			dataType: "json",
+			type : "post",
+			data : { identifier : identifier, cantidad : nueva_cantidad, id_producto : id_producto},
+			success : function(data){
+
+				if(data.estado == 0){
+					$('#mensaje-ajax').html('<div class="nocantidad">La cantidad solicitada no esta disponible. Unidades Disponibles: <strong>'+data.disponible+'</div> </div>');
+					$('#cantidad-'+identifier).val(data.disponible);
+					console.log(data);
+					return false;
+				}
+
+				else if(data.estado == 1 ){
+					console.log(data);
+					window.location.reload();
+				
+				}
+				
+					
+				
+				
+			}
+
+
+		});
+});
+	/*$('.quantity').click(function(e){
 		var button = $(this);
 		var itemPrice = parseInt(button.parent().find('.order-quantity').data('sub')); 
 		var curAmt = parseInt(button.siblings('.order-quantity').html());
@@ -332,8 +375,38 @@ $(document).ready(function(){
 		var newRowTotal, newAmt;
 		
 		if(button.hasClass('plus')){
+
 			newRowTotal = (curAmt + 1) * itemPrice;
 			newAmt = curAmt + 1;
+			$.ajax({
+
+			url : "cantidadAjax",
+			dataType: "json",
+			type : "post",
+			data : { identifier : identifier, cantidad : newAmt, id_producto : id_producto},
+			success : function(data){
+
+				if(data.estado == 0){
+					$('#mensaje-ajax').html('<div class="nocantidad">La cantidad solicitada no esta disponible. Unidades Disponibles: <strong>'+data.disponible+'</div> </div>');
+					$('#cantidad-'+identifier).val(data.disponible);
+					return false;
+				}
+
+				else if(data.estado == 1 ){
+					console.log(data);
+					window.location.reload();
+				
+				}
+				
+					
+				
+				
+			}
+
+
+		});
+
+
 		}
 		if(button.hasClass('minus')){
 			newRowTotal = (curAmt - 1) * itemPrice;
@@ -348,7 +421,7 @@ $(document).ready(function(){
 		updateTotal();		
 		
 		e.preventDefault();
-	});
+	});*/
 	
 	function updateTotal(){
 		var total = 0;

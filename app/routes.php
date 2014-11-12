@@ -41,6 +41,12 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 		'as'=>'getProductosEmpresa', 
 		'uses'=> 'SubdominesController@getProductos'
 		));
+
+
+	Route::post('/cantidadAjax', array(
+		'as' => 'cantidadAjax2',
+		'uses' => 'CartController@postCantidadAjax'
+	));
    /* Route::get('/', function($account)
     {
     	$plantilla = 2;
@@ -173,6 +179,8 @@ Route::post('/store/cantidadAjax', array(
 		'as' => 'cantidadAjax',
 		'uses' => 'CartController@postCantidadAjax'
 	));
+
+
 
 
 Route::get('/store/cart', array(

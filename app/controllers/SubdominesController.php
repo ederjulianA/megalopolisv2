@@ -1,7 +1,11 @@
 <?php
 
+
+
  class SubdominesController  extends BaseController
  {
+ 	
+
  	public function getIndex($account)
  	{
  		
@@ -73,6 +77,7 @@
 
  	public function getProducto($account,$url)
  	{
+ 			 $p = new Producto;
 
  			$N_empresa = Empresa::where('nombre_publico','=',$account)->first();
 	 			if(!$N_empresa)
@@ -89,40 +94,11 @@
 	 				}
 
 	 					$N_sede = Sede::where('empresa_id','=',$N_empresa->id)->first();
-	 				 $producto = DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
-		 ->join('sedes as s','a.sede','=','s.id')
-		 ->join('empresas as e', 's.empresa_id','=','e.id')
-		 ->join('categorias as c','p.categoria','=','c.id')
-		 ->join('subcategorias as sc','sc.categoria_id','=','sc.id')
-		 ->select('a.precio_detal',
-				 'a.cantidad',
-				 'c.nombre AS categoria_nombre',
-				 'e.nombre_publico AS nombre_empresa',
-				 'p.nombre AS producto_nombre',
-				 'p.imagen',
-				 'p.slug',
-				 'p.id',
-				'p.descripcion AS producto_descripcion',
-				'p.img1',
-				'p.img2',
-				 's.nombre_publico AS nombre_sede',
-				 's.direccion',
-				 's.telefono',
-				 's.id AS sede_id',
-				 'sc.nombre_sub'
-			 )->where('p.slug','=',$url)->first();
+	 				 
 
-		 $masProductos =  DB::table('producto as p')->join('almacen as a','a.producto','=','p.id')
-		->join('sedes as s','a.sede','=','s.id')
-		->select('p.nombre',
-				'p.imagen',
-				'p.id',
-				'p.slug',
-				'a.precio_detal AS precioP',
-				's.id AS sede_id'
 
-			)
-		->where('s.id','=',$N_sede->id)->where('p.estado','=',1)->orderBy(DB::raw('RAND()'))->take(4)->get();
+		$producto = $p->getProducto($url);
+		 $masProductos =  $p->getMoreProducts($N_sede->id);
 
 
 		 $todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
@@ -262,12 +238,13 @@
 
  	public function getCart($account)
  	{
- 		$plantilla = 2;
+ 		
  			$N_empresa = Empresa::where('nombre_publico','=',$account)->first();
 	 			if(!$N_empresa)
 	 			{
 	 				return Redirect::to('http://www.tumegalopolis.com');
 	 			}
+	 			$plantilla = $N_empresa->tema;
 
 
 
@@ -283,39 +260,23 @@
 		 					if($N_sede->count())
 		 					{
 		 						
-		 						$productos = Producto::where('sede','=',$N_sede->id)->join('almacen', 'producto.id', '=', 'almacen.producto')
-		 								->join('categorias', 'producto.categoria', '=', 'categorias.id')
-															->select('producto.nombre AS producto_nombre',
-															'almacen.precio_detal',
-															'producto.imagen',
-															'producto.imgSmall',
-															'producto.categoria',
-															'producto.slug',
-															'producto.id',
-															'producto.descripcion AS producto_descripcion',
-															'categorias.id AS id_categoria',
-															'categorias.nombre AS categoria_nombre',
-															'almacen.cantidad')->where('estado','=',1)->orderBy(DB::raw('RAND()'))->take(3)->get();
-
-											$cat2 = DB::table('categorias as c')->join('producto as p','p.categoria','=','c.id')
-											->join('almacen as a','a.producto','=','p.id')
-											->join('sedes as s','a.sede','=','s.id')
-											->select('c.id AS id_categoria_cat',
-													'c.nombre AS nombre_categoria_cat',
-													'c.slug AS slug_cat',
-													's.id'
-												)->where('s.id','=',$N_sede->id)->distinct()->get();
+		 						
 
 
 												$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
 												$totalSedes = $todasSedes->count();		
 
-												$slides = Archivo::where('empresa_id','=',$N_empresa->id)->get();
-												$numero_slides = count($slides);			
+												
+															
 
 											if($plantilla == 2)
 											{
-												return View::make('tiendas.cart')->with('products', Cart::contents())->with('account',$account)->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+												return View::make('tiendas.cart')->with('products', Cart::contents())->with('account',$account)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede);
+											}
+											if($plantilla == 1)
+											{
+									
+												return View::make('pint.cart')->with('products', Cart::contents())->with('account',$account)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede);
 											}
 		 					}
 		 			}

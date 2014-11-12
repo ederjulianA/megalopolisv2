@@ -152,9 +152,9 @@
         <div class="form-group">
           <div >
             <div class="checkbox login-remember">
-              <label>
-                <input name="rememberme"  value="forever" checked="checked" type="checkbox">
-                Recordarme  </label>
+              <label>Recordarme  </label>
+                <input name="remember"   checked="checked" type="checkbox">
+                
             </div>
           </div>
         </div>

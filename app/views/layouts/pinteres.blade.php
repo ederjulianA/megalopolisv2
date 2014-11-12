@@ -38,7 +38,8 @@
 {{HTML::script('Pinteres/js/jquery.rateit.min.js')}} 
 {{HTML::script('Pinteres/js/jquery.magnific-popup.min.js')}} 
 {{HTML::script('Pinteres/js/bootstrap.js')}} 
-{{HTML::script('Pinteres/js/shopfrog.js')}}  
+{{HTML::script('Pinteres/js/shopfrog.js')}}
+{{HTML::script('Pinteres/js/jquery.numeric.js')}}  
 
 
 </head>
