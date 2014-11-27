@@ -4,6 +4,7 @@
 
 @section('nombre_publico')
 
+	<!--{{HTML::image($empresa->logo, $empresa->razon_social, array('height'=>'50px'))}}-->
 	{{$empresa->nombre_publico}}
 @stop
 
@@ -20,7 +21,7 @@
 @stop
 
 @section('color-tema')
-	<?php $col_tem = 3;?>
+	<?php $col_tem = $empresa->color_tema;?>
 	@if($col_tem == 1)
 	{{HTML::style('Pinteres/css/shopfrog-pink.css')}}
 	@elseif( $col_tem == 2)
@@ -28,6 +29,14 @@
 	{{HTML::style('Pinteres/css/shopfrog-green.css')}}
 	@elseif($col_tem == 3)
 	{{HTML::style('Pinteres/css/shopfrog-orange.css')}}
+	@elseif($col_tem == 4)
+	{{HTML::style('Pinteres/css/shopfrog-blue.css')}}
+	@elseif($col_tem == 5)
+	{{HTML::style('Pinteres/css/shopfrog-brown.css')}}
+	@elseif($col_tem == 6)
+	{{HTML::style('Pinteres/css/shopfrog-bw.css')}}
+	@elseif($col_tem == 7)
+	{{HTML::style('Pinteres/css/shopfrog-grey.css')}}
 	@endif
 @stop
 
@@ -47,7 +56,7 @@
 					@endif	
 					
 						<li class="drop-link-li">
-							<a href="#" class="drop-link">Ver<br>Carrito</a>
+							<a href="/cart/" class="drop-link">Ver<br>Carrito</a>
 						</li>
 					</ul>
 @stop
@@ -57,7 +66,7 @@
 		<div class="row">
 
 			<div class="col-xs-12">
-				<a href="index.html">Home</a> > Shopping cart
+				<a href="#">Home</a> > Shopping cart
 			</div> <!-- //end span12 -->
 
 		</div> <!-- //end row -->

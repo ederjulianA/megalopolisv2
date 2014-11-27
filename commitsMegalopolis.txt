@@ -1,0 +1,2449 @@
+commit 8bedfa937aeaf8925dc7034c2c9deb8ef2b941ec
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Nov 12 13:56:01 2014 -0500
+
+    few changes
+
+commit b6879f6fb8d2fed394fd1a36cde6ae417f76a375
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Nov 7 16:25:15 2014 -0500
+
+    colores pinteres
+
+commit f9a018e84eaa7796d67c2bac1e338f1ab089d363
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Nov 6 01:35:51 2014 -0500
+
+    Pinteres theme
+
+commit de247c11d0a23fff929b490676d053536a42f28b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Nov 2 00:37:37 2014 -0500
+
+    personalizando url, slides, colores...
+
+commit 324dd68e2ab650ae27ec5d997fbd27f0ba9dfd58
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Oct 27 23:59:13 2014 -0500
+
+    plantilla 2, colores
+
+commit 471baf214465edf07a9f491165abb19719735851
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Oct 27 21:09:58 2014 -0500
+
+    csv 4th pro
+
+commit ce9f153077a69f37b7df00de611b0d26d6fb17e8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Oct 22 01:00:51 2014 -0500
+
+    csv 3rd pro
+
+commit 0c4ccaf051fe9160723f2c8d69ea2ad8c57059b9
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Oct 21 11:17:51 2014 -0500
+
+    csv 2nd pro...
+
+commit ff998e618c7cf56d83e3863da2bbbebdf52592c5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Oct 12 13:14:05 2014 -0500
+
+    csv 1st pro...
+
+commit e2640f989d1343be8bf3d6b99bfc5c1e3a4b5fda
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Oct 2 16:24:39 2014 -0500
+
+    cart with sessions v2
+
+commit fff5e3a3f94b67f08dd4d9355e37622a05534a34
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Sep 29 16:50:08 2014 -0500
+
+    personalizando...(0.2)
+
+    Se actualizo el vendor en el servidor
+
+commit 316263db3f93b3df78d293c08ccf09ed44028c2e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Sep 28 00:18:33 2014 -0500
+
+    personalizando...(0.1)
+
+commit bc9f66c7d74c8e1f3bc703343a24719d6d000820
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Sep 24 16:45:43 2014 -0500
+
+    personalizando...
+
+    muchos problemas...
+
+commit d36b6fad2accdcac1d20a54197c532f8827e1f5a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Sep 21 01:32:17 2014 -0500
+
+    cart with sessions v1
+
+commit d4b2113a6fdeaf374c4e5a3241249121d9718572
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Sep 20 01:38:30 2014 -0500
+
+    suscripcion paypal 1.0
+
+commit d9f21b0b13179e39d4327fa99b49b5bc39baea98
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Sep 18 23:51:53 2014 -0500
+
+    cambios globales 4
+
+commit 35aba0da9a8cecb6ce96e047df1dc3f2f60db426
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Sep 18 19:30:52 2014 -0500
+
+    cambios globales 3
+
+commit ed121ab98ebad94e45138e7dbd371e388bc11f37
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Sep 18 00:01:03 2014 -0500
+
+    cambios globales 2
+
+commit af27f50b88c81b92f1fbd121ea834ae37d273862
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Sep 17 16:40:35 2014 -0500
+
+    cambios globales
+
+commit 0bcc5ecb67600ac9169a9eb13ccf0df2863482f7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Sep 15 18:34:20 2014 -0500
+
+    vistas de pagos
+
+commit acec3e8f4e5777b21e0adde9435b6c03a41cad0f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Sep 10 17:59:48 2014 -0500
+
+    suscripciones user
+
+commit e255256dc9feaf0f851e4ce8cb27e931b7420336
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Sep 6 21:39:37 2014 -0500
+
+    resize canvas
+
+commit 7799489969c439ae4bebb1052b5d1d6ed07455c5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Sep 5 00:35:16 2014 -0500
+
+    cambios en vistas mails
+
+commit 797f1edd3c45e7fe2872e79979df8fe7f200493d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Sep 4 20:35:43 2014 -0500
+
+    nuevas vistas mails
+
+commit 4f3283dddff97272e79883b33e2e144196c6765b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Sep 2 22:16:30 2014 -0500
+
+    categorias slug sedes categorias
+
+commit d891d5c0a418931a679fbe30ca970c41df9037ba
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Sep 1 18:02:04 2014 -0500
+
+    template email pass
+
+commit 4194b82ea97d9d3a5409190efe441bab55aa9517
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Sep 1 16:41:42 2014 -0500
+
+    probando reminders
+
+commit f0c3de36ce460622f0a54ba7fd1bff1649c78f1e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 31 21:32:29 2014 -0500
+
+    nueva vista email activación
+
+commit 95fda0c05b4eab57d8994189136bccc1da372069
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 31 17:34:17 2014 -0500
+
+    array shunk en vista
+
+commit 22b474dc39e666bb1dba2b1fb1e15b6ee1c1f0b7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 29 22:59:38 2014 -0500
+
+    email de nueva venta
+
+commit dc0ed38f78e11f704792120118f91dfa28d148ca
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Aug 28 22:48:08 2014 -0500
+
+    agregando paginacion
+
+commit f4abeec0b9c0ac2be0dc9dda74bfd7b84690257f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 27 16:09:20 2014 -0500
+
+    validando estado empresa
+
+commit 645961a390d26d5c1daec2e974b9edd550407072
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 19:33:25 2014 -0500
+
+    media queries index
+
+commit 826af2be6b28b69912c527363369f54c79cff9b3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 18:56:39 2014 -0500
+
+    nueva vista navegar
+
+commit 3be2b67aba88eb7c710846d7a6d5350f56c39ded
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 18:21:44 2014 -0500
+
+    terminando landing
+
+commit 1668d8e507cf3dade00792ca38ec819d2e5b6386
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 18:21:48 2014 -0500
+
+    Corrección pagos landing
+
+commit af0866dc5bbdf11749ad4951e0acb77194c7e8a8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 16:24:02 2014 -0500
+
+    descripción pasos
+
+commit c1fe4f76b3fa2964fb60a658777d6d8992861a90
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 16:12:10 2014 -0500
+
+    cambio backup index
+
+commit 2d921f44d2026dc337c0e429b095f9c923f6381a
+Merge: 5b5af61 853e817
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 16:07:04 2014 -0500
+
+    mega problemas
+
+commit 5b5af61b14ff76f4ba36474a01b077509cc2508c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 16:03:06 2014 -0500
+
+    nuevo archivo rutas
+
+commit bdf9b22df4d6f5f9e5381c03d4d25dbeb1cd3d80
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 15:59:32 2014 -0500
+
+    cambios rutas
+
+commit 50209827066da2a8793c13b70ec43d2fc68e4c63
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 15:55:25 2014 -0500
+
+    landing Shop
+
+commit 853e8177398a599e5c4f734e988665cb0128de27
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 15:49:45 2014 -0500
+
+    arreglo de rutas
+
+commit 7b55078c730c9811bfd3ce512a163baaccc5c0cb
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 15:27:12 2014 -0500
+
+    Primera versión términos y condiciones
+
+commit c418cae4c44fb33657e35445de6291be79f39994
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 14:59:09 2014 -0500
+
+    Landing de tiendas modificada y about terminado
+
+commit e29f9628e2e486892d065983f7ae13880fef6f0a
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 12:28:52 2014 -0500
+
+    About terminado
+
+commit 346983a30a2047e76b85e1a22bc0abf768e5fbcd
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 12:04:00 2014 -0500
+
+    Edición del about
+
+commit c0532d2c41ba5ccd1bde4ec95f6dc7217941ab2d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 26 11:55:05 2014 -0500
+
+    plantilla shop
+
+commit d5b8b6f62186eb55f62c0671dc7b1b62d286569a
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 11:29:29 2014 -0500
+
+    corrección ruta
+
+commit 3951964a2a7a51924817b790d1c5d425b4a0b165
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 26 11:25:41 2014 -0500
+
+    creación de la vista about y ruta
+
+commit 1df6736de6aacd3a5c0a330fae7c30615a09e9bf
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 25 15:00:46 2014 -0500
+
+    Cambios librería de fechas
+
+commit 404ec8fc0e5c57a450f962553006ec17e85aa155
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 24 23:46:00 2014 -0500
+
+    fechas Carbon class
+
+commit 6aad546b3c6a988c34a4958d25fad69b9d062fba
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 24 17:20:09 2014 -0500
+
+    productos seo-slug
+
+commit 4e897f47f8d0a0f19367a8f6da6476444e80513f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 24 00:02:00 2014 -0500
+
+    admin seo slug
+
+commit 3632fe7eb60a095a358f8283aafbc08382f8b2ea
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 23 20:38:22 2014 -0500
+
+    login same page
+
+commit 2f7408e873a289d30a4681d4c06719fa93434cc1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 22 18:20:50 2014 -0500
+
+    arreglando boton info-shipping
+
+commit 933b7fabddaf7d61ffdd99ddd1abbc7ee32bd076
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 22 13:44:06 2014 -0500
+
+    estilos form cambiar img-admin
+
+commit 470d3c248fa2b6d086f455f3fe88a98f500f8f2b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 22 12:34:06 2014 -0500
+
+    terminando shipping info
+
+commit bc8df15724c98ffcdbeebb644c3609337e4c5140
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 22 11:00:20 2014 -0500
+
+    direccion
+
+commit 6b8c82472560049e4de62d6c2ca8180d27ecb13f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 20 21:03:19 2014 -0500
+
+    adit address, changing skins
+
+commit 637df2c367581b7923e1d6bcf7f48341943e983f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 19 21:38:50 2014 -0500
+
+    administración de usuarios v1.0
+
+commit 8f08a25d939990948d3cbc7a39dd49081ee9b5ca
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Tue Aug 19 19:37:27 2014 -0500
+
+    ¿?
+
+commit 3eaf2f5e391886a9e95f991954e458dabcd9de7d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 19 17:18:21 2014 -0500
+
+    edicion de categorias y subcategorias
+
+commit 6eca427a278789ab3abe872adaceac86d7e9c231
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 15 23:43:18 2014 -0500
+
+    backup dbs server
+
+commit 2958758cfa5a8cae18261c8177c1841a63e9aefa
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 13 22:26:10 2014 -0500
+
+    validando ...
+
+commit 3bd0be0cae68b0056d5f3b02ef2bb38725ed382c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 13 18:59:51 2014 -0500
+
+    ultimo backup de la base de datos...
+
+commit d9252062a414a76af3370c036d031770516248ed
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 13 18:56:46 2014 -0500
+
+    comentando ajax
+
+commit 2b2ca557c6ebdf3144d69b1762b4a99392da1f55
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 12 13:19:36 2014 -0500
+
+    imagen logo empresa admin
+
+commit f99dfa62cbdee1114e98cacaa97f9c3dfb388858
+Merge: 1586acd 86bbf9c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 12 13:17:37 2014 -0500
+
+    Merge branch 'master' of https://github.com/ederjulianA/megalopolis
+
+commit 1586acd300ca37d9f4f45db28cc02fb562f5057b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 12 13:16:55 2014 -0500
+
+    info ventas admin
+
+commit 86bbf9ca6f71eb52d11507b2998ffb519ad73117
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 11 18:23:15 2014 -0500
+
+    Mod
+
+commit 450d44924e41643b3198fe3205b743503188ee13
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 11 15:25:46 2014 -0500
+
+    Corrección de URLs
+
+    Se eliminó el formulario de suscripción del footer que por el momen
+    es útil y se cambiaron algunas urls del mismo.
+
+commit a28df5fcf8aa64e7a62fa66bec07d6b8624e9319
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 11 15:15:51 2014 -0500
+
+    Corrección de URLs 2
+
+    Está pendiente el about y los términos y condiciones que no los hem
+    definido
+
+commit e83ce262de724a3ab2350773dccfe1a05ac8eabe
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 11 13:42:48 2014 -0500
+
+    Corrección de url de planes de pago
+
+    Hay que plantear si dejar esos planes o si usar ese espacio para ot
+    tipo de información. Por aquello de que aún no se está cobrando y q
+    modelo de negocio no es así exactamente.
+
+commit 80460bd3512a88b38d534c902545f6bdadcd5a53
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Mon Aug 11 12:27:55 2014 -0500
+
+    Arreglo de URLs
+
+    Aún quedan pendientes por arreglar
+
+commit c1a9da7602ec32be5ad0d7e8f6127652bfced5ec
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 10 23:44:17 2014 -0500
+
+    lista ordenes y email de compra...lado comprador
+
+commit 4599967b943060779ad09f7db89d39ae1a93d337
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 10 20:46:08 2014 -0500
+
+    categorias segun empresa
+
+commit ea43c32a968b1957c6c2e55cab113aa699c10998
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Aug 10 01:37:29 2014 -0500
+
+    lado administrador
+
+commit da2ab04bd25e808b6d7161adba3f7b268ea081e6
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 9 22:35:10 2014 -0500
+
+    nueva vista editar productos
+
+commit 848084fa1c1f4538e4b092e2e55486f5e61cd7d2
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 9 14:00:18 2014 -0500
+
+    nueva ruta catalogo
+
+    incluyendo id de la empresa en la ruta del catalogo
+
+commit 69fd5ef7a0537a0855d9b98f6bf70962580aa7a1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 9 13:45:14 2014 -0500
+
+    validando ajax nueva sede
+
+commit 4fefb16a0d45563e4f2d5de4c58e0d32f3454e5c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 9 13:10:02 2014 -0500
+
+    validando ajax catalogo
+
+commit b0125ea0e83d49dac30e8537eb7ba2a2229f3a1a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 9 00:08:56 2014 -0500
+
+    error 404
+
+commit 151c47d3346324f660e1602f4c6dc1e8567268d4
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 8 19:38:23 2014 -0500
+
+    evento notificar envio
+
+commit 870b4efc58dbbe9fa61767231101f85260e247ad
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Aug 7 22:33:45 2014 -0500
+
+    vista ventas
+
+commit 732b898b0a859fdc56478dd154ecbf31095e043f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 6 21:17:16 2014 -0500
+
+    loaderajax gif
+
+commit aef16a7b1193188a3240d4cca990cdacff9cf99c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 6 20:37:37 2014 -0500
+
+    preguntas sin responder
+
+commit 39381df8939762dceba05e5c0e89bb87bdcd48ac
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 6 13:57:41 2014 -0500
+
+    preguntas ajax......
+
+commit b7459063165e86df19d29bae6088943ff0f618bc
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Aug 6 08:49:42 2014 -0500
+
+    cambios en vista index
+
+commit 79f5aa50971be6ab25ecdc494c9222f23ba4a6a8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Aug 5 13:40:11 2014 -0500
+
+    preguntas pendientes...url's admin
+
+commit fa71e9b2df9e88529b431827991999188e04ce5f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 21:09:48 2014 -0500
+
+    validaciones
+
+commit a12c18e948895fe78aedaf0048480da13064b5a5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 16:16:10 2014 -0500
+
+    validando controladores (estado empresa)
+
+commit a1e4dfd52bb0ff758441eb1e3c9423bd4e918324
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 15:45:07 2014 -0500
+
+    validando empresas(estado)
+
+commit a565b6c9624c7bd5f702e6bff892d4e5ca75c727
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 14:41:21 2014 -0500
+
+    landing, empresas...
+
+commit 9bdc35b9800095da1581f409483d984fdbdd7b56
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 11:25:53 2014 -0500
+
+    validaciones form nuevo producto
+
+commit 84938b56c4ebef250292f209785f73b2aeff3bc8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Aug 4 00:23:25 2014 -0500
+
+    arreglando...
+
+commit 28ef88ab7d2c3c80da7d1bf4c138b2be5263dfc3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Aug 2 22:14:58 2014 -0500
+
+    editar pro...
+
+commit f79819799d9d5653aa003009652158cb80c9b6b2
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 1 23:58:20 2014 -0500
+
+    nueva vista editar productos...
+
+commit fb2d18633e1355ec074d75be30b2aa69484cc76c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 1 16:04:41 2014 -0500
+
+    respuestas
+
+commit 9717ee984e4ad590f95d55760c1e2eeb7a73bd35
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 1 15:07:22 2014 -0500
+
+    preguntas...
+
+commit ef9b920d9f0eb7ca442cbc8c1c3b27365366fc4d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 1 13:19:10 2014 -0500
+
+    preguntas, buscador...
+
+commit cb71129bdbab1778213f1cc96ce04cabd85cacf3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Aug 1 04:27:07 2014 -0500
+
+    arreglando /public
+
+commit 1299d3ed85481be989ccc447aff0b7b2f4b72031
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 30 19:36:35 2014 -0500
+
+    lista ordenes...
+
+commit 300ae9c9a3b1f7968cd44f405d434ece214cf46b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 30 19:04:59 2014 -0500
+
+    lista de ordenes
+
+commit 1f4935906a06bcac4370bc273378eb0387acd1ed
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 29 16:34:42 2014 -0500
+
+    carrito...
+
+commit 6cb87c78317d81ec814c0cad095085295f82bf00
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 29 14:07:50 2014 -0500
+
+    trabajando en  carrito...
+
+commit 8570c16200932bf50e930cc41c279091217f49ac
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Mon Jul 28 18:38:10 2014 -0500
+
+    Ruta home
+
+commit 138f6f74bd53da20a8cd7cec61d441434485cda5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jul 28 16:14:58 2014 -0500
+
+    CARRITO V 0.1
+
+commit a9da95b1183956e2a78462fc7a695d4b3fc9d73e
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Mon Jul 28 15:37:28 2014 -0500
+
+    Cambios de mensaje en la landing
+
+    Se agregó el programa de pioneros en la landing
+
+commit c81a46e684edd8c8381b8b0441a8b54f501717a7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jul 28 13:34:05 2014 -0500
+
+    vista categorias
+
+commit b044a8a93f3122551123ad2d04abc74c3cddf600
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jul 28 12:50:21 2014 -0500
+
+    buscador
+
+commit 33affced4e5a59d2612b5c22af8ff67f3fa6a162
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jul 28 12:29:41 2014 -0500
+
+    consola2
+
+commit fc1c58d91e20fd657ec70fa64796698822a8a605
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jul 27 20:52:46 2014 -0500
+
+    problema editar productos...(arreglando...)
+
+commit ee2d795903402df4760756c8fbb1d6c6a5f73b68
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jul 27 17:36:17 2014 -0500
+
+    change from console
+
+commit 93512c9af983d597c446401bec61ef1777e0bdac
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jul 27 16:39:55 2014 -0500
+
+    detalles e imagenes
+
+commit 9a1df7dc878b1260b61899cf159b4e3a7aeeef0a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 25 16:16:19 2014 -0500
+
+    favoritos, informacion usuarios...
+
+commit 834634be7e31991fb87fc319e8df300cb39990b2
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 25 12:05:50 2014 -0500
+
+    banner empresas
+
+commit bebfb7579a6d13036a7b6ea385cd9de4f859250f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 25 12:03:44 2014 -0500
+
+    registro (parte 4)
+
+commit a4fe07ad7ccbdb0ae605d0f668ae1c096fb1f773
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 24 19:31:34 2014 -0500
+
+    registro (parte 3)
+
+commit 02483d87c014a5aeefa97ed6452c68af01cf170f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 24 18:56:32 2014 -0500
+
+    registro (parte 2)
+
+commit fca389deb6f4cee9db4283d06268aed63db9978f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 24 16:05:36 2014 -0500
+
+    registro (parte 1)
+
+commit e0f312beb0c718b8a8c57cada6e1a240a9878f5d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 23 19:16:43 2014 -0500
+
+    modificando ando (parte 5)
+
+commit 471ad2ba046edcf63d7534fe062ca04aa9acf63a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 23 16:49:27 2014 -0500
+
+    modificando ando (parte 4)
+
+commit c8235be89cee3e98c544b72b54e2227736fc5637
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Wed Jul 23 00:46:05 2014 -0500
+
+    Planes de pago
+
+    Agregados los planes de pago, pendiente los enlaces a detalle de
+    producto y el "home"
+
+commit 22ac39bfb9b0632092dfc00a1a8d7426046e63a6
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 23:31:35 2014 -0500
+
+    Modificaciones al slider
+
+    Nuevas imágenes al slider y cambios al español de los productos, no
+    falta donde colocar el valor de los planes
+
+commit 0deae4985472d2ea095be50cc30c4ea3cde5cca4
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 22:27:42 2014 -0500
+
+    slide y grilla arreglados :)
+
+commit d8c0960e9a3363a3b9365f959ba305a21f5c0eb4
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 22:21:51 2014 -0500
+
+    slide checking
+
+commit cf26671d5262f18c32d6e2fbab7896a7c2edc49b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 22:02:40 2014 -0500
+
+    modificando ando(parte 3)
+
+    suscripciones, mapa y mas
+
+commit 5376b3677b043c18ed9b6c535e260ee9c89b3493
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 22:04:00 2014 -0500
+
+    Imágenes landing
+
+commit 03fd7cf81737d92cebd4d7b5f68ea50d53f5e443
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 22:03:01 2014 -0500
+
+    landing2
+
+    Imágenes
+
+commit d45546e6a9dc7692a2b6a125f3e16c90f18be7bb
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 21:13:10 2014 -0500
+
+    Landing
+
+    Aún queda por corregir el slider
+
+commit d7b230d20e5c545d0c07c25ac06c59fceefb0f32
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 19:50:01 2014 -0500
+
+    Logo editado
+
+commit 692cb5623e47e7f6fb5dc113ebee59282642667c
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 19:49:18 2014 -0500
+
+    Logo arreglado LOL
+
+commit a27cad278ae2aa8748b3192ea15a9a2dabeed2e7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 19:31:31 2014 -0500
+
+    modificando ando (parte 2)
+
+commit 53eb7f174b1dfbebe879eef42badf2b140d965ae
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 18:43:15 2014 -0500
+
+    layout-tshop
+
+commit fd776b8049f998cab16269c96d794f6d202f4252
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 18:42:12 2014 -0500
+
+    landing nueva
+
+commit b58e723d8e04bce36cd3087d09248d025056cee9
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 18:21:27 2014 -0500
+
+    modificando ando
+
+commit 896c9be6743956eb2c417618cac8d43855df8d20
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Tue Jul 22 16:44:22 2014 -0500
+
+    importante
+
+commit c79c21de83f8c62bad9bfaf290a9fa5f79dee217
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jul 22 15:21:13 2014 -0500
+
+    probando img resize
+
+commit 4c5ef312a4be24d602b02a5986f6e55619b3dab3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jul 21 17:19:08 2014 -0500
+
+    info empresa (tshop)
+
+commit aa32f239d7c89d2090dbad0cd3df40b261eca5dc
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jul 20 23:47:47 2014 -0500
+
+    header default
+
+    las dos vistas ya estan online
+
+commit 1b429b67e52ed914c7d9832fc59f28ebb8b03c8e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jul 20 22:51:54 2014 -0500
+
+    vista empresa, detalle producto (con datos)
+
+commit df60eb6e8ed15785d58ce368651f98efd9a3d4ba
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Fri Jul 18 21:19:41 2014 -0500
+
+    Botón comprar
+
+commit b335fa75b23cd7dd10b208e4b68a9da2b3cc7ee7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 18 03:24:45 2014 -0500
+
+    2 interfaces (empresa, detalle producto)
+
+    las interfaces quedaron terminadas segun lo hablado. en la lista de
+    productos de la empresa todos apuntan a la misma ruta de detalle, l
+    recomiendo que haga clic en el primer casco que es el que tiene la
+    de detalle
+
+commit 15ec7a6e2361aa8fe57fab4f38fa73f56ef7f2ae
+Merge: 297721a e2dd2f3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 18 00:49:34 2014 -0500
+
+    landing 2 ...
+
+commit 297721a798a1340faebdac92ec4ced4dfa86a559
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 18 00:46:32 2014 -0500
+
+    mio
+
+commit e2dd2f3f0b380220eff8c1d67522f46fe6270304
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Fri Jul 18 00:44:52 2014 -0500
+
+    banner-moto
+
+commit 21edbdc57973dc5cbb176a1b4b741e098855544d
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 23:06:59 2014 -0500
+
+    home.js
+
+commit 7deff45481fcdeaa26b1db6d8b68f1c1b91c5eed
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 22:42:33 2014 -0500
+
+    Ni idea...
+
+commit 1e11df4fcf287e97b22f5d1c6909cedf731f2252
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 17 22:20:11 2014 -0500
+
+    mi commit
+
+commit 93723e0fb7ecd85d9cca6511d402a3428b28113a
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 22:09:04 2014 -0500
+
+    Cambios a idioma español y banner de motos
+
+commit 23419b5e7a5164ba1566840b0d250c13387845ca
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 15:41:57 2014 -0500
+
+    product-detail2
+
+commit ece7e74b7047a0ffa98ea92e195fad4b4a73a4d4
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 15:21:10 2014 -0500
+
+    product-Detail
+
+commit 5dc8775a1b9eee4a3ab0d8776b5d98da14b633de
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 17 15:11:05 2014 -0500
+
+    revisando plantillas
+
+commit 68419717fec98409bb7cfac8288af462a889aaf3
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Thu Jul 17 14:32:50 2014 -0500
+
+    Navegar tshop
+
+    Se monta la interfaz de navegación de la segunda plantilla elegida
+
+commit 270fb03481264f8e0c0032a5136f3f7c354d4169
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jul 17 11:43:37 2014 -0500
+
+    editando landing BSC(2)
+
+commit 33a195aa4d08464aff852a24b9b432388a0b16e9
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 23:38:43 2014 -0500
+
+    editando landing BSC
+
+commit af5c58c0f4dcd17c5d0c935e8bd722699f7eaa4f
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Wed Jul 16 20:33:46 2014 -0500
+
+    Plantilla Tshop
+
+commit 148216b9c782578add4dd4120baccf8d1a27581e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:49:27 2014 -0500
+
+    BSC
+
+commit bc455aa8923af2eed7fd6398b5db8ff477764c58
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:29:59 2014 -0500
+
+    slide parte 4
+
+commit 86a614cb146d744cbf330ef969987bed729ec5fe
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:28:02 2014 -0500
+
+    slide parte 3
+
+commit 5c0ab99a383b63ee7925794424ec8deda56d0a72
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:26:47 2014 -0500
+
+    slide parte 2
+
+commit 4b0b55f429ef606bcc448140b1db3e938b93d1a7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:24:30 2014 -0500
+
+    slider parte1
+
+commit ff24c1e15720bd01a132e941d23edddf0c76fb3b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 16 14:22:48 2014 -0500
+
+    camera js
+
+commit f3a8372605475c76212896c8f5ba1d814915eeb7
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Wed Jul 16 14:16:13 2014 -0500
+
+    prueba2
+
+commit 2e3bec2eb7f51927c72a732496e120ce7b2bb758
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Wed Jul 16 14:15:23 2014 -0500
+
+    prueba
+
+commit 33bcd6452dfbfec95b06ea948398d1761a445c38
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Jul 12 20:55:06 2014 -0500
+
+    correccion de la img para FB
+
+commit 83f9ecee01600ae4dd271c98644d9149ebc2e919
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Jul 12 20:53:25 2014 -0500
+
+    interface empresa
+
+commit a24780fcbfb509f33db432fd7f3e840ee64f28b0
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Jul 12 19:22:59 2014 -0500
+
+    nuevo navegar
+
+commit 1ec2adc05600ef538c57ae3a4ac3368f89108070
+Author: Carlos Andrés <cvcarlosandres39@gmail.com>
+Date:   Sat Jul 12 17:28:55 2014 -0500
+
+    home
+
+    Botón de home
+
+commit 855e8334d0a7f5c076c5ac459ef457bb3e494776
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Jul 12 17:17:25 2014 -0500
+
+    validaciones landing
+
+commit 96c455231b15c30b779c09dfcea414e6708f3a7b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 11 17:58:57 2014 -0500
+
+    ultima base de datos(13)
+
+commit 075ed22f8746c5901225342cb2eb9049d074d90f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jul 11 17:40:42 2014 -0500
+
+    landing 3
+
+    probando la nueva landing...  envio de email con plantilla por defe
+
+commit 89afd3e634dd5626c29cae88e9aad6e3db43d9ea
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri Jul 4 01:25:52 2014 -0500
+
+    Eliminación de productos
+
+    Eliminar producto por id.
+
+    Método utilizado: GET.
+
+    Pendiente:
+
+    - ¿La plantilla con la que se está trabajando tiene ventanas de
+    confirmación por defecto? Lo digo porque trabajé con la ventana nat
+    de JS al momento de hacer la confirmación de la eliminación.
+
+commit f4e603a45bd27049ed4334cec81bc6113204d6c0
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri Jul 4 01:08:51 2014 -0500
+
+    Edición de productos 90%
+
+    Se puede editar:
+
+    - Imágenes 1, 2 y 3 de los productos.
+
+    Pendiente:
+
+    - En la BD hay dos tipos más de imágenes que no aparecen ni al mome
+    de crear el producto, ¿cuál es la idea?
+
+    - En el servidor local me indica un problema con la función PHP
+    "Intervention\Image\finfo_buffer()", pero al parecer es sólo
+    configuración, valide en su servidor y me comenta.
+
+    - Estilizar tanto formulario como lista de productos por todas las
+    sedes.
+
+    - Eliminar productos.
+
+    - ¿Los tags son también editables o no? En el contexto en los blogs
+    se editan.
+
+commit dee76032cf4b906815de49bfd4d7b4adbffeac15
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri Jul 4 00:40:14 2014 -0500
+
+    Edición de productos 55%
+
+    Se puede editar:
+
+    - Cantidad del producto en un almacén específico.
+
+commit 19901684334135b65862b83bc15fc7d657731269
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri Jul 4 00:36:02 2014 -0500
+
+    Edición de productos 45%
+
+    Se puede editar:
+
+    - Sede del producto.
+
+commit d9192acd8e590caddf384560a7b4f09aa4b5a4a6
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Thu Jul 3 02:06:37 2014 -0500
+
+    Edición de productos 35%
+
+    Las propiedades que hasta el momento se pueden editar son:
+    - Nombre.
+    - Categoría.
+    - Subcategoría.
+    - Descripción.
+
+commit 267f00bf27168dee60343aa22e9549ca686d09bf
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Thu Jul 3 00:52:32 2014 -0500
+
+    Carga completa de información al momento de la edición
+
+    Recordar que no todos los productos en la BD tienen una subcategorí
+    asociada por ende el campo subcategoría podría no aparecer por defe
+    para ciertos productos; de Mercagán, p. ej.
+
+commit 6f36b7ea1ffca7dbd007c018e78d39eb72d09bef
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Thu Jul 3 00:08:19 2014 -0500
+
+    Corrección consulta de subcategorías
+
+    Cambio de /mega/subcats a /subcats, el dejar el "directorio" mega
+    limitaba la consulta de ese servicio.
+
+commit 73a289a61aac53f4e8c640ae0c313c6c52342ecd
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jul 2 09:14:11 2014 -0500
+
+    pruebas- productos
+
+commit f9f18e9999640f4ba26a7f44b985d92c2115495b
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Wed Jul 2 02:22:26 2014 -0500
+
+    Datos por defecto 90%
+
+    Pendiente validación AJAX para carga de subcategorías aún.
+
+commit ee30b24353972a411dc8f1fe27eb036a6026d41a
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Wed Jul 2 01:24:34 2014 -0500
+
+    Más datos por defecto en el formulario de edición de productos
+
+    Validando datos por defecto, pendiente por ahora la consulta AJAX p
+    actualizar sub-categorías.
+
+commit 56b95f27637db2a90e6d7569fac1fec89e78b83e
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 03:09:15 2014 -0500
+
+    Datos por defecto en el formulario de edición de productos
+
+    Validando algunos datos en el formulario de edición de productos.
+
+commit 091ad78b949093bbc905c30652281b6e8e3159e8
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 02:50:17 2014 -0500
+
+    Formulario para la edición de productos
+
+    Validando el ingreso de nuevos datos para el producto desde el form
+    de formulario de creación.
+
+commit d4bf4f1d0bd2e7c7d77b0543937c7c2483823f61
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 02:42:44 2014 -0500
+
+    Ventana modal para la edición de productos
+
+    Validando ventana que permite la edición rápida de los productos.
+
+commit dd2c267c16e3d1f5a3520350612ed71ca9218861
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 02:33:59 2014 -0500
+
+    Listado de productos de todas las sedes disponibles
+
+    Validando productos de todas las sedes disponibles de una empresa p
+    su edición.
+
+commit 8ab10c60221d28531dd8e5a0cc4257c2ed97859c
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 01:36:48 2014 -0500
+
+    Vista para edición de productos
+
+    Creando la vista para modificación de productos a partir del layout
+    empresa.
+
+commit 5df74b6a39824fe561338f4e1742c8afbf8bbd84
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue Jul 1 01:09:39 2014 -0500
+
+    MyISAM BD
+
+    Base de datos para trabajar en mi servidor MySQL.
+
+commit 187754598a3e814a3862309577cc8bed54fa6b61
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Mon Jun 30 00:03:39 2014 -0500
+
+    Corrección de la llave duplicada en la última BD
+
+    Revisando problema con la llave duplicada del último backup generad
+
+commit 97170dfb97e7ab2bfb3f0678e466e63454ec7c62
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jun 29 15:04:54 2014 -0500
+
+    links ajax productos catalogo
+
+commit fbf5546658da848d60c887a5c43cf341ef1ab989
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jun 27 23:38:42 2014 -0500
+
+    productos de la misma sede
+
+commit f7a70357c706f239157d210158f45a14fb9046a1
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Thu Jun 26 15:26:21 2014 -0500
+
+    Sync de prueba
+
+    Solucionando el jodido problema de sincronización.
+
+commit 4310f4879e6aa5b8311eee3ba8de349201ec0f2e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jun 24 20:44:14 2014 -0500
+
+    vista tienda
+
+commit 786628578f33cd7401d452c630ac6625d84b886b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 23 18:18:45 2014 -0500
+
+    tienda y filtros por categoria
+
+    se cambio la URL del evento ajax para que funcionara en el servidor
+    produccion. es posible que toque cambiarlo para que funcione en loc
+
+commit 70b4f11811e6e760ca9a6136e16af414bd8e3ff6
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 23 16:25:01 2014 -0500
+
+    plantilla tienda
+
+commit 32cb8c2932d22bb0160bdab2b00b42e63c111f44
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jun 15 18:59:21 2014 -0500
+
+    solo una linea
+
+commit 5011fe3c78638301470ba9a059a636772b4a612c
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Thu Jun 12 11:54:30 2014 -0500
+
+    Ju!
+
+commit da4a0d3cda9993d81443b68a9cc587f81cd9cd6e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jun 12 11:47:36 2014 -0500
+
+    vista categorias
+
+commit 8be3ba6562d42929889c502b4d5e2628c924911b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jun 11 15:47:00 2014 -0500
+
+    filtros por categoria
+
+commit 70b967f04f504cb410ec32eb3bdfea35a941307b
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Wed Jun 11 15:45:36 2014 -0500
+
+    Home login
+
+    My first commit
+
+commit 7832c8fb4c5c12e8078419c48100fec1f8cc3b6d
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Wed Jun 11 10:47:42 2014 -0500
+
+    My first time on laravel
+
+    Didn't hurt
+
+commit 47bb98fb12ada61e0758abc1b0848487b85f8799
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Jun 11 14:00:15 2014 -0500
+
+    numero de suscriptores
+
+commit 17f86dbc440ae6f58e15a321da790e7aa5ee4206
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jun 10 22:26:15 2014 -0500
+
+    imagenes resizing 720x480
+
+commit 37a791ac3536f85f15b92b7e0fc7fc7a80f1df51
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 9 22:30:21 2014 -0500
+
+    ultima bd
+
+commit 73c29be15855b7a7b70dfffa07bf319685b805b5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 9 21:27:13 2014 -0500
+
+    gallery v1
+
+commit db2ce99715343dc0eae0cf4ca13cb52622ecf42e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jun 8 23:48:23 2014 -0500
+
+    twitter plugin
+
+commit a17cc174f90cd8779f3f680501896ebcd9444166
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jun 8 20:32:13 2014 -0500
+
+    imagenes y favicon
+
+commit d6b6750077bb092d48fe793d73c5ba437d3ea662
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Jun 7 22:57:05 2014 -0500
+
+    arreglando links
+
+commit 8beb06352420c4369c4bbb0c7e0cd42ca1eae9de
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Jun 6 23:58:27 2014 -0500
+
+    facebook social plugin
+
+commit 8798ff61f76ef53e66d8ce1ccb1a8fd26e1f62a1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jun 5 23:35:51 2014 -0500
+
+    detalles
+
+commit 30684f81602d97ffd27649a8fdf3aa01acefa598
+Merge: b4a8423 c2c14f2
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jun 5 21:05:19 2014 -0500
+
+    empresa controller problema
+
+commit b4a842353589ceeb12decb78c6a12e55a04005c0
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jun 5 20:51:01 2014 -0500
+
+    validando estado del producto en la condicion
+
+commit c2c14f24dcad48552344158a38b9f4be50cf96aa
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Thu Jun 5 14:45:17 2014 -0500
+
+    prueba2
+
+    Eliminado comentario
+
+commit 26b33cd18bbcdcdad752a0b2ea0830b98f32fc27
+Author: carlos <cvcarlosandres39@gmail.com>
+Date:   Thu Jun 5 14:38:55 2014 -0500
+
+    prueba
+
+commit cca76553b63666e792dc7d88bd2225d5bf15f4cc
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu Jun 5 13:45:22 2014 -0500
+
+    cambios vista catalogo, reajuste de imagenes
+
+    Se cambio el script para reajustar las img y lograr que se vean mej
+    la vista catalogo, se modifico la base de datos y la estructura de
+    carpetas de img agregando una nueva carpeta para las img mas pequeñ
+    los productos por ende muchos producto no van a mostrar imagenes en
+    catalogo->no importa
+
+commit 6949d1f788794b06bd0331d81813050b4b8d0204
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Jun 3 23:46:49 2014 -0500
+
+    nueva vista producto
+
+commit 152d544b325208871f76911820f5409fa722a752
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 2 21:26:59 2014 -0500
+
+    cuadrando para serve
+
+commit 09adfcd8dd956cc655d4873361dce9ddb599acdb
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Jun 2 01:37:46 2014 -0500
+
+    base de datos 10
+
+commit f1584f58d9d97594c6007798321fab8d2f87ee7e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Jun 1 18:40:06 2014 -0500
+
+    algo de notificiones
+
+commit 52eda3fc7f00ec17d1f0b3e3b5edf4be54d321a2
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 30 19:31:28 2014 -0500
+
+    modelo de base de datos
+
+commit c8f374fb7ea3524a8c7843f141140972a4c6f068
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 30 19:14:16 2014 -0500
+
+    registro de empresa en mapa
+
+commit 71a536e9c778c4376f24f75271728759667fafe8
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 30 19:10:53 2014 -0500
+
+    Corrección del buscador
+
+    Pendiente de validación.
+
+commit d78ecde09d75f990a89b28f3e965ca1d7f0be587
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 30 16:56:26 2014 -0500
+
+    Corrección de la cuenta de correo
+
+    Pendiente de validación.
+
+commit 4380a0f91072ef9a7c527bfafa0691e4216db778
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 30 16:23:26 2014 -0500
+
+    mapa p*to 2.0
+
+commit 3ea8c2c1992afe42b93e588fe7d22d12d6bee4a5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 30 01:15:23 2014 -0500
+
+    p*to mapa
+
+commit 150cceeec4e6b34de81c0ddf24728df097043316
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 29 17:39:09 2014 -0500
+
+    administracion promociones
+
+commit 7f67d7699b008f3bee6d35838c94055d28db1466
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 28 23:55:05 2014 -0500
+
+    editando vistas
+
+commit 827da4d80e37059113fba57df155a8cc901173a0
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 28 21:03:48 2014 -0500
+
+    probando buscador
+
+commit 62c8db43cdf940ba55994f8995eaae2a97df61fa
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 28 18:46:06 2014 -0500
+
+    arreglo de rutas
+
+commit 2ed6b49b61093c78af672325cd487c4058f05edd
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 27 19:18:05 2014 -0500
+
+    solo una linea
+
+commit fcaa8170d851128155f804b714f81887bfde7ab1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 27 18:08:47 2014 -0500
+
+    buscador V1
+
+commit ad91c9aec9eb1ff78df32360148a85b897707a6e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 27 14:06:55 2014 -0500
+
+    landing v 1.1
+
+commit 5a80fcfbdd79d5bd7e0007812e54e442e8b34ba5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 25 23:59:34 2014 -0500
+
+    cambios en validaciones de formularios
+
+commit 14d4eceecf6931d74415367628cc5d307d70802e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 23 02:14:43 2014 -0500
+
+    vista mapa
+
+commit d1101a02596adef0778de8734fab106f75f7fc93
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 22 03:42:59 2014 -0500
+
+    cambios para subir a colombia hosting (muchos)
+
+commit ab31cec2212eb76ef5d627c2bdfcd8443b0a8d6f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 21 01:14:55 2014 -0500
+
+    mas cambios
+
+commit 78bc5d25aa40e62beb9ec9da5fed81a8e37044e8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 20 22:18:10 2014 -0500
+
+    suscripcion ajax
+
+commit 062b97a5f897058d52c88c416d09608d5554ea00
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 20 12:28:41 2014 -0500
+
+    creacion de empresas(acorde)
+
+commit 065926e537158e7770147e902abd679359a181a8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 20 00:01:53 2014 -0500
+
+    promociones-navegar
+
+commit 8260bafac29be20090cf3b03e902c1f459ea2071
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 19 22:30:13 2014 -0500
+
+    vista promos
+
+commit d1e997523c8bdd61f4c73ed7c8482406af2b3b69
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 19 14:55:29 2014 -0500
+
+    terminando modulo de usuarios
+
+commit 95507f5cb89680765fa1d833a0cf0b08553768a4
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 16 17:57:53 2014 -0500
+
+    Tag como enlace
+
+    Se supone que los utilizaremos para hacer consultas a la BD en base
+    esa etiqueta, pero creo que ese módulo aún no está, igual lo dejaré
+    enlace mientras.
+
+commit 2d3e1b56f10205d4fd41870021251986d393d2d6
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 16 17:55:14 2014 -0500
+
+    Estilizando tags
+
+    Un breve estilo para los tags en los productos del catálogo.
+
+commit d5333ecd9f8b4d28744d60966d6eeb7a6806b3a1
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 16 17:45:24 2014 -0500
+
+    Mostrando los tags
+
+    Pendiente de validación. Los tags por ahora se muestran sin estilo
+    catálogo y obviamente por cada producto, aplicaré el mismo estilo a
+    momento de crearlos.
+
+commit f2493b876e529d064d71b798e0f593dbf4448cf7
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 16 16:43:15 2014 -0500
+
+    Registrando los tags
+
+    Pendiente de validación. Se guardan los tags asociados al producto,
+    registro por cada tag en la tabla tag y referencia a un producto.
+
+commit 45992c5072d2328026e1a9d120ffb1f6a261dcac
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Fri May 16 16:10:30 2014 -0500
+
+    Nuevo directorio BD
+
+    Agregar fecha y dejar sólo una para trabajar. Ya no aparece "Agr ta
+    sino "Nuevo tag".
+
+commit 6f39cf3f272c6df6a596bbfafc477875fb37964b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 16 16:05:32 2014 -0500
+
+    vista suscripcion mas nuevo modelo debd (6)
+
+commit 899224fa39dc9c4b2b4464de78ae0e36aeb66d3b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 16 01:16:52 2014 -0500
+
+    jugando con ajax
+
+commit b81e8b0d3687e5a6cb893d974b19b0fd0492db0a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 15 20:08:53 2014 -0500
+
+    pequeños cambios en el catalogo
+
+commit 61b392943fd28ae219f0a6ab9ce0b4cfecd87776
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 15 14:38:23 2014 -0500
+
+    precios en las promociones
+
+commit a812a7d460b30f29a470fc20755fed87f4ff96dc
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Wed May 14 23:22:10 2014 -0500
+
+    Corrección GM en catálogo
+
+    Pendiente de validación.
+
+commit 6dabd84b5f65b63968e2a0f675e10a0615b24d52
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 14 23:02:55 2014 -0500
+
+    img demi
+
+commit 8b3e76289552858dc46093c477a577876b95bdc4
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Wed May 14 22:59:14 2014 -0500
+
+    GM en catálogo
+
+    Pendiente de validación.
+
+commit 3bf293db149c340f6702076c2591d9f5e532d51c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 14 00:25:47 2014 -0500
+
+    tags parte grafica
+
+    se agrega campo tags el cual funciona separando los tags con comas,
+    front-end en el backend no se modifico nada
+
+commit 62c47218e23575faecda9feb45e1eb541ca2610b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 13 20:25:33 2014 -0500
+
+    cambios en las credenciales de bd
+
+commit 40011fb203e3f407c34e66ec114985f942a81dac
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 13 20:23:34 2014 -0500
+
+    mas cambios
+
+commit 10707b2f2bd045dd31ad24a5d668ef8ec520177f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 13 17:22:10 2014 -0500
+
+    estilos de preguntas
+
+commit e03f428548807f3517578e17442d66813d32f5c5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 13 15:48:53 2014 -0500
+
+    subcategorias via ajax
+
+    actualizar tabla subcategorias en la base de datos
+
+commit 4d66a3bdca960133444ea6ccd48adca8c8b1604b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 13 13:18:51 2014 -0500
+
+    cambio database, mail
+
+    se cambio el servidor de envio de correos debido a un problema de
+    credenciales, se cambia credenciales de la bd para hacer un push a
+    heroku y ver que el envio de emails funcione sin problemas...
+
+commit e96698c23d8b8ebdf59e33cc7af537946af68efe
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 12 21:29:16 2014 -0500
+
+    cambio preguntas
+
+commit 44d0eb5b3f7cca8069ad9435ef12547fe757f236
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 12 15:53:21 2014 -0500
+
+    preguntas incluyendo notificaciones
+
+commit c71fe4a78c1659c3b862b4438e95a7b30e348d0e
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Mon May 12 01:37:42 2014 -0500
+
+    Carga de latitud y longitud desde la BD
+
+    Pendiente de validación y pruebas.
+
+commit f0af58b2094884e029668927fe0f4b6219dee6a8
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Mon May 12 00:37:44 2014 -0500
+
+    Creación y edición de sedes con GM
+
+    Pendiente de validación y pruebas.
+
+commit 547f52744ddec38802af4cf500093f9b08d80b2b
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 22:25:13 2014 -0500
+
+    Edición de las sedes con GM incluido
+
+    A validar.
+
+commit 6dd31c4ba1b39ad1c3322d7e07a210d536b6316b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 20:40:02 2014 -0500
+
+    preguntas
+
+commit 15095edf309bb52179707b1d91c85ad1a5ee3398
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:54:04 2014 -0500
+
+    Creación de nuevas sedes
+
+    Pendiente para validación por parte del cliente.
+
+commit 8d4432b971fdc9f5b37cf754a115a41cdd1c8ac5
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:38:33 2014 -0500
+
+    Corrección de etiqueta "nueva sede"
+
+commit fa758d1e4e5f83186a63e7714a69f1f533753a01
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:37:16 2014 -0500
+
+    Corrección de etiqueta GM
+
+commit 5313805edc487dcbcecfa1f6f7d93e0b6feae17a
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:34:25 2014 -0500
+
+    Jugando con los mapas 6
+
+    Versión final y validada de GM en el registro de sedes.
+
+commit 3134efce4d894e107660504407a5c9b64d494656
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 18:14:56 2014 -0500
+
+    boton mas sedes
+
+commit 1493edc1abdd04e6cfc13e8f5e09052613b37fe0
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:01:23 2014 -0500
+
+    Jugando con los mapas 5
+
+commit ae6375ac695757271d81718ff01403419849a62c
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 18:00:23 2014 -0500
+
+    Jugando con los mapas 5
+
+commit 5379a7befa59aadf5ae90e14694bc06d37c2b361
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 17:48:11 2014 -0500
+
+    Jugando con los mapas 4
+
+    Actualización casi completada.
+
+commit ae0b39793ab9e0b54a7eefd126a6fa180ebe2e99
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 17:42:17 2014 -0500
+
+    nueva sede v2
+
+commit 692003d0c74d7c3b059c10d9ac7c01038083d718
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 17:30:09 2014 -0500
+
+    preguntas lado admin
+
+commit e7181eaae5f6c05fa88fc175463e2ab9b1305aed
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 17:23:32 2014 -0500
+
+    Jugando con los mapas 3
+
+    Carga por defecto la ubicación al momento de crear la primera sede.
+
+commit d768bec97442a7540dfb5158e3931a65c5b86955
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 17:08:18 2014 -0500
+
+    Jugando con los mapas 2
+
+    Agregando el mapa a la creación de sedes.
+
+commit cba7b077f4a0b2694cb106f9d9ccf03c32d3747a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 16:46:08 2014 -0500
+
+    nombre publico de la sede
+
+    validado via ajax
+
+commit 9e25c130e6eb0d99196727d0308993fda96e310a
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 16:32:05 2014 -0500
+
+    Jugando con los mapas
+
+    Primer mapa al momento de crear las sedes.
+
+commit 73c6c0f0ad775d86930ae0127646b571aec91ed0
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 16:29:45 2014 -0500
+
+    nuevas sedes
+
+    incluida validacion tipo ajax para nombre disponible y nombre seo
+
+commit 939a97d6c0daaf11200181233eb8e471f4fb2563
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 15:44:37 2014 -0500
+
+    ciudad en las sedes
+
+commit 07a4eb0886de352cf7ae9cc7046145b9f9eccc1f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 11 15:16:08 2014 -0500
+
+    sin importancia
+
+commit d77a5dd8b712d61f0dda073d3caa31a1f4958e38
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Sun May 11 14:55:33 2014 -0500
+
+    Primera versión de ubicación con Google Maps
+
+    Sujeto a cambios.
+
+commit e91039469b0f382b8bed8869c819163054beac19
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat May 10 00:16:31 2014 -0500
+
+    preguntas
+
+commit 2e7d30d9dbc99ab10920eb313bbd934852dafda5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 9 18:53:05 2014 -0500
+
+    cambios en el css de producto
+
+commit b9dfa87ad3f9fb50a2aa733e7b333f35a38c25e5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 9 15:44:23 2014 -0500
+
+    cambio bd credenciales
+
+    cambio en las credenciales de la bd para hacer un push a heroku
+
+commit 9d2be0313c62b9d9f5a5812247a3bdeeedec4d73
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 9 15:06:38 2014 -0500
+
+    mas jquery
+
+commit 724bc154af0302a54dcd1abd2f4594569a6b4138
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 8 21:02:57 2014 -0500
+
+    favoritos terminado
+
+    pendiente de revisar: alguna validaciones y arreglar css de la vist
+    favoritos
+
+commit d86fd92de4263a96118f08baa530dc02e98d8bc0
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 8 14:21:37 2014 -0500
+
+    ultimo modelo de base de datos 08/05/2014
+
+commit dcf4d89874afa1ec4dc334b4384f7eb602afa6de
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Thu May 8 02:01:56 2014 -0500
+
+    funcionalidad de favoritos v1
+
+commit 8906c738d83ec872c875811580a672e5471a6a4d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 7 20:00:38 2014 -0500
+
+    cambios css
+
+    pequeños cambios en el css
+
+commit 5b742edff1e25949ffafb92c1a02d8fc2225c3c6
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 7 19:35:58 2014 -0500
+
+    sigo con la vista de editar perfil de usuario
+
+commit 795fe7db891a94aba2e97b4ec821d699ceda1289
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed May 7 01:42:21 2014 -0500
+
+    editar usuarios---
+
+    vista para que los usuarios de tipo q puedan editar su informacion
+    personal
+
+commit 902c9dcf454d14f946eef730ea6b08e02ece81c4
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 22:47:12 2014 -0500
+
+    otras img
+
+commit 54a43ae2a2edcd1e8aae15a9f5b819969a96bb0c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 11:05:37 2014 -0500
+
+    mas imagenes
+
+commit 5d09781809e57317758aabe7d44899c328709e51
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 11:05:26 2014 -0500
+
+    upload de imagenes
+
+commit 73c9502baade572837f8062c9d954ae1d7b5ed09
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 10:46:07 2014 -0500
+
+    subiendo imagenes a heroku
+
+commit 5225d416c2c445f40ff38aff4835a82846dde7b8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 10:25:36 2014 -0500
+
+    validando error img en server
+
+commit ab50168070714f95b1d0f28b21bed2c4f2eb4c06
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue May 6 09:59:47 2014 -0500
+
+    cambios btn crear producto   credenciales bd
+
+    S e cambio la posición del btn crear producto para evitar que apare
+    en lugares no propios del diseño, el cambio de las credenciales de
+    base de datos es con fines de hacer el push a heroku
+
+commit 8de3e3174c49370ae9b0d4b1e58db408922d9f58
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Tue May 6 06:15:43 2014 -0500
+
+    Módulo de carga y visualización de productos por sede
+
+    Carga dinámicamente los productos, los asocia a una sede y los mues
+    en su respectivo catálogo. Las imágenes se están generando en el
+    directorio public/img/products
+
+    Pendiente:
+
+    - La validación dependiendo si aprueban el diseño de los productos
+    catálogo.
+
+    - La selección que indicó el cliente de la subcategoría.
+
+commit e55eec4fca509e9da9b4281a0349036cbc184656
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 5 23:11:40 2014 -0500
+
+    reverti el cambio
+
+commit edd0536f1011c99012fa90fa3f022c99f1460bc7
+Author: lizcanojair <lizcanojair@gmail.com>
+Date:   Mon May 5 23:06:09 2014 -0500
+
+    Cambios del día 05/05/2013
+
+commit b85c436d93f819f3a57724b214b4ba7e917677ee
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 5 18:09:56 2014 -0500
+
+    cambios template
+
+commit 965035a9062dd7951e3fd18d7de7d88dc4ae8b7c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon May 5 11:31:23 2014 -0500
+
+    jquery
+
+commit 3f182d258b4f2f295224f4bc5a5b1a8d94d8703c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 4 20:42:45 2014 -0500
+
+    retoque
+
+commit c1bdffed0d4c6055e6b8b4362f6db357b573ee69
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 4 19:54:21 2014 -0500
+
+    mas funciones ajax
+
+commit c0446c6c7e099bfbb67d1def70d33d1a02006885
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 4 12:26:00 2014 -0500
+
+    cambio nombre img
+
+commit 5ec004c7519ef47c130b48196ae1f824a1eae24e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 4 12:14:56 2014 -0500
+
+    img-promos-to-heroku
+
+commit 3ca8ffdbddbff0d7d7218a23ae849f6b8a1d9fa5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun May 4 00:20:14 2014 -0500
+
+    prueba base de datos heroku
+
+commit 0c98058440a82870fe969c955bea579d62c0c002
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat May 3 19:04:06 2014 -0500
+
+    ajax promos
+
+commit cd56b23e93d683b1e1750132ba215136c9d4bad5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat May 3 13:54:27 2014 -0500
+
+    productos 1.0
+
+commit a326b046ff5374d40a8e4da646e7b8554e07a9ca
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 2 23:07:19 2014 -0500
+
+    commit base de datos
+
+commit 460e8e7797a81324fb9898135c1fd05a893f5c6f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 2 19:37:32 2014 -0500
+
+    promociones
+
+commit 74b98382c508d8d7830d6418afa9b4ec145190b5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 2 15:13:29 2014 -0500
+
+    promociones
+
+commit 4c5b54d0d4d526c803bc94f2efb6069f21ee2df5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri May 2 11:04:44 2014 -0500
+
+    eventos ajax
+
+commit aa1b96213039c27ef78292bece7126d2215018c4
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 30 23:47:04 2014 -0500
+
+    mas cambios
+
+commit 473189986d8addf118b9f99b47f5e63d8bfe5d41
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 30 21:12:22 2014 -0500
+
+    contador de sedes
+
+commit 29f3e5a7659b018b1a012cda5c24f889614f4f6c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 30 19:17:33 2014 -0500
+
+    avances 30/04/2014
+
+commit 9271299f45ca39e230b088a2977b25bfcb25f62e
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 30 11:41:20 2014 -0500
+
+    imagen modelo
+
+commit edf92e06c4613615b6c77fbc4f82c969cef0aec7
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Apr 29 12:05:43 2014 -0500
+
+    funcion recuperar pass
+
+commit a719bac25b637a8257b32e25829340be41853117
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Apr 29 08:51:03 2014 -0500
+
+    cambio a entorno local. bd
+
+commit 4c50c91e11758c8f99a08b1eecd7eb34be3a5eea
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 28 17:43:49 2014 -0500
+
+    push heroku
+
+commit b6e1d5024b06a2b470e594fe2553bf47fee2a240
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 28 16:49:55 2014 -0500
+
+    actualizacion de la fecha
+
+commit 9180acbff9074c560adab4e9445b2b6d28056370
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 28 12:31:56 2014 -0500
+
+    cambio de contraseña
+
+commit 157c5779b06648c31cc710accb12758b3ad894eb
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 28 10:26:58 2014 -0500
+
+    modelo relacional
+
+    workbench
+
+commit 877010a494f68d821a0b3dae51f06124ab46b5d1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Apr 26 21:59:36 2014 -0500
+
+    cambio navegar
+
+commit f459e2a458e02cbd383a49732fdc43037f68ecdd
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sat Apr 26 19:14:00 2014 -0500
+
+    cambios 26/04/2014
+
+commit 3b1dc620f3b1036a63038b6950bc76e7d823332f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 21:58:36 2014 -0500
+
+    validando login
+
+commit 5f2c5ee4e6ed2bbd38a41e642c3322a1c14f54a3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 19:16:11 2014 -0500
+
+    template email->activate
+
+commit 08739e969f5ebacf24fdec127210483d70c3195d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 18:33:37 2014 -0500
+
+    ultimos del path de imagenes
+
+commit b3d80a55929583fe6ab48fbcd80c69108bc3b52f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 18:27:08 2014 -0500
+
+    se agrega public_path para las imgs
+
+commit f9fdff8880444463c6b211f2f0f2661c51274776
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 18:18:49 2014 -0500
+
+    mas pruebas
+
+commit 0742d6e4df8913e158c3b987d717e4d837f8dddc
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 17:29:32 2014 -0500
+
+    mas cambios
+
+commit 6035d05043d5dfabb2b4dfec0b050a348b68c5cd
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+
+Date:   Wed Apr 23 17:25:22 2014 -0500
+
+    cargamos intervention
+
+commit 0d05f26b4e4e40b0d7e201d2ee4bb3a4cf22565b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 17:06:08 2014 -0500
+
+    pruebas
+
+commit 7a16bef1a7136660e0fd8e5c41968e52e8c892a3
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 16:13:23 2014 -0500
+
+    email
+
+commit 04147eb517b7be577243f674883319e5487af004
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 16:08:08 2014 -0500
+
+    nuevo token
+
+commit 99f6f74993eac1d925025c2d16643b89fe13b789
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 15:43:12 2014 -0500
+
+    cambio email
+
+commit 178b81fa44be7b6cb8b023f873a5732775113c5d
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 23 15:35:36 2014 -0500
+
+    cambios en la base de datos
+
+commit 49d2a8f822e9aa0bd6e6f925e82ad3b5dbaf1481
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Tue Apr 22 10:33:17 2014 -0500
+
+    muchos cambios
+
+    semana sin internet
+
+commit 2937faee25fd6aeeaea530495b6b4a806c287568
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 14 18:44:52 2014 -0500
+
+    commit email v2
+
+:
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 14 18:23:07 2014 -0500
+
+    funcionalidad mail commit
+
+    se habilita la validacion del email del usuario via email
+
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 14 15:00:59 2014 -0500
+
+    validaciones
+
+commit 7a656800dbc7e47efd4e99d8fb26152e0d3faee1
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 14 12:44:02 2014 -0500
+
+    mas cambios
+
+commit da538c7236d3fc8ea07d9682e62f58ff2277f282
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 13 23:47:49 2014 -0500
+
+    commit index
+
+    cambios en el index. se cambio formulario de registro
+
+commit 095411d2a78245927a087ce2a0611ba9cccc851f
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 13 23:06:04 2014 -0500
+
+    commit titulo
+
+commit 1019369a9db0af2a9ab61cb917d7d0164b6517db
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 13 22:47:20 2014 -0500
+
+    commit reunion
+
+commit 92b23f32846c8f393f808af12396d7802096590b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Fri Apr 11 22:02:37 2014 -0500
+
+    commit viernes 11/04/14
+
+    muchos cambios
+
+commit 327770c327ab132ae5b66286ed1f6a8de01f204a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Mon Apr 7 20:32:01 2014 -0500
+
+    primeros modelos
+
+commit 109a45506c27cc2826bf9d6199613e4af8b2c097
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 23:10:54 2014 -0500
+
+    commit imgs
+
+    se arreglo problema de direccionamiento--- nuevo error: no cargan l
+    imgs en la plantilla empresa
+
+commit bd1bde00c976df1ff8255a71ef297d4e0cd2190b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 22:44:50 2014 -0500
+
+    commit 2 errores
+
+commit 0c069e0dc8cc4b3db0ec9ee39a7de16cf057cf50
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 22:44:08 2014 -0500
+
+    error de direccionamiento
+
+    hay un error en el direccionamiento al crear nueva empresa
+
+commit ba9616c03b27b5701d519e66e9296b83adb1a96b
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 21:31:25 2014 -0500
+
+    commit domingo 06/04/2014
+
+commit e102ecb1c9e24714aff71a0c6a06fc9d3252fa13
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 18:43:33 2014 -0500
+
+    modulo de usuarios
+
+    creacion de usuarios con imagen, sistema de login y logout..
+
+commit 882eb491496411dfc9f4917f4963977049ff4067
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 17:49:02 2014 -0500
+
+    registro de Usuarios
+
+    se agregan imagenes de usuario
+
+commit 96014b9494b0264a727954b089445f77a39e618c
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Sun Apr 6 15:58:28 2014 -0500
+
+    cargando estilos
+
+commit 7d49b3482da901dd0b4b09d9e69a5a95a2a13069
+Author: walther smith franco otero <wfrancootero@gmail.com>
+Date:   Wed Apr 2 17:04:11 2014 -0500
+
+    hello
+
+commit e68380d320f58b0b91595ee0bb565c80866c0a0a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:57:05 2014 -0500
+
+    cambio vendor
+
+commit 73a8ec0e2680b26e3025a1c9568f3928ec935691
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:53:20 2014 -0500
+
+    hola change
+
+commit e0e7bf3cb6db5a1562d6aa5e859b42362b6fc11a
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:49:18 2014 -0500
+
+    ignore actualizacion
+
+commit b20cd23af9390b880040ad356c0840e01d4a5e03
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:47:07 2014 -0500
+
+    estilos-bootstrap
+
+commit 78100fad4f7eeabf9d68568aca5872bdd86a00a8
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:17:45 2014 -0500
+
+    5to commit
+
+commit d55768401d7af4763283be1acc6e9742becd1e57
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:16:56 2014 -0500
+
+    4to commit
+
+commit b8cdf875470483a453f71cc67186007ccd9fd909
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:15:10 2014 -0500
+
+    3er commit
+
+commit af60a36ef57fe03529e9e89f51ef3f8a6002b6f6
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:13:32 2014 -0500
+
+    2do commit
+
+commit aec91ded2257b4e0de489e8c1ad4c8ae758a01b5
+Author: ederjulianA <ederalvarez2091057@gmail.com>
+Date:   Wed Apr 2 16:11:16 2014 -0500
+
+    primer commit
+
+    primer commit del proyecto
+(END)
+
+
+
+

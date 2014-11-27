@@ -2,6 +2,7 @@ $(document).on('click','.color_select', function(e){
 
 	var color =  $(this).attr('data');
 	var empresa = $('#id_empresa').val();
+	$('.mensaje-ajax-color').html('<div class="alert alert-info">Actualizando tema...</div>');
 
 	//alert(color+'-'+empresa);
 

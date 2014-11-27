@@ -96,6 +96,30 @@
 	.cont-thumb {
 		margin-top: 10%;
 	}
+
+	/*ESTILOS PARA EL CONTENEDOR DE COLORES*/
+	.contenedor-colores
+	{
+		max-width: 100%;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.contenedor-colores .color-base {
+		display: inline-block;
+		text-align: center;
+		border: .4px solid #ccc;
+		box-shadow: 2px 2px 1px rgba(0,0,0,.50);
+		padding: 5px;
+		margin: 5px ;
+		width: 30%;
+
+	}
+	.contenedor-colores .color-base a
+	{
+		color: #fff;
+		text-shadow: 2px 2px 1px rgba(0,0,0, .7);
+		text-decoration: none;
+	}
 	
 </style>
 	<div id="main-container">
@@ -171,17 +195,46 @@
 											
 				</div>-->
 				<hr>
-				<div class="row">
-						 <div class="color-header">
-						 	<h2>ESCOGE EL COLOR DEL HEADER</h2>
-						 	<ul class="items-color">
-						 		<li><span class="colorItem" style="background-color:#f90">Naranja</span><a href="" id="c_naranja" class="color_select" data="#f90">Seleccionar</a></li>
-						 		<li><span class="colorItem" style="background-color:#000">Negro</span><a href="" id="c_negro" class="color_select" data="#000">Seleccionar</a></li>
-						 		<li><span class="colorItem" style="background-color:#F236F2">Rosado</span><a href="" id="c_rosado" class="color_select" data="#F22DCB">Seleccionar</a></li>
-						 		<li><span class="colorItem" style="background-color:#666">Gris</span><a href="" id="c_girs" class="color_select" data="#666">Seleccionar</a></li>
-						 		<li><span class="colorItem" style="background-color:#393E5C">Azul oscuro</span><a href="" id="c_azul_o" class="color_select" data="#393E5C">Seleccionar</a></li>
 
-						 	</ul>
+				@if($empresa->tema == 1)
+						<div class="row">
+						 <div class="color-header">
+						 	<h2>ESCOGE EL COLOR DEL TEMA</h2>
+
+						 	<div class="contenedor-colores">
+						 		<div class="color-base" style="background-color:#f5447a">
+						 			<a href="" id="c_rosado" class="color_select" data="1">Seleccionar</a>
+
+						 		</div>
+						 		
+						 		<div class="color-base" style="background-color:#bfd16d">
+						 			<a href="" id="c_verde" class="color_select" data="2">Seleccionar</a>
+						 		</div>
+						 		<div class="color-base" style="background-color:#ff8b4e">
+						 			<a href="" id="c_naranja" class="color_select" data="3">Seleccionar</a>
+						 		</div>
+						 		
+						 		<div class="color-base" style="background-color:#4063e5">
+						 			<a href="" id="c_azul" class="color_select" data="4">Seleccionar</a>
+						 		</div>
+						 		<div class="color-base" style="background-color:#e09859">
+						 			<a href="" id="c_marron" class="color_select" data="5">Seleccionar</a>
+						 		</div>
+						 		<div class="color-base" style="background-color:white">
+						 			<a href="" id="c_blanco" class="color_select" data="6">Seleccionar</a>
+						 		</div>
+						 		<div class="color-base" style="background-color:#6a6a6a">
+						 			<a href="" id="c_gris" class="color_select" data="7">Seleccionar</a>
+						 		</div>	
+						 			
+						 		
+						 		
+						 	</div>
+						 	<!--<ul class="items-color">
+						 		<li><span class="colorItem" style="background-color:#ff8b4e">Naranja</span><a href="" id="c_naranja" class="color_select" data="1">Seleccionar</a></li>
+						 		
+
+						 	</ul>-->
 
 						 	<div class="mensaje-ajax-color">
 						 		
@@ -190,7 +243,10 @@
 						 </div>
       	
 					
-				</div>
+						</div>
+				@else
+
+				@endif
 				<div class="row">
 					<div class="imgs-actuales">
 						<div class="header-contenedor">

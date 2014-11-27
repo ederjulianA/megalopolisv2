@@ -4,6 +4,7 @@
 
 @section('nombre_publico')
 
+		<!--{{HTML::image($empresa->logo, $empresa->razon_social, array('height'=>'50px'))}}-->
 	{{$empresa->nombre_publico}}
 @stop
 
@@ -32,18 +33,27 @@
 @stop
 
 @section('titulo')
-	Tienda {{$empresa->razon_social}}
+	Articulo {{$producto->producto_nombre}} 
 @stop
 
 @section('color-tema')
-	<?php $col_tem = 3;?>
-	@if($col_tem == 1)
+	<?php $col_tem = $empresa->color_tema;?>
+		@if($col_tem == 1)
 	{{HTML::style('Pinteres/css/shopfrog-pink.css')}}
 	@elseif( $col_tem == 2)
 
 	{{HTML::style('Pinteres/css/shopfrog-green.css')}}
+	
 	@elseif($col_tem == 3)
 	{{HTML::style('Pinteres/css/shopfrog-orange.css')}}
+	@elseif($col_tem == 4)
+	{{HTML::style('Pinteres/css/shopfrog-blue.css')}}
+	@elseif($col_tem == 5)
+	{{HTML::style('Pinteres/css/shopfrog-brown.css')}}
+	@elseif($col_tem == 6)
+	{{HTML::style('Pinteres/css/shopfrog-bw.css')}}
+	@elseif($col_tem == 7)
+	{{HTML::style('Pinteres/css/shopfrog-grey.css')}}
 	@endif
 @stop
 
@@ -53,7 +63,7 @@
 						@foreach($products as $product)
 							<li>
 								<a href="" class="basket-item">
-									<img src="{{asset($product->image)}}" alt="" height="100px" width="auto" />
+									<img src="{{asset($product->image)}}" alt="{{$product->name}}" height="100px" width="auto" />
 									<p>{{$product->name}}</p>						
 									<p class="price">{{$product->quantity}} x <span class="cur">$</span><span class="total">{{number_format($product->price, 0, '', '.')}}</span></p>											
 								</a>
@@ -63,7 +73,7 @@
 					@endif	
 					
 						<li class="drop-link-li">
-							<a href="#" class="drop-link">Ver<br>Carrito</a>
+							<a href="/cart/" class="drop-link">Ver<br>Carrito</a>
 						</li>
 					</ul>
 @stop
@@ -111,7 +121,7 @@
 					</div>
 				
 					<div class="main-imgs clearfix">
-						<a href="{{asset($producto->imagen)}}" title="{{$producto->producto_nombre}}: view 1"><img id="img1" src="{{asset($producto->imagen)}}" alt="BeachFront Frog swimsuit" class="main-img img-responsive" /></a>
+						<a href="{{asset($producto->imagen)}}" title="{{$producto->producto_nombre}}: view 1"><img id="img1" src="{{asset($producto->imagen)}}" alt="{{$producto->producto_nombre}}" class="main-img img-responsive" /></a>
 						@if(!$producto->img1)
       					@else
       						<a href="{{asset($producto->img1)}}" title="{{$producto->producto_nombre}}: view 2"><img id="img2" src="{{asset($producto->img1)}}" alt="{{$producto->producto_nombre}}" class="main-img img-responsive background" /></a>
@@ -123,17 +133,17 @@
 						
 					</div>
 					<ul class="alternate-images clearfix">
-						<li><a href="#" data-img="img1"><img src="{{asset($producto->imagen)}}" alt="" height="80px" width="auto" /></a></li>
+						<li><a href="#" data-img="img1"><img src="{{asset($producto->imagen)}}" alt="{{$producto->producto_nombre}}" height="80px" width="auto" /></a></li>
 						@if(!$producto->img1)
 						@else
 
-						<li><a href="#" data-img="img2"><img src="{{asset($producto->img1)}}" alt=""  height="80px" width="auto"/></a></li>
+						<li><a href="#" data-img="img2"><img src="{{asset($producto->img1)}}" alt="{{$producto->producto_nombre}}"  height="80px" width="auto"/></a></li>
 						@endif
 
 						@if(!$producto->img2)
 						@else
 
-						<li><a href="#" data-img="img3"><img src="{{asset($producto->img2)}}" alt="" height="80px" width="auto" /></a></li>
+						<li><a href="#" data-img="img3"><img src="{{asset($producto->img2)}}" alt="{{$producto->producto_nombre}}" height="80px" width="auto" /></a></li>
 						@endif
 					</ul>
 				</div>

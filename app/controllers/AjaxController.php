@@ -52,11 +52,11 @@ Class AjaxController  extends BaseController {
  		if(isset($_POST['id_empresa']) && isset($_POST['color']))
  		{
  			$empresa = Empresa::where('id','=',$_POST['id_empresa'])->first();
- 			$empresa->color_header = $_POST['color'];
+ 			$empresa->color_tema = $_POST['color'];
 
  			if($empresa->save())
  			{
- 				$estado = array('estado'=>1,'mensaje'=>'Color del header actualizado correctamente.');
+ 				$estado = array('estado'=>1,'mensaje'=>'Color del tema actualizado correctamente.');
  			}else{
  				$estado = array('estado'=>0,'mensaje'=>'Error al actualizar.');
  			}

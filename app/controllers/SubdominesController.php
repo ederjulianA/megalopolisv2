@@ -67,7 +67,7 @@
 											if($plantilla == 1)
 									{
 							
-										return View::make('pint.index')->with('products', Cart::contents())->with('account',$account)->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
+										return View::make('pint.index')->with('slides',$slides)->with('numero_slides',$numero_slides)->with('products', Cart::contents())->with('account',$account)->with('slides',$slides)->with('numero_slides',$numero_slides)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede)->with('categorias',$cat2)->with('productos',$productos);
 									}
 		 					}
 		 			}

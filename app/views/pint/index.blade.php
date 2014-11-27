@@ -2,6 +2,7 @@
 
 @section('nombre_publico')
 
+		<!--{{HTML::image($empresa->logo, $empresa->razon_social, array('height'=>'50px'))}}-->
 	{{$empresa->nombre_publico}}
 @stop
 
@@ -14,14 +15,25 @@
 @stop
 
 @section('color-tema')
-	<?php $col_tem = 3;?>
+	
+	<?php $col_tem = $empresa->color_tema;?>
 	@if($col_tem == 1)
 	{{HTML::style('Pinteres/css/shopfrog-pink.css')}}
 	@elseif( $col_tem == 2)
 
+	
 	{{HTML::style('Pinteres/css/shopfrog-green.css')}}
 	@elseif($col_tem == 3)
 	{{HTML::style('Pinteres/css/shopfrog-orange.css')}}
+	@elseif($col_tem == 4)
+	{{HTML::style('Pinteres/css/shopfrog-blue.css')}}
+	@elseif($col_tem == 5)
+	{{HTML::style('Pinteres/css/shopfrog-brown.css')}}
+	@elseif($col_tem == 6)
+	{{HTML::style('Pinteres/css/shopfrog-bw.css')}}
+	@elseif($col_tem == 7)
+	{{HTML::style('Pinteres/css/shopfrog-grey.css')}}
+	
 	@endif
 @stop
 
@@ -62,13 +74,25 @@
 					@endif	
 					
 						<li class="drop-link-li">
-							<a href="#" class="drop-link">Ver<br>Carrito</a>
+							<a href="/cart/" class="drop-link">Ver<br>Carrito</a>
 						</li>
 					</ul>
 @stop
 
 
 @section('content')
+{{HTML::style('Pinteres/css/demo.css')}}
+{{HTML::style('Pinteres/css/bjqs.css')}}
+
+<style type="text/css">
+	.slideMio{
+		max-width: 100%;
+		width: 650px;
+		margin: 0 auto;
+		padding: 5px;
+		text-align: center;
+	}
+</style>
 
 	<div id="product-board" class="clearfix">
 
@@ -96,6 +120,23 @@
 					</div>
 					<a href="#" class="btn btn-bottom">Ver todos los Productos &rarr;</a>	
 				</div>
+				@if($numero_slides > 0)
+							<div class="slideMio">
+							 		<div id="banner-fade">
+
+									        <!-- start Basic Jquery Slider -->
+									        
+									        <ul class="bjqs">
+									        	@foreach($slides as $slide)	
+									        	  <li><img src="{{asset($slide->ruta.$slide->nombre)}}" title="{{$empresa->razon_social}}"></li>
+									          	@endforeach
+									        </ul>
+									        <!-- end Basic jQuery Slider -->
+
+									      </div>
+			     			 </div>
+     			 @endif
+
 				<div class="product medium cta alt">
 					<a href="#">
 						<div class="content">
@@ -180,4 +221,18 @@
 			load more
 		</button>
 	</div>-->
+
+	{{HTML::script('Pinteres/js/bjqs-1.3.min.js')}}
+	 <script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+            height      : 320,
+            width       : 620,
+            responsive  : true,
+            animspeed	: 6000
+          });
+
+        });
+      </script>
 @stop

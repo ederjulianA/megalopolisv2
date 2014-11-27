@@ -34,7 +34,8 @@ nav {
   color: #fff;
   text-transform: uppercase;
   padding: 16px 10px;
-  width: 200px;
+  max-width: 500px;
+  min-width: 200px;
   text-align: center;
   white-space: nowrap;
   float: left;
