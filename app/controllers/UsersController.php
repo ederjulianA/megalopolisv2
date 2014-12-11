@@ -511,7 +511,7 @@ class UsersController extends BaseController{
 		$validator = Validator::make(Input::all(),
 				array(
 						'contrasena_actual' => 'required',
-						'nueva_contrasena' => 'required|min:8',
+						'nueva_contrasena' => 'required|min:4',
 						'confirmar_contrasena' => 'required|same:nueva_contrasena'
 					)
 
@@ -519,7 +519,7 @@ class UsersController extends BaseController{
 
 		if($validator->fails())
 		{
-			return Redirect::to('/mega/perfil')->with('message-alert','Error en el formulario')->withErrors($validator);
+			return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validator->messages());
 		}else
 		{
 			//CAMBIAMOS LA CONTRASEÑA DEL USUARIO
@@ -533,12 +533,12 @@ class UsersController extends BaseController{
 				$user->password = Hash::make($password);
 
 					if($user->save()){
-						return Redirect::to('/mega/perfil')
+						return Redirect::to('/adminpanel/password')
 						->with('message-alert','Contreaseña actualizada');
 					}
 			}else{
-						return Redirect::to('/mega/perfil')
-						->with('message-alert','Las contraseñas No coinciden');
+						return Redirect::to('/adminpanel/password')
+						->with('message-alert','La contraseña actual que ingresasté, no coincide con la registrada en la base de datos');
 					}
 		}
 

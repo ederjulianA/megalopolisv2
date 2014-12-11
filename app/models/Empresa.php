@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 
 class Empresa extends Eloquent {
@@ -29,6 +29,16 @@ class Empresa extends Eloquent {
         return $this->belongsTo('User');
     }
 
+    public function getEmpresa($id_user)
+    {
+    	return Empresa::where('user_id','=',$id_user)->first();
+    }
+
+
+    public function getSedes($empresa)
+    {
+    	return Sede::where('empresa_id','=',$empresa)->lists('nombre_publico','id');
+    }
     
 
     public function userSub()

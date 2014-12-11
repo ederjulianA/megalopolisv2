@@ -1,0 +1,13 @@
+.contenedor-logo{
+	max-width: 100%;
+	width: 90%;
+	padding: 10px;
+	text-align: center;
+	margin: 5% auto;
+}
+
+.contenedor-logo div {
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+}

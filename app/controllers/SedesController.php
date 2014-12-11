@@ -283,6 +283,26 @@ class SedesController extends BaseController{
 	}
 
 	public function postCrearproducto() {
+
+
+		$data = Input::all();
+			$rules =[
+				'product_name' 						=>	'required|max:200',
+				'description' 						=>	'required|min:5|max:4000',
+				'category' 							=>	'required|integer',
+				'subcat' 							=>	'required|integer',
+				'seo'								=>	'required|max:250|alpha_num',
+				'product_price'						=>	'required|numeric',
+				'product_amount'					=>	'required|numeric',
+				'imagen' 							=>	'required|image|mimes:jpeg,jpg,bmp,png,gif'
+
+			];
+			$validation = Validator::make($data, $rules);
+
+			if($validation->fails())
+			{
+				return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validation->messages());
+			}
 	
 		$producto = new Producto();
 		$producto->nombre = Input::get('product_name');
@@ -350,7 +370,7 @@ class SedesController extends BaseController{
 		
 		if($almacen->save()) {
 		
-			return Redirect::to('/mega/perfil')->with('message-alert','Se ha creado el producto satisfactoriamente');
+			return Redirect::to('/adminpanel/productos')->with('message-alert','Se ha creado el producto satisfactoriamente');
 		}
 	}
 }

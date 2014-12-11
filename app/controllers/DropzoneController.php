@@ -44,7 +44,7 @@ class DropzoneController  extends BaseController {
 					File::delete($file->ruta.$file->nombre);
 					if($file->delete())
 					{
-						return Redirect::to('/mega/cambiar-imagen')->with('message-alert','Imagen Borrada Exitosamente.');
+						return Redirect::to('/adminpanel/tema')->with('message-alert','Imagen Borrada Exitosamente.');
 					}
 					
 				}

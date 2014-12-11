@@ -58,7 +58,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'megalopolis',
 			'username'  => 'root',
-			'password'  => 'linux4EVER',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

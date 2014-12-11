@@ -21,6 +21,21 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 
 });
 
+// Formularios
+Route::group(['before' => 'auth'], function () {
+
+	Route::group(['before' => 'is_admin'], function () {
+		require (__DIR__ . '/routes/admin2.php');
+	});
+
+		
+});
+
+
+
+
+
+
 	Route::group(array('domain' => '{account}.tumegalopolis.com'), function()
 {
 	Route::get(	'/', array(

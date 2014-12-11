@@ -245,6 +245,26 @@ class EmpresasController  extends BaseController {
 	}
 	
 	public function postEditarProductoAction() {
+
+		$data = Input::all();
+			$rules =[
+				'product_id'						=>	'required|integer',
+				'product_name' 						=>	'required|max:200',
+				'description' 						=>	'required|min:5|max:4000',
+				'category' 							=>	'required|integer',
+				'subcat' 							=>	'required|integer',
+				'seo'								=>	'required|max:250|alpha_num',
+				'product_price'						=>	'required|numeric',
+				'product_amount'					=>	'required|numeric',
+				'imagen' 							=>	'image|mimes:jpeg,jpg,bmp,png,gif'
+
+			];
+			$validation = Validator::make($data, $rules);
+
+			if($validation->fails())
+			{
+				return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validation->messages());
+			}
 	
 		$id = Auth::user()->id;
 		$oldPro = Producto::where('id','=',Input::get('product_id'))->first();
@@ -300,7 +320,8 @@ class EmpresasController  extends BaseController {
 		
 		Producto::where('id', Input::get('product_id'))->update($producto);
 		
-		return Redirect::to('/mega/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
+		//return Redirect::to('/mega/editar-productos')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
+		return Redirect::to('/adminpanel/productos/')->with('message-alert','Se ha actualizado el producto satisfactoriamente.');
 	}
 	
 	public function postNuevaSede()
@@ -434,6 +455,7 @@ class EmpresasController  extends BaseController {
 	{
 		$validator = Validator::make(Input::all(),
 				array(
+						'id_empresa' => 'required|integer',
 						'nuevo_logo' => 'required|image|mimes:jpeg,jpg,bmp,png,gif'
 
 
@@ -456,8 +478,8 @@ class EmpresasController  extends BaseController {
 				Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
 				$empresa->logo = 'img/empresas/'.$filename;
 				$empresa->save();
-				return Redirect::to('/mega/cambiar-imagen')
-					->with('message-alert','Imagen Actualizada exitosamente');
+				return Redirect::to('/adminpanel')
+					->with('message-alert','Logo Actualizado exitosamente');
 
 			}
 			else
@@ -469,9 +491,7 @@ class EmpresasController  extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('/mega/cambiar-imagen')
-				->with('message-alert','Se presentaron Problemas al actualizar la imagen')
-				->withErrors($validator);
+			return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validator->messages());
 		}
 	}
 
@@ -485,8 +505,17 @@ class EmpresasController  extends BaseController {
 			return Redirect::to('/');
 		}
 
-		$validator = Validator::make(Input::all(), Empresa::$rules);
+		$data = Input::all();
+			$rules =[
+			'razon_social'	=>	'required',
+			
+			'direccion_principal' => 'required|min:5|max:150',
+			'descripcion_breve' => 'min:5|max:250',
+			'descripcion_larga' => 'min:5|max:2500',
+			'telefono' =>		'required'
 
+			];
+			$validator = Validator::make($data, $rules);
 		if($validator->passes())
 		{
 			$id_user = Auth::user()->id;
@@ -497,26 +526,24 @@ class EmpresasController  extends BaseController {
 					$empresa->razon_social = Input::get('razon_social');
 					$empresa->direccion_principal = Input::get('direccion_principal');
 					$empresa->telefono = Input::get('telefono');
-					$empresa->nombre_publico = Input::get('nombre_publico');
+					
 					
 					$empresa->desc_breve = Input::get('descripcion_breve');
 					$empresa->desc_larga = Input::get('descripcion_larga');
 
 					$empresa->save();
-					return Redirect::to('/mega/perfil')
-					->with('message-alert','Actualizacion Correcta');
+					return Redirect::to('/adminpanel/info')
+					->with('message-alert','Actualización Correcta');
 				}
 
 			
-					return Redirect::to('/mega/perfil')
-					->with('message-alert','Error al actualizar');
+					return Redirect::back()->withInput()->with('message-alert','Error al actualizar')->withErrors($validator->messages());
+
 		
 			
 		
 		}
-		return Redirect::to('/mega/perfil')
-					->with('message-alert','Error al actualizar')
-					->withErrors($validator);
+	return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validator->messages());
 		
 
 	}

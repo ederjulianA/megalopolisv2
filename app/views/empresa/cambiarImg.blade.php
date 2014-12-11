@@ -197,7 +197,7 @@
 				<hr>
 
 				@if($empresa->tema == 1)
-						<div class="row">
+					<div class="row">
 						 <div class="color-header">
 						 	<h2>ESCOGE EL COLOR DEL TEMA</h2>
 
@@ -243,7 +243,7 @@
 						 </div>
       	
 					
-						</div>
+					</div>
 				@else
 
 				@endif

@@ -67,6 +67,11 @@ Route::filter('guest', function()
 });
 
 
+Route::filter('is_admin', function ()
+{
+   if ( ! is_admin()) return Redirect::to('/');
+});
+
 
 /*
 |--------------------------------------------------------------------------

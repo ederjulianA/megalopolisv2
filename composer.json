@@ -11,6 +11,9 @@
 
 	},
 	"autoload": {
+		"psr-4": {
+            "Eder\\": "app/Eder"
+        },
 		 
 		"classmap": [
 			"app/commands",

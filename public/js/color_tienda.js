@@ -2,6 +2,7 @@ $(document).on('click','.color_select', function(e){
 
 	var color =  $(this).attr('data');
 	var empresa = $('#id_empresa').val();
+
 	$('.mensaje-ajax-color').html('<div class="alert alert-info">Actualizando tema...</div>');
 
 	//alert(color+'-'+empresa);
@@ -19,7 +20,7 @@ $(document).on('click','.color_select', function(e){
 					
 					$('.mensaje-ajax-color').html('<div class="msj-ajax-content"> '+data.mensaje+'</div>');
 					$('.msj-ajax-content').fadeOut(4200);
-					console.log(data);
+					//console.log(data);
 				}
 				
 			}

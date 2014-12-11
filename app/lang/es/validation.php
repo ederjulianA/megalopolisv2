@@ -95,8 +95,16 @@ return array(
 	*/
 
 	'attributes' => array(
-		'username' => 'usuario',
-		'password' => 'contraseña'
+		'username'							=> 'usuario',
+		'password' 							=> 'contraseña',
+		'product_name' 						=>	'Nombre del producto',
+		'description' 						=>	'Descripción',
+		'category' 							=>	' Categoria',
+		'subcat' 							=>	'Sub categoria',
+		'seo'								=>	'Url del producto',
+		'product_price'						=>	'Precio del producto',
+		'product_amount'					=>	'Cantidad del producto'
+		
 	),
 
 );
