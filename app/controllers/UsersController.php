@@ -72,9 +72,9 @@ class UsersController extends BaseController{
 
 		if($ship->save())
 		{
-			return Redirect::intended($url_actual)->with('message-alert','Has actualizado tu información de envio :)');
+			return Redirect::back()->with('message-alert','Has actualizado tu información de envio :)');
 		}else{
-			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
+			return Redirect::back()->with('message-alert','Errores al actualizar :(');
 		}
 	}
 
@@ -95,7 +95,7 @@ class UsersController extends BaseController{
 		{
 			return Redirect::intended($url_actual)->with('message-alert','Has actualizado tu información de envio :)');
 		}else{
-			return Redirect::to('/perfil/direccion')->with('message-alert','Errores al actualizar :(');
+			return Redirect::back()->with('message-alert','Errores al actualizar :(');
 		}
 	}
 
@@ -578,7 +578,7 @@ class UsersController extends BaseController{
 
 					return Redirect::intended($url_actual);
 				}else{
-					return Redirect::route('login')
+					return Redirect::back()
 				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');
 				}
 

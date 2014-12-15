@@ -4,6 +4,14 @@
 
  class SubdominesController  extends BaseController
  {
+
+ 	protected $ciudad;
+
+ 	public function __construct(Ciudad $ciudad)
+ 	{
+ 		$this->ciudad = $ciudad;
+
+ 	}
  	
 
  	public function getIndex($account)
@@ -282,5 +290,108 @@
 		 			}
 	
 
+ 	}
+
+ 	public function checkout($account)
+ 	{
+ 		$N_empresa = Empresa::where('nombre_publico','=',$account)->first();
+	 			if(!$N_empresa)
+	 			{
+	 				return Redirect::to('http://www.tumegalopolis.com');
+	 			}
+	 			$plantilla = $N_empresa->tema;
+
+
+
+	 				if($N_empresa->estado == 0)
+	 				{
+	 					return Redirect::to('http://www.tumegalopolis.com');
+	 				}
+
+		 			if($N_empresa->count())
+		 			{
+		 				$N_sede = Sede::where('empresa_id','=',$N_empresa->id)->first();
+
+		 					if($N_sede->count())
+		 					{
+		 						
+		 						
+
+		 										if(!Auth::check())
+		 										{
+		 											return Redirect::action('SubdominesController@getCart',array('account'=>$account));
+		 										}
+		 										$ship = Shipping::where('id_user','=',Auth::user()->id)->first();
+												$todasSedes = Sede::where('empresa_id','=', $N_empresa->id)->get();
+												$totalSedes = $todasSedes->count();		
+
+												$ciudades  = $this->ciudad->getCities();
+
+												
+															
+
+											if($plantilla == 2)
+											{
+												return View::make('tiendas.cart')->with('products', Cart::contents())->with('account',$account)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede);
+											}
+											if($plantilla == 1)
+											{
+									
+												return View::make('pint.checkout', compact('ciudades','ship'))->with('products', Cart::contents())->with('account',$account)->with('sedes',$todasSedes)->with('num_sedes',$totalSedes)->with('empresa',$N_empresa)->with('sede',$N_sede);
+											}
+		 					}
+		 			}
+ 	}
+
+
+
+
+ 	public function postLogin($account)
+ 	{
+ 			$remember = (Input::has('remember')) ? true : false;
+				//creamos la sesion del usuario
+				$auth = Auth::attempt(array(
+						'email'  => Input::get('email'),
+						'password' => Input::get('password'),
+						'active' => 1
+					), $remember);
+
+				if($auth){
+
+					$url_actual = Input::get('url');
+
+					return Redirect::intended($url_actual);
+				}else{
+					return Redirect::back()
+				->with('message-alert', 'El email o la contraseña no coinciden, o la cuenta no esta activada');
+				}
+ 		
+ 	}
+
+ 	public function postOrder($account)
+ 	{
+ 		$compra  = new Carro;
+ 		$compra->id_user 	=	Input::get('user_id');
+ 		$compra->id_empresa 	=	Input::get('empresa_id');
+ 		$compra->total 			=	Cart::total();
+ 		$compra->num_items		=   Cart::totalItems();
+ 		 if($compra->save())
+ 		 {
+ 		 	foreach (Cart::contents() as $item) {
+   			 	$newItem = new Item;
+   			 	$newItem->compra_id				=	$compra->id;
+   			 	$newItem->id_producto			=	$item->id;
+   			 	$newItem->nombre 				=	$item->name;
+   			 	$newItem->valor_unitario 		=	$item->price;
+   			 	$newItem->image                 =   $item->image;
+   			 	$newItem->cantidad 				= 	$item->quantity;
+   			 	$newItem->valor_total			=	$item->total();
+   			 	$newItem->save();
+			}
+
+			Cart::destroy();
+
+			return Redirect::to('/')->with('message-alert','Se ha procesado tu pedido exitosamente.');
+ 		 }
  	}
  }

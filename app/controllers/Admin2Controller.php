@@ -145,6 +145,15 @@
 				return View::make('admin2.chats', compact('empresa','preguntas_null','num_preg_null','allChats'));
 			}
 
+			public function getMapa()
+			{
+				$id_user 			= 	Auth::user()->id;
+				$empresa 			= 	$this->miEmpresa->getEmpresa($id_user);
+				$preguntas_null		=	$this->preguntasNull->getQuestionsNull($empresa->id);
+				$num_preg_null 		=	count($preguntas_null);
+				return View::make('admin2.map', compact('empresa','preguntas_null','num_preg_null'));
+			}
+
 
 
 
@@ -174,5 +183,32 @@
 						return Redirect::to('/adminpanel/preguntas')->with('message-alert','Pregunta Respondida.');
 					}
 				}
+			}
+
+
+			public function postGuardarMapa()
+			{
+				$data = Input::all();
+
+				$rules = [
+					'direccion' => 'required'
+				];
+
+				$validator = Validator::make($data, $rules);
+				if($validator->fails())
+					{
+						return Redirect::back()->withInput()->with('message-alert','Revisa los errores en el formulario')->withErrors($validator->messages());
+					}
+
+				$empresa = Empresa::where('id','=', Input::get('id_empresa'))->first();
+				$empresa->dir_mapa	=	Input::get('direccion');
+				$empresa->latitude	=	Input::get('lat');
+				$empresa->longitude	=	Input::get('lng');
+
+				if($empresa->save())
+				{
+					return Redirect::back()->with('message-alert','Se ha actualizado tu mapa');
+				}	
+
 			}
 	}

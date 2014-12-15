@@ -22,9 +22,9 @@ Route::group(array('domain' => 'www.tumegalopolis.com'), function() {
 });
 
 // Formularios
-Route::group(['before' => 'auth'], function () {
+Route::group(array('before' => 'auth'), function () {
 
-	Route::group(['before' => 'is_admin'], function () {
+	Route::group(array('before' => 'is_admin'), function () {
 		require (__DIR__ . '/routes/admin2.php');
 	});
 
@@ -47,6 +47,7 @@ Route::group(['before' => 'auth'], function () {
 		'as'=>'getProductoDetalle', 
 		'uses'=> 'SubdominesController@getProducto'
 		));
+	Route::get('checkout', array('as' => 'checkout', 'uses' => 'SubdominesController@checkout'));
 
 	Route::get(	'/cart/', array(
 		'as'=>'getCartTienda', 
@@ -61,6 +62,21 @@ Route::group(['before' => 'auth'], function () {
 	Route::post('/cantidadAjax', array(
 		'as' => 'cantidadAjax2',
 		'uses' => 'CartController@postCantidadAjax'
+	));
+	Route::post('/direccion-post', array(
+		'as' => 'direccion-envio-post',
+		'uses'=> 'UsersController@PostDireccionUser'
+	));
+
+	Route::post('/login-tienda', array(
+		'as' => 'login-tienda',
+		'uses' => 'SubdominesController@postLogin'
+
+	));
+	Route::post('/make-order', array(
+		'as' => 'make-order',
+		'uses' => 'SubdominesController@postOrder'
+
 	));
    /* Route::get('/', function($account)
     {

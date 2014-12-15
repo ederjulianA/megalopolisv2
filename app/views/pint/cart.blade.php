@@ -113,8 +113,10 @@
 							</tr>	
 							<tr class="cart-summary">
 								<td colspan="7">
-									<a class="btn btn-large pull-right" href="checkout.html">PAGAR</a>
+								
+									<a class="btn btn-large pull-right" href="/checkout">PAGAR</a>
 									<!-- <input class="btn" value="Checkout" /> -->
+									
 								</td>
 							</tr>	
 						</table>
@@ -131,4 +133,8 @@
 			</div> <!-- // end span12 -->
 		</div> <!-- //end row -->
 	</div> <!-- //end container -->
+
+	@if(!Auth::check())
+	
+	@endif
 @stop

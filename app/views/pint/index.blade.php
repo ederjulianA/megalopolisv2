@@ -88,6 +88,7 @@
 	.slideMio{
 		max-width: 100%;
 		width: 650px;
+		border: 1px solid red;
 		margin: 0 auto;
 		padding: 5px;
 		text-align: center;
@@ -95,6 +96,18 @@
 </style>
 
 	<div id="product-board" class="clearfix">
+				 @if(Session::has('message-alert'))
+		<div class="row">
+			
+			<div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong> {{Session::get('message-alert')}} </strong>
+            </div>
+            
+			
+		</div>
+		@endif
+					
 
 				<!--
 					Products
@@ -120,8 +133,22 @@
 					</div>
 					<a href="#" class="btn btn-bottom">Ver todos los Productos &rarr;</a>	
 				</div>
+				
+
+				<!--<div class="product medium cta alt">
+					<a href="#">
+						<div class="content">
+							<p class="poff">10% <br /> off!</p>
+							<p>All bikini's &rarr;</p>
+						</div>
+					</a>
+				</div>	-->	
+				
 				@if($numero_slides > 0)
-							<div class="slideMio">
+					<div class="row">
+						
+					
+							<div class="slideMio product">
 							 		<div id="banner-fade">
 
 									        <!-- start Basic Jquery Slider -->
@@ -135,28 +162,20 @@
 
 									      </div>
 			     			 </div>
-     			 @endif
 
-				<div class="product medium cta alt">
-					<a href="#">
-						<div class="content">
-							<p class="poff">10% <br /> off!</p>
-							<p>All bikini's &rarr;</p>
-						</div>
-					</a>
-				</div>		
+			     		</div>	 
+     			 @endif
 				
 				
 				
-				
-				<div class="product medium cta alt">
+				<!--<div class="product medium cta alt">
 					<a href="#">
 						<div class="content">
 							<p class="poff">20% <br /> off!</p>
 							<p>All accessories &rarr;</p>
 						</div>
 					</a>
-				</div>
+				</div>-->
 					@foreach($productos as $pro)
 						<!-- {{Favs::clase()}}-->
 						<div class="product large">

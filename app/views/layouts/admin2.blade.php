@@ -277,6 +277,7 @@
               <li class="has_sub"><a href="#"><i class="fa fa-bar-chart-o"></i> Empresa</a>
                    <ul>
               <li><a href="{{ URL::route('adminpanel-info')}}">Información</a></li>
+              <li><a href="{{ URL::route('adminpanel-mapa')}}">Google Maps</a></li>
               <li><a href="{{ URL::route('adminpanel-password')}}">Contraseña</a></li>
               
                 </ul>
@@ -347,6 +348,7 @@
 <script src="{{asset('admin2/js/jquery.js')}}"></script> <!-- jQuery -->
 <script src="{{asset('admin2/js/bootstrap.min.js')}}"></script> <!-- Bootstrap -->
 <script src="{{asset('admin2/js/jquery-ui.min.js')}}"></script> <!-- jQuery UI -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="{{asset('admin2/js/fullcalendar.min.js')}}"></script> <!-- Full Google Calendar - Calendar -->
 <script src="{{asset('admin2/js/jquery.rateit.min.js')}}"></script> <!-- RateIt - Star rating -->
 <script src="{{asset('admin2/js/jquery.prettyPhoto.js')}}"></script> <!-- prettyPhoto -->
