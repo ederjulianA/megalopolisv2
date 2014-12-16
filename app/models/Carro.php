@@ -8,5 +8,10 @@ class Carro extends Eloquent {
 	{
 		return $this->hanMany('Item');
 	}
+
+	public function getAllOrders($empresa_id)
+	{
+		return Carro::where('id_empresa','=',$empresa_id)->get();
+	}
 }
 ?>

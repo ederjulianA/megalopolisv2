@@ -8,8 +8,9 @@
 			protected $category;
 			protected $archivo;
 			protected $preguntasNull;
+			protected $compras;
 
-			public function __construct(Empresa $miEmpresa, Producto $producto, Categoria $category, Archivo $archivo, Pregunta $preguntasNull)
+			public function __construct(Empresa $miEmpresa, Producto $producto, Categoria $category, Archivo $archivo, Pregunta $preguntasNull,Carro $compras)
 
 			{
 				$this->miEmpresa 	= $miEmpresa;
@@ -17,6 +18,7 @@
 				$this->category 	= $category;
 				$this->archivo 		= $archivo;
 				$this->preguntasNull= $preguntasNull;
+				$this->compras 		= $compras;
 			}
 			
 			public function getIndex()
@@ -62,13 +64,13 @@
 			{
 				$id_user 		= Auth::user()->id;
 				
-				$empresa 		= $this->miEmpresa->getEmpresa($id_user);
+				$empresa 			= $this->miEmpresa->getEmpresa($id_user);
 				$preguntas_null		=	$this->preguntasNull->getQuestionsNull($empresa->id);
 				$num_preg_null 		=	count($preguntas_null);
-				$sedes 			= $this->miEmpresa->getSedes($empresa->id);
-				$categories 	= $this->category->getAll();
-				$producto 		= $this->producto->getProductoById($id);
-				$subcategories	= $this->category->getAllSubcats($producto->categoria_id);
+				$sedes 				= $this->miEmpresa->getSedes($empresa->id);
+				$categories 		= $this->category->getAll();
+				$producto 			= $this->producto->getProductoById($id);
+				$subcategories		= $this->category->getAllSubcats($producto->categoria_id);
 
 				
 				return View::make('admin2.editarproducto', compact('empresa','categories','sedes','producto','subcategories','preguntas_null','num_preg_null'));
@@ -152,6 +154,20 @@
 				$preguntas_null		=	$this->preguntasNull->getQuestionsNull($empresa->id);
 				$num_preg_null 		=	count($preguntas_null);
 				return View::make('admin2.map', compact('empresa','preguntas_null','num_preg_null'));
+			}
+
+
+			public function getCompras()
+			{
+				$id_user 			= Auth::user()->id;
+				$empresa 			= $this->miEmpresa->getEmpresa($id_user);
+				$todasCompras 		= $this->compras->getAllOrders($empresa->id);
+				$preguntas_null		= $this->preguntasNull->getQuestionsNull($empresa->id);
+				$num_preg_null 		= count($preguntas_null);
+				$num_orders 		= count($todasCompras);
+
+				return View::make('admin2.orders', compact('empresa','todasCompras','preguntas_null','num_preg_null','num_orders'));
+
 			}
 
 

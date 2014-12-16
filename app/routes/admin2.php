@@ -7,6 +7,7 @@
 	Route::get('adminpanel/tema', array('as' => 'adminpanel-tema', 'uses' => 'Admin2Controller@getTema'));
 	Route::get('adminpanel/info', array('as' => 'adminpanel-info', 'uses' => 'Admin2Controller@getInfo'));
 	Route::get('adminpanel/mapa', array('as' => 'adminpanel-mapa', 'uses' => 'Admin2Controller@getMapa'));
+	Route::get('adminpanel/ordenes', array('as' => 'adminpanel-ordenes', 'uses' => 'Admin2Controller@getCompras'));
 	Route::get('adminpanel/preguntas', array('as' => 'adminpanel-chats', 'uses' => 'Admin2Controller@getChats'));
 	Route::get('adminpanel/password', array('as' => 'adminpanel-password', 'uses' => 'Admin2Controller@getPassword'));
 	Route::get('adminpanel/preguntas/{id}', array('as' => 'adminpanel-chat-unico', 'uses' => 'Admin2Controller@getChatUnico'));
