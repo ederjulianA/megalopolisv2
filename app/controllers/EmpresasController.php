@@ -612,6 +612,15 @@ class EmpresasController  extends BaseController {
 
 			if($empresa->save()){
 
+					$sede = new Sede;
+					$sede->empresa_id 		=	$empresa->id;
+					$sede->ciudad_id		=	$empresa->ciudad_id;
+					$sede->direccion 		= 	$empresa->direccion_principal;
+					$sede->telefono 		=	$empresa->telefono;
+					$sede->nombre_publico 	=	$empresa->nombre_publico;
+
+
+
 
 					/*$cuadricula = new Cuadricula();
 					$cuadricula->idempresa = $empresa->id;
@@ -628,8 +637,11 @@ class EmpresasController  extends BaseController {
 					$cuadricula->imgsector = "botella.png";
 
 			$cuadricula->save();*/
-				return Redirect::to('/')
-					->with('message-alert', 'Felicidades has creado exitosamente tu empresa');
+					if($sede->save())
+					{
+						return Redirect::to('/adminpanel')
+							->with('message-alert', 'Felicidades has creado exitosamente tu empresa');
+					}
 			}
 		}
 

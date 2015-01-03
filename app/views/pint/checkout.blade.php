@@ -91,13 +91,13 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="content">
-					<h1>Checkout</h1>
+					<h1>Confirma tu pedido</h1>
 					@if(!Auth::check())
-					<h3>Your email address</h3>
+					<h3>Tu email</h3>
 					<form class="form-inline signin" method="post" action="/login-tienda">
 						<div class="form-group">
 							<input id="email_address" name="email" tabindex="2" type="text" class="form-control" required>
-							&nbsp;&nbsp;Password 
+							&nbsp;&nbsp;Contraseña 
 							<input type="password" name="password" required>
 							{{ Form::token()}}
 							<input type="hidden" name="url" id="url" value="{{URL::current()}}">
@@ -218,14 +218,14 @@
 							<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
 							<input type="submit" class="btn btn-large inline" value="Finalizar Pedido" id="">
 							</form>
-							or <a href="index.html">Cancel and return to store</a>
+							or <a href="/">Volver a la tienda</a>
 						</div> <!-- //end content -->
 					</div> <!-- //end span8 -->
 	
 					<div class="col-sm-4">
 						<div class="content checkout-total">
 							<p>
-								<small>your purchase:</small><br>
+								<small>Tu compra:</small><br>
 								<span>${{number_format(Cart::total(), 0, '', '.')}}</span><br>
 								<!--<small>Paso 1 de 2</small>-->
 							</p>

@@ -122,7 +122,21 @@
 						</table>
 					</form>
 					<div class="shopping-cart-help">
-						<p>Update or remove items from your cart before proceeding to checkout to calculate delivery cost and use any exclusive discount codes.</p>										
+						<p>Para continuar con el pago, por favor Identificate:<br>
+								@if(!Auth::check())
+									<form class="form-inline signin" method="post" action="/login-tienda">
+										<div class="form-group">
+											<label for="email"> Tu email</label>
+											<input id="email_address" name="email" tabindex="2" type="text" class="form-control" required>
+											<label for="password">Contraseña</label> 
+											<input type="password" name="password" required>
+											{{ Form::token()}}
+											<input type="hidden" name="url" id="url" value="{{URL::current()}}">
+										</div>
+										<input type="submit" value="Login" class="btn btn-info">
+									</form>
+								@endif	
+						.</p>										
 						<p>
 							<small><span class="instock">Instock</span> Item in stock and will be dispatched normally.</small><br />
 							<small><span class="lowstock">Low stock</span> Low item stock. Additional delay might exist is dispatching your item, delays will be notified by email.</small><br />
