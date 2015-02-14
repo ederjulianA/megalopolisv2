@@ -28,7 +28,7 @@ $('#nombre_publico_seo').keyup(function(){
 				if(data.estado == 0){
 				
 
-					$('#nombre-seo').html("Tu nombre publico será: <strong>"+nombre_cambio+".tumegalopolis.com/</strong><br>"+tam);
+					$('#nombre-seo').html("Tu nombre publico será: <strong>"+nombre_cambio+".tiendo.co/</strong><br>"+tam);
 					$('#btn-crear-empresa').css({display:"inline"});
 
 				}else if (data.estado == 1){

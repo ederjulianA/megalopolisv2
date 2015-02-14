@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Admin - Megalopolis</title>
+  <title>Admin - Tiendo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -70,7 +70,7 @@
 
           <!-- Upload to server link. Class "dropdown-big" creates big dropdown -->
     <li class="dropdown dropdown-big">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-success"><i class="fa fa-cloud-upload"></i></span> Upload to Cloud</a>
+        <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-success"><i class="fa fa-cloud-upload"></i></span> Upload to Cloud</a> -->
             <!-- Dropdown -->
             <ul class="dropdown-menu">
               <li>
@@ -130,11 +130,11 @@
         </ul>
 
         <!-- Search form -->
-        <form class="navbar-form navbar-left" role="search">
+        <!--<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Search">
 			</div>
-		</form>
+		</form>-->
         <!-- Links -->
         <ul class="nav navbar-nav pull-right">
           <li class="dropdown pull-right">            
@@ -333,7 +333,7 @@
     <div class="row">
       <div class="col-md-12">
             <!-- Copyright info -->
-            <p class="copy">Copyright &copy; 2014 | <a href="#">Tumegalopolis</a> </p>
+            <p class="copy">Copyright &copy; 2014 | <a href="#">Tiendo</a> </p>
       </div>
     </div>
   </div>

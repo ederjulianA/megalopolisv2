@@ -1,4 +1,4 @@
-<html lang="en">
+me<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -215,7 +215,7 @@
           </div>
         </div>
         <div class="navbar-inverse text-center copyright">
-          Copyright &copy; 2014 @yield('titulo-mobile') || powered by tuMegalopolis
+          Copyright &copy; 2014 @yield('titulo-mobile') || powered by tiendo.co
         </div>
     </footer>
 

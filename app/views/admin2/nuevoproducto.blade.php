@@ -50,7 +50,7 @@
 
 								<div class="form-group">
 									{{ Form::label('seo',' Url del producto (*)') }}
-									http://{{$empresa->nombre_publico}}.tumegalopolis.com/_/producto/<span id="seourl"></span>{{ Form::text('seo',null,['class'=>'form-control','id'=>'seo']) }}
+									http://{{$empresa->nombre_publico}}.tiendo.co/_/producto/<span id="seourl"></span>{{ Form::text('seo',null,['class'=>'form-control','id'=>'seo']) }}
 									{{ $errors->first('seo','<p class="alert alert-danger">:message</p>') }}
 								</div>
 

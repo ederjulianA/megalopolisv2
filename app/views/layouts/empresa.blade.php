@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>@yield('titulo')Megalopolis</title>
+	<title>@yield('titulo')Tiendo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -313,7 +313,7 @@
 
 			<div id="top-nav" class="fixed skin-6">
 					<a href="{{ URL::route('index')}}" class="brand">
-						<span>Megalopolis</span>
+						<span>Tiendo</span>
 						<span class="text-toggle"> colombia</span>
 					</a><!-- /brand -->					
 					<button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
@@ -506,8 +506,8 @@
 						
 					</div>
 					<div class="col-sm-3 padding-md">
-						<p class="font-lg">Sobre Megalopolis</p>
-						<p><small>Descripcion Breve de la Compañia (Megalopolis)</small></p>
+						<p class="font-lg">Sobre Tiendo</p>
+						<p><small>Descripcion Breve de la Compañia (Tiendo)</small></p>
 					</div><!-- /.col -->
 					
 					<div class="col-sm-3 padding-md">

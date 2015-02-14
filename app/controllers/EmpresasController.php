@@ -594,10 +594,16 @@ class EmpresasController  extends BaseController {
 			$empresa->direccion_principal = Input::get('direccion_principal');
 			$empresa->telefono = Input::get('telefono');
 			$codigoIMG = str_random(13);
-			$logo = Input::file('logo');
-			$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
-			Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
-			$empresa->logo = 'img/empresas/'.$filename;
+			if (isset($_POST['logo'])) {
+				$logo = Input::file('logo');
+				$filename = date('Y-m-d-H-m-s')."-".$codigoIMG."-"."logo-".Input::get('nombre_publico').".jpg";
+				Image::make($logo->getRealPath())->grab(468,249)->save(public_path().'/img/empresas/'.$filename);
+				$empresa->logo = 'img/empresas/'.$filename;		
+			}
+			else{
+				$default = 'img/empresas/default-empresa.jpg';
+				$empresa->logo = $default;
+			}
 			$empresa->ciudad_id = Input::get('ciudad');
 			$empresa->barrio = 0;
 			$empresa->estado = 0;

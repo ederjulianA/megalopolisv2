@@ -250,7 +250,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Inicia Sesion </a> </p>
+        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Inicia Sesiótin </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 
@@ -323,7 +323,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>-->
-      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logo.png', 'megalopolis Company', array('height'=>'50px'))}} </a> 
+      <a class="logoMega " href="{{URL::route('index')}}"> {{HTML::image('Tshop/images/logoTiendo.png', 'tiendo.co', array('height'=>'50px'))}} </a> 
       
       <!-- this part for mobile -->
       

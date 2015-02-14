@@ -1,19 +1,19 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
+Tiendo|Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
 @stop
 
 @section('content-page')
-    <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
-    <meta name="author" content="Megalopolis TEAM">
+    <meta name="description" content="Tiendo.co es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
+    <meta name="author" content="Tiendo.co TEAM">
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
-<meta property="og:site_name" content="tuMegalopolis"/>
-<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
+<meta property="og:title" content="Tiendo.co |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
+<meta property="og:site_name" content="Tiendo.co"/>
+<meta property="og:description" content="Tiendo.co es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tiendo.co.com/public/"/>
+<meta property="og:image" content="http://www.tiendo.co.com/public/Tshop/face.jpg"/>
 
 @stop
 
@@ -32,7 +32,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             <div class="container">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="parallax-content clearfix">
-              <h1 class="parallaxPrce"> Haz parte de los pioneros Megalópolis </h1>
+              <h1 class="parallaxPrce"> Haz parte de los pioneros Tiendo </h1>
               <h3 > Disfruta de los beneficios de tu tienda en línea </h3>
               <div style="clear:both"></div>
               <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> QUIERO SER PIONERO </a></div>
@@ -139,8 +139,8 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="parallax-content clearfix">
           <h1 class="parallaxPrce"> REGÍSTRATE YA </h1>
-          <h2 class="uppercase">Con un pago <b>ÚNICO</b> pago de $120.000</h2>
-          <h3 > Crea tu tienda en cuestión de minutos, nosotros nos ajustamos a tus requerimientos.</h3>
+          <h2 class="uppercase">Por tan solo <b>$1.000</b> diarios</h2>
+          <h3 > Crea tu tienda en cuestión de minutos, y disfruta de los beneficios de tu tienda en línea.</h3>
           <div style="clear:both"></div>
           <a class="btn btn-discover " data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> <i class="fa fa-shopping-cart"></i> CREAR TIENDA </a> </div>
       </div>

@@ -99,7 +99,7 @@ Crear Nueva empresa
 
 								<div class="form-group">
 									<label>Logo tamaño recomendado(468x249) (*)</label>
-									<input type="file" name="logo" required>
+									<input type="file" name="logo">
 									
 								</div>
 

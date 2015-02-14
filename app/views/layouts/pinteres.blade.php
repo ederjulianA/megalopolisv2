@@ -282,7 +282,7 @@
 				
 			</div> <!-- //end span3 -->
 			<div class="col-sm-6 col-md-3">
-				<p>Con la tegnologia de <strong>Tumegalopolis</strong></p>
+				<p>Con la tegnologia de <strong>tiendo.co</strong></p>
 				
 			</div> <!-- //end span3 -->
 			<div class="col-sm-6 col-md-3">

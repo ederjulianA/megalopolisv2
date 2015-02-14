@@ -1,19 +1,19 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
+Tiendo |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
 @stop
 
 @section('content-page')
  <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
- <meta name="author" content="Megalopolis TEAM">
+ <meta name="author" content="Tiendo TEAM">
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
-<meta property="og:site_name" content="tuMegalopolis"/>
-<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
+<meta property="og:title" content="Tiendo |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
+<meta property="og:site_name" content="Tiendo"/>
+<meta property="og:description" content="Tiendo es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tiendo.co/public/"/>
+<meta property="og:image" content="http://www.tiendo.co/public/Tshop/face.jpg"/>
 
 @stop
 
@@ -38,7 +38,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="parallax-content clearfix animated ">
             <h1 class="x2large">
-              Megalópolis Company 
+              Tiendo.co  
             </h1>
             <h5 class="parallaxSubtitle">
               Tus tiendas y tus productos en línea. 
@@ -64,7 +64,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
           </h1>
           
           <p class="lead text-center">
-		      	Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online.          </p>
+		      	Tiendo es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online.          </p>
           
           
           <hr class="hr hr30">
@@ -72,10 +72,10 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
             <div class="col-lg-4 col-md-4 col-sm-6 col-sm-6">
   
               <h3 class="block-title-3">
-                ¿Por qué Megalópolis?  
+                ¿Por qué el cambio a Tiendo?  
               </h3>
               <p>
-              Nos dimos cuenta que, para una empresa particular o micro-empresas, montar sus negocios online y ofrecer sus productos era una tarea tediosa respecto a tiempos de desarrollo del sitio y costos del mismo. Por eso nace Megalópolis, que ofrece un espacio online donde se pueden crear catálogos de empresas de distintos gremios de forma fácil y sobre todo económica para sus usuarios.
+              Nos dimos cuenta que, para una empresa particular o micro-empresas, montar sus negocios online y ofrecer sus productos era una tarea tediosa respecto a tiempos de desarrollo del sitio y costos del mismo. Por eso nace Tiendo, que ofrece un espacio online donde se pueden crear catálogos de empresas de distintos gremios de forma fácil y sobre todo económica para sus usuarios.
               </p>
               
               

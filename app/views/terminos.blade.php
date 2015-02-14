@@ -1,19 +1,19 @@
 @extends('layouts.tshop')
 
 @section('titulo')
-Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
+Tiendo |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online
 @stop
 
 @section('content-page')
- <meta name="description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
- <meta name="author" content="Megalopolis TEAM">
+ <meta name="description" content="Tiendo es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online">
+ <meta name="author" content="Tiendo TEAM">
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
-<meta property="og:site_name" content="tuMegalopolis"/>
-<meta property="og:description" content="Megalópolis es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/Tshop/face.jpg"/>
+<meta property="og:title" content="Tiendo |Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de tu negocio con tu catálogo online"/>
+<meta property="og:site_name" content="Tiendo"/>
+<meta property="og:description" content="Tiendo es un espacio donde empresas y negocios particulares pueden publicar y ofrecer sus productos por medio de un catálogo que les permite llegar a mercados fuera de su entorno y escalar su negocio online"/>
+<meta property="og:url" content="http://www.tiendo.co/public/"/>
+<meta property="og:image" content="http://www.tiendo.co/public/Tshop/face.jpg"/>
 
 @stop
 
@@ -26,7 +26,7 @@ Megalopolis |Crea tu tienda en línea en tan solo minutos y aumenta las ganancia
       <div class="row userInfo">
         <div class="col-xs-12 col-sm-12">
           <h1 class=" text-left border-title"> Términos y condiciones </h1>
-          <p>Megalópolis no obtiene ningún beneficio de tipo económico de la venta de artículos en el sitio, ni se hace responsable de los mismos. En caso de reclamos el usuario deberá contactarse con la empresa
+          <p>Tiendo no obtiene ningún beneficio de tipo económico de la venta de artículos en el sitio, ni se hace responsable de los mismos. En caso de reclamos el usuario deberá contactarse con la empresa
           que ofrece el producto en cuestión y realizar el proceso pertinente al caso. Toda la logística correspondiente a entregas y pagos se realizan directamente con el vendedor.</p>    
           </div>
         </div>
