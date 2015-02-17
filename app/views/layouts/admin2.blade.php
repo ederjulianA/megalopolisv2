@@ -195,13 +195,13 @@
               </div>
               <div class="mcol-right">
                 <!-- Number of visitors -->
-                <p><a href="#">7000</a> <em>visits</em></p>
+                <p><a href="#">7000</a> <em>Visitas</em></p>
               </div>
               <div class="clearfix"></div>
             </div>
 
             <!-- Members data -->
-            <!--<div class="hdata">
+            <div class="hdata">
               <div class="mcol-left">
                
                 <i class="fa fa-user bblue"></i> 
@@ -211,7 +211,7 @@
                 <p><a href="#">0</a> <em>Productos</em></p>
               </div>
               <div class="clearfix"></div>
-            </div>-->
+            </div>
 
             <!-- revenue data -->
             <div class="hdata">
@@ -221,7 +221,7 @@
               </div>
               <div class="mcol-right">
                 <!-- Number of visitors -->
-                <p><a href="#">5000</a><em>ordenes</em></p>
+                <p><a href="#">5000</a><em>Ordenes</em></p>
               </div>
               <div class="clearfix"></div>
             </div>                        
@@ -258,7 +258,7 @@
           <li class="has_sub">
        <a href="#"><i class="fa fa-list-alt"></i> Productos  <span class="pull-right"><i class="fa fa-tags"></i></span></a>
             <ul>
-              <li><a href="{{ URL::route('adminpanel-nuevo')}}">Crear Nuevo</a></li>
+              <li><a href="{{ URL::route('adminpanel-nuevo')}}">Crear nuevo</a></li>
               <li><a href="{{ URL::route('adminpanel-todos')}}">Todos</a></li>
               
             </ul>

@@ -253,7 +253,6 @@ class EmpresasController  extends BaseController {
 				'description' 						=>	'required|min:5|max:4000',
 				'category' 							=>	'required|integer',
 				'subcat' 							=>	'required|integer',
-				'seo'								=>	'required|max:250|alpha_num',
 				'product_price'						=>	'required|numeric',
 				'product_amount'					=>	'required|numeric',
 				'imagen' 							=>	'image|mimes:jpeg,jpg,bmp,png,gif'

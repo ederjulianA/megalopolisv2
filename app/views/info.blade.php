@@ -4,18 +4,17 @@
 @stop
 
 
-
 @section('content-page')
 	<meta name="description" content="@if($empresa->desc_larga == "")
 												{{$empresa->desc_breve}}
 										@else
 											{{$empresa->desc_larga}}
 										@endif .">
-    <meta name="author" content="Megalopolis TEAM">
+    <meta name="author" content="Tiendo TEAM">
 
     <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.tumegalopolis.com/public/empresa/{{$empresa->nombre_publico}}"/>
-<meta property="og:image" content="http://www.tumegalopolis.com/public/img/{{$empresa->logo}}"/>
+<meta property="og:url" content="http://www.tiendo.co/public/empresa/{{$empresa->nombre_publico}}"/>
+<meta property="og:image" content="http://www.tiendo.co/public/img/{{$empresa->logo}}"/>
 @stop
 
 @section('content')

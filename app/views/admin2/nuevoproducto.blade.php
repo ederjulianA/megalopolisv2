@@ -21,20 +21,20 @@
         	{{ Form::open(['route'=>'crear-producto','method'=>'POST','role'=>'form','files'=>true]) }}
 
         						<div class="form-group">
-									{{ Form::label('sede',' Sede del articulo (*)') }}
+									{{ Form::label('sede',' Sede del artículo (*)') }}
 									{{ Form::select('sede', $sedes,0,['class'=>'form-control','id'=>'sede']) }}
 									{{ $errors->first('sede','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 
         						<div class="form-group">
-									{{ Form::label('category',' Categoria del articulo (*)') }}
+									{{ Form::label('category',' Categoría del artículo (*)') }}
 									{{ Form::select('category', $categories,0,['class'=>'form-control','id'=>'category']) }}
 									{{ $errors->first('category','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 								<div class="form-group">
-									{{ Form::label('subcat',' Sub categoria (*)') }}
+									{{ Form::label('subcat',' Sub categoría (*)') }}
 									{{Form::select('subcat', array('id' => 'subcat','class'=>'form-control'))}}
 									<div class="mensaje-ajax-categorias">
 														
@@ -43,7 +43,7 @@
 								</div>
 
         						<div class="form-group">
-									{{ Form::label('product_name',' Nombre del Articulo (*)') }}
+									{{ Form::label('product_name',' Nombre del artículo (*)') }}
 									{{ Form::text('product_name',null,['class'=>'form-control']) }}
 									{{ $errors->first('product_name','<p class="alert alert-danger">:message</p>') }}
 								</div>
@@ -55,26 +55,26 @@
 								</div>
 
 								<div class="form-group">
-									{{ Form::label('description',' Descripción del Articulo (*)') }}
+									{{ Form::label('description',' Descripción del artículo (*)') }}
 									{{ Form::textarea('description', null, array('class' => 'form-control')) }}
 									{{ $errors->first('description','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 								<div class="form-group">
-									{{ Form::label('product_price',' Precio del articulo sin comas ni puntos (*)') }}
+									{{ Form::label('product_price',' Precio del artículo sin comas ni puntos (*)') }}
 									{{ Form::text('product_price',null,['class'=>'form-control']) }}
 									{{ $errors->first('product_price','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 
 								<div class="form-group">
-									{{ Form::label('product_amount',' Cantidad del Articulo (*)') }}
+									{{ Form::label('product_amount',' Cantidad disponible (*)') }}
 									{{ Form::text('product_amount',null,['class'=>'form-control']) }}
 									{{ $errors->first('product_amount','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 								<div class="form-group">
-									{{ Form::label('img',' Imagen Principal ') }}
+									{{ Form::label('img',' Imagen principal ') }}
 									{{ Form::file('imagen', array('class' => 'form-control','id'=>'imagen')) }}
 									{{ Form::hidden('user_id', Auth::user()->id)}}
 										<div id="preview1" style="height:150px; width:auto; margin:0 auto;">

@@ -87,7 +87,7 @@ Tiendo|Crea tu tienda en línea en tan solo minutos y aumenta las ganancias de t
 <div class="container main-container"> 
 
  <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
-    <h3 class="section-title style2 text-center"><span>NUESTRAS EMPRESAS</span></h3>
+    <h3 class="section-title style2 text-center"><span>NUESTRAS TIENDAS</span></h3>
     <div class="container">
 
     

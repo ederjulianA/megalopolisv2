@@ -1,7 +1,7 @@
 @extends('layouts.users')
 
 @section('titulo')
-Megalopolis Colombia | El sitio para encontrar lo que tus empresas locales tienen para ofrecer
+Tiendo | El sitio para encontrar lo que tus empresas locales tienen para ofrecer
 @stop
 
 @section('content')

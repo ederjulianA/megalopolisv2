@@ -134,7 +134,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > Login  Megalopolis </h3>
+        <h3 class="modal-title-site text-center" > Login  </h3>
       </div>
       <div class="modal-body">
         <form  method="post" action="{{ URL::route('login-post')}} ">
@@ -169,7 +169,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Registarte. </a> <br>
+        <p class="text-center"> ¿No has estado aquí antes? <a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> Registarme. </a> <br>
           <a href="{{URL::route('recuperar-cuenta')}}" > ¿Olvidaste tu contraseña? </a> </p>
       </div>
     </div>
@@ -250,7 +250,7 @@
         
       </div>
       <div class="modal-footer">
-        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Inicia Sesiótin </a> </p>
+        <p class="text-center"> ¿Ya eres miembro? <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> Inicia Sesión </a> </p>
       </div>
     </div>
     <!-- /.modal-content --> 
@@ -284,7 +284,7 @@
               
                 @if (Auth::check())
                       @if(Auth::user()->tipo == 2)
-                        <li> <a href="{{ URL::route('empresaAdmin')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+                        <li> <a href="{{ URL::route('adminpanel')}}"><span class="hidden-xs"> Mi Empresa</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
                           @if(Auth::user()->empresa)
                             @if(Auth::user()->empresa->estado == 0)
                               <li>
@@ -306,7 +306,7 @@
                
                   
                 @else 
-                    <li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Iniciar Sesion</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
+                    <li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Iniciar Sesión</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
                     <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Registrarme </a> </li>
                 @endif
               
@@ -377,12 +377,7 @@
       <ul class="nav navbar-nav">
 
         <li class="active"> <a href="{{URL::route('index')}}"> Home </a> </li>
-        <?php $categorias = Categoria::all(); $nivel =2;?>
-
-        @include('menucat', array('categorias'=>$categorias,'nivel'=>$nivel))
-
-
-
+       
 
         <!--##################################################################MENU DESPLEGABLE INICIAL-->
         <!--<li class="dropdown megamenu-fullwidth"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> La Megalopolis <b class="caret"> </b> </a>
@@ -405,21 +400,21 @@
           </ul>
         </li>-->
 
-        <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li>
-         @if(Cart::total(false))
+    <!--   <li class=""> <a href="{{URL::route('tiendas')}}">Ver Tiendas </a> </li> -->
+       <!--  @if(Cart::total(false))
          <li><a href="{{URL::route('storeCart')}}">TERMINAR COMPRAS</a></li>
          @else
          <li><a href="#"> CARRITO ({{Cart::totalItems()}})</a></li>
-         @endif
+         @endif -->
         
         </ul>
-        <div class="busc">
+      <!--  <div class="busc">
           <form method="get" action="{{URL::route('buscador')}}" class="form-search">
       <input type="text"  data-searchurl="search?=" name="buscador" id="buscador" required placeholder="Qué buscas..." class="">
       <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
     </form>
           
-        </div>
+        </div> -->
 
         
         <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
@@ -534,7 +529,7 @@
           <h3> Informacion </h3>
           <ul>
 
-            <li> <a href="{{URL::route('aboutUs')}}"> Sobre Nosotros </a> </li>
+            <li> <a href="{{URL::route('aboutUs')}}"> Sobre nosotros </a> </li>
             
             <li> <a href="{{URL::route('terminos')}}"> Términos &amp; Condiciones</a> </li>
           </ul>
@@ -564,7 +559,7 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p class="pull-left"> &copy; Megalópolis 2014. Todos los derechos reservados. </p>
+      <p class="pull-left"> &copy; Tiendo 2015. Todos los derechos reservados. </p>
       <!--<div class="pull-right paymentMethodImg"> {{HTML::image('Tshop/images/site/payment/master_card.png', 'master_card', array('class'=>'pull-right','height'=>'30'))}}
       {{HTML::image('Tshop/images/site/payment/paypal.png', 'paypal', array('class'=>'pull-right','height'=>'30'))}} <!-- <img height="30" class="pull-right" src="Tshop/images/site/payment/american_express_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/discover_network_card.png" alt="img" > <img  height="30" class="pull-right" src="Tshop/images/site/payment/google_wallet.png" alt="img" >--> </div>
     </div>
